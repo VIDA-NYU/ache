@@ -12,168 +12,192 @@ import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import de.l3s.boilerpipe.extractors.DefaultExtractor;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.PaginaURL;
+import focusedCrawler.util.readability.Readability;
 
 public class TargetModelElasticSearch {
 
-    private String domain;
-    private String url;
-    private String title;
-    private String text;
-    private Date retrieved;
-    private String[] words;
-    private String[] wordsMeta;
-    private String topPrivateDomain;
-    private String html;
-    private Map<String, List<String>> responseHeaders;
-    private String isRelevant;
-    private double relevance;
-    
-    public TargetModelElasticSearch() {
-        // mandatory for object unserialization
-    }
+	private String domain;
+	private String url;
+	private String title;
+	private String text;
+	private Date retrieved;
+	private String[] words;
+	private String[] wordsMeta;
+	private String topPrivateDomain;
+	private String html;
+	private Map<String, List<String>> responseHeaders;
+	private String isRelevant;
+	private double relevance;
 
-    public TargetModelElasticSearch(Page page) {
-        this.url = page.getURL().toString();
-        this.retrieved = new Date();
-        this.domain = page.getDomainName();
-        this.html = page.getContentAsString();
-        this.responseHeaders = page.getResponseHeaders();
-        this.topPrivateDomain = LinkRelevance.getTopLevelDomain(page.getDomainName());
-        this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
-        if (page.isHtml()) {
-            this.words = page.getParsedData().getWords();
-            this.wordsMeta = page.getParsedData().getWordsMeta();
-            this.title = page.getParsedData().getTitle();
-            this.relevance = page.getTargetRelevance().getRelevance();
-            try {
-                this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
-            } catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
-                this.text = "";
-            }
-        }
-    }
+	private String readabilityOuterHtml;
+	private String readabilityInnerHtml;
 
-    public TargetModelElasticSearch(TargetModelCbor model) {
+	public TargetModelElasticSearch() {
+		// mandatory for object unserialization
+	}
 
-        URL url;
-        try {
-            url = new URL(model.url);
-        } catch (MalformedURLException e) {
-            throw new IllegalArgumentException("page has an invalid URL: " + model.url);
-        }
-        String rawContent = (String) model.response.get("body");
-        
-        Page page = new Page(url, rawContent);
-        page.setParsedData(new ParsedData(new PaginaURL(url, rawContent)));
+	public TargetModelElasticSearch(Page page) {
+		this.url = page.getURL().toString();
+		this.retrieved = new Date();
+		this.domain = page.getDomainName();
+		// this.html = page.getContentAsString();
 
-        this.html = rawContent;
-        this.url = model.url;
-        this.retrieved = new Date(model.timestamp * 1000);
-        this.words = page.getParsedData().getWords();
-        this.wordsMeta = page.getParsedData().getWordsMeta();
-        this.title = page.getParsedData().getTitle();
-        this.domain = url.getHost();
+		this.responseHeaders = page.getResponseHeaders();
+		this.topPrivateDomain = LinkRelevance.getTopLevelDomain(page.getDomainName());
+		this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
+		if (page.isHtml()) {
+			this.words = page.getParsedData().getWords();
+			this.wordsMeta = page.getParsedData().getWordsMeta();
+			this.title = page.getParsedData().getTitle();
+			this.relevance = page.getTargetRelevance().getRelevance();
+			try {
+				Readability readability = new Readability(page.getContentAsString());
+				readability.init();
 
-        try {
-            this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
-        } catch (Exception e) {
-            this.text = "";
-        }
+				this.text = DefaultExtractor.getInstance().getText(readability.html());
+			} catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
+				this.text = "";
+			}
+		}
+	}
 
-        InternetDomainName domainName = InternetDomainName.from(page.getDomainName());
-        if (domainName.isUnderPublicSuffix()) {
-            this.topPrivateDomain = domainName.topPrivateDomain().toString();
-        } else {
-            this.topPrivateDomain = domainName.toString();
-        }
-    }
+	public TargetModelElasticSearch(TargetModelCbor model) {
 
-    public String getDomain() {
-        return domain;
-    }
+		URL url;
+		try {
+			url = new URL(model.url);
+		} catch (MalformedURLException e) {
+			throw new IllegalArgumentException("page has an invalid URL: " + model.url);
+		}
+		String rawContent = (String) model.response.get("body");
 
-    public void setDomain(String domain) {
-        this.domain = domain;
-    }
+		Page page = new Page(url, rawContent);
+		page.setParsedData(new ParsedData(new PaginaURL(url, rawContent)));
 
-    public String getUrl() {
-        return url;
-    }
+		this.html = rawContent;
+		this.url = model.url;
+		this.retrieved = new Date(model.timestamp * 1000);
+		this.words = page.getParsedData().getWords();
+		this.wordsMeta = page.getParsedData().getWordsMeta();
+		this.title = page.getParsedData().getTitle();
+		this.domain = url.getHost();
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+		try {
+			this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
+		} catch (Exception e) {
+			this.text = "";
+		}
 
-    public String getText() {
-        return text;
-    }
+		InternetDomainName domainName = InternetDomainName.from(page.getDomainName());
+		if (domainName.isUnderPublicSuffix()) {
+			this.topPrivateDomain = domainName.topPrivateDomain().toString();
+		} else {
+			this.topPrivateDomain = domainName.toString();
+		}
+	}
 
-    public void setText(String text) {
-        this.text = text;
-    }
+	public String getDomain() {
+		return domain;
+	}
 
-    public Date getRetrieved() {
-        return retrieved;
-    }
+	public void setDomain(String domain) {
+		this.domain = domain;
+	}
 
-    public void setRetrieved(Date retrieved) {
-        this.retrieved = retrieved;
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public String[] getWords() {
-        return words;
-    }
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
-    public void setWords(String[] words) {
-        this.words = words;
-    }
+	public String getText() {
+		return text;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public void setText(String text) {
+		this.text = text;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public Date getRetrieved() {
+		return retrieved;
+	}
 
-    public String[] getWordsMeta() {
-        return wordsMeta;
-    }
+	public void setRetrieved(Date retrieved) {
+		this.retrieved = retrieved;
+	}
 
-    public void setWordsMeta(String[] wordsMeta) {
-        this.wordsMeta = wordsMeta;
-    }
+	public String[] getWords() {
+		return words;
+	}
 
-    public String getTopPrivateDomain() {
-        return topPrivateDomain;
-    }
+	public void setWords(String[] words) {
+		this.words = words;
+	}
 
-    public void setTopPrivateDomain(String topPrivateDomain) {
-        this.topPrivateDomain = topPrivateDomain;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public String getHtml() {
-        return html;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public void setHtml(String html) {
-        this.html = html;
-    }
+	public String[] getWordsMeta() {
+		return wordsMeta;
+	}
 
-    public String getIsRelevant() {
-        return isRelevant;
-    }
+	public void setWordsMeta(String[] wordsMeta) {
+		this.wordsMeta = wordsMeta;
+	}
 
-    public void setIsRelevant(String isRelevant) {
-        this.isRelevant = isRelevant;
-    }
+	public String getTopPrivateDomain() {
+		return topPrivateDomain;
+	}
 
-    public double getRelevance() {
-        return relevance;
-    }
+	public void setTopPrivateDomain(String topPrivateDomain) {
+		this.topPrivateDomain = topPrivateDomain;
+	}
 
-    public void setRelevance(double relevance) {
-        this.relevance = relevance;
-    }
+	public String getHtml() {
+		return html;
+	}
+
+	public void setHtml(String html) {
+		this.html = html;
+	}
+
+	public String getIsRelevant() {
+		return isRelevant;
+	}
+
+	public void setIsRelevant(String isRelevant) {
+		this.isRelevant = isRelevant;
+	}
+
+	public double getRelevance() {
+		return relevance;
+	}
+
+	public void setRelevance(double relevance) {
+		this.relevance = relevance;
+	}
+
+	public String getReadabilityOuterHtml() {
+		return readabilityOuterHtml;
+	}
+
+	public void setReadabilityOuterHtml(String readabilityOuterHtml) {
+		this.readabilityOuterHtml = readabilityOuterHtml;
+	}
+
+	public String getReadabilityInnerHtml() {
+		return readabilityInnerHtml;
+	}
+
+	public void setReadabilityInnerHtml(String readabilityInnerHtml) {
+		this.readabilityInnerHtml = readabilityInnerHtml;
+	}
 
 }

@@ -51,7 +51,7 @@ public class DumpDataFromElasticSearch {
         SearchResponse scrollResp = client.prepareSearch(inputIndex)
             .setQuery(QueryBuilders.matchAllQuery())
             .setTypes(inputType)
-            .setSearchType(SearchType.SCAN)
+            .setSearchType(SearchType.DFS_QUERY_THEN_FETCH)
             .setScroll(new TimeValue(60000))
             .setSize(100)
             .execute().actionGet();
