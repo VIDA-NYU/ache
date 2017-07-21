@@ -1,12 +1,11 @@
 package focusedCrawler.target.repository;
 
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
 import java.net.URI;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -14,6 +13,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Iterator;
@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.commons.compress.utils.IOUtils;
-import org.apache.tika.mime.MediaType;
 import org.archive.format.warc.WARCConstants;
 import org.archive.format.warc.WARCConstants.WARCRecordType;
 import org.archive.io.ArchiveRecord;
@@ -64,33 +63,20 @@ public class WarcTargetRepository implements TargetRepository {
             directory.toFile().mkdirs();
         }
         this.directory = directory;
-
-        // this.writer = new WARCWriter(new AtomicInteger(),
-        // new WARCWriterPoolSettingsData("crawl_data-", "${prefix}" + "-%d",
-        // WARCConstants.DEFAULT_MAX_WARC_FILE_SIZE, compress, outputDirs, null,
-        // generator));
-        // this.reader = WARCReaderFactory.get(filePath.toFile());
     }
 
     @Override
     public boolean insert(Page target) {
         try {
             if (writer == null) {
-                File[] files = { directory.toFile() };
-                List<File> outputDirs = Arrays.asList(files);
-                long timestamp = System.currentTimeMillis();
-                long count = 0;
-                Path filePath;
-                do {
-                    String file = String.format("crawl_data-%d-%d.warc", timestamp, count++);
-                    filePath = directory.resolve(file);
-                } while (Files.exists(filePath));
-                OutputStream fileStream = new PrintStream(filePath.toFile());
-                this.writer = new WARCWriter(new AtomicInteger(), fileStream, filePath.toFile(),
-                        new WARCWriterPoolSettingsData("crawl_data-", "${prefix}" + "-%d", this.maxFileSize, compress,
-                                outputDirs, null, generator));
+				File[] files = { directory.toFile() };
+				List<File> outputDirs = Arrays.asList(files);
+				List<String> metadata = new ArrayList<>();
+				this.writer = new WARCWriter(new AtomicInteger(), new WARCWriterPoolSettingsData("crawl_data", "${prefix}-${timestamp17}-${serialno}",
+						this.maxFileSize, compress, outputDirs, metadata , generator));
             }
             WARCRecordInfo warcRecord = getWarcRecordInfo(target, generator.getRecordID());
+            writer.checkSize();
             writer.writeRecord(warcRecord);
             return true;
         } catch (IOException e) {
@@ -144,12 +130,8 @@ public class WarcTargetRepository implements TargetRepository {
             warcRecordInfo.setUrl(page.getURL().toString());
 
         byte[] content = page.getContent();
-        warcRecordInfo.setContentLength((long) content.length);
-
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        baos.write(content);
-
-        warcRecordInfo.setContentStream(new ByteArrayInputStream(baos.toByteArray()));
+        
+        
         ANVLRecord headerFields = new ANVLRecord();
         if (page.getTargetRelevance() != null) {
             headerFields.addLabelValue("relevance", page.getTargetRelevance().getRelevance() + "");
@@ -160,18 +142,28 @@ public class WarcTargetRepository implements TargetRepository {
         if (page.getRedirectedURL() != null) {
             headerFields.addLabelValue("redirected-url", page.getRedirectedURL().toString());
         }
-        if (page.getResponseHeaders() != null) {
-            for (String header : page.getResponseHeaders().keySet()) {
-                if(!header.equalsIgnoreCase("content-type")){
-                    headerFields.addLabelValue(header, page.getResponseHeaders().get(header).toString());
-                }
-            }
-        }
-        warcRecordInfo.setExtraHeaders(headerFields);
-
+		if (page.getResponseHeaders() != null) {
+			for (String header : page.getResponseHeaders().keySet()) {
+				headerFields.addLabelValue(header, page.getResponseHeaders().get(header).toString());
+			}
+		}
+		headerFields.addLabelValue("Content Length", content.length+"");
+        //warcRecordInfo.setExtraHeaders(headerFields);
+        
+        
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        baos.write(headerFields.getUTF8Bytes());
+        baos.write(content);
+        warcRecordInfo.setContentLength((long) content.length + headerFields.getUTF8Bytes().length);
+        
+        warcRecordInfo.setContentStream(new ByteArrayInputStream(baos.toByteArray()));
+        
         String requiredDateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'";
  
-        long timeInMilliSeconds = page.getFetchTime() * 1000L;
+        long timeInMilliSeconds = System.currentTimeMillis();
+        if(page.getFetchTime() != 0L) {
+        	timeInMilliSeconds = page.getFetchTime() * 1000L;
+        }
         Date fetchTime = new Date(timeInMilliSeconds);
         DateFormat targetFormat = new SimpleDateFormat(requiredDateFormat);
         String newDate = targetFormat.format(fetchTime);
@@ -179,21 +171,12 @@ public class WarcTargetRepository implements TargetRepository {
         
 
         warcRecordInfo.setType(WARCRecordType.response);
-        warcRecordInfo.setMimetype(getMimeTypeFromContentType(page.getContentType()));
+        warcRecordInfo.setMimetype(WARCConstants.HTTP_RESPONSE_MIMETYPE);
         warcRecordInfo.setRecordId(uri);
 
         return warcRecordInfo;
     }
 
-    private String getMimeTypeFromContentType(String contentType) {
-        String result = "";
-        MediaType mt = MediaType.parse(contentType);
-        if (mt != null) {
-            result = mt.getType() + "/" + mt.getSubtype();
-        }
-
-        return result;
-    }
 
     public class RepositoryIterator implements Iterator<WARCRecord>, Closeable {
 
@@ -288,6 +271,12 @@ public class WarcTargetRepository implements TargetRepository {
                         throw new IllegalStateException("Failed to open file: " + f, e);
                     }
                 }
+            }
+            if(nextRecord!= null && nextRecord.getHeader().getHeaderValue("WARC-Type").equals("warcinfo")) {
+            	//skip the header of the warc file
+            	if(hasNext()) {
+            		return readNext();
+            	}
             }
             return nextRecord;
         }
