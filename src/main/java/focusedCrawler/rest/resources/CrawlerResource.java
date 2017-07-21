@@ -114,7 +114,7 @@ public class CrawlerResource {
                 response.status(HttpServletResponse.SC_BAD_REQUEST);
                 return ImmutableMap.of(
                     "message", "Crawler is not running.",
-                    "stutdownInitiated", false,
+                    "shutdownInitiated", false,
                     "crawlerStopped", false
                 );
             }
@@ -125,13 +125,13 @@ public class CrawlerResource {
                 this.crawler.awaitTerminated();
                 return ImmutableMap.of(
                     "message", "Crawler stopped successfully.",
-                    "stutdownInitiated", true,
+                    "shutdownInitiated", true,
                     "crawlerStopped", true
                 );
             } else {
                 return ImmutableMap.of(
                     "message", "Crawler shutdown initiated.",
-                    "stutdownInitiated", true,
+                    "shutdownInitiated", true,
                     "crawlerStopped", false
                 );
             }
@@ -140,7 +140,7 @@ public class CrawlerResource {
             response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             return ImmutableMap.of(
                 "message", "Failed to stop crawler.",
-                "stutdownInitiated", false,
+                "shutdownInitiated", false,
                 "crawlerStopped", false
             );
         }
