@@ -30,6 +30,7 @@ ACHE supports many features, such as:
     crawling-strategies
     data-formats
     link-filters
+    rest-api
     seed-finder
     faq
 
