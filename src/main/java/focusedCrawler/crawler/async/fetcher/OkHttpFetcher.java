@@ -153,15 +153,8 @@ public class OkHttpFetcher extends BaseHttpFetcher {
 
 
             Map<String,List<String>> headers = response.headers().toMultimap();
-            StringBuilder builder = new StringBuilder();
             for(Map.Entry<String,List<String>> header : headers.entrySet()){
-                for(String string : header.getValue()){
-                    if(builder.length()>0){
-                        builder.append("\t"); //sure you want to delimit it with a Tab?
-                    }
-                    builder.append(string);
-                }
-                headerMap.add(header.getKey(),builder.toString());
+                headerMap.add(header.getKey(),header.getValue().toString());
             }
 
             statusCode = response.code();
@@ -304,8 +297,8 @@ public class OkHttpFetcher extends BaseHttpFetcher {
                     return;
 
 //                _httpClient = new OkHttpClient(); // default
-//                _httpClient = getCustomOkHttpClient(); // custom ciphers
-                _httpClient = getUnsafeOkHttpClient(); // all trusting trust manager
+                _httpClient = getCustomOkHttpClient(); // custom ciphers
+//                _httpClient = getUnsafeOkHttpClient(); // all trusting trust manager, all default ciphers
             }
         }
 
