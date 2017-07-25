@@ -52,6 +52,12 @@ public class HttpDownloaderConfig {
         // Required for de-serialization
     }
 
+    public HttpDownloaderConfig(String okHttpFetcher){
+        if (okHttpFetcher.equals("okHttp")){
+            this.okHttpFetcher = "True";
+        }
+    }
+
     public List<Cookie> getCookies() {
         return this.cookies;
     }
