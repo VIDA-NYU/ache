@@ -297,8 +297,8 @@ public class OkHttpFetcher extends BaseHttpFetcher {
                     return;
 
 //                _httpClient = new OkHttpClient(); // default
-                _httpClient = getCustomOkHttpClient(); // custom ciphers
-//                _httpClient = getUnsafeOkHttpClient(); // all trusting trust manager, all default ciphers
+//                _httpClient = getCustomOkHttpClient(); // custom ciphers
+                _httpClient = getUnsafeOkHttpClient(); // all trusting trust manager, all default ciphers
             }
         }
 
