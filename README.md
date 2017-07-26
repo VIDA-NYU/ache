@@ -47,7 +47,7 @@ To install ACHE binaries into ``/opt`` and make it available on the command-line
 sudo mv build/install/ache /opt/
 echo 'export ACHE_HOME="/opt/ache"' | sudo tee -a /etc/profile.d/ache.sh
 echo 'export PATH="$ACHE_HOME/bin:$PATH"' | sudo tee -a /etc/profile.d/ache.sh
-sh /etc/profile.d/ache.sh
+source /etc/profile.d/ache.sh
 ```
 
 ### Running using Docker
@@ -104,12 +104,14 @@ where,
 - `<model-path>` is the path to the model directory that contains the file `pageclassifier.yml`.
 - `<data-output-path>` is the path to the data output directory.
 
-Example of running ACHE using our sample data:
+Example of running ACHE using the sample *pre-trained page classifier model* and the sample *seeds file* available in the repository:
 
 ```
 ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model
 ```
 
+The crawler will run and print the logs to the console. Hit ``Ctrl+C`` at any time to stop it (it may take some time).
+For long crawls, you should run ACHE in background using a tool like nohup.
 
 ### Data Formats
 
@@ -131,7 +133,7 @@ We welcome user feedback. Please submit any suggestions, questions or bug report
 
 Code contributions are welcome. We use a code style derived from the [Google Style Guide](https://google.github.io/styleguide/javaguide.html), but with 4 spaces for tabs. A Eclipse Formatter configuration file is available in the [repository](https://github.com/ViDA-NYU/ache/blob/master/eclipse-code-style.xml).
 
-## Contact 
+## Contact
 
 - Aécio Santos [aecio.santos@nyu.edu]
 - Kien Pham [kien.pham@nyu.edu]

@@ -3,9 +3,8 @@ package focusedCrawler.link.frontier;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
@@ -14,23 +13,24 @@ import java.nio.file.Paths;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 
 import focusedCrawler.util.persistence.PersistentHashtable.DB;
 
 public class FrontierTest {
+    
+    @Rule
+    public TemporaryFolder tempFolder = new TemporaryFolder();
 
-    final Path testPath = Paths.get("frontier_temp/");
+    public Path testPath;
+    
     private Frontier frontier;
     
     @Before
     public void setUp() throws IOException {
-        
-        File file = testPath.toFile();
-        if(file.exists()) {
-            FileUtils.deleteDirectory(file);
-        }
-        
+        testPath = Paths.get(tempFolder.newFolder().toString());
         frontier = new Frontier(testPath.toString(), 1000, DB.ROCKSDB);
     }
     
@@ -50,7 +50,7 @@ public class FrontierTest {
         frontier.insert(link1);
         
         // then
-        assertThat(frontier.exist(link1), is(1));
+        assertThat(frontier.exist(link1), is(1d));
         assertThat(frontier.exist(link2), is(nullValue()));
     }
     
@@ -66,10 +66,10 @@ public class FrontierTest {
         
         // then
         assertThat(frontier.exist(link1), is(notNullValue()));
-        assertThat(frontier.exist(link1), is(1));
+        assertThat(frontier.exist(link1), is(1d));
         
         assertThat(frontier.exist(link2), is(notNullValue()));
-        assertThat(frontier.exist(link2), is(2));
+        assertThat(frontier.exist(link2), is(2d));
     }
     
     
@@ -81,12 +81,12 @@ public class FrontierTest {
         // when
         frontier.insert(link1);
         // then
-        assertThat(frontier.exist(link1), is(1));
+        assertThat(frontier.exist(link1), is(1d));
         
         // when
         frontier.delete(link1);
         // then
-        assertThat(frontier.exist(link1), is(-1));
+        assertThat(frontier.exist(link1), is(-1d));
     }
 
 }

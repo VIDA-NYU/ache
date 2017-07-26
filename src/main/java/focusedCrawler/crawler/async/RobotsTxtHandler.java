@@ -1,8 +1,6 @@
 package focusedCrawler.crawler.async;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
@@ -19,13 +17,16 @@ import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
 
 public class RobotsTxtHandler implements HttpDownloader.Callback {
-    
+
     @SuppressWarnings("serial")
     public static class RobotsData implements Serializable {
-        public List<String> sitemapUrls = new ArrayList<>();
-        public String content;
-        public RobotsData(List<String> sitemapsUrls) {
-            this.sitemapUrls = sitemapsUrls;
+
+        public BaseRobotRules robotRules;
+        public LinkRelevance link;
+
+        public RobotsData(LinkRelevance link, BaseRobotRules robotRules) {
+            this.link = link;
+            this.robotRules = robotRules;
         }
     }
     
@@ -86,10 +87,10 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
         }
         
         try {
-            RobotsData robotsData = new RobotsData(robotRules.getSitemaps());
+            RobotsData robotsData = new RobotsData(link, robotRules);
             linkStorage.insert(robotsData);
         } catch (StorageException | CommunicationException e) {
-            logger.error("Failed to insert robot.txt data into link storage.", e);
+            logger.error("Failed to insert robots.txt data into link storage.", e);
         }
         
     }

@@ -22,7 +22,6 @@ ACHE supports many features, such as:
     :caption: Contents:
 
     install
-    getting-started
     tutorial-focused-crawl
     tutorial-in-depth-crawl
     tutorial-crawling-cookie
@@ -31,7 +30,9 @@ ACHE supports many features, such as:
     crawling-strategies
     data-formats
     link-filters
+    rest-api
     seed-finder
+    faq
 
 Links
 -----

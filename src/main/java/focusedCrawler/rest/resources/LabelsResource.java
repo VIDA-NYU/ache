@@ -1,4 +1,4 @@
-package focusedCrawler.rest;
+package focusedCrawler.rest.resources;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -17,14 +17,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import spark.Route;
 
-public class LabelsManager {
+public class LabelsResource {
 
     private static final ObjectMapper mapper = new ObjectMapper();
 
     private Path filePath;
     private Map<String, Boolean> labelsCache;
 
-    public LabelsManager(String dataPath) {
+    public LabelsResource(String dataPath) {
         this.labelsCache = new HashMap<>();
         try {
             filePath = Paths.get(dataPath, "labels.json");
@@ -38,7 +38,7 @@ public class LabelsManager {
         }
     }
 
-    public Route addLabelsResource = (request, response) -> {
+    public final Route addLabels = (request, response) -> {
 
         Map<String, Boolean> labels = deserializeMap(request.body(), mapper);
         for (Entry<String, Boolean> entry : labels.entrySet()) {
@@ -53,7 +53,7 @@ public class LabelsManager {
         return labelsCache;
     };
 
-    public Route getLabelsResource = (request, response) -> {
+    public final Route getLabels = (request, response) -> {
         return labelsCache;
     };
 

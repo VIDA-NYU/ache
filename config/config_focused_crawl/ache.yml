@@ -7,7 +7,7 @@ target_storage.store_negative_pages: true
 
 # Limit the max number of pages crawled per domain, in order to avoid crawling
 # too many pages from same somain and favor discovery o new domains
-link_storage.max_pages_per_domain: 1000
+link_storage.max_pages_per_domain: 10000
 
 # Disable "seed scope" to allow crawl pages from any domain
 link_storage.link_strategy.use_scope: false

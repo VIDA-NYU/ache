@@ -46,7 +46,9 @@ public class HttpDownloaderConfig {
     @JsonProperty("crawler_manager.downloader.cookies")
     private List<Cookie> cookies = null;
     
-    public HttpDownloaderConfig() {}
+    public HttpDownloaderConfig() {
+        // Required for de-serialization
+    }
 
     public List<Cookie> getCookies() {
         return this.cookies;

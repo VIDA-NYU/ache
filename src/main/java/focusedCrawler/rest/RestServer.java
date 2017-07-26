@@ -2,120 +2,113 @@ package focusedCrawler.rest;
 
 import static java.util.Objects.requireNonNull;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.lang.management.ManagementFactory;
 import java.net.DatagramSocket;
 import java.net.ServerSocket;
 import java.util.List;
-import java.util.Map;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.codahale.metrics.MetricRegistry;
-import com.codahale.metrics.jvm.ThreadDump;
-import com.google.common.collect.ImmutableMap;
-
-import focusedCrawler.Main;
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
+import focusedCrawler.crawler.async.AsyncCrawler;
+import focusedCrawler.rest.resources.CrawlerResource;
+import focusedCrawler.rest.resources.ElasticsearchProxyResource;
+import focusedCrawler.rest.resources.LabelsResource;
+import focusedCrawler.rest.resources.ThreadsResource;
 import focusedCrawler.target.TargetStorageConfig;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
-import spark.Route;
 import spark.Service;
 
 public class RestServer {
     
-    public static final String VERSION = Main.class.getPackage().getImplementationVersion();
-    
     private static final Logger logger = LoggerFactory.getLogger(RestServer.class);
     
     private RestConfig restConfig;
-    private MetricRegistry metricsRegistry;
     private Service server;
-    
-    private boolean isSearchEnabled = false;
-    private String esHostAddress;
-    private String esIndexName;
-    private String esTypeName;
-    private CloseableHttpClient httpclient;
-    private LabelsManager labelsManager;
 
-    private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry) {
-        this(dataPath, restConfig, metricsRegistry, null, null, null);
+    private LabelsResource labelsResource;
+    private CrawlerResource crawlerResource;
+    private ThreadsResource threadsResource;
+    private ElasticsearchProxyResource elasticsearchProxyResource;
+    private boolean isSearchEnabled = false;
+
+
+    private RestServer(String dataPath, Configuration config) {
+        this(dataPath, config, null, null, null);
     }
     
-    private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry,
-                       String esIndexName, String esTypeName, String esHostAddress) {
-        this.restConfig = restConfig;
-        this.metricsRegistry = metricsRegistry;
+    private RestServer(String dataPath, Configuration config, String esIndexName,
+                       String esTypeName, String esHostAddress) {
+        this.restConfig = config.getRestConfig();
         if (esIndexName != null && esHostAddress != null) {
-            this.esIndexName = esIndexName;
-            this.esHostAddress = esHostAddress;
-            isSearchEnabled = true;
-            if (esTypeName != null && !esTypeName.isEmpty()) {
-                this.esTypeName = esTypeName;
-            } else {
-                this.esTypeName = "page"; // default type name
+            this.isSearchEnabled = true;
+            if (esTypeName == null || esTypeName.isEmpty()) {
+                esTypeName = "page"; // default type name
             }
-            this.httpclient = HttpClients.createDefault();
-            this.labelsManager = new LabelsManager(dataPath);
+        }
+        this.threadsResource = new ThreadsResource();
+        this.labelsResource  = new LabelsResource(dataPath);
+        this.crawlerResource = new CrawlerResource(config, dataPath, esIndexName, esTypeName);
+        if (isSearchEnabled) {
+            this.elasticsearchProxyResource = new ElasticsearchProxyResource(esHostAddress, esIndexName, esTypeName);
         }
     }
- 
+
     public void start() {
-        
+
         String host = restConfig.getHost();
         int port = restConfig.getPort();
-        while(!portIsAvailable(port) && port < restConfig.getPort()+100) {
-            logger.error("Port {} not available. Trying port {}.", port, port+1);
+        while (!portIsAvailable(port) && port < restConfig.getPort() + 100) {
+            logger.error("Port {} not available. Trying port {}.", port, port + 1);
             port++;
         }
-        
+
         server = Service.ignite();
         server.port(port);
         server.ipAddress(host);
-        
+
         server.staticFiles.location("/public");
 
-        if(restConfig.isEnableCors()) {
+        if (restConfig.isEnableCors()) {
             enableCORS("*", "GET");
         }
         
         /*
-         * API endpoints routes
+         * Crawl routes
          */
-        server.get("/status",      Transformers.json(crawlerInfoResource));
-        server.get("/metrics",     Transformers.json(metricsResource));
-        server.get("/thread/dump", Transformers.text(threadDumpResource));
-        
-        if(isSearchEnabled) {
+        server.get("/status", Transformers.json(crawlerResource.getStatus));
+        server.get("/metrics", Transformers.json(crawlerResource.metricsResource));
+        server.post("/startCrawl", "*/*", Transformers.json(crawlerResource.startCrawl));
+        server.get("/stopCrawl", Transformers.json(crawlerResource.stopCrawl));
+        server.post("/seeds", "*/*", Transformers.json(crawlerResource.addSeeds));
+
+        /*
+         * Thread management routes
+         */
+        server.get("/thread/dump", Transformers.text(threadsResource.threadDump));
+
+        if (isSearchEnabled) {
             /*
              * Elasticsearch proxy routes
              */
-            server.get("/_search", "*/*", elasticsearchApiProxy);
-            server.post("/_search", "*/*", elasticsearchApiProxy);
-            
-            /*
-             * Endpoints for labeling web pages
-             */
-            server.get( "/labels", Transformers.json(labelsManager.getLabelsResource));
-            server.put( "/labels", Transformers.json(labelsManager.addLabelsResource));
-            server.post("/labels", Transformers.json(labelsManager.addLabelsResource));
+            server.get("/_search", "*/*", elasticsearchProxyResource.searchApi);
+            server.post("/_search", "*/*", elasticsearchProxyResource.searchApi);
         }
+
+        /*
+         * Page labeling routes
+         */
+        server.get( "/labels", Transformers.json(labelsResource.getLabels));
+        server.put( "/labels", Transformers.json(labelsResource.addLabels));
+        server.post("/labels", Transformers.json(labelsResource.addLabels));
         
         /*
-         * Routes used by the static web application
+         * Routes to serve index.html to the paths used by the React static web application
          */
-        server.get("/search", StaticFileEngine.noopRouter, StaticFileEngine.engine);
+        server.get("/search",     StaticFileEngine.noopRouter, StaticFileEngine.engine);
+        server.get("/monitoring", StaticFileEngine.noopRouter, StaticFileEngine.engine);
+        server.get("/startCrawl", StaticFileEngine.noopRouter, StaticFileEngine.engine);
         
         server.awaitInitialization();
         
@@ -123,59 +116,6 @@ public class RestServer {
         logger.info("ACHE server available at http://{}:{}", host, port);
         logger.info("---------------------------------------------");
     }
-    
-    private Route crawlerInfoResource = (request, response) -> {
-        Map<?, ?> crawlerInfo = ImmutableMap.of(
-            "status", 200,
-            "name", "ACHE Crawler",
-            "version", VERSION,
-            "searchEnabled", isSearchEnabled
-        );
-        return crawlerInfo;
-    };
-    
-    private Route elasticsearchApiProxy = (request, response) -> {
-        try {
-            String query = "";
-            for (String param : request.queryParams()) {
-                query += param + "=" + request.queryParams(param);
-            }
-            String url = String.format("%s/%s/%s/_search", esHostAddress, esIndexName, esTypeName);
-            if (!query.isEmpty()) {
-                url += "?" + query;
-            }
-            HttpPost post = new HttpPost(url);
-            post.setEntity(new StringEntity(request.body(), "UTF-8"));
-            CloseableHttpResponse apiResponse = httpclient.execute(post);
-            try {
-                HttpEntity entity = apiResponse.getEntity();
-                Header[] headers = apiResponse.getAllHeaders();
-                for (Header header : headers) {
-                    response.header(header.getName(), header.getValue());
-                }
-                String body = EntityUtils.toString(entity);
-                response.body(body);
-                return body;
-            } finally {
-                apiResponse.close();
-            }
-        } catch (Exception e) {
-            logger.error("Failed to forward request to ElasticSearch.", e);
-            throw e;
-        }
-    };
-
-    private Route metricsResource = (request, response) -> {
-        return metricsRegistry;
-    };
-    
-    private ThreadDump threadDump = new ThreadDump(ManagementFactory.getThreadMXBean());
-    
-    private Route threadDumpResource = (request, response) -> {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        threadDump.dump(baos);
-        return baos.toString();
-    };
 
     private boolean portIsAvailable(int port) {
         ServerSocket ss = null;
@@ -201,12 +141,8 @@ public class RestServer {
 
     public void shutdown() {
         server.stop();
-        try {
-            if(this.httpclient != null) {
-                this.httpclient.close();
-            }
-        } catch (IOException e) {
-            logger.error("Failed to close http client.", e);
+        if(elasticsearchProxyResource != null) {
+            elasticsearchProxyResource.close();
         }
     }
     
@@ -234,27 +170,30 @@ public class RestServer {
         
     }
 
-    public static RestServer create(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry) {
-        return new RestServer(dataPath, restConfig, metricsRegistry);
-    }
-    
-    public static RestServer create(String dataPath, MetricRegistry metricsRegistry,
-            ConfigService config, String esIndexName, String esTypeName) {
-        requireNonNull(metricsRegistry, "A metrics registry must be provided.");
-        requireNonNull(config, "A configuration must be provided.");
+    public static RestServer create(String configPath, String dataPath,
+                                    String esIndexName, String esTypeName) {
+        requireNonNull(dataPath, "A data path must be provided.");
+        Configuration config = configPath == null ? new Configuration() : new Configuration(configPath);
         TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
         ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
         List<String> hosts = esConfig.getRestApiHosts();
-        if(hosts != null && !hosts.isEmpty()) {
+        if (targetStorageConfig.getDataFormats().contains("ELASTICSEARCH") &&
+            hosts != null && !hosts.isEmpty()) {
             requireNonNull(esIndexName, "Elasticsearch index name should be provided when using ELASTICSEARCH data format.");
             if(esTypeName == null || esTypeName.isEmpty()) {
                 esTypeName = "page";
             }
             String esHostAddress = hosts.iterator().next();
-            return new RestServer(dataPath, config.getRestConfig(), metricsRegistry, esIndexName, esTypeName, esHostAddress);
+            logger.info("Starting server with Elasticsearch: " + esHostAddress + "/" + esIndexName + "/" + esTypeName);
+            return new RestServer(dataPath, config, esIndexName, esTypeName, esHostAddress);
         } else {
-            return new RestServer(dataPath, config.getRestConfig(), metricsRegistry);
+            logger.info("Starting server with local data formats.");
+            return new RestServer(dataPath, config);
         }
     }
-    
+
+    public void setCrawler(AsyncCrawler crawler) {
+        crawlerResource.setCrawler(crawler);
+    }
+
 }

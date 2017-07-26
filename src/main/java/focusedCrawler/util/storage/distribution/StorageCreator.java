@@ -23,118 +23,29 @@
 */
 package focusedCrawler.util.storage.distribution;
 
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.DefaultStorageFactory;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
-import focusedCrawler.util.storage.StorageFactory;
 import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageRemoteAdapterReconnect;
 
 public class StorageCreator extends DefaultStorageFactory {
 
     public StorageCreator() {
-        super();
-    } //StorageCreator
+    }
 
     public StorageCreator(StorageConfig config) {
         super(config);
-    } //StorageCreator
+    }
 
     public Storage produce() throws StorageFactoryException {
         checkFactory();
-        // Criando o storage capaz de reconectar
         StorageRemoteAdapterReconnect result = new StorageRemoteAdapterReconnect();
-        // Setando a fabrica de storage
-
         result.setStorageFactory(getFactory());
-
-        // Setando a quantidade de tentativas para acessar a funcao
-
         result.setTryNumber(getConfig().getTryNumber());
-
-        // Setando a espera apos uma falha de comunicacao
-
         result.setDelayAfterException(getConfig().getDelayAfterException());
-
         return result;
     }
 
-      public static void main(String args[]) {
-
-        try {
-
-            ParameterFile config = new ParameterFile (args);
-
-            StorageFactory run = new StorageCreator(new StorageConfig(config));
-
-            Storage storage = run.produce();
-
-            System.out.println ("storage: " + storage);
-
-            if (args.length > 1) {
-
-                String command = args[1];
-
-                if (command.endsWith("commit")) {
-
-                    storage.commit(null);
-
-                } //if
-
-                else if (command.equals("rollback")) {
-
-                    storage.rollback(null);
-
-                } //else
-
-                else if (command.equals("finalize")) {
-
-                    storage.finalize(null);
-
-                } //else
-
-                else if (command.equals("ping")) {
-
-                    storage.ping(null);
-
-                } //else
-
-                else if (command.equals("remove")) {
-
-                    storage.remove(null);
-
-                } //else
-
-                else if (command.equals("select")) {
-
-                    System.out.println("Select " + args[2] + "=" + storage.select(args[2]));
-
-                } //else
-
-                else if (command.equals("selectArray")) {
-
-                    String[] str = new String[args.length-2];
-
-                    System.arraycopy(args,2,str,0,str.length);
-
-                    Object[] obj = storage.selectArray(str);
-
-                    System.out.println("SelectArray:");
-
-                    for (int i = 0; i < obj.length; i++) {
-
-                        System.out.println("Select "+str[i]+"="+obj[i]);
-
-                    }
-                } //else
-
-            } //if
-
-        }
-        catch(Exception exc) {
-            exc.printStackTrace();
-        }
-    }
 }
 

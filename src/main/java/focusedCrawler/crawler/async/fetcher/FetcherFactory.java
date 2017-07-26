@@ -40,7 +40,11 @@ public class FetcherFactory {
         httpFetcher.setConnectionRequestTimeout(1*60*1000);
         httpFetcher.setMaxConnectionsPerHost(1);
         httpFetcher.setMaxRetryCount(config.getMaxRetryCount());
-        httpFetcher.setDefaultMaxContentSize(10*1024*1024);
+
+        // sets maximum file size: download of files larger than this will be aborted
+        // (note: should NOT be smaller than 50MB if crawling sitemap files)
+        int defaultMaxContentSize = 51 * 1024 * 1024;
+        httpFetcher.setDefaultMaxContentSize(defaultMaxContentSize);
         
         if(config.getValidMimeTypes() != null) {
             for (String mimeTypes : config.getValidMimeTypes()) {
@@ -70,8 +74,10 @@ public class FetcherFactory {
         }
         
         torFetcher.setProxy(torProxy.getProtocol(), torProxy.getHost(), torProxy.getPort());
-        torFetcher.setSocketTimeout(1000*1000);
-        
+        torFetcher.setMaxRetryCount(3);
+        torFetcher.setSocketTimeout(5*60*1000);
+        torFetcher.setConnectionTimeout(5*60*1000);
+        torFetcher.setConnectionRequestTimeout(5*60*1000);
         return new TorProxyFetcher(torFetcher, httpFetcher);
     }
 

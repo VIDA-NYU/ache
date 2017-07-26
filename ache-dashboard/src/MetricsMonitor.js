@@ -6,7 +6,7 @@ import {ACHE_API_ADDRESS} from './Config';
 class SeriesPlot extends React.Component {
 
   plotsPerLine = 2;
-  plotWidth = 1050/this.plotsPerLine;
+  plotWidth = 1000/this.plotsPerLine;
   plotHeight = 250;
 
   render() {
@@ -17,7 +17,7 @@ class SeriesPlot extends React.Component {
     var divClass = 'col-md-'+(12/this.plotsPerLine);
     return (
       <div className={divClass}>
-        <XYPlot width={this.plotWidth} height={this.plotHeight}>
+        <XYPlot width={this.plotWidth} height={this.plotHeight} margin={{left: 100}}>
           <HorizontalGridLines />
           {lines}
           <XAxis />
@@ -38,7 +38,9 @@ class MetricsMonitor extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      metrics: {}
+    };
     this.charts = [
       // Downloader Fetches
       [
@@ -107,6 +109,7 @@ class MetricsMonitor extends React.Component {
         this.charts[i][m]['series'] = [];
       }
     }
+    this.fetchMetrics();
   }
 
   componentDidMount() {
@@ -139,6 +142,7 @@ class MetricsMonitor extends React.Component {
       });
       return;
     }
+
     for(var i = 0; i < this.charts.length; i++) {
       for(var m = 0; m < this.charts[i].length; m++) {
         let metric = this.charts[i][m];
@@ -160,7 +164,7 @@ class MetricsMonitor extends React.Component {
       }
     }
     this.xaxisCount += 1;
-    this.setState({charts: this.charts});
+    this.setState({charts: this.charts, metrics: metrics});
   }
 
   render(){
@@ -173,20 +177,68 @@ class MetricsMonitor extends React.Component {
     }
 
     var plots = [];
-    for(var i = 0; i < this.charts.length; i++) {
-      var titles = [];
-      var series = [];
-      for(var m = 0; m < this.charts[i].length; m++) {
-        titles.push(this.charts[i][m].key);
-        series.push(this.charts[i][m].series);
+    var table;
+    if(this.state.metrics !== null &&
+       this.state.metrics.gauges != null) {
+      var metrics = this.state.metrics;
+      // Create metrics table
+      table =
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2">
+            <div className="panel panel-default">
+              <div className="panel-heading"><b>Crawl Metrics</b></div>
+                <table className="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Uncrawled Pages in Frontier</td>
+                      <td>{metrics['gauges']['frontier_manager.last_load.uncrawled'].value.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td>Successfull Page Fetches (HTTP 2XX)</td>
+                      <td>{metrics['counters']['downloader.http_response.status.2xx'].count.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td>Successfull Page Fetches</td>
+                      <td>{metrics['counters']['downloader.fetches.successes'].count.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td>Page Fetch Errors </td>
+                      <td>{metrics['counters']['downloader.fetches.errors'].count.toLocaleString()}</td>
+                    </tr>
+
+                    <tr>
+                      <td>Fetch Time (mean) in secs </td>
+                      <td>{metrics['timers']['downloader.fetch.time'].mean.toFixed(3)}</td>
+                    </tr>
+                    <tr>
+                      <td>Fetch Time (p95) in secs </td>
+                      <td>{metrics['timers']['downloader.fetch.time'].p95.toFixed(3)}</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+
+      // Create time series charts
+      for(var i = 0; i < this.charts.length; i++) {
+        var titles = [];
+        var series = [];
+        for(var m = 0; m < this.charts[i].length; m++) {
+          titles.push(this.charts[i][m].key);
+          series.push(this.charts[i][m].series);
+        }
+        var keyName = i + '-' + m;
+        plots.push(
+          (<SeriesPlot key={keyName} titles={titles} series={series} />)
+        );
       }
-      var keyName = i + '-' + m;
-      plots.push(
-        (<SeriesPlot key={keyName} titles={titles} series={series} />)
-      );
+
     }
+
     return (
       <div className="row">
+        {table}
         {plots}
       </div>
     );

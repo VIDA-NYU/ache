@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import 'whatwg-fetch'
 
+import StartCrawl from './StartCrawl'
 import Search from './Search'
 import MetricsMonitor from './MetricsMonitor'
 
@@ -25,7 +26,8 @@ class Header extends React.Component {
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-              <Navigation to="/" label="Monitoring" activeOnlyWhenExact={true}/>
+              <Navigation to="/" label="Start Crawl" activeOnlyWhenExact={true}/>
+              <Navigation to="/monitoring" label="Monitoring" activeOnlyWhenExact={true}/>
               <Navigation to="/search" label="Search"/>
             </ul>
           </div>
@@ -51,8 +53,10 @@ class App extends Component {
           <Header/>
           <div className="container">
             <div className="main-content">
-              <Route exact path="/" component={MetricsMonitor}/>
+              <Route exact path="/" component={StartCrawl}/>
+              <Route exact path="/monitoring" component={MetricsMonitor}/>
               <Route exact path="/search" component={Search}/>
+              
             </div>
           </div>
         </div>
