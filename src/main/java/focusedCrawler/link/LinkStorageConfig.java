@@ -102,6 +102,9 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.persistent_hashtable.backend")
     private String persistentHashtableBackend = "ROCKSDB";
 
+    @JsonProperty("link_storage.link_classifier.max_depth")
+    private int maxDepth;
+
     public LinkStorageConfig() {
         this.serverConfig = new StorageConfig();
     }
@@ -217,6 +220,10 @@ public class LinkStorageConfig {
         }else{
             return DB.ROCKSDB;
         }
+    }
+
+    public int getMaxDepth() {
+        return maxDepth;
     }
 
 }
