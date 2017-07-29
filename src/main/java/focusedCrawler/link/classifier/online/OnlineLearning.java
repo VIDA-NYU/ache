@@ -1,45 +1,61 @@
 package focusedCrawler.link.classifier.online;
 
+import focusedCrawler.link.LinkStorage.MonitorLock;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.frontier.FrontierManager;
-import focusedCrawler.target.model.Page;
 
-public abstract class OnlineLearning {
+public abstract class OnlineLearning implements Runnable{
     
     public static final Logger logger = LoggerFactory.getLogger(OnlineLearning.class);
 
-    private final int learnLimit;
     private AtomicBoolean onlineLearningIsRunning = new AtomicBoolean(false);
-    private AtomicInteger numberOfPages = new AtomicInteger(0);
+    private static volatile MonitorLock monitorLock;
+    private static volatile AtomicBoolean wasSignalled;
 
     private FrontierManager frontierManager;
     
-    public OnlineLearning(int learnLimit, FrontierManager frontierManager) {
-        this.learnLimit = learnLimit;
+    public OnlineLearning(FrontierManager frontierManager, MonitorLock monitorLock, AtomicBoolean wasSignalled) {
         this.frontierManager = frontierManager;
+        this.monitorLock = monitorLock;
+        this.wasSignalled = wasSignalled;
     }
-    
-    public void pushFeedback(Page page) throws Exception {
-        
-        int numberOfPages = this.numberOfPages.incrementAndGet();
-        
-        if (numberOfPages % learnLimit == 0) {
-            if(onlineLearningIsRunning.compareAndSet(false, true)) {
-                // onlineLearningIsRunning is true
-                logger.info("Running Online Learning...");
-                this.execute();
-                frontierManager.forceReload();
-                logger.info("Online Learning finished.");
-                onlineLearningIsRunning.set(false);
+
+    public void doWait(){
+        synchronized(monitorLock){
+            while(!wasSignalled.get()){
+                try{
+                    monitorLock.wait();
+                } catch(InterruptedException e){
+
+                }
             }
+            //clear signal and continue running.
+            wasSignalled.set(false);
         }
     }
 
+    @Override
+    public void run() {
+        while (!Thread.currentThread().isInterrupted()) {
+            doWait();
+            try {
+                if (onlineLearningIsRunning.compareAndSet(false, true)) {
+                    // onlineLearningIsRunning is true
+                    logger.info("Running Online Learning...");
+                    this.execute();
+                    frontierManager.forceReload();
+                    logger.info("Online Learning finished.");
+                    onlineLearningIsRunning.set(false);
+                }
+            } catch (Exception e) {
+                logger.error("LEARNING EXCEPTION - "+e.toString());
+            }
+        }
+    }
     public abstract void execute() throws Exception;
     
 }

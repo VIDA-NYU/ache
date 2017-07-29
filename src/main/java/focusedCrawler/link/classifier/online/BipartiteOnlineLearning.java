@@ -1,5 +1,6 @@
 package focusedCrawler.link.classifier.online;
 
+import focusedCrawler.link.LinkStorage.MonitorLock;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,6 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import java.util.concurrent.atomic.AtomicBoolean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,9 +29,10 @@ public class BipartiteOnlineLearning extends OnlineLearning {
     private LinkClassifierBuilder classifierBuilder;
     private String dataPath;
     
-    public BipartiteOnlineLearning(int learnLimit, FrontierManager frontierManager, 
-                                   LinkClassifierBuilder classifierBuilder, String dataPath) {
-        super(learnLimit, frontierManager);
+    public BipartiteOnlineLearning(FrontierManager frontierManager,
+                                   LinkClassifierBuilder classifierBuilder, String dataPath,
+									MonitorLock monitorLock, AtomicBoolean wasSignalled) {
+        super(frontierManager, monitorLock, wasSignalled);
         this.frontierManager = frontierManager;
         this.classifierBuilder = classifierBuilder;
         this.dataPath = dataPath;
