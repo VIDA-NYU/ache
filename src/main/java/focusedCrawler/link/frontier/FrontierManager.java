@@ -93,7 +93,7 @@ public class FrontierManager {
         this.graphRepository = new BipartiteGraphRepository(dataPath, config.getPersistentHashtableBackend());
         this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"), config.getPersistentHashtableBackend());;
         this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
-        this.outlinkClassifier = LinkClassifierFactory.create(modelPath, config.getTypeOfClassifier());
+        this.outlinkClassifier = LinkClassifierFactory.create(modelPath, config);
         if (config.getBacklinks()) {
             this.backlinkSurfer = new BacklinkSurfer(config.getBackSurferConfig());
             this.backlinkClassifier = new LinkClassifierHub();
