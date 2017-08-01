@@ -946,8 +946,11 @@ public class PaginaURL {
 //                                System.out.println("CREATE LINK:"  + urlTemp);
                             } else if (tagName.equals("link")
                                        && atributo.equals("href")) {
-                                String urlTemp = adicionaLink(str, base);
-                                if(urlTemp!= null && urlTemp.startsWith("http")){
+                            	String urlTemp = null;
+                            	if(!str.contains(".css") && !str.endsWith(".js")) {
+                            		urlTemp = adicionaLink(str, base);
+                            	}
+                            	if(urlTemp!= null && urlTemp.startsWith("http")){
                                     try {
                                         ln = new LinkNeighborhood(new URL(urlTemp));
                                     } catch (Exception e) {
@@ -957,7 +960,6 @@ public class PaginaURL {
 //                                System.out.println("CREATE LINK:"  + urlTemp);
                             } else if (tagName.equals("area")
                                        && atributo.equals("href")) {
-                                adicionaLink(str, base);
                                 String urlTemp = adicionaLink(str, base);
                                 if(urlTemp!= null && urlTemp.startsWith("http")){
                                   ln = new LinkNeighborhood(new URL(urlTemp));
