@@ -192,14 +192,14 @@ public class HttpDownloader implements Closeable {
             long timeWaited = 0;
             while(downloadQueue.size() > 0 || runningRequests.get() > 0) {
                 Thread.sleep(10);
-                timeWaited = 10;
+                timeWaited += 10;
                 if(timeWaited % 5000 == 0) {
                     logger.info("Still waiting to finish downloads...");
                 }
             }
             while(dispatchQueue.size() > 0 || runningHandlers.get() > 0) {
                 Thread.sleep(10);
-                timeWaited = 10;
+                timeWaited += 10;
                 if(timeWaited % 5000 == 0) {
                     logger.info("Still waiting to process downloaded pages...");
                 }

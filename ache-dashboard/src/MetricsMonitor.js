@@ -109,6 +109,7 @@ class MetricsMonitor extends React.Component {
         this.charts[i][m]['series'] = [];
       }
     }
+    this.fetchMetrics();
   }
 
   componentDidMount() {
@@ -141,7 +142,7 @@ class MetricsMonitor extends React.Component {
       });
       return;
     }
-    
+
     for(var i = 0; i < this.charts.length; i++) {
       for(var m = 0; m < this.charts[i].length; m++) {
         let metric = this.charts[i][m];
@@ -181,7 +182,7 @@ class MetricsMonitor extends React.Component {
        this.state.metrics.gauges != null) {
       var metrics = this.state.metrics;
       // Create metrics table
-      table = 
+      table =
         <div className="row">
           <div className="col-md-8 col-md-offset-2">
             <div className="panel panel-default">
@@ -204,7 +205,7 @@ class MetricsMonitor extends React.Component {
                       <td>Page Fetch Errors </td>
                       <td>{metrics['counters']['downloader.fetches.errors'].count.toLocaleString()}</td>
                     </tr>
-                    
+
                     <tr>
                       <td>Fetch Time (mean) in secs </td>
                       <td>{metrics['timers']['downloader.fetch.time'].mean.toFixed(3)}</td>
@@ -218,7 +219,7 @@ class MetricsMonitor extends React.Component {
             </div>
           </div>
         </div>
-      
+
       // Create time series charts
       for(var i = 0; i < this.charts.length; i++) {
         var titles = [];
@@ -234,7 +235,7 @@ class MetricsMonitor extends React.Component {
       }
 
     }
-    
+
     return (
       <div className="row">
         {table}

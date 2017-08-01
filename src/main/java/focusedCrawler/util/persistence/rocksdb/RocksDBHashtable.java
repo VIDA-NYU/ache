@@ -106,14 +106,12 @@ public class RocksDBHashtable<T> implements HashtableDb<T>, Closeable {
     }
 
     @Override
-    public void close() {
-        synchronized(db) {
-            if (db != null) {
-                db.close();
-                db = null;
-                options.close();
-                options = null;
-            }
+    public synchronized void close() {
+        if (db != null) {
+            db.close();
+            db = null;
+            options.close();
+            options = null;
         }
     }
 

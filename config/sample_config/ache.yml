@@ -40,16 +40,23 @@ target_storage.data_format.files.max_file_size: 134217728 # 128mb in bytes
 #target_storage.data_format.elasticsearch.rest.socket_timeout: 30000
 #target_storage.data_format.elasticsearch.rest.max_retry_timeout_millis: 90000
 
+
+# Instead of configuring a single data format, you can also configure multiple
+# data formats in a list as follows. The settings for each data format should
+# be configured independently, as if you were configuring a single data format.
+# In the following config, data will be pushed to both FILES and ELASTICSEARCH.
+#
+#target_storage.data_formats:
+#  - FILES
+#  - ELASTICSEARCH
+
+
 # Performs hard focus or soft focus. When hard focus is enabled,
 # the crawler only follows links from pages classified as relevant
 target_storage.hard_focus: true
 
 # Run bipartite crawler
 target_storage.bipartite: false
-
-# Relevance threshold for classified pages. Pages with probability of being
-# relevant above this threshold are considered relevant
-target_storage.relevance_threshold: 0.5
 
 # Maximum number of pages to visit
 target_storage.visited_page_limit: 10000000

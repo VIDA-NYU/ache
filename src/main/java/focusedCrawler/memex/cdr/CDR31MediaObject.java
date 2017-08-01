@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.StringJoiner;
@@ -63,6 +64,7 @@ public class CDR31MediaObject {
         return this.contentType;
     }
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")
     @JsonProperty("timestamp_crawl")
     public Date getTimestampCrawl() {
         return this.timestampCrawl;

@@ -72,10 +72,14 @@ public class LinkStorageConfig {
     @JsonUnwrapped
     private BackSurferConfig backSurferConfig = new BackSurferConfig();
 
+    @JsonUnwrapped
     private final StorageConfig serverConfig;
 
     @JsonProperty("link_storage.download_sitemap_xml")
     private boolean downloadSitemapXml = false;
+
+    @JsonProperty("link_storage.disallow_sites_in_robots_file")
+    private boolean disallowSitesInRobotsFile = false;
 
     @JsonProperty("link_storage.recrawl_selector")
     private String recrawlSelector = null;
@@ -93,10 +97,13 @@ public class LinkStorageConfig {
     private int schedulerHostMinAccessInterval = 5000;
 
     @JsonProperty("link_storage.scheduler.max_links")
-    private int schedulerMaxLinks = 10000;
+    private int schedulerMaxLinks = 100000;
 
     @JsonProperty("link_storage.persistent_hashtable.backend")
     private String persistentHashtableBackend = "ROCKSDB";
+
+    @JsonProperty("link_storage.link_classifier.max_depth")
+    private int maxDepth;
 
     public LinkStorageConfig() {
         this.serverConfig = new StorageConfig();
@@ -115,6 +122,7 @@ public class LinkStorageConfig {
         return typeOfClassifier;
     }
 
+    @JsonProperty("link_storage.link_strategy.outlinks")
     public boolean getOutlinks() {
         return getOutlinks;
     }
@@ -131,6 +139,7 @@ public class LinkStorageConfig {
         return maxCacheUrlsSize;
     }
 
+    @JsonProperty("link_storage.link_strategy.backlinks")
     public boolean getBacklinks() {
         return getBacklinks;
     }
@@ -167,7 +176,7 @@ public class LinkStorageConfig {
         return sitemapsRecrawlInterval;
     }
 
-    public double getRecrawlMinRelevanceValue() {
+    public double getRecrawlMinRelevance() {
         return minRelevanceRecrawl;
     }
 
@@ -181,6 +190,15 @@ public class LinkStorageConfig {
 
     public boolean getDownloadSitemapXml() {
         return downloadSitemapXml;
+    }
+
+    /**
+     * Returns true if the user wants the disallowed sites in robots.txt to be skipped
+     * 
+     * @return
+     */
+    public boolean getDisallowSitesInRobotsFile() {
+        return disallowSitesInRobotsFile;
     }
 
     public int getSchedulerHostMinAccessInterval() {
@@ -202,6 +220,10 @@ public class LinkStorageConfig {
         }else{
             return DB.ROCKSDB;
         }
+    }
+
+    public int getMaxDepth() {
+        return maxDepth;
     }
 
 }

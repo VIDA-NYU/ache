@@ -1,11 +1,11 @@
 package focusedCrawler.link.frontier;
 
 import java.net.URLDecoder;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import crawlercommons.robots.BaseRobotRules;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.PersistentHashtable.DB;
 import focusedCrawler.util.persistence.Tuple;
@@ -15,19 +15,12 @@ import focusedCrawler.util.persistence.TupleIterator;
 public class Frontier {
 
     protected PersistentHashtable<LinkRelevance> urlRelevance;
-    protected Map<String, Integer> scope = null;
-    private boolean useScope = false;
+
+    private final PersistentHashtable<BaseRobotRules> robotRulesMap;
 
     public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend, Map<String, Integer> scope) {
         this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize, LinkRelevance.class, persistentHashtableBackend);
-        
-        if (scope == null) {
-            this.useScope = false;
-            this.scope = new HashMap<String, Integer>();
-        } else {
-            this.scope = scope;
-            this.useScope = true;
-        }
+        this.robotRulesMap = new PersistentHashtable<>(directory+"_robots", maxCacheUrlsSize, BaseRobotRules.class, persistentHashtableBackend);
     }
 
     public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend) {
@@ -36,6 +29,7 @@ public class Frontier {
     
     public void commit() {
         urlRelevance.commit();
+        robotRulesMap.commit();
     }
 
     /**
@@ -132,10 +126,13 @@ public class Frontier {
      * @throws FrontierPersistentException
      */
     public boolean insert(LinkRelevance linkRelev) throws FrontierPersistentException {
+        if (linkRelev == null) {
+            return false;
+        }
         boolean inserted = false;
         String url = linkRelev.getURL().toString();
-        Integer rel = exist(linkRelev);
-        if (rel == null && url.toString().length() < 210) {
+        Double relevance = exist(linkRelev);
+        if (relevance == null) {
             urlRelevance.put(url, linkRelev);
             inserted = true;
         }
@@ -151,23 +148,9 @@ public class Frontier {
      * @return
      * @throws FrontierPersistentException
      */
-    public Integer exist(LinkRelevance linkRelev) throws FrontierPersistentException {
-        String url = linkRelev.getURL().toString();
-        LinkRelevance resStr = urlRelevance.get(url);
-        if (resStr != null) {
-            return (int) resStr.getRelevance();
-        } else {
-            Integer result = new Integer(-1);
-            if (useScope == true) {
-                String host = linkRelev.getURL().getHost();
-                if (scope.get(host) != null) {
-                    result = null;
-                }
-            } else {
-                result = null;
-            }
-            return result;
-        }
+    public Double exist(LinkRelevance linkRelev) throws FrontierPersistentException {
+        LinkRelevance link = urlRelevance.get(linkRelev.getURL().toString());
+        return link == null ? null : link.getRelevance();
     }
 
     /**
@@ -189,10 +172,33 @@ public class Frontier {
 
     public void close() {
         urlRelevance.close();
+        robotRulesMap.close();
     }
 
     public TupleIterator<LinkRelevance> iterator() {
         return urlRelevance.iterator();
+    }
+
+    /**
+     * Inserts the robot rules object into the HashMap
+     * 
+     * @param link
+     * @param robotRules
+     * @throws NullPointerException
+     *             when either of the argument is null
+     */
+    public void insertRobotRules(LinkRelevance link, BaseRobotRules robotRules) {
+        if (link == null || robotRules == null) {
+            throw new NullPointerException("Link argument or robot rules argument cannot be null");
+        }
+        String hostname = link.getURL().getHost();
+        robotRulesMap.put(hostname, robotRules);
+    }
+
+    public boolean isDisallowedByRobots(LinkRelevance link) {
+        String hostname = link.getURL().getHost();
+        BaseRobotRules rules = robotRulesMap.get(hostname);
+        return rules != null && !rules.isAllowed(link.getURL().toString());
     }
 
 }

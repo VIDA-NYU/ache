@@ -60,7 +60,7 @@ public class QueryProcessor {
         List<BackLinkNeighborhood> searchResults = searchEngine.submitQuery(query.asString(), searchPage);
 
         List<BackLinkNeighborhood> unseenSearchResults = filterUsedUrls(searchResults);
-        if(unseenSearchResults == null | unseenSearchResults.size() == 0) {
+        if(unseenSearchResults == null || unseenSearchResults.size() == 0) {
             return new QueryResult(0d);
         }
         System.out.println("Unseen hits: "+unseenSearchResults.size());
