@@ -1,8 +1,8 @@
 # (Transport client ES)
 target_storage.data_format.type: ELASTICSEARCH
 target_storage.data_format.elasticsearch.host: localhost
-target_storage.data_format.elasticsearch.port: 9300
-target_storage.data_format.elasticsearch.cluster_name: isabella
+target_storage.data_format.elasticsearch.port: 9310
+#target_storage.data_format.elasticsearch.cluster_name: isabella
 
 # Store pages classified as irrelevant pages by the target page classifier
 target_storage.store_negative_pages: true
@@ -16,7 +16,7 @@ target_storage.store_negative_pages: true
 link_storage.max_pages_per_domain: 10000
 
 # Disable "seed scope" to allow crawl pages from any domain
-link_storage.link_strategy.use_scope: false
+link_storage.link_strategy.use_scope: true
 
 # Set initial link classifier a simple one
 link_storage.link_classifier.type: LinkClassifierBaseline

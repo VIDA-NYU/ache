@@ -13,7 +13,6 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchClientFactory;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
-import focusedCrawler.util.readability.Readability;
 
 public class ElasticSearchTargetRepository implements TargetRepository {
 
@@ -30,30 +29,30 @@ public class ElasticSearchTargetRepository implements TargetRepository {
 		this.client = ElasticSearchClientFactory.createClient(config);
 		this.indexName = indexName;
 		this.typeName = typeName;
-		this.createIndexMapping(indexName);
+//		this.createIndexMapping(indexName);
 	}
 
-	private void createIndexMapping(String indexName) {
-
-		boolean exists = client.admin().indices().prepareExists(indexName).execute().actionGet().isExists();
-
-		if (!exists) {
-			String targetMapping = "" + "{" + " \"properties\": {"
-					+ "  \"domain\":           {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-					+ "  \"words\":            {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-					+ "  \"wordsMeta\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-					+ "  \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
-					+ "  \"text\":             {\"type\": \"string\"},"
-					+ "  \"title\":            {\"type\": \"string\"},"
-					+ "  \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-					+ "  \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-					+ "  \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-					+ "  \"relevance\":        {\"type\": \"double\"}" + " }" + "}";
-
-			client.admin().indices().prepareCreate(indexName).addMapping(typeName, targetMapping, XContentType.JSON)
-					.execute().actionGet();
-		}
-	}
+//	private void createIndexMapping(String indexName) {
+//
+//		boolean exists = client.admin().indices().prepareExists(indexName).execute().actionGet().isExists();
+//
+//		if (!exists) {
+//			String targetMapping = "" + "{" + " \"properties\": {"
+//					+ "  \"domain\":           {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+//					+ "  \"words\":            {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+//					+ "  \"wordsMeta\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+//					+ "  \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
+//					+ "  \"text\":             {\"type\": \"string\"},"
+//					+ "  \"title\":            {\"type\": \"string\"},"
+//					+ "  \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+//					+ "  \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+//					+ "  \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+//					+ "  \"relevance\":        {\"type\": \"double\"}" + " }" + "}";
+//
+//			client.admin().indices().prepareCreate(indexName).addMapping(typeName, targetMapping, XContentType.JSON)
+//					.execute().actionGet();
+//		}
+//	}
 
 	@Override
 	public boolean insert(Page page) {
@@ -68,7 +67,7 @@ public class ElasticSearchTargetRepository implements TargetRepository {
 
 		boolean isCreated = false;
 
-		isCreated = response.status().equals(RestStatus.CREATED) ? true : false;
+		isCreated = response.status().equals(RestStatus.OK) ? true : false;
 
 		return isCreated;
 	}
