@@ -31,7 +31,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -76,7 +75,6 @@ import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -152,19 +150,8 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private IdleConnectionMonitorThread monitor;
     
     //Store cookies loaded from configuration file
-    private CookieStore globalCookieStore = null; 
+    private CookieStore globalCookieStore = null;
 
-    private ThreadLocal<CookieStore> localCookieStore = new ThreadLocal<CookieStore>() {
-        protected CookieStore initialValue() {
-            LocalCookieStore cookieStore = new LocalCookieStore();
-            if (globalCookieStore != null) {
-                //Copy global cookie to local thread cookie
-                List<Cookie> cookies = globalCookieStore.getCookies();
-                cookieStore.addCookies((Cookie[]) cookies.toArray(new Cookie[cookies.size()]));
-            }
-            return cookieStore;
-        }
-    };
 
     private static final String SSL_CONTEXT_NAMES[] = { "TLS", "Default", "SSL", };
 
@@ -603,8 +590,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         // Without this we get killed w/lots of threads, due to sync() on single
         // cookie store.
         HttpContext localContext = new BasicHttpContext();
-        CookieStore cookieStore = localCookieStore.get();
-        localContext.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
+        localContext.setAttribute(HttpClientContext.COOKIE_STORE, globalCookieStore);
 
         StringBuilder fetchTrace = null;
         if (LOGGER.isTraceEnabled()) {
