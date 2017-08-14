@@ -13,7 +13,7 @@ public class OkHttpCookieJar implements CookieJar,CookieHandler {
     private ConcurrentHashMap<HttpUrl,List<Cookie>> cookieJar;
 
     public OkHttpCookieJar() {
-        this.cookieJar = new ConcurrentHashMap();
+        this.cookieJar = new ConcurrentHashMap<>();
     }
 
     @Override
@@ -25,15 +25,18 @@ public class OkHttpCookieJar implements CookieJar,CookieHandler {
     public List<Cookie> loadForRequest(HttpUrl url) {
         List<Cookie> validCookies = new ArrayList<>();
 
-        for (Iterator<Cookie> it = cookieJar.get(url).iterator(); it.hasNext(); ) {
-            Cookie currentCookie = it.next();
-            if (isCookieExpired(currentCookie)) {
-                it.remove();
-            } else if (currentCookie.matches(url)) {
-                validCookies.add(currentCookie);
+        List<Cookie> cooky = cookieJar.get(url);
+        if (cooky != null) {
+            Iterator<Cookie> it = cooky.iterator();
+            while (it.hasNext()) {
+                Cookie currentCookie = it.next();
+                if (isCookieExpired(currentCookie)) {
+                    it.remove();
+                } else if (currentCookie.matches(url)) {
+                    validCookies.add(currentCookie);
+                }
             }
         }
-
         return validCookies;
     }
 

@@ -1,14 +1,11 @@
 package focusedCrawler.crawler.async.fetcher;
 
-import focusedCrawler.crawler.async.HttpDownloaderConfig.Cookie;
 import focusedCrawler.crawler.async.cookieHandler.ConcurrentCookieJar;
 import focusedCrawler.crawler.async.cookieHandler.CookieHandler;
 import focusedCrawler.crawler.async.cookieHandler.OkHttpCookieJar;
-import java.lang.reflect.Array;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import java.util.Arrays;
 import java.util.List;
 import org.apache.http.client.CookieStore;
 import org.apache.http.impl.cookie.BasicClientCookie;
