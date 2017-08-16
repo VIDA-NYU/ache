@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.http.cookie.Cookie;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +13,8 @@ import com.google.common.util.concurrent.AbstractExecutionThreadService;
 
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorage;
@@ -159,5 +162,15 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
             ((LinkStorage) linkStorage).addSeeds(seeds);
         }
     }
+    
+	public void addCookies(List<Cookie> cookies) {
+		BaseFetcher baseFecther = downloader.getFetcher();
+		if(baseFecther instanceof SimpleHttpFetcher) {
+			SimpleHttpFetcher.updateCookies(cookies);
+		}else {
+			//
+		}
+		
+	}
 
 }

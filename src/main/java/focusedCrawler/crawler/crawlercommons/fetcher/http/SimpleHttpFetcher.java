@@ -92,6 +92,7 @@ import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.crawler.async.fetcher.GlobalCookieStore;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
@@ -152,20 +153,29 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private IdleConnectionMonitorThread monitor;
     
     //Store cookies loaded from configuration file
-    private CookieStore globalCookieStore = null; 
+//    private CookieStore globalCookieStore = null; 
 
-    private ThreadLocal<CookieStore> localCookieStore = new ThreadLocal<CookieStore>() {
-        protected CookieStore initialValue() {
-            LocalCookieStore cookieStore = new LocalCookieStore();
-            if (globalCookieStore != null) {
-                //Copy global cookie to local thread cookie
-                List<Cookie> cookies = globalCookieStore.getCookies();
-                cookieStore.addCookies((Cookie[]) cookies.toArray(new Cookie[cookies.size()]));
-            }
-            return cookieStore;
-        }
-    };
+    private static GlobalCookieStore globalCookieStore = new GlobalCookieStore();
+    
+//    private ThreadLocal<CookieStore> localCookieStore = new ThreadLocal<CookieStore>() {
+//        protected CookieStore initialValue() {
+//            LocalCookieStore cookieStore = new LocalCookieStore();
+//            if (globalCookieStore != null) {
+//                //Copy global cookie to local thread cookie
+//                List<Cookie> cookies = globalCookieStore.getCookies();
+//                cookieStore.addCookies((Cookie[]) cookies.toArray(new Cookie[cookies.size()]));
+//            }
+//            return cookieStore;
+//        }
+//    };
 
+    public static void updateCookies(Cookie cookie) {
+    	globalCookieStore.addCookie(cookie);
+    }
+    
+    public static void updateCookies(List<Cookie> cookies) {
+    	globalCookieStore.addCookies((Cookie[]) cookies.toArray(new Cookie[cookies.size()]));
+    }
     private static final String SSL_CONTEXT_NAMES[] = { "TLS", "Default", "SSL", };
 
     private static final String TEXT_MIME_TYPES[] = { "text/html", "application/x-asp", "application/xhtml+xml", "application/vnd.wap.xhtml+xml", };
@@ -523,7 +533,9 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     }
 
     public void setCookieStore(CookieStore cookieStore) {
-        globalCookieStore = cookieStore;
+        //globalCookieStore = cookieStore;
+    	List<Cookie> cookies = cookieStore.getCookies();
+    	globalCookieStore.addCookies((Cookie[]) cookies.toArray(new Cookie[cookies.size()]));
     }
 
     @Override
@@ -603,7 +615,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         // Without this we get killed w/lots of threads, due to sync() on single
         // cookie store.
         HttpContext localContext = new BasicHttpContext();
-        CookieStore cookieStore = localCookieStore.get();
+        CookieStore cookieStore = globalCookieStore;
         localContext.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
 
         StringBuilder fetchTrace = null;

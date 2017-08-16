@@ -22,6 +22,7 @@ import java.util.zip.ZipFile;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.http.cookie.Cookie;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -179,6 +180,39 @@ public class CrawlerResource {
         }
     };
 
+    public Route addCookies = (request, response) -> {
+        try {
+            if(crawler == null) {
+                response.status(HttpServletResponse.SC_BAD_REQUEST);
+                return ImmutableMap.of(
+                    "message", "Crawler is not running.",
+                    "addedCookies", false
+                );
+            }
+
+            AddCookiesParam params = json.readValue(request.body(), AddCookiesParam.class);
+            if (params.cookies == null || params.cookies.isEmpty()) {
+                response.status(HttpServletResponse.SC_BAD_REQUEST);
+                return ImmutableMap.of(
+                    "message", "No seeds provided.",
+                    "addedCookies", false
+                );
+            }
+            crawler.addCookies(params.cookies);
+            return ImmutableMap.of(
+                "message", "Seeds added successfully.",
+                "addedCookies", true
+            );
+        } catch (Exception e) {
+            logger.error("Failed to add seeds.", e);
+            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            return ImmutableMap.of(
+                "message", "Failed to add seeds.",
+                "addedCookies", false
+            );
+        }
+    };
+    
     private Optional<Boolean> getParamAsBoolean(String paramName, Request request) {
         try {
             Boolean valueOf = Boolean.valueOf(request.queryParams(paramName));
@@ -310,6 +344,10 @@ public class CrawlerResource {
 
     public static class AddSeedsParam {
         public List<String> seeds = null;
+    }
+    
+    public static class AddCookiesParam {
+    	public List<Cookie> cookies = null;
     }
 
 }
