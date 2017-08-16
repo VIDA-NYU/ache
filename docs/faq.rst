@@ -40,6 +40,15 @@ Is there any limit on number of crawled webpages per website?
 There is no limit by default, but you can set a hard limit in the configuration file using the key ``link_storage.max_pages_per_domain``.
 You can enable this so that the crawler doesn't get trapped by particular domains, and to favor crawling a larger number of domains as opposed to focusing on a few domains.
 
+Why am I getting a *SSL Handshake Exception* for some sites?
+----------------------------------------------------------------------------------------------
+A ``javax.net.ssl.SSLHandshakeException : handshake_failure`` usually occurs when the server and ache can't decide on which Cipher to use. This most probably happens when the JVM is using a limited security cipher suite. The easiest work around for this is to use OpenJDK 8+ because it comes with Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy out of the box. To install this JCE on Oracle, follow the instructions `here <https://github.com/ViDA-NYU/ache/issues/95>`_.
+
+Why am I getting a *SSL Protocol Exception* for some sites?
+---------------------------------------------------------------------------------------------
+A ``javax.net.ssl.SSLProtocolException : unrecognized_name`` is a server misconfiguration issue. Most probably, this website is hosted on a virtual server. A simple solution is to disable SNI extension by adding ``-Djsse.enableSNIExtension=false`` as VM options when running Ache. However, keep in mind that disabling SNI will cause certificate validation failures for some sites which use mutiple hostnames behind a shared IP.
+
+
 Where to report bugs?
 ---------------------
 We welcome feedback. Please submit any suggestions or bug reports using the Github issue tracker (https://github.com/ViDA-NYU/ache/issues)
