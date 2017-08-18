@@ -1,6 +1,7 @@
 package focusedCrawler.crawler.async.cookieHandler;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
@@ -10,11 +11,9 @@ import okhttp3.HttpUrl;
 
 public class OkHttpCookieJar implements CookieJar,CookieHandler {
 
-    private ConcurrentHashMap<HttpUrl,List<Cookie>> cookieJar;
+    private static ConcurrentHashMap<HttpUrl,List<Cookie>> cookieJar = new ConcurrentHashMap<>();
 
-    public OkHttpCookieJar() {
-        this.cookieJar = new ConcurrentHashMap<>();
-    }
+    public OkHttpCookieJar() {}
 
     @Override
     public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
@@ -46,5 +45,12 @@ public class OkHttpCookieJar implements CookieJar,CookieHandler {
 
     public void clear() {
         cookieJar.clear();
+    }
+
+    public void update(HashMap<String,List<Cookie>> map){
+        for(String s : map.keySet()){
+            HttpUrl url = HttpUrl.parse(s);
+            cookieJar.put(url, map.get(s));
+        }
     }
 }

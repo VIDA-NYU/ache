@@ -41,9 +41,9 @@ public class ConcurrentCookieJar implements CookieStore, Serializable,CookieHand
     public void addCookie(final Cookie cookie) {
         if (cookie != null) {
             // first remove any old cookie that is equivalent
-            cookies.remove(cookie);
+            cookies.remove(cookie.getDomain()+cookie.getName()+cookie.getPath());
             if (!cookie.isExpired(new Date())) {
-                cookies.put(cookie.getDomain()+cookie.getPath(), cookie);
+                cookies.put(cookie.getDomain()+cookie.getName()+cookie.getPath(), cookie);
             }
         }
     }
