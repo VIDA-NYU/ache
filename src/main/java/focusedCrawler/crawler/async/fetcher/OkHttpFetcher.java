@@ -55,7 +55,7 @@ public class OkHttpFetcher extends BaseHttpFetcher {
     private static final String TEXT_MIME_TYPES[] = { "text/html", "application/x-asp", "application/xhtml+xml", "application/vnd.wap.xhtml+xml", };
 
     private static final int DEFAULT_MAX_THREADS = 1;
-    private OkHttpCookieJar cookieJar;
+    private static OkHttpCookieJar cookieJar ;
 
     transient private OkHttpClient _httpClient;
 

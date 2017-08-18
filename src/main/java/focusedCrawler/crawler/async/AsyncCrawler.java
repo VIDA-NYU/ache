@@ -1,11 +1,11 @@
 package focusedCrawler.crawler.async;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.http.cookie.Cookie;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +13,9 @@ import com.google.common.util.concurrent.AbstractExecutionThreadService;
 
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
+import focusedCrawler.crawler.async.cookieHandler.Cookie;
+import focusedCrawler.crawler.async.cookieHandler.OkHttpCookieJar;
+import focusedCrawler.crawler.async.fetcher.OkHttpFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import focusedCrawler.link.LinkStorage;
@@ -25,6 +28,7 @@ import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageCreator;
+import okhttp3.CookieJar;
 
 public class AsyncCrawler extends AbstractExecutionThreadService {
 
@@ -163,12 +167,20 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         }
     }
     
-	public void addCookies(List<Cookie> cookies) {
+	public void addCookies(HashMap<String, List<Cookie>> cookies) {
 		BaseFetcher baseFecther = downloader.getFetcher();
 		if(baseFecther instanceof SimpleHttpFetcher) {
-			SimpleHttpFetcher.updateCookies(cookies);
+			
 		}else {
-			//
+			HashMap<String, List<okhttp3.Cookie>> tempCookies = new HashMap<>();
+			for(String key: cookies.keySet()) {
+				List<okhttp3.Cookie> newCookieArrayList = new ArrayList<>();
+				for(Cookie c: cookies.get(key)) {
+					newCookieArrayList.add(c.parse());
+				}
+				tempCookies.put(key, newCookieArrayList);
+			}
+			OkHttpCookieJar.update(tempCookies);
 		}
 		
 	}

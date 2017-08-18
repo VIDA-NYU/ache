@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -22,16 +23,17 @@ import java.util.zip.ZipFile;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.http.cookie.Cookie;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 
 import focusedCrawler.Main;
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.AsyncCrawler;
+import focusedCrawler.crawler.async.cookieHandler.Cookie;
 import focusedCrawler.util.MetricsManager;
 import spark.Request;
 import spark.Route;
@@ -190,15 +192,15 @@ public class CrawlerResource {
                 );
             }
 
-            AddCookiesParam params = json.readValue(request.body(), AddCookiesParam.class);
-            if (params.cookies == null || params.cookies.isEmpty()) {
+            HashMap<String, List<Cookie>> params = json.readValue(request.body(), new TypeReference<HashMap<String, Cookie>>() {});
+            if (params == null || params.isEmpty()) {
                 response.status(HttpServletResponse.SC_BAD_REQUEST);
                 return ImmutableMap.of(
                     "message", "No seeds provided.",
                     "addedCookies", false
                 );
             }
-            crawler.addCookies(params.cookies);
+            crawler.addCookies(params);
             return ImmutableMap.of(
                 "message", "Seeds added successfully.",
                 "addedCookies", true
@@ -346,8 +348,5 @@ public class CrawlerResource {
         public List<String> seeds = null;
     }
     
-    public static class AddCookiesParam {
-    	public List<Cookie> cookies = null;
-    }
 
 }

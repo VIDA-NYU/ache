@@ -47,7 +47,7 @@ public class OkHttpCookieJar implements CookieJar,CookieHandler {
         cookieJar.clear();
     }
 
-    public void update(HashMap<String,List<Cookie>> map){
+    public static void update(HashMap<String,List<Cookie>> map){
         for(String s : map.keySet()){
             HttpUrl url = HttpUrl.parse(s);
             cookieJar.put(url, map.get(s));
