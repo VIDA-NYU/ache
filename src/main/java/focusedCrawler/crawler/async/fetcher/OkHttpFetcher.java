@@ -1,5 +1,6 @@
 package focusedCrawler.crawler.async.fetcher;
 
+import focusedCrawler.crawler.async.cookieHandler.OkHttpCookieJar;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
@@ -54,16 +55,18 @@ public class OkHttpFetcher extends BaseHttpFetcher {
     private static final String TEXT_MIME_TYPES[] = { "text/html", "application/x-asp", "application/xhtml+xml", "application/vnd.wap.xhtml+xml", };
 
     private static final int DEFAULT_MAX_THREADS = 1;
+    private OkHttpCookieJar cookieJar;
 
     transient private OkHttpClient _httpClient;
 
     public OkHttpFetcher(UserAgent userAgent) {
-        this(DEFAULT_MAX_THREADS, userAgent);
+        this(DEFAULT_MAX_THREADS, userAgent, null);
     }
 
-    public OkHttpFetcher(int maxThreads, UserAgent userAgent) {
+    public OkHttpFetcher(int maxThreads, UserAgent userAgent, OkHttpCookieJar cookieJar) {
         super(maxThreads, userAgent);
         _httpClient = null;
+        this.cookieJar = cookieJar;
     }
 
     public FetchedResult get(String url, Payload payload) throws BaseFetchException {
@@ -331,7 +334,8 @@ public class OkHttpFetcher extends BaseHttpFetcher {
             // Create an ssl socket factory with our all-trusting manager
             final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
 
-            OkHttpClient okHttpClient = new OkHttpClient.Builder()
+            if(cookieJar==null) {
+                return new OkHttpClient.Builder()
                     .sslSocketFactory(sslSocketFactory, (X509TrustManager) trustAllCerts[0])
                     .hostnameVerifier(new HostnameVerifier() {
                         @Override
@@ -339,14 +343,22 @@ public class OkHttpFetcher extends BaseHttpFetcher {
                             return true;
                         }
                     }).build();
-
-            return okHttpClient;
+            }else{
+                return new OkHttpClient.Builder()
+                    .sslSocketFactory(sslSocketFactory, (X509TrustManager) trustAllCerts[0])
+                    .hostnameVerifier(new HostnameVerifier() {
+                        @Override
+                        public boolean verify(String s, SSLSession sslSession) {
+                            return true;
+                        }
+                    }).cookieJar(cookieJar).build();
+            }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    private static OkHttpClient getCustomOkHttpClient(){
+    private OkHttpClient getCustomOkHttpClient(){
         final ConnectionSpec specModernTLS = new ConnectionSpec.Builder(ConnectionSpec.MODERN_TLS)
                 .cipherSuites(new CustomCipherSuites().getCustomCipherSuites().toArray(new CipherSuite[0]))
                 .build();
@@ -374,10 +386,18 @@ public class OkHttpFetcher extends BaseHttpFetcher {
                 }
             };
 
-            return new OkHttpClient.Builder()
+            if(cookieJar==null){
+                return new OkHttpClient.Builder()
                     .connectionSpecs(specs)
                     .sslSocketFactory(customSslSocketFactory,trustManager)
                     .build();
+            }else {
+                return new OkHttpClient.Builder()
+                    .connectionSpecs(specs)
+                    .sslSocketFactory(customSslSocketFactory,trustManager)
+                    .cookieJar(cookieJar)
+                    .build();
+            }
 
         }catch (GeneralSecurityException gse){        }
 

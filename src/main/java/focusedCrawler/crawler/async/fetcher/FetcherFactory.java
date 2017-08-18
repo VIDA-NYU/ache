@@ -1,11 +1,13 @@
 package focusedCrawler.crawler.async.fetcher;
 
+import focusedCrawler.crawler.async.cookieHandler.ConcurrentCookieJar;
+import focusedCrawler.crawler.async.cookieHandler.CookieHandler;
+import focusedCrawler.crawler.async.cookieHandler.OkHttpCookieJar;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 import java.util.List;
 import org.apache.http.client.CookieStore;
-import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.cookie.BasicClientCookie;
 
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
@@ -54,9 +56,9 @@ public class FetcherFactory {
             }
         }
 
-        CookieStore store = createCookieStore(config);
+        CookieHandler store = createCookieStore(config);
         if (store != null) {
-            httpFetcher.setCookieStore(store);
+            httpFetcher.setCookieStore((CookieStore) store);
         }
         return httpFetcher;
     }
@@ -83,21 +85,28 @@ public class FetcherFactory {
         return new TorProxyFetcher(torFetcher, httpFetcher);
     }
 
-    public static CookieStore createCookieStore(HttpDownloaderConfig config) {
+    public static CookieHandler createCookieStore(HttpDownloaderConfig config) {
         List<HttpDownloaderConfig.Cookie> cookies = config.getCookies();
         if (cookies == null) {
             return null;
         }
-        CookieStore store = new BasicCookieStore();
-        for (HttpDownloaderConfig.Cookie cookie : cookies) {
-            String[] values = cookie.cookie.split("; ");
-            for (int i = 0; i < values.length; i++) {
-                String[] kv = values[i].split("=", 2);
-                BasicClientCookie cc = new BasicClientCookie(kv[0], kv[1]);
-                cc.setPath(cookie.path);
-                cc.setDomain(cookie.domain);
-                store.addCookie(cc);
+        CookieHandler store;
+        if (config.getOkHttpFetcher() == null) {
+            store = new ConcurrentCookieJar();
+            for (HttpDownloaderConfig.Cookie cookie : cookies) {
+                String[] values = cookie.cookie.split("; ");
+                for (int i = 0; i < values.length; i++) {
+                    String[] kv = values[i].split("=", 2);
+                    BasicClientCookie cc = new BasicClientCookie(kv[0], kv[1]);
+                    cc.setPath(cookie.path);
+                    cc.setDomain(cookie.domain);
+                    ((CookieStore)store).addCookie(cc);
+                }
             }
+        }else {
+            store = new OkHttpCookieJar();
+            // need to add config cookies
+            // should convert 'config cookies' into 'okhttp cookies'
         }
         return store;
     }
@@ -110,12 +119,14 @@ public class FetcherFactory {
                 .setUserAgentString(config.getUserAgentString())
                 .build();
         int connectionPoolSize = config.getConnectionPoolSize();
-        OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent);
+
+        OkHttpCookieJar store = (OkHttpCookieJar) createCookieStore(config);
+
+        OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent, store);
         httpFetcher.setMaxRedirects(config.getMaxRetryCount());
         httpFetcher.setMaxConnectionsPerHost(1);
         int defaultMaxContentSize = 51 * 1024 * 1024;
         httpFetcher.setDefaultMaxContentSize(defaultMaxContentSize);
-
         if(config.getValidMimeTypes() != null) {
             for (String mimeTypes : config.getValidMimeTypes()) {
                 httpFetcher.addValidMimeType(mimeTypes);
