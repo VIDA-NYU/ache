@@ -6,18 +6,19 @@ import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.commons.compress.utils.IOUtils;
@@ -36,11 +37,21 @@ import org.archive.util.anvl.ANVLRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 
 public class WarcTargetRepository implements TargetRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(WarcTargetRepository.class);
+    
+    private static final String ISO_8601_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+    private static final ThreadLocal<SimpleDateFormat> dateFormater =
+            new ThreadLocal<SimpleDateFormat>() {
+                @Override
+                protected SimpleDateFormat initialValue() {
+                    return new SimpleDateFormat(ISO_8601_DATE_FORMAT);
+                }
+            };
 
     private boolean compress = false;
     private final Path directory;
@@ -69,19 +80,19 @@ public class WarcTargetRepository implements TargetRepository {
     public boolean insert(Page target) {
         try {
             if (writer == null) {
-				File[] files = { directory.toFile() };
-				List<File> outputDirs = Arrays.asList(files);
-				List<String> metadata = new ArrayList<>();
-				this.writer = new WARCWriter(new AtomicInteger(), new WARCWriterPoolSettingsData("crawl_data", "${prefix}-${timestamp17}-${serialno}",
-						this.maxFileSize, compress, outputDirs, metadata , generator));
+                List<File> outputDirs = Arrays.asList(directory.toFile());
+                List<String> metadata = new ArrayList<>();
+                this.writer = new WARCWriter(new AtomicInteger(),
+                        new WARCWriterPoolSettingsData("crawl_data",
+                                "${prefix}-${timestamp17}-${serialno}", this.maxFileSize, compress,
+                                outputDirs, metadata, generator));
             }
             WARCRecordInfo warcRecord = getWarcRecordInfo(target, generator.getRecordID());
             writer.checkSize();
             writer.writeRecord(warcRecord);
             return true;
         } catch (IOException e) {
-            logger.debug(
-                    "Exception thrown while creating a " + "warc record with the following message. " + e.getMessage());
+            logger.error("Exception thrown while creating a WARC record.", e);
         }
         return false;
     }
@@ -97,7 +108,7 @@ public class WarcTargetRepository implements TargetRepository {
                 writer.close();
             }
         } catch (IOException e) {
-            logger.debug("Exception thrown when trying to close the WARC writer:" + e.getMessage());
+            logger.error("Exception thrown when trying to close the WARC writer.", e);
         }
     }
 
@@ -111,70 +122,65 @@ public class WarcTargetRepository implements TargetRepository {
         return new RepositoryIterator(new WarcRecordsIterator(directory));
     }
 
-    /**
-     * Return file object of the current file written by WarcWriter
-     * 
-     * @return
-     */
-    private File getFile() {
-        if (writer != null)
-            return writer.getFile();
-        else
-            return null;
+    public WARCRecordInfo getWarcRecordInfo(Page page, URI uri) throws IOException {
+        WARCRecordInfo warcRecord = new WARCRecordInfo();
+
+        warcRecord.setUrl(page.getFinalUrl());
+        warcRecord.setRecordId(uri);
+        warcRecord.setType(WARCRecordType.response);
+        warcRecord.setMimetype(WARCConstants.HTTP_RESPONSE_MIMETYPE);
+
+        // Store fetch times using ISO-8601 format
+        Date fetchTime = createFetchTimeDate(page);
+        warcRecord.setCreate14DigitDate(dateFormater.get().format(fetchTime));
+
+        // Re-create response body based on content bytes and response headers
+        byte[] contentBytes = createContentBytes(page);
+        warcRecord.setContentLength(contentBytes.length);
+        warcRecord.setContentStream(new ByteArrayInputStream(contentBytes));
+
+        // Store ACHE-specific metadata as non-standard extension header fields
+        if (page.getTargetRelevance() != null) {
+            TargetRelevance targetRelevance = page.getTargetRelevance();
+            warcRecord.addExtraHeader("ACHE-IsRelevant", String.valueOf(targetRelevance.isRelevant()));
+            warcRecord.addExtraHeader("ACHE-Relevance", String.format("%.10f", targetRelevance.getRelevance()));
+        }
+        warcRecord.addExtraHeader("ACHE-Requested-URL", page.getRequestedUrl());
+
+        return warcRecord;
     }
 
-    public WARCRecordInfo getWarcRecordInfo(Page page, URI uri) throws IOException {
-        WARCRecordInfo warcRecordInfo = new WARCRecordInfo();
-
-        if (page.getURL() != null)
-            warcRecordInfo.setUrl(page.getURL().toString());
-
-        byte[] content = page.getContent();
-        
-        
-        ANVLRecord headerFields = new ANVLRecord();
-        if (page.getTargetRelevance() != null) {
-            headerFields.addLabelValue("relevance", page.getTargetRelevance().getRelevance() + "");
-            headerFields.addLabelValue("isRelevant", page.getTargetRelevance().isRelevant() + "");
+    private Date createFetchTimeDate(Page page) {
+        Date fetchTime;
+        if (page.getFetchTime() != 0L) {
+            fetchTime = new Date(page.getFetchTime() * 1000L);
+        } else {
+            fetchTime = new Date(System.currentTimeMillis());
         }
+        return fetchTime;
+    }
 
-        //headerFields.addLabelValue("content-type", page.getContentType() + "");
-        if (page.getRedirectedURL() != null) {
-            headerFields.addLabelValue("redirected-url", page.getRedirectedURL().toString());
-        }
-		if (page.getResponseHeaders() != null) {
-			for (String header : page.getResponseHeaders().keySet()) {
-				headerFields.addLabelValue(header, page.getResponseHeaders().get(header).toString());
-			}
-		}
-		headerFields.addLabelValue("Content Length", content.length+"");
-        //warcRecordInfo.setExtraHeaders(headerFields);
-        
+    private byte[] createContentBytes(Page page) throws IOException, UnsupportedEncodingException {
         
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        baos.write(headerFields.getUTF8Bytes());
-        baos.write(content);
-        warcRecordInfo.setContentLength((long) content.length + headerFields.getUTF8Bytes().length);
         
-        warcRecordInfo.setContentStream(new ByteArrayInputStream(baos.toByteArray()));
-        
-        String requiredDateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'";
- 
-        long timeInMilliSeconds = System.currentTimeMillis();
-        if(page.getFetchTime() != 0L) {
-        	timeInMilliSeconds = page.getFetchTime() * 1000L;
+        if (page.getResponseHeaders() != null) {
+            ANVLRecord headers = new ANVLRecord();
+            for (Entry<String, List<String>> header : page.getResponseHeaders().entrySet()) {
+                List<String> headerValue = header.getValue();
+                if(headerValue == null || headerValue.isEmpty()) {
+                    continue;
+                }
+                for (String value : headerValue) {
+                    headers.addLabelValue(header.getKey(), value);
+                }
+            }
+            baos.write(headers.getUTF8Bytes());
         }
-        Date fetchTime = new Date(timeInMilliSeconds);
-        DateFormat targetFormat = new SimpleDateFormat(requiredDateFormat);
-        String newDate = targetFormat.format(fetchTime);
-        warcRecordInfo.setCreate14DigitDate(newDate);
         
-
-        warcRecordInfo.setType(WARCRecordType.response);
-        warcRecordInfo.setMimetype(WARCConstants.HTTP_RESPONSE_MIMETYPE);
-        warcRecordInfo.setRecordId(uri);
-
-        return warcRecordInfo;
+        baos.write(page.getContent());
+        
+        return baos.toByteArray();
     }
 
 
@@ -196,14 +202,7 @@ public class WarcTargetRepository implements TargetRepository {
             if (!warcRecordsIterator.hasNext()) {
                 return null;
             }
-            WARCRecord warcRecord = warcRecordsIterator.next();
-            try {
-                return warcRecord;// jsonMapper.readValue(warcRecord,
-                                  // TargetModelJson.class);
-            } catch (Exception e) {
-                String warc = warcRecord == null ? null : warcRecord.toString();
-                throw new IllegalStateException("Failed to unserialize warc record ", e);
-            }
+            return warcRecordsIterator.next();
         }
 
         @Override
@@ -220,7 +219,6 @@ public class WarcTargetRepository implements TargetRepository {
 
     public class WarcRecordsIterator implements Iterator<WARCRecord>, Closeable {
 
-        private WARCRecord next;
         private Iterator<Path> filesIt;
         private DirectoryStream<Path> filesStream;
         private WARCReader warcReader;
@@ -231,7 +229,8 @@ public class WarcTargetRepository implements TargetRepository {
                 filesStream = Files.newDirectoryStream(directory);
                 filesIt = filesStream.iterator();
                 if (filesIt.hasNext()) {
-                    warcReader = openFile(filesIt.next());
+                    Path file = filesIt.next();
+                    warcReader = openFile(file);
                     warcRecordIterator = warcReader.iterator();
                 }
             } catch (IOException e) {
@@ -247,8 +246,7 @@ public class WarcTargetRepository implements TargetRepository {
             WARCRecord nextRecord = null;
             if (warcReader != null) {
                 try {
-                    nextRecord = (WARCRecord) warcRecordIterator.next();// (WARCRecord)
-                                                                        // warcRecordIterator.next();
+                    nextRecord = (WARCRecord) warcRecordIterator.next();
                 } catch (Exception e) {
                     nextRecord = null;
                 }
@@ -264,28 +262,28 @@ public class WarcTargetRepository implements TargetRepository {
                         filePath = filesIt.next();
                         warcReader = openFile(filePath);
                         warcRecordIterator = warcReader.iterator();
-                        nextRecord = (WARCRecord) warcReader.get();// (WARCRecord)
-                                                                   // warcRecordIterator.next();
+                        nextRecord = (WARCRecord) warcReader.get();
                     } catch (IOException e) {
                         String f = filePath == null ? null : filePath.toString();
                         throw new IllegalStateException("Failed to open file: " + f, e);
                     }
                 }
             }
-            if(nextRecord!= null && nextRecord.getHeader().getHeaderValue("WARC-Type").equals("warcinfo")) {
-            	//skip the header of the warc file
-            	if(hasNext()) {
-            		return readNext();
-            	}
+            Object warcType = nextRecord.getHeader().getHeaderValue("WARC-Type");
+            if (nextRecord != null && warcType.equals("warcinfo")) {
+                // skip the header of the warc file
+                if (hasNext()) {
+                    return readNext();
+                }
             }
             return nextRecord;
         }
 
         @Override
         public boolean hasNext() {
-            if(warcRecordIterator != null){
+            if (warcRecordIterator != null) {
                 return warcRecordIterator.hasNext();
-            }else{
+            } else {
                 return false;
             }
         }

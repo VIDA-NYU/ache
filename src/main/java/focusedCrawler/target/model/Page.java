@@ -204,4 +204,12 @@ public class Page implements Serializable {
         this.targetRelevance = targetRelevance;
     }
 
+    public String getRequestedUrl() {
+        return url.toString();
+    }
+
+    public String getFinalUrl() {
+        return redirectedURL == null ? url.toString() : redirectedURL.toString();
+    }
+
 }
