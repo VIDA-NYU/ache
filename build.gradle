@@ -49,21 +49,25 @@ dependencies {
     compile 'io.dropwizard.metrics:metrics-core:3.1.3'
     compile 'io.dropwizard.metrics:metrics-json:3.1.3'
     compile 'io.dropwizard.metrics:metrics-jvm:3.1.3'
-	//compile 'com.amazonaws:aws-java-sdk-s3:1.10.47'
-    //compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.0.12'
-	compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.150'
-	compile 'org.jsoup:jsoup:1.10.3'
-    
+    compile 'com.amazonaws:aws-java-sdk:1.11.150'
+    compile 'org.jsoup:jsoup:1.10.3'
+    compile('org.netpreserve.commons:webarchive-commons:1.1.8') {
+      exclude group: 'org.apache.hadoop', module: 'hadoop-core'
+      exclude group: 'junit', module: 'junit'
+    }
+
     // REST server dependencies
     compile "com.sparkjava:spark-core:2.5.3"
-    
-    compile group: 'org.netpreserve.commons', name: 'webarchive-commons', version: '1.1.8'
-    compile group: 'org.apache.hadoop', name: 'hadoop-core', version: '0.20.2'
     
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-all:1.3'
     testCompile 'org.eclipse.jetty:jetty-server:9.3.6.v20151106' // for tests of crawler commons library fork
-    
+
+    compile('org.netpreserve.commons:webarchive-commons:1.1.8') {
+      exclude group: 'org.apache.hadoop', module: 'hadoop-core'
+      exclude group: 'junit', module: 'junit'
+    }
+
     // TODO fill these in from Maven Central instead of that local libs dir
     compile files('libs/jsonic-1.2.0.jar') // recommend updating this, it's for langdetect.jar
     compile files('libs/langdetect-03-03-2014.jar') // TODO why isn't this in maven central
