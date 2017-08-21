@@ -192,24 +192,24 @@ public class CrawlerResource {
                 );
             }
 
-            HashMap<String, List<Cookie>> params = json.readValue(request.body(), new TypeReference<HashMap<String, Cookie>>() {});
+            HashMap<String, List<Cookie>> params = json.readValue(request.body(), new TypeReference<HashMap<String, List<Cookie>>>() {});
             if (params == null || params.isEmpty()) {
                 response.status(HttpServletResponse.SC_BAD_REQUEST);
                 return ImmutableMap.of(
-                    "message", "No seeds provided.",
+                    "message", "No cookies provided.",
                     "addedCookies", false
                 );
             }
             crawler.addCookies(params);
             return ImmutableMap.of(
-                "message", "Seeds added successfully.",
+                "message", "cookies added successfully.",
                 "addedCookies", true
             );
         } catch (Exception e) {
-            logger.error("Failed to add seeds.", e);
+            logger.error("Failed to add cookies.", e);
             response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             return ImmutableMap.of(
-                "message", "Failed to add seeds.",
+                "message", "Failed to add cookies.",
                 "addedCookies", false
             );
         }

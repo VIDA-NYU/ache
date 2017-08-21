@@ -94,6 +94,7 @@ import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.crawler.async.cookieHandler.ConcurrentCookieJar;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
@@ -1107,6 +1108,9 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 		if(cookies == null) {
 			throw new NullPointerException("Cookies argument cannot be null");
 		}
+		if(globalCookieStore == null) {
+			globalCookieStore = new ConcurrentCookieJar();
+		}
 		for(List<Cookie> listOfCookies : cookies.values()) {
 			for(Cookie cookie: listOfCookies) {
 				globalCookieStore.addCookie(cookie);
@@ -1122,6 +1126,9 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 	public static void updateCookieStore(Cookie cookie) {
 		if(cookie == null) {
 			throw new NullPointerException("Argument cookie is null.");
+		}
+		if(globalCookieStore == null) {
+			globalCookieStore = new ConcurrentCookieJar();
 		}
 		globalCookieStore.addCookie(cookie);
 	}
