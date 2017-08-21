@@ -282,7 +282,7 @@ public class WarcTargetRepository implements TargetRepository {
         @Override
         public boolean hasNext() {
             if (warcRecordIterator != null) {
-                return warcRecordIterator.hasNext();
+                return warcRecordIterator.hasNext() || filesIt.hasNext();
             } else {
                 return false;
             }

@@ -43,20 +43,20 @@ public class WarcTargetRepositoryTest {
 	static String url;
 	static Map<String, List<String>> responseHeaders;
 
-	@BeforeClass
-	static public void setUp() {
-		url = "http://example.com";
-		html = "<html><body>Hello World! Hello World! Hello World!</body></html>";
-		responseHeaders = new HashMap<>();
-		responseHeaders.put("Content-Type", asList("text/html"));
-//		responseHeaders.put("Server", asList("Apache"));
-	}
+    @BeforeClass
+    static public void setUp() {
+        url = "http://example.com";
+        html = "<html><body>Hello World! Hello World! Hello World!</body></html>";
+        responseHeaders = new HashMap<>();
+        responseHeaders.put("Content-Type", asList("text/html"));
+        responseHeaders.put("Server", asList("Apache"));
+    }
 
-	@Test
-	public void shouldStoreAndIterageOverData() throws IOException {
+    @Test
+    public void shouldStoreAndIterageOverData() throws IOException {
 
         String folder = tempFolder.newFolder().toString();
-        
+
         Page target = new Page(new URL(url), html, responseHeaders);
         target.setTargetRelevance(TargetRelevance.RELEVANT);
         target.setFetchTime(System.currentTimeMillis() / 1000);
@@ -79,48 +79,47 @@ public class WarcTargetRepositoryTest {
         assertThat(it.hasNext(), is(true));
         WARCRecord page = it.next();
         assertThat(it.hasNext(), is(false));
-        
+
         assertThat(page.getHeader().getUrl(), is(url));
-        
+
         assertThat(page.getHeader().getHeaderValue("Content-Type"),
                 is(WARCConstants.HTTP_RESPONSE_MIMETYPE));
 
         assertThat(page.getHeader().getHeaderValue("ACHE-IsRelevant"),
                 is(target.getTargetRelevance().isRelevant() + ""));
-        
+
         assertThat(Double.valueOf(page.getHeader().getHeaderValue("ACHE-Relevance").toString()),
                 is(Double.valueOf(target.getTargetRelevance().getRelevance())));
-	}
+    }
 
-	@Test
-	public void testReadingMultipleWarcRecords() throws Exception {
-		String folder = tempFolder.newFolder().toString();
+    @Test
+    public void testReadingMultipleWarcRecords() throws Exception {
+        String folder = tempFolder.newFolder().toString();
 
-		String url1 = "http://a.com";
-		String url2 = "http://b.com";
+        String url1 = "http://a.com";
+        String url2 = "http://b.com";
 
-		Page target1 = new Page(new URL(url1), html, responseHeaders);
-		target1.setFetchTime(System.currentTimeMillis() / 1000);
+        Page target1 = new Page(new URL(url1), html, responseHeaders);
+        target1.setFetchTime(System.currentTimeMillis() / 1000);
 
-		Page target2 = new Page(new URL(url2), html, responseHeaders);
-		target2.setFetchTime(System.currentTimeMillis() / 1000);
+        Page target2 = new Page(new URL(url2), html, responseHeaders);
+        target2.setFetchTime(System.currentTimeMillis() / 1000);
 
-		WarcTargetRepository repository = new WarcTargetRepository(folder);
+        WarcTargetRepository repository = new WarcTargetRepository(folder);
 
-		// when
-		repository.insert(target1);
-		repository.insert(target2);
-		repository.close();
+        // when
+        repository.insert(target1);
+        repository.insert(target2);
+        repository.close();
 
-		WARCWriter writer = repository.getWriter();
-		WARCReader reader = WARCReaderFactory.get(writer.getFile());
+        WARCWriter writer = repository.getWriter();
+        WARCReader reader = WARCReaderFactory.get(writer.getFile());
 
-		// Get to second record. Get its offset for later use.
-		boolean readWarcInfoRecord = false;
-		boolean readFirst = false;
-		boolean readSecond = false;
-		
-		
+        // Get to second record. Get its offset for later use.
+        boolean readWarcInfoRecord = false;
+        boolean readFirst = false;
+        boolean readSecond = false;
+
         for (final Iterator<ArchiveRecord> i = reader.iterator(); i.hasNext();) {
             WARCRecord ar = (WARCRecord) i.next();
             if (!readWarcInfoRecord) {
@@ -135,30 +134,30 @@ public class WarcTargetRepositoryTest {
                 readSecond = true;
             }
         }
-		reader.close();
-	}
+        reader.close();
+    }
 
-	@Test
-	public void testReadingMultipleWarcRecordsUsingIterator() throws Exception {
-	    // given
-		String folder = tempFolder.newFolder().toString();
+    @Test
+    public void testReadingMultipleWarcRecordsUsingIterator() throws Exception {
+        // given
+        String folder = tempFolder.newFolder().toString();
 
-		String url1 = "http://a.com";
-		String url2 = "http://b.com";
+        String url1 = "http://a.com";
+        String url2 = "http://b.com";
 
-		Page target1 = new Page(new URL(url1), html);
-		Page target2 = new Page(new URL(url2), html);
+        Page target1 = new Page(new URL(url1), html);
+        Page target2 = new Page(new URL(url2), html);
 
-		WarcTargetRepository repository = new WarcTargetRepository(folder);
-		
-		// when
-		repository.insert(target1);
-		repository.insert(target2);
-		repository.close();
+        WarcTargetRepository repository = new WarcTargetRepository(folder);
 
-		RepositoryIterator respositoryIterator = repository.iterator();
-		
-		// then
+        // when
+        repository.insert(target1);
+        repository.insert(target2);
+        repository.close();
+
+        RepositoryIterator respositoryIterator = repository.iterator();
+
+        // then
         assertTrue(respositoryIterator.hasNext());
         WARCRecord record = respositoryIterator.next();
         assertThat(record.getHeader().getUrl(), is(url1));
@@ -166,78 +165,70 @@ public class WarcTargetRepositoryTest {
         assertTrue(respositoryIterator.hasNext());
         record = respositoryIterator.next();
         assertThat(record.getHeader().getUrl(), is(url2));
-        
+
         assertFalse(respositoryIterator.hasNext());
-	}
+    }
 
 
-	@Test
-	public void shouldIterateOverEmptyFolder() throws IOException {
-		// given
-		String folder = tempFolder.newFolder().toString();
+    @Test
+    public void shouldIterateOverEmptyFolder() throws IOException {
+        // given
+        String folder = tempFolder.newFolder().toString();
 
-		WarcTargetRepository repository = new WarcTargetRepository(folder);
+        WarcTargetRepository repository = new WarcTargetRepository(folder);
 
-		// when
-		Iterator<WARCRecord> it = repository.iterator();
+        // when
+        Iterator<WARCRecord> it = repository.iterator();
 
-		// then
-		assertThat(it.hasNext(), is(false));
-		assertThat(it.next(), is(nullValue()));
-	}
+        // then
+        assertThat(it.hasNext(), is(false));
+        assertThat(it.next(), is(nullValue()));
+    }
 	
-	@Test
-	public void testWritingToAWarcFileWithMaxSize() throws Exception {
+    @Test
+    public void testWritingToAWarcFileWithMaxSize() throws Exception {
+        // given
+        String folder = tempFolder.newFolder().toString();
 
-		String folder = tempFolder.newFolder().toString();
-	    folder = "/tmp/warc-test/";
-        System.out.println(folder);
+        String url1 = "http://a.com";
+        String url2 = "http://b.com";
 
-		String url1 = "http://a.com";
-		String url2 = "http://b.com";
+        Page target1 = new Page(new URL(url1), html, responseHeaders);
+        Page target2 = new Page(new URL(url2), html);
 
-		Page target1 = new Page(new URL(url1), html, responseHeaders);
-		Page target2 = new Page(new URL(url2), html);
-		
-		target1.setTargetRelevance(TargetRelevance.RELEVANT);
-		target2.setTargetRelevance(TargetRelevance.IRRELEVANT);
+        target1.setTargetRelevance(TargetRelevance.RELEVANT);
+        target2.setTargetRelevance(TargetRelevance.IRRELEVANT);
 
-		WarcTargetRepository repository = new WarcTargetRepository(folder, 400);
+        WarcTargetRepository repository = new WarcTargetRepository(folder, 400);
 
-		repository.insert(target1);
-		repository.insert(target2);
-		repository.close();
+        // when
+        repository.insert(target1);
+        repository.insert(target2);
+        repository.close();
 
-		File testFolder = new File(folder);
+        // then
+        File[] allFiles = new File(folder).listFiles();
+        assertTrue(allFiles[0].getName().startsWith("crawl_data"));
+        assertThat(allFiles.length, is(2));
+        assertTrue(allFiles[1].getName().startsWith("crawl_data"));
 
-		if (testFolder.isDirectory()) {
-			File[] allFiles = testFolder.listFiles();
-			assertTrue(allFiles[0].getName().startsWith("crawl_data"));
-			assertTrue(allFiles.length == 2);
-			assertTrue(allFiles[1].getName().startsWith("crawl_data"));
-		}
-		
-		List<String> allUrls = new ArrayList<>(asList(url1, url2));
-		RepositoryIterator respositoryIterator = repository.iterator();
-		
-		assertTrue(respositoryIterator.hasNext());
-		WARCRecord record = respositoryIterator.next();
-        assertThat(record.getHeader().getUrl(), isIn(allUrls));
-        
-        System.out.println(allUrls);
-        allUrls.remove(record.getHeader().getUrl());
-        System.out.println(allUrls);
+        List<String> allUrls = new ArrayList<>(asList(url1, url2));
+
+        RepositoryIterator respositoryIterator = repository.iterator();
 
         assertTrue(respositoryIterator.hasNext());
-		record = respositoryIterator.next();
-		assertThat(record.getHeader().getUrl(), isIn(allUrls));
-		
-		System.out.println(allUrls);
-		allUrls.remove(record.getHeader().getUrl());
-		System.out.println(allUrls);
-			
-		assertThat(allUrls, empty());
-//		Thread.sleep(10000000);
-	}
+        WARCRecord record = respositoryIterator.next();
+        assertThat(record.getHeader().getUrl(), isIn(allUrls));
+
+        allUrls.remove(record.getHeader().getUrl());
+
+        assertTrue(respositoryIterator.hasNext());
+        record = respositoryIterator.next();
+        assertThat(record.getHeader().getUrl(), isIn(allUrls));
+
+        allUrls.remove(record.getHeader().getUrl());
+
+        assertThat(allUrls, empty());
+    }
 
 }
