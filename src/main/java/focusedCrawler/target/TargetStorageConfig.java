@@ -33,6 +33,13 @@ public class TargetStorageConfig {
     @JsonProperty("target_storage.data_format.files.max_file_size")
     private long maxFileSize = 256 * 1024 * 1024;
 
+    // WARC repository
+    @JsonProperty("target_storage.data_format.warc.max_file_size")
+    private long warcMaxFileSize = 250 * 1024 * 1024;
+
+    @JsonProperty("target_storage.data_format.warc.compress")
+    private boolean compressWarc = true;
+
     // ELASTICSEARCH repository
     @JsonUnwrapped
     private ElasticSearchConfig elasticSearchConfig = new ElasticSearchConfig();
@@ -117,9 +124,17 @@ public class TargetStorageConfig {
     public boolean getCompressData() {
         return compressData;
     }
-    
+
     public long getMaxFileSize() {
         return maxFileSize;
+    }
+
+    public boolean getCompressWarc() {
+        return compressWarc;
+    }
+
+    public long getWarcMaxFileSize() {
+        return warcMaxFileSize;
     }
 
 }

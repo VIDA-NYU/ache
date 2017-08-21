@@ -1,4 +1,4 @@
-package focusedCrawler.target;
+package focusedCrawler.target.repository;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.either;
