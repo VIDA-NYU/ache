@@ -14,6 +14,7 @@ import com.google.common.util.concurrent.AbstractExecutionThreadService;
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
 import focusedCrawler.crawler.async.cookieHandler.Cookie;
+import focusedCrawler.crawler.async.cookieHandler.CookieUtils;
 import focusedCrawler.crawler.async.cookieHandler.OkHttpCookieJar;
 import focusedCrawler.crawler.async.fetcher.OkHttpFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
@@ -167,16 +168,31 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         }
     }
     
+    /**
+     * Add cookies to the right fetcher.
+     * @param cookies
+     */
 	public void addCookies(HashMap<String, List<Cookie>> cookies) {
+		if(cookies == null) {
+			throw new NullPointerException("Cookies argument is null");
+		}
 		BaseFetcher baseFecther = downloader.getFetcher();
 		if(baseFecther instanceof SimpleHttpFetcher) {
-			
+			HashMap<String, List<org.apache.http.cookie.Cookie>> tempCookies = new HashMap<>();
+			for(String key: cookies.keySet()) {
+				List<org.apache.http.cookie.Cookie> newCookieArrayList = new ArrayList<>();
+				for(Cookie c: cookies.get(key)) {
+					newCookieArrayList.add(CookieUtils.getApacheCookie(c));
+				}
+				tempCookies.put(key, newCookieArrayList);
+			}
+			SimpleHttpFetcher.updateCookieStore(tempCookies);
 		}else {
 			HashMap<String, List<okhttp3.Cookie>> tempCookies = new HashMap<>();
 			for(String key: cookies.keySet()) {
 				List<okhttp3.Cookie> newCookieArrayList = new ArrayList<>();
 				for(Cookie c: cookies.get(key)) {
-					newCookieArrayList.add(c.parse());
+					newCookieArrayList.add(CookieUtils.getOkkHttpCookie(c));
 				}
 				tempCookies.put(key, newCookieArrayList);
 			}

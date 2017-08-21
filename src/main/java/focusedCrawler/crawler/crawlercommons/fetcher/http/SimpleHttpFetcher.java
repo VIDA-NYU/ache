@@ -30,7 +30,10 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -75,6 +78,7 @@ import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -90,7 +94,6 @@ import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.crawler.async.fetcher.GlobalCookieStore;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
@@ -151,7 +154,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private IdleConnectionMonitorThread monitor;
     
     //Store cookies loaded from configuration file
-    private CookieStore globalCookieStore = null;
+    private static CookieStore globalCookieStore = null;
 
 
     private static final String SSL_CONTEXT_NAMES[] = { "TLS", "Default", "SSL", };
@@ -1092,4 +1095,34 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     public void setUserAgentString(String userAgentString) {
         this._userAgentString = userAgentString;
     }
+
+    /**
+     * Update cookie store with a map of cookies.
+     * key : domain name
+     * value : List of cookies associated with that domain name
+     * @param cookies
+     * @throws NullPointerException if the cookies argument is null
+     */
+	public static void updateCookieStore(HashMap<String, List<Cookie>> cookies) {
+		if(cookies == null) {
+			throw new NullPointerException("Cookies argument cannot be null");
+		}
+		for(List<Cookie> listOfCookies : cookies.values()) {
+			for(Cookie cookie: listOfCookies) {
+				globalCookieStore.addCookie(cookie);
+			}
+		}
+	}
+
+	/**
+	 * Updates the current cookie store with cookie
+	 * @param cookie
+	 * @throws NullPointerException if the cookie argument is null
+	 */
+	public static void updateCookieStore(Cookie cookie) {
+		if(cookie == null) {
+			throw new NullPointerException("Argument cookie is null.");
+		}
+		globalCookieStore.addCookie(cookie);
+	}
 }

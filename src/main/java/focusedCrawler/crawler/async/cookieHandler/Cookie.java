@@ -1,6 +1,9 @@
 package focusedCrawler.crawler.async.cookieHandler;
 
 import java.io.Serializable;
+import java.util.Date;
+
+import org.apache.http.impl.cookie.BasicClientCookie;
 
 import okhttp3.Cookie.Builder;
 
@@ -10,7 +13,7 @@ public class Cookie implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -8502369293267383776L;
-	
+
 	private String name;
 	private String value;
 	private long expiresAt;
@@ -22,6 +25,7 @@ public class Cookie implements Serializable {
 	private boolean persistent;
 	private boolean hostOnly;
 
+	// Added for serialization
 	public Cookie() {
 
 	}
@@ -102,22 +106,9 @@ public class Cookie implements Serializable {
 	public void setHostOnly(boolean hostOnly) {
 		this.hostOnly = hostOnly;
 	}
-	
-	
-	public okhttp3.Cookie parse(){
-		Builder builder = new Builder();
-		builder.name(name);
-		builder.value(value);
-		builder.expiresAt(expiresAt);
-		builder.domain(domain);
-		builder.path(path);
-		if(secure) {
-			builder.secure();
-		}
-		if(httpOnly) {
-			builder.httpOnly();
-		}
-		okhttp3.Cookie cookie = builder.build();
-		return cookie;
+
+	public String toString() {
+		return "Name: " + name + ", Value: " + value + ", Domain: " + domain + ", Path: " + path;
 	}
+
 }
