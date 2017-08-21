@@ -53,27 +53,29 @@ public class WarcTargetRepository implements TargetRepository {
                 }
             };
 
-    private boolean compress = false;
+    private final RecordIDGenerator generator = new UUIDGenerator();
+
+    private final boolean compress;
     private final Path directory;
     private final long maxFileSize;
     private WARCWriter writer;
 
-    private RecordIDGenerator generator = new UUIDGenerator();
 
     public WarcTargetRepository(String directory) throws IOException {
-        this(Paths.get(directory), WARCConstants.DEFAULT_MAX_WARC_FILE_SIZE);
+        this(Paths.get(directory), WARCConstants.DEFAULT_MAX_WARC_FILE_SIZE, true);
     }
 
     public WarcTargetRepository(String path, long maxFileSize) throws IOException {
-        this(Paths.get(path), maxFileSize);
+        this(Paths.get(path), maxFileSize, true);
     }
 
-    public WarcTargetRepository(Path directory, long maxFileSize) throws IOException {
+    public WarcTargetRepository(Path directory, long maxFileSize, boolean compress) throws IOException {
         this.maxFileSize = maxFileSize;
         if (!Files.exists(directory)) {
             directory.toFile().mkdirs();
         }
         this.directory = directory;
+        this.compress = compress;
     }
 
     @Override
@@ -105,7 +107,10 @@ public class WarcTargetRepository implements TargetRepository {
                         this.maxFileSize, this.compress, outputDirs, metadata, generator));
     }
 
-    public WARCWriter getWriter() {
+    /*
+     * Default visibility (for use in unit tests).
+     */
+    WARCWriter getWriter() {
         return writer;
     }
 

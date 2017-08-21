@@ -206,7 +206,8 @@ public class TargetStorage extends StorageDefault {
                 return new FileSystemTargetRepository(targetDirectory, DataFormat.HTML,
                                                       hashFilename, compressData);
             case "WARC":
-                return new WarcTargetRepository(targetDirectory, config.getMaxFileSize());
+                return new WarcTargetRepository(targetDirectory, config.getWarcMaxFileSize(),
+                                                config.getCompressWarc());
             case "ELASTICSEARCH":
                 if (esIndexName == null || esIndexName.isEmpty()) {
                     throw new IllegalArgumentException("ElasticSearch index name not provided!");
