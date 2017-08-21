@@ -80,16 +80,13 @@ public class WarcTargetRepository implements TargetRepository {
     public boolean insert(Page target) {
         try {
             if (writer == null) {
-                List<File> outputDirs = Arrays.asList(directory.toFile());
-                List<String> metadata = new ArrayList<>();
-                this.writer = new WARCWriter(new AtomicInteger(),
-                        new WARCWriterPoolSettingsData("crawl_data",
-                                "${prefix}-${timestamp17}-${serialno}", this.maxFileSize, compress,
-                                outputDirs, metadata, generator));
+                createWarcWriter();
             }
             WARCRecordInfo warcRecord = getWarcRecordInfo(target, generator.getRecordID());
-            writer.checkSize();
-            writer.writeRecord(warcRecord);
+            synchronized (writer) {
+                writer.checkSize();
+                writer.writeRecord(warcRecord);
+            }
             return true;
         } catch (IOException e) {
             logger.error("Exception thrown while creating a WARC record.", e);
@@ -97,12 +94,23 @@ public class WarcTargetRepository implements TargetRepository {
         return false;
     }
 
+    private synchronized void createWarcWriter() {
+        if (this.writer != null) {
+            return;
+        }
+        List<File> outputDirs = Arrays.asList(directory.toFile());
+        List<String> metadata = new ArrayList<>();
+        this.writer = new WARCWriter(new AtomicInteger(),
+                new WARCWriterPoolSettingsData("crawl_data", "${prefix}-${timestamp17}-${serialno}",
+                        this.maxFileSize, this.compress, outputDirs, metadata, generator));
+    }
+
     public WARCWriter getWriter() {
         return writer;
     }
 
     @Override
-    public void close() {
+    public synchronized void close() {
         try {
             if (writer != null) {
                 writer.close();
