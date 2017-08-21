@@ -35,7 +35,7 @@ public class TargetStorageConfig {
 
     // WARC repository
     @JsonProperty("target_storage.data_format.warc.max_file_size")
-    private long warcMaxFileSize = 256 * 1024 * 1024;
+    private long warcMaxFileSize = 250 * 1024 * 1024;
 
     @JsonProperty("target_storage.data_format.warc.compress")
     private boolean compressWarc = true;
