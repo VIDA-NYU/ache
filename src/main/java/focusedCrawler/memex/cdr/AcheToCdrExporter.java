@@ -3,7 +3,6 @@ package focusedCrawler.memex.cdr;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,19 +14,22 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.zip.GZIPOutputStream;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hasher;
 import com.google.common.hash.Hashing;
 
-import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.tools.SimpleBulkIndexer;
 import focusedCrawler.util.CliTool;
-import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
@@ -70,6 +72,12 @@ public class AcheToCdrExporter extends CliTool {
     
     @Option(name="--output-file", description="Gziped output file containing data formmated as per CDR schema")
     private String outputFile;
+
+    @Option(name="--skip-relevant", description="Whether relevant pages should be skipped")
+    private boolean skipRelevant = false;
+
+    @Option(name="--skip-irrelevant", description="Whether irrelevant pages should be skipped")
+    private boolean skipIrrelevant = false;
     
     // Elastic Search output options
     
@@ -138,9 +146,11 @@ public class AcheToCdrExporter extends CliTool {
             temp = tmpPath.toString();
         }
 
-        s3Uploader = new S3Uploader(this.accessKeyID, this.secretKeyID, this.bucketName, this.region);
-        mediaObjectCache =
-                new PersistentHashtable<CDR31MediaObject>(temp, 1000, CDR31MediaObject.class);
+        if (!skipUpload) {
+            s3Uploader = new S3Uploader(this.accessKeyID, this.secretKeyID, this.bucketName,
+                    this.region);
+        }
+        mediaObjectCache = new PersistentHashtable<CDR31MediaObject>(temp, 1000, CDR31MediaObject.class);
 
         if (outputFile != null) {
             GZIPOutputStream gzipStream = new GZIPOutputStream(new FileOutputStream(outputFile));
@@ -157,20 +167,9 @@ public class AcheToCdrExporter extends CliTool {
             bulkIndexer = new SimpleBulkIndexer(elasticSearchServer, userPass, bulkSize);
         }
         
-        Iterator<TargetModelJson> it;
-        Iterator<TargetModelJson> it1;
-        if(repositoryType == RepositoryType.FILESYSTEM_JSON) {
-            FileSystemTargetRepository repository = new FileSystemTargetRepository(inputPath,
-                    DataFormat.JSON, hashFilename, compressData);
-            it = repository.iterator();
-            it1 = repository.iterator();
-        } else {
-            FilesTargetRepository repository = new FilesTargetRepository(inputPath);
-            it = repository.iterator();
-            it1 = repository.iterator();
-        }
-
-		//Process media files
+        //Process media files
+        System.out.println("Pre-processing media files...");
+        Iterator<TargetModelJson> it = createIterator();
         while (it.hasNext()) {
             TargetModelJson pageModel = it.next();
             try {
@@ -179,18 +178,21 @@ public class AcheToCdrExporter extends CliTool {
                 System.err.println("Failed to process record.\n" + e.toString());
             }
         }
+        
         mediaObjectCache.commit();
 		
 		//Process html files
-        while (it1.hasNext()) {
-            TargetModelJson pageModel = it1.next();
-            try{
+        System.out.println("Processing HTML pages...");
+        it = createIterator();
+        while (it.hasNext()) {
+            TargetModelJson pageModel = it.next();
+            try {
                 processRecord(pageModel);
                 processedPages++;
-                if(processedPages % 100 == 0) {
+                if (processedPages % 100 == 0) {
                     System.out.printf("Processed %d pages\n", processedPages);
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 System.err.println("Failed to process record.\n" + e.toString());
             }
         }
@@ -200,6 +202,17 @@ public class AcheToCdrExporter extends CliTool {
         if(bulkIndexer!= null) bulkIndexer.close();
         
         System.out.println("done.");
+    }
+
+    private Iterator<TargetModelJson> createIterator() {
+        if(repositoryType == RepositoryType.FILESYSTEM_JSON) {
+            FileSystemTargetRepository repository = new FileSystemTargetRepository(inputPath,
+                    DataFormat.JSON, hashFilename, compressData);
+            return repository.iterator();
+        } else {
+            FilesTargetRepository repository = new FilesTargetRepository(inputPath);
+            return repository.iterator();
+        }
     }
 
 	private void processMediaFile(TargetModelJson pageModel) throws IOException {
@@ -232,6 +245,14 @@ public class AcheToCdrExporter extends CliTool {
         }
 
         if (!contentType.startsWith("text/html")) {
+            return;
+        }
+
+        if (skipRelevant && pageModel.getRelevance().isRelevant()) {
+            return;
+        }
+
+        if (skipIrrelevant && !pageModel.getRelevance().isRelevant()) {
             return;
         }
 
@@ -321,28 +342,42 @@ public class AcheToCdrExporter extends CliTool {
         return hs;
 	}
 
+//    public String[] extractImgLinks(TargetModelJson pageModel) {
+//        try {
+//            PaginaURL pageParser = new PaginaURL(new Page(pageModel));
+//            URL[] parsedLinks = pageParser.links();
+//            HashSet<String> links = new HashSet<>();
+//            for (URL url : parsedLinks) {
+//                links.add(url.toString());
+//            }
+//            return links.toArray(new String[links.size()]);
+//        } catch (MalformedURLException e) {
+//            return new String[0];
+//        }
+//    }
+
     public String[] extractImgLinks(TargetModelJson pageModel) {
-        try {
-            PaginaURL pageParser = new PaginaURL(new Page(pageModel));
-            URL[] parsedLinks = pageParser.links();
-            HashSet<String> links = new HashSet<>();
-            for (URL url : parsedLinks) {
-                links.add(url.toString());
+        HashSet<String> links = new HashSet<>();
+        Document doc = Jsoup.parse(pageModel.getContentAsString());
+        Elements media = doc.select("[src]");
+        for (Element src : media) {
+            if (src.tagName().equals("img")) {
+                links.add(src.attr("abs:src"));
             }
-            return links.toArray(new String[links.size()]);
-        } catch (MalformedURLException e) {
-            return new String[0];
         }
+        return links.toArray(new String[links.size()]);
     }
 
     public void createCDR31DocumentJson(TargetModelJson pageModel) {
 
         List<CDR31MediaObject> mediaObjects = new ArrayList<>();
-        String[] imgLinks = extractImgLinks(pageModel);
-        for (String link : imgLinks) {
-            CDR31MediaObject object = this.mediaObjectCache.get(link);
-            if (object != null) {
-                mediaObjects.add(object);
+        if (!skipUpload) {
+            String[] imgLinks = extractImgLinks(pageModel);
+            for (String link : imgLinks) {
+                CDR31MediaObject object = this.mediaObjectCache.get(link);
+                if (object != null) {
+                    mediaObjects.add(object);
+                }
             }
         }
 

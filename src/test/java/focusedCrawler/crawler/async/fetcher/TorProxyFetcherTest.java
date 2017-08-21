@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import com.sun.net.httpserver.HttpServer;
 
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
 import focusedCrawler.crawler.async.TestWebServerBuilder;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
@@ -24,7 +24,7 @@ public class TorProxyFetcherTest {
     @Test
     public void shouldCreateTorProxyFetcher() {
         // given
-        ConfigService configService = new ConfigService(torProxyAcheYml);
+        Configuration configService = new Configuration(torProxyAcheYml);
         
         // when
         HttpDownloaderConfig config = configService.getCrawlerConfig().getDownloaderConfig();
@@ -39,7 +39,7 @@ public class TorProxyFetcherTest {
     @Test
     public void torProxyShouldUseProxyForOnionLinks() throws BaseFetchException, IOException {
         // given
-        ConfigService configService = new ConfigService(torProxyAcheYml);
+        Configuration configService = new Configuration(torProxyAcheYml);
         HttpDownloaderConfig config = configService.getCrawlerConfig().getDownloaderConfig();
         TorProxyFetcher fetcher = (TorProxyFetcher) FetcherFactory.createFetcher(config);
         

@@ -60,7 +60,12 @@ public class TargetStorageConfig {
     @JsonProperty("target_storage.english_language_detection_enabled")
     private boolean englishLanguageDetectionEnabled = false;
 
-    private final StorageConfig serverConfig;
+    @JsonUnwrapped
+    private StorageConfig serverConfig;
+
+    public TargetStorageConfig() {
+        this.serverConfig = new StorageConfig();
+    }
 
     public TargetStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);

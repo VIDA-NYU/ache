@@ -149,6 +149,7 @@ public class PersistentHashtable<T> {
 		persistentTable.close();
 	}
 	
+	@Deprecated
 	public synchronized List<Tuple<T>> orderedSet(final Comparator<T> valueComparator) {
         try {
             List<Tuple<T>> elements = persistentTable.listElements();
@@ -174,9 +175,12 @@ public class PersistentHashtable<T> {
     }
 
     public void visitTuples(Visitor<Tuple<T>> visitor) {
-        TupleIterator<T> it = iterator();
-        while (it.hasNext()) {
-            visitor.visit(it.next());
+        try(TupleIterator<T> it = iterator()) {
+            while (it.hasNext()) {
+                visitor.visit(it.next());
+            }
+        } catch (Exception e) {
+            logger.error("Failed to close iterator.", e);
         }
     }
 

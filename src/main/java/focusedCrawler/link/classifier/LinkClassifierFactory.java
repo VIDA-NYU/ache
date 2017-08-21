@@ -2,6 +2,7 @@ package focusedCrawler.link.classifier;
 
 import java.nio.file.Paths;
 
+import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 
@@ -14,8 +15,9 @@ public class LinkClassifierFactory {
         LinkClassifierFactory.stoplist = stoplist;
     }
 
-    public static LinkClassifier create(String modelPath, String type) {
-        switch (type) {
+    public static LinkClassifier create(String modelPath, LinkStorageConfig config) {
+        String typeOfClassifier = config.getTypeOfClassifier();
+        switch (typeOfClassifier) {
             case "LinkClassifierBreadthSearch":
                 return new LinkClassifierBreadthSearch();
             case "LinkClassifierBaseline":
@@ -34,9 +36,9 @@ public class LinkClassifierFactory {
                 LNClassifier lnClassifier = LNClassifier.create(featureFilePath, modelFilePath, stoplist);
                 return new LinkClassifierImpl(lnClassifier);
             case "MaxDepthLinkClassifier":
-                return new MaxDepthLinkClassifier(1);
+                return new MaxDepthLinkClassifier(config.getMaxDepth());
             default:
-                throw new IllegalArgumentException("Unknown link classifier type: " + type);
+                throw new IllegalArgumentException("Unknown link classifier type: " + typeOfClassifier);
         }
     }
 

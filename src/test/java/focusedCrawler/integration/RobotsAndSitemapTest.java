@@ -20,7 +20,7 @@ import org.junit.rules.TemporaryFolder;
 import com.sun.net.httpserver.HttpServer;
 
 import focusedCrawler.Main;
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.TestWebServerBuilder;
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
@@ -163,16 +163,16 @@ public class RobotsAndSitemapTest {
 
     private void assertWasCrawled(String url, Frontier frontier) throws Exception {
         LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-        assertThat("URL=" + url, frontier.exist(link), is(lessThan(0)));
+        assertThat("URL=" + url, frontier.exist(link), is(lessThan(0d)));
     }
 
     private void assertWasNotCrawled(String url, Frontier frontier) throws Exception {
         LinkRelevance link = LinkRelevance.create(url);
-        assertThat("URL=" + url, frontier.exist(link), is(not(lessThan(0))));
+        assertThat("URL=" + url, frontier.exist(link), is(not(lessThan(0d))));
     }
 
     private Frontier openFrontier(String outputPath, String configPath) {
-        ConfigService config = new ConfigService(configPath + "/ache.yml");
+        Configuration config = new Configuration(configPath + "/ache.yml");
         String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
         String dir = Paths.get(outputPath, linkDirectory).toString();
         Frontier frontier = new Frontier(dir, 1000,

@@ -9,7 +9,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
@@ -129,7 +129,7 @@ public class TargetStorage extends StorageDefault {
     }
 
     public static void runServer(String configPath, String modelPath, String dataPath,
-                                 String indexName, String typeName, ConfigService config) {
+                                 String indexName, String typeName, Configuration config) {
         try {
             TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
 

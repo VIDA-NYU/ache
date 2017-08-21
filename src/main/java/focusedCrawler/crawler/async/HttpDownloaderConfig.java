@@ -15,6 +15,8 @@ public class HttpDownloaderConfig {
         public String path = "/";
     }
 
+    @JsonProperty("crawler_manager.downloader.use_okhttp3_fetcher")
+    private String okHttpFetcher = null;
 
     @JsonProperty("crawler_manager.downloader.download_thread_pool_size")
     private int downloadThreadPoolSize = 100;
@@ -46,7 +48,15 @@ public class HttpDownloaderConfig {
     @JsonProperty("crawler_manager.downloader.cookies")
     private List<Cookie> cookies = null;
     
-    public HttpDownloaderConfig() {}
+    public HttpDownloaderConfig() {
+        // Required for de-serialization
+    }
+
+    public HttpDownloaderConfig(String okHttpFetcher){
+        if (okHttpFetcher.equals("okHttp")){
+            this.okHttpFetcher = "True";
+        }
+    }
 
     public List<Cookie> getCookies() {
         return this.cookies;
@@ -92,4 +102,7 @@ public class HttpDownloaderConfig {
         return userAgentEmail;
     }
 
+    public String getOkHttpFetcher() {
+        return okHttpFetcher;
+    }
 }

@@ -20,7 +20,6 @@ services:
       memlock:
         soft: -1
         hard: -1
-    mem_limit: 1g
     volumes:
       - ./data-es/:/usr/share/elasticsearch/data # elasticsearch data will be stored at ./data-es/
     ports:

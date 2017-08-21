@@ -72,6 +72,7 @@ public class LinkStorageConfig {
     @JsonUnwrapped
     private BackSurferConfig backSurferConfig = new BackSurferConfig();
 
+    @JsonUnwrapped
     private final StorageConfig serverConfig;
 
     @JsonProperty("link_storage.download_sitemap_xml")
@@ -101,6 +102,9 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.persistent_hashtable.backend")
     private String persistentHashtableBackend = "ROCKSDB";
 
+    @JsonProperty("link_storage.link_classifier.max_depth")
+    private int maxDepth;
+
     public LinkStorageConfig() {
         this.serverConfig = new StorageConfig();
     }
@@ -118,6 +122,7 @@ public class LinkStorageConfig {
         return typeOfClassifier;
     }
 
+    @JsonProperty("link_storage.link_strategy.outlinks")
     public boolean getOutlinks() {
         return getOutlinks;
     }
@@ -134,6 +139,7 @@ public class LinkStorageConfig {
         return maxCacheUrlsSize;
     }
 
+    @JsonProperty("link_storage.link_strategy.backlinks")
     public boolean getBacklinks() {
         return getBacklinks;
     }
@@ -170,7 +176,7 @@ public class LinkStorageConfig {
         return sitemapsRecrawlInterval;
     }
 
-    public double getRecrawlMinRelevanceValue() {
+    public double getRecrawlMinRelevance() {
         return minRelevanceRecrawl;
     }
 
@@ -214,6 +220,10 @@ public class LinkStorageConfig {
         }else{
             return DB.ROCKSDB;
         }
+    }
+
+    public int getMaxDepth() {
+        return maxDepth;
     }
 
 }

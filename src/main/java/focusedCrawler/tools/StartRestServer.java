@@ -1,13 +1,6 @@
 package focusedCrawler.tools;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
-import com.codahale.metrics.MetricRegistry;
-
 import focusedCrawler.Main;
-import focusedCrawler.config.ConfigService;
-import focusedCrawler.rest.RestConfig;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.util.CliTool;
 import io.airlift.airline.Command;
@@ -17,14 +10,6 @@ import io.airlift.airline.Option;
 public class StartRestServer extends CliTool {
 
     public static final String VERSION = Main.class.getPackage().getImplementationVersion();
-
-    @Option(name = {"-p", "--port"}, required = false,
-            description = "Port at which the web server will be available")
-    private int port = 8080;
-
-    private String host = "0.0.0.0";
-
-    private boolean enableCors = true;
 
     @Option(name = {"-d", "--data-path"}, required = true,
             description = "Path to folder where server should store its data")
@@ -48,26 +33,10 @@ public class StartRestServer extends CliTool {
 
     @Override
     public void execute() throws Exception {
-        MetricRegistry metricsRegistry = new MetricRegistry();
-
-        RestServer server = null;
-        if(configPath != null && !configPath.isEmpty()) {
-            
-            if(Files.isDirectory(Paths.get(configPath))) {
-                configPath = Paths.get(configPath, "ache.yml").toString();
-            }
-            
-            ConfigService config = new ConfigService(configPath);
-            server = RestServer.create(dataPath, metricsRegistry, config, esIndexName, esTypeName);
+        if (configPath != null && !configPath.isEmpty()) {
         }
-        
-        if(server == null) {
-            RestConfig restConfig = new RestConfig(host, port, enableCors);
-            server = RestServer.create(dataPath, restConfig, metricsRegistry);
-        }
-        
+        RestServer server = RestServer.create(configPath, dataPath, esIndexName, esTypeName);
         server.start();
-        
     }
 
 }
