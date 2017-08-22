@@ -1,11 +1,6 @@
 package focusedCrawler.crawler.async.cookieHandler;
 
 import java.io.Serializable;
-import java.util.Date;
-
-import org.apache.http.impl.cookie.BasicClientCookie;
-
-import okhttp3.Cookie.Builder;
 
 public class Cookie implements Serializable {
 
