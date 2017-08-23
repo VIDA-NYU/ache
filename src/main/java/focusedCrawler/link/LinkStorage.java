@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import java.util.concurrent.atomic.AtomicBoolean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,6 +45,8 @@ import focusedCrawler.util.string.StopListFile;
 public class LinkStorage extends StorageDefault {
 
     public static final Logger logger = LoggerFactory.getLogger(LinkStorage.class);
+    private static volatile MonitorLock monitorLock = new MonitorLock();
+    private static volatile AtomicBoolean wasSignalled = new AtomicBoolean(false);
 
     private final boolean getBacklinks;
     private final boolean getOutlinks;
@@ -53,12 +56,16 @@ public class LinkStorage extends StorageDefault {
 
     private final boolean insertSiteMaps;
     private final boolean disallowSitesInRobotsTxt;
+    private final int learnLimit;
+    private long counter;
 
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager) throws IOException {
         this(config, frontierManager, null);
     }
-    
+
+    public static class MonitorLock{}
+
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager,
                        OnlineLearning onlineLearning) throws IOException {
@@ -68,6 +75,15 @@ public class LinkStorage extends StorageDefault {
         this.getOutlinks = config.getOutlinks();
         this.disallowSitesInRobotsTxt = config.getDisallowSitesInRobotsFile();
         this.insertSiteMaps = config.getDownloadSitemapXml();
+        this.learnLimit = config.getLearningLimit();
+    }
+
+    // Notify the monitor
+    public void doNotify(){
+        synchronized(monitorLock){
+            wasSignalled.set(true);
+            monitorLock.notify();
+        }
     }
 
     public void close(){
@@ -150,8 +166,11 @@ public class LinkStorage extends StorageDefault {
             }
 
             if (onlineLearning != null) {
-                onlineLearning.pushFeedback(page);
+                if(counter%learnLimit==0){
+                    doNotify();
+                }
             }
+            counter++;
         } catch (Exception ex) {
             logger.info("Failed to insert page into LinkStorage.", ex);
             throw new StorageException(ex.getMessage(), ex);
@@ -210,6 +229,10 @@ public class LinkStorage extends StorageDefault {
         OnlineLearning onlineLearning = null;
         if (config.isUseOnlineLearning()) {
             onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager);
+            Thread learner = new Thread(onlineLearning);
+            learner.setDaemon(true);
+            learner.setName("Online-Learner");
+            learner.start();
         }
         
         return new LinkStorage(config, frontierManager, onlineLearning);
@@ -224,14 +247,13 @@ public class LinkStorage extends StorageDefault {
         logger.info("Online Learning method:" + onlineLearningType);
         switch (onlineLearningType) {
             case "FORWARD_CLASSIFIER_BINARY":
-                return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                 ForwardOnlineLearning.Type.BINARY, dataPath);
+                return new ForwardOnlineLearning(frontierManager, cb,
+                                                 ForwardOnlineLearning.Type.BINARY, dataPath, monitorLock, wasSignalled);
             case "FORWARD_CLASSIFIER_LEVELS":
-                return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                 ForwardOnlineLearning.Type.LEVELS, dataPath);
+                return new ForwardOnlineLearning(frontierManager, cb,
+                                                 ForwardOnlineLearning.Type.LEVELS, dataPath, monitorLock, wasSignalled);
             case "LINK_CLASSIFIERS":
-                return new BipartiteOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                   dataPath);
+                return new BipartiteOnlineLearning(frontierManager, cb, dataPath, monitorLock, wasSignalled);
             default:
                 throw new IllegalArgumentException("Unknown online learning method: " + onlineLearningType);
         }
