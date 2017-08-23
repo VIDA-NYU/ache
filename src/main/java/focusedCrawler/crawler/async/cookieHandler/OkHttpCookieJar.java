@@ -74,4 +74,8 @@ public class OkHttpCookieJar implements CookieJar, CookieHandler {
 		}
 
 	}
+
+	public static ConcurrentHashMap<HttpUrl, List<Cookie>> getCookieJar(){
+		return cookieJar;
+	}
 }
