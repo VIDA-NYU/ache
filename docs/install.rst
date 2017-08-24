@@ -51,7 +51,18 @@ To build ACHE from source, you can run the following commands in your terminal::
   ./gradlew installDist
 
 which will generate an installation package under ``ache/build/install/``.
-To install ACHE binaries into ``/opt`` and make it available on the command-line run::
+You can then make ``ache`` command available in the terminal by adding
+ACHE binaries to the ``PATH`` environment variable::
+
+  export ACHE_HOME="{path-to-cloned-ache-repository}/build/install/ache"
+  export PATH="$ACHE_HOME/bin:$PATH"
+
+
+This configuration will not persist after system restarts. To make it persistent,
+you will need configure the system to reload these settings automatically.
+Every operating system is configured in a different way.
+Following, is an example of how to install ACHE at ``\opt`` for Linux
+(tested only in **Ubuntu 16.04**)::
 
   sudo mv build/install/ache /opt/
   echo 'export ACHE_HOME="/opt/ache"' | sudo tee -a /etc/profile.d/ache.sh
@@ -63,11 +74,13 @@ After this, the command ``ache`` will be available on the terminal, so you can s
 Download with Conda
 -------------------
 
+**Prerequisite:** You need to have Conda package manager installed in your system.
+
 If you use the `Conda <https://conda.io/docs/>`_ package manager, you can install ``ache`` from `Anaconda Cloud <https://anaconda.org/>`_ by running::
 
-  conda install -c memex ache
+  conda install -c vida-nyu ache
 
 ..  warning::
 
-  Only tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
-  If you want to try the most recent version, please clone the repository and build from source.
+  Only released tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
+  If you want to try the most recent version, please clone the repository and build from source or use the Docker version.

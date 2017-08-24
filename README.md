@@ -41,13 +41,11 @@ cd ache
 ```
 
 which will generate an installation package under `ache/build/install/`.
-To install ACHE binaries into ``/opt`` and make it available on the command-line run:
+You can then make `ache` command available in the terminal by adding ACHE binaries to the `PATH` environment variable:
 
-```
-sudo mv build/install/ache /opt/
-echo 'export ACHE_HOME="/opt/ache"' | sudo tee -a /etc/profile.d/ache.sh
-echo 'export PATH="$ACHE_HOME/bin:$PATH"' | sudo tee -a /etc/profile.d/ache.sh
-source /etc/profile.d/ache.sh
+```bash
+export ACHE_HOME="{path-to-cloned-ache-repository}/build/install/ache"
+export PATH="$ACHE_HOME/bin:$PATH"
 ```
 
 ### Running using Docker
@@ -80,8 +78,8 @@ If you use Conda, you can install `ache` from Anaconda Cloud by running:
 conda install -c vida-nyu ache
 ```
 
-*NOTE: Only tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
-If you want to try the most recent version, please clone the repository and build from source.*
+*NOTE: Only released tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
+If you want to try the most recent version, please clone the repository and build from source or use the Docker version.*
 
 ## Running ACHE
 
