@@ -18,7 +18,9 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map.Entry;
+import java.util.TimeZone;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.commons.compress.utils.IOUtils;
@@ -49,7 +51,10 @@ public class WarcTargetRepository implements TargetRepository {
             new ThreadLocal<SimpleDateFormat>() {
                 @Override
                 protected SimpleDateFormat initialValue() {
-                    return new SimpleDateFormat(ISO_8601_DATE_FORMAT);
+                    Locale currentLocale = Locale.getDefault();
+                    SimpleDateFormat dateFormat = new SimpleDateFormat(ISO_8601_DATE_FORMAT, currentLocale);
+                    dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+                    return dateFormat;
                 }
             };
 
@@ -166,7 +171,7 @@ public class WarcTargetRepository implements TargetRepository {
     private Date createFetchTimeDate(Page page) {
         Date fetchTime;
         if (page.getFetchTime() != 0L) {
-            fetchTime = new Date(page.getFetchTime() * 1000L);
+            fetchTime = new Date(page.getFetchTime());
         } else {
             fetchTime = new Date(System.currentTimeMillis());
         }
