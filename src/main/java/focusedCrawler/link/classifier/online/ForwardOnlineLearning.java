@@ -1,9 +1,7 @@
 package focusedCrawler.link.classifier.online;
 
-import focusedCrawler.link.LinkStorage.MonitorLock;
 import java.util.Set;
 
-import java.util.concurrent.atomic.AtomicBoolean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,10 +24,10 @@ public class ForwardOnlineLearning extends OnlineLearning {
 
     private FrontierManager frontierManager;
 
-    public ForwardOnlineLearning(FrontierManager frontierManager,
+    public ForwardOnlineLearning(int learnLimit, FrontierManager frontierManager,
                                  LinkClassifierBuilder classifierBuilder,
-                                 Type method, String dataPath, MonitorLock monitorLock,AtomicBoolean wasSignalled) {
-        super(frontierManager,monitorLock,wasSignalled);
+                                 Type method, String dataPath) {
+        super(learnLimit, frontierManager);
         this.frontierManager = frontierManager;
         this.classifierBuilder = classifierBuilder;
         this.levels = (method == Type.BINARY ? 0 : 3);
