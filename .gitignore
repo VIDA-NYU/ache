@@ -20,3 +20,4 @@ config/config_docker_tor/data-*
 .idea/
 buildAndRun.sh
 classes/
+*.iml

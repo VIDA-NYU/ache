@@ -54,11 +54,13 @@ public class LinkStorage extends StorageDefault {
     private final boolean insertSiteMaps;
     private final boolean disallowSitesInRobotsTxt;
 
+
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager) throws IOException {
         this(config, frontierManager, null);
     }
-    
+
+
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager,
                        OnlineLearning onlineLearning) throws IOException {
@@ -71,7 +73,6 @@ public class LinkStorage extends StorageDefault {
     }
 
     public void close(){
-        
         logger.info("Shutting down FrontierManager...");
         this.frontierManager.close();
         logger.info("done.");
@@ -117,7 +118,7 @@ public class LinkStorage extends StorageDefault {
             try {
                 frontierManager.insert(LinkRelevance.createForward(link, 1.0d));
             } catch (Exception e) {
-                logger.error("Failed to insert link into the frontier: "+link);
+                logger.error("Failed to insert link into the frontier: "+link, e);
             }
         }
         logger.info("Added {} URLs from sitemap.", sitemapData.links.size());
@@ -150,8 +151,9 @@ public class LinkStorage extends StorageDefault {
             }
 
             if (onlineLearning != null) {
-                onlineLearning.pushFeedback(page);
+                onlineLearning.notifyPageCrawled(page);
             }
+            
         } catch (Exception ex) {
             logger.info("Failed to insert page into LinkStorage.", ex);
             throw new StorageException(ex.getMessage(), ex);
@@ -210,6 +212,7 @@ public class LinkStorage extends StorageDefault {
         OnlineLearning onlineLearning = null;
         if (config.isUseOnlineLearning()) {
             onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager);
+            
         }
         
         return new LinkStorage(config, frontierManager, onlineLearning);
@@ -225,15 +228,16 @@ public class LinkStorage extends StorageDefault {
         switch (onlineLearningType) {
             case "FORWARD_CLASSIFIER_BINARY":
                 return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                 ForwardOnlineLearning.Type.BINARY, dataPath);
+                        ForwardOnlineLearning.Type.BINARY, dataPath);
             case "FORWARD_CLASSIFIER_LEVELS":
                 return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                 ForwardOnlineLearning.Type.LEVELS, dataPath);
+                        ForwardOnlineLearning.Type.LEVELS, dataPath);
             case "LINK_CLASSIFIERS":
                 return new BipartiteOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                   dataPath);
+                        dataPath);
             default:
-                throw new IllegalArgumentException("Unknown online learning method: " + onlineLearningType);
+                throw new IllegalArgumentException(
+                        "Unknown online learning method: " + onlineLearningType);
         }
     }
 
