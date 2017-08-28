@@ -106,15 +106,15 @@ during the crawl initialization).
 The Elasticsearch mapping for this type is automatically created and contains
 the following fields:
 
-* ``domain`` - domain of the url
-* ``topPrivateDomain`` -  top private domain of the url
+* ``domain`` - domain of the URL
+* ``topPrivateDomain`` -  top private domain of the URL
 * ``url`` - complete URL
-* ``title`` - title of the page extracted from the html tag ``<title>``
-* ``text`` - clean text extract from html using Boilerpipe's DefaultExtractor
+* ``title`` - title of the page extracted from the HTML tag ``<title>``
+* ``text`` - clean text extract from HTML using Boilerpipe's DefaultExtractor
 * ``retrieved`` - date when the time was fetched using ISO-8601 representation Ex: "2015-04-16T07:03:50.257+0000"
 * ``words`` - array of strings with tokens extracted from the text content
-* ``wordsMeta`` - array of strings with tokens extracted from tags ``<meta>`` of the html content
-* ``html`` - raw html content
+* ``wordsMeta`` - array of strings with tokens extracted from tags ``<meta>`` of the HTML content
+* ``html`` - raw HTML content
 * ``isRelevant`` - indicates whether the page was classified as relevant or
   irrelevant by target page classifier. This is a keyword field
   (not analyzed string) containing either ``relevant`` or ``irrelevant``.

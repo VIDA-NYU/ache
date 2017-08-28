@@ -29,7 +29,7 @@ API Endpoints
     :reqjson array seeds: (**Required for DeepCrawl**) An array of strings. Each string must be a
       fully-qualified URL that will be used starting point of the crawl.
 
-    Resquest body example for DeepCrawl:
+    Request body example for DeepCrawl:
 
     .. sourcecode:: js
 
@@ -39,7 +39,7 @@ API Endpoints
         "model": null
       }
 
-    Resquest body example for FocusedCrawl:
+    Request body example for FocusedCrawl:
 
     .. sourcecode:: js
 
@@ -53,7 +53,7 @@ API Endpoints
 
 .. http:get:: /status
 
-    Retuns the status of the currently running crawl.
+    Returns the status of the currently running crawl.
 
 
 
@@ -80,7 +80,7 @@ API Endpoints
       that is currently running.
 
 
-    Resquest body example:
+    Request body example:
 
     .. sourcecode:: js
 

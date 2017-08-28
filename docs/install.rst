@@ -69,7 +69,7 @@ Following, is an example of how to install ACHE at ``\opt`` for Linux
   echo 'export PATH="$ACHE_HOME/bin:$PATH"' | sudo tee -a /etc/profile.d/ache.sh
   source /etc/profile.d/ache.sh
 
-After this, the command ``ache`` will be available on the terminal, so you can simply run the crawler with the apropriate parameters.
+After this, the command ``ache`` will be available on the terminal, so you can simply run the crawler with the appropriate parameters.
 
 Download with Conda
 -------------------
