@@ -1131,4 +1131,12 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 		}
 		globalCookieStore.addCookie(cookie);
 	}
+	
+	/**
+	 * Returns cookie store for testing.
+	 * @return
+	 */
+	static CookieStore getCookieStore() {
+		return globalCookieStore;
+	}
 }

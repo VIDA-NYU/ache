@@ -33,7 +33,15 @@ public class CookieUtils {
 		builder.name(cookie.getName());
 		builder.value(cookie.getValue());
 		builder.expiresAt(cookie.getExpiresAt());
-		builder.domain(cookie.getDomain());
+		if(cookie.getDomain() != null && cookie.getDomain().startsWith(".")) {
+			cookie.setDomain(cookie.getDomain().replaceFirst(".", ""));
+		}
+		if(cookie.getDomain() != null) {
+			builder.domain(cookie.getDomain());
+		}else {
+			builder.domain("");
+		}
+		
 		builder.path(cookie.getPath());
 		if (cookie.isSecure()) {
 			builder.secure();
@@ -78,7 +86,9 @@ public class CookieUtils {
 			for(String key: cookies.keySet()) {
 				List<org.apache.http.cookie.Cookie> newCookieArrayList = new ArrayList<>();
 				for(Cookie c: cookies.get(key)) {
-					newCookieArrayList.add(CookieUtils.getApacheCookie(c));
+					if(c.getDomain() != null) {
+						newCookieArrayList.add(CookieUtils.getApacheCookie(c));
+					}
 				}
 				tempCookies.put(key, newCookieArrayList);
 			}
@@ -88,7 +98,9 @@ public class CookieUtils {
 			for(String key: cookies.keySet()) {
 				List<okhttp3.Cookie> newCookieArrayList = new ArrayList<>();
 				for(Cookie c: cookies.get(key)) {
-					newCookieArrayList.add(CookieUtils.getOkkHttpCookie(c));
+					if(c.getDomain() != null) {
+						newCookieArrayList.add(CookieUtils.getOkkHttpCookie(c));
+					}
 				}
 				tempCookies.put(key, newCookieArrayList);
 			}

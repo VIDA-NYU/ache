@@ -1,6 +1,8 @@
 package focusedCrawler.crawler.async.cookieHandler;
 
 import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Cookie implements Serializable {
 
@@ -13,7 +15,7 @@ public class Cookie implements Serializable {
 	private String value;
 	private long expiresAt;
 	private String domain;
-	private String path;
+	private String path = "/";
 	private boolean secure;
 	private boolean httpOnly;
 
@@ -47,13 +49,30 @@ public class Cookie implements Serializable {
 	}
 
 	public long getExpiresAt() {
+		if(expiresAt == 0L) {
+			Calendar date = Calendar.getInstance();
+			date.setTime(new Date());
+			date.add(Calendar.YEAR, 10);
+			expiresAt = date.getTimeInMillis();
+		}
 		return expiresAt;
 	}
 
-	public void setExpiresAt(long expiresAt) {
-		this.expiresAt = expiresAt;
+	public void setExpiresAt(String expiresAtArg) {
+		try {
+			expiresAt = Long.parseLong(expiresAtArg);
+		}catch(NumberFormatException e) {
+			Calendar date = Calendar.getInstance();
+			date.setTime(new Date());
+			date.add(Calendar.YEAR, 10);
+			expiresAt = date.getTimeInMillis();
+		}
 	}
 
+	public void setExpiresAt(long expiresAtArg) {
+		expiresAt = expiresAtArg;
+	}
+	
 	public String getDomain() {
 		return domain;
 	}
