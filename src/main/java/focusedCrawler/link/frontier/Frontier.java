@@ -3,7 +3,6 @@ package focusedCrawler.link.frontier;
 import java.net.URLDecoder;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 
 import crawlercommons.robots.BaseRobotRules;
 import focusedCrawler.util.persistence.PersistentHashtable;
@@ -18,15 +17,13 @@ public class Frontier {
 
     private final PersistentHashtable<BaseRobotRules> robotRulesMap;
 
-    public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend, Map<String, Integer> scope) {
-        this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize, LinkRelevance.class, persistentHashtableBackend);
-        this.robotRulesMap = new PersistentHashtable<>(directory+"_robots", maxCacheUrlsSize, BaseRobotRules.class, persistentHashtableBackend);
+    public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend) {
+        this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize,
+                LinkRelevance.class, persistentHashtableBackend);
+        this.robotRulesMap = new PersistentHashtable<>(directory + "_robots", maxCacheUrlsSize,
+                BaseRobotRules.class, persistentHashtableBackend);
     }
 
-    public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend) {
-        this(directory, maxCacheUrlsSize, persistentHashtableBackend, null);
-    }
-    
     public void commit() {
         urlRelevance.commit();
         robotRulesMap.commit();
