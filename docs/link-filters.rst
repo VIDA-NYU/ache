@@ -14,5 +14,5 @@ For whitelist filters, the file should be named ``link_whitelist.txt``, whereas 
 
 A link filter file looks like this::
 
-  https?://www\.example.com/some_path/*
-  https?://www\.another-example.com/*
+  https?:\/\/www\.example\.com\/some_path\/.*
+  https?:\/\/www\.another-example\.com\/some_path\/.*
