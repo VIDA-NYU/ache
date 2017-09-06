@@ -8,7 +8,6 @@ import static org.junit.Assert.fail;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Map;
 
 import org.junit.After;
@@ -36,7 +35,7 @@ public class FrontierManagerTest {
     // a new temp folder is created for each test case
     public TemporaryFolder tempFolder = new TemporaryFolder();
     
-    private LinkFilter emptyLinkFilter = new LinkFilter(new ArrayList<String>());
+    private LinkFilter emptyLinkFilter = new LinkFilter.Builder().build();
     private MetricsManager metricsManager = new MetricsManager();
     private LinkStorageConfig config = new LinkStorageConfig();
     private Frontier frontier;

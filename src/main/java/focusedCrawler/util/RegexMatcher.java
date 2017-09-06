@@ -17,7 +17,7 @@ public class RegexMatcher {
     
     private static final Logger logger = LoggerFactory.getLogger(RegexMatcher.class);
     
-    List<Pattern> patterns = new ArrayList<Pattern>();
+    protected List<Pattern> patterns = new ArrayList<Pattern>();
 
     protected RegexMatcher(String filename) {
         this(loadRegexesFromFile(filename));

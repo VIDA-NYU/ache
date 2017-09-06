@@ -145,8 +145,7 @@ public class FrontierManager {
             return false;
         }
 
-        String url = link.getURL().toString();
-        if (linkFilter.accept(url) == false) {
+        if (!linkFilter.accept(link)) {
             return false;
         }
 
