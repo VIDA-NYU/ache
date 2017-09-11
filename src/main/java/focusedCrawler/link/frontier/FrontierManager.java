@@ -49,24 +49,25 @@ public class FrontierManager {
 
     private static final Logger logger = LoggerFactory.getLogger(FrontierManager.class);
 
-    private BacklinkSurfer backlinkSurfer;
-    private LinkClassifier backlinkClassifier;
-    private LinkClassifier outlinkClassifier;
-    private BipartiteGraphRepository graphRepository;
-    private int maxPagesPerDomain;
-    private HashMap<String, Integer> domainCounter;
-    
-    private final CrawlScheduler scheduler;
-    private final Frontier frontier;
-    private final LinkFilter linkFilter;
+    private final int maxPagesPerDomain;
     private final int linksToLoad;
-    private final HostManager hostsManager;
     private final boolean downloadRobots;
     private final boolean insertSitemaps;
     private final boolean disallowSitesInRobotsFile;
+    private final boolean useScope;
+
+    private BacklinkSurfer backlinkSurfer;
+    private LinkClassifier backlinkClassifier;
+    private LinkClassifier outlinkClassifier;
+    private HashMap<String, Integer> domainCounter;
+
+    private final BipartiteGraphRepository graphRepository;
+    private final CrawlScheduler scheduler;
+    private final Frontier frontier;
+    private final LinkFilter linkFilter;
+    private final HostManager hostsManager;
     private final LogFile schedulerLog;
     private final MetricsManager metricsManager;
-    private final boolean useScope;
     private final Set<String> scope = Collections.newSetFromMap(new ConcurrentHashMap<>());
 
 	private Timer insertTimer;
