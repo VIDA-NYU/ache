@@ -7,12 +7,10 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.regex.Pattern;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,10 +25,10 @@ public class LinkFilter {
 
     private static final Logger logger = LoggerFactory.getLogger(LinkFilter.class);
 
-    private LinkWhiteList whitelist;
-    private LinkBlackList blacklist;
-    private Map<String, LinkWhiteList> hostsWhitelists;
-    private Map<String, LinkBlackList> hostsBlacklists;
+    private TextMatcher whitelist;
+    private TextMatcher blacklist;
+    private Map<String, TextMatcher> hostsWhitelists;
+    private Map<String, TextMatcher> hostsBlacklists;
 
     private LinkFilter(Builder builder) {
         this.whitelist = builder.whitelist;
@@ -56,86 +54,54 @@ public class LinkFilter {
         String url = link.toString();
         String domain = LinkRelevance.getTopLevelDomain(link.getHost());
 
-        LinkWhiteList hostWhitelist = hostsWhitelists.get(domain);
-        if (hostWhitelist != null && !hostWhitelist.accept(url)) {
+        TextMatcher hostWhitelist = hostsWhitelists.get(domain);
+        if (hostWhitelist != null && !hostWhitelist.matches(url)) {
             return false;
         }
-        LinkBlackList hostBlacklist = hostsBlacklists.get(domain);
-        if (hostBlacklist != null && !hostBlacklist.accept(url)) {
+        TextMatcher hostBlacklist = hostsBlacklists.get(domain);
+        if (hostBlacklist != null && !hostBlacklist.matches(url)) {
             return false;
         }
-        if (whitelist != null && !whitelist.accept(url)) {
+        if (whitelist != null && !whitelist.matches(url)) {
             return false;
         }
-        if (blacklist != null && !blacklist.accept(url)) {
+        if (blacklist != null && !blacklist.matches(url)) {
             return false;
         }
 
         return true;
     }
 
-    public static class LinkWhiteList extends RegexMatcher {
-        
-        public LinkWhiteList(List<String> urlPatterns) {
-            super(urlPatterns);
-        }
-        
-        public LinkWhiteList(String filename) {
-            super(filename);
-        }
-        
-        public boolean accept(String link) {
-            return patterns == null || patterns.size() == 0 || matches(link);
-        }
-        
-    }
-    
-    public static class LinkBlackList extends RegexMatcher {
-        
-        public LinkBlackList(String filename) {
-            super(filename);
-        }
-        
-        public LinkBlackList(List<String> urlPatterns) {
-            super(urlPatterns);
-        }
-        
-        public boolean accept(String link) {
-            return patterns == null || patterns.size() == 0 || !super.matches(link);
-        }
-
-    }
-
     public static class PatternParams {
-        public String type = "regex";
+        public String type = "wildcard";
         public List<String> whitelist = null;
         public List<String> blacklist = null;
     }
 
     public static class Builder {
 
-        private LinkWhiteList whitelist;
-        private LinkBlackList blacklist;
-        private Map<String, LinkWhiteList> hostsWhitelists = new HashMap<>();
-        private Map<String, LinkBlackList> hostsBlacklists = new HashMap<>();
+        private TextMatcher whitelist;
+        private TextMatcher blacklist;
+        private Map<String, TextMatcher> hostsWhitelists = new HashMap<>();
+        private Map<String, TextMatcher> hostsBlacklists = new HashMap<>();
 
         public Builder withWhitelistFile(String file) {
-            this.whitelist = new LinkWhiteList(file);
+            this.whitelist = RegexMatcher.fromWhitelistFile(file);
             return this;
         }
 
         public Builder withBlacklistFile(String file) {
-            this.blacklist = new LinkBlackList(file);
+            this.blacklist = RegexMatcher.fromBlacklistFile(file);
             return this;
         }
 
         public Builder withWhitelistRegexes(List<String> regexes) {
-            this.whitelist = new LinkWhiteList(regexes);
+            this.whitelist = RegexMatcher.fromWhitelist(regexes);
             return this;
         }
 
         public Builder withBlacklistRegexes(List<String> regexes) {
-            this.blacklist = new LinkBlackList(regexes);
+            this.blacklist = RegexMatcher.fromBlacklist(regexes);
             return this;
         }
 
@@ -148,8 +114,8 @@ public class LinkFilter {
             } else {
                 logger.info("Loading link patterns from link_whitelist.txt and"
                         + " link_blacklist.txt at {}", configPath);
-                this.whitelist = new LinkWhiteList(path.resolve("link_whitelist.txt").toString());
-                this.blacklist = new LinkBlackList(path.resolve("link_blacklist.txt").toString());
+                this.whitelist = RegexMatcher.fromWhitelistFile(path.resolve("link_whitelist.txt").toString());
+                this.blacklist = RegexMatcher.fromBlacklistFile(path.resolve("link_blacklist.txt").toString());
             }
             return this;
         }
@@ -169,17 +135,15 @@ public class LinkFilter {
                         switch (pattern.type.toLowerCase()) {
                             case "regex":
                                 if (pattern.whitelist != null)
-                                    this.whitelist = new LinkWhiteList(pattern.whitelist);
+                                    this.whitelist = RegexMatcher.fromWhitelist(pattern.whitelist);
                                 if (pattern.blacklist != null)
-                                    this.blacklist = new LinkBlackList(pattern.blacklist);
+                                    this.blacklist = RegexMatcher.fromBlacklist(pattern.blacklist);
                                 break;
                             case "wildcard":
                                 if (pattern.whitelist != null)
-                                    this.whitelist = new LinkWhiteList(
-                                            convertWildcardToRegex(pattern.whitelist));
+                                    this.whitelist = WildcardMatcher.fromWhitelist(pattern.whitelist);
                                 if (pattern.blacklist != null)
-                                    this.blacklist = new LinkBlackList(
-                                            convertWildcardToRegex(pattern.blacklist));
+                                    this.blacklist = WildcardMatcher.fromBlacklist(pattern.blacklist);
                                 break;
                             default:
                                 throw new IllegalArgumentException(
@@ -189,19 +153,19 @@ public class LinkFilter {
                         switch (pattern.type.toLowerCase()) {
                             case "regex":
                                 hostsWhitelists.put(entry.getKey(),
-                                        new LinkWhiteList(pattern.whitelist));
+                                        RegexMatcher.fromWhitelist(pattern.whitelist));
                                 hostsBlacklists.put(entry.getKey(),
-                                        new LinkBlackList(pattern.blacklist));
+                                        RegexMatcher.fromBlacklist(pattern.blacklist));
                                 break;
                             case "wildcard":
-                                hostsWhitelists.put(entry.getKey(), new LinkWhiteList(
-                                        convertWildcardToRegex(pattern.whitelist)));
-                                hostsBlacklists.put(entry.getKey(), new LinkBlackList(
-                                        convertWildcardToRegex(pattern.blacklist)));
+                                hostsWhitelists.put(entry.getKey(),
+                                        WildcardMatcher.fromWhitelist(pattern.whitelist));
+                                hostsBlacklists.put(entry.getKey(),
+                                        WildcardMatcher.fromBlacklist(pattern.blacklist));
                                 break;
                             default:
                                 throw new IllegalArgumentException(
-                                        "Invalid value for global.type: " + pattern.type);
+                                        "Invalid value for type: " + pattern.type);
                         }
 
                     }
@@ -219,30 +183,6 @@ public class LinkFilter {
                 String tpd = LinkRelevance.getTopLevelDomain(p.getKey());
                 logger.info(tpd);
                 result.put(tpd, p.getValue());
-            }
-            return result;
-        }
-
-        private List<String> convertWildcardToRegex(List<String> wildcards) {
-            List<String> result = new ArrayList<>();
-            if (wildcards == null || wildcards.isEmpty())
-                return result;
-            for (String wildcard : wildcards) {
-                StringBuilder regex = new StringBuilder();
-                int lastIndex = 0;
-                int index = wildcard.indexOf("*");
-                while (index >= 0) {
-                    if (index > lastIndex) {
-                        regex.append(Pattern.quote(wildcard.substring(lastIndex, index)));
-                    }
-                    regex.append(".*");
-                    lastIndex = index + 1;
-                    index = wildcard.indexOf("*", lastIndex);
-                }
-                if (lastIndex < wildcard.length()) {
-                    regex.append(Pattern.quote(wildcard.substring(lastIndex, wildcard.length())));
-                }
-                result.add(regex.toString());
             }
             return result;
         }

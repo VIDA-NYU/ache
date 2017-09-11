@@ -11,7 +11,7 @@ import org.junit.Test;
 public class LinkFilterTest {
 
     @Test
-    public void matchShoudReturnTrueIfStringMatchUrlPatterns() {
+    public void regexMatcherTestCase1() {
         // given
         List<String> urlRegexPatterns = Arrays.asList(
             ".*/thread/.*",
@@ -19,7 +19,8 @@ public class LinkFilterTest {
             "www\\.mydomain\\.com.*",
             "www\\.somedomain\\.com/forum/.*"
         );
-        RegexMatcher matcher = new RegexMatcher(urlRegexPatterns);
+        RegexMatcher matcher = RegexMatcher.fromWhitelist(urlRegexPatterns);
+        RegexMatcher reverseMatcher = RegexMatcher.fromBlacklist(urlRegexPatterns);
 
         List<String> urlsThatMatch = Arrays.asList(
             "http://some.domain.com/thread/something",
@@ -28,7 +29,45 @@ public class LinkFilterTest {
             "www.somedomain.com/forum/asdf.html"
         );
 
-        List<String> urlsThatDoesntMatch = Arrays.asList(
+        List<String> urlsThatDontMatch = Arrays.asList(
+            "http://some.domain.com/something",
+            "http://www.otherforum.net/calgunforum/t-285330.html",
+            "www.testdomain.com/asdf",
+            "www.somedomain.com/somthingelse/asdf.html"
+        );
+
+        // then
+        for (String url : urlsThatMatch) {
+            assertThat(url, matcher.matches(url), is(true));
+            assertThat(url, reverseMatcher.matches(url), is(false));
+        }
+
+        for (String url : urlsThatDontMatch) {
+            assertThat(url, matcher.matches(url), is(false));
+            assertThat(url, reverseMatcher.matches(url), is(true));
+        }
+    }
+
+    @Test
+    public void wildcardMatherTestCase1() {
+        // given
+        List<String> urlRegexPatterns = Arrays.asList(
+            "*/thread/*",
+            "*/archive/index.php/t*",
+            "www.mydomain.com*",
+            "www.somedomain.com/forum/*"
+        );
+        TextMatcher matcher = WildcardMatcher.fromWhitelist(urlRegexPatterns);
+        TextMatcher reverseMatcher = WildcardMatcher.fromBlacklist(urlRegexPatterns);
+
+        List<String> urlsThatMatch = Arrays.asList(
+            "http://some.domain.com/thread/something",
+            "http://www.someforum.net/forum/archive/index.php/t-285330.html",
+            "www.mydomain.com/asdf",
+            "www.somedomain.com/forum/asdf.html"
+        );
+
+        List<String> urlsThatDontMatch = Arrays.asList(
             "http://some.domain.com/something",
             "http://www.otherforum.net/calgunforum/t-285330.html",
             "www.testdomain.com/asdf",
@@ -36,19 +75,46 @@ public class LinkFilterTest {
         );
 
         for (String url : urlsThatMatch) {
-            // when
-            boolean matched = matcher.matches(url);
-            // then
-            assertThat(url, matched, is(true));
+            assertThat(url, matcher.matches(url), is(true));
+            assertThat(url, reverseMatcher.matches(url), is(false));
         }
 
-        for (String url : urlsThatDoesntMatch) {
-            // when
-            boolean matched = matcher.matches(url);
-            // then
-            assertThat(url, matched, is(false));
+        for (String url : urlsThatDontMatch) {
+            assertThat(url, matcher.matches(url), is(false));
+            assertThat(url, reverseMatcher.matches(url), is(true));
         }
-        // then
+    }
+
+    @Test
+    public void wildcardMatherTestCase2() {
+        // given
+        List<String> urlRegexPatterns = Arrays.asList(
+            "http://a.com/*c"
+        );
+        TextMatcher matcher = WildcardMatcher.fromWhitelist(urlRegexPatterns);
+        TextMatcher reverseMatcher = WildcardMatcher.fromBlacklist(urlRegexPatterns);
+
+        List<String> urlsThatMatch = Arrays.asList(
+            "http://a.com/c",
+            "http://a.com/cc",
+            "http://a.com/ccc"
+        );
+
+        List<String> urlsThatDontMatch = Arrays.asList(
+            "http://a.com/",
+            "http://a.com/cd",
+            "http://a.com/ccd"
+        );
+
+        for (String url : urlsThatMatch) {
+            assertThat(url, matcher.matches(url), is(true));
+            assertThat(url, reverseMatcher.matches(url), is(false));
+        }
+
+        for (String url : urlsThatDontMatch) {
+            assertThat(url, matcher.matches(url), is(false));
+            assertThat(url, reverseMatcher.matches(url), is(true));
+        }
     }
 
     @Test
@@ -139,7 +205,7 @@ public class LinkFilterTest {
     }
 
     @Test
-    public void shouldLoadFiltersFromYamlFileBack() {
+    public void shouldLoadFiltersFromYamlFileBackpage() {
         // given
         String path = LinkFilterTest.class.getResource("backpage_link_filters.yml").getPath();
         LinkFilter linkfilter = new LinkFilter.Builder()
