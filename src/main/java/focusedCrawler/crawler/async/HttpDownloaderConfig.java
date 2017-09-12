@@ -47,6 +47,12 @@ public class HttpDownloaderConfig {
 
     @JsonProperty("crawler_manager.downloader.cookies")
     private List<Cookie> cookies = null;
+
+    @JsonProperty("crawler_manager.downloader.connectTimeout")
+    private int connectTimeout = 10000;
+
+    @JsonProperty("crawler_manager.downloader.readTimeOut")
+    private int readTimeOut = 10000;
     
     public HttpDownloaderConfig() {
         // Required for de-serialization
@@ -104,5 +110,13 @@ public class HttpDownloaderConfig {
 
     public String getOkHttpFetcher() {
         return okHttpFetcher;
+    }
+
+    public int getReadTimeOut() {
+        return readTimeOut;
+    }
+
+    public int getConnectTimeOut() {
+        return connectTimeout;
     }
 }

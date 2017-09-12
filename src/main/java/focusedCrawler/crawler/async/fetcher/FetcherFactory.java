@@ -110,7 +110,7 @@ public class FetcherFactory {
                 .setUserAgentString(config.getUserAgentString())
                 .build();
         int connectionPoolSize = config.getConnectionPoolSize();
-        OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent);
+        OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent, config.getConnectTimeOut(), config.getReadTimeOut());
         httpFetcher.setMaxRedirects(config.getMaxRetryCount());
         httpFetcher.setMaxConnectionsPerHost(1);
         int defaultMaxContentSize = 51 * 1024 * 1024;
