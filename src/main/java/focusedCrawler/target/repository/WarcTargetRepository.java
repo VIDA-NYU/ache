@@ -93,6 +93,8 @@ public class WarcTargetRepository implements TargetRepository {
             synchronized (writer) {
                 writer.checkSize();
                 writer.writeRecord(warcRecord);
+                writer.resetTmpStats();
+                writer.resetTmpRecordLog();
             }
             return true;
         } catch (IOException e) {
