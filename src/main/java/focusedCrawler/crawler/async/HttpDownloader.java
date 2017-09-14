@@ -69,8 +69,12 @@ public class HttpDownloader implements Closeable {
     private Counter counterAborted;
     private Counter counterSuccess;
     private Counter counterHttpStatus2xx;
+    private Counter counterHttpStatus401;
+	private Counter counterHttpStatus403;
+	private Counter counterHttpStatus404;
+	private Counter counterHttpStatus5xx;
     private Counter counterErrors;
-
+	
 	public HttpDownloader() {
 		this(new HttpDownloaderConfig(), null, new MetricsManager(false));
 	}
@@ -121,6 +125,10 @@ public class HttpDownloader implements Closeable {
         counterSuccess = metrics.getCounter("downloader.fetches.successes");
         counterErrors  = metrics.getCounter("downloader.fetches.errors");
         counterHttpStatus2xx = metrics.getCounter("downloader.http_response.status.2xx");
+        counterHttpStatus401 = metrics.getCounter("downloader.http_response.status.401");
+        counterHttpStatus403 = metrics.getCounter("downloader.http_response.status.403");
+        counterHttpStatus404 = metrics.getCounter("downloader.http_response.status.404");
+        counterHttpStatus5xx = metrics.getCounter("downloader.http_response.status.5xx");
         
         Gauge<Integer> downloadQueueGauge = () -> downloadQueue.size();
         metrics.register("downloader.download_queue.size", downloadQueueGauge);
@@ -270,11 +278,32 @@ public class HttpDownloader implements Closeable {
                 context.stop();
             }
             
-            if(result != null && result.getStatusCode() >= 200 && result.getStatusCode() < 300) {
-                counterHttpStatus2xx.inc();
-            } else {
-                counterErrors.inc();
-            }
+			if (result != null && result.getStatusCode() >= 200 && result.getStatusCode() < 300) {
+				counterHttpStatus2xx.inc();
+			} else {
+				if (result != null) {
+					switch (result.getStatusCode()) {
+					case (401): {
+						counterHttpStatus401.inc();
+						break;
+					}
+					case (403): {
+						counterHttpStatus403.inc();
+						break;
+					}
+					case (404): {
+						counterHttpStatus404.inc();
+						break;
+					}
+					default: {
+						if (result.getStatusCode() >= 500 && result.getStatusCode() < 600) {
+							counterHttpStatus5xx.inc();
+						}
+					}
+					}
+				}
+				counterErrors.inc();
+			}
             
             if(requestLog != null) {
                 if(result != null) {
