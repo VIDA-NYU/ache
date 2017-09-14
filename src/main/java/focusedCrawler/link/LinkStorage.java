@@ -178,7 +178,7 @@ public class LinkStorage extends StorageDefault {
                                  LinkStorageConfig config)
                                  throws FrontierPersistentException {
         try {
-            MetricsManager metricsManager = new MetricsManager();
+            MetricsManager metricsManager = new MetricsManager(dataOutputPath);
             Storage linkStorage = createLinkStorage(configPath, seedFilePath,
                                                     dataOutputPath, modelPath,
                                                     config, metricsManager);
