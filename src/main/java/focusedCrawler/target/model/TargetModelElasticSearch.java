@@ -8,7 +8,6 @@ import java.util.Map;
 
 import com.google.common.net.InternetDomainName;
 
-import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import de.l3s.boilerpipe.extractors.DefaultExtractor;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.PaginaURL;
@@ -47,7 +46,7 @@ public class TargetModelElasticSearch {
             this.relevance = page.getTargetRelevance().getRelevance();
             try {
                 this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
-            } catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
+            } catch (Exception e) {
                 this.text = "";
             }
         }
