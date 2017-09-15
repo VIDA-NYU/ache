@@ -19,6 +19,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TimeZone;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -35,7 +36,6 @@ import org.archive.io.warc.WARCWriter;
 import org.archive.io.warc.WARCWriterPoolSettingsData;
 import org.archive.uid.RecordIDGenerator;
 import org.archive.uid.UUIDGenerator;
-import org.archive.util.anvl.ANVLRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,6 +46,7 @@ public class WarcTargetRepository implements TargetRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(WarcTargetRepository.class);
     
+    private  static final String CRLF = "\r\n";
     private static final String ISO_8601_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
     private static final ThreadLocal<SimpleDateFormat> dateFormater =
             new ThreadLocal<SimpleDateFormat>() {
@@ -181,28 +182,33 @@ public class WarcTargetRepository implements TargetRepository {
     }
 
     private byte[] createContentBytes(Page page) throws IOException, UnsupportedEncodingException {
-        
+        Map<String, List<String>> responseHeaders = page.getResponseHeaders();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        
-        if (page.getResponseHeaders() != null) {
-            ANVLRecord headers = new ANVLRecord();
-            for (Entry<String, List<String>> header : page.getResponseHeaders().entrySet()) {
-                List<String> headerValue = header.getValue();
-                if(headerValue == null || headerValue.isEmpty()) {
-                    continue;
-                }
-                for (String value : headerValue) {
-                    headers.addLabelValue(header.getKey(), value);
-                }
-            }
-            baos.write(headers.getUTF8Bytes());
+        if (responseHeaders != null) {
+            baos.write(convertHeaderToString(responseHeaders).getBytes());
         }
-        
         baos.write(page.getContent());
-        
         return baos.toByteArray();
     }
 
+    private String convertHeaderToString(Map<String, List<String>> responseHeaders) {
+        StringBuilder sb = new StringBuilder();
+        for (Entry<String, List<String>> header : responseHeaders.entrySet()) {
+            List<String> headerValue = header.getValue();
+            if(headerValue == null || headerValue.isEmpty()) {
+                continue;
+            }
+            for (String value : headerValue) {
+                sb.append(header.getKey());
+                sb.append(':');
+                sb.append(' ');
+                sb.append(value);
+                sb.append(CRLF);
+            }
+        }
+        sb.append(CRLF);
+        return sb.toString();
+    }
 
     public class RepositoryIterator implements Iterator<WARCRecord>, Closeable {
 

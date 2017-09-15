@@ -3,6 +3,7 @@ package focusedCrawler.target.repository;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.isIn;
 import static org.junit.Assert.assertFalse;
@@ -18,6 +19,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.cxf.helpers.IOUtils;
 import org.archive.format.warc.WARCConstants;
 import org.archive.io.ArchiveRecord;
 import org.archive.io.warc.WARCReader;
@@ -141,7 +143,6 @@ public class WarcTargetRepositoryTest {
     public void testReadingMultipleWarcRecordsUsingIterator() throws Exception {
         // given
         String folder = tempFolder.newFolder().toString();
-
         String url1 = "http://a.com";
         String url2 = "http://b.com";
 
@@ -169,6 +170,38 @@ public class WarcTargetRepositoryTest {
         assertFalse(respositoryIterator.hasNext());
     }
 
+    @Test
+    public void testShouldNotFailWhenThereAreNonASCIICharactersOnHeaders() throws Exception {
+        // given
+        String folder = tempFolder.newFolder().toString();
+
+        String url1 = "http://a.com";
+
+        Map<String, List<String>> headers = new HashMap<>();
+        Character invalidChar = new Character((char) 0x80);
+        String headerValue = "inline; filename=\"Invalid_" + invalidChar + "\"";
+        headers.put("Content-Disposition", asList(headerValue));
+
+        Page target1 = new Page(new URL(url1), html, headers);
+
+        WarcTargetRepository repository = new WarcTargetRepository(folder);
+
+        // when
+        repository.insert(target1);
+        repository.close();
+
+        RepositoryIterator respositoryIterator = repository.iterator();
+
+        // then
+        assertTrue(respositoryIterator.hasNext());
+        WARCRecord record = respositoryIterator.next();
+        assertThat(record.getHeader().getUrl(), is(url1));
+        String recordData = IOUtils.toString(record);
+        assertThat(recordData, containsString(html));
+        assertThat(recordData, containsString(headerValue));
+
+        assertFalse(respositoryIterator.hasNext());
+    }
 
     @Test
     public void shouldIterateOverEmptyFolder() throws IOException {
