@@ -175,4 +175,12 @@ public class TargetModelElasticSearch {
         this.relevance = relevance;
     }
 
+    public Map<String, List<String>> getResponseHeaders() {
+        return responseHeaders;
+    }
+
+    public void setResponseHeaders(Map<String, List<String>> responseHeaders) {
+        this.responseHeaders = responseHeaders;
+    }
+
 }
