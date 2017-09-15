@@ -69,7 +69,6 @@ public class TargetStorage extends StorageDefault {
             page.setTargetRelevance(TargetRelevance.IRRELEVANT);
             targetRepository.insert(page);
             monitor.countPage(page, false, 0.0d);
-            logger.info("Non-HTML content found at: "+page.getURL()+" - saved content type: "+page.getContentType());
             return null;
         }
 
