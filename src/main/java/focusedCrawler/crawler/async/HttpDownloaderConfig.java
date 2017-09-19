@@ -48,12 +48,22 @@ public class HttpDownloaderConfig {
     @JsonProperty("crawler_manager.downloader.cookies")
     private List<Cookie> cookies = null;
 
-    @JsonProperty("crawler_manager.downloader.connectTimeout")
-    private int connectTimeout = 10000;
+    @JsonProperty("crawler_manager.downloader.okhttp.connect_timeout")
+    private int connectTimeout = 30000;
 
-    @JsonProperty("crawler_manager.downloader.readTimeOut")
-    private int readTimeOut = 10000;
-    
+    @JsonProperty("crawler_manager.downloader.okhttp.read_timeout")
+    private int readTimeout = 30000;
+
+    @JsonProperty("crawler_manager.downloader.httpclient.socket_timeout")
+    private int socketTimeout = 30000;
+
+    @JsonProperty("crawler_manager.downloader.httpclient.connection_timeout")
+    private int connectionTimeout = 30000;
+
+    @JsonProperty("crawler_manager.downloader.httpclient.connection_request_timeout")
+    private int connectionRequestTimeout = 60000;
+
+
     public HttpDownloaderConfig() {
         // Required for de-serialization
     }
@@ -112,11 +122,23 @@ public class HttpDownloaderConfig {
         return okHttpFetcher;
     }
 
-    public int getReadTimeOut() {
-        return readTimeOut;
+    public int getReadTimeout() {
+        return readTimeout;
     }
 
-    public int getConnectTimeOut() {
+    public int getConnectTimeout() {
         return connectTimeout;
+    }
+
+    public int getSocketTimeout() {
+        return socketTimeout;
+    }
+
+    public int getConnectionTimeout() {
+        return connectionTimeout;
+    }
+
+    public int getConnectionRequestTimeout() {
+        return connectionRequestTimeout;
     }
 }
