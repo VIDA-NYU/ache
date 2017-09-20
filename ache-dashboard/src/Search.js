@@ -178,14 +178,14 @@ class HitItem extends React.Component {
       <div className="row hit-item">
         <div className="col-sm-12">
           <div className="hit-title">
-            <a href={source.url} target="_blank">{pageTitle}</a>
+            <a href={source.url} target="_blank" rel="noopener noreferrer">{pageTitle}</a>
           </div>
           <div className="hit-url">
-            <a href={source.url} target="_blank">{source.url}</a>
+            <a href={source.url} target="_blank" rel="noopener noreferrer">{source.url}</a>
           </div>
           <div className="row">
             <div className="col-sm-2 hit-image">
-              <img src={this.extractImageFromSource(source)} alt="" />
+              <img src={this.extractImageFromSource(source)} alt="" referrerPolicy="no-referrer" />
             </div>
             <div className="col-sm-10">
               <div className="hit-description">{pageDesc}</div>
