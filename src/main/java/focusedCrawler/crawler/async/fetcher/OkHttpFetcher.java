@@ -46,6 +46,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 
 public class OkHttpFetcher extends BaseHttpFetcher {
@@ -57,13 +58,18 @@ public class OkHttpFetcher extends BaseHttpFetcher {
 
     transient private OkHttpClient _httpClient;
 
-    public OkHttpFetcher(UserAgent userAgent) {
-        this(DEFAULT_MAX_THREADS, userAgent);
+    private int connectTimeOuttime;
+    private int readTimeOuttime;
+
+    public OkHttpFetcher(UserAgent userAgent, int connectTimeOutTime, int readTimeOutTime) {
+        this(DEFAULT_MAX_THREADS, userAgent,connectTimeOutTime,readTimeOutTime);
     }
 
-    public OkHttpFetcher(int maxThreads, UserAgent userAgent) {
+    public OkHttpFetcher(int maxThreads, UserAgent userAgent, int connectTimeOutTime, int readTimeOutTime) {
         super(maxThreads, userAgent);
         _httpClient = null;
+        this.connectTimeOuttime = connectTimeOutTime;
+        this.readTimeOuttime = readTimeOutTime;
     }
 
     public FetchedResult get(String url, Payload payload) throws BaseFetchException {
@@ -338,7 +344,9 @@ public class OkHttpFetcher extends BaseHttpFetcher {
                         public boolean verify(String s, SSLSession sslSession) {
                             return true;
                         }
-                    }).build();
+                    }).connectTimeout(connectTimeOuttime, TimeUnit.MILLISECONDS)
+                    .readTimeout(readTimeOuttime,TimeUnit.MILLISECONDS)
+                    .build();
 
             return okHttpClient;
         } catch (Exception e) {
@@ -346,7 +354,7 @@ public class OkHttpFetcher extends BaseHttpFetcher {
         }
     }
 
-    private static OkHttpClient getCustomOkHttpClient(){
+    private OkHttpClient getCustomOkHttpClient(){
         final ConnectionSpec specModernTLS = new ConnectionSpec.Builder(ConnectionSpec.MODERN_TLS)
                 .cipherSuites(new CustomCipherSuites().getCustomCipherSuites().toArray(new CipherSuite[0]))
                 .build();
@@ -377,6 +385,8 @@ public class OkHttpFetcher extends BaseHttpFetcher {
             return new OkHttpClient.Builder()
                     .connectionSpecs(specs)
                     .sslSocketFactory(customSslSocketFactory,trustManager)
+                    .connectTimeout(connectTimeOuttime, TimeUnit.MILLISECONDS)
+                    .readTimeout(readTimeOuttime,TimeUnit.MILLISECONDS)
                     .build();
 
         }catch (GeneralSecurityException gse){        }
