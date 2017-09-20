@@ -6,7 +6,7 @@ import StartCrawl from './StartCrawl'
 import Search from './Search'
 import MetricsMonitor from './MetricsMonitor'
 
-import ache_logo_png from '../../ache-logo.png';
+import ache_logo_png from './img/ache-logo.png';
 
 class Header extends React.Component {
   render() {

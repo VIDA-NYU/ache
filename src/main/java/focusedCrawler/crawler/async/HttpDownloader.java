@@ -38,21 +38,20 @@ import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.MetricsManager;
 
 /**
- * This class manages thread pools for downloading links. Since downloading is a
- * IO-bound process (network IO), we use a large number of threads for
- * downloads, whereas for processing the downloaded data, we use a smaller
- * number of threads, since this is usually a CPU-bound task (and thus, the
- * parallelization performance is limited by the number of CPU cores available).
+ * This class manages thread pools for downloading links. Since downloading is a IO-bound process
+ * (network IO), we use a large number of threads for downloads, whereas for processing the
+ * downloaded data, we use a smaller number of threads, since this is usually a CPU-bound task (and
+ * thus, the parallelization performance is limited by the number of CPU cores available).
  * 
  * @author aeciosantos
  *
  */
 public class HttpDownloader implements Closeable {
-    
+
     private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
 
     private static final Logger logger = LoggerFactory.getLogger(HttpDownloader.class);
-    
+
     private final BaseFetcher fetcher;
     private final ExecutorService downloadThreadPool;
     private final ExecutorService distpatchThreadPool;
@@ -63,43 +62,50 @@ public class HttpDownloader implements Closeable {
     private final AtomicInteger runningHandlers = new AtomicInteger(0);
     private final int maxQueueSize;
     private final PrintWriter requestLog;
-    
+
     private Timer fetchTimer;
     private Timer handlerTimer;
     private Counter counterAborted;
     private Counter counterSuccess;
     private Counter counterHttpStatus2xx;
+    private Counter counterHttpStatus401;
+    private Counter counterHttpStatus403;
+    private Counter counterHttpStatus404;
+    private Counter counterHttpStatus5xx;
     private Counter counterErrors;
 
-	public HttpDownloader() {
-		this(new HttpDownloaderConfig(), null, new MetricsManager(false));
-	}
-	
-    public HttpDownloader(HttpDownloaderConfig config, String dataPath, MetricsManager metricsManager) {
-    	
-        ThreadFactory downloadThreadFactory = new ThreadFactoryBuilder().setNameFormat("downloader-%d").build();
-        ThreadFactory dispatcherThreadFactory = new ThreadFactoryBuilder().setNameFormat("dispatcher-%d").build();
-        
+    public HttpDownloader() {
+        this(new HttpDownloaderConfig(), null, new MetricsManager(false));
+    }
+
+    public HttpDownloader(HttpDownloaderConfig config, String dataPath,
+            MetricsManager metricsManager) {
+
+        ThreadFactory downloadThreadFactory =
+                new ThreadFactoryBuilder().setNameFormat("downloader-%d").build();
+        ThreadFactory dispatcherThreadFactory =
+                new ThreadFactoryBuilder().setNameFormat("dispatcher-%d").build();
+
         this.downloadQueue = new LinkedBlockingQueue<Runnable>();
         this.dispatchQueue = new LinkedBlockingQueue<Runnable>();
-        
+
         int threadPoolSize = config.getDownloadThreadPoolSize();
-		this.downloadThreadPool  = new ThreadPoolExecutor(threadPoolSize , threadPoolSize,
-                0L, TimeUnit.MILLISECONDS, this.downloadQueue, downloadThreadFactory);
-        
-        this.distpatchThreadPool  = new ThreadPoolExecutor(CPU_CORES, CPU_CORES,
-                0L, TimeUnit.MILLISECONDS, this.dispatchQueue, dispatcherThreadFactory);
-        
+        this.downloadThreadPool = new ThreadPoolExecutor(threadPoolSize, threadPoolSize, 0L,
+                TimeUnit.MILLISECONDS, this.downloadQueue, downloadThreadFactory);
+
+        this.distpatchThreadPool = new ThreadPoolExecutor(CPU_CORES, CPU_CORES, 0L,
+                TimeUnit.MILLISECONDS, this.dispatchQueue, dispatcherThreadFactory);
+
         this.maxQueueSize = threadPoolSize * 2;
-        
+
         this.fetcher = FetcherFactory.createFetcher(config);
-        
-        if(config.getValidMimeTypes() != null) {
+
+        if (config.getValidMimeTypes() != null) {
             for (String mimeTypes : config.getValidMimeTypes()) {
                 this.fetcher.addValidMimeType(mimeTypes);
             }
         }
-        if(dataPath == null) {
+        if (dataPath == null) {
             requestLog = null;
         } else {
             Path logPath = Paths.get(dataPath, "data_monitor", "downloadrequests.csv");
@@ -107,7 +113,8 @@ public class HttpDownloader implements Closeable {
                 Files.createDirectories(logPath.getParent());
                 this.requestLog = openLogFile(logPath);
             } catch (IOException e) {
-                throw new RuntimeException("Failed to open downloader log at path: "+logPath.toString(), e);
+                throw new RuntimeException(
+                        "Failed to open downloader log at path: " + logPath.toString(), e);
             }
         }
 
@@ -119,52 +126,56 @@ public class HttpDownloader implements Closeable {
     }
     
     private void setupMetrics(MetricsManager metrics) {
-        fetchTimer   = metrics.getTimer("downloader.fetch.time");
+        fetchTimer = metrics.getTimer("downloader.fetch.time");
         handlerTimer = metrics.getTimer("downloader.handler.time");
         counterAborted = metrics.getCounter("downloader.fetches.aborted");
         counterSuccess = metrics.getCounter("downloader.fetches.successes");
-        counterErrors  = metrics.getCounter("downloader.fetches.errors");
+        counterErrors = metrics.getCounter("downloader.fetches.errors");
         counterHttpStatus2xx = metrics.getCounter("downloader.http_response.status.2xx");
-        
+        counterHttpStatus401 = metrics.getCounter("downloader.http_response.status.401");
+        counterHttpStatus403 = metrics.getCounter("downloader.http_response.status.403");
+        counterHttpStatus404 = metrics.getCounter("downloader.http_response.status.404");
+        counterHttpStatus5xx = metrics.getCounter("downloader.http_response.status.5xx");
+
         Gauge<Integer> downloadQueueGauge = () -> downloadQueue.size();
         metrics.register("downloader.download_queue.size", downloadQueueGauge);
-        
+
         Gauge<Integer> dispatchQueueGauge = () -> dispatchQueue.size();
         metrics.register("downloader.dispatch_queue.size", dispatchQueueGauge);
-        
+
         Gauge<Integer> numberOfDownloadsGauge = () -> numberOfDownloads.get();
         metrics.register("downloader.pending_downloads", numberOfDownloadsGauge);
-        
+
         Gauge<Integer> runningRequestsGauge = () -> runningRequests.get();
         metrics.register("downloader.running_requests", runningRequestsGauge);
-        
+
         Gauge<Integer> runningHandlersGauge = () -> runningHandlers.get();
         metrics.register("downloader.running_handlers", runningHandlersGauge);
     }
 
     private PrintWriter openLogFile(Path path) throws FileNotFoundException {
         boolean append = true;
-        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(path.toFile(), append));
+        BufferedOutputStream bos =
+                new BufferedOutputStream(new FileOutputStream(path.toFile(), append));
         boolean autoFlush = true;
         return new PrintWriter(bos, autoFlush);
     }
-    
+
     public Future<FetchedResult> dipatchDownload(String url) {
         try {
             return dipatchDownload(new URL(url), null);
         } catch (MalformedURLException e) {
-            throw new IllegalArgumentException("Invalid URL provided: "+url, e);
+            throw new IllegalArgumentException("Invalid URL provided: " + url, e);
         }
     }
-    
+
     public Future<FetchedResult> dipatchDownload(URL url, Callback callback) {
         return dipatchDownload(new LinkRelevance(url, 0d), callback);
     }
-    
+
     public Future<FetchedResult> dipatchDownload(LinkRelevance link, Callback callback) {
         try {
-            while(downloadQueue.size() >= maxQueueSize ||
-                  dispatchQueue.size() >= maxQueueSize) {
+            while (downloadQueue.size() >= maxQueueSize || dispatchQueue.size() >= maxQueueSize) {
                 Thread.sleep(10);
             }
         } catch (InterruptedException e) {
@@ -174,7 +185,7 @@ public class HttpDownloader implements Closeable {
         numberOfDownloads.incrementAndGet();
         return future;
     }
-    
+
     @Override
     public void close() {
         downloadThreadPool.shutdownNow();
@@ -185,26 +196,26 @@ public class HttpDownloader implements Closeable {
         } catch (InterruptedException e) {
             throw new RuntimeException("Failed to shutdown downloader threads.", e);
         }
-        if(requestLog != null) {
+        if (requestLog != null) {
             requestLog.close();
         }
     }
-    
+
     public void await() {
         try {
             logger.info("Waiting downloads be finalized...");
             long timeWaited = 0;
-            while(downloadQueue.size() > 0 || runningRequests.get() > 0) {
+            while (downloadQueue.size() > 0 || runningRequests.get() > 0) {
                 Thread.sleep(10);
                 timeWaited += 10;
-                if(timeWaited % 5000 == 0) {
+                if (timeWaited % 5000 == 0) {
                     logger.info("Still waiting to finish downloads...");
                 }
             }
-            while(dispatchQueue.size() > 0 || runningHandlers.get() > 0) {
+            while (dispatchQueue.size() > 0 || runningHandlers.get() > 0) {
                 Thread.sleep(10);
                 timeWaited += 10;
-                if(timeWaited % 5000 == 0) {
+                if (timeWaited % 5000 == 0) {
                     logger.info("Still waiting to process downloaded pages...");
                 }
             }
@@ -213,42 +224,43 @@ public class HttpDownloader implements Closeable {
             downloadThreadPool.awaitTermination(5, TimeUnit.MINUTES);
             distpatchThreadPool.awaitTermination(5, TimeUnit.MINUTES);
         } catch (InterruptedException e) {
-            throw new RuntimeException("Thread interrupted while waiting downloader threads finalize.", e);
+            throw new RuntimeException(
+                    "Thread interrupted while waiting downloader threads finalize.", e);
         }
     }
-    
+
     public boolean hasPendingDownloads() {
-        if(numberOfDownloads.get() > 0) {
+        if (numberOfDownloads.get() > 0) {
             return true;
         } else {
             return false;
         }
     }
-    
+
     public interface Callback {
-        
+
         public void completed(LinkRelevance link, FetchedResult result);
-        
+
         public void failed(LinkRelevance link, Exception e);
-        
+
     }
-    
+
     private final class RequestTask implements Callable<FetchedResult> {
-        
+
         private final Callback callback;
         private LinkRelevance link;
-        
+
         public RequestTask(LinkRelevance url, Callback callback) {
             this.link = url;
             this.callback = callback;
         }
-        
+
         @Override
         public FetchedResult call() {
             runningRequests.incrementAndGet();
             try {
                 return doRequest();
-            } catch(Throwable e) {
+            } catch (Throwable e) {
                 logger.error("Failed to execute download request", e);
                 return null;
             } finally {
@@ -260,41 +272,62 @@ public class HttpDownloader implements Closeable {
             BaseFetchException exception = null;
             FetchedResult result = null;
             String url = link.getURL().toString();
-            
+
             final Timer.Context context = fetchTimer.time();
             try {
                 result = fetcher.get(url);
                 counterSuccess.inc();
             } catch (BaseFetchException e) {
                 exception = e;
-                if(e instanceof AbortedFetchException) {
+                if (e instanceof AbortedFetchException) {
                     counterAborted.inc();
                 }
             } finally {
                 context.stop();
             }
-            
-            if(result != null && result.getStatusCode() >= 200 && result.getStatusCode() < 300) {
+
+            if (result != null && result.getStatusCode() >= 200 && result.getStatusCode() < 300) {
                 counterHttpStatus2xx.inc();
             } else {
+                if (result != null) {
+                    switch (result.getStatusCode()) {
+                        case (401): {
+                            counterHttpStatus401.inc();
+                            break;
+                        }
+                        case (403): {
+                            counterHttpStatus403.inc();
+                            break;
+                        }
+                        case (404): {
+                            counterHttpStatus404.inc();
+                            break;
+                        }
+                        default: {
+                            if (result.getStatusCode() >= 500 && result.getStatusCode() < 600) {
+                                counterHttpStatus5xx.inc();
+                            }
+                        }
+                    }
+                }
                 counterErrors.inc();
             }
-            
-            if(requestLog != null) {
-                if(result != null) {
+
+            if (requestLog != null) {
+                if (result != null) {
                     requestLog.printf("%d\t%s\t%s\t%s\n", result.getFetchTime(),
-                                      result.getStatusCode(), result.getHostAddress(), url);
+                            result.getStatusCode(), result.getHostAddress(), url);
                 } else {
-                    requestLog.printf("%d\t%s\t%s\t%s\n", System.currentTimeMillis(),
-                                      -1, "unknown", url);
+                    requestLog.printf("%d\t%s\t%s\t%s\n", System.currentTimeMillis(), -1, "unknown",
+                            url);
                 }
             }
             distpatchThreadPool.submit(new FetchFinishedHandler(link, result, callback, exception));
             return result;
         }
-        
+
     }
-    
+
     private final class FetchFinishedHandler implements Runnable {
 
         final private FetchedResult response;
@@ -302,8 +335,8 @@ public class HttpDownloader implements Closeable {
         final private BaseFetchException exception;
         final private LinkRelevance link;
 
-        public FetchFinishedHandler(LinkRelevance link, FetchedResult response,
-                                    Callback callback, BaseFetchException exception) {
+        public FetchFinishedHandler(LinkRelevance link, FetchedResult response, Callback callback,
+                BaseFetchException exception) {
             this.link = link;
             this.response = response;
             this.callback = callback;
@@ -313,22 +346,21 @@ public class HttpDownloader implements Closeable {
         @Override
         public void run() {
             runningHandlers.incrementAndGet();
-            try{
+            try {
                 doHandle();
-            } catch(Throwable e) {
+            } catch (Throwable e) {
                 logger.error("Failed to execute result handler", e);
-            }
-            finally {
+            } finally {
                 runningHandlers.decrementAndGet();
                 numberOfDownloads.decrementAndGet();
             }
         }
 
         private void doHandle() {
-            if(callback != null) {
+            if (callback != null) {
                 Context context = handlerTimer.time();
                 try {
-                    if(exception != null) {
+                    if (exception != null) {
                         callback.failed(link, exception);
                     } else {
                         callback.completed(link, response);
@@ -338,7 +370,7 @@ public class HttpDownloader implements Closeable {
                 }
             }
         }
-        
+
     }
 
 }

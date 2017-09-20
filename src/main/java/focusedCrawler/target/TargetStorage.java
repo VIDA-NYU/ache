@@ -22,6 +22,7 @@ import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.MultipleTargetRepositories;
 import focusedCrawler.target.repository.TargetRepository;
+import focusedCrawler.target.repository.WarcTargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.CommunicationException;
 import focusedCrawler.util.LangDetection;
@@ -68,7 +69,6 @@ public class TargetStorage extends StorageDefault {
             page.setTargetRelevance(TargetRelevance.IRRELEVANT);
             targetRepository.insert(page);
             monitor.countPage(page, false, 0.0d);
-            logger.info("Non-HTML content found at: "+page.getURL()+" - saved content type: "+page.getContentType());
             return null;
         }
 
@@ -185,7 +185,7 @@ public class TargetStorage extends StorageDefault {
     }
 
     private static TargetRepository createRepository(String dataFormat, String dataPath,
-            String esIndexName, String esTypeName, TargetStorageConfig config) {
+            String esIndexName, String esTypeName, TargetStorageConfig config) throws IOException {
         
         Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());
         boolean compressData = config.getCompressData();
@@ -204,6 +204,9 @@ public class TargetStorage extends StorageDefault {
             case "FILESYSTEM_HTML":
                 return new FileSystemTargetRepository(targetDirectory, DataFormat.HTML,
                                                       hashFilename, compressData);
+            case "WARC":
+                return new WarcTargetRepository(targetDirectory, config.getWarcMaxFileSize(),
+                                                config.getCompressWarc());
             case "ELASTICSEARCH":
                 if (esIndexName == null || esIndexName.isEmpty()) {
                     throw new IllegalArgumentException("ElasticSearch index name not provided!");

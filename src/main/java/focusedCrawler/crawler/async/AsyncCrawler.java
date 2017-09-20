@@ -119,7 +119,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
 
         Configuration config = new Configuration(configPath);
 
-        MetricsManager metricsManager = new MetricsManager(false);
+        MetricsManager metricsManager = new MetricsManager(false, dataPath);
         Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath, dataPath,
                 modelPath, config.getLinkStorageConfig(), metricsManager);
 
@@ -144,7 +144,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
 
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
             AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
-                    dataPath, new MetricsManager());
+                    dataPath, new MetricsManager(dataPath));
             crawler.startAsync();
             crawler.awaitTerminated();
         } catch (StorageFactoryException ex) {

@@ -37,11 +37,11 @@ public class FetcherFactory {
         int connectionPoolSize = config.getConnectionPoolSize();
         SimpleHttpFetcher httpFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
         // timeout for inactivity between two consecutive data packets
-        httpFetcher.setSocketTimeout(30*1000);
+        httpFetcher.setSocketTimeout(config.getSocketTimeout());
         // timeout for establishing a new connection
-        httpFetcher.setConnectionTimeout(30*1000);
+        httpFetcher.setConnectionTimeout(config.getConnectionTimeout());
         // timeout for requesting a connection from httpclient's connection manager
-        httpFetcher.setConnectionRequestTimeout(1*60*1000);
+        httpFetcher.setConnectionRequestTimeout(config.getConnectionRequestTimeout());
         httpFetcher.setMaxConnectionsPerHost(1);
         httpFetcher.setMaxRetryCount(config.getMaxRetryCount());
 
@@ -120,9 +120,11 @@ public class FetcherFactory {
                 .build();
         int connectionPoolSize = config.getConnectionPoolSize();
 
-        OkHttpCookieJar store = (OkHttpCookieJar) createCookieStore(config);
+        OkHttpCookieJar cookieStore = (OkHttpCookieJar) createCookieStore(config);
 
-        OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent, store);
+        OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent, cookieStore,
+                config.getConnectTimeout(), config.getReadTimeout());
+
         httpFetcher.setMaxRedirects(config.getMaxRetryCount());
         httpFetcher.setMaxConnectionsPerHost(1);
         int defaultMaxContentSize = 51 * 1024 * 1024;

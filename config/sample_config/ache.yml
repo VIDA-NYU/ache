@@ -24,6 +24,10 @@ target_storage.store_negative_pages: false
 target_storage.data_format.type: FILES
 target_storage.data_format.files.max_file_size: 134217728 # 128mb in bytes
 
+# Enable following lines to use the WARC data format and change its default settings
+#target_storage.data_format.type: WARC                    # enable WARC file format
+#target_storage.data_format.warc.compress: true           # enable GZIP compression
+#target_storage.data_format.warc.max_file_size: 262144000 # maximum file size in bytes
 
 # Enable following line to index pages in Elasticsearch
 #target_storage.data_format.type: ELASTICSEARCH
