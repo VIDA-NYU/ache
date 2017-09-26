@@ -7,15 +7,21 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class RestConfig {
-    
+
     @JsonProperty("http.port")
     private int port = 8080;
-    
+
     @JsonProperty("http.host")
     private String host = "0.0.0.0";
-    
+
     @JsonProperty("http.cors.enabled")
     private boolean enableCors = true;
+
+    @JsonProperty("http.auth.basic.user")
+    private String basicUser = null;
+
+    @JsonProperty("http.auth.basic.password")
+    private String basicPassword = null;
 
     public RestConfig() {
         // required for de-serialization
@@ -30,7 +36,7 @@ public class RestConfig {
         this.port = port;
         this.enableCors = enableCors;
     }
-    
+
     public int getPort() {
         return port;
     }
@@ -41,6 +47,14 @@ public class RestConfig {
 
     public boolean isEnableCors() {
         return enableCors;
+    }
+
+    public String getBasicUser() {
+        return basicUser;
+    }
+
+    public String getBasicPassword() {
+        return basicPassword;
     }
 
 }

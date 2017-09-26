@@ -1,5 +1,6 @@
 package focusedCrawler.rest;
 
+import static java.util.Arrays.asList;
 import static java.util.Objects.requireNonNull;
 
 import java.io.IOException;
@@ -68,8 +69,32 @@ public class RestServer {
         server.port(port);
         server.ipAddress(host);
 
-        server.staticFiles.location("/public");
+        /*
+         * Configure Basic authorization
+         */
+        String user = restConfig.getBasicUser();
+        String passwd = restConfig.getBasicPassword();
+        if (user != null && !user.isEmpty() && passwd != null && !passwd.isEmpty()) {
+            server.before("/*", new BasicAuthenticationFilter(server, user, passwd));
+        }
 
+        /*
+         * Configure static files handler location and renders index.html file. New paths added to
+         * the React static web application, should also be added here, otherwise page refreshes in
+         * the browser will not work.
+         */
+        List<String> indexes = asList(
+            "/",
+            "/index.html",
+            "/search",
+            "/monitoring",
+            "/startCrawl"
+        );
+        server.before("/*", new StaticFileHandlerFilter(indexes));
+
+        /*
+         * Enable HTTP CORS (Cross-origin Resource Sharing)
+         */
         if (restConfig.isEnableCors()) {
             enableCORS("*", "GET");
         }
@@ -102,13 +127,7 @@ public class RestServer {
         server.get( "/labels", Transformers.json(labelsResource.getLabels));
         server.put( "/labels", Transformers.json(labelsResource.addLabels));
         server.post("/labels", Transformers.json(labelsResource.addLabels));
-        
-        /*
-         * Routes to serve index.html to the paths used by the React static web application
-         */
-        server.get("/search",     StaticFileEngine.noopRouter, StaticFileEngine.engine);
-        server.get("/monitoring", StaticFileEngine.noopRouter, StaticFileEngine.engine);
-        server.get("/startCrawl", StaticFileEngine.noopRouter, StaticFileEngine.engine);
+
         
         server.awaitInitialization();
         

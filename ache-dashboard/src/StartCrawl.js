@@ -1,6 +1,5 @@
 import React from 'react';
-
-import {ACHE_API_ADDRESS} from './Config';
+import {api} from './RestApi';
 
 class StartCrawl extends React.Component {
 
@@ -22,12 +21,7 @@ class StartCrawl extends React.Component {
   }
   
   checkCrawlerStatus() {
-    fetch(ACHE_API_ADDRESS + "/status")
-      .then(function(response) {
-        return response.json();
-      }, function(error) {
-        return 'FETCH_ERROR';
-      })
+    api.get("/status")
       .then( (response) => {
         if (response === 'FETCH_ERROR') {
           this.setState({
@@ -74,13 +68,7 @@ class StartCrawl extends React.Component {
         model: this.state.modelFile
       })
     };
-    fetch(ACHE_API_ADDRESS + "/startCrawl", config)
-      .then(function(response) {
-        return response.json();
-      }, function(error) {
-        return 'FETCH_ERROR';
-      })
-      .then(this.updateResponse.bind(this));
+    api.post("/startCrawl", config).then(this.updateResponse.bind(this));
   }
   
   updateResponse(response) {
