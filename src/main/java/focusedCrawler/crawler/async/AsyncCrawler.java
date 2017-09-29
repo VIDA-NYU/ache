@@ -122,7 +122,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
                 modelPath, config.getLinkStorageConfig(), metricsManager);
 
         Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath, dataPath,
-                esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage);
+                esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage, metricsManager);
 
         return new AsyncCrawler(targetStorage, linkStorage, config.getCrawlerConfig(), dataPath,
                 metricsManager);

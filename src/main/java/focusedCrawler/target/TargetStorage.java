@@ -26,6 +26,7 @@ import focusedCrawler.target.repository.WarcTargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.CommunicationException;
 import focusedCrawler.util.LangDetection;
+import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageDefault;
@@ -136,7 +137,7 @@ public class TargetStorage extends StorageDefault {
             Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
 
             Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, indexName,
-                    typeName, targetStorageConfig, linkStorage);
+                    typeName, targetStorageConfig, linkStorage, null);
 
             StorageBinder binder = new StorageBinder(targetStorageConfig.getStorageServerConfig());
             binder.bind(targetStorage);
@@ -148,7 +149,7 @@ public class TargetStorage extends StorageDefault {
     
 	public static Storage createTargetStorage(String configPath, String modelPath, String dataPath,
                                               String esIndexName, String esTypeName, 
-                                              TargetStorageConfig config, Storage linkStorage)
+                                              TargetStorageConfig config, Storage linkStorage, MetricsManager metricsManager)
                                               throws IOException {
         
         // if one wants to use a classifier
@@ -176,7 +177,12 @@ public class TargetStorage extends StorageDefault {
             throw new IllegalArgumentException("No valid data formats configured.");
         }
 
-        TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath);
+        TargetStorageMonitor monitor = null;
+        if(metricsManager != null) {
+        	monitor = new TargetStorageMonitor(dataPath, metricsManager);
+        }else {
+        	monitor = new TargetStorageMonitor(dataPath);
+        }
 
         Storage targetStorage = new TargetStorage(targetClassifier, targetRepository,
                                                   linkStorage, monitor, config);
