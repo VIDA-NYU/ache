@@ -52,10 +52,6 @@ dependencies {
     compile 'com.amazonaws:aws-java-sdk:1.11.150'
     compile 'org.jsoup:jsoup:1.10.3'
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
-    compile 'io.prometheus:simpleclient:0.0.26'
-    compile 'io.prometheus:simpleclient_hotspot:0.0.26'
-    compile 'io.prometheus:simpleclient_servlet:0.0.26'
-    compile 'io.prometheus:simpleclient_pushgateway:0.0.26'
 
     compile('org.netpreserve.commons:webarchive-commons:1.1.8') {
       exclude group: 'org.apache.hadoop', module: 'hadoop-core'

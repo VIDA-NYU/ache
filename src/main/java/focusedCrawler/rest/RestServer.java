@@ -3,7 +3,6 @@ package focusedCrawler.rest;
 import static java.util.Arrays.asList;
 import static java.util.Objects.requireNonNull;
 
-import focusedCrawler.crawler.async.PrometheusMetricsManager;
 import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.ServerSocket;
