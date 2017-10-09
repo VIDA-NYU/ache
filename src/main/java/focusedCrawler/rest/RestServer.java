@@ -104,6 +104,7 @@ public class RestServer {
          */
         server.get("/status", Transformers.json(crawlerResource.getStatus));
         server.get("/metrics", Transformers.json(crawlerResource.metricsResource));
+        server.get("/prometheus",Transformers.promethize(crawlerResource.metricsResource));
         server.post("/startCrawl", "*/*", Transformers.json(crawlerResource.startCrawl));
         server.get("/stopCrawl", Transformers.json(crawlerResource.stopCrawl));
         server.post("/seeds", "*/*", Transformers.json(crawlerResource.addSeeds));
