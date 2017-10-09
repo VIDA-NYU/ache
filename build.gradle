@@ -26,7 +26,7 @@ dependencies {
     compile 'org.apache.commons:commons-compress:1.12'
     compile 'commons-codec:commons-codec:1.10'
     compile 'commons-validator:commons-validator:1.5.1'
-    compile 'com.github.crawler-commons:crawler-commons:0.7'
+    compile 'com.github.crawler-commons:crawler-commons:0.8'
     compile 'org.apache.httpcomponents:httpclient:4.5.2'
     // CLI
     compile 'io.airlift:airline:0.7'
