@@ -1,0 +1,23 @@
+#
+# Example of configuration for sending crawled data to a Kafka topic
+#
+
+# Configure ELASTICSEARCH and FILES data formats
+target_storage.data_formats:
+  - KAFKA
+  - FILES
+
+target_storage.data_format.kafka.topic_name: ache-data
+target_storage.data_format.kafka.properties:
+  # Add here properties for configuring the Kafka client
+  bootstrap.servers: "kafka:9092"
+
+# Enables "scope" to only crawl pages that belong to domains of seed URLs
+link_storage.link_strategy.use_scope: true
+
+# Enables discovery of links using the Sitemaps protocol
+link_storage.download_sitemap_xml: true
+
+# Configure the User-Agent of the crawler
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache

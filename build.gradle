@@ -52,6 +52,7 @@ dependencies {
     compile 'com.amazonaws:aws-java-sdk:1.11.150'
     compile 'org.jsoup:jsoup:1.10.3'
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile group: 'org.apache.kafka', name: 'kafka-clients', version: '0.11.0.1'
 
     compile('org.netpreserve.commons:webarchive-commons:1.1.8') {
       exclude group: 'org.apache.hadoop', module: 'hadoop-core'

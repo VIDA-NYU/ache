@@ -1,0 +1,44 @@
+version: '2'
+services:
+  ache:
+    image: ache
+    entrypoint: sh -c '/ache/bin/ache startCrawl -c /config/ -s /config/seeds.txt -o /data'
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data-ache/:/data
+      - ./:/config
+    links:
+      - kafka
+      - zookeeper
+    depends_on:
+      - kafka
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka:0.11.0.0
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_CREATE_TOPICS: "ache-data:1:1"
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  kafka-manager:
+    image: sheepkiller/kafka-manager:latest
+    ports:
+      - "9000:9000"
+    depends_on:
+      - kafka
+    links:
+      - zookeeper
+      - kafka
+    environment:
+      ZK_HOSTS: zookeeper:2181
+      APPLICATION_SECRET: letmein
+      KM_ARGS: -Djava.net.preferIPv4Stack=true
