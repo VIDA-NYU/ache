@@ -12,6 +12,7 @@ The data formats currently available are:
 * :ref:`FILES <dataformat-files>`
 * :ref:`WARC <dataformat-warc>`
 * :ref:`ELATICSEARCH <dataformat-elasticsearch>`
+* :ref:`KAFKA <dataformat-kafka>`
 
 
 .. _dataformat-filesystem:
@@ -165,6 +166,7 @@ transport client by adding the following lines::
   target_storage.data_format.elasticsearch.port: 9300
   target_storage.data_format.elasticsearch.cluster_name: elasticsearch
 
+
 .. _dataformat-elasticsearch-cliparams:
 
 Command line parameters
@@ -189,3 +191,34 @@ or::
   --elasticType <arg>
 
 Run ``ache help startCrawl`` for more details on available parameters.
+
+
+.. _dataformat-kafka:
+
+-------------
+KAFKA
+-------------
+
+The KAFKA data format pushes crawled pages to an
+`Apache Kafka <https://kafka.apache.org/>`_ topic. To configure this format,
+add the following lines to the ``ache.yml`` configuration file:
+
+.. code:: yaml
+
+  target_storage.data_format.type: KAFKA                    # enable KAFKA file format
+  target_storage.data_format.kafka.topic_name: mytopicname  # the name of the topic
+  target_storage.data_format.kafka.format: JSON             # value of messages will be a JSON object
+  target_storage.data_format.kafka.properties:
+    # The properties to be used while initializing the Kafka Producer
+    bootstrap.servers: localhost:9092
+    acks: all
+    retries: 0
+    batch.size: 5
+    linger.ms: 100
+    buffer.memory: 33554432
+
+
+Currently, following message formats are supported:
+
+ * ``JSON``: A JSON object using same schema defined in the :ref:`FILES <dataformat-files>` data format.
+ * ``CDR31``: A JSON object formatted using the Memex CDR v3.1 format. Image objects are currently not supported.
