@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.target.repository.kafka.KafkaConfig;
 import focusedCrawler.util.storage.StorageConfig;
 
 public class TargetStorageConfig {
@@ -63,6 +64,9 @@ public class TargetStorageConfig {
 
     @JsonUnwrapped
     private StorageConfig serverConfig;
+
+    @JsonUnwrapped
+    private KafkaConfig kafkaConfig;
 
     public TargetStorageConfig() {
         this.serverConfig = new StorageConfig();
@@ -136,6 +140,10 @@ public class TargetStorageConfig {
 
     public long getWarcMaxFileSize() {
         return warcMaxFileSize;
+    }
+
+    public KafkaConfig getKafkaConfig() {
+        return kafkaConfig;
     }
 
     @JsonIgnore

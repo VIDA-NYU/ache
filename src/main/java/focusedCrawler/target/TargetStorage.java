@@ -24,6 +24,7 @@ import focusedCrawler.target.repository.MultipleTargetRepositories;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.target.repository.WarcTargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.target.repository.kafka.KafkaTargetRepository;
 import focusedCrawler.util.CommunicationException;
 import focusedCrawler.util.LangDetection;
 import focusedCrawler.util.MetricsManager;
@@ -213,6 +214,8 @@ public class TargetStorage extends StorageDefault {
             case "WARC":
                 return new WarcTargetRepository(targetDirectory, config.getWarcMaxFileSize(),
                                                 config.getCompressWarc());
+            case "KAFKA":
+                return new KafkaTargetRepository(config.getKafkaConfig());
             case "ELASTICSEARCH":
                 ElasticSearchConfig esconfig = config.getElasticSearchConfig();
                 if (esIndexName != null && !esIndexName.isEmpty()) {
