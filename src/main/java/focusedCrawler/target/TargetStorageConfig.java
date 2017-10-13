@@ -5,6 +5,7 @@ import static java.util.Arrays.asList;
 import java.io.IOException;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
@@ -135,6 +136,17 @@ public class TargetStorageConfig {
 
     public long getWarcMaxFileSize() {
         return warcMaxFileSize;
+    }
+
+    @JsonIgnore
+    public boolean isElasticsearchRestEnabled() {
+        if (dataFormats.contains("ELASTICSEARCH")) {
+            List<String> hosts = elasticSearchConfig.getRestApiHosts();
+            if (hosts != null && !hosts.isEmpty()) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

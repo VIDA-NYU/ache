@@ -23,12 +23,10 @@ public class ElasticSearchTargetRepository implements TargetRepository {
     private String typeName;
     private String indexName;
     
-    public ElasticSearchTargetRepository(ElasticSearchConfig config,
-                                         String indexName,
-                                         String typeName) {
+    public ElasticSearchTargetRepository(ElasticSearchConfig config) {
         this.client = ElasticSearchClientFactory.createClient(config);
-        this.indexName = indexName;
-        this.typeName = typeName;
+        this.indexName = config.getIndexName();
+        this.typeName = config.getTypeName();
         this.createIndexMapping(indexName);
     }
 

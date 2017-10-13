@@ -32,28 +32,14 @@ public class RestServer {
     private CrawlerResource crawlerResource;
     private ThreadsResource threadsResource;
     private ElasticsearchProxyResource elasticsearchProxyResource;
-    private boolean isSearchEnabled = false;
-
 
     private RestServer(String dataPath, Configuration config) {
-        this(dataPath, config, null, null, null);
-    }
-    
-    private RestServer(String dataPath, Configuration config, String esIndexName,
-                       String esTypeName, String esHostAddress) {
+
         this.restConfig = config.getRestConfig();
-        if (esIndexName != null && esHostAddress != null) {
-            this.isSearchEnabled = true;
-            if (esTypeName == null || esTypeName.isEmpty()) {
-                esTypeName = "page"; // default type name
-            }
-        }
+        this.elasticsearchProxyResource = new ElasticsearchProxyResource(config);
         this.threadsResource = new ThreadsResource();
         this.labelsResource  = new LabelsResource(dataPath);
-        this.crawlerResource = new CrawlerResource(config, dataPath, esIndexName, esTypeName);
-        if (isSearchEnabled) {
-            this.elasticsearchProxyResource = new ElasticsearchProxyResource(esHostAddress, esIndexName, esTypeName);
-        }
+        this.crawlerResource = new CrawlerResource(config, dataPath, elasticsearchProxyResource);
     }
 
     public void start() {
@@ -114,13 +100,11 @@ public class RestServer {
          */
         server.get("/thread/dump", Transformers.text(threadsResource.threadDump));
 
-        if (isSearchEnabled) {
-            /*
-             * Elasticsearch proxy routes
-             */
-            server.get("/_search", "*/*", elasticsearchProxyResource.searchApi);
-            server.post("/_search", "*/*", elasticsearchProxyResource.searchApi);
-        }
+        /*
+         * Elasticsearch proxy routes
+         */
+        server.get("/_search", "*/*", elasticsearchProxyResource.searchApi);
+        server.post("/_search", "*/*", elasticsearchProxyResource.searchApi);
 
         /*
          * Page labeling routes
@@ -192,24 +176,29 @@ public class RestServer {
 
     public static RestServer create(String configPath, String dataPath,
                                     String esIndexName, String esTypeName) {
+
         requireNonNull(dataPath, "A data path must be provided.");
+
         Configuration config = configPath == null ? new Configuration() : new Configuration(configPath);
         TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
-        ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
-        List<String> hosts = esConfig.getRestApiHosts();
-        if (targetStorageConfig.getDataFormats().contains("ELASTICSEARCH") &&
-            hosts != null && !hosts.isEmpty()) {
-            requireNonNull(esIndexName, "Elasticsearch index name should be provided when using ELASTICSEARCH data format.");
-            if(esTypeName == null || esTypeName.isEmpty()) {
-                esTypeName = "page";
+
+        if (targetStorageConfig.isElasticsearchRestEnabled()) {
+
+            ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
+            if (esIndexName != null && !esTypeName.isEmpty()) {
+                esConfig.setIndexName(esIndexName);
             }
-            String esHostAddress = hosts.iterator().next();
-            logger.info("Starting server with Elasticsearch: " + esHostAddress + "/" + esIndexName + "/" + esTypeName);
-            return new RestServer(dataPath, config, esIndexName, esTypeName, esHostAddress);
-        } else {
-            logger.info("Starting server with local data formats.");
-            return new RestServer(dataPath, config);
+            if (esTypeName != null && !esTypeName.isEmpty()) {
+                esConfig.setTypeName(esTypeName);
+            }
+
+            logger.info("Starting server with Elasticsearch: "
+                + esConfig.getRestApiHosts().iterator().next() + "/"
+                + esConfig.getIndexName() + "/"
+                + esConfig.getTypeName());
         }
+
+        return new RestServer(dataPath, config);
     }
 
     public void setCrawler(AsyncCrawler crawler) {
