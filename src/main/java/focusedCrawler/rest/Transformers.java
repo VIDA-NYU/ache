@@ -16,7 +16,7 @@ public class Transformers {
     
     private static final Logger logger = LoggerFactory.getLogger(Transformers.class);
     
-    private static ResponseTransformer jsonTransformer = new ResponseTransformer() {
+    public static ResponseTransformer json = new ResponseTransformer() {
 
         private ObjectMapper jsonMapper;
 
@@ -52,7 +52,7 @@ public class Transformers {
     public static Route json(Route route) {
         return (req, res) -> {
             res.header("Content-Type", "application/json");
-            return jsonTransformer.render(route.handle(req, res));
+            return json.render(route.handle(req, res));
         };
     }
 

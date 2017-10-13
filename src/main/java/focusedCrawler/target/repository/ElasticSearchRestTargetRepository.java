@@ -46,11 +46,9 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
     private String typeName;
     private String indexName;
     
-    public ElasticSearchRestTargetRepository(ElasticSearchConfig config,
-                                             String indexName,
-                                             String typeName) {
-        this.indexName = indexName;
-        this.typeName = typeName;
+    public ElasticSearchRestTargetRepository(ElasticSearchConfig config) {
+        this.indexName = config.getIndexName();
+        this.typeName = config.getTypeName();
         this.client = createRestClient(config);
         this.createIndexMapping(indexName);
     }

@@ -2,6 +2,8 @@ package focusedCrawler.rest.resources;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -13,6 +15,11 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.ImmutableMap;
+
+import focusedCrawler.config.Configuration;
+import focusedCrawler.rest.Transformers;
+import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import spark.Route;
 
 public class ElasticsearchProxyResource {
@@ -21,18 +28,26 @@ public class ElasticsearchProxyResource {
 
     private CloseableHttpClient httpclient;
 
+    private ElasticSearchConfig esConfig;
+    private boolean isElasticsearchEnabled = false;
     private String esHostAddress;
     private String esIndexName;
     private String esTypeName;
 
-    public ElasticsearchProxyResource(String esHostAddress, String esIndexName, String esTypeName) {
-        this.esHostAddress = esHostAddress;
-        this.esIndexName = esIndexName;
-        this.esTypeName = esTypeName;
+    public ElasticsearchProxyResource(Configuration config) {
         this.httpclient = HttpClients.createDefault();
+        this.updateConfig(config);
     }
 
     public Route searchApi = (request, response) -> {
+
+        if (isElasticsearchEnabled) {
+            response.status(HttpServletResponse.SC_BAD_REQUEST);
+            response.header("Content-Type", "application/json");
+            return Transformers.json.render(ImmutableMap.of(
+                "message", "No Elasticsearch index configured"));
+        }
+
         try {
             String query = "";
             for (String param : request.queryParams()) {
@@ -71,6 +86,28 @@ public class ElasticsearchProxyResource {
         } catch (IOException e) {
             logger.error("Failed to close http client.", e);
         }
+    }
+
+    public void updateConfig(Configuration config) {
+        if (config != null && config.getTargetStorageConfig().isElasticsearchRestEnabled()) {
+            this.isElasticsearchEnabled = true;
+            this.esConfig = config.getTargetStorageConfig().getElasticSearchConfig();
+        } else {
+            this.isElasticsearchEnabled = false;
+            this.esConfig = null;
+        }
+    }
+
+    public String getIndexName() {
+        return esIndexName;
+    }
+
+    public String getTypeName() {
+        return esTypeName;
+    }
+
+    public boolean isElasticsearchEnabled() {
+        return esConfig != null && isElasticsearchEnabled;
     }
 
 }
