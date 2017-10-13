@@ -40,18 +40,18 @@ specify a type (regex or wildcard) and a list of "whitelist" and
       - "http://*allowed*"
     blacklist:
       - "*bad-bad-pattern*"
-  example1.com:
+  www.example1.com:
     type: wildcard
     blacklist:
-      - "http://www.example1.com/*disallowed*.html"
+      - http://www.example1.com/*disallowed*.html
     whitelist:
-      - "http://www.example1.com/*allowed*"
-  example2.com:
+      - http://www.example1.com/*allowed*
+  www.example2.com:
     type: regex
     blacklist:
-      - "http:\/\/www\.example2\.com\/disallowed[0-9]+\.html"
+      - http:\/\/www\.example2\.com\/disallowed[0-9]+\.html
     whitelist:
-      - "http:\/\/www\.example2\.com\/allowed[0-9]+\.html"
+      - http:\/\/www\.example2\.com\/allowed[0-9]+\.html
 
 .. _link_filters_txt:
 
