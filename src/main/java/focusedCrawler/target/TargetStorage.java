@@ -217,17 +217,17 @@ public class TargetStorage extends StorageDefault {
             case "KAFKA":
                 return new KafkaTargetRepository(config.getKafkaConfig());
             case "ELASTICSEARCH":
-                if (esIndexName == null || esIndexName.isEmpty()) {
-                    throw new IllegalArgumentException("ElasticSearch index name not provided!");
-                }
-                if (esTypeName == null || esTypeName.isEmpty()) {
-                    esTypeName = "page";
-                }
                 ElasticSearchConfig esconfig = config.getElasticSearchConfig();
+                if (esIndexName != null && !esIndexName.isEmpty()) {
+                    esconfig.setIndexName(esIndexName);
+                }
+                if (esTypeName != null && !esTypeName.isEmpty()) {
+                    esconfig.setTypeName(esTypeName);
+                }
                 if (esconfig.getRestApiHosts() == null) {
-                    return new ElasticSearchTargetRepository(esconfig, esIndexName, esTypeName);
+                    return new ElasticSearchTargetRepository(esconfig);
                 } else {
-                    return new ElasticSearchRestTargetRepository(esconfig, esIndexName, esTypeName);
+                    return new ElasticSearchRestTargetRepository(esconfig);
                 }
             default:
                 throw new IllegalArgumentException("Invalid data format provided: " + dataFormat);
