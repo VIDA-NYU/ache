@@ -33,7 +33,7 @@ public class KafkaTargetRepository implements TargetRepository {
 
     private Producer<String, String> producer;
     private String topicName;
-    private boolean cdrFormat = false;
+    private KafkaConfig.Format format = KafkaConfig.Format.JSON;
 
     public KafkaTargetRepository(KafkaConfig config) {
         this(createKafkaClient(config), config.getTopicName(), config.getFormat());
@@ -43,6 +43,7 @@ public class KafkaTargetRepository implements TargetRepository {
                                  Format format) {
         this.producer = producer;
         this.topicName = topicName;
+        this.format = format;
     }
 
     private static Producer<String, String> createKafkaClient(KafkaConfig config) {
@@ -71,7 +72,7 @@ public class KafkaTargetRepository implements TargetRepository {
     @Override
     public boolean insert(Page page) {
         String value;
-        if (cdrFormat) {
+        if (KafkaConfig.Format.CDR31 == format) {
             if (page.getContentType().startsWith("text/html")) {
                 CDR31Document obj = new CDR31Document.Builder()
                     .setUrl(page.getFinalUrl())

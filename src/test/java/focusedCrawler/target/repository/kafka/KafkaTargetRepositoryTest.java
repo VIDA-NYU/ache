@@ -20,6 +20,7 @@ import org.junit.rules.TemporaryFolder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import focusedCrawler.memex.cdr.CDR31Document;
 import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelJson;
@@ -70,6 +71,34 @@ public class KafkaTargetRepositoryTest {
         assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
         assertThat(page.getRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
         assertThat(page.getRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
+    }
+
+    @Test
+    public void shouldSendDataToKafkaUsingCDR31() throws IOException {
+        // given
+        Page target = new Page(new URL(url), html, responseHeaders);
+        target.setTargetRelevance(TargetRelevance.RELEVANT);
+        String topicName = "ache-data-topic";
+
+        StringSerializer ss = new StringSerializer();
+        MockProducer<String, String> producer = new MockProducer<>(true, ss, ss);
+
+        KafkaConfig.Format format = KafkaConfig.Format.CDR31;
+
+        KafkaTargetRepository repository = new KafkaTargetRepository(producer, topicName, format);
+
+        // when
+        repository.insert(target);
+        repository.close();
+
+        // then
+        List<ProducerRecord<String, String>> history = producer.history();
+
+        CDR31Document page = mapper.readValue(history.get(0).value(), CDR31Document.class);
+        assertThat(page.getRawContent(), is(html));
+        assertThat(page.getUrl(), is(url));
+        assertThat(page.getResponseHeaders().get("content-type"), is("text/html"));
+        assertThat(page.getCrawler(), is("ACHE"));
     }
 
 }
