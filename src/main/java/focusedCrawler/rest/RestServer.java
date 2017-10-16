@@ -185,7 +185,8 @@ public class RestServer {
         if (targetStorageConfig.isElasticsearchRestEnabled()) {
 
             ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
-            if (esIndexName != null && !esTypeName.isEmpty()) {
+
+            if (esIndexName != null && !esIndexName.isEmpty()) {
                 esConfig.setIndexName(esIndexName);
             }
             if (esTypeName != null && !esTypeName.isEmpty()) {
