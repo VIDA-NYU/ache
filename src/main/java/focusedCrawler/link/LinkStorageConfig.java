@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.util.persistence.PersistentHashtable.DB;
-import focusedCrawler.util.storage.StorageConfig;
 
 public class LinkStorageConfig {
 
@@ -72,9 +71,6 @@ public class LinkStorageConfig {
     @JsonUnwrapped
     private BackSurferConfig backSurferConfig = new BackSurferConfig();
 
-    @JsonUnwrapped
-    private final StorageConfig serverConfig;
-
     @JsonProperty("link_storage.download_sitemap_xml")
     private boolean downloadSitemapXml = false;
 
@@ -106,12 +102,10 @@ public class LinkStorageConfig {
     private int maxDepth;
 
     public LinkStorageConfig() {
-        this.serverConfig = new StorageConfig();
     }
 
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
-        this.serverConfig = StorageConfig.create(config, "link_storage.server.");
     }
 
     public int getMaxPagesPerDomain() {
@@ -182,10 +176,6 @@ public class LinkStorageConfig {
 
     public int getRecrawlMinRelevanceInterval() {
         return recrawlMinRelevanceInterval;
-    }
-
-    public StorageConfig getStorageServerConfig() {
-        return serverConfig;
     }
 
     public boolean getDownloadSitemapXml() {

@@ -14,7 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.target.repository.kafka.KafkaConfig;
-import focusedCrawler.util.storage.StorageConfig;
 
 public class TargetStorageConfig {
 
@@ -63,18 +62,13 @@ public class TargetStorageConfig {
     private boolean englishLanguageDetectionEnabled = false;
 
     @JsonUnwrapped
-    private StorageConfig serverConfig;
-
-    @JsonUnwrapped
     private KafkaConfig kafkaConfig;
 
     public TargetStorageConfig() {
-        this.serverConfig = new StorageConfig();
     }
 
     public TargetStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
-        this.serverConfig = StorageConfig.create(config, "target_storage.server.");
     }
 
     public String getTargetStorageDirectory() {
@@ -116,10 +110,6 @@ public class TargetStorageConfig {
 
     public boolean isEnglishLanguageDetectionEnabled() {
         return englishLanguageDetectionEnabled;
-    }
-
-    public StorageConfig getStorageServerConfig() {
-        return serverConfig;
     }
 
     public boolean getHashFileName() {

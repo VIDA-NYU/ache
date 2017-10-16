@@ -68,10 +68,6 @@ target_storage.visited_page_limit: 10000000
 # Store only pages that contain english text using language detector
 target_storage.english_language_detection_enabled: true
 
-# Configurations for target storage's server
-target_storage.server.host: localhost
-target_storage.server.port: 1987
-
 #
 # Configurations for Link Storage
 #
@@ -117,10 +113,6 @@ link_storage.link_selector: TopkLinkSelector
 #link_storage.recrawl_selector.sitemaps.interval: 1
 
 link_storage.max_size_cache_urls: 10000
-
-# Configurations for link storage's server
-link_storage.server.host: localhost
-link_storage.server.port: 1988
 
 # Directory to store link storage's frontier database
 link_storage.directory: "data_url/dir"

@@ -2,8 +2,8 @@ package focusedCrawler.crawler.async.fetcher;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-
 import java.util.List;
+
 import org.apache.http.client.CookieStore;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.cookie.BasicClientCookie;

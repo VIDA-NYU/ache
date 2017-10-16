@@ -1,15 +1,14 @@
 package focusedCrawler.memex.cdr;
 
 import java.util.Date;
-import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
+import java.util.StringJoiner;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.StringJoiner;
 
 
 public class CDR31MediaObject {

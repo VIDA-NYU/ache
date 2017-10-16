@@ -11,48 +11,50 @@ import java.nio.file.Paths;
 
 import org.apache.tika.metadata.Metadata;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
 
+import focusedCrawler.crawler.async.RobotsTxtHandler.RobotsData;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.util.CommunicationException;
-import focusedCrawler.util.storage.StorageDefault;
-import focusedCrawler.util.storage.StorageException;
 
 public class RobotsTxtHandlerTest {
-
-    static class LinkStorageMock extends StorageDefault {
-        public RobotsTxtHandler.RobotsData robotsData = null;
-        @Override
-        public synchronized Object insert(Object obj) throws StorageException, CommunicationException {
-            if(obj instanceof RobotsTxtHandler.RobotsData) {
-                this.robotsData = (RobotsTxtHandler.RobotsData) obj;
-            }
-            return null;
-        }
-    };
 
     @Test
     public void shouldParseLinksFromSitemapXml() throws Exception {
         // given
-        LinkStorageMock linkStorageMock = new LinkStorageMock(); 
+        LinkStorage linkStorageMock = Mockito.mock(LinkStorage.class);
         RobotsTxtHandler handler = new RobotsTxtHandler(linkStorageMock, "TestAgent");
-        
+
         String url = "http://www.example.com/robots.txt";
-        Path robotsFilePath = Paths.get(RobotsTxtHandler.class.getResource("sample-robots.txt").toURI());
+
+        Path robotsFilePath = Paths.get(
+                RobotsTxtHandler.class.getResource("sample-robots.txt").toURI());
+
         byte[] robotsContent = Files.readAllBytes(robotsFilePath);
-        
-        FetchedResult response = new FetchedResult(url, url, 1, new Metadata(), robotsContent, "text/plain", 1, null, url, 0, "127.0.0.1", 200, "OK");
+
+        FetchedResult response = new FetchedResult(url, url, 1, new Metadata(), robotsContent,
+                "text/plain", 1, null, url, 0, "127.0.0.1", 200, "OK");
 
         LinkRelevance link = new LinkRelevance(new URL(url), 1, LinkRelevance.Type.ROBOTS);
-        
+
         // when
-        handler.completed(link , response);
-        
+        handler.completed(link, response);
+
         // then
-        assertThat(linkStorageMock.robotsData, is(notNullValue()));
-        assertThat(linkStorageMock.robotsData.robotRules.getSitemaps().size(), is(2));
-        assertThat(linkStorageMock.robotsData.robotRules.getSitemaps().get(0), is("http://www.example.com/example-sitemap/sitemap.xml"));
-        assertThat(linkStorageMock.robotsData.robotRules.getSitemaps().get(1), is("http://www.example.com/example-sitemap/sitemap-news.xml"));
+        ArgumentCaptor<RobotsData> argument = ArgumentCaptor.forClass(RobotsData.class);
+        Mockito.verify(linkStorageMock).insert(argument.capture());
+        RobotsData robotsData = argument.getValue();
+
+
+        // then
+        assertThat(robotsData, is(notNullValue()));
+        assertThat(robotsData.robotRules.getSitemaps().size(), is(2));
+        assertThat(robotsData.robotRules.getSitemaps().get(0),
+                is("http://www.example.com/example-sitemap/sitemap.xml"));
+        assertThat(robotsData.robotRules.getSitemaps().get(1),
+                is("http://www.example.com/example-sitemap/sitemap-news.xml"));
     }
 
 }

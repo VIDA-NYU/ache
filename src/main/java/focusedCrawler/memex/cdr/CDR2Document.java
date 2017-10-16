@@ -9,12 +9,11 @@ import org.apache.tika.mime.MediaType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.memex.cdr.TikaExtractor.ParsedData;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
 {

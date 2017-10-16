@@ -1,6 +1,5 @@
 package focusedCrawler.crawler.async;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,24 +16,19 @@ import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.MetricsManager;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageConfig;
-import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.StorageFactoryException;
-import focusedCrawler.util.storage.distribution.StorageCreator;
 
 public class AsyncCrawler extends AbstractExecutionThreadService {
 
     private static final Logger logger = LoggerFactory.getLogger(AsyncCrawler.class);
 
-    private final Storage targetStorage;
-    private final Storage linkStorage;
+    private final TargetStorage targetStorage;
+    private final LinkStorage linkStorage;
     private final HttpDownloader downloader;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
     private MetricsManager metricsManager;
     private Configuration config;
 
-    public AsyncCrawler(Storage targetStorage, Storage linkStorage,
+    public AsyncCrawler(TargetStorage targetStorage, LinkStorage linkStorage,
                         Configuration config, String dataPath, MetricsManager metricsManager) {
 
         this.targetStorage = targetStorage;
@@ -89,8 +83,6 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
                 logger.info("LinkStorage ran out of links, stopping crawler.");
                 stopAsync();
                 break;
-            } catch (StorageException e) {
-                logger.error("Problem when selecting link from LinkStorage.", e);
             } catch (Exception e) {
                 logger.error("An unexpected error happened.", e);
             }
@@ -102,12 +94,8 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         logger.info("Starting crawler shutdown...");
         downloader.await();
         downloader.close();
-        if (linkStorage instanceof LinkStorage) {
-            ((LinkStorage) linkStorage).close();
-        }
-        if (targetStorage instanceof TargetStorage) {
-            ((TargetStorage) targetStorage).close();
-        }
+        linkStorage.close();
+        targetStorage.close();
         if (metricsManager != null) {
             metricsManager.close();
         }
@@ -120,35 +108,14 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         Configuration config = new Configuration(configPath);
 
         MetricsManager metricsManager = new MetricsManager(false, dataPath);
-        Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath, dataPath,
+        LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath,
                 modelPath, config.getLinkStorageConfig(), metricsManager);
 
-        Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath, dataPath,
-                esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage, metricsManager);
-
-        return new AsyncCrawler(targetStorage, linkStorage, config, dataPath,
+        TargetStorage targetStorage = TargetStorage.create(configPath, modelPath, dataPath,
+                esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage,
                 metricsManager);
-    }
 
-    public static void run(Configuration config, String dataPath)
-            throws IOException, NumberFormatException {
-        logger.info("Starting CrawlerManager...");
-        try {
-            StorageConfig linkStorageServerConfig =
-                    config.getLinkStorageConfig().getStorageServerConfig();
-            Storage linkStorage = new StorageCreator(linkStorageServerConfig).produce();
-
-            StorageConfig targetServerConfig =
-                    config.getTargetStorageConfig().getStorageServerConfig();
-            Storage targetStorage = new StorageCreator(targetServerConfig).produce();
-
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, config,
-                    dataPath, new MetricsManager(dataPath));
-            crawler.startAsync();
-            crawler.awaitTerminated();
-        } catch (StorageFactoryException ex) {
-            logger.error("An error occurred while starting CrawlerManager. ", ex);
-        }
+        return new AsyncCrawler(targetStorage, linkStorage, config, dataPath, metricsManager);
     }
 
     public MetricsManager getMetricsManager() {
@@ -156,9 +123,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     }
 
     public void addSeeds(List<String> seeds) {
-        if (linkStorage instanceof LinkStorage) {
-            ((LinkStorage) linkStorage).addSeeds(seeds);
-        }
+        linkStorage.addSeeds(seeds);
     }
 
     public Configuration getConfig() {

@@ -25,8 +25,8 @@ package focusedCrawler.link.classifier.builder;
 
 
 import java.util.Collections;
-import java.util.Vector;
 import java.util.HashSet;
+import java.util.Vector;
 
 
 public class FilterData {
