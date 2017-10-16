@@ -204,6 +204,7 @@ public class RestServer {
 
     public void setCrawler(AsyncCrawler crawler) {
         crawlerResource.setCrawler(crawler);
+        elasticsearchProxyResource.updateConfig(crawler.getConfig());
     }
 
 }

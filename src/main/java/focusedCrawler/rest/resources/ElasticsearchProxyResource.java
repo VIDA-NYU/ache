@@ -27,12 +27,7 @@ public class ElasticsearchProxyResource {
     private static final Logger logger = LoggerFactory.getLogger(ElasticsearchProxyResource.class);
 
     private CloseableHttpClient httpclient;
-
     private ElasticSearchConfig esConfig;
-    private boolean isElasticsearchEnabled = false;
-    private String esHostAddress;
-    private String esIndexName;
-    private String esTypeName;
 
     public ElasticsearchProxyResource(Configuration config) {
         this.httpclient = HttpClients.createDefault();
@@ -41,7 +36,7 @@ public class ElasticsearchProxyResource {
 
     public Route searchApi = (request, response) -> {
 
-        if (isElasticsearchEnabled) {
+        if (esConfig == null) {
             response.status(HttpServletResponse.SC_BAD_REQUEST);
             response.header("Content-Type", "application/json");
             return Transformers.json.render(ImmutableMap.of(
@@ -53,7 +48,8 @@ public class ElasticsearchProxyResource {
             for (String param : request.queryParams()) {
                 query += param + "=" + request.queryParams(param);
             }
-            String url = String.format("%s/%s/%s/_search", esHostAddress, esIndexName, esTypeName);
+            String url = String.format("%s/%s/%s/_search", esConfig.getRestApiHosts().get(0),
+                esConfig.getIndexName(), esConfig.getTypeName());
             if (!query.isEmpty()) {
                 url += "?" + query;
             }
@@ -90,24 +86,22 @@ public class ElasticsearchProxyResource {
 
     public void updateConfig(Configuration config) {
         if (config != null && config.getTargetStorageConfig().isElasticsearchRestEnabled()) {
-            this.isElasticsearchEnabled = true;
             this.esConfig = config.getTargetStorageConfig().getElasticSearchConfig();
         } else {
-            this.isElasticsearchEnabled = false;
             this.esConfig = null;
         }
     }
 
+    public boolean isElasticsearchEnabled() {
+        return esConfig != null;
+    }
+
     public String getIndexName() {
-        return esIndexName;
+        return esConfig.getIndexName();
     }
 
     public String getTypeName() {
-        return esTypeName;
-    }
-
-    public boolean isElasticsearchEnabled() {
-        return esConfig != null && isElasticsearchEnabled;
+        return esConfig.getTypeName();
     }
 
 }

@@ -31,22 +31,24 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     private final Storage linkStorage;
     private final HttpDownloader downloader;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
-
     private MetricsManager metricsManager;
+    private Configuration config;
 
     public AsyncCrawler(Storage targetStorage, Storage linkStorage,
-            AsyncCrawlerConfig crawlerConfig, String dataPath, MetricsManager metricsManager) {
+                        Configuration config, String dataPath, MetricsManager metricsManager) {
 
         this.targetStorage = targetStorage;
         this.linkStorage = linkStorage;
+        this.config = config;
         this.metricsManager = metricsManager;
-        this.downloader =
-                new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath, metricsManager);
+
+        HttpDownloaderConfig downloaderConfig = config.getCrawlerConfig().getDownloaderConfig();
+        this.downloader = new HttpDownloader(downloaderConfig, dataPath, metricsManager);
 
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
         this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage,
-                crawlerConfig.getDownloaderConfig().getUserAgentName()));
+                downloaderConfig.getUserAgentName()));
 
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
@@ -124,7 +126,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath, dataPath,
                 esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage, metricsManager);
 
-        return new AsyncCrawler(targetStorage, linkStorage, config.getCrawlerConfig(), dataPath,
+        return new AsyncCrawler(targetStorage, linkStorage, config, dataPath,
                 metricsManager);
     }
 
@@ -140,8 +142,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
                     config.getTargetStorageConfig().getStorageServerConfig();
             Storage targetStorage = new StorageCreator(targetServerConfig).produce();
 
-            AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, config,
                     dataPath, new MetricsManager(dataPath));
             crawler.startAsync();
             crawler.awaitTerminated();
@@ -158,6 +159,10 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         if (linkStorage instanceof LinkStorage) {
             ((LinkStorage) linkStorage).addSeeds(seeds);
         }
+    }
+
+    public Configuration getConfig() {
+        return config;
     }
 
 }
