@@ -1,7 +1,9 @@
 package focusedCrawler.rest;
 
+import static focusedCrawler.rest.Transformers.json;
+import static focusedCrawler.rest.Transformers.promethize;
+import static focusedCrawler.rest.Transformers.text;
 import static java.util.Arrays.asList;
-import static java.util.Objects.requireNonNull;
 
 import java.io.IOException;
 import java.net.DatagramSocket;
@@ -11,35 +13,30 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.config.Configuration;
-import focusedCrawler.crawler.async.AsyncCrawler;
+import focusedCrawler.crawler.CrawlersManager;
 import focusedCrawler.rest.resources.CrawlerResource;
 import focusedCrawler.rest.resources.ElasticsearchProxyResource;
 import focusedCrawler.rest.resources.LabelsResource;
 import focusedCrawler.rest.resources.ThreadsResource;
-import focusedCrawler.target.TargetStorageConfig;
-import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import spark.Service;
 
 public class RestServer {
     
     private static final Logger logger = LoggerFactory.getLogger(RestServer.class);
     
-    private RestConfig restConfig;
     private Service server;
-
+    private RestConfig restConfig;
     private LabelsResource labelsResource;
     private CrawlerResource crawlerResource;
     private ThreadsResource threadsResource;
     private ElasticsearchProxyResource elasticsearchProxyResource;
 
-    private RestServer(String dataPath, Configuration config) {
-
-        this.restConfig = config.getRestConfig();
-        this.elasticsearchProxyResource = new ElasticsearchProxyResource(config);
+    private RestServer(RestConfig restConfig, CrawlersManager crawlManager) {
+        this.restConfig = restConfig;
         this.threadsResource = new ThreadsResource();
-        this.labelsResource  = new LabelsResource(dataPath);
-        this.crawlerResource = new CrawlerResource(config, dataPath, elasticsearchProxyResource);
+        this.labelsResource  = new LabelsResource(crawlManager);
+        this.elasticsearchProxyResource = new ElasticsearchProxyResource(crawlManager);
+        this.crawlerResource = new CrawlerResource(crawlManager);
     }
 
     public void start() {
@@ -88,31 +85,25 @@ public class RestServer {
         /*
          * Crawl routes
          */
-        server.get("/status", Transformers.json(crawlerResource.getStatus));
-        server.get("/metrics", Transformers.json(crawlerResource.metricsResource));
-        server.get("/prometheus",Transformers.promethize(crawlerResource.metricsResource));
-        server.post("/startCrawl", "*/*", Transformers.json(crawlerResource.startCrawl));
-        server.get("/stopCrawl", Transformers.json(crawlerResource.stopCrawl));
-        server.post("/seeds", "*/*", Transformers.json(crawlerResource.addSeeds));
+        server.get( "/crawls",                        json(crawlerResource.listCrawlers));
+        server.get( "/crawls/:crawler_id",            json(crawlerResource.getStatus));
+        server.get( "/crawls/:crawler_id/status",     json(crawlerResource.getStatus));
+        server.post("/crawls/:crawler_id",            json(crawlerResource.startCrawl));
+        server.post("/crawls/:crawler_id/startCrawl", json(crawlerResource.startCrawl));
+        server.get( "/crawls/:crawler_id/metrics",    json(crawlerResource.metricsResource));
+        server.get( "/crawls/:crawler_id/prometheus", promethize(crawlerResource.metricsResource));
+        server.get( "/crawls/:crawler_id/stopCrawl",  json(crawlerResource.stopCrawl));
+        server.post("/crawls/:crawler_id/seeds",      json(crawlerResource.addSeeds));
+        server.get( "/crawls/:crawler_id/labels",     json(labelsResource.getLabels));
+        server.put( "/crawls/:crawler_id/labels",     json(labelsResource.addLabels));
+        server.post("/crawls/:crawler_id/labels",     json(labelsResource.addLabels));
+        server.get( "/crawls/:crawler_id/_search",    elasticsearchProxyResource.searchApi);
+        server.post("/crawls/:crawler_id/_search",    elasticsearchProxyResource.searchApi);
 
         /*
          * Thread management routes
          */
-        server.get("/thread/dump", Transformers.text(threadsResource.threadDump));
-
-        /*
-         * Elasticsearch proxy routes
-         */
-        server.get("/_search", "*/*", elasticsearchProxyResource.searchApi);
-        server.post("/_search", "*/*", elasticsearchProxyResource.searchApi);
-
-        /*
-         * Page labeling routes
-         */
-        server.get( "/labels", Transformers.json(labelsResource.getLabels));
-        server.put( "/labels", Transformers.json(labelsResource.addLabels));
-        server.post("/labels", Transformers.json(labelsResource.addLabels));
-
+        server.get("/thread/dump", text(threadsResource.threadDump));
         
         server.awaitInitialization();
         
@@ -174,37 +165,8 @@ public class RestServer {
         
     }
 
-    public static RestServer create(String configPath, String dataPath,
-                                    String esIndexName, String esTypeName) {
-
-        requireNonNull(dataPath, "A data path must be provided.");
-
-        Configuration config = configPath == null ? new Configuration() : new Configuration(configPath);
-        TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
-
-        if (targetStorageConfig.isElasticsearchRestEnabled()) {
-
-            ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
-
-            if (esIndexName != null && !esIndexName.isEmpty()) {
-                esConfig.setIndexName(esIndexName);
-            }
-            if (esTypeName != null && !esTypeName.isEmpty()) {
-                esConfig.setTypeName(esTypeName);
-            }
-
-            logger.info("Starting server with Elasticsearch: "
-                + esConfig.getRestApiHosts().iterator().next() + "/"
-                + esConfig.getIndexName() + "/"
-                + esConfig.getTypeName());
-        }
-
-        return new RestServer(dataPath, config);
-    }
-
-    public void setCrawler(AsyncCrawler crawler) {
-        crawlerResource.setCrawler(crawler);
-        elasticsearchProxyResource.updateConfig(crawler.getConfig());
+    public static RestServer create(RestConfig restConfig, CrawlersManager crawlManager) {
+        return new RestServer(restConfig, crawlManager);
     }
 
 }
