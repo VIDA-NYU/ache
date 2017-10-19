@@ -73,8 +73,7 @@ public class RestServer {
             "/",
             "/index.html",
             "/search",
-            "/monitoring",
-            "/startCrawl"
+            "/monitoring"
         );
         server.before("/*", new StaticFileHandlerFilter(indexes));
 
