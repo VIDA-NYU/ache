@@ -1,5 +1,6 @@
 package focusedCrawler.memex.cdr;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,8 +13,11 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 import java.util.zip.GZIPOutputStream;
 
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -28,85 +32,91 @@ import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FilesTargetRepository;
+import focusedCrawler.target.repository.WarcTargetRepository;
 import focusedCrawler.tools.SimpleBulkIndexer;
 import focusedCrawler.util.CliTool;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
-@Command(name="AcheToCdrExporter", description="Exports crawled data to CDR format")
+@Command(name = "AcheToCdrExporter", description = "Exports crawled data to CDR format")
 public class AcheToCdrExporter extends CliTool {
-    
+
     private static final ObjectMapper jsonMapper = new ObjectMapper();
-    
+
     //
     // Input data options
     //
-    
-    @Option(name = "--input-path", description="Path to ACHE data target folder", required=true)
+
+    @Option(name = "--input-path", description = "Path to ACHE data target folder", required = true)
     private String inputPath;
 
-    @Option(name={"--repository-type", "-rt"}, description="Which repository type should be used")
+    @Option(name = {"--repository-type", "-rt"},
+            description = "Which repository type should be used")
     private RepositoryType repositoryType = RepositoryType.FILES;
-    
-    public enum RepositoryType { 
-        FILES, FILESYSTEM_JSON;
+
+    public enum RepositoryType {
+        FILES, FILESYSTEM_JSON, WARC;
     }
 
-    @Option(name="--fs-hashed", description="Whether ACHE filesystem repository files names are hashed")
+    @Option(name = "--fs-hashed",
+            description = "Whether ACHE filesystem repository files names are hashed")
     private boolean hashFilename = false;
-    
-    @Option(name="--fs-compressed", description="Whether ACHE filesystem repository files is compressed")
+
+    @Option(name = "--fs-compressed",
+            description = "Whether ACHE filesystem repository files is compressed")
     private boolean compressData = false;
-    
+
     //
     // Options for output data format
     //
-    
-    @Option(name="--cdr-version", description="Which CDR version should be used")
+
+    @Option(name = "--cdr-version", description = "Which CDR version should be used")
     private CDRVersion cdrVersion = CDRVersion.CDRv31;
-    
+
     public enum CDRVersion {
         CDRv2, CDRv3, CDRv31
     }
-    
-    @Option(name="--output-file", description="Gziped output file containing data formmated as per CDR schema")
+
+    @Option(name = "--output-file",
+            description = "Gziped output file containing data formmated as per CDR schema")
     private String outputFile;
 
-    @Option(name="--skip-relevant", description="Whether relevant pages should be skipped")
+    @Option(name = "--skip-relevant", description = "Whether relevant pages should be skipped")
     private boolean skipRelevant = false;
 
-    @Option(name="--skip-irrelevant", description="Whether irrelevant pages should be skipped")
+    @Option(name = "--skip-irrelevant", description = "Whether irrelevant pages should be skipped")
     private boolean skipIrrelevant = false;
-    
+
     // Elastic Search output options
-    
-    @Option(name={"--output-es-index", "-oi"}, description="ElasticSearch index name (output)")
+
+    @Option(name = {"--output-es-index", "-oi"}, description = "ElasticSearch index name (output)")
     String outputIndex;
-    
-    @Option(name={"--output-es-type", "-ot"}, description="ElasticSearch index type (output)")
+
+    @Option(name = {"--output-es-type", "-ot"}, description = "ElasticSearch index type (output)")
     String outputType;
 
-    @Option(name={"--output-es-url", "-ou"}, description="ElasticSearch full HTTP URL address")
+    @Option(name = {"--output-es-url", "-ou"}, description = "ElasticSearch full HTTP URL address")
     String elasticSearchServer = null;
-    
-    @Option(name={"--output-es-auth", "-oa"}, description="User and password for ElasticSearch in format: user:pass")
+
+    @Option(name = {"--output-es-auth", "-oa"},
+            description = "User and password for ElasticSearch in format: user:pass")
     String userPass = null;
-    
-    @Option(name={"--output-es-bulk-size", "-obs"}, description="ElasticSearch bulk size")
+
+    @Option(name = {"--output-es-bulk-size", "-obs"}, description = "ElasticSearch bulk size")
     int bulkSize = 25;
 
-	//AWS S3 Support
-	
-    @Option(name={"--accesskey", "-ak"}, description="AWS ACCESS KEY ID")
-	String accessKeyID = "";
+    // AWS S3 Support
 
-    @Option(name={"--secretkey", "-sk"}, description="AWS SECRET KEY ID")
-	String secretKeyID = "";
+    @Option(name = {"--accesskey", "-ak"}, description = "AWS ACCESS KEY ID")
+    String accessKeyID = "";
+
+    @Option(name = {"--secretkey", "-sk"}, description = "AWS SECRET KEY ID")
+    String secretKeyID = "";
 
     @Option(name = {"--bucket", "-bk"}, description = "AWS S3 BUCKET NAME")
     String bucketName = "";
-    
+
     @Option(name = {"--region", "-rg"}, description = "AWS S3 Region name")
     String region = "us-east-1";
 
@@ -116,72 +126,80 @@ public class AcheToCdrExporter extends CliTool {
     @Option(name = {"--tmp-path", "-tmp"}, description = "Path to temporary working folder")
     String temp = null;
 
-    private PersistentHashtable<CDR31MediaObject> mediaObjectCache;
-    private S3Uploader s3Uploader;
+    //
+    // Kafka options
+    //
+    @Option(name = {"--kafka-props"},
+            description = "Path to properties files to configure Kafka client")
+    String kafkaProperties = null;
+
+    @Option(name = {"--kafka-topic"}, description = "Kafka topic name")
+    String kafkaTopicName = null;
 
     //
     // Runtime variables
     //
     private int processedPages = 0;
-    private PrintWriter out;
-    private SimpleBulkIndexer bulkIndexer;
     private String id;
     private Object doc;
     
+    private PrintWriter out;
+    private SimpleBulkIndexer bulkIndexer;
+    private PersistentHashtable<CDR31MediaObject> mediaObjectCache;
+    private S3Uploader s3Uploader;
+    private KafkaProducer<String, String> kafkaProducer;
+
     public static void main(String[] args) throws Exception {
         CliTool.run(args, new AcheToCdrExporter());
     }
-    
+
     @Override
     public void execute() throws Exception {
-        
-        System.out.println("Reading ACHE data from: "+inputPath);
-        System.out.println("Generating CDR file at: "+outputFile);
-        System.out.println(" Compressed repository: "+compressData);
-        System.out.println("      Hashed file name: "+hashFilename);
-        
-        if (temp == null) {
-            Path tmpPath = Files.createTempDirectory("cdr-export-tmp");
-            Files.createDirectories(tmpPath);
-            temp = tmpPath.toString();
-        }
+
+        System.out.println("Reading ACHE data from: " + inputPath);
+        System.out.println("Generating CDR file at: " + outputFile);
+        System.out.println(" Compressed repository: " + compressData);
+        System.out.println("      Hashed file name: " + hashFilename);
 
         if (!skipUpload) {
-            s3Uploader = new S3Uploader(this.accessKeyID, this.secretKeyID, this.bucketName,
-                    this.region);
+            if (temp == null) {
+                Path tmpPath = Files.createTempDirectory("cdr-export-tmp");
+                Files.createDirectories(tmpPath);
+                temp = tmpPath.toString();
+            }
+
+            mediaObjectCache = new PersistentHashtable<CDR31MediaObject>(
+                    temp, 1000, CDR31MediaObject.class);
+
+            s3Uploader = new S3Uploader(this.accessKeyID, this.secretKeyID,
+                    this.bucketName, this.region);
         }
-        mediaObjectCache = new PersistentHashtable<CDR31MediaObject>(temp, 1000, CDR31MediaObject.class);
 
         if (outputFile != null) {
             GZIPOutputStream gzipStream = new GZIPOutputStream(new FileOutputStream(outputFile));
             out = new PrintWriter(gzipStream, true);
         }
+        
+        this.bulkIndexer = initializeElasticsearchIndexer();
+        this.kafkaProducer = initializeKafkaProducer();
 
-        if (elasticSearchServer != null) {
-            if (this.outputIndex == null || this.outputIndex.isEmpty())
-                throw new IllegalArgumentException(
-                        "Argument for Elasticsearch index can't be empty");
-            if (this.outputType == null || this.outputType.isEmpty())
-                throw new IllegalArgumentException(
-                        "Argument for Elasticsearch type can't be empty");
-            bulkIndexer = new SimpleBulkIndexer(elasticSearchServer, userPass, bulkSize);
-        }
-        
-        //Process media files
-        System.out.println("Pre-processing media files...");
-        Iterator<TargetModelJson> it = createIterator();
-        while (it.hasNext()) {
-            TargetModelJson pageModel = it.next();
-            try {
-                processMediaFile(pageModel);
-            } catch (Exception e) {
-                System.err.println("Failed to process record.\n" + e.toString());
+        Iterator<TargetModelJson> it;
+        if(!skipUpload) {
+            // Process media files
+            System.out.println("Pre-processing media files...");
+            it = createIterator();
+            while (it.hasNext()) {
+                TargetModelJson pageModel = it.next();
+                try {
+                    processMediaFile(pageModel);
+                } catch (Exception e) {
+                    System.err.println("Failed to process record.\n" + e.toString());
+                }
             }
+            mediaObjectCache.commit();
         }
-        
-        mediaObjectCache.commit();
-		
-		//Process html files
+
+        // Process HTML files
         System.out.println("Processing HTML pages...");
         it = createIterator();
         while (it.hasNext()) {
@@ -197,44 +215,79 @@ public class AcheToCdrExporter extends CliTool {
             }
         }
         System.out.printf("Processed %d pages\n", processedPages);
-        
-        if(out != null) out.close();
-        if(bulkIndexer!= null) bulkIndexer.close();
+
+        if (out != null)
+            out.close();
+        if (bulkIndexer != null)
+            bulkIndexer.close();
+        if (kafkaProducer != null)
+            kafkaProducer.close();
         
         System.out.println("done.");
     }
 
-    private Iterator<TargetModelJson> createIterator() {
-        if(repositoryType == RepositoryType.FILESYSTEM_JSON) {
-            FileSystemTargetRepository repository = new FileSystemTargetRepository(inputPath,
-                    DataFormat.JSON, hashFilename, compressData);
-            return repository.iterator();
-        } else {
-            FilesTargetRepository repository = new FilesTargetRepository(inputPath);
-            return repository.iterator();
+    private KafkaProducer<String, String> initializeKafkaProducer() throws IOException {
+        if (this.kafkaProperties == null || this.kafkaProperties.isEmpty()) {
+            return null;
+        }
+        if (this.kafkaTopicName == null || this.kafkaTopicName.isEmpty()) {
+            throw new IllegalArgumentException(
+                    "Kafka topic name can't be empty: " + this.kafkaTopicName);
+        }
+        Properties properties = new Properties();
+        properties.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        properties.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        properties.load(new FileInputStream(this.kafkaProperties));
+        return new KafkaProducer<>(properties);
+    }
+
+    private SimpleBulkIndexer initializeElasticsearchIndexer() {
+        if (elasticSearchServer != null) {
+            if (this.outputIndex == null || this.outputIndex.isEmpty())
+                throw new IllegalArgumentException(
+                        "Argument for Elasticsearch index can't be empty");
+            if (this.outputType == null || this.outputType.isEmpty())
+                throw new IllegalArgumentException(
+                        "Argument for Elasticsearch type can't be empty");
+            return new SimpleBulkIndexer(elasticSearchServer, userPass, bulkSize);
+        }
+        return null;
+    }
+
+    private Iterator<TargetModelJson> createIterator() throws IOException {
+        switch (repositoryType) {
+            case FILESYSTEM_JSON:
+                return new FileSystemTargetRepository(inputPath, DataFormat.JSON,
+                        hashFilename, compressData).iterator();
+            case WARC:
+                return new WarcTargetRepository(inputPath).targetModelJsonIterator();
+            case FILES:
+                return new FilesTargetRepository(inputPath).iterator();
+            default:
+                throw new IllegalArgumentException("Unsuported data format: " + repositoryType);
         }
     }
 
-	private void processMediaFile(TargetModelJson pageModel) throws IOException {
-		// What if contentType is empty but the object is an image. 
-		//
+    private void processMediaFile(TargetModelJson pageModel) throws IOException {
+        // What if contentType is empty but the object is an image.
+        //
         String contentType = pageModel.getContentType();
-		
+
         if (contentType == null || contentType.isEmpty()) {
             System.err.println("Ignoring URL with no content-type: " + pageModel.getUrl());
             return;
         }
 
-		if (!contentType.startsWith("image")) {
-			return;
-		}
+        if (!contentType.startsWith("image")) {
+            return;
+        }
 
-		if (cdrVersion != CDRVersion.CDRv31) {
-			return;
-		}
+        if (cdrVersion != CDRVersion.CDRv31) {
+            return;
+        }
 
-		createCDR31MediaObject(pageModel);
-	}
+        createCDR31MediaObject(pageModel);
+    }
 
     private void processRecord(TargetModelJson pageModel) throws IOException {
         String contentType = pageModel.getContentType();
@@ -264,20 +317,32 @@ public class AcheToCdrExporter extends CliTool {
             createCDR3DocumentJson(pageModel);
         }
 
+        String docAsCdrJson = jsonMapper.writeValueAsString(doc);
+
         if (doc != null && out != null) {
-            out.println(jsonMapper.writeValueAsString(doc));
+            out.println(docAsCdrJson);
         }
 
         if (bulkIndexer != null) {
-            bulkIndexer.addDocument(outputIndex, outputType, doc, id);
+            bulkIndexer.addDocument(outputIndex, outputType, docAsCdrJson, id);
         }
 
+        if (kafkaProducer != null) {
+            ProducerRecord<String, String> record =
+                    new ProducerRecord<>(this.kafkaTopicName, id, docAsCdrJson);
+            try {
+                kafkaProducer.send(record);
+            } catch (Exception e) {
+                System.err.println("Failed to deliver document to Kafka: " + pageModel.getUrl());
+                e.printStackTrace();
+            }
+        }
     }
 
     public void createCDR2DocumentJson(TargetModelJson pageModel) {
         HashMap<String, Object> crawlData = new HashMap<>();
         crawlData.put("response_headers", pageModel.getResponseHeaders());
-        
+
         CDR2Document.Builder builder = new CDR2Document.Builder()
                 .setUrl(pageModel.getUrl())
                 .setTimestamp(pageModel.getFetchTime())
@@ -292,11 +357,11 @@ public class AcheToCdrExporter extends CliTool {
         this.id = doc.getId();
         this.doc = doc;
     }
-    
+
     public void createCDR3DocumentJson(TargetModelJson pageModel) {
         HashMap<String, Object> crawlData = new HashMap<>();
         crawlData.put("response_headers", pageModel.getResponseHeaders());
-        
+
         CDR3Document.Builder builder = new CDR3Document.Builder()
                 .setUrl(pageModel.getUrl())
                 .setTimestampCrawl(new Date(pageModel.getFetchTime()))
@@ -311,22 +376,22 @@ public class AcheToCdrExporter extends CliTool {
         this.doc = doc;
     }
 
-	public void createCDR31MediaObject(TargetModelJson pageModel) throws IOException {
-		// Hash and upload to S3
-		String storedUrl = this.uploadMediaFile(pageModel.getContent(), pageModel.getUrl()); 
+    public void createCDR31MediaObject(TargetModelJson pageModel) throws IOException {
+        // Hash and upload to S3
+        String storedUrl = this.uploadMediaFile(pageModel.getContent(), pageModel.getUrl());
 
-		// Create Media Object for the image
+        // Create Media Object for the image
         CDR31MediaObject obj = new CDR31MediaObject();
-		obj.setContentType(pageModel.getContentType());
+        obj.setContentType(pageModel.getContentType());
         obj.setTimestampCrawl(new Date(pageModel.getFetchTime()));
         obj.setObjOriginalUrl(pageModel.getUrl());
-		obj.setObjStoredUrl(storedUrl);
+        obj.setObjStoredUrl(storedUrl);
         obj.setResponseHeaders(pageModel.getResponseHeaders());
 
-		//Save it for including into the HTML pages later
-		this.mediaObjectCache.put(pageModel.getUrl(), obj);
-	}
-	
+        // Save it for including into the HTML pages later
+        this.mediaObjectCache.put(pageModel.getUrl(), obj);
+    }
+
     private String uploadMediaFile(byte[] content, String url) throws IOException {
         HashFunction hf = Hashing.sha256();
         Hasher hasher = hf.newHasher();
@@ -340,7 +405,7 @@ public class AcheToCdrExporter extends CliTool {
             System.out.println("Created object: " + hs);
         }
         return hs;
-	}
+    }
 
 //    public String[] extractImgLinks(TargetModelJson pageModel) {
 //        try {
@@ -388,7 +453,7 @@ public class AcheToCdrExporter extends CliTool {
                 .setContentType(pageModel.getContentType())
                 .setResponseHeaders(pageModel.getResponseHeaders())
                 .setRawContent(pageModel.getContentAsString())
-				.setObjects(mediaObjects)
+                .setObjects(mediaObjects)
                 .setTeam("NYU")
                 .setCrawler("ACHE");
 
@@ -396,18 +461,18 @@ public class AcheToCdrExporter extends CliTool {
         this.id = doc.getId();
         this.doc = doc;
     }
-    
+
     private String reverseDomain(String domain) {
-        if(domain == null || domain.isEmpty()) {
+        if (domain == null || domain.isEmpty()) {
             return null;
         }
         String[] hostParts = domain.split("\\.");
-        if(hostParts.length == 0 ) {
+        if (hostParts.length == 0) {
             return null;
         }
         StringBuilder reverseDomain = new StringBuilder();
-        reverseDomain.append(hostParts[hostParts.length-1]);
-        for (int i = hostParts.length-2; i >= 0; i--) {
+        reverseDomain.append(hostParts[hostParts.length - 1]);
+        for (int i = hostParts.length - 2; i >= 0; i--) {
             reverseDomain.append('/');
             reverseDomain.append(hostParts[i]);
         }
