@@ -13,7 +13,6 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.tika.mime.MediaType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -27,6 +26,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @JsonInclude(Include.NON_NULL)
 public class CDR31Document implements Serializable {
 
+    @JsonProperty("_id")
     private String _id;
 
     @JsonProperty("content_type")
@@ -110,7 +110,7 @@ public class CDR31Document implements Serializable {
         return contentType;
     }
 
-    @JsonIgnore
+    @JsonProperty("_id")
     public String getId() {
         return this._id;
     }
