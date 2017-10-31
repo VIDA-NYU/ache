@@ -24,8 +24,10 @@ public class StaticFileHandlerFilter implements Filter {
 
     private StaticFilesConfiguration staticFilesHandler;
     private Set<String> indexHtmlPaths;
+    private String basePath;
 
-    public StaticFileHandlerFilter(List<String> indexHtmlPaths) {
+    public StaticFileHandlerFilter(List<String> indexHtmlPaths, String basePath) {
+        this.basePath = basePath;
         this.staticFilesHandler = new StaticFilesConfiguration();
         this.staticFilesHandler.configure("/public");
         this.indexHtmlPaths = new HashSet<>(indexHtmlPaths);
@@ -46,6 +48,10 @@ public class StaticFileHandlerFilter implements Filter {
         String authHeader = request.headers("Authorization");
         if (authHeader != null && !authHeader.isEmpty()) {
             String meta = String.format("<meta name=\"authorization\" content=\"%s\">", authHeader);
+            indexHtml = indexHtml.replaceFirst("<head>", "<head>" + meta);
+        }
+        if(basePath != null && !basePath.isEmpty()) {
+            String meta = String.format("<meta name=\"base_path\" content=\"%s\">", basePath);
             indexHtml = indexHtml.replaceFirst("<head>", "<head>" + meta);
         }
         writeResponse(request, response, indexHtml);

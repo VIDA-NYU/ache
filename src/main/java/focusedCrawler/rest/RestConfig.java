@@ -23,6 +23,9 @@ public class RestConfig {
     @JsonProperty("http.auth.basic.password")
     private String basicPassword = null;
 
+    @JsonProperty("http.base_path")
+    private String basePath = null;
+
     public RestConfig() {
         // required for de-serialization
     }
@@ -55,6 +58,10 @@ public class RestConfig {
 
     public String getBasicPassword() {
         return basicPassword;
+    }
+
+    public String getBasePath() {
+        return basePath;
     }
 
 }

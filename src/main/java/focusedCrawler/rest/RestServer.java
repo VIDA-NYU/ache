@@ -34,7 +34,6 @@ public class RestServer {
     private ElasticsearchProxyResource elasticsearchProxyResource;
 
     private RestServer(String dataPath, Configuration config) {
-
         this.restConfig = config.getRestConfig();
         this.elasticsearchProxyResource = new ElasticsearchProxyResource(config);
         this.threadsResource = new ThreadsResource();
@@ -75,7 +74,7 @@ public class RestServer {
             "/search",
             "/monitoring"
         );
-        server.before("/*", new StaticFileHandlerFilter(indexes));
+        server.before("/*", new StaticFileHandlerFilter(indexes, restConfig.getBasePath()));
 
         /*
          * Enable HTTP CORS (Cross-origin Resource Sharing)
