@@ -3,9 +3,9 @@
 REST API
 #################
 
-When ACHE is started, it automatically starts a REST API on port 8080.
+When an ACHE crawl is started, it automatically starts a REST API on port 8080.
 If that port is busy, it will try the following ports (8081, 8082, etc).
-The default HTTP settings can be configured using the following lines in the
+The default HTTP settings can be changed using the following lines in the
 ``ache.yml`` file:
 
 .. sourcecode:: yaml
@@ -14,6 +14,32 @@ The default HTTP settings can be configured using the following lines in the
   http.host: 127.0.0.1
   http.cors.enabled: true
 
+
+Server Mode
+-----------
+
+Besides using the ``ache startCrawl`` command, ACHE can also be started in server
+mode and controlled using the web user interface or the REST API.
+
+To start ACHE in server mode, you can use::
+
+    ache startServer -d /data -c /config/
+
+Alternatively, if you are using Docker, run::
+
+    docker run -v $CONFIG:/config -v $DATA/data:/data vidanyu/ache startServer -d /data -c /config/
+
+where:
+
+ * ``$CONFIG`` is the path to where ``ache.yml`` is stored and
+ * ``$DATA`` is the path where ACHE is going to store its data.
+
+
+If you want to configure a proxy to serve ACHE user interface from a **non-root**
+path, you will need to specify the path in ``ache.yml`` file using the following
+configuration::
+
+  http.base_path: /my-new-path
 
 API Endpoints
 -------------
