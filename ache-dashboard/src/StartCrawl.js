@@ -33,6 +33,7 @@ class StartCrawl extends React.Component {
           if(response.crawlerRunning === true) {
             this.setState({
               crawlerRunning: true,
+              crawlerState: response.crawlerState,
               serverMessage: "Crawler is running. Open \"Monitoring\" tab for crawl details."
             });
           } else {
@@ -71,6 +72,14 @@ class StartCrawl extends React.Component {
     api.post("/startCrawl", config).then(this.updateResponse.bind(this));
   }
   
+  stopCrawl(event) {
+    //this.setState({starting: true});
+    var config = {
+      mode: 'cors'
+    };
+    api.get("/stopCrawl", config).then(this.updateResponse.bind(this));
+  }
+
   updateResponse(response) {
     if('FETCH_ERROR' === response) {
       this.setState({
@@ -78,7 +87,12 @@ class StartCrawl extends React.Component {
         serverMessage: "Failed to connect to server to start the crawler."
       });
     } else {
-      if(response.crawlerStarted === false) {
+      if(response.shutdownInitiated === true) {
+        this.setState({
+          stopping: true,
+          serverMessage: response.message
+        });
+      } else if(response.crawlerStarted === false) {
         this.setState({
           starting: false,
           serverError: true,
@@ -145,11 +159,20 @@ class StartCrawl extends React.Component {
       );
     }
     
-    // render crawker running message
+    // render crawler running message
     if (this.state.crawlerRunning === true) {
       return (
-        <div className="alert alert-success message">
-          <span className="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;{this.state.serverMessage}
+        <div className="row">
+          <div className="row">
+            <div className="alert alert-success message">
+              <span className="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;{this.state.serverMessage}
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6 col-md-offset-3">
+              <button type="button" className="btn btn-block btn-default btn-lg" onClick={(e)=>this.stopCrawl(e)}>Stop Crawler</button>
+            </div>
+          </div>
         </div>
       );
     }
