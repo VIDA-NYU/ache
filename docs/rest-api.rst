@@ -75,19 +75,139 @@ API Endpoints
         "model": "<Base64 encoded zipped model file>"
       }
 
+    Response body example:
+
+    .. sourcecode:: js
+
+      {
+        "message": "Crawler started successfully.",
+        "crawlerStarted": true
+      }
+
 
 
 .. http:get:: /status
 
     Returns the status of the currently running crawl.
 
+    Response body example:
 
+    .. sourcecode:: js
+
+      {
+        "status": 200,
+        "version": "0.9.0-SNAPSHOT",
+        "searchEnabled": false,
+        "crawlerRunning": true,
+        "crawlerState": "RUNNING"
+      }
 
 .. http:get:: /metrics
 
-    Returns detailed runtime metrics of the current crawler execution.
+    Returns detailed runtime metrics of the current crawler execution. Metrics
+    are generated using the Dropwizard Metrics library.
 
+    Response body example:
 
+    .. sourcecode:: js
+
+      {
+          "version": "3.1.3",
+          "gauges": {
+            "downloader.dispatch_queue.size": {
+              "value": 0
+            },
+            "downloader.download_queue.size": {
+              "value": 0
+            },
+            "downloader.pending_downloads": {
+              "value": 2
+            },
+            "downloader.running_handlers": {
+              "value": 1
+            },
+            "downloader.running_requests": {
+              "value": 1
+            },
+            "frontier_manager.last_load.available": {
+              "value": 0
+            },
+            "frontier_manager.last_load.rejected": {
+              "value": 11610
+            },
+            "frontier_manager.last_load.uncrawled": {
+              "value": 11610
+            },
+            "frontier_manager.scheduler.empty_domains": {
+              "value": 0
+            },
+            "frontier_manager.scheduler.non_expired_domains": {
+              "value": 1
+            },
+            "frontier_manager.scheduler.number_of_links": {
+              "value": 2422
+            },
+            "target.storage.harvest.rate": {
+              "value": 0.9777777777777777
+            }
+          },
+          "counters": {
+            "downloader.fetches.aborted": {
+              "count": 0
+            },
+            "downloader.fetches.errors": {
+              "count": 1
+            },
+            "downloader.fetches.successes": {
+              "count": 48
+            },
+            "downloader.http_response.status.2xx": {
+              "count": 47
+            },
+            "downloader.http_response.status.401": {
+              "count": 0
+            },
+            "downloader.http_response.status.403": {
+              "count": 0
+            },
+            "downloader.http_response.status.404": {
+              "count": 1
+            },
+            "downloader.http_response.status.5xx": {
+              "count": 0
+            },
+            "target.storage.pages.downloaded": {
+              "count": 45
+            },
+            "target.storage.pages.relevant": {
+              "count": 44
+            }
+          },
+          "histograms": {},
+          "meters": {},
+          "timers": {
+            "downloader.fetch.time": {
+              "count": 48,
+              "max": 584.693196,
+              "mean": 160.64529857175228,
+              "min": 51.161457,
+              "p50": 114.816344,
+              "p75": 218.304927,
+              "p95": 377.469511,
+              "p98": 584.693196,
+              "p99": 584.693196,
+              "p999": 584.693196,
+              "stddev": 118.74270199105285,
+              "m15_rate": 0.4281665582051108,
+              "m1_rate": 0.7030438799915493,
+              "m5_rate": 0.4803778789487069,
+              "mean_rate": 0.9178383293058442,
+              "duration_units": "milliseconds",
+              "rate_units": "calls/second"
+            },
+            [... Other metrics...]
+          }
+        }
 
 .. http:get:: /stopCrawl
 
@@ -96,7 +216,15 @@ API Endpoints
     :query boolean awaitStopped: One of ``true`` or ``false`` (default).
       Indicates whether the request should block until the crawler is completely stopped.
 
+    Response body example:
 
+    .. sourcecode:: js
+
+      {
+        "message": "Crawler shutdown initiated.",
+        "shutdownInitiated": true,
+        "crawlerStopped": false
+      }
 
 .. http:post:: /seeds
 
@@ -112,4 +240,14 @@ API Endpoints
 
       {
         "seeds": ["http://en.wikipedia.org/", "http://example.com/"]
+      }
+
+
+    Response body example:
+
+    .. sourcecode:: js
+
+      {
+        "message": "Seeds added successfully.",
+        "addedSeeds": true
       }
