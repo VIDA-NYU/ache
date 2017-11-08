@@ -4,29 +4,56 @@
 # Configurations for Target Storage
 #
 
-# Uses a classifier to collect pages in topics, domains etc.
-target_storage.use_classifier: true
-# Change to false if don't want to store pages classified as irrelevant
+# Change to false if you don't want to store pages classified as irrelevant
 target_storage.store_negative_pages: false
 
 # Configuration for data format used to store crawled data
 
-# Enable this change target storage's data format
+# Enable one of the following lines to use one of the FILESYSTEM_* data format
 #target_storage.data_format.type: FILESYSTEM_HTML
 #target_storage.data_format.type: FILESYSTEM_CBOR
-target_storage.data_format.type: FILESYSTEM_JSON
-
-# Enable this to name files using a hash instead of encoded URL
-target_storage.data_format.filesystem.hash_file_name: true
-
+#target_storage.data_format.type: FILESYSTEM_JSON
+#
+# Enable this to name files using a fixed-lenght hash instead of the percent-encoded URL
+#target_storage.data_format.filesystem.hash_file_name: true
+#
 # Enable this to compress the file content
 #target_storage.data_format.filesystem.compress_data: true
 
-# Enable this config to use ElasticSearch for target storage
+# Enable this to use the FILES data format
+target_storage.data_format.type: FILES
+target_storage.data_format.files.max_file_size: 134217728 # 128mb in bytes
+
+# Enable following lines to use the WARC data format and change its default settings
+#target_storage.data_format.type: WARC                    # enable WARC file format
+#target_storage.data_format.warc.compress: true           # enable GZIP compression
+#target_storage.data_format.warc.max_file_size: 262144000 # maximum file size in bytes
+
+# Enable following line to index pages in Elasticsearch
 #target_storage.data_format.type: ELASTICSEARCH
+#
+# (Transport client ES 1.5)
 #target_storage.data_format.elasticsearch.host: localhost
 #target_storage.data_format.elasticsearch.port: 9300
 #target_storage.data_format.elasticsearch.cluster_name: elasticsearch
+#
+# (REST client ES 1.x and 5.x)
+#target_storage.data_format.elasticsearch.rest.hosts:
+#  - http://localhost:9200
+#target_storage.data_format.elasticsearch.rest.connect_timeout: 30000
+#target_storage.data_format.elasticsearch.rest.socket_timeout: 30000
+#target_storage.data_format.elasticsearch.rest.max_retry_timeout_millis: 90000
+
+
+# Instead of configuring a single data format, you can also configure multiple
+# data formats in a list as follows. The settings for each data format should
+# be configured independently, as if you were configuring a single data format.
+# In the following config, data will be pushed to both FILES and ELASTICSEARCH.
+#
+#target_storage.data_formats:
+#  - FILES
+#  - ELASTICSEARCH
+
 
 # Performs hard focus or soft focus. When hard focus is enabled,
 # the crawler only follows links from pages classified as relevant
@@ -35,19 +62,11 @@ target_storage.hard_focus: true
 # Run bipartite crawler
 target_storage.bipartite: false
 
-# Relevance threshold for classified pages. Pages with probability of being
-# relevant above this threshold are considered relevant
-target_storage.relevance_threshold: 0.5
-
 # Maximum number of pages to visit
 target_storage.visited_page_limit: 10000000
 
 # Store only pages that contain english text using language detector
 target_storage.english_language_detection_enabled: true
-
-# Configurations for target storage's server
-target_storage.server.host: localhost
-target_storage.server.port: 1987
 
 #
 # Configurations for Link Storage
@@ -89,11 +108,11 @@ link_storage.online_learning.enabled: false
 # - MaximizeWebsitesLinkSelector
 link_storage.link_selector: TopkLinkSelector
 
-link_storage.max_size_cache_urls: 10000
+# Enable recrawling of sitemaps using at fixed time intervals (in minutes)
+#link_storage.recrawl_selector: SitemapsRecrawlSelector
+#link_storage.recrawl_selector.sitemaps.interval: 1
 
-# Configurations for link storage's server
-link_storage.server.host: localhost
-link_storage.server.port: 1988
+link_storage.max_size_cache_urls: 10000
 
 # Directory to store link storage's frontier database
 link_storage.directory: "data_url/dir"
@@ -108,10 +127,13 @@ link_storage.scheduler.max_links: 10000
 #
 # Configurations for Crawler Manager
 #
-crawler_manager.downloader.download_thread_pool_size: 100
-crawler_manager.downloader.max_retry_count: 2
 crawler_manager.downloader.user_agent.name: ACHE
 crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+#crawler_manager.downloader.user_agent.email: someone@example.com
+#crawler_manager.downloader.user_agent.string: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+
+crawler_manager.downloader.download_thread_pool_size: 100
+crawler_manager.downloader.max_retry_count: 2
 crawler_manager.downloader.valid_mime_types:
  - text/xml
  - text/html
@@ -119,6 +141,9 @@ crawler_manager.downloader.valid_mime_types:
  - application/x-asp
  - application/xhtml+xml
  - application/vnd.wap.xhtml+xml
+
+#use okhttp3Fetcher instead of simpleHttpFetcher
+crawler_manager.downloader.use_okhttp3_fetcher: true
 
 # Discovery of new links using sitemap.xml protocol
 link_storage.download_sitemap_xml: false

@@ -5,6 +5,7 @@ import java.io.PrintStream;
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.CliTool;
+import focusedCrawler.util.persistence.PersistentHashtable.DB;
 import focusedCrawler.util.persistence.TupleIterator;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
@@ -34,7 +35,7 @@ public class PrintFrontierLinksToFile extends CliTool {
     }
 
     private void printLinks(PrintStream out) throws Exception {
-        Frontier frontier = new Frontier(inputPath, 1000);
+        Frontier frontier = new Frontier(inputPath, 1000, DB.ROCKSDB);
         try (TupleIterator<LinkRelevance> it = frontier.iterator()) {
             while (it.hasNext()) {
                 LinkRelevance link = it.next().getValue();

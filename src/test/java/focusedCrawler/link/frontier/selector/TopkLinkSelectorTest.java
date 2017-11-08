@@ -10,7 +10,6 @@ import java.util.List;
 import org.junit.Test;
 
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 
 public class TopkLinkSelectorTest {
 

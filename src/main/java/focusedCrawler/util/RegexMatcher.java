@@ -11,25 +11,44 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Tests a string against a list of patterns and return true if link matches any of the patterns.
+ * Tests a string against a list of regular expression patterns and return true if text matches any
+ * of the patterns or if the provided list of patterns is empty.
  */
-public class RegexMatcher {
+public class RegexMatcher implements TextMatcher {
     
     private static final Logger logger = LoggerFactory.getLogger(RegexMatcher.class);
     
-    List<Pattern> patterns = new ArrayList<Pattern>();
-
-    protected RegexMatcher(String filename) {
-        this(loadRegexesFromFile(filename));
-    }
-
-    protected RegexMatcher(List<String> textPatterns) {
-        for (String pattern : textPatterns) {
+    private boolean isEmpty;
+    private boolean reverse;
+    protected List<Pattern> patterns = new ArrayList<Pattern>();
+    
+    private RegexMatcher(List<String> regexes, boolean reverse) {
+        this.reverse = reverse;
+        this.isEmpty = regexes == null || regexes.isEmpty();
+        for (String pattern : regexes) {
             patterns.add(Pattern.compile(pattern, Pattern.CASE_INSENSITIVE | Pattern.DOTALL));
         }
     }
 
+    /** 
+     * Performs matching against given String {@code text} and returns true if:
+     * <ul>
+     *  <li>no patterns were provided</li>
+     *  <li>reverse is false and all regexes match the given string 'text'</li>
+     *  <li>reverse is true and no regex matches the given text</li>
+     *  </ul>
+     * @param text
+     * @return
+     */
+    @Override
     public boolean matches(String text) {
+        // "reverse != matchesAll(text)" is equivalent to
+        // "reverse ? !matchesAll(text) : matchesAll(text)"
+        // without a using a if statement
+        return isEmpty || (reverse != matchesAll(text));
+    }
+
+    private boolean matchesAll(String text) {
         for (Pattern pattern : patterns) {
             if (pattern.matcher(text).matches()) {
                 return true;
@@ -38,12 +57,20 @@ public class RegexMatcher {
         return false;
     }
 
-    public static RegexMatcher fromFile(String filename) {
-        return new RegexMatcher(filename);
+    public static RegexMatcher fromWhitelistFile(String fileName) {
+        return new RegexMatcher(loadRegexesFromFile(fileName), false);
+    }
+
+    public static RegexMatcher fromBlacklistFile(String fileName) {
+        return new RegexMatcher(loadRegexesFromFile(fileName), true);
     }
     
-    public static RegexMatcher fromList(List<String> patterns) {
-        return new RegexMatcher(patterns);
+    public static RegexMatcher fromWhitelist(List<String> patterns) {
+        return new RegexMatcher(patterns, false);
+    }
+    
+    public static RegexMatcher fromBlacklist(List<String> patterns) {
+        return new RegexMatcher(patterns, true);
     }
     
     private static List<String> loadRegexesFromFile(String filename) {

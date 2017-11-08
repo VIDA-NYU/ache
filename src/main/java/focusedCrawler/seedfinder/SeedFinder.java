@@ -40,7 +40,7 @@ public class SeedFinder extends CliTool {
     @Option(name="--modelPath", description="The path to the page classifier model", required=true)
     private String modelPath;
 
-    @Option(name="--seedsPath", description="The path where the seeds generated should be saved")
+    @Option(name="--seedsPath", description="The directory where the seeds generated should be saved")
     private String seedsPath = "";
 
     @Option(name="--searchEngine", description="The search engine to be used")
@@ -96,7 +96,9 @@ public class SeedFinder extends CliTool {
         } finally {
             queryProcessor.close();
             seedsFile.close();
-            csvFile.close();
+            if(csvFile != null) {
+                csvFile.close();
+            }
         }
         
         System.out.println("\nSeeds file created at: "+seedFileName);

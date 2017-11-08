@@ -1,0 +1,35 @@
+version: '2'
+services:
+  ache:
+    image: vidanyu/ache
+    entrypoint: sh -c 'sleep 10 && /ache/bin/ache startCrawl -c /config/ -s /config/tor.seeds -o /data -e tor'
+    ports:
+      - "8080:8080"
+    volumes:
+      # mounts /config and /data directories to paths relative to path where this file is located
+      - ./data-ache/:/data
+      - ./:/config
+    links:
+      - torproxy
+      - elasticsearch
+    depends_on:
+      - torproxy
+      - elasticsearch
+  elasticsearch:
+    image: elasticsearch:2.4.5
+    environment:
+      - xpack.security.enabled=false
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./data-es/:/usr/share/elasticsearch/data # elasticsearch data will be stored at ./data-es/
+    ports:
+      - 9200:9200
+  torproxy:
+    image: dperson/torproxy
+    ports:
+      - "8118:8118"

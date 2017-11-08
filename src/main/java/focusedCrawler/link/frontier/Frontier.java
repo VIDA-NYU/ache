@@ -1,35 +1,12 @@
-/*
-############################################################################
-##
-## Copyright (C) 2006-2009 University of Utah. All rights reserved.
-##
-## This file is part of DeepPeep.
-##
-## This file may be used under the terms of the GNU General Public
-## License version 2.0 as published by the Free Software Foundation
-## and appearing in the file LICENSE.GPL included in the packaging of
-## this file.  Please review the following to ensure GNU General Public
-## Licensing requirements will be met:
-## http://www.opensource.org/licenses/gpl-license.php
-##
-## If you are unsure which license is appropriate for your use (for
-## instance, you are interested in developing a commercial derivative
-## of DeepPeep), please contact us at deeppeep@sci.utah.edu.
-##
-## This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-##
-############################################################################
-*/
 package focusedCrawler.link.frontier;
 
 import java.net.URLDecoder;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 
+import crawlercommons.robots.BaseRobotRules;
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.PersistentHashtable.DB;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.TupleIterator;
 
@@ -37,35 +14,26 @@ import focusedCrawler.util.persistence.TupleIterator;
 public class Frontier {
 
     protected PersistentHashtable<LinkRelevance> urlRelevance;
-    protected Map<String, Integer> scope = null;
-    private boolean useScope = false;
 
-    public Frontier(String directory, int maxCacheUrlsSize, Map<String, Integer> scope) {
-        
-        this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize, LinkRelevance.class);
-        
-        if (scope == null) {
-            this.useScope = false;
-            this.scope = new HashMap<String, Integer>();
-        } else {
-            this.scope = scope;
-            this.useScope = true;
-        }
-    }
+    private final PersistentHashtable<BaseRobotRules> robotRulesMap;
 
-    public Frontier(String directory, int maxCacheUrlsSize) {
-        this(directory, maxCacheUrlsSize, null);
+    public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend) {
+        this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize,
+                LinkRelevance.class, persistentHashtableBackend);
+        this.robotRulesMap = new PersistentHashtable<>(directory + "_robots", maxCacheUrlsSize,
+                BaseRobotRules.class, persistentHashtableBackend);
     }
 
     public void commit() {
         urlRelevance.commit();
+        robotRulesMap.commit();
     }
 
     /**
-     * 
-     * @return
-     * @throws Exception
+     * DEPRECATED: may cause OutOfMemoryError on large crawls. TODO: Provide an method that uses an
+     * iterator, and/or load just a sample of the data.
      */
+    @Deprecated
     public HashSet<String> visitedAuths() throws Exception {
         HashSet<String> result = new HashSet<String>();
         List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
@@ -78,19 +46,19 @@ public class Frontier {
         return result;
     }
 
-    public HashSet<String> visitedLinks() throws Exception {
-        HashSet<String> result = new HashSet<String>();
-        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
-        for (Tuple<LinkRelevance> tuple : tuples) {
-            double value = tuple.getValue().getRelevance();
-            if (value < 0) {
-                result.add(URLDecoder.decode(tuple.getKey(), "UTF-8"));
+    public void visitedLinks(Visitor<LinkRelevance> visitor) throws Exception {
+        urlRelevance.visitTuples((Tuple<LinkRelevance> tuple) -> {
+            if (tuple.getValue().getRelevance() < 0) {
+                visitor.visit(tuple.getValue());
             }
-        }
-        System.out.println(result.size()+" out of "+urlRelevance.getTable().size());
-        return result;
+        });
     }
 
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls. TODO: Provide an method that uses an
+     * iterator, and/or load just a sample of the data.
+     */
+    @Deprecated
     public HashSet<String> unvisitedAuths() throws Exception {
         HashSet<String> result = new HashSet<String>();
         List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
@@ -103,6 +71,11 @@ public class Frontier {
         return result;
     }
 
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls. TODO: Provide an method that uses an
+     * iterator, and/or load just a sample of the data.
+     */
+    @Deprecated
     public HashSet<String> visitedHubs() throws Exception {
         HashSet<String> result = new HashSet<String>();
         List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
@@ -115,6 +88,11 @@ public class Frontier {
         return result;
     }
 
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls. TODO: Provide an method that uses an
+     * iterator, and/or load just a sample of the data.
+     */
+    @Deprecated
     public HashSet<String> unvisitedHubs() throws Exception {
         HashSet<String> result = new HashSet<String>();
         List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
@@ -145,10 +123,13 @@ public class Frontier {
      * @throws FrontierPersistentException
      */
     public boolean insert(LinkRelevance linkRelev) throws FrontierPersistentException {
+        if (linkRelev == null) {
+            return false;
+        }
         boolean inserted = false;
         String url = linkRelev.getURL().toString();
-        Integer rel = exist(linkRelev);
-        if (rel == null && url.toString().length() < 210) {
+        Double relevance = exist(linkRelev);
+        if (relevance == null) {
             urlRelevance.put(url, linkRelev);
             inserted = true;
         }
@@ -164,23 +145,9 @@ public class Frontier {
      * @return
      * @throws FrontierPersistentException
      */
-    public Integer exist(LinkRelevance linkRelev) throws FrontierPersistentException {
-        String url = linkRelev.getURL().toString();
-        LinkRelevance resStr = urlRelevance.get(url);
-        if (resStr != null) {
-            return (int) resStr.getRelevance();
-        } else {
-            Integer result = new Integer(-1);
-            if (useScope == true) {
-                String host = linkRelev.getURL().getHost();
-                if (scope.get(host) != null) {
-                    result = null;
-                }
-            } else {
-                result = null;
-            }
-            return result;
-        }
+    public Double exist(LinkRelevance linkRelev) throws FrontierPersistentException {
+        LinkRelevance link = urlRelevance.get(linkRelev.getURL().toString());
+        return link == null ? null : link.getRelevance();
     }
 
     /**
@@ -195,24 +162,40 @@ public class Frontier {
         if (exist(linkRelevance) != null) {
             // we don't want to delete the URL file, it is useful to avoid visiting an old url
             double relevance = linkRelevance.getRelevance();
-            urlRelevance.put(url, new LinkRelevance(linkRelevance.getURL(), -relevance, linkRelevance.getType()));
+            double negativeRelevance = relevance > 0 ? -1*relevance : relevance;
+            urlRelevance.put(url, new LinkRelevance(linkRelevance.getURL(), negativeRelevance, linkRelevance.getType()));
         }
     }
 
     public void close() {
         urlRelevance.close();
-    }
-
-    public PersistentHashtable<LinkRelevance> getUrlRelevanceHashtable() {
-        return urlRelevance;
-    }
-
-    public Map<String, Integer> getScope() {
-        return scope;
+        robotRulesMap.close();
     }
 
     public TupleIterator<LinkRelevance> iterator() {
         return urlRelevance.iterator();
+    }
+
+    /**
+     * Inserts the robot rules object into the HashMap
+     * 
+     * @param link
+     * @param robotRules
+     * @throws NullPointerException
+     *             when either of the argument is null
+     */
+    public void insertRobotRules(LinkRelevance link, BaseRobotRules robotRules) {
+        if (link == null || robotRules == null) {
+            throw new NullPointerException("Link argument or robot rules argument cannot be null");
+        }
+        String hostname = link.getURL().getHost();
+        robotRulesMap.put(hostname, robotRules);
+    }
+
+    public boolean isDisallowedByRobots(LinkRelevance link) {
+        String hostname = link.getURL().getHost();
+        BaseRobotRules rules = robotRulesMap.get(hostname);
+        return rules != null && !rules.isAllowed(link.getURL().toString());
     }
 
 }

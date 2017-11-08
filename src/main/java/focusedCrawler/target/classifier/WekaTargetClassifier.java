@@ -199,15 +199,22 @@ public class WekaTargetClassifier implements TargetClassifier {
         public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters) throws IOException {
 
             WekaClassifierConfig params = yaml.treeToValue(parameters, WekaClassifierConfig.class);
-            params.model_file = basePath.resolve(params.model_file).toFile().getAbsolutePath();
-            params.features_file = basePath.resolve(params.features_file).toFile().getAbsolutePath();
-            params.stopwords_file = basePath.resolve(params.stopwords_file).toFile().getAbsolutePath();
+            params.model_file = resolveRelativePath(basePath, params.model_file);
+            params.features_file = resolveRelativePath(basePath, params.features_file);
+            params.stopwords_file = resolveRelativePath(basePath, params.stopwords_file);
 
             return WekaTargetClassifier.create(
                     params.model_file,
                     params.features_file,
                     params.relevanceThreshold,
                     params.stopwords_file);
+        }
+
+        private String resolveRelativePath(Path basePath, String relative) {
+            if (relative == null) {
+                return null;
+            }
+            return basePath.resolve(relative).toFile().getAbsolutePath();
         }
 
     }

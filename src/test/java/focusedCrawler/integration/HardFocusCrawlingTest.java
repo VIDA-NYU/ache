@@ -19,7 +19,7 @@ import org.junit.rules.TemporaryFolder;
 import com.sun.net.httpserver.HttpServer;
 
 import focusedCrawler.Main;
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.TestWebServerBuilder;
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
@@ -60,10 +60,10 @@ public class HardFocusCrawlingTest {
         Main.main(args);
 
         // then
-        ConfigService config = new ConfigService(configPath + "/ache.yml");
+        Configuration config = new Configuration(configPath + "/ache.yml");
         String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
         String dir = Paths.get(outputPath, linkDirectory).toString();
-        Frontier frontier = new Frontier(dir, 1000);
+        Frontier frontier = new Frontier(dir, 1000, config.getLinkStorageConfig().getPersistentHashtableBackend());
 
         List<String> shouldBeDownloaded = asList(
                 "index.html",
@@ -80,12 +80,12 @@ public class HardFocusCrawlingTest {
 
         for (String url : shouldBeDownloaded) {
             LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat(frontier.exist(link), is(lessThan(0)));
+            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(lessThan(0d)));
         }
 
         for (String url : shouldNOTBeDownloaded) {
             LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat(frontier.exist(link), is(nullValue()));
+            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(nullValue()));
         }
     }
     

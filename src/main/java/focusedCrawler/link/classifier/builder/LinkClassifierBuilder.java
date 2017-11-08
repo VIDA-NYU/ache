@@ -12,10 +12,12 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
@@ -25,9 +27,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.BipartiteGraphRepository;
+import focusedCrawler.link.classifier.LNClassifier;
 import focusedCrawler.link.classifier.LinkClassifier;
-import focusedCrawler.link.classifier.LinkClassifierFactory;
-import focusedCrawler.link.frontier.Frontier;
+import focusedCrawler.link.classifier.LinkClassifierAuthority;
+import focusedCrawler.link.classifier.LinkClassifierHub;
+import focusedCrawler.link.classifier.LinkClassifierImpl;
+import focusedCrawler.link.frontier.FrontierManager;
+import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.util.Sampler;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.persistence.Tuple;
@@ -42,22 +49,24 @@ import weka.core.SerializationHelper;
 public class LinkClassifierBuilder {
     
     private static final Logger logger = LoggerFactory.getLogger(LinkClassifierBuilder.class);
-
+    
 	private BipartiteGraphRepository graphRep;
 	private LinkNeighborhoodWrapper wrapper;
 	private StopList stoplist;
 	private PorterStemmer stemmer;
-	private Frontier frontier;
 	private String[] features;
-	
+    private int maxSamples = 5000; // TODO make this configurable
+    
 	private Path linkClassifierFolder;
+
+    private FrontierManager frontierManager;
 	
-	public LinkClassifierBuilder(String dataPath, BipartiteGraphRepository graphRep, StopList stoplist, LinkNeighborhoodWrapper wrapper, Frontier frontier){
-		this.graphRep = graphRep;
-		this.stemmer = new PorterStemmer();
+    public LinkClassifierBuilder(String dataPath, StopList stoplist, FrontierManager frontierManager) {
 		this.stoplist = stoplist;
-		this.wrapper = wrapper;
-		this.frontier = frontier;
+		this.frontierManager = frontierManager;
+		this.graphRep = frontierManager.getGraphRepository();
+		this.stemmer = new PorterStemmer();
+		this.wrapper = new LinkNeighborhoodWrapper(stoplist);
 		this.linkClassifierFolder = Paths.get(dataPath, "/link_classifier/");
         if (!Files.exists(linkClassifierFolder)) {
             try {
@@ -68,10 +77,11 @@ public class LinkClassifierBuilder {
             }
         }
 	}
-	
-	public synchronized LinkClassifier forwardlinkTraining(HashSet<String> relSites, int levels, String className) throws Exception{
+
+    public synchronized LinkClassifier forwardlinkTraining(Set<String> relUrls, int levels,
+            String className) throws Exception {
 		
-	    Vector<Vector<LinkNeighborhood>> instances = loadTrainingInstances(relSites, levels);
+	    List<Sampler<LinkNeighborhood>> instances = loadTrainingInstances(relUrls, levels);
 		
 		String wekaInputAsString = createWekaInput(instances, false);
         
@@ -94,9 +104,39 @@ public class LinkClassifierBuilder {
             classValues = new String[] {"0", "1", "2"};
         }
         
-        return LinkClassifierFactory.createLinkClassifierImpl(
-                features, classValues, classifier, className, levels);
+        return createLinkClassifierImpl(features, classValues, classifier, className, levels);
 	}
+
+    public LinkClassifier createLinkClassifierImpl(String[] attributes, String[] classValues,
+            Classifier classifier, String className, int levels) {
+
+        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
+
+        weka.core.FastVector vectorAtt = new weka.core.FastVector();
+        for (int i = 0; i < attributes.length; i++) {
+            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
+        }
+        weka.core.FastVector classAtt = new weka.core.FastVector();
+        for (int i = 0; i < classValues.length; i++) {
+            classAtt.addElement(classValues[i]);
+        }
+        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
+        Instances insts = new Instances("link_classification", vectorAtt, 1);
+        insts.setClassIndex(attributes.length);
+
+        LinkClassifier linkClassifier = null;
+        if (className.indexOf("LinkClassifierImpl") != -1) {
+            LNClassifier lnClassifier = new LNClassifier(classifier, insts, wrapper, attributes);
+            linkClassifier = new LinkClassifierImpl(lnClassifier);
+        }
+        if (className.indexOf("LinkClassifierAuthority") != -1) {
+            linkClassifier = new LinkClassifierAuthority(classifier, insts, wrapper, attributes);
+        }
+        if (className.indexOf("LinkClassifierHub") != -1) {
+            linkClassifier = new LinkClassifierHub(classifier, insts, wrapper, attributes);
+        }
+        return linkClassifier;
+    }
     
     public Classifier trainWekaClassifier(String wekaInputAsString) throws Exception {
         Instances data = null;
@@ -121,138 +161,148 @@ public class LinkClassifierBuilder {
         outputFile.close();
     }
 
-    private Vector<Vector<LinkNeighborhood>> loadTrainingInstances(
-            HashSet<String> relSites, int levels)
-            throws Exception,
-                   MalformedURLException,
-                   IOException {
+    private List<Sampler<LinkNeighborhood>> loadTrainingInstances(Set<String> relevantUrls,
+            int levels) throws Exception {
 
-        Vector<Vector<LinkNeighborhood>> instances = null;
-        if (levels == 0) {// pos and neg case
-            instances = new Vector<Vector<LinkNeighborhood>>(2);
-            instances.add(new Vector<LinkNeighborhood>());
-            instances.add(new Vector<LinkNeighborhood>());
-        } else { // levels case
-            instances = new Vector<Vector<LinkNeighborhood>>(levels);
+        final List<Sampler<LinkNeighborhood>> instances = new ArrayList<>();
+        if (levels == 0) {
+            // positive and negative case
+            instances.add(new Sampler<LinkNeighborhood>(maxSamples));
+            instances.add(new Sampler<LinkNeighborhood>(maxSamples));
+        } else {
+            // levels case
             for (int i = 0; i < levels; i++) {
-                instances.add(new Vector<LinkNeighborhood>());
+                instances.add(new Sampler<LinkNeighborhood>(maxSamples));
             }
         }
 
-        HashSet<String> visitedLinks = frontier.visitedLinks();
-        for (Iterator<String> iterator = visitedLinks.iterator(); iterator.hasNext();) {
-            URL url = new URL(iterator.next());
-            
-            LinkNeighborhood ln = graphRep.getLN(url);
-            if (ln == null) {
-                continue;
-            }
+        frontierManager.getFrontier().visitedLinks((LinkRelevance lr) -> {
+            try {
+                URL url = lr.getURL();
+                LinkNeighborhood ln = graphRep.getLN(url);
+                if (ln == null) {
+                    return;
+                }
 
-            if (levels == 0) {
-                if (relSites.contains(url.toString())) {
-                    instances.elementAt(0).add(ln);
+                if (levels == 0) {
+                    if (relevantUrls.contains(url.toString())) {
+                        instances.get(0).sample(ln);
+                    } else {
+                        if (instances.get(1).reservoirSize() < instances.get(0).reservoirSize()) {
+                            instances.get(1).sample(ln);
+                        }
+                    }
                 } else {
-                    if (instances.elementAt(1).size() < instances.elementAt(0).size()) {
-                        instances.elementAt(1).add(ln);
+                    if (relevantUrls.contains(ln.getLink().toString())) {
+                        instances.get(0).sample(ln);
+                        addBacklinks(instances, ln.getLink(), 1, levels, relevantUrls);
                     }
                 }
-            } else {
-                if (relSites.contains(ln.getLink().toString())) {
-                    instances.elementAt(0).add(ln);
-                    addBacklinks(instances, ln.getLink(), 1, levels, relSites);
-                }
+            } catch (Exception e) {
+
             }
-        }
+        });
+
         return instances;
     }
 	
 	
-	private void addBacklinks(Vector<Vector<LinkNeighborhood>> instances, URL url, int level, int limit, HashSet<String> relSites) throws IOException{
-		if(level >= limit){
-			return;
-		}
-		LinkNeighborhood[] backlinks = graphRep.getBacklinksLN(url);
-		for (int i = 0; i < backlinks.length; i++) {
-			URL tempURL = backlinks[i].getLink();
-			if(!relSites.contains(tempURL.toString())){
-				instances.elementAt(level).add(backlinks[i]);				
-			}
-			addBacklinks(instances,tempURL,level+1,limit,relSites);
-		}
-	}
-	
-	public LinkClassifier backlinkTraining(HashMap<String,VSMElement> outlinkWeights) throws Exception{
-//		HashMap<String,VSMElement> sitesCount = new HashMap<String, VSMElement>();
-		Vector<VSMElement> trainingSet = new Vector<VSMElement>();
-		Tuple<String>[] tuples = graphRep.getHubGraph();
-		for (int i = 0; i < tuples.length; i++) {
-			String hubId = tuples[i].getKey();
-			String[] outlinks = tuples[i].getValue().split("###");
-			double totalProb = 0;
-			for (int j = 0; j < outlinks.length; j++) {
-				VSMElement elem = outlinkWeights.get(outlinks[j]+"_auth");
-				if(elem != null){
-					totalProb = totalProb + elem.getWeight();
-				}
-			}
-			String url = graphRep.getHubURL(hubId);
-			if(url != null && outlinks.length > 20){
-				LinkNeighborhood ln = graphRep.getBacklinkLN(new URL(url));
-				if(ln != null){
-					VSMElement elem = new VSMElement(ln.getLink().toString() + ":::" + ln.getAroundString(), totalProb/outlinks.length);
-					trainingSet.add(elem);
-				}
-			}
-		}
-		System.out.println("TOTAL TRAINING:" + trainingSet.size());
+    private void addBacklinks(List<Sampler<LinkNeighborhood>> instances, URL url, int level,
+            int limit, Set<String> relUrls) throws IOException {
+        if (level >= limit) {
+            return;
+        }
+        LinkNeighborhood[] backlinks = graphRep.getBacklinksLN(url);
+        for (int i = 0; i < backlinks.length; i++) {
+            URL tempURL = backlinks[i].getLink();
+            if (!relUrls.contains(tempURL.toString())) {
+                instances.get(level).sample(backlinks[i]);
+            }
+            addBacklinks(instances, tempURL, level + 1, limit, relUrls);
+        }
+    }
+
+    public LinkClassifier backlinkTraining(HashMap<String, VSMElement> outlinkWeights)
+            throws Exception {
+
+        // HashMap<String,VSMElement> sitesCount = new HashMap<String, VSMElement>();
+        List<VSMElement> trainingSet = new ArrayList<VSMElement>();
+        Tuple<String>[] tuples = graphRep.getHubGraph();
+        for (int i = 0; i < tuples.length; i++) {
+            String hubId = tuples[i].getKey();
+            String[] outlinks = tuples[i].getValue().split("###");
+            double totalProb = 0;
+            for (int j = 0; j < outlinks.length; j++) {
+                VSMElement elem = outlinkWeights.get(outlinks[j] + "_auth");
+                if (elem != null) {
+                    totalProb = totalProb + elem.getWeight();
+                }
+            }
+            String url = graphRep.getHubURL(hubId);
+            if (url != null && outlinks.length > 20) {
+                LinkNeighborhood ln = graphRep.getBacklinkLN(new URL(url));
+                if (ln != null) {
+                    VSMElement elem =
+                            new VSMElement(ln.getLink().toString() + ":::" + ln.getAroundString(),
+                                    totalProb / outlinks.length);
+                    trainingSet.add(elem);
+                }
+            }
+        }
+        System.out.println("TOTAL TRAINING:" + trainingSet.size());
 		
-		Vector<Vector<LinkNeighborhood>> instances = new Vector<Vector<LinkNeighborhood>>(2);
-		Vector<LinkNeighborhood> posSites = new Vector<LinkNeighborhood>();
-		Vector<LinkNeighborhood> negSites = new Vector<LinkNeighborhood>();
-		instances.add(posSites);
-		instances.add(negSites);
-		Collections.sort(trainingSet,new VSMElementComparator());
-		Vector<LinkNeighborhood> allLNs = new Vector<LinkNeighborhood>();
-		for (int i = 0; i < trainingSet.size(); i++) {
-			String[] parts = trainingSet.elementAt(i).getWord().split(":::");
-			LinkNeighborhood ln = new LinkNeighborhood(new URL(parts[0]));
-			if(parts.length > 1){
-				StringTokenizer tokenizer = new StringTokenizer(parts[1]," ");
-				Vector<String> aroundTemp = new Vector<String>();
-				while(tokenizer.hasMoreTokens()){
-					aroundTemp.add(tokenizer.nextToken());
-	   		  	}
-	   		  	String[] aroundArray = new String[aroundTemp.size()];
-	   		  	aroundTemp.toArray(aroundArray);
-	   		  	ln.setAround(aroundArray);
-			}
-			allLNs.add(ln);
-		}
-		int sampleSize = Math.min(5000,allLNs.size()/2);
-		for (int i = 0; i < allLNs.size(); i++) {
-			if(posSites.size() < sampleSize){
-				posSites.add(allLNs.elementAt(i));
-			}
-		}
-		for (int i = allLNs.size()-1; i >= 0 ; i--) {
-			if(negSites.size() < sampleSize){
-				negSites.add(allLNs.elementAt(i));
-			}
-		}
 		
-		LinkNeighborhood[] pos = new LinkNeighborhood[posSites.size()];
-		posSites.toArray(pos);
-		
-		LinkNeighborhood[] neg = new LinkNeighborhood[negSites.size()];
-		negSites.toArray(neg);
-		
-		String wekaInput = createWekaInput(instances, true);
-		
-		Classifier classifier = trainWekaClassifier(wekaInput);
-		
-		String[] classValues = new String[]{"POS","NEG"};
-		return LinkClassifierFactory.createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub",0);
-	}
+        Collections.sort(trainingSet, new VSMElementComparator());
+
+        List<LinkNeighborhood> allLNs = new ArrayList<LinkNeighborhood>();
+        for (int i = 0; i < trainingSet.size(); i++) {
+            String[] parts = trainingSet.get(i).getWord().split(":::");
+            LinkNeighborhood ln = new LinkNeighborhood(new URL(parts[0]));
+            if (parts.length > 1) {
+                StringTokenizer tokenizer = new StringTokenizer(parts[1], " ");
+                Vector<String> aroundTemp = new Vector<String>();
+                while (tokenizer.hasMoreTokens()) {
+                    aroundTemp.add(tokenizer.nextToken());
+                }
+                String[] aroundArray = new String[aroundTemp.size()];
+                aroundTemp.toArray(aroundArray);
+                ln.setAround(aroundArray);
+            }
+            allLNs.add(ln);
+        }
+
+        // Sample the backlinks based on position in the list
+        List<LinkNeighborhood> posSites = new ArrayList<LinkNeighborhood>();
+        List<LinkNeighborhood> negSites = new ArrayList<LinkNeighborhood>();
+        int sampleSize = Math.min(5000, allLNs.size() / 2);
+        for (int i = 0; i < allLNs.size(); i++) {
+            if (posSites.size() < sampleSize) {
+                posSites.add(allLNs.get(i));
+            }
+        }
+        for (int i = allLNs.size() - 1; i >= 0; i--) {
+            if (negSites.size() < sampleSize) {
+                negSites.add(allLNs.get(i));
+            }
+        }
+
+
+        // TODO Following code is not really doing a sample, it's just converting it the lists in
+        // Sampler objects to be compatible with createWekaInput method. Need to do some refactoring
+        // in this whole class.
+        List<Sampler<LinkNeighborhood>> instances = new ArrayList<Sampler<LinkNeighborhood>>(2);
+        Sampler<LinkNeighborhood> posSamples = new Sampler<LinkNeighborhood>(posSites.size());
+        Sampler<LinkNeighborhood> negSamples = new Sampler<LinkNeighborhood>(negSites.size());
+        instances.add(posSamples);
+        instances.add(negSamples);
+
+        // Train actual classifier
+        String wekaInput = createWekaInput(instances, true);
+        Classifier classifier = trainWekaClassifier(wekaInput);
+
+        String[] classValues = new String[] {"POS", "NEG"};
+        return createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub", 0);
+    }
 
 
     /**
@@ -263,14 +313,17 @@ public class LinkClassifierBuilder {
      * @return
      * @throws IOException
      */
-    private String createWekaInput(Vector<Vector<LinkNeighborhood>> instances, boolean backlink)
+    private String createWekaInput(List<Sampler<LinkNeighborhood>> instances, boolean backlink)
             throws IOException {
 
         StringBuffer output = new StringBuffer();
         output.append("@relation classifier\n");
-        Vector<LinkNeighborhood> allInstances = new Vector<LinkNeighborhood>();
+        List<LinkNeighborhood> allInstances = new ArrayList<LinkNeighborhood>();
         for (int i = 0; i < instances.size(); i++) {
-            allInstances.addAll(instances.elementAt(i));
+            Sampler<LinkNeighborhood> sampler = instances.get(i);
+            for (LinkNeighborhood ln : sampler.getSamples()) {
+                allInstances.add(ln);
+            }
         }
         features = selectBestFeatures(allInstances, backlink);
         for (int i = 0; i < features.length; i++) {
@@ -296,14 +349,13 @@ public class LinkClassifierBuilder {
      * @return
      * @throws IOException
      */
-    private String generatLines(String[] features, Vector<Vector<LinkNeighborhood>> instances)
+    private String generatLines(String[] features, List<Sampler<LinkNeighborhood>> instances)
             throws IOException {
         StringBuffer buffer = new StringBuffer();
         for (int i = 0; i < instances.size(); i++) {
-            Vector<LinkNeighborhood> level = instances.elementAt(i);
-            System.out.println(level.size());
-            for (int j = 0; j < level.size(); j++) {
-                LinkNeighborhood ln = level.elementAt(j);
+            Sampler<LinkNeighborhood> levelSamples = instances.get(i);
+
+            for (LinkNeighborhood ln : levelSamples.getSamples()) {
                 StringBuffer line = new StringBuffer();
                 HashMap<String, Instance> featureValue = wrapper.extractLinks(ln, features);
                 Iterator<String> iter = featureValue.keySet().iterator();
@@ -341,14 +393,16 @@ public class LinkClassifierBuilder {
 	 * @return
 	 * @throws MalformedURLException
 	 */
-	private String[] selectBestFeatures(Vector<LinkNeighborhood> allNeighbors, boolean backlink) throws MalformedURLException{
-		Vector<String> finalWords = new Vector<>();
+    private String[] selectBestFeatures(List<LinkNeighborhood> allNeighbors, boolean backlink)
+            throws MalformedURLException {
+
+		List<String> finalWords = new ArrayList<>();
 		Set<String> usedURLTemp = new HashSet<>();
 		Map<String, WordFrequency> urlWords = new HashMap<>();
 		Map<String, WordFrequency> anchorWords = new HashMap<>();
 		Map<String, WordFrequency> aroundWords = new HashMap<>();
 		for (int l = 0; l < allNeighbors.size(); l++) {
-			LinkNeighborhood element = allNeighbors.elementAt(l);
+			LinkNeighborhood element = allNeighbors.get(l);
 		        //anchor
 			String[] anchorTemp = element.getAnchor();
 			for (int j = 0; j < anchorTemp.length; j++) {

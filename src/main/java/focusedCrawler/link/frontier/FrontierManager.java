@@ -1,48 +1,42 @@
-/*
-############################################################################
-##
-## Copyright (C) 2006-2009 University of Utah. All rights reserved.
-##
-## This file is part of DeepPeep.
-##
-## This file may be used under the terms of the GNU General Public
-## License version 2.0 as published by the Free Software Foundation
-## and appearing in the file LICENSE.GPL included in the packaging of
-## this file.  Please review the following to ensure GNU General Public
-## Licensing requirements will be met:
-## http://www.opensource.org/licenses/gpl-license.php
-##
-## If you are unsure which license is appropriate for your use (for
-## instance, you are interested in developing a commercial derivative
-## of DeepPeep), please contact us at deeppeep@sci.utah.edu.
-##
-## This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-##
-############################################################################
- */
 package focusedCrawler.link.frontier;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
+import org.elasticsearch.common.netty.util.internal.ConcurrentHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.codahale.metrics.Gauge;
 import com.codahale.metrics.Timer;
 import com.codahale.metrics.Timer.Context;
 
-import focusedCrawler.link.DownloadScheduler;
+import focusedCrawler.link.BipartiteGraphRepository;
+import focusedCrawler.link.LinkStorageConfig;
+import focusedCrawler.link.backlink.BacklinkSurfer;
+import focusedCrawler.link.classifier.LinkClassifier;
+import focusedCrawler.link.classifier.LinkClassifierException;
+import focusedCrawler.link.classifier.LinkClassifierFactory;
+import focusedCrawler.link.classifier.LinkClassifierHub;
 import focusedCrawler.link.frontier.selector.LinkSelector;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.LogFile;
 import focusedCrawler.util.MetricsManager;
-import focusedCrawler.util.persistence.Tuple;
-import focusedCrawler.util.persistence.TupleIterator;
+import focusedCrawler.util.parser.BackLinkNeighborhood;
+import focusedCrawler.util.parser.LinkNeighborhood;
 
 /**
  * This class manages the crawler frontier
@@ -55,151 +49,104 @@ public class FrontierManager {
 
     private static final Logger logger = LoggerFactory.getLogger(FrontierManager.class);
 
-    private final Frontier frontier;
+    private final int maxPagesPerDomain;
     private final int linksToLoad;
-    private final LinkFilter linkFilter;
-    private final LinkSelector linkSelector;
-    private final HostManager hostsManager;
     private final boolean downloadRobots;
-    private final DownloadScheduler scheduler;
+    private final boolean insertSitemaps;
+    private final boolean disallowSitesInRobotsFile;
+    private final boolean useScope;
+
+    private BacklinkSurfer backlinkSurfer;
+    private LinkClassifier backlinkClassifier;
+    private LinkClassifier outlinkClassifier;
+    private HashMap<String, Integer> domainCounter;
+
+    private final BipartiteGraphRepository graphRepository;
+    private final CrawlScheduler scheduler;
+    private final Frontier frontier;
+    private final LinkFilter linkFilter;
+    private final HostManager hostsManager;
     private final LogFile schedulerLog;
     private final MetricsManager metricsManager;
+    private final Set<String> scope = Collections.newSetFromMap(new ConcurrentHashMap<>());
 
-    private boolean linksRejectedDuringLastLoad;
-    private int availableLinksDuringLoad;
-    private int rejectedLinksDuringLoad;
-    private int uncrawledLinksDuringLoad;
-    private int unavailableLinksDuringLoad;
-	private Timer frontierLoadTimer;
 	private Timer insertTimer;
 	private Timer selectTimer;
 
-    public FrontierManager(Frontier frontier, String dataPath, boolean downloadRobots,
-                           int linksToLoad, int schedulerMaxLinks, int schdulerMinAccessInterval,
-                           LinkSelector linkSelector, LinkFilter linkFilter,
+    private PrintStream seedScopeFile;
+
+    public FrontierManager(Frontier frontier, String dataPath, String modelPath,
+                           LinkStorageConfig config, LinkSelector linkSelector,
+                           LinkSelector recrawlSelector, LinkFilter linkFilter,
                            MetricsManager metricsManager) {
+
         this.frontier = frontier;
-        this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"));;
-        this.downloadRobots = downloadRobots;
-        this.linksToLoad = linksToLoad;
-        this.linkSelector = linkSelector;
         this.linkFilter = linkFilter;
-        this.scheduler = new DownloadScheduler(schdulerMinAccessInterval, schedulerMaxLinks);
-        this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
         this.metricsManager = metricsManager;
+        this.insertSitemaps = config.getDownloadSitemapXml();
+        this.disallowSitesInRobotsFile = config.getDisallowSitesInRobotsFile();
+        this.downloadRobots = getDownloadRobots();
+        this.linksToLoad = config.getSchedulerMaxLinks();
+        this.maxPagesPerDomain = config.getMaxPagesPerDomain();
+        this.domainCounter = new HashMap<String, Integer>();
+        this.scheduler = new CrawlScheduler(linkSelector, recrawlSelector, frontier, metricsManager,
+                                            config.getSchedulerHostMinAccessInterval(), linksToLoad);
+        this.graphRepository = new BipartiteGraphRepository(dataPath, config.getPersistentHashtableBackend());
+        this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"), config.getPersistentHashtableBackend());;
+        this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
+        this.outlinkClassifier = LinkClassifierFactory.create(modelPath, config);
+        if (config.getBacklinks()) {
+            this.backlinkSurfer = new BacklinkSurfer(config.getBackSurferConfig());
+            this.backlinkClassifier = new LinkClassifierHub();
+        }
+        this.useScope = config.isUseScope();
+        this.openSeedScopeFile(dataPath);
         this.setupMetrics();
-        this.loadQueue(linksToLoad);
+    }
+
+    private void openSeedScopeFile(String dataPath) {
+        Path path = Paths.get(dataPath, "seeds_scope.txt");
+        try {
+            if (Files.exists(path)) {
+                List<String> lines = Files.readAllLines(path);
+                for (String line : lines) {
+                    scope.add(new URL(line).getHost());
+                }
+            }
+            this.seedScopeFile = new PrintStream(path.toFile());
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to open file: " + path.toString());
+        }
     }
 
     private void setupMetrics() {
-        Gauge<Integer> numberOfLinksGauge = () -> scheduler.numberOfLinks();
-        metricsManager.register("frontier_manager.scheduler.number_of_links", numberOfLinksGauge);
-        
-        Gauge<Integer> nonExpiredDomainsGauge = () -> scheduler.numberOfNonExpiredDomains();
-        metricsManager.register("frontier_manager.scheduler.non_expired_domains", nonExpiredDomainsGauge);
-        
-        Gauge<Integer> emptyDomainsGauge = () -> scheduler.numberOfEmptyDomains();
-        metricsManager.register("frontier_manager.scheduler.empty_domains", emptyDomainsGauge);
-        
-        Gauge<Integer> availableLinksGauge = () -> availableLinksDuringLoad;
-        metricsManager.register("frontier_manager.last_load.available", availableLinksGauge);
-
-        Gauge<Integer> unavailableLinksGauge = () -> unavailableLinksDuringLoad;
-        metricsManager.register("frontier_manager.last_load.unavailable", unavailableLinksGauge);
-        
-        Gauge<Integer> rejectedLinksGauge = () -> rejectedLinksDuringLoad;
-        metricsManager.register("frontier_manager.last_load.rejected", rejectedLinksGauge);
-        
-        Gauge<Integer> uncrawledLinksGauge = () -> uncrawledLinksDuringLoad;
-        metricsManager.register("frontier_manager.last_frontier_load.uncrawled", uncrawledLinksGauge);
-        
-        frontierLoadTimer = metricsManager.getTimer("frontier_manager.load.time");
-        insertTimer = metricsManager.getTimer("frontier_manager.insert.time");
-        selectTimer = metricsManager.getTimer("frontier_manager.select.time");
-
+        this.insertTimer = metricsManager.getTimer("frontier_manager.insert.time");
+        this.selectTimer = metricsManager.getTimer("frontier_manager.select.time");
     }
 
-    public Frontier getFrontierPersistent() {
-        return this.frontier;
+    public void forceReload() {
+        scheduler.reload();
     }
 
-    public void clearFrontier() {
-        logger.info("Cleaning frontier... current queue size: " + scheduler.numberOfLinks());
-        scheduler.clear();
-        logger.info("# Queue size:" + scheduler.numberOfLinks());
-    }
-
-    private void loadQueue(int numberOfLinks) {
-        logger.info("Loading more links from frontier into the scheduler...");
-        scheduler.clear();
-        frontier.commit();
-        Context timerContext = frontierLoadTimer.time();
-        try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
-            
-            int rejectedLinks = 0;
-            int uncrawledLinks = 0;
-            int availableLinks = 0;
-            int unavailableLinks = 0;
-
-            linkSelector.startSelection(numberOfLinks);
-            while(it.hasNext()) {
-                Tuple<LinkRelevance> tuple = it.next();
-                LinkRelevance link = tuple.getValue();
-                
-                // Links already downloaded or not relevant
-                if (link.getRelevance() <= 0) {
-                    continue;
-                }
-                uncrawledLinks++;
-                // check whether link can be download now according to politeness constraints 
-                if(scheduler.canDownloadNow(link)) {
-                    // consider link to  be downloaded
-                    linkSelector.evaluateLink(link);
-                    availableLinks++;
-                } else {
-                    unavailableLinks++;
-                    rejectedLinks++;
-                }
-            }
-            
-            List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
-            
-            int linksAdded = 0;
-            for (LinkRelevance link : selectedLinks) {
-                boolean addedLink = scheduler.addLink(link);
-                if(addedLink) {
-                    linksAdded++;
-                } else {
-                    rejectedLinks++;
-                }
-            }
-            
-            this.availableLinksDuringLoad = availableLinks;
-            this.unavailableLinksDuringLoad = unavailableLinks;
-            this.uncrawledLinksDuringLoad = uncrawledLinks;
-            this.rejectedLinksDuringLoad = rejectedLinks;
-            this.linksRejectedDuringLastLoad = rejectedLinks > 0;
-            
-            logger.info("Loaded {} links.", linksAdded);
-        } catch (Exception e) {
-            logger.error("Failed to read items from the frontier.", e);
-        } finally {
-            timerContext.stop();
-        }
-    }
-
-    public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {
-        if (elem.getRelevance() <= 0) {
+    public boolean isRelevant(LinkRelevance link) throws FrontierPersistentException {
+        if (link.getRelevance() <= 0) {
             return false;
         }
 
-        Integer value = frontier.exist(elem);
+        if (useScope && !scope.contains(link.getURL().getHost())) {
+            return false;
+        }
+
+        if (disallowSitesInRobotsFile && frontier.isDisallowedByRobots(link)) {
+            return false;
+        }
+
+        Double value = frontier.exist(link);
         if (value != null) {
             return false;
         }
 
-        String url = elem.getURL().toString();
-        if (linkFilter.accept(url) == false) {
+        if (!linkFilter.accept(link)) {
             return false;
         }
 
@@ -216,6 +163,9 @@ public class FrontierManager {
     public boolean insert(LinkRelevance linkRelevance) throws FrontierPersistentException {
         Context timerContext = insertTimer.time();
         try {
+            if (linkRelevance == null) {
+                return false;
+            }
             boolean insert = isRelevant(linkRelevance);
             if (insert) {
                 if (downloadRobots) {
@@ -224,8 +174,8 @@ public class FrontierManager {
                     if (!hostsManager.isKnown(hostName)) {
                         hostsManager.insert(hostName);
                         try {
-                            URL robotUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
-                            LinkRelevance sitemap = new LinkRelevance(robotUrl, 299, LinkRelevance.Type.ROBOTS);
+                            URL robotsUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
+                            LinkRelevance sitemap = LinkRelevance.createRobots(robotsUrl.toString(), 299);
                             frontier.insert(sitemap);
                         } catch (Exception e) {
                             logger.warn("Failed to insert robots.txt for host: " + hostName, e);
@@ -233,6 +183,7 @@ public class FrontierManager {
                     }
                 }
                 insert = frontier.insert(linkRelevance);
+                scheduler.notifyLinkInserted();
             }
             return insert;
         } finally {
@@ -241,26 +192,24 @@ public class FrontierManager {
     }
 
     public LinkRelevance nextURL() throws FrontierPersistentException, DataNotFoundException {
+        return nextURL(false);
+    }
+    
+    public LinkRelevance nextURL(boolean asyncLoad) throws FrontierPersistentException, DataNotFoundException {
         Context timerContext = selectTimer.time();
         try {
-            if (!scheduler.hasLinksAvailable()) {
-                loadQueue(linksToLoad);
-            }
-
-            LinkRelevance link = scheduler.nextLink();
+            LinkRelevance link = scheduler.nextLink(asyncLoad);
             if (link == null) {
-                if (scheduler.hasPendingLinks() || linksRejectedDuringLastLoad) {
+                if (scheduler.hasPendingLinks()) {
                     throw new DataNotFoundException(false, "No links available for selection right now.");
                 } else {
                     throw new DataNotFoundException(true, "Frontier run out of links.");
                 }
             }
-
             frontier.delete(link);
 
             schedulerLog.printf("%d\t%.5f\t%s\n", System.currentTimeMillis(),
                                 link.getRelevance(), link.getURL().toString());
-
             return link;
         } finally {
             timerContext.stop();
@@ -268,39 +217,181 @@ public class FrontierManager {
     }
 
     public void close() {
+        graphRepository.close();
         frontier.commit();
         frontier.close();
         hostsManager.close();
         schedulerLog.close();
+        seedScopeFile.close();
     }
 
     public Frontier getFrontier() {
         return frontier;
     }
 
-    public void addSeeds(String[] seeds) {
-        if (seeds != null && seeds.length > 0) {
+    public void addSeeds(List<String> seeds) {
+        if (seeds != null && seeds.size() > 0) {
             int count = 0;
+            int errors = 0;
+            logger.info("Adding {} seed URL(s)...", seeds.size());
             for (String seed : seeds) {
-                logger.info("Adding seed URL: " + seed);
-
-                URL seedUrl;
                 try {
-                    seedUrl = new URL(seed);
-                } catch (MalformedURLException e) {
-                    throw new IllegalArgumentException("Invalid seed URL provided: " + seed, e);
-                }
-                LinkRelevance link = new LinkRelevance(seedUrl, LinkRelevance.DEFAULT_RELEVANCE);
-                try {
+                    LinkRelevance link = LinkRelevance.createForward(seed, LinkRelevance.DEFAULT_RELEVANCE);
+                    if (link == null) {
+                        logger.warn("Invalid seed URL provided: " + seed);
+                        errors++;
+                        continue;
+                    }
+                    addSeedScope(link);
                     boolean inserted = insert(link);
-                    if (inserted)
+                    if (inserted) {
+                        logger.info("Added seed URL: {}", seed);
                         count++;
+                    }
                 } catch (FrontierPersistentException e) {
                     throw new RuntimeException("Failed to insert seed URL: " + seed, e);
                 }
             }
+            frontier.commit();
             logger.info("Number of seeds added: " + count);
+            if (errors > 0) {
+                logger.info("Number of invalid seeds: " + errors);
+            }
+            logger.info("Using scope of following domains:");
+            for (String host : scope) {
+                logger.info(host);
+            }
         }
+    }
+
+    public void addSeedScope(LinkRelevance link) {
+        if (useScope) {
+            scope.add(link.getURL().getHost());
+            seedScopeFile.println(link.getURL().toString());
+            seedScopeFile.flush();
+        }
+    }
+
+    public void insertOutlinks(Page page)
+            throws IOException, FrontierPersistentException, LinkClassifierException {
+
+        LinkRelevance[] linksRelevance = outlinkClassifier.classify(page);
+
+        ArrayList<LinkRelevance> temp = new ArrayList<LinkRelevance>();
+        HashSet<String> relevantURLs = new HashSet<String>();
+
+        for (int i = 0; i < linksRelevance.length; i++) {
+            if (this.isRelevant(linksRelevance[i])) {
+
+                String url = linksRelevance[i].getURL().toString();
+                if (!relevantURLs.contains(url)) {
+
+                    String domain = linksRelevance[i].getTopLevelDomainName();
+
+                    Integer domainCount;
+                    synchronized (domainCounter) {
+                        domainCount = domainCounter.get(domain);
+                        if (domainCount == null) {
+                            domainCount = 0;
+                        } else {
+                            domainCount++;
+                        }
+                        domainCounter.put(domain, domainCount);
+                    }
+
+                    if (domainCount < maxPagesPerDomain) { // Stop Condition
+                        relevantURLs.add(url);
+                        temp.add(linksRelevance[i]);
+                    }
+
+                }
+            }
+        }
+
+        LinkRelevance[] filteredLinksRelevance =
+                temp.toArray(new LinkRelevance[relevantURLs.size()]);
+
+        LinkNeighborhood[] lns = page.getParsedData().getLinkNeighborhood();
+        for (int i = 0; i < lns.length; i++) {
+            if (!relevantURLs.contains(lns[i].getLink().toString())) {
+                lns[i] = null;
+            }
+        }
+
+        graphRepository.insertOutlinks(page.getURL(), lns);
+        this.insert(filteredLinksRelevance);
+    }
+
+    public void insertBacklinks(Page page)
+            throws IOException, FrontierPersistentException, LinkClassifierException {
+        URL url = page.getURL();
+        BackLinkNeighborhood[] links = graphRepository.getBacklinks(url);
+        if (links == null || (links != null && links.length < 10)) {
+            links = backlinkSurfer.getLNBacklinks(url);
+        }
+        if (links != null && links.length > 0) {
+            LinkRelevance[] linksRelevance = new LinkRelevance[links.length];
+            for (int i = 0; i < links.length; i++) {
+                BackLinkNeighborhood backlink = links[i];
+                if (backlink != null) {
+                    LinkNeighborhood ln = new LinkNeighborhood(new URL(backlink.getLink()));
+                    String title = backlink.getTitle();
+                    if (title != null) {
+                        ln.setAround(tokenizeText(title));
+                    }
+                    linksRelevance[i] = backlinkClassifier.classify(ln);
+                }
+            }
+            this.insert(linksRelevance);
+        }
+        URL normalizedURL = new URL(url.getProtocol(), url.getHost(), "/");
+        graphRepository.insertBacklinks(normalizedURL, links);
+    }
+
+    private String[] tokenizeText(String text) {
+        StringTokenizer tokenizer = new StringTokenizer(text, " ");
+        Vector<String> anchorTemp = new Vector<String>();
+        while (tokenizer.hasMoreTokens()) {
+            anchorTemp.add(tokenizer.nextToken());
+        }
+        String[] aroundArray = new String[anchorTemp.size()];
+        anchorTemp.toArray(aroundArray);
+        return aroundArray;
+    }
+
+    public void setBacklinkClassifier(LinkClassifier classifier) {
+        this.backlinkClassifier = classifier;
+    }
+
+    public void setOutlinkClassifier(LinkClassifier classifier) {
+        this.outlinkClassifier = classifier;
+    }
+    
+    public void updateOutlinkClassifier(LinkClassifier classifier) throws Exception {
+        this.outlinkClassifier = classifier;
+        graphRepository.visitLNs((LinkNeighborhood ln) -> {
+            try {
+                LinkRelevance lr = outlinkClassifier.classify(ln);
+                frontier.update(lr);
+            } catch (Exception e) {
+                logger.error("Failed to classify link neighborhood while updating classifier.", e);
+            }
+        });
+        frontier.commit();
+    }
+
+    public BipartiteGraphRepository getGraphRepository() {
+        return this.graphRepository;
+    }
+
+    /**
+     * Returns true if either the property to include sitemaps is true or disallow sites in
+     * robots.txt is true
+     * 
+     * @return
+     */
+    private boolean getDownloadRobots() {
+        return insertSitemaps || disallowSitesInRobotsFile;
     }
 
 }

@@ -7,6 +7,8 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import focusedCrawler.target.classifier.TargetRelevance;
+
 @SuppressWarnings("serial")
 public class TargetModelJson implements Serializable {
 
@@ -27,9 +29,12 @@ public class TargetModelJson implements Serializable {
 
     @JsonProperty("fetch_time")
     private long fetchTime;
+    
+    @JsonProperty("relevance")
+    private TargetRelevance relevance;
 
     public TargetModelJson() {
-        // required for JSON serialization
+        // required for JSON deserialization
     }
 
     public TargetModelJson(Page page) {
@@ -41,6 +46,7 @@ public class TargetModelJson implements Serializable {
         this.responseHeaders = page.getResponseHeaders();
         this.fetchTime = page.getFetchTime();
         this.contentType = page.getContentType();
+        this.relevance = page.getTargetRelevance();
     }
 
     public String getUrl() {
@@ -90,6 +96,14 @@ public class TargetModelJson implements Serializable {
     @JsonIgnore
     public String getContentAsString() {
         return new String(content);
+    }
+
+    public TargetRelevance getRelevance() {
+        return relevance;
+    }
+
+    public void setRelevance(TargetRelevance relevance) {
+        this.relevance = relevance;
     }
 
     /*

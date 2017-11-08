@@ -8,7 +8,11 @@ import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.Scanner;
 
+import com.codahale.metrics.Counter;
+import com.codahale.metrics.Gauge;
+
 import focusedCrawler.target.model.Page;
+import focusedCrawler.util.MetricsManager;
 
 public class TargetStorageMonitor {
     
@@ -17,10 +21,17 @@ public class TargetStorageMonitor {
     private PrintWriter fNonRelevantPages;
     private PrintWriter fHarvestInfo;
     
+    private Counter relevantUrlsDownloaded;
+    private Counter totalNumberOfUrlsDownloaded;
+    
     int totalOnTopicPages = 0;
     private int totalOfPages = 0;
     
     public TargetStorageMonitor(String dataPath) {
+    	this(dataPath, new MetricsManager(dataPath));
+    }
+    
+    public TargetStorageMonitor(String dataPath, MetricsManager metricsManager) {
         
         File file = new File(dataPath+"/data_monitor/");
         if(!file.exists()) {
@@ -40,8 +51,17 @@ public class TargetStorageMonitor {
         } catch (Exception e) {
             throw new IllegalStateException("Problem while opening files to export target metrics", e);
         }
+        setupMetrics(metricsManager);
     }
 
+    private void setupMetrics(MetricsManager metrics) {
+    	totalNumberOfUrlsDownloaded = metrics.getCounter("target.storage.pages.downloaded");
+        relevantUrlsDownloaded = metrics.getCounter("target.storage.pages.relevant");
+        
+        Gauge<Double> harvestRateGauge = () -> ((double)totalOnTopicPages / (double)totalOfPages);
+        metrics.register("target.storage.harvest.rate", harvestRateGauge);
+    }
+    
     private PrintWriter createBufferedWriter(String file) throws FileNotFoundException {
         boolean append = true;
         BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file, append));
@@ -52,10 +72,12 @@ public class TargetStorageMonitor {
     public synchronized void countPage(Page page, boolean isRelevant, double prob) {
         long currentTime = System.currentTimeMillis();
         totalOfPages++;
+        totalNumberOfUrlsDownloaded.inc();
         fCrawledPages.printf("%s\t%d\n", page.getURL().toString(), currentTime);
         fHarvestInfo.printf("%d\t%d\t%d\n", totalOnTopicPages, totalOfPages, currentTime);
         if(isRelevant) {
             totalOnTopicPages++;
+            relevantUrlsDownloaded.inc();
             fRelevantPages.printf("%s\t%.10f\t%d\n", page.getURL().toString(), prob, currentTime);
         } else {
             fNonRelevantPages.printf("%s\t%.10f\t%d\n", page.getURL().toString(), prob, currentTime);

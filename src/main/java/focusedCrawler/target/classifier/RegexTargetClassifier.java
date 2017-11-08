@@ -1,6 +1,7 @@
 package focusedCrawler.target.classifier;
 
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -100,7 +101,7 @@ public class RegexTargetClassifier implements TargetClassifier {
 
     public static class RegexList {
         public String boolean_operator = "AND";
-        public List<String> regexes;
+        public List<String> regexes = new ArrayList<>();
     }
 
     public static class RegexClassifierConfig {

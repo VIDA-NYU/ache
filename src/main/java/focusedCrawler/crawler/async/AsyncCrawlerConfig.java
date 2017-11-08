@@ -12,6 +12,10 @@ public class AsyncCrawlerConfig {
     @JsonUnwrapped
     private HttpDownloaderConfig downloaderConfig = new HttpDownloaderConfig();
 
+    public AsyncCrawlerConfig() {
+        // Required for de-serialization
+    }
+
     public AsyncCrawlerConfig(JsonNode config, ObjectMapper objectMapper) throws JsonProcessingException, IOException {
         objectMapper.readerForUpdating(this).readValue(config);
     }

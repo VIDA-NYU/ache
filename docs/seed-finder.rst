@@ -1,3 +1,5 @@
+.. _seedfinder:
+
 SeedFinder Tool
 #################
 

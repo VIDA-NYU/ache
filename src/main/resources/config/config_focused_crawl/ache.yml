@@ -1,0 +1,20 @@
+# Limit the max number of pages crawled per domain, in order to avoid crawling
+# too many pages from same somain and favor discovery o new domains
+link_storage.max_pages_per_domain: 10000
+
+# Disable "seed scope" to allow crawl pages from any domain
+link_storage.link_strategy.use_scope: false
+
+# Set initial link classifier a simple one
+link_storage.link_classifier.type: LinkClassifierBaseline
+
+# Train a new link classifier while the crawler is running. This allows
+# the crawler automatically learn how to prioritize links in order to
+# efficiently locate relevant content while avoiding the retrieval of
+# irrelevant content.
+link_storage.online_learning.enabled: true
+link_storage.online_learning.type: FORWARD_CLASSIFIER_BINARY
+link_storage.online_learning.learning_limit: 1000
+
+# Allways select top-k links with highest priority to be scheduled
+link_storage.link_selector: TopkLinkSelector

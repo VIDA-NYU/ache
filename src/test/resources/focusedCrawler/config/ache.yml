@@ -4,8 +4,6 @@
 # Configurations for Target Storage
 #
 
-# Uses a classifier to collect pages in topics, domains etc.
-target_storage.use_classifier: false
 # Change to false if don't want to store pages classified as irrelevant
 target_storage.store_negative_pages: false
 
@@ -104,6 +102,7 @@ link_storage.backsurfer.pattern_end_title: "\",\"uu\":"
 
 link_storage.scheduler.host_min_access_interval: 123
 link_storage.scheduler.max_links: 234
+
 
 #link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
 #link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

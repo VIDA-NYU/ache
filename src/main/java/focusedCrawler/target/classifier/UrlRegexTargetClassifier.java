@@ -9,8 +9,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.LinkFilter;
-import focusedCrawler.util.LinkFilter.LinkBlackList;
-import focusedCrawler.util.LinkFilter.LinkWhiteList;
 
 public class UrlRegexTargetClassifier implements TargetClassifier {
 
@@ -21,14 +19,6 @@ public class UrlRegexTargetClassifier implements TargetClassifier {
         this.linkFilter = linkfilter;
     }
     
-    public UrlRegexTargetClassifier(String regexFilename) {
-        this.linkFilter = new LinkFilter(new LinkWhiteList(regexFilename));
-    }
-
-    public UrlRegexTargetClassifier(List<String> urlPatterns) {
-        this.linkFilter = new LinkFilter(urlPatterns);
-    }
-
     @Override
 	public TargetRelevance classify(Page page) throws TargetClassifierException {
 		if(linkFilter.accept(page.getURL().toString())) {
@@ -38,24 +28,33 @@ public class UrlRegexTargetClassifier implements TargetClassifier {
 		}
 	}
 	
-    public static UrlRegexTargetClassifier fromRegularExpressions(List<String> regularExpressions) {
-        return new UrlRegexTargetClassifier(regularExpressions);
+    public static UrlRegexTargetClassifier fromRegularExpressions(List<String> regexes) {
+        LinkFilter linkFilter = new LinkFilter.Builder()
+                .withWhitelistRegexes(regexes)
+                .build();
+        return new UrlRegexTargetClassifier(linkFilter);
     }
     
     public static UrlRegexTargetClassifier fromWhitelistFile(String whitelistFilename) {
-        LinkFilter linkfilter = new LinkFilter(new LinkWhiteList(whitelistFilename));
+        LinkFilter linkfilter = new LinkFilter.Builder()
+                .withWhitelistFile(whitelistFilename)
+                .build();
         return new UrlRegexTargetClassifier(linkfilter);
     }
     
     public static UrlRegexTargetClassifier fromBlacklistFile(String blacklistFilename) {
-        LinkFilter linkfilter = new LinkFilter(new LinkBlackList(blacklistFilename));
+        LinkFilter linkfilter = new LinkFilter.Builder()
+                .withBlacklistFile(blacklistFilename)
+                .build();
         return new UrlRegexTargetClassifier(linkfilter);
     }
     
     public static UrlRegexTargetClassifier fromWhitelistAndBlacklistFiles(String whitelistFilename,
-                                                                  String blacklistFilename) {
-        LinkFilter linkfilter = new LinkFilter(new LinkWhiteList(whitelistFilename),
-                                               new LinkBlackList(blacklistFilename));
+            String blacklistFilename) {
+        LinkFilter linkfilter = new LinkFilter.Builder()
+                .withWhitelistFile(whitelistFilename)
+                .withBlacklistFile(blacklistFilename)
+                .build();
         return new UrlRegexTargetClassifier(linkfilter);
     }
     

@@ -15,11 +15,11 @@ public class BodyRegexTargetClassifier implements TargetClassifier {
     private RegexMatcher matcher;
 
     public BodyRegexTargetClassifier(String regexFilename) {
-        this.matcher = RegexMatcher.fromFile(regexFilename);
+        this.matcher = RegexMatcher.fromWhitelistFile(regexFilename);
     }
 
     public BodyRegexTargetClassifier(List<String> patterns) {
-        this.matcher = RegexMatcher.fromList(patterns);
+        this.matcher = RegexMatcher.fromWhitelist(patterns);
     }
 
     @Override

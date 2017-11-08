@@ -9,8 +9,6 @@ import java.net.URL;
 
 import org.junit.Test;
 
-import focusedCrawler.seedfinder.Query;
-import focusedCrawler.seedfinder.QueryGenerator;
 import focusedCrawler.seedfinder.QueryProcessor.QueryResult;
 import focusedCrawler.target.model.Page;
 

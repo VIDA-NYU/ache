@@ -1,0 +1,8 @@
+# Enables "scope" to only crawl pages that belong to domains of seed URLs
+link_storage.link_strategy.use_scope: true
+
+# Select URLs from all domains during link selection phase,
+link_storage.link_selector: MaximizeWebsitesLinkSelector
+
+# Enables discovery of links using the Sitemaps protocol
+link_storage.download_sitemap_xml: true

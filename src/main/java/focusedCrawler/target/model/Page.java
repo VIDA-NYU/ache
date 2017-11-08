@@ -1,8 +1,11 @@
 package focusedCrawler.target.model;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -10,10 +13,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.tika.metadata.Metadata;
+import org.archive.io.warc.WARCRecord;
+
+import com.google.common.io.ByteStreams;
 
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
+import focusedCrawler.target.classifier.TargetRelevance;
 
 @SuppressWarnings("serial")
 public class Page implements Serializable {
@@ -66,7 +72,7 @@ public class Page implements Serializable {
         this.responseHeaders = target.getResponseHeaders();
         this.fetchTime = target.getFetchTime();
         this.contentType = target.getContentType();
-
+        this.targetRelevance = target.getRelevance();
     }
 
     public Page(FetchedResult fetchedResult) throws MalformedURLException {
@@ -77,6 +83,85 @@ public class Page implements Serializable {
             this.redirectedURL = new URL(fetchedResult.getFetchedUrl());
         }
         parseResponseHeaders(fetchedResult.getHeaders());
+    }
+
+    public Page(WARCRecord warc) {
+
+        String warcUrl = warc.getHeader().getUrl();
+
+        Map<String, Object> headerFields = warc.getHeader().getHeaderFields();
+
+        String requestUrl = (String) headerFields.get("ACHE-Requested-URL");
+        if (requestUrl == null || warcUrl.equals(requestUrl)) {
+            this.url = createUrlObj(warcUrl);
+        } else {
+            this.url = createUrlObj(requestUrl);
+            this.redirectedURL = createUrlObj(warcUrl);
+        }
+
+        this.fetchTime = Instant.parse(warc.getHeader().getDate()).toEpochMilli();
+
+        this.responseHeaders = new HashMap<>();
+        String line;
+        while (!(line = this.readHeaderLine(warc)).isEmpty()) {
+            int index = line.indexOf(":");
+            if (index == -1) {
+                // Unexpected header found
+                continue;
+            }
+            String value = line.substring(index + 1).trim();
+            String key = line.substring(0, index).trim();
+            List<String> values = this.responseHeaders.get(key);
+            if (values == null) {
+                values = new ArrayList<>();
+                this.responseHeaders.put(key, values);
+            }
+            values.add(value);
+            if ("Content-Type".equalsIgnoreCase(key)) {
+                this.contentType = value;
+            }
+        }
+
+        try {
+            this.content = ByteStreams.toByteArray(warc);
+        } catch (IOException e) {
+            this.content = null;
+        }
+
+        double relevance = Double.valueOf(
+                (String) headerFields.get("ACHE-Relevance"));
+        boolean isRelevant = Boolean.valueOf(
+                (String) headerFields.get("ACHE-IsRelevant"));
+        this.targetRelevance = new TargetRelevance(isRelevant, relevance);
+    }
+
+    private String readHeaderLine(WARCRecord warc) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            char c;
+            char previous = '\n';
+            do {
+                c = (char) warc.read();
+                if (c == '\n' && previous == '\r') {
+                    // trim the CR (\r) from last iteration
+                    sb.deleteCharAt(sb.length() - 1);
+                    break;
+                }
+                sb.append((char) c);
+                previous = c;
+            } while (c != -1);
+            return sb.toString();
+        } catch (IOException e) {
+            return sb.toString();
+        }
+    }
+
+    private URL createUrlObj(String url) {
+        try {
+            return new URL(url);
+        } catch (MalformedURLException e) {
+            throw new IllegalArgumentException("Invalid URL: " + url);
+        }
     }
 
     public static String extractContentType(Map<String, List<String>> responseHeaders) {
@@ -112,6 +197,11 @@ public class Page implements Serializable {
     public String getDomainName() {
         String domain = url.getHost();
         return domain.startsWith("www.") ? domain.substring(4) : domain;
+    }
+    
+
+    public boolean isHtml() {
+        return contentType != null && contentType.toLowerCase().contains("text/html");
     }
 
     public boolean isHub() {
@@ -196,6 +286,14 @@ public class Page implements Serializable {
 
     public void setTargetRelevance(TargetRelevance targetRelevance) {
         this.targetRelevance = targetRelevance;
+    }
+
+    public String getRequestedUrl() {
+        return url.toString();
+    }
+
+    public String getFinalUrl() {
+        return redirectedURL == null ? url.toString() : redirectedURL.toString();
     }
 
 }

@@ -1,8 +1,6 @@
 package focusedCrawler.crawler.async;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
@@ -13,29 +11,30 @@ import crawlercommons.robots.BaseRobotsParser;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.util.CommunicationException;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageException;
 
 public class RobotsTxtHandler implements HttpDownloader.Callback {
-    
+
     @SuppressWarnings("serial")
     public static class RobotsData implements Serializable {
-        public List<String> sitemapUrls = new ArrayList<>();
-        public String content;
-        public RobotsData(List<String> sitemapsUrls) {
-            this.sitemapUrls = sitemapsUrls;
+
+        public BaseRobotRules robotRules;
+        public LinkRelevance link;
+
+        public RobotsData(LinkRelevance link, BaseRobotRules robotRules) {
+            this.link = link;
+            this.robotRules = robotRules;
         }
     }
     
     private static final Logger logger = LoggerFactory.getLogger(RobotsTxtHandler.class);
     
     private BaseRobotsParser parser = new SimpleRobotRulesParser();
-    private Storage linkStorage;
+    private LinkStorage linkStorage;
     private String userAgentName;
     
-    public RobotsTxtHandler(Storage linkStorage, String userAgentName) {
+    public RobotsTxtHandler(LinkStorage linkStorage, String userAgentName) {
         this.linkStorage = linkStorage;
         this.userAgentName = userAgentName;
     }
@@ -86,10 +85,10 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
         }
         
         try {
-            RobotsData robotsData = new RobotsData(robotRules.getSitemaps());
+            RobotsData robotsData = new RobotsData(link, robotRules);
             linkStorage.insert(robotsData);
-        } catch (StorageException | CommunicationException e) {
-            logger.error("Failed to insert robot.txt data into link storage.", e);
+        } catch (Exception e) {
+            logger.error("Failed to insert robots.txt data into link storage.", e);
         }
         
     }

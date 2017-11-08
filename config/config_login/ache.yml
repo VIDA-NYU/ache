@@ -1,0 +1,38 @@
+#
+# Example of configuration for crawling all pages within a web sites that
+# require with cookies (commentted lines in the end of this file need to be
+# uncommentted and filled properly).
+#
+
+# Enables "scope" to only crawl pages that belong to domains of seed URLs
+link_storage.link_strategy.use_scope: true
+
+# Select URLs from all domains during link selection phase,
+link_storage.link_selector: MaximizeWebsitesLinkSelector
+
+# Configure the minimum time interval (in milliseconds) to wait between requests
+# to the same host to avoid overloading servers. If you are crawling your own
+# web site, you can descrease this value to speed-up the crawl.
+link_storage.scheduler.host_min_access_interval: 2000
+
+# Enables discovery of links using the Sitemaps protocol
+link_storage.download_sitemap_xml: true
+
+# Configure the name and web address of your crawler
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+
+#
+# Configurations for crawling using cookies
+#
+#crawler_manager.downloader.cookies:
+# - domain: example1.com
+#   cookie: key1=value; key2=value2;
+# - domain: example2.com
+#   cookie: key1=value; key2=value2;
+
+#
+# Some cookies only work with the same user-agent string that created it.
+# You can set it using the following config line:
+#
+#crawler_manager.downloader.user_agent.string: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36

@@ -1,5 +1,5 @@
-target_storage.hard_focus: true
+target_storage.hard_focus: false
 link_storage.link_strategy.outlinks: true
 link_storage.scheduler.host_min_access_interval: 1
-target_storage.use_classifier: false
 link_storage.download_sitemap_xml: true
+link_storage.disallow_sites_in_robots_file: true

@@ -3,14 +3,13 @@ package focusedCrawler.memex.cdr;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 import java.io.InputStream;
 
 import org.apache.tika.mime.MediaType;
 import org.junit.Test;
 
-import focusedCrawler.memex.cdr.TikaExtractor;
 import focusedCrawler.memex.cdr.TikaExtractor.ParsedData;
 
 public class TikaExtractorTest {
