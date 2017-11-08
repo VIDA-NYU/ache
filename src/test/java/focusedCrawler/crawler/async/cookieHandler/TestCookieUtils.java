@@ -22,13 +22,13 @@ public class TestCookieUtils {
 
 	@Test(expected = NullArgumentException.class)
 	public void testApacheCookieNullInput() {
-		CookieUtils.getApacheCookie(null);
+		CookieUtils.asApacheCookie(null);
 	}
 
 	@Test
 	public void testApacheCookielInput() {
 		cookie.setDomain(".slides.com");
-		org.apache.http.cookie.Cookie resultCookie = CookieUtils.getApacheCookie(cookie);
+		org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
 		assertTrue(resultCookie.getName().equals("key1"));
 		assertTrue(resultCookie.getValue().equals("value1"));
 		assertTrue(resultCookie.getDomain().equals(".slides.com"));
@@ -36,13 +36,13 @@ public class TestCookieUtils {
 
 	@Test(expected = NullArgumentException.class)
 	public void testOkHttpCookieNullInput() {
-		CookieUtils.getOkkHttpCookie(null);
+		CookieUtils.asOkhttp3Cookie(null);
 	}
 
 	@Test
 	public void testOkHttpCookielInput() {
 		cookie.setDomain(".slides.com");
-		okhttp3.Cookie resultCookie = CookieUtils.getOkkHttpCookie(cookie);
+		okhttp3.Cookie resultCookie = CookieUtils.asOkhttp3Cookie(cookie);
 		assertTrue(resultCookie.name().equals("key1"));
 		assertTrue(resultCookie.value().equals("value1"));
 		assertTrue(resultCookie.domain().equals("slides.com"));
@@ -50,7 +50,7 @@ public class TestCookieUtils {
 
 	@Test
 	public void testApacheCookielInputNullDomain() {
-		org.apache.http.cookie.Cookie resultCookie = CookieUtils.getApacheCookie(cookie);
+		org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
 		assertTrue(resultCookie.getName().equals("key1"));
 		assertTrue(resultCookie.getValue().equals("value1"));
 		assertTrue(resultCookie.getDomain() == null);
@@ -60,7 +60,7 @@ public class TestCookieUtils {
 	@Test (expected = IllegalArgumentException.class)
 	public void testApacheCookielInputNullKey() {
 		cookie.setName(null);
-		org.apache.http.cookie.Cookie resultCookie = CookieUtils.getApacheCookie(cookie);
+		org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
 		
 		assertTrue(resultCookie.getName() == null);
 		assertTrue(resultCookie.getValue().equals("value1"));
@@ -69,7 +69,7 @@ public class TestCookieUtils {
 	@Test 
 	public void testApacheCookielInputNullValue() {
 		cookie.setValue(null);
-		org.apache.http.cookie.Cookie resultCookie = CookieUtils.getApacheCookie(cookie);
+		org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
 		
 		assertTrue(resultCookie.getName().equals("key1"));
 		assertTrue(resultCookie.getValue() == null);
@@ -78,19 +78,16 @@ public class TestCookieUtils {
 	@Test (expected = NullPointerException.class)
 	public void testOkHttpCookielInputNullKey() {
 		cookie.setName(null);
-		okhttp3.Cookie resultCookie = CookieUtils.getOkkHttpCookie(cookie);
-		assertTrue(resultCookie.name() == null);
-		assertTrue(resultCookie.value().equals("value1"));
-		
+		@SuppressWarnings("unused")
+        okhttp3.Cookie resultCookie = CookieUtils.asOkhttp3Cookie(cookie);
 	}
 	
 	@Test  (expected = NullPointerException.class)
 	public void testOkHttpInputNullValue() {
 		cookie.setValue(null);
 		cookie.setName(null);
-		okhttp3.Cookie resultCookie = CookieUtils.getOkkHttpCookie(cookie);
-		assertTrue(resultCookie.name().equals("key1"));
-		assertTrue(resultCookie.value() ==  null);
+		@SuppressWarnings("unused")
+        okhttp3.Cookie resultCookie = CookieUtils.asOkhttp3Cookie(cookie);
 	}
 	
 	@Test (expected = NullPointerException.class)

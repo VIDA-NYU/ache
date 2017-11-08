@@ -166,11 +166,11 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
      * Add cookies to the right fetcher.
      * @param cookies
      */
-	public void addCookies(HashMap<String, List<Cookie>> cookies) {
-		if(cookies == null) {
-			throw new NullPointerException("Cookies argument is null");
-		}
-		CookieUtils.addCookies(cookies, downloader.getFetcher());
-	}
+    public void addCookies(HashMap<String, List<Cookie>> cookies) {
+        if (cookies == null) {
+            throw new NullPointerException("Cookies argument is null");
+        }
+        CookieUtils.addCookies(cookies, downloader.getFetcher());
+    }
 
 }

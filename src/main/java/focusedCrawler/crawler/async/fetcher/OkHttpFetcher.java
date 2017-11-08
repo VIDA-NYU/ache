@@ -1,39 +1,5 @@
 package focusedCrawler.crawler.async.fetcher;
 
-import focusedCrawler.crawler.async.cookieHandler.OkHttpCookieJar;
-import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
-import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
-import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
-import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
-import focusedCrawler.crawler.crawlercommons.fetcher.EncodingUtils;
-import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
-import focusedCrawler.crawler.crawlercommons.fetcher.IOFetchException;
-import focusedCrawler.crawler.crawlercommons.fetcher.Payload;
-import focusedCrawler.crawler.crawlercommons.fetcher.UrlFetchException;
-import focusedCrawler.crawler.crawlercommons.fetcher.http.BaseHttpFetcher;
-import focusedCrawler.crawler.crawlercommons.fetcher.http.UserAgent;
-
-import okhttp3.CipherSuite;
-import okhttp3.ConnectionSpec;
-import okhttp3.OkHttpClient;
-import okhttp3.OkHttpClient.Builder;
-import okhttp3.Request;
-import okhttp3.Response;
-import okhttp3.ResponseBody;
-import org.apache.http.HttpHeaders;
-import org.apache.http.HttpStatus;
-import org.apache.tika.metadata.Metadata;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.SSLSocket;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.TrustManagerFactory;
-import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
@@ -49,6 +15,42 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.TrustManagerFactory;
+import javax.net.ssl.X509TrustManager;
+
+import org.apache.http.HttpHeaders;
+import org.apache.http.HttpStatus;
+import org.apache.tika.metadata.Metadata;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import focusedCrawler.crawler.async.cookieHandler.OkHttpCookieJar;
+import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
+import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.EncodingUtils;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.IOFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.Payload;
+import focusedCrawler.crawler.crawlercommons.fetcher.UrlFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.BaseHttpFetcher;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.UserAgent;
+import okhttp3.CipherSuite;
+import okhttp3.ConnectionSpec;
+import okhttp3.Cookie;
+import okhttp3.OkHttpClient;
+import okhttp3.OkHttpClient.Builder;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 
 @SuppressWarnings("serial")
@@ -516,6 +518,10 @@ public class OkHttpFetcher extends BaseHttpFetcher {
             }
         }
         return false;
+    }
+
+    public void update(Map<String, List<Cookie>> map) {
+        this.cookieJar.update(map);
     }
 
 

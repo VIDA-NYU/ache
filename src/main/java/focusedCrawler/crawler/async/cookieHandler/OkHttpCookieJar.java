@@ -1,9 +1,9 @@
 package focusedCrawler.crawler.async.cookieHandler;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.slf4j.Logger;
@@ -16,21 +16,21 @@ import okhttp3.HttpUrl;
 public class OkHttpCookieJar implements CookieJar, CookieHandler {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(OkHttpCookieJar.class);
-	private static ConcurrentHashMap<HttpUrl, List<Cookie>> cookieJar = new ConcurrentHashMap<>();
+	private ConcurrentHashMap<String, List<Cookie>> cookieJar = new ConcurrentHashMap<>();
 
 	public OkHttpCookieJar() {
 	}
 
 	@Override
 	public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
-		cookieJar.put(url, cookies);
+		cookieJar.put(url.host(), new ArrayList<>(cookies));
 	}
 
 	@Override
 	public List<Cookie> loadForRequest(HttpUrl url) {
 		List<Cookie> validCookies = new ArrayList<>();
 
-		List<Cookie> cooky = cookieJar.get(url);
+		List<Cookie> cooky = cookieJar.get(url.host());
 		if (cooky != null) {
 			Iterator<Cookie> it = cooky.iterator();
 			while (it.hasNext()) {
@@ -42,8 +42,17 @@ public class OkHttpCookieJar implements CookieJar, CookieHandler {
 				}
 			}
 		}
-		return validCookies;
-	}
+        return validCookies;
+    }
+
+    public void addCookieForDomain(String domain, Cookie cookie) {
+        List<Cookie> cookieList = cookieJar.get(domain);
+        if(cookieList == null) {
+            cookieList = new ArrayList<>();
+        }
+        cookieList.add(cookie);
+        cookieJar.put(domain, cookieList);
+    }
 
 	private static boolean isCookieExpired(Cookie cookie) {
 		return cookie.expiresAt() < System.currentTimeMillis();
@@ -57,26 +66,25 @@ public class OkHttpCookieJar implements CookieJar, CookieHandler {
 	}
 
 	/**
-	 * Updates the global cookie store currently being used by the fetcher
+	 * Updates this cookie store
 	 * 
 	 * @param map
 	 */
-	public static void update(HashMap<String, List<Cookie>> map) {
-		for (String s : map.keySet()) {
-			HttpUrl url = HttpUrl.parse(s);
-			List<Cookie> cookiesList = map.get(s);
+	public void update(Map<String, List<Cookie>> map) {
+		for (String urlString : map.keySet()) {
+			HttpUrl url = HttpUrl.parse(urlString);
+			List<Cookie> cookiesList = map.get(urlString);
 			if (url == null) {
-				LOGGER.debug("Unable to parse url " + s + " and build a HttpUrl object");
+				LOGGER.debug("Unable to parse url " + urlString + " and build a HttpUrl object");
 			}
 			if (cookiesList != null && url != null) {
-				cookieJar.put(url, map.get(s));
+				cookieJar.put(url.host(), map.get(urlString));
 			}
 		}
-
 	}
 	
 
-	public static ConcurrentHashMap<HttpUrl, List<Cookie>> getCookieJar(){
+	public ConcurrentHashMap<String, List<Cookie>> getCookieJar(){
 		return cookieJar;
 	}
 }

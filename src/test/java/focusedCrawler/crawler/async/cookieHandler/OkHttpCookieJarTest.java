@@ -1,64 +1,88 @@
 package focusedCrawler.crawler.async.cookieHandler;
 
-import okhttp3.*;
-import okhttp3.Cookie;
+import static java.util.Arrays.asList;
+import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-
-import static org.junit.Assert.*;
+import okhttp3.Cookie;
+import okhttp3.HttpUrl;
 
 
 public class OkHttpCookieJarTest {
 
-    private static OkHttpCookieJar cookieJar;
+    private OkHttpCookieJar cookieJar;
     private HttpUrl url;
-    private Cookie cookie_regular;
-    private Cookie cookie_expired;
-    private List<Cookie> cookies = new ArrayList<>();
+    private Cookie cookieRegular;
+    private Cookie cookieExpired;
+    private List<Cookie> cookies;
 
     @Before
-    public void createCookieJar(){
-         cookieJar = new OkHttpCookieJar();
-         url =  HttpUrl.parse("https://domain.com/");
-         cookie_regular =  TestCookieCreator.createPersistentCookie(false);
-         cookie_expired = TestCookieCreator.createExpiredCookie();
-         cookies.add(cookie_regular);
-         cookies.add(cookie_expired);
+    public void createCookieJar() {
+        cookieJar = new OkHttpCookieJar();
+        url = HttpUrl.parse("https://domain.com/");
+        cookieRegular = TestCookieCreator.createPersistentCookie(false);
+        cookieExpired = TestCookieCreator.createExpiredCookie();
+        cookies = asList(cookieRegular, cookieExpired);
     }
 
     @Test
-    public void saveFromResponse() throws Exception{
-        cookieJar.saveFromResponse(url,cookies);
-        assertEquals(OkHttpCookieJar.getCookieJar().get(url), cookies);
+    public void saveFromResponse() throws Exception {
+        // when
+        cookieJar.saveFromResponse(url, cookies);
+        // then
+        assertEquals(cookieJar.getCookieJar().get(url.host()), cookies);
         cookieJar.clear();
     }
 
     @Test
-    public void loadForRequest() throws Exception {
-        cookieJar.saveFromResponse(url,cookies);
-        List<Cookie> response = cookieJar.loadForRequest(url);
-        cookies.remove(cookie_expired);
-        assertEquals(response, cookies);
-        cookieJar.clear();
+    public void loadOnlyNonExpiredCookiesForRequest() throws Exception {
+        // when
+        cookieJar.saveFromResponse(url, asList(cookieRegular, cookieExpired));
+        List<Cookie> loadedCookies = cookieJar.loadForRequest(url);
+        // then
+        assertThat(loadedCookies, is(asList(cookieRegular)));
+    }
+
+    @Test
+    public void shouldLoadCookieForDifferentUrlFromSameDomain() throws Exception {
+        // given
+        HttpUrl url1 = HttpUrl.parse("https://domain.com/");
+        HttpUrl url2 = HttpUrl.parse("https://domain.com/about");
+        HttpUrl url3 = HttpUrl.parse("https://another-domain.com/");
+
+        // when
+        cookieJar.saveFromResponse(url1, asList(cookieRegular, cookieExpired));
+        List<Cookie> cookiesFor2 = cookieJar.loadForRequest(url2);
+        List<Cookie> cookiesFor3 = cookieJar.loadForRequest(url3);
+
+        // then
+        assertThat(cookiesFor2, is(asList(cookieRegular)));
+        assertThat(cookiesFor3, is(empty()));
     }
 
     @Test
     public void update() throws Exception {
+        // given
         String domain = "https://domain.com/";
         HttpUrl newUrl = HttpUrl.parse(domain);
         Cookie newCookie = TestCookieCreator.createPersistentCookie(false);
-        List<Cookie> newCookieList = Arrays.asList(newCookie);
+        Map<String, List<Cookie>> cookieHashMap = new HashMap<>();
+        cookieHashMap.put(domain, asList(newCookie));
 
-        HashMap<String,List<Cookie>> cookieHashMap = new HashMap<>();
-        cookieHashMap.put(domain, newCookieList);
-        OkHttpCookieJar.update(cookieHashMap);
+        // when
+        cookieJar.update(cookieHashMap);
 
-        assertEquals(newCookieList, OkHttpCookieJar.getCookieJar().get(newUrl));
+        // then
+        assertEquals(asList(newCookie), cookieJar.getCookieJar().get(newUrl.host()));
     }
 
 }

@@ -4,12 +4,8 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
+@SuppressWarnings("serial")
 public class Cookie implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -8502369293267383776L;
 
 	private String name;
 	private String value;
@@ -18,13 +14,11 @@ public class Cookie implements Serializable {
 	private String path = "/";
 	private boolean secure;
 	private boolean httpOnly;
-
 	private boolean persistent;
 	private boolean hostOnly;
 
-	// Added for serialization
 	public Cookie() {
-
+	    // Required for JSON deserialization
 	}
 
 	public Cookie(String name, String value) {

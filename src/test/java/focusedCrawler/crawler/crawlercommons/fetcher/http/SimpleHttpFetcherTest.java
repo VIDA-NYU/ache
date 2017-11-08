@@ -469,7 +469,7 @@ public class SimpleHttpFetcherTest {
         String url = "http://localhost:8089/this-page-will-not-exist.html";
 
         FetchedResult result = fetcher.get(url);
-        
+
         assertEquals(HttpStatus.SC_NOT_FOUND, result.getStatusCode());
         assertEquals(url, result.getFetchedUrl());
         assertEquals("127.0.0.1", result.getHostAddress());
@@ -477,21 +477,23 @@ public class SimpleHttpFetcherTest {
     }
 
     @Test
-	public void testCookieStore() {
-		Cookie cookie = new Cookie("key1", "value1");
-		cookie.setDomain(".slides.com");
-		
-		HashMap<String, List<Cookie>> map = new HashMap<>();
-		List<Cookie> listOfCookies = new ArrayList<>();
-		listOfCookies.add(cookie);
-		map.put("www.slides.com", listOfCookies);
-		
-		SimpleHttpFetcher baseFetcher = FetcherFactory.createSimpleHttpFetcher(new HttpDownloaderConfig());
-		CookieUtils.addCookies(map, baseFetcher);
-		CookieStore globalCookieStore = SimpleHttpFetcher.getCookieStore();
-		List<org.apache.http.cookie.Cookie> resultList = globalCookieStore.getCookies();
-		assertTrue(resultList.get(0).getName().equals("key1"));
-		assertTrue(resultList.get(0).getValue().equals("value1"));
-		assertTrue(resultList.get(0).getDomain().equals(".slides.com"));
-	}
+    public void testCookieStore() {
+        Cookie cookie = new Cookie("key1", "value1");
+        cookie.setDomain(".slides.com");
+
+        HashMap<String, List<Cookie>> map = new HashMap<>();
+        List<Cookie> listOfCookies = new ArrayList<>();
+        listOfCookies.add(cookie);
+        map.put("www.slides.com", listOfCookies);
+
+        SimpleHttpFetcher baseFetcher =
+                FetcherFactory.createSimpleHttpFetcher(new HttpDownloaderConfig());
+        CookieUtils.addCookies(map, baseFetcher);
+
+        CookieStore globalCookieStore = baseFetcher.getCookieStore();
+        List<org.apache.http.cookie.Cookie> resultList = globalCookieStore.getCookies();
+        assertTrue(resultList.get(0).getName().equals("key1"));
+        assertTrue(resultList.get(0).getValue().equals("value1"));
+        assertTrue(resultList.get(0).getDomain().equals("slides.com"));
+    }
 }
