@@ -114,15 +114,17 @@ For long crawls, you should run ACHE in background using a tool like nohup.
 
 ### Data Formats
 
-ACHE can store data in different data formats. The data format can be configured by changing the key `target_storage.data_format.type` in the [configuration file](https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/ache.yml). The data formats available now are:
+ACHE can output data in multiple formats. The data formats currently available are:
 
-- FILESYSTEM_HTML (default) - only raw content is stored in plain text files.
-- FILESYSTEM_JSON - raw content and some metadata is stored using JSON format in files.
-- FILESYSTEM_CBOR - raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
-- FILES - raw content and metadata is stored in rolling compressed files of fixed size.
+- FILES (default) - raw content and metadata is stored in rolling compressed files of fixed size.
 - ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index.
+- KAFKA - pushes raw content and metadata to an Apache Kafka topic.
+- WARC - stores data using the standard format used by the Web Archive and Common Crawl.
+- FILESYSTEM_HTML - only raw page content is stored in plain text files.
+- FILESYSTEM_JSON - raw content and metadata is stored using JSON format in files.
+- FILESYSTEM_CBOR - raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
 
-For more details on data format configurations, see the [data formats documentation](http://ache.readthedocs.io/en/latest/data-formats.html) page.
+For more details on how to configure data formats, see the [data formats documentation](http://ache.readthedocs.io/en/latest/data-formats.html) page.
 
 ## Bug Reports and Questions
 

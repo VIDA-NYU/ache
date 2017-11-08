@@ -23,7 +23,6 @@ import org.junit.rules.TemporaryFolder;
 import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelJson;
-import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.FilesTargetRepository.RepositoryIterator;
 
 

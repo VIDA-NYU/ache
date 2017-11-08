@@ -11,10 +11,8 @@ import crawlercommons.robots.BaseRobotsParser;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.util.CommunicationException;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageException;
 
 public class RobotsTxtHandler implements HttpDownloader.Callback {
 
@@ -33,10 +31,10 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
     private static final Logger logger = LoggerFactory.getLogger(RobotsTxtHandler.class);
     
     private BaseRobotsParser parser = new SimpleRobotRulesParser();
-    private Storage linkStorage;
+    private LinkStorage linkStorage;
     private String userAgentName;
     
-    public RobotsTxtHandler(Storage linkStorage, String userAgentName) {
+    public RobotsTxtHandler(LinkStorage linkStorage, String userAgentName) {
         this.linkStorage = linkStorage;
         this.userAgentName = userAgentName;
     }
@@ -89,7 +87,7 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
         try {
             RobotsData robotsData = new RobotsData(link, robotRules);
             linkStorage.insert(robotsData);
-        } catch (StorageException | CommunicationException e) {
+        } catch (Exception e) {
             logger.error("Failed to insert robots.txt data into link storage.", e);
         }
         

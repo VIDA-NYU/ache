@@ -29,6 +29,7 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMap.Builder;
 
 import focusedCrawler.Main;
 import focusedCrawler.config.Configuration;
@@ -39,45 +40,52 @@ import spark.Request;
 import spark.Route;
 
 public class CrawlerResource {
-    
+
     public static final String VERSION = Main.class.getPackage().getImplementationVersion();
 
     private static final Logger logger = LoggerFactory.getLogger(CrawlerResource.class);
     private final static ObjectMapper json = new ObjectMapper();
-    
+
     private boolean isSearchEnabled = false;
     private String dataPath;
-    private String esIndexName;
-    private String esTypeName;
     private AsyncCrawler crawler;
-    private Configuration config;
+    private Configuration baseConfig;
 
-    public CrawlerResource(Configuration config, String dataPath, String esIndexName, String esTypeName) {
-        this.config = config;
-        if (esIndexName != null && esTypeName != null) {
-            this.isSearchEnabled = true;
-        }
+    private ElasticsearchProxyResource esProxyResource;
+
+
+    public CrawlerResource(Configuration config, String dataPath,
+        ElasticsearchProxyResource esProxyResource) {
+        this.baseConfig = config;
         this.dataPath = dataPath;
-        this.esIndexName = esIndexName;
-        this.esTypeName = esTypeName;
+        this.esProxyResource = esProxyResource;
+        this.isSearchEnabled = config.getTargetStorageConfig().isElasticsearchRestEnabled();
     }
 
     public Route getStatus = (request, response) -> {
-        Map<?, ?> crawlerStatus = ImmutableMap.of(
-            "status", 200,
-            "version", VERSION,
-            "searchEnabled", isSearchEnabled,
-            "crawlerRunning", crawler == null ? false : crawler.isRunning(),
-            "crawlerState", crawler == null ? "NEW" : crawler.state().toString()
-        );
+        Builder<Object, Object> builder = ImmutableMap.builder()
+            .put("status", 200)
+            .put("version", VERSION)
+            .put("searchEnabled", isSearchEnabled);
+        try {
+            if (this.esProxyResource.isElasticsearchEnabled()) {
+                builder.put("esIndexName", esProxyResource.getIndexName())
+                       .put("esTypeName",  esProxyResource.getTypeName());
+            }
+            builder.put("crawlerRunning", crawler == null ? false : crawler.isRunning())
+                   .put("crawlerState",   crawler == null ? "NEW" : crawler.state().toString());
+        } catch (Exception e) {
+            logger.error("ERROR", e);
+        }
+        Map<?, ?> crawlerStatus = builder.build();
         return crawlerStatus;
     };
-    
+
     public Route metricsResource = (request, response) -> {
         MetricsManager metricsManager = crawler.getMetricsManager();
         return metricsManager != null ? metricsManager.getMetricsRegistry() : null;
     };
-    
+
     public Route startCrawl = (request, response) -> {
         try {
             StartCrawlParams params = json.readValue(request.body(), StartCrawlParams.class);
@@ -85,58 +93,54 @@ public class CrawlerResource {
             Path configPath = Paths.get(dataPath, "config");
             Path modelPath = configPath.resolve("model");
 
-            createConfigForCrawlType(config, params.crawlType, configPath);
-            
+            Configuration newConfig = createConfigForCrawlType(baseConfig, configPath, params);
+
             String storedModelPath = storeModelFile(params.model, modelPath);
             String seedPath = getSeedForCrawlType(params, configPath, storedModelPath);
 
             this.crawler = AsyncCrawler.create(configPath.toString(), dataPath, seedPath,
-                    storedModelPath, esIndexName, esTypeName);
-            
+                storedModelPath, params.esIndexName, params.esTypeName);
+
             this.crawler.startAsync();
-//            this.crawler.awaitRunning();
+            this.esProxyResource.updateConfig(newConfig);
+            this.isSearchEnabled = newConfig.getTargetStorageConfig().isElasticsearchRestEnabled();
 
             return ImmutableMap.of(
                 "message", "Crawler started successfully.",
-                "crawlerStarted", true
-            );
+                "crawlerStarted", true);
 
         } catch (Exception e) {
             logger.error("Failed to start crawler.", e);
             response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             return ImmutableMap.of(
                 "message", "Failed to start crawler.",
-                "crawlerStarted", false
-            );
+                "crawlerStarted", false);
         }
     };
 
     public Route stopCrawl = (request, response) -> {
         try {
-            if(crawler == null) {
+            if (crawler == null) {
                 response.status(HttpServletResponse.SC_BAD_REQUEST);
                 return ImmutableMap.of(
                     "message", "Crawler is not running.",
                     "shutdownInitiated", false,
-                    "crawlerStopped", false
-                );
+                    "crawlerStopped", false);
             }
 
             boolean awaitStopped = getParamAsBoolean("awaitStopped", request).orElse(false);
             this.crawler.stopAsync();
-            if(awaitStopped) {
+            if (awaitStopped) {
                 this.crawler.awaitTerminated();
                 return ImmutableMap.of(
                     "message", "Crawler stopped successfully.",
                     "shutdownInitiated", true,
-                    "crawlerStopped", true
-                );
+                    "crawlerStopped", true);
             } else {
                 return ImmutableMap.of(
                     "message", "Crawler shutdown initiated.",
                     "shutdownInitiated", true,
-                    "crawlerStopped", false
-                );
+                    "crawlerStopped", false);
             }
         } catch (Exception e) {
             logger.error("Failed to stop crawler.", e);
@@ -144,19 +148,17 @@ public class CrawlerResource {
             return ImmutableMap.of(
                 "message", "Failed to stop crawler.",
                 "shutdownInitiated", false,
-                "crawlerStopped", false
-            );
+                "crawlerStopped", false);
         }
     };
 
     public Route addSeeds = (request, response) -> {
         try {
-            if(crawler == null) {
+            if (crawler == null) {
                 response.status(HttpServletResponse.SC_BAD_REQUEST);
                 return ImmutableMap.of(
                     "message", "Crawler is not running.",
-                    "addedSeeds", false
-                );
+                    "addedSeeds", false);
             }
 
             AddSeedsParam params = json.readValue(request.body(), AddSeedsParam.class);
@@ -164,21 +166,18 @@ public class CrawlerResource {
                 response.status(HttpServletResponse.SC_BAD_REQUEST);
                 return ImmutableMap.of(
                     "message", "No seeds provided.",
-                    "addedSeeds", false
-                );
+                    "addedSeeds", false);
             }
             crawler.addSeeds(params.seeds);
             return ImmutableMap.of(
                 "message", "Seeds added successfully.",
-                "addedSeeds", true
-            );
+                "addedSeeds", true);
         } catch (Exception e) {
             logger.error("Failed to add seeds.", e);
             response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             return ImmutableMap.of(
                 "message", "Failed to add seeds.",
-                "addedSeeds", false
-            );
+                "addedSeeds", false);
         }
     };
 
@@ -225,7 +224,7 @@ public class CrawlerResource {
     }
 
     private String getSeedForCrawlType(StartCrawlParams params, Path configPath,
-            String storedModelPath) throws FileNotFoundException, IOException {
+        String storedModelPath) throws FileNotFoundException, IOException {
         String seedPath;
         switch (params.crawlType) {
             case "DeepCrawl":
@@ -246,22 +245,34 @@ public class CrawlerResource {
 
     private String findSeedFileInModelPackage(String model) throws IOException {
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(model))) {
-            for (Path entry: stream) {
+            for (Path entry : stream) {
                 String seedFile = entry.toString();
-                if(seedFile.endsWith("seeds.txt")) {
-                    return seedFile; 
+                if (seedFile.endsWith("seeds.txt")) {
+                    return seedFile;
                 }
             }
         }
         return null;
     }
 
-    private Configuration createConfigForCrawlType(Configuration baseConfig, String crawlType,
-            Path configPath) throws IOException {
-        URL configLocation = getConfigForCrawlType(crawlType);
+    private Configuration createConfigForCrawlType(Configuration baseConfig, Path configPath,
+            StartCrawlParams params) throws IOException {
+
+        String esIndexName = params.esIndexName;
+        String esTypeName = params.esTypeName;
+
+        URL configLocation = getConfigForCrawlType(params.crawlType);
         InputStream configStream = configLocation.openStream();
         try {
             Configuration crawlConfig = baseConfig.copyUpdating(configStream);
+            if (esIndexName != null && !esIndexName.isEmpty()) {
+                crawlConfig.getTargetStorageConfig().getElasticSearchConfig()
+                    .setIndexName(esIndexName);
+            }
+            if (esTypeName != null && !esTypeName.isEmpty()) {
+                crawlConfig.getTargetStorageConfig().getElasticSearchConfig()
+                    .setTypeName(esTypeName);
+            }
             Files.createDirectories(configPath);
             crawlConfig.writeToFile(configPath.resolve("ache.yml"));
             return crawlConfig;
@@ -310,14 +321,14 @@ public class CrawlerResource {
             return null;
         }
     }
-    
+
     private void unzipFile(Path file, Path outputDir) throws IOException {
         ZipFile zipFile = new ZipFile(file.toFile());
         try {
             Enumeration<? extends ZipEntry> entries = zipFile.entries();
             while (entries.hasMoreElements()) {
                 ZipEntry entry = entries.nextElement();
-                if(entry.getName().startsWith("training_data")) {
+                if (entry.getName().startsWith("training_data")) {
                     logger.info("Skiping training_data folder/file.");
                     continue;
                 }
@@ -339,13 +350,15 @@ public class CrawlerResource {
     }
 
     public static class StartCrawlParams {
-        public String crawlType = null;
-        public List<String> seeds = null;
-        public byte[] model = null;
+        public String crawlType;
+        public List<String> seeds;
+        public byte[] model;
+        public String esTypeName;
+        public String esIndexName;
     }
 
     public static class AddSeedsParam {
-        public List<String> seeds = null;
+        public List<String> seeds;
     }
     
 

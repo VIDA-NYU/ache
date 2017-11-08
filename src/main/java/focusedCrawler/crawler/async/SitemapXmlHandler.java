@@ -18,10 +18,8 @@ import crawlercommons.sitemaps.SiteMapURL;
 import crawlercommons.sitemaps.UnknownFormatException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.util.CommunicationException;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageException;
 
 public class SitemapXmlHandler implements HttpDownloader.Callback {
     
@@ -33,11 +31,11 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
 
     private static final Logger logger = LoggerFactory.getLogger(SitemapXmlHandler.class);
     
-    private Storage linkStorage;
+    private LinkStorage linkStorage;
     private SiteMapParser parser = new SiteMapParser(false);
     
 
-    public SitemapXmlHandler(Storage linkStorage) {
+    public SitemapXmlHandler(LinkStorage linkStorage) {
         this.linkStorage = linkStorage;
     }
     
@@ -88,7 +86,7 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
         
         try {
             linkStorage.insert(sitemapData);
-        } catch (StorageException | CommunicationException e) {
+        } catch (Exception e) {
             logger.error("Failed to insert sitemaps data into link storage.", e);
         }
         

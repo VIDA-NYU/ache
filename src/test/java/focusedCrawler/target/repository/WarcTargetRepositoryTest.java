@@ -13,6 +13,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -33,7 +34,6 @@ import org.junit.rules.TemporaryFolder;
 
 import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.repository.WarcTargetRepository;
 import focusedCrawler.target.repository.WarcTargetRepository.RepositoryIterator;
 
 public class WarcTargetRepositoryTest {
@@ -61,7 +61,7 @@ public class WarcTargetRepositoryTest {
 
         Page target = new Page(new URL(url), html, responseHeaders);
         target.setTargetRelevance(TargetRelevance.RELEVANT);
-        target.setFetchTime(System.currentTimeMillis() / 1000);
+        target.setFetchTime(System.currentTimeMillis());
 
         WarcTargetRepository repository = new WarcTargetRepository(folder);
 
@@ -95,6 +95,46 @@ public class WarcTargetRepositoryTest {
     }
 
     @Test
+    public void shouldStoreAndIterateOverPages() throws IOException {
+
+        String folder = tempFolder.newFolder().toString();
+
+        Page target = new Page(new URL(url), html.getBytes(), responseHeaders,
+                new URL("http://example.com/site/index.php"));
+        target.setTargetRelevance(new TargetRelevance(false, 0.4d));
+        target.setFetchTime(Instant.parse("2017-10-19T18:03:17Z").toEpochMilli());
+        WarcTargetRepository repository = new WarcTargetRepository(folder);
+        // when
+        repository.insert(target);
+        repository.close();
+        File testFolder = new File(folder);
+
+        if (testFolder.isDirectory()) {
+            File[] allFiles = testFolder.listFiles();
+            assertTrue(allFiles[0].getName().startsWith("crawl_data"));
+        }
+
+        Iterator<Page> it = repository.pagesIterator();
+
+        // then
+        assertThat(it.hasNext(), is(true));
+        Page page = it.next();
+        assertThat(it.hasNext(), is(false));
+        assertThat(page.getRedirectedURL().toString(), is(target.getRedirectedURL().toString()));
+        assertThat(page.getFinalUrl(), is(target.getFinalUrl()));
+        assertThat(page.getFetchTime(), is(target.getFetchTime()));
+        assertThat(page.getTargetRelevance().isRelevant(),
+                is(target.getTargetRelevance().isRelevant()));
+        assertThat(page.getTargetRelevance().getRelevance(),
+                is(target.getTargetRelevance().getRelevance()));
+        assertThat(page.getResponseHeaders().size(), is(target.getResponseHeaders().size()));
+        assertThat(page.getResponseHeaders().get("Content-Type").get(0),
+                is(target.getResponseHeaders().get("Content-Type").get(0)));
+        assertThat(page.getContentAsString(),
+                is(target.getContentAsString()));
+    }
+
+    @Test
     public void testReadingMultipleWarcRecords() throws Exception {
         String folder = tempFolder.newFolder().toString();
 
@@ -102,10 +142,10 @@ public class WarcTargetRepositoryTest {
         String url2 = "http://b.com";
 
         Page target1 = new Page(new URL(url1), html, responseHeaders);
-        target1.setFetchTime(System.currentTimeMillis() / 1000);
+        target1.setFetchTime(System.currentTimeMillis());
 
         Page target2 = new Page(new URL(url2), html, responseHeaders);
-        target2.setFetchTime(System.currentTimeMillis() / 1000);
+        target2.setFetchTime(System.currentTimeMillis());
 
         WarcTargetRepository repository = new WarcTargetRepository(folder);
 

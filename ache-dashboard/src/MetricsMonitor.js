@@ -1,7 +1,6 @@
 import React from 'react';
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, DiscreteColorLegend} from 'react-vis';
-
-import {ACHE_API_ADDRESS} from './Config';
+import {api} from './RestApi';
 
 class SeriesPlot extends React.Component {
 
@@ -124,13 +123,7 @@ class MetricsMonitor extends React.Component {
   }
 
   fetchMetrics() {
-    fetch(ACHE_API_ADDRESS + "/metrics")
-      .then(function(response) {
-        return response.json();
-      }, function(error) {
-        return 'FETCH_ERROR';
-      })
-      .then(this.updateSeries.bind(this));
+    api.get("/metrics").then(this.updateSeries.bind(this));
   }
 
   updateSeries(metrics) {

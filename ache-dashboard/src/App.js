@@ -47,8 +47,14 @@ const Navigation = ({ label, to, activeOnlyWhenExact }) => (
 
 class App extends Component {
   render() {
+    let meta = document.getElementsByName("base_path")[0];
+    let basePath;
+    if(meta !== undefined) {
+      basePath = meta.content;
+    }
+
     return (
-      <Router>
+      <Router basename={basePath}>
         <div>
           <Header/>
           <div className="container">
@@ -56,7 +62,6 @@ class App extends Component {
               <Route exact path="/" component={StartCrawl}/>
               <Route exact path="/monitoring" component={MetricsMonitor}/>
               <Route exact path="/search" component={Search}/>
-              
             </div>
           </div>
         </div>
