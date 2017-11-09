@@ -58,7 +58,7 @@ dependencies {
       exclude group: 'org.apache.hadoop', module: 'hadoop-core'
       exclude group: 'junit', module: 'junit'
     }
-
+    compile 'com.github.jparkie:pdd:0.1.1'
     // REST server dependencies
     compile "com.sparkjava:spark-core:2.5.3"
     

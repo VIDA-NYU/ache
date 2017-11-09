@@ -1,4 +1,4 @@
-package focusedCrawler.dedup;
+package focusedCrawler.dedup.rules;
 
 import static java.util.Arrays.asList;
 
@@ -13,19 +13,25 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class URLAlignment {
-    
+import focusedCrawler.util.AlphaNumTokenizer;
+
+public class UrlAlignment {
+
     static public class Token implements Comparable<Token> {
-        
+
+        enum Type {
+            DIGIT, LETTER, PUNCTUATION
+        }
+
         final public String token;
-        final public char type;
+        final public Type type;
 
         public Token(String token) {
             this.token = token;
             this.type = type(token);
         }
 
-        private char type(String t) {
+        private Type type(String t) {
             boolean onlyDigits = true;
             boolean onlyLetters = true;
             for (int i = 0; i < t.length(); i++) {
@@ -35,24 +41,24 @@ public class URLAlignment {
                 if (!Character.isLetter(ch))
                     onlyLetters = false;
                 if (!onlyDigits && !onlyLetters)
-                    return 'p';
+                    return Type.PUNCTUATION;
             }
             if (onlyDigits)
-                return 'd';
+                return Type.DIGIT;
             else if (onlyLetters)
-                return 'l';
+                return Type.LETTER;
             else
-                return 'p';
+                return Type.PUNCTUATION;
         }
 
         public boolean onlyDigits() {
-            return type == 'd';
+            return type == Type.DIGIT;
         }
 
         public boolean onlyLetters() {
-            return type == 'l';
+            return type == Type.LETTER;
         }
-        
+
         @Override
         public String toString() {
             return token;
@@ -64,22 +70,14 @@ public class URLAlignment {
         }
 
         public boolean isUrlDelimiter() {
-            return type == 'p';
-//            return "/".equals(token) ||
-//                   "?".equals(token) ||
-//                   "=".equals(token) ||
-//                   "&".equals(token) ||
-//                   "#".equals(token) ||
-//                   ";".equals(token) ||
-//                   ":".equals(token) ||
-////                   "-".equals(token) ||
-//                   ".".equals(token) ;
+            return type == Type.PUNCTUATION;
         }
+
     }
 
     @SuppressWarnings("serial")
     static public class TokenSet extends TreeSet<Token> {
-        
+
         private boolean gap = false;
 
         public TokenSet() {}
@@ -87,7 +85,7 @@ public class URLAlignment {
         public TokenSet(TokenSet t) {
             super(t);
         }
-        
+
         public TokenSet(String... t) {
             for (int i = 0; i < t.length; i++) {
                 this.add(new Token(t[i]));
@@ -97,11 +95,11 @@ public class URLAlignment {
         public TokenSet(String s) {
             this.add(new Token(s));
         }
-        
+
         public void addGap() {
             this.gap = true;
         }
-        
+
         private boolean hasGap() {
             return gap;
         }
@@ -119,7 +117,7 @@ public class URLAlignment {
             else
                 return 0d;
         }
-         
+
         public boolean isUrlDelimiter() {
             return this.size() == 1 && this.first().isUrlDelimiter();
         }
@@ -138,7 +136,7 @@ public class URLAlignment {
 
         public boolean onlyDigits() {
             for (Token t : this) {
-                if(!t.onlyDigits())
+                if (!t.onlyDigits())
                     return false;
             }
             return true;
@@ -146,7 +144,7 @@ public class URLAlignment {
 
         public boolean onlyLetters() {
             for (Token t : this) {
-                if(!t.onlyLetters())
+                if (!t.onlyLetters())
                     return false;
             }
             return true;
@@ -184,7 +182,7 @@ public class URLAlignment {
                     }
                     tokenCount++;
                 }
-                if(tokenSet.hasGap()) {
+                if (tokenSet.hasGap()) {
                     s.append(',');
                     s.append('λ');
                 }
@@ -193,159 +191,102 @@ public class URLAlignment {
             s.append('>');
             return s.toString();
         }
-        
+
         @Override
         public int hashCode() {
             return this.toString().hashCode();
         }
-        
+
         @Override
         public boolean equals(Object o) {
             return this.toString().equals(o.toString());
         }
 
-        public static List<String> parseTokens(String url) {
-            if(url == null || url.isEmpty()) {
-                return null;
-            }
-            
-            List<String> sequence = new ArrayList<String>();
-            StringBuilder token = new StringBuilder();
-            
-            int i = 0;
-            char ch = url.charAt(0);
-            token.append(ch);
-            
-            CharType type = getCharType(ch);
-            CharType previousType = type;
-            
-            i++;
-            while(i < url.length()) {
-                
-                ch = url.charAt(i);
-                type = getCharType(ch);
-                
-                if(type != previousType || previousType.equals(CharType.PUNCTUATION)) {
-                    // build token
-                    sequence.add(token.toString());
-                    token = new StringBuilder();
-                }
-                token.append(ch);
-                
-                previousType = type;
-                type = getCharType(ch);
-                
-                i++;
-            }
-            
-            if(token.length() > 0) {
-                sequence.add(token.toString());
-            }
-            
-            return sequence;
-        }
-        
         public static Sequence parse(String url) {
-            if(url == null || url.isEmpty()) {
+            if (url == null || url.isEmpty()) {
                 return null;
             }
-            List<String> stringTokens = parseTokens(url);
+            List<String> stringTokens = AlphaNumTokenizer.parseTokens(url);
             Sequence sequence = new Sequence();
-            for(String token : stringTokens) {
+            for (String token : stringTokens) {
                 sequence.add(new TokenSet(token));
             }
             return sequence;
         }
-        
-        private static CharType getCharType(char currentChar) {
-            if(Character.isDigit(currentChar)) {
-                return CharType.DIGIT;
-            }
-            else if(Character.isLetter(currentChar)) {
-                return CharType.ALPHA;
-            }
-            else {
-                return CharType.PUNCTUATION;
-            }
-        }
-        
-        private static enum CharType {
-            DIGIT, ALPHA, PUNCTUATION
-        }
 
         public static Sequence multipleAlignment(List<String> urls) {
-            
+
             Set<Sequence> sequences = new HashSet<>();
-            PriorityQueue<PairwiseAlignment> queue = new PriorityQueue<>(urls.size(), PairwiseAlignment.DESC_BY_SCORE);
-            
+            PriorityQueue<PairwiseAlignment> queue =
+                    new PriorityQueue<>(urls.size(), PairwiseAlignment.DESC_BY_SCORE);
+
             for (int i = 0; i < urls.size(); i++) {
                 for (int j = i + 1; j < urls.size(); j++) {
-                    
+
                     Sequence sequence1 = parse(urls.get(i));
                     Sequence sequence2 = parse(urls.get(j));
-                    
+
                     sequences.add(sequence1);
                     sequences.add(sequence2);
-                    
+
                     queue.add(new PairwiseAlignment(sequence1, sequence2));
                 }
             }
-            
-//            System.out.println("PAIRWISE");
-//            for(PairwiseAlignment alignment : queue) {
-//                System.out.println(alignment.score + " "+alignment.consensus.toString());
-//            }
-//            System.out.println("PAIRWISE END");
-//            
-//            System.out.println("Aligning...");
-            
+
+            // System.out.println("PAIRWISE");
+            // for(PairwiseAlignment alignment : queue) {
+            // System.out.println(alignment.score + " "+alignment.consensus.toString());
+            // }
+            // System.out.println("PAIRWISE END");
+            //
+            // System.out.println("Aligning...");
+
             Set<Sequence> aligned = new HashSet<>();
-            while(!queue.isEmpty()) {
+            while (!queue.isEmpty()) {
                 PairwiseAlignment alignment = queue.poll();
-                
-                if(!aligned.contains(alignment.url1) && !aligned.contains(alignment.url2)) {
-                    
+
+                if (!aligned.contains(alignment.url1) && !aligned.contains(alignment.url2)) {
+
                     aligned.add(alignment.url1);
                     aligned.add(alignment.url2);
                     sequences.remove(alignment.url1);
                     sequences.remove(alignment.url2);
-                    
-                    for(Sequence s : sequences) {
+
+                    for (Sequence s : sequences) {
                         PairwiseAlignment epilson = new PairwiseAlignment(alignment.consensus, s);
                         queue.add(epilson);
                     }
-                    
+
                     sequences.add(alignment.consensus);
                 }
             }
-            
+
             Sequence consensus = sequences.iterator().next();
-            
+
             return consensus;
         }
 
     }
-    
+
     static public class RewriteRule {
-        
-        
+
         public final String context;
         public final String transformation;
         private Pattern contextPattern;
         private Pattern transformationPattern;
         private int backreferences;
         private int setCardinality; // cardinality of token set
-        
+
         public RewriteRule(Sequence sequence) {
             this(sequence, 5);
         }
-        
+
         public RewriteRule(Sequence sequence, int setCardinality) {
             this.setCardinality = setCardinality;
             this.backreferences = 0;
             StringBuilder context = new StringBuilder();
             StringBuilder transformation = new StringBuilder();
-            
+
             context.append('^');
 
             int indexLastProcessed = -1;
@@ -354,46 +295,46 @@ public class URLAlignment {
             for (int i = 0; i < sequence.size(); i++) {
 
                 TokenSet token = sequence.get(i);
-                
+
                 boolean isUrlDelimiter = token.isUrlDelimiter();
                 boolean isInvariant = token.isInvariant();
-                
+
                 if (isUrlDelimiter) {
                     // Deal with unprocessed tokens before the URL delimiter
-                    if(indexLastProcessed + 1 < i) {
+                    if (indexLastProcessed + 1 < i) {
                         processNonUrlDelimiterTokens(sequence, context, transformation,
-                                                     indexLastProcessed, allInvariant, i);
+                                indexLastProcessed, allInvariant, i);
                     }
-                    
+
                     // Append URL delimiter token
                     context.append("\\");
                     context.append(token.first().token); // escaping token for regex
-                    
-                    if(!token.isIrrelevant())
+
+                    if (!token.isIrrelevant())
                         transformation.append(token.first());
-                    
+
                     indexLastProcessed = i;
                 }
-                
-                if(isUrlDelimiter) {
+
+                if (isUrlDelimiter) {
                     allInvariant = true;
                 } else {
-                    if(!isInvariant) {
+                    if (!isInvariant) {
                         allInvariant = false;
                     }
                 }
             }
-            
-            if(indexLastProcessed < sequence.size() - 1) {
+
+            if (indexLastProcessed < sequence.size() - 1) {
                 processNonUrlDelimiterTokens(sequence, context, transformation,
-                                             indexLastProcessed, allInvariant, sequence.size());
+                        indexLastProcessed, allInvariant, sequence.size());
             }
-            
+
             context.append('$');
-            
+
             this.context = context.toString();
             this.contextPattern = Pattern.compile(this.context);
-            
+
             this.transformation = transformation.toString();
             this.transformationPattern = Pattern.compile("\\$\\d+");
         }
@@ -494,9 +435,6 @@ public class URLAlignment {
         }
 
         public String rewrite(String url) {
-//            System.out.println("URLAlignment.RewriteRule.rewrite()");
-//            System.out.println("url: "+url);
-//            System.out.println(this);
             
             Matcher contextMatcher = contextPattern.matcher(url);
             if(!contextMatcher.matches()) {
@@ -511,7 +449,6 @@ public class URLAlignment {
                 
                 if(contextGroup < contextMatcher.groupCount()) {
                     String replacement = contextMatcher.group(++contextGroup);
-//                    System.out.println(backref +" : "+replacement);
                     transformationMatcher.appendReplacement(builder, replacement);
                 } else {
                     System.err.println("Didn't find replacement for "+backref);
@@ -519,7 +456,6 @@ public class URLAlignment {
             }
             transformationMatcher.appendTail(builder);
             
-//            System.out.println("rewrite: " + builder.toString());
             return builder.toString();
         }
         

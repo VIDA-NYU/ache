@@ -1,4 +1,4 @@
-package focusedCrawler.dedup;
+package focusedCrawler.dedup.rules;
 
 import static java.util.Arrays.asList;
 
@@ -16,62 +16,63 @@ import java.util.Set;
 
 import com.google.common.collect.Lists;
 
-import focusedCrawler.dedup.URLAlignment.RewriteRule;
-import focusedCrawler.dedup.URLAlignment.Sequence;
+import focusedCrawler.dedup.rules.UrlAlignment.RewriteRule;
+import focusedCrawler.dedup.rules.UrlAlignment.Sequence;
 
 
 public class RulesValidation {
-    
+
     static Map<String, String> urlContent = new HashMap<String, String>();
     static Set<String> dust = new HashSet<String>();
-    
+
     static final int K = 10;
     static double MAX_FALSE_POSITIVE_RATE = 0.3;
     static int MIN_SUPPORT = 5;
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         String[] filename = {
-            "www.ar15.com_dups.txt",
-            "arguntrader.com_dups.txt",
-            "www.firearmstalk.com_dups.txt",
-            "www.nextechclassifieds.com_dups.txt",
-            "www.sturmgewehr.com_dups.txt",
-            "www.thefirearmblog.com_dups.txt"
-//            "data_target_dups.txt"
+                "www.ar15.com_dups.txt",
+                "arguntrader.com_dups.txt",
+                "www.firearmstalk.com_dups.txt",
+                "www.nextechclassifieds.com_dups.txt",
+                "www.sturmgewehr.com_dups.txt",
+                "www.thefirearmblog.com_dups.txt"
+                // "data_target_dups.txt"
         };
-        
+
         for (int i = 0; i < filename.length; i++) {
             System.out.println("========================================");
             System.out.println(filename[i]);
             System.out.println();
-            
-            List<String> lines = Files.readAllLines(Paths.get("data", filename[i]), StandardCharsets.UTF_8);
-//            Collections.shuffle(lines, new Random(System.nanoTime()));
-            
-            int partitionSize = lines.size()/3;
+
+            List<String> lines =
+                    Files.readAllLines(Paths.get("data", filename[i]), StandardCharsets.UTF_8);
+            // Collections.shuffle(lines, new Random(System.nanoTime()));
+
+            int partitionSize = lines.size() / 3;
             List<List<String>> partition = Lists.partition(lines, partitionSize);
-            
+
             Map<String, List<String>> trainSet = parseLines(partition.get(0));
             Map<String, List<String>> validationSet = parseLines(partition.get(1));
             Map<String, List<String>> testSet = parseLines(partition.get(2));
             System.out.println();
-            
+
             Map<String, List<String>> trainDupClusters = getDupClusters(trainSet);
-            System.out.println("     Train Dup-Clusters: "+trainDupClusters.size());
-            
+            System.out.println("     Train Dup-Clusters: " + trainDupClusters.size());
+
             Map<String, List<String>> validationDupClusters = getDupClusters(validationSet);
-            System.out.println("Validation Dup-Clusters: "+validationDupClusters.size());
-            
+            System.out.println("Validation Dup-Clusters: " + validationDupClusters.size());
+
             Map<String, List<String>> testDupClusters = getDupClusters(testSet);
-            System.out.println("Validation Dup-Clusters: "+testDupClusters.size());
-            
+            System.out.println("Validation Dup-Clusters: " + testDupClusters.size());
+
             Set<RewriteRule> candidateRules = createCandidateRules(trainDupClusters);
-    
-            
+
+
             List<RewriteRule> validRules = validateRules(validationSet, candidateRules);
-            System.out.println("Valid rules: "+validRules.size());
-            
+            System.out.println("Valid rules: " + validRules.size());
+
             testRules(testSet, validRules);
         }
     }
@@ -83,75 +84,76 @@ public class RulesValidation {
             String contentHash = split.get(0);
             List<String> urls = split.subList(1, split.size());
             dataset.put(contentHash, urls);
-            if(urls.size() > 1) {
-                for(String url : urls) {
+            if (urls.size() > 1) {
+                for (String url : urls) {
                     dust.add(url);
                 }
             }
         }
-        System.out.println("Number of lines: "+dataset.size());
+        System.out.println("Number of lines: " + dataset.size());
         return dataset;
     }
 
     private static Map<String, List<String>> getDupClusters(Map<String, List<String>> urlSet) {
         Map<String, List<String>> dupClusters = new HashMap<>();
-        for(Entry<String, List<String>> entry : urlSet.entrySet()) {
+        for (Entry<String, List<String>> entry : urlSet.entrySet()) {
             List<String> urls = entry.getValue();
-            if(urls.size() > 1) {
+            if (urls.size() > 1) {
                 dupClusters.put(entry.getKey(), entry.getValue());
-//                System.out.println(entry.getKey() +" - "+ entry.getValue());
+                // System.out.println(entry.getKey() +" - "+ entry.getValue());
             }
         }
-        
+
         return dupClusters;
     }
 
     private static Set<RewriteRule> createCandidateRules(Map<String, List<String>> trainSet) {
         Set<RewriteRule> rules = new HashSet<>();
         for (Entry<String, List<String>> entry : trainSet.entrySet()) {
-            
-//            String contentHash = entry.getKey();
+
+            // String contentHash = entry.getKey();
             List<String> urls = entry.getValue();
-            
-//            System.out.println("Creating rule for: "+contentHash);
-            
+
+            // System.out.println("Creating rule for: "+contentHash);
+
             int size = Math.min(urls.size(), K);
             Sequence alignment = Sequence.multipleAlignment(urls.subList(0, size));
             RewriteRule rule = new RewriteRule(alignment);
             rules.add(rule);
-            
-//            System.out.println(rule);
+
+            // System.out.println(rule);
         }
         return rules;
     }
 
     private static List<RewriteRule> validateRules(Map<String, List<String>> validationSet,
-                                                   Set<RewriteRule> candidateRules) {
-        
+            Set<RewriteRule> candidateRules) {
+
         System.out.println("\n=== VALIDATION ===");
-        
+
         List<RewriteRule> validRules = new ArrayList<>();
         Map<String, Set<String>> canonicalTable = new HashMap<>();
-        
+
         for (RewriteRule rule : candidateRules) {
 
             int totalOriginal = 0;
             int support = 0;
             int fpp = 0;
             Set<String> normalizedUrls = new HashSet<>();
-            
+
             for (Entry<String, List<String>> entry : validationSet.entrySet()) {
                 List<String> urls = entry.getValue();
                 for (String url : urls) {
                     totalOriginal++;
                     String canonical = url;
-//                    System.out.println("mathces: "+url);
-//                    String boom = "https://www.ar15.com/forums/t_1_2/1854214_____________________________________________________________________________________________________.html";
-//                    !url.equals(boom ) && 
+                    // System.out.println("mathces: "+url);
+                    // String boom =
+                    // "https://www.ar15.com/forums/t_1_2/1854214_____________________________________________________________________________________________________.html";
+                    // !url.equals(boom ) &&
                     if (rule.matches(url)) {
                         canonical = rule.rewrite(url);
                     }
-                    if(!canonical.equals(url)) {
+                    if (!canonical.equals(url)) {
                         Set<String> dups = canonicalTable.get(canonical);
                         if (dups == null) {
                             dups = new HashSet<>();
@@ -159,30 +161,30 @@ public class RulesValidation {
                         }
                         dups.add(url);
                     }
-//                    System.out.println("done.");
+                    // System.out.println("done.");
                     normalizedUrls.add(canonical);
                 }
             }
-            
-            for(Entry<String, Set<String>> canonicalEntry : canonicalTable.entrySet()) {
+
+            for (Entry<String, Set<String>> canonicalEntry : canonicalTable.entrySet()) {
                 String canonical = canonicalEntry.getKey();
-//                System.out.println("canonical"+canonical);
+                // System.out.println("canonical"+canonical);
                 Set<String> bucket = canonicalEntry.getValue();
-                if(bucket.size() > 1) {
-                    for(String original : bucket) {
+                if (bucket.size() > 1) {
+                    for (String original : bucket) {
                         support++;
-                        if(!dust.contains(original) && !dust.contains(canonical)) {
+                        if (!dust.contains(original) && !dust.contains(canonical)) {
                             fpp++;
                         }
                     }
                 }
             }
-            
+
             double reduction = (totalOriginal - normalizedUrls.size()) / (double) totalOriginal;
             double fpr = support > 0 ? fpp / (double) support : 0;
 
-            if(support >= MIN_SUPPORT) {
-                if(fpr <= MAX_FALSE_POSITIVE_RATE) {
+            if (support >= MIN_SUPPORT) {
+                if (fpr <= MAX_FALSE_POSITIVE_RATE) {
                     validRules.add(rule);
                     System.out.println();
                     System.out.println(rule);
@@ -208,29 +210,30 @@ public class RulesValidation {
             for (String url : urls) {
                 totalOriginal++;
                 String normalized = normalize(validRules, url);
-                if(!normalized.equals(url)) {
-                    if(!dust.contains(url)) {
+                if (!normalized.equals(url)) {
+                    if (!dust.contains(url)) {
                         fpp++;
-//                        System.out.println("WRONG:");
-//                        System.out.println("orig: "+url);
-//                        System.out.println("norm: "+normalized);
+                        // System.out.println("WRONG:");
+                        // System.out.println("orig: "+url);
+                        // System.out.println("norm: "+normalized);
                     } else {
-//                        System.out.println("CORRECT:");
-//                        System.out.println("orig: "+url);
-//                        System.out.println("norm: "+normalized);
+                        // System.out.println("CORRECT:");
+                        // System.out.println("orig: "+url);
+                        // System.out.println("norm: "+normalized);
                     }
-//                    System.out.println();
+                    // System.out.println();
                 }
                 normalizedUrls.add(normalized);
             }
         }
-        
+
         double fpr = normalizedUrls.size() > 0 ? fpp / (double) normalizedUrls.size() : 0;
-        
+
         System.out.println();
         System.out.println("  original: " + totalOriginal);
         System.out.println("normalized: " + normalizedUrls.size());
-        System.out.println(" reduction: " + (totalOriginal - normalizedUrls.size()) / (double) totalOriginal);
+        System.out.println(
+                " reduction: " + (totalOriginal - normalizedUrls.size()) / (double) totalOriginal);
         System.out.println("       fpr: " + fpr);
         System.out.println();
     }
@@ -238,11 +241,11 @@ public class RulesValidation {
     private static String normalize(List<RewriteRule> validRules, String url) {
         String normalized = url;
         for (RewriteRule rule : validRules) {
-            if(rule.matches(url)) {
+            if (rule.matches(url)) {
                 normalized = rule.rewrite(url);
             }
         }
         return normalized;
     }
-    
+
 }

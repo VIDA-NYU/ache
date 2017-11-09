@@ -26,13 +26,12 @@ public class ComputeDuplications {
     
     public static void main(String[] args) throws Exception {
 
-        Path outputPath = Paths.get("/data/memex/crawleval/surface/data_target/");
+        Path dataPath = Paths.get(args[0]);
+        String outputFile = args[1];
         
-        FileSystemTargetRepository repository = new FileSystemTargetRepository(outputPath, DataFormat.JSON, true, false);
-        
-        Map<String, Set<String>> contentHashes = computeDups(repository);
-        
-        printDups(contentHashes, "data/" + outputPath.getFileName() + "_dups.txt");
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(dataPath, DataFormat.JSON, true, false);
+        Map<String, Set<String>> contentHashes = computeContentHashes(repository);
+        printDups(contentHashes, outputFile);
     }
     
 
@@ -47,12 +46,22 @@ public class ComputeDuplications {
             if (entry.getValue().size() > 1) {
                 duplicates += entry.getValue().size() - 1; // one of them is the canonical
             }
-            fileWriter.print(entry.getKey());
+            
+//            fileWriter.print(entry.getKey());
+//            for (String url : entry.getValue()) {
+//                fileWriter.print(' ');
+//                fileWriter.print(url);
+//            }
+//            fileWriter.print('\n');
+            
             for (String url : entry.getValue()) {
+                fileWriter.print(entry.getValue().size());
+                fileWriter.print(' ');
+                fileWriter.print(entry.getKey());
                 fileWriter.print(' ');
                 fileWriter.print(url);
+                fileWriter.print('\n');
             }
-            fileWriter.print('\n');
         }
 
         System.out.println("    pages: " + pages);
@@ -63,7 +72,7 @@ public class ComputeDuplications {
     }
 
 
-    private static Map<String, Set<String>> computeDups(FileSystemTargetRepository repository) throws Exception {
+    private static Map<String, Set<String>> computeContentHashes(FileSystemTargetRepository repository) throws Exception {
         
         Map<String, Set<String>> contentHashMap = new HashMap<>();
         Iterator<TargetModelJson> iterator = repository.iterator();
@@ -85,9 +94,6 @@ public class ComputeDuplications {
                 continue;
             }
             
-            HashMap<String, Object> crawlData = new HashMap<>();
-            crawlData.put("response_headers", page.getResponseHeaders());
-            
             String text = KeepEverythingExtractor.INSTANCE.getText(page.getContentAsString());
             String contentHash = DigestUtils.md5Hex(text);
             
@@ -97,7 +103,8 @@ public class ComputeDuplications {
                 contentHashMap.put(contentHash, dups);
             }
             
-            dups.add(page.getUrl());
+//            dups.add(page.getUrl());
+            dups.add(page.getFetchTime() + " "+page.getUrl());
         }
         return contentHashMap;
     }
