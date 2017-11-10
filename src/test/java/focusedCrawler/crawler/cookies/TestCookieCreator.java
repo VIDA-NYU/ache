@@ -1,4 +1,4 @@
-package focusedCrawler.crawler.async.cookieHandler;
+package focusedCrawler.crawler.cookies;
 
 import okhttp3.Cookie;
 import okhttp3.HttpUrl;

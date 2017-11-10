@@ -34,7 +34,7 @@ import com.google.common.collect.ImmutableMap.Builder;
 import focusedCrawler.Main;
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.AsyncCrawler;
-import focusedCrawler.crawler.async.cookies.Cookie;
+import focusedCrawler.crawler.cookies.Cookie;
 import focusedCrawler.util.MetricsManager;
 import spark.Request;
 import spark.Route;

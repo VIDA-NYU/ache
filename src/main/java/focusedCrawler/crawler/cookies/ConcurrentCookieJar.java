@@ -1,4 +1,4 @@
-package focusedCrawler.crawler.async.cookies;
+package focusedCrawler.crawler.cookies;
 
 import java.io.Serializable;
 import java.util.ArrayList;

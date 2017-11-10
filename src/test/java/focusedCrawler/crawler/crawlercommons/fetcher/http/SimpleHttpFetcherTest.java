@@ -50,9 +50,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
-import focusedCrawler.crawler.async.cookies.Cookie;
-import focusedCrawler.crawler.async.cookies.CookieUtils;
 import focusedCrawler.crawler.async.fetcher.FetcherFactory;
+import focusedCrawler.crawler.cookies.Cookie;
+import focusedCrawler.crawler.cookies.CookieUtils;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;

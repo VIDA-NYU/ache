@@ -7,8 +7,8 @@ import java.util.List;
 import org.apache.http.impl.cookie.BasicClientCookie;
 
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
-import focusedCrawler.crawler.async.cookies.ConcurrentCookieJar;
-import focusedCrawler.crawler.async.cookies.OkHttpCookieJar;
+import focusedCrawler.crawler.cookies.ConcurrentCookieJar;
+import focusedCrawler.crawler.cookies.OkHttpCookieJar;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.UserAgent;
