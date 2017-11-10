@@ -520,7 +520,7 @@ public class OkHttpFetcher extends BaseHttpFetcher {
         return false;
     }
 
-    public void update(Map<String, List<Cookie>> map) {
+    public void updateCookies(Map<String, List<Cookie>> map) {
         this.cookieJar.update(map);
     }
 

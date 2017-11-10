@@ -153,7 +153,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 
     private IdleConnectionMonitorThread monitor;
     
-    //Store cookies loaded from configuration file
+    // Store cookies loaded from configuration file
     private CookieStore globalCookieStore = null;
 
 
@@ -1105,7 +1105,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
      */
 	public void updateCookieStore(Map<String, List<Cookie>> cookies) {
 		if(cookies == null) {
-			throw new NullPointerException("Cookies argument cannot be null");
+			throw new NullPointerException("Cookies argument can not be null");
 		}
 		if(globalCookieStore == null) {
 			globalCookieStore = new ConcurrentCookieJar();

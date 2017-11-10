@@ -89,7 +89,7 @@ public class CookieUtils {
         if (baseFetcher instanceof SimpleHttpFetcher) {
             ((SimpleHttpFetcher) baseFetcher).updateCookieStore(asApacheCookies(validCookies));
         } else if (baseFetcher instanceof OkHttpFetcher) {
-            ((OkHttpFetcher) baseFetcher).update(asOkhttp3Cookies(cookies));
+            ((OkHttpFetcher) baseFetcher).updateCookies(asOkhttp3Cookies(cookies));
         }
     }
 
