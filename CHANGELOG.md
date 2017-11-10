@@ -2,6 +2,7 @@
 
 ## Version 0.10.0-SNAPSHOT (Unreleased)
 
+- Upgraded gradle-node plugin to version 1.2.0
 - ...
 
 
