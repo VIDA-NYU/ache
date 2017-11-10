@@ -1,4 +1,4 @@
-package focusedCrawler.crawler.async.cookieHandler;
+package focusedCrawler.crawler.async.cookies;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,10 +13,8 @@ import javax.annotation.concurrent.GuardedBy;
 import org.apache.http.client.CookieStore;
 import org.apache.http.cookie.Cookie;
 
-public class ConcurrentCookieJar implements CookieStore, Serializable,CookieHandler {
-
-
-    private static final long serialVersionUID = -7581093305228232025L;
+@SuppressWarnings("serial")
+public class ConcurrentCookieJar implements CookieStore, Serializable {
 
     @GuardedBy("this")
     private final ConcurrentHashMap<String, Cookie> cookies;
@@ -27,39 +25,36 @@ public class ConcurrentCookieJar implements CookieStore, Serializable,CookieHand
     }
 
     /**
-     * Adds an {@link Cookie HTTP cookie}, replacing any existing equivalent cookies.
-     * If the given cookie has already expired it will not be added, but existing
-     * values will still be removed.
+     * Adds an {@link Cookie HTTP cookie}, replacing any existing equivalent cookies. If the given
+     * cookie has already expired it will not be added, but existing values will still be removed.
      *
      * @param cookie the {@link Cookie cookie} to be added
      *
      * @see #addCookies(HashMap)
      *
      */
-
     @Override
     public void addCookie(final Cookie cookie) {
         if (cookie != null) {
             // first remove any old cookie that is equivalent
-            cookies.remove(cookie.getDomain()+cookie.getName()+cookie.getPath());
+            cookies.remove(cookie.getDomain() + cookie.getName() + cookie.getPath());
             if (!cookie.isExpired(new Date())) {
-                cookies.put(cookie.getDomain()+cookie.getName()+cookie.getPath(), cookie);
+                cookies.put(cookie.getDomain() + cookie.getName() + cookie.getPath(), cookie);
             }
         }
     }
 
     /**
-     * Adds an array of {@link Cookie HTTP cookies}. Cookies are added individually and
-     * in the given array order. If any of the given cookies has already expired it will
-     * not be added, but existing values will still be removed.
+     * Adds an array of {@link Cookie HTTP cookies}. Cookies are added individually and in the given
+     * array order. If any of the given cookies has already expired it will not be added, but
+     * existing values will still be removed.
      *
      * @param cookies the {@link Cookie cookies} to be added
      *
      * @see #addCookie(Cookie)
      *
      */
-
-    public void addCookies(final HashMap<String, Cookie> cookies){
+    public void addCookies(final HashMap<String, Cookie> cookies) {
         if (cookies != null) {
             for (final Map.Entry<String, Cookie> cooky : cookies.entrySet()) {
                 this.addCookie(cooky.getValue());
@@ -76,20 +71,19 @@ public class ConcurrentCookieJar implements CookieStore, Serializable,CookieHand
     }
 
     /**
-     * Returns an immutable array of {@link Cookie cookies} that this HTTP
-     * state currently contains.
+     * Returns an immutable array of {@link Cookie cookies} that this HTTP state currently contains.
      *
      * @return an array of {@link Cookie cookies}.
      */
     @Override
     public List<Cookie> getCookies() {
-        //create defensive copy so it won't be concurrently modified
+        // create defensive copy so it won't be concurrently modified
         return new ArrayList<Cookie>(cookies.values());
     }
 
     /**
-     * Removes all of {@link Cookie cookies} in this HTTP state
-     * that have expired by the specified {@link java.util.Date date}.
+     * Removes all of {@link Cookie cookies} in this HTTP state that have expired by the specified
+     * {@link java.util.Date date}.
      *
      * @return true if any cookies were purged.
      *
@@ -103,15 +97,16 @@ public class ConcurrentCookieJar implements CookieStore, Serializable,CookieHand
         }
         boolean removed = false;
         Iterator<Cookie> it = cookies.values().iterator();
-        while(it.hasNext()){
+        while (it.hasNext()) {
             Cookie cooky = it.next();
-            if(cooky.isExpired(date)){
+            if (cooky.isExpired(date)) {
                 it.remove();
                 removed = true;
             }
         }
         return removed;
     }
+
     /**
      * Clears all cookies.
      */
@@ -124,4 +119,5 @@ public class ConcurrentCookieJar implements CookieStore, Serializable,CookieHand
     public String toString() {
         return cookies.toString();
     }
+
 }

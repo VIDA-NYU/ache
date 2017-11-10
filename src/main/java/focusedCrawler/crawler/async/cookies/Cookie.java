@@ -1,4 +1,4 @@
-package focusedCrawler.crawler.async.cookieHandler;
+package focusedCrawler.crawler.async.cookies;
 
 import java.io.Serializable;
 import java.util.Calendar;

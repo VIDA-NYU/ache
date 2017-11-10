@@ -13,6 +13,7 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
+import focusedCrawler.crawler.async.cookies.OkHttpCookieJar;
 import okhttp3.Cookie;
 import okhttp3.HttpUrl;
 

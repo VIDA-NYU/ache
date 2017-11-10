@@ -1,17 +1,12 @@
 package focusedCrawler.crawler.async.fetcher;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
-import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.http.client.CookieStore;
 import org.apache.http.cookie.Cookie;
-import org.apache.http.cookie.CookieIdentityComparator;
 
 public class GlobalCookieStore implements CookieStore, Serializable {
 

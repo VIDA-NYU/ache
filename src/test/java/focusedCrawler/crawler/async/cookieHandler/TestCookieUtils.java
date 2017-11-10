@@ -9,6 +9,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
+import focusedCrawler.crawler.async.cookies.Cookie;
+import focusedCrawler.crawler.async.cookies.CookieUtils;
 import focusedCrawler.crawler.async.fetcher.FetcherFactory;
 
 public class TestCookieUtils {

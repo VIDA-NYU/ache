@@ -4,12 +4,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-import org.apache.http.client.CookieStore;
 import org.apache.http.impl.cookie.BasicClientCookie;
 
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
-import focusedCrawler.crawler.async.cookieHandler.ConcurrentCookieJar;
-import focusedCrawler.crawler.async.cookieHandler.OkHttpCookieJar;
+import focusedCrawler.crawler.async.cookies.ConcurrentCookieJar;
+import focusedCrawler.crawler.async.cookies.OkHttpCookieJar;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.UserAgent;
@@ -101,7 +100,7 @@ public class FetcherFactory {
                 BasicClientCookie cc = new BasicClientCookie(kv[0], kv[1]);
                 cc.setPath(cookie.path);
                 cc.setDomain(cookie.domain);
-                ((CookieStore) store).addCookie(cc);
+                store.addCookie(cc);
             }
         }
         return store;
