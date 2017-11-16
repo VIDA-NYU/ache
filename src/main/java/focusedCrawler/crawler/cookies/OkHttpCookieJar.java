@@ -28,7 +28,7 @@ public class OkHttpCookieJar implements CookieJar {
     public List<Cookie> loadForRequest(HttpUrl url) {
         List<Cookie> validCookies = new ArrayList<>();
 
-        List<Cookie> cooky = cookieJar.get(url.host());
+        List<Cookie> cooky = cookieJar.get(url.topPrivateDomain());
         if (cooky != null) {
             Iterator<Cookie> it = cooky.iterator();
             while (it.hasNext()) {
