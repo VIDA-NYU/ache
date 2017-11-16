@@ -13,7 +13,6 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
-import focusedCrawler.crawler.cookies.OkHttpCookieJar;
 import okhttp3.Cookie;
 import okhttp3.HttpUrl;
 
@@ -73,8 +72,8 @@ public class OkHttpCookieJarTest {
     @Test
     public void shouldLoadTopLevelCookieForSubdomains() throws Exception {
         // given
-        HttpUrl url1 = HttpUrl.parse("https://domain.com/");
-        HttpUrl url2 = HttpUrl.parse("https://sub.domain.com/");
+        HttpUrl topDomainUrl = HttpUrl.parse("https://domain.com/");
+        HttpUrl subDomainUrl = HttpUrl.parse("https://sub.domain.com/");
         Cookie topLevelCookie = new Cookie.Builder()
                 .domain("domain.com")
                 .path("/")
@@ -86,20 +85,24 @@ public class OkHttpCookieJarTest {
                 .build();
 
         // when
-        cookieJar.saveFromResponse(url1, asList(topLevelCookie));
-        List<Cookie> cookiesFor2 = cookieJar.loadForRequest(url2);
+        cookieJar.saveFromResponse(topDomainUrl, asList(topLevelCookie));
+
+        List<Cookie> cookiesForTop = cookieJar.loadForRequest(topDomainUrl);
+        List<Cookie> cookiesForSub = cookieJar.loadForRequest(subDomainUrl);
 
         // then
-        assertThat(cookiesFor2, is(asList(topLevelCookie)));
+        assertThat(cookiesForSub, is(asList(topLevelCookie)));
+        assertThat(cookiesForTop, is(asList(topLevelCookie)));
     }
 
+
     @Test
-    public void shouldNotLoadSubdomainCookiesForHigherLevelDomain() throws Exception {
+    public void shouldNotLoadSubDomainCookieForTopLevelDomain() throws Exception {
         // given
-        HttpUrl url1 = HttpUrl.parse("https://subdomain.domain.com/");
-        HttpUrl url2 = HttpUrl.parse("https://domain.com/");
-        Cookie subdomainCookie = new Cookie.Builder()
-                .domain("subdomain.domain.com")
+        HttpUrl topDomainUrl = HttpUrl.parse("https://domain.com/");
+        HttpUrl subDomainUrl = HttpUrl.parse("https://sub.domain.com/");
+        Cookie topLevelCookie = new Cookie.Builder()
+                .domain("sub.domain.com")
                 .path("/")
                 .name("name")
                 .value("value")
@@ -107,12 +110,46 @@ public class OkHttpCookieJarTest {
                 .httpOnly()
                 .secure()
                 .build();
+
         // when
-        cookieJar.saveFromResponse(url1, asList(subdomainCookie));
-        List<Cookie> cookiesFor2 = cookieJar.loadForRequest(url2);
+        cookieJar.saveFromResponse(subDomainUrl, asList(topLevelCookie));
+
+        List<Cookie> cookiesForTop = cookieJar.loadForRequest(topDomainUrl);
+        List<Cookie> cookiesForSub = cookieJar.loadForRequest(subDomainUrl);
 
         // then
+        assertThat(cookiesForTop, is(empty()));
+        assertThat(cookiesForSub, is(asList(topLevelCookie)));
+    }
+
+    @Test
+    public void shouldNotLoadSubdomainCookiesForHigherLevelDomain() throws Exception {
+        // given
+        HttpUrl url1 = HttpUrl.parse("https://login.domain.com/");
+        Cookie subdomainCookie = new Cookie.Builder()
+                .domain("login.domain.com")
+                .path("/")
+                .name("name")
+                .value("value")
+                .expiresAt(System.currentTimeMillis() + 24 * 60 * 60 * 1000)
+                .httpOnly()
+                .secure()
+                .build();
+
+        HttpUrl url2 = HttpUrl.parse("https://domain.com/");
+        HttpUrl url3 = HttpUrl.parse("https://www.domain.com/");
+
+        cookieJar.saveFromResponse(url1, asList(subdomainCookie));
+
+        // when
+        List<Cookie> cookiesFor2 = cookieJar.loadForRequest(url2);
+        // then
         assertThat(cookiesFor2, is(empty()));
+
+        // when
+        List<Cookie> cookiesFor3 = cookieJar.loadForRequest(url3);
+        // then
+        assertThat(cookiesFor3, is(empty()));
     }
 
     @Test
