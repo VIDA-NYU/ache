@@ -55,15 +55,14 @@ public class HardFocusCrawlingTest {
         String seedPath = basePath + "/seeds.txt";
         String modelPath = basePath + "/model/";
 
+        String crawlerId = "crawler0";
+
         // when
-        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath };
+        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath, "-cid", crawlerId };
         Main.main(args);
 
         // then
-        Configuration config = new Configuration(configPath + "/ache.yml");
-        String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
-        String dir = Paths.get(outputPath, linkDirectory).toString();
-        Frontier frontier = new Frontier(dir, 1000, config.getLinkStorageConfig().getPersistentHashtableBackend());
+        Frontier frontier = openFrontier(outputPath + "/" + crawlerId, configPath);
 
         List<String> shouldBeDownloaded = asList(
                 "index.html",
@@ -89,5 +88,13 @@ public class HardFocusCrawlingTest {
         }
     }
     
+    private Frontier openFrontier(String outputPath, String configPath) {
+        Configuration config = new Configuration(configPath + "/ache.yml");
+        String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
+        String dir = Paths.get(outputPath, linkDirectory).toString();
+        Frontier frontier = new Frontier(dir, 1000,
+                config.getLinkStorageConfig().getPersistentHashtableBackend());
+        return frontier;
+    }
 
 }
