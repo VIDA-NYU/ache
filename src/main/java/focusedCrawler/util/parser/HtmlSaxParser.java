@@ -2,17 +2,27 @@ package focusedCrawler.util.parser;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.TreeSet;
+import java.util.regex.Pattern;
 
+import org.apache.commons.validator.routines.UrlValidator;
 import org.cyberneko.html.parsers.SAXParser;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
+
+import focusedCrawler.crawler.crawlercommons.filters.basic.BasicURLNormalizer;
 
 public class HtmlSaxParser extends SAXParser implements ContentHandler {
 
@@ -54,6 +64,21 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
         TITLE, TEXT, ANCHOR_TEXT, IGNORE
     }
 
+    public static final Logger logger = LoggerFactory.getLogger(HtmlSaxParser.class);
+
+    private final String[] schemes = {"http", "https"};
+    private final UrlValidator urlValidator = new UrlValidator(schemes);
+
+    // ONION links aren't accepted by the validator
+    // Regex ".[^.]+" --> any string of at least 1 char without dot
+    private Pattern onionRegex = Pattern.compile("https?://.[^.]+\\.onion.*");
+
+    private static final List<String> invalidParameters =
+            Arrays.asList("sid", "phpsessid", "sessionid", "jsessionid");
+    private static final BasicURLNormalizer urlNormalizer =
+            new BasicURLNormalizer(new TreeSet<>(invalidParameters), false);
+
+
     private TextType textState = TextType.TEXT;
     private List<Anchor> anchors = new ArrayList<>();
     private List<String> images;
@@ -64,12 +89,20 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
     private String currentHref = null;
     private int currentHrefTextStart = 0;
 
-    public HtmlSaxParser(String url, String html) throws SAXException, IOException {
+    public HtmlSaxParser(URL url, String html) {
+        this(url.toString(), html);
+    }
+
+    public HtmlSaxParser(String url, String html) {
         this.baseUrl = url;
         // super.setContentHandler(new BoilerpipeHTMLContentHandler());
         setContentHandler(this);
         InputSource input = new InputSource(new StringReader(html));
-        this.parse(input);
+        try {
+            this.parse(input);
+        } catch (SAXException | IOException e) {
+            throw new RuntimeException("Failed to parse page: " + url, e);
+        }
     }
 
     private void print() {
@@ -98,10 +131,7 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
             case "A": {
                 this.textState = TextType.ANCHOR_TEXT;
                 String href = atts.getValue("href");
-                if (href != null && !href.isEmpty()) {
-                    this.currentHref = href;
-                    this.currentHrefTextStart = text.length();
-                }
+                createLink(href);
                 break;
             }
             case "IMG": {
@@ -122,6 +152,37 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
             // default:
             // this.textState = TextType.TEXT;
         }
+    }
+
+    private void createLink(String href) {
+        String url = null;
+        if (href == null || href.isEmpty())
+            return;
+        else
+            url = href.trim();
+
+        if (url.startsWith("javacript:"))
+            return;
+
+        if (url.startsWith("mailto:")) {
+            // TODO store email
+            return;
+        }
+
+        if (url.startsWith("tel:")) {
+            // TODO store phone number
+            return;
+        }
+
+        String absoluteUrl = resolveRelativeHref(href, baseUrl);
+        if (absoluteUrl == null || absoluteUrl.isEmpty())
+            return;
+
+        if (!(urlValidator.isValid(absoluteUrl) || onionRegex.matcher(absoluteUrl).matches()))
+            return;
+
+        this.currentHref = urlNormalizer.filter(absoluteUrl);
+        this.currentHrefTextStart = text.length();
     }
 
     @Override
@@ -177,6 +238,19 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
         }
     }
 
+    private String resolveRelativeHref(String href, String baseUrl) {
+        URL absoluteUrl = resolveRelativeHrefToUrl(href, baseUrl);
+        return absoluteUrl == null ? null : absoluteUrl.toString();
+    }
+
+    private URL resolveRelativeHrefToUrl(String href, String baseUrl) {
+        try {
+            return new URL(new URL(baseUrl), href);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("Invalid URL: " + baseUrl + " - " + href, e);
+        }
+    }
+
     @Override
     public void setDocumentLocator(Locator locator) {
         // System.out.println("NekoHtmlSaxParser.setDocumentLocator()");
@@ -215,6 +289,34 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
     @Override
     public void endPrefixMapping(String prefix) throws SAXException {
         System.out.println("NekoHtmlSaxParser.endPrefixMapping()");
+    }
+
+    public URL[] links() {
+        List<URL> links = new ArrayList<>();
+        for (Anchor anchor : anchors) {
+            URL absoluteUrl = resolveRelativeHrefToUrl(anchor.href, baseUrl);
+            links.add(absoluteUrl);
+        }
+        return (URL[]) links.toArray(new URL[links.size()]);
+    }
+
+
+    public LinkNeighborhood[] getLinkNeighboor() {
+        List<LinkNeighborhood> links = new ArrayList<>();
+        for (Anchor anchor : anchors) {
+            URL absoluteUrl = resolveRelativeHrefToUrl(anchor.href, baseUrl);
+            LinkNeighborhood ln = new LinkNeighborhood(absoluteUrl);
+            links.add(ln);
+        }
+        return (LinkNeighborhood[]) links.toArray(new LinkNeighborhood[links.size()]);
+    }
+
+    public URL getURL() {
+        try {
+            return new URL(baseUrl);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("Invalid URL: " + baseUrl, e);
+        }
     }
 
 }
