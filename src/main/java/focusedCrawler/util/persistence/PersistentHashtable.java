@@ -37,13 +37,12 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
 import focusedCrawler.link.frontier.Visitor;
-import focusedCrawler.util.persistence.bdb.BerkeleyDBHashTable;
 import focusedCrawler.util.persistence.rocksdb.RocksDBHashtable;
 
 public class PersistentHashtable<T> {
     
     public enum DB {
-        BERKELEYDB, ROCKSDB
+        ROCKSDB
     }
     
     private static Logger logger = LoggerFactory.getLogger(PersistentHashtable.class);
@@ -54,27 +53,24 @@ public class PersistentHashtable<T> {
 	private List<Tuple<T>> tempList = new ArrayList<>(tempMaxSize);
 
     private Cache<String, T> cache;
-	
-	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
-	    this(path, cacheSize, contentClass, DB.ROCKSDB);
-	}
-	
-	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass, DB backend) {
-	    File file = new File(path);
-	    if(!file.exists()) {
-	        file.mkdirs();
-	    }
-	    this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
-	    if(backend == DB.BERKELEYDB) {
-            try {
-                this.persistentTable = new BerkeleyDBHashTable<T>(file, contentClass);
-            } catch (Exception e) {
-                throw new RuntimeException("Failed to open BerkeleyDB database at "+path, e);
-            }
-        } else {
-            this.persistentTable = new RocksDBHashtable<>(file.getPath(), contentClass);
+
+    public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
+        this(path, cacheSize, contentClass, DB.ROCKSDB);
+    }
+
+    public PersistentHashtable(String path, int cacheSize, Class<T> contentClass, DB backend) {
+        File file = new File(path);
+        if (!file.exists()) {
+            file.mkdirs();
         }
-	}
+        this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
+        if (backend == DB.ROCKSDB) {
+            this.persistentTable = new RocksDBHashtable<>(file.getPath(), contentClass);
+        } else {
+            throw new UnsupportedOperationException(
+                    "No database backend available for: " + backend);
+        }
+    }
 
     /**
      * DEPRECATED: may cause OutOfMemoryError on large crawls.

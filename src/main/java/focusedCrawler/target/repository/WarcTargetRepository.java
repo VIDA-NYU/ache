@@ -41,6 +41,7 @@ import org.slf4j.LoggerFactory;
 
 import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.TargetModelJson;
 
 public class WarcTargetRepository implements TargetRepository {
 
@@ -334,6 +335,56 @@ public class WarcTargetRepository implements TargetRepository {
         public void close() {
             IOUtils.closeQuietly(warcReader);
             IOUtils.closeQuietly(filesStream);
+        }
+
+    }
+
+    public Iterator<Page> pagesIterator() {
+        WarcRecordsIterator it = new WarcRecordsIterator(directory);
+        return new PagesIterator(it);
+    }
+
+    static class PagesIterator implements Iterator<Page> {
+
+        private WarcRecordsIterator it;
+
+        public PagesIterator(WarcRecordsIterator it) {
+            this.it = it;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return it.hasNext();
+        }
+
+        @Override
+        public Page next() {
+            return new Page(it.next());
+        }
+
+    }
+
+    public Iterator<TargetModelJson> targetModelJsonIterator() {
+        WarcRecordsIterator it = new WarcRecordsIterator(directory);
+        return new TargetModelJsonIterator(new PagesIterator(it));
+    }
+
+    static class TargetModelJsonIterator implements Iterator<TargetModelJson> {
+
+        private PagesIterator it;
+
+        public TargetModelJsonIterator(PagesIterator it) {
+            this.it = it;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return it.hasNext();
+        }
+
+        @Override
+        public TargetModelJson next() {
+            return new TargetModelJson(it.next());
         }
 
     }

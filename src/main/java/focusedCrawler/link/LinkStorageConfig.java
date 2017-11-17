@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.PersistentHashtable.DB;
 
 public class LinkStorageConfig {
@@ -96,7 +97,7 @@ public class LinkStorageConfig {
     private int schedulerMaxLinks = 100000;
 
     @JsonProperty("link_storage.persistent_hashtable.backend")
-    private String persistentHashtableBackend = "ROCKSDB";
+    private PersistentHashtable.DB persistentHashtableBackend = PersistentHashtable.DB.ROCKSDB;
 
     @JsonProperty("link_storage.link_classifier.max_depth")
     private int maxDepth;
@@ -200,16 +201,12 @@ public class LinkStorageConfig {
     }
 
     /**
-     * Returns the value of the persistent hashtable to be used in the backend
+     * Returns the value of the persistent hashtable to be used in the backend.
      * The default value is RocksDB.
      * @return
      */
     public DB getPersistentHashtableBackend() {
-        if(persistentHashtableBackend.equalsIgnoreCase(DB.BERKELEYDB.name())){
-            return DB.BERKELEYDB;
-        }else{
-            return DB.ROCKSDB;
-        }
+        return persistentHashtableBackend;
     }
 
     public int getMaxDepth() {

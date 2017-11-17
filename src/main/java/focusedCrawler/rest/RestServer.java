@@ -70,10 +70,9 @@ public class RestServer {
             "/",
             "/index.html",
             "/search",
-            "/monitoring",
-            "/startCrawl"
+            "/monitoring"
         );
-        server.before("/*", new StaticFileHandlerFilter(indexes));
+        server.before("/*", new StaticFileHandlerFilter(indexes, restConfig.getBasePath()));
 
         /*
          * Enable HTTP CORS (Cross-origin Resource Sharing)

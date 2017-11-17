@@ -7,13 +7,12 @@ apply plugin: 'com.github.kt3k.coveralls'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 compileJava.options.encoding = "UTF-8"
-version = '0.9.0-SNAPSHOT'
+version = '0.10.0-SNAPSHOT'
 mainClassName = 'focusedCrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError"]
 
 repositories {
     mavenCentral()
-    maven { url "http://download.oracle.com/maven/" } // for BerkeleyDB
 }
 
 dependencies {
@@ -35,10 +34,8 @@ dependencies {
     compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.8.5'
     compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.5'
     compile 'com.esotericsoftware:kryo:4.0.0'
-    // Database engines
-    compile 'org.rocksdb:rocksdbjni:4.11.2'
-    compile 'com.sleepycat:je:3.3.75' // BerkeleyDB
     // Others
+    compile 'org.rocksdb:rocksdbjni:4.11.2'
     compile 'org.apache.tika:tika-parsers:1.14'
     compile 'com.syncthemall:boilerpipe:1.2.2'
     compile 'net.sourceforge.nekohtml:nekohtml:1.9.22'
