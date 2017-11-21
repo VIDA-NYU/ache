@@ -97,6 +97,7 @@ public class CrawlersManager {
         String dataPath = Paths.get(baseDataPath, crawlerId).toString();
 
         CrawlContext context = new CrawlContext();
+        context.crawlerId = crawlerId;
         context.dataPath = dataPath;
         context.seedPath = seedPath;
         context.modelPath = modelPath;
@@ -228,6 +229,8 @@ public class CrawlersManager {
 
     public class CrawlContext {
 
+        public String crawlerId;
+
         @JsonIgnore
         public AsyncCrawler crawler;
         @JsonIgnore
@@ -240,6 +243,10 @@ public class CrawlersManager {
         @JsonIgnore
         public AsyncCrawler getCrawler() {
             return this.crawler;
+        }
+
+        public String getCrawlerId() {
+            return crawlerId;
         }
 
         public String getCrawlerState() {

@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import 'whatwg-fetch'
 
-import StartCrawl from './StartCrawl'
-import Search from './Search'
+import Crawlers from './Crawlers'
+import StartCrawler from './StartCrawler'
 import MetricsMonitor from './MetricsMonitor'
+import Search from './Search'
 
 import ache_logo_png from './img/ache-logo.png';
 
@@ -26,7 +27,8 @@ class Header extends React.Component {
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-              <Navigation to="/" label="Start Crawl" activeOnlyWhenExact={true}/>
+              <Navigation to="/" label="Crawlers" activeOnlyWhenExact={true}/>
+              <Navigation to="/crawlers/start" label="Start Crawl" activeOnlyWhenExact={true}/>
               <Navigation to="/monitoring" label="Monitoring" activeOnlyWhenExact={true}/>
               <Navigation to="/search" label="Search"/>
             </ul>
@@ -45,7 +47,7 @@ const Navigation = ({ label, to, activeOnlyWhenExact }) => (
   )}/>
 )
 
-class App extends Component {
+class App extends React.Component {
   render() {
     let meta = document.getElementsByName("base_path")[0];
     let basePath;
@@ -59,7 +61,8 @@ class App extends Component {
           <Header/>
           <div className="container">
             <div className="main-content">
-              <Route exact path="/" component={StartCrawl}/>
+              <Route exact path="/" component={Crawlers}/>
+              <Route exact path="/crawlers/start" component={StartCrawler}/>
               <Route exact path="/monitoring" component={MetricsMonitor}/>
               <Route exact path="/search" component={Search}/>
             </div>

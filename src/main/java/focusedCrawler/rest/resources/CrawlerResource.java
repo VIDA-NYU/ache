@@ -49,7 +49,7 @@ public class CrawlerResource {
 
     public Route listCrawlers = (request, response) -> {
         Map<String, CrawlContext> crawlers = crawlersManager.getCrawls();
-        return ImmutableMap.of("crawlers", crawlers);
+        return ImmutableMap.of("crawlers", crawlers.values());
     };
 
     public Route metricsResource = (request, response) -> {
