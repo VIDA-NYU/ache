@@ -1,5 +1,4 @@
 import React from 'react';
-//import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 import {api} from './RestApi';
 
@@ -7,9 +6,7 @@ class StartCrawler extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+    this.state = {};
   }
 
   startCrawl(crawlerId) {
@@ -143,10 +140,10 @@ class StartCrawler extends React.Component {
     } else {
       crawlDescription = 'Relevant pages from any web site on the web will be crawled.'
     }
-    return (
 
+    return (
       <div className="row">
-        <div className="col-md-10 col-md-offset-1">
+        <div className="col-md-12">
           <h2>Start Crawler</h2>
           <form>
 
@@ -166,7 +163,7 @@ class StartCrawler extends React.Component {
             <div className={'form-group' + (this.showErrorCrawlerId() ? ' has-error': '')} >
               <label htmlFor="crawlerId">Crawler ID:</label>
               <input type="text" className="form-control" id="crawlerId" placeholder="my-crawler-name-1"
-                 onChange={(e)=>this.handleCrawlerIdChange(e)} />
+                 onChange={(e)=>this.handleCrawlerIdChange(e)} style={{'maxWidth':'400px'}} />
             </div>
 
             {

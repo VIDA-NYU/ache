@@ -5,6 +5,43 @@ import {api} from './RestApi';
 
 import AlertMessage from './AlertMessage'
 
+class CrawlersTable extends React.Component {
+  render() {
+    const crawlerManager = this.props.crawlerManager;
+    const crawlerList = this.props.crawlers;
+    return (
+      <div className="table-responsive">
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Crawler ID</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          { crawlerList.map((crawler, index) =>
+            <tbody>
+              <tr>
+                <td>{index + 1}</td>
+                <td>{crawler.crawlerId}</td>
+                <td>{crawler.crawlerState}</td>
+                <td>
+                  <button type="button" className="btn btn-default btn-xs" disabled={!crawler.crawlerRunning} onClick={(e)=>crawlerManager.stopCrawl(crawler.crawlerId)}><i className="glyphicon glyphicon-stop"></i> Stop Crawler</button>
+                  &nbsp;
+                  <Link className="btn btn-default btn-xs" to={'/monitoring/'+crawler.crawlerId}><i className="glyphicon glyphicon-signal" />&nbsp;Monitoring</Link>
+                  &nbsp;
+                  <Link className="btn btn-default btn-xs" to={'/search/'+crawler.crawlerId} disabled={!crawler.searchEnabled}><i className="glyphicon glyphicon-search" />&nbsp;Search</Link>
+                  </td>
+              </tr>
+            </tbody>
+          )}
+        </table>
+      </div>
+    );
+  }
+}
+
 class Crawlers extends React.Component {
 
   constructor(props) {
@@ -85,62 +122,26 @@ class Crawlers extends React.Component {
 
   render(){
 
-    const message = this.state.message ? <AlertMessage message={this.state.message} /> : null;
-
     const hasCrawlers = (this.state.crawlers && this.state.crawlers.length > 0);
 
     let crawlersTable;
     if(hasCrawlers) {
-      crawlersTable = (
-        <div className="table-responsive">
-          <table className="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Crawler ID</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            { this.state.crawlers.map((crawler, index) =>
-              <tbody>
-                <tr>
-                  <td>{index + 1}</td>
-                  <td>{crawler.crawlerId}</td>
-                  <td>{crawler.crawlerState}</td>
-                  <td>
-                    <button type="button" className="btn btn-default btn-xs" disabled={!crawler.crawlerRunning} onClick={(e)=>this.stopCrawl(crawler.crawlerId)}><i className="glyphicon glyphicon-stop"></i> Stop Crawler</button>
-                    &nbsp;
-                    <button type="button" className="btn btn-default btn-xs" disabled={!crawler.crawlerRunning}><i className="glyphicon glyphicon-info-sign"></i> Monitor</button>
-                    &nbsp;
-                    <Link className="btn btn-default btn-xs" to={'/monitoring/'+crawler.crawlerId}><i className="glyphicon glyphicon-signal" />&nbsp;Monitor</Link>
-                    &nbsp;
-                    <button type="button" className="btn btn-default btn-xs" disabled={!crawler.searchEnabled}><i className="glyphicon glyphicon-search"></i> Search</button>
-                    &nbsp;
-                    <Link className="btn btn-default btn-xs" to={'/search/'+crawler.crawlerId}><i className="glyphicon glyphicon-signal" />&nbsp;Search</Link>
-                    </td>
-                </tr>
-              </tbody>
-            )}
-          </table>
-        </div>
-      );
+      crawlersTable = <CrawlersTable crawlers={this.state.crawlers} crawlerManager={this} />;
     }
 
     return (
-      <div>
-        {
-          !hasCrawlers &&
-          <AlertMessage message={{type: 'warn', message: 'No crawlers available. Click on "Start Crawl" to start a crawler.'}} />
-        }
-        { message && <div className="row">{message}</div> }
-        <div className="row">
+      <div className="row">
+        <div className="col-md-12">
+          { this.state.message && <AlertMessage message={this.state.message} /> }
+          <p>
             <Link className="btn btn-default" to='/crawlers/start'><i className="glyphicon glyphicon-plus" />&nbsp;Start Crawler</Link>
+          </p>
+          { hasCrawlers && crawlersTable }
+          {
+            !hasCrawlers &&
+            <AlertMessage message={{type: 'warn', message: 'No crawlers available. Click on "Start Crawl" to start a crawler.'}} />
+          }
         </div>
-        {
-          hasCrawlers &&
-          <div className="row">{crawlersTable}</div>
-        }
       </div>
     );
 

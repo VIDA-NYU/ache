@@ -17,22 +17,29 @@ if(api.authorization !== undefined) {
   };
 }
 
-
-
 class LabelsManager {
 
   constructor(apiAddress, crawlerId) {
     this.apiAddress = apiAddress;
-    this.listeners = [];
     this.crawlerId = crawlerId;
-    //this.labelsCache = {};
+    this.listeners = [];
+    this.labelsCache = {};
     api.get('/crawls/' + this.crawlerId + '/labels')
        .then(this.updateLabelsCache.bind(this));
   }
 
+  /*
+   * Register a callback function that is called any time that labels change.
+   * It returns a function that can be used to unregister the listener added by
+   * calling it. For example:
+   *
+   *   let stopListening = lm.addListener(fn);
+   *   stopListening(); // calling this will remove fn fuction from listeners
+   *
+   */
   addListener(fn) {
     this.listeners.push(fn);
-    return ()=>{
+    return () => {
       this.listeners = without(this.listeners, fn);
     }
   }
@@ -72,20 +79,17 @@ class LabelsManager {
 
 }
 
-
-
 class HitItem extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log('props:');
-    console.log(props);
     this.labelsManager = props.labelsManager;
-    this.stopListening = this.labelsManager.addListener(()=> this.setState({}));
+    // forces re-render every time a label changes
+    this.stopListeningLabelChanges = this.labelsManager.addListener(()=> this.setState({}));
   }
 
   componentWillUnmount() {
-    this.stopListening();
+    this.stopListeningLabelChanges();
   }
 
   formatDate(timestamp) {
@@ -216,7 +220,6 @@ class LabelAllButtons extends React.Component {
   constructor(props) {
     super(props);
     this.labelsManager = props.labelsManager;
-    console.log(this.props.searchkit);
     this.stopListeningResults = this.props.searchkit.addResultsListener(this.updateResults.bind(this));
   }
 
@@ -260,15 +263,13 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.crawlerId = this.props.match.params.crawler_id;
-
-    let elasticsearchAddress = ACHE_API_ADDRESS + '/crawls/' + this.crawlerId;
-    console.log(elasticsearchAddress);
+    const elasticsearchAddress = ACHE_API_ADDRESS + '/crawls/' + this.crawlerId;
     this.searchkit = new SearchkitManager(elasticsearchAddress, searchkitProps);
-    console.log('sk: ' + this.searchkit);
+    this.labelsManager = new LabelsManager(ACHE_API_ADDRESS, this.crawlerId);
+    this.hitItemElement = <HitItem labelsManager={this.labelsManager} />;
+    this.state = {message:"Loading...", searchEnabled: false};
     api.get('/crawls/' + this.crawlerId + '/status')
        .then(this.setupSearch.bind(this));
-
-    this.state = {message:"Loading...", searchEnabled: false};
   }
 
   setupSearch(status) {
@@ -293,7 +294,7 @@ class Search extends React.Component {
   }
 
   render() {
-
+    const hitItemElement = this.hitItemElement;
     const enabled = this.state.searchEnabled;
     const message = this.state.message;
     let checkboxLabels = {
@@ -311,19 +312,15 @@ class Search extends React.Component {
             <div className="row">
 
               <div className="col-sm-3">
-                <RefinementListFilter id="filter_relevance" title="Relevance" field="isRelevant" size={2} operator="OR" translations={checkboxLabels} />
-                <RefinementListFilter id="filter_domain" title="Domain" field="domain" size={15} operator="OR" />
-                {/*
-                <RefinementListFilter id="filter_words" title="Words" field="words" size={5}/>
-                <RangeFilter min={0} max={100} field="timestamp_crawl" id="timestamp_crawl" title="Crawl Time" showHistogram={true}/>
-                <DynamicRangeFilter field="timestamp_index" id="timestamp_index" title="Indexing Time" rangeFormatter={formatDate}/>
-                */}
+                <RefinementListFilter id="filter_relevance" title="Relevance"
+                  field="isRelevant" size={2} operator="OR"
+                  translations={checkboxLabels} />
+                <RefinementListFilter id="filter_domain" title="Domain"
+                  field="domain" size={15} operator="OR" />
               </div>
 
               <div className="col-sm-9">
-
                   <SearchBox searchOnChange={true} searchThrottleTime={1000} />
-
                   <ActionBar>
                     <ActionBarRow>
               				<HitsStats translations={{"hitstats.results_found":"{hitCount} results found."}}/>
@@ -334,10 +331,11 @@ class Search extends React.Component {
                       <ResetFilters/>
                     </ActionBarRow>
                   </ActionBar>
-                  <Hits hitsPerPage={10} highlightFields={["title"]} sourceFilter={["_id", "isRelevant", "title", "url", "retrieved", "text", "html"]} itemComponent={HitItem} />
+                  <Hits hitsPerPage={10} highlightFields={["title"]}
+                    sourceFilter={["_id", "isRelevant", "title", "url", "retrieved", "text", "html"]}
+                    itemComponent={hitItemElement} />
                   <LabelAllButtons searchkit={this.searchkit} />
                   <Pagination showNumbers={true}/>
-
               </div>
             </div>
           </SearchkitProvider>

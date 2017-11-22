@@ -21,13 +21,12 @@ class AlertMessage extends React.Component {
       msgClass = 'alert-primary';
     }
     return (
-      <div className="row">
-        <div className={'alert message ' + msgClass} >
-          <span className={'glyphicon ' + glyphName } aria-hidden="true"></span>&nbsp;{text}
-        </div>
+      <div className={'alert message ' + msgClass} >
+        <span className={'glyphicon ' + glyphName } aria-hidden="true"></span>&nbsp;{text}
       </div>
     );
   }
+
 }
 
 export default AlertMessage;

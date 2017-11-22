@@ -233,8 +233,10 @@ class MetricsMonitor extends React.Component {
 
     return (
       <div className="row">
-        {table}
-        {plots}
+        <div className="col-md-12">
+          {table}
+          {plots}
+        </div>
       </div>
     );
   }
