@@ -132,7 +132,7 @@ class Crawlers extends React.Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          { this.state.message && <AlertMessage message={this.state.message} /> }
+          <AlertMessage message={this.state.message} />
           <p>
             <Link className="btn btn-default" to='/crawlers/start'><i className="glyphicon glyphicon-plus" />&nbsp;Start Crawler</Link>
           </p>

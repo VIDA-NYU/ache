@@ -137,7 +137,7 @@ class StartCrawler extends React.Component {
     let crawlDescription;
     if(this.state.crawlType === 'DeepCrawl') {
       crawlDescription = 'Only relevant pages within the web sites listed in the seeds will be crawled.'
-    } else {
+    } else if(this.state.crawlType === 'FocusedCrawl') {
       crawlDescription = 'Relevant pages from any web site on the web will be crawled.'
     }
 
@@ -148,7 +148,7 @@ class StartCrawler extends React.Component {
           <form>
 
             <div className="form-group">
-              <label htmlFor="crawlerType">Crawler Type:</label><br/>
+              <label htmlFor="crawlerType">Select a Crawler Type:</label><br/>
               <div className="btn-group" data-toggle="buttons" id="crawlerType" aria-label="Choose a crawler type">
                 <label className={'btn btn-primary ' + this.isSelected('DeepCrawl')} onClick={()=>this.setCrawlType('DeepCrawl')}>
                   <input type="radio" /> Deep Crawl
