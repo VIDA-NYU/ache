@@ -63,8 +63,8 @@ class App extends React.Component {
             <div className="main-content">
               <Route exact path="/" component={Crawlers}/>
               <Route exact path="/crawlers/start" component={StartCrawler}/>
-              <Route exact path="/monitoring" component={MetricsMonitor}/>
-              <Route exact path="/search" component={Search}/>
+              <Route exact path="/monitoring/:crawler_id" component={MetricsMonitor}/>
+              <Route exact path="/search/:crawler_id" component={Search}/>
             </div>
           </div>
         </div>

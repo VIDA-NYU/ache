@@ -17,14 +17,17 @@ if(api.authorization !== undefined) {
   };
 }
 
-const searchkit = new SearchkitManager(ACHE_API_ADDRESS, searchkitProps);
+
 
 class LabelsManager {
 
-  constructor(apiAddress) {
+  constructor(apiAddress, crawlerId) {
     this.apiAddress = apiAddress;
     this.listeners = [];
-    api.get("/labels").then(this.updateLabelsCache.bind(this));
+    this.crawlerId = crawlerId;
+    //this.labelsCache = {};
+    api.get('/crawls/' + this.crawlerId + '/labels')
+       .then(this.updateLabelsCache.bind(this));
   }
 
   addListener(fn) {
@@ -50,15 +53,13 @@ class LabelsManager {
   }
 
   sendLabels(labels, callback) {
-      api.put(
-        "/labels",
-        {
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(labels)
-        }
-      )
-      .then(this.updateLabelsCache.bind(this))
-      .then(callback);
+    let config = {
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(labels)
+    };
+    api.put('/crawls/' + this.crawlerId + '/labels', config)
+       .then(this.updateLabelsCache.bind(this))
+       .then(callback);
   }
 
   isRelevant(url) {
@@ -71,13 +72,15 @@ class LabelsManager {
 
 }
 
-const labelsManager = new LabelsManager(ACHE_API_ADDRESS);
+
 
 class HitItem extends React.Component {
 
   constructor(props) {
     super(props);
-    this.labelsManager = labelsManager;
+    console.log('props:');
+    console.log(props);
+    this.labelsManager = props.labelsManager;
     this.stopListening = this.labelsManager.addListener(()=> this.setState({}));
   }
 
@@ -212,8 +215,9 @@ class LabelAllButtons extends React.Component {
 
   constructor(props) {
     super(props);
-    this.labelsManager = labelsManager;
-    this.stopListeningResults = searchkit.addResultsListener(this.updateResults.bind(this));
+    this.labelsManager = props.labelsManager;
+    console.log(this.props.searchkit);
+    this.stopListeningResults = this.props.searchkit.addResultsListener(this.updateResults.bind(this));
   }
 
   componentWillUnmount() {
@@ -255,7 +259,15 @@ class Search extends React.Component {
 
   constructor(props) {
     super(props);
-    api.get("/status").then(this.setupSearch.bind(this));
+    this.crawlerId = this.props.match.params.crawler_id;
+
+    let elasticsearchAddress = ACHE_API_ADDRESS + '/crawls/' + this.crawlerId;
+    console.log(elasticsearchAddress);
+    this.searchkit = new SearchkitManager(elasticsearchAddress, searchkitProps);
+    console.log('sk: ' + this.searchkit);
+    api.get('/crawls/' + this.crawlerId + '/status')
+       .then(this.setupSearch.bind(this));
+
     this.state = {message:"Loading...", searchEnabled: false};
   }
 
@@ -295,7 +307,7 @@ class Search extends React.Component {
             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {message}
           </div>
           :
-          <SearchkitProvider searchkit={searchkit} >
+          <SearchkitProvider searchkit={this.searchkit} >
             <div className="row">
 
               <div className="col-sm-3">
@@ -323,7 +335,7 @@ class Search extends React.Component {
                     </ActionBarRow>
                   </ActionBar>
                   <Hits hitsPerPage={10} highlightFields={["title"]} sourceFilter={["_id", "isRelevant", "title", "url", "retrieved", "text", "html"]} itemComponent={HitItem} />
-                  <LabelAllButtons/>
+                  <LabelAllButtons searchkit={this.searchkit} />
                   <Pagination showNumbers={true}/>
 
               </div>

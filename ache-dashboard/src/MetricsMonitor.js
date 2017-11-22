@@ -37,6 +37,7 @@ class MetricsMonitor extends React.Component {
 
   constructor(props) {
     super(props);
+    this.crawlerId = this.props.match.params.crawler_id;
     this.state = {
       metrics: {}
     };
@@ -123,7 +124,8 @@ class MetricsMonitor extends React.Component {
   }
 
   fetchMetrics() {
-    api.get("/metrics").then(this.updateSeries.bind(this));
+    api.get('/crawls/' + this.crawlerId + '/metrics')
+       .then(this.updateSeries.bind(this));
   }
 
   updateSeries(metrics) {
