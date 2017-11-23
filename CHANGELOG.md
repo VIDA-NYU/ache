@@ -4,6 +4,7 @@
 
 - Upgraded gradle-node plugin to version 1.2.0
 - Removed BerkeleyDB dependency (issue #143)
+- Allow for running multiple crawlers in a single server (issue #103)
 - ...
 
 
@@ -242,4 +243,3 @@ We are pleased to announce version 0.3.0 of ACHE Crawler. Here we list the major
 
 ### Refactorings:
 - Refactored tens of classes in the crawler
-
