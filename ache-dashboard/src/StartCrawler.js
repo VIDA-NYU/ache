@@ -1,12 +1,18 @@
 import React from 'react';
 
+import {AlertMessages} from './AlertMessage'
 import {api} from './RestApi';
 
 class StartCrawler extends React.Component {
 
   constructor(props) {
     super(props);
+    this.messages = this.props.messages;
     this.state = {};
+  }
+
+  componentWillUnmount() {
+    this.messages.clearMessages();
   }
 
   startCrawl(crawlerId) {
@@ -26,23 +32,18 @@ class StartCrawler extends React.Component {
 
   updateResponse(response) {
     if('FETCH_ERROR' === response) {
-      this.setState({
-        message: {
-          type: 'error',
-          message: 'Failed to connect to ACHE server to start the crawler.'
-        }
-      });
+      if(!this.state.serverError) {
+        this.messages.error('Failed to connect to ACHE server.');
+        this.setState({serverError: true});
+      }
     } else {
+      this.setState({serverError: false});
       if(response.crawlerStarted === false) {
-        this.setState({
-          starting: false,
-          message: { type: 'error', message: 'Failed to start the crawler.' }
-        });
+        this.messages.error('Failed to start the crawler.');
+        this.setState({starting: false});
       } else if(response.crawlerStarted === true) {
-        this.setState({
-          crawlerRunning: true,
-          message: { type: 'success', message: 'Crawler started successfully.' }
-        });
+        this.messages.success('Crawler started successfully.');
+        this.props.history.push('/')
       }
     }
   }
@@ -144,6 +145,7 @@ class StartCrawler extends React.Component {
     return (
       <div className="row">
         <div className="col-md-12">
+          <AlertMessages messages={this.messages.display()} />
           <h2>Start Crawler</h2>
           <form>
 

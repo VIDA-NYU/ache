@@ -1,5 +1,33 @@
 import React from 'react';
 
+class Messages {
+
+  data = [];
+
+  error(text) {
+    this.data.push({type:'error', message: text});
+  }
+
+  success(text) {
+    this.data.push({type:'success', message: text});
+  }
+
+  display() {
+    for(let m of this.data) {
+      if(!m.firstShownAt)
+        m.firstShownAt = Date.now();
+    }
+    return this.data;
+  }
+
+  clearMessages() {
+    const timeLimitMs = 5000; // 5 secs
+    let now = Date.now();
+    this.data = this.data.filter(m => !((now - m.firstShownAt) > timeLimitMs));
+  }
+
+}
+
 class AlertMessage extends React.Component {
 
   render() {
@@ -18,7 +46,7 @@ class AlertMessage extends React.Component {
       msgClass = 'alert-success';
     } else {
       glyphName = 'glyphicon-ok-circle';
-      msgClass = 'alert-primary';
+      msgClass = 'alert-info';
     }
     return (
       <div className={'alert message ' + msgClass} >
@@ -29,4 +57,20 @@ class AlertMessage extends React.Component {
 
 }
 
-export default AlertMessage;
+class AlertMessages extends React.Component {
+
+  render() {
+    if(!this.props.messages)
+      return null;
+    else return (
+      <div>
+      { this.props.messages.map((msg, index) =>
+         <AlertMessage key={index} message={msg} />
+      )}
+      </div>
+    );
+  }
+
+}
+
+export {Messages, AlertMessage, AlertMessages};

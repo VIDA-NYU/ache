@@ -4,8 +4,9 @@ import 'whatwg-fetch'
 
 import Crawlers from './Crawlers'
 import StartCrawler from './StartCrawler'
-import MetricsMonitor from './MetricsMonitor'
 import Search from './Search'
+import MetricsMonitor from './MetricsMonitor'
+import {Messages} from './AlertMessage'
 
 import ache_logo_png from './img/ache-logo.png';
 
@@ -29,10 +30,8 @@ class Header extends React.Component {
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-              <Navigation to="/" label="Crawlers" activeOnlyWhenExact={true}/>
-              <Navigation to="/crawlers/start" label="Start Crawl" activeOnlyWhenExact={true}/>
-              <Navigation to="/monitoring" label="Monitoring" activeOnlyWhenExact={true}/>
-              <Navigation to="/search" label="Search"/>
+              <Navigation to="/" label="Crawlers" activeOnlyWhenExact={true} />
+              <Navigation to="/crawlers/start" label="Start Crawl" activeOnlyWhenExact={true} />
             </ul>
           </div>
         </div>
@@ -50,6 +49,9 @@ const Navigation = ({ label, to, activeOnlyWhenExact }) => (
 )
 
 class App extends React.Component {
+
+  messages = new Messages();
+
   render() {
     let meta = document.getElementsByName("base_path")[0];
     let basePath;
@@ -63,9 +65,9 @@ class App extends React.Component {
           <Header/>
           <div className="container">
             <div className="main-content">
-              <Route exact path="/" component={Crawlers}/>
-              <Route exact path="/crawlers/start" component={StartCrawler}/>
-              <Route exact path="/monitoring/:crawler_id" component={MetricsMonitor}/>
+              <Route exact path="/" component={(props) => <Crawlers {...props} messages={this.messages} />} />
+              <Route exact path="/crawlers/start" component={(props) => <StartCrawler {...props} messages={this.messages} />} />
+              <Route exact path="/monitoring/:crawler_id" component={MetricsMonitor} />
               <Route exact path="/search/:crawler_id" component={Search}/>
             </div>
           </div>

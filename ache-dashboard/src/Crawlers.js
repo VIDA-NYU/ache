@@ -3,7 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import {api} from './RestApi';
 
-import AlertMessage from './AlertMessage'
+import {AlertMessage, AlertMessages} from './AlertMessage'
 
 class CrawlersTable extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class CrawlersTable extends React.Component {
     const crawlerList = this.props.crawlers;
     return (
       <div className="table-responsive">
-        <table className="table table-striped">
+        <table className="table table-striped table-bordered">
           <thead>
             <tr>
               <th>#</th>
@@ -20,22 +20,29 @@ class CrawlersTable extends React.Component {
               <th>Actions</th>
             </tr>
           </thead>
+          <tbody>
           { crawlerList.map((crawler, index) =>
-            <tbody>
-              <tr>
+              <tr key={crawler.crawlerId+crawler.crawlerState} >
                 <td>{index + 1}</td>
                 <td>{crawler.crawlerId}</td>
-                <td>{crawler.crawlerState}</td>
+                <td><span className="label label-default">{crawler.crawlerState}</span></td>
                 <td>
-                  <button type="button" className="btn btn-default btn-xs" disabled={!crawler.crawlerRunning} onClick={(e)=>crawlerManager.stopCrawl(crawler.crawlerId)}><i className="glyphicon glyphicon-stop"></i> Stop Crawler</button>
+                  <button type="button" className="btn btn-default btn-sm"
+                    disabled={!crawler.crawlerRunning} onClick={(e)=>crawlerManager.stopCrawl(crawler.crawlerId)}>
+                      <i className="glyphicon glyphicon-stop"></i> Stop Crawler
+                  </button>
                   &nbsp;
-                  <Link className="btn btn-default btn-xs" to={'/monitoring/'+crawler.crawlerId}><i className="glyphicon glyphicon-signal" />&nbsp;Monitoring</Link>
+                  <Link className="btn btn-default btn-sm" to={'/monitoring/'+crawler.crawlerId}>
+                    <i className="glyphicon glyphicon-signal" />&nbsp;Monitoring
+                  </Link>
                   &nbsp;
-                  <Link className="btn btn-default btn-xs" to={'/search/'+crawler.crawlerId} disabled={!crawler.searchEnabled}><i className="glyphicon glyphicon-search" />&nbsp;Search</Link>
-                  </td>
+                  <Link className="btn btn-default btn-sm" to={'/search/'+crawler.crawlerId} disabled={!crawler.searchEnabled}>
+                    <i className="glyphicon glyphicon-search" />&nbsp;Search
+                  </Link>
+                </td>
               </tr>
-            </tbody>
           )}
+          </tbody>
         </table>
       </div>
     );
@@ -46,6 +53,7 @@ class Crawlers extends React.Component {
 
   constructor(props) {
     super(props);
+    this.messages = this.props.messages;
     this.state = {};
     this.fetchCrawlersList();
   }
@@ -58,6 +66,7 @@ class Crawlers extends React.Component {
   }
 
   componentWillUnmount() {
+    this.messages.clearMessages();
     clearInterval(this.timerID);
   }
 
@@ -65,14 +74,12 @@ class Crawlers extends React.Component {
     api.get('/crawls')
       .then( (response) => {
         if (response === 'FETCH_ERROR') {
-          this.setState({
-            message: {
-              type: 'error',
-              message: 'Failed to connect to ACHE API to list of crawlers.'
-            }
-          });
+          if(!this.state.serverError) {
+            this.messages.error('Failed to connect to ACHE server.');
+            this.setState({serverError: true});
+          }
         } else {
-          this.setState({ crawlers: response.crawlers });
+          this.setState({serverError: false, crawlers: response.crawlers});
         }
       });
   }
@@ -84,38 +91,18 @@ class Crawlers extends React.Component {
   }
 
   updateResponse(response) {
+    console.log(this.state.serverError);
     if('FETCH_ERROR' === response) {
-      this.setState({
-        message: {
-          type: 'error',
-          message: 'Failed to connect to ACHE server to start the crawler.'
-        }
-      });
+      if(!this.state.serverError) {
+        this.messages.error('Failed to connect to ACHE server.');
+        this.setState({serverError: true});
+      }
     } else {
-      if(response.shutdownInitiated === true) {
-        this.setState({
-          stopping: true,
-          message: {
-            type: 'success',
-            message: 'Crawler shutdown initiated.'
-          }
-        });
-      } else if(response.crawlerStarted === false) {
-        this.setState({
-          starting: false,
-          message: {
-            type: 'error',
-            message: 'Failed to start the crawler.'
-          }
-        });
-      } else if(response.crawlerStarted === true) {
-        this.setState({
-          crawlerRunning: true,
-          message: {
-            type: 'success',
-            message: 'Crawler started successfully.'
-          }
-        });
+      this.setState({serverError: false});
+      if(response.shutdownInitiated === false) {
+        this.messages.error('Failed to initiate crawler shutdown.');
+      } else if(response.shutdownInitiated === true) {
+        this.messages.success('Crawler shutdown initiated.');
       }
     }
   }
@@ -128,11 +115,11 @@ class Crawlers extends React.Component {
     if(hasCrawlers) {
       crawlersTable = <CrawlersTable crawlers={this.state.crawlers} crawlerManager={this} />;
     }
-
     return (
       <div className="row">
         <div className="col-md-12">
-          <AlertMessage message={this.state.message} />
+          <AlertMessages messages={this.messages.display()} />
+          <h2>Crawlers</h2>
           <p>
             <Link className="btn btn-default" to='/crawlers/start'><i className="glyphicon glyphicon-plus" />&nbsp;Start Crawler</Link>
           </p>
