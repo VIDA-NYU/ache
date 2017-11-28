@@ -59,7 +59,7 @@ public class TargetClassifierFactory {
             }
             
             if("weka".equals(classifierType)) {
-                classifier = new WekaTargetClassifier.Builder().build(basePath, yaml, parameters);
+                classifier = new SmileTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
             
             if(classifier != null) {
@@ -71,7 +71,7 @@ public class TargetClassifierFactory {
         }
         
         // create classic weka classifer to maintain compatibility with older versions
-        return WekaTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
+        return SmileTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
     }
 
 }

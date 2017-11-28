@@ -41,7 +41,7 @@ import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
-import weka.classifiers.Classifier;
+import smile.classification.Classifier;
 import weka.core.Instances;
 
 /**
@@ -56,15 +56,15 @@ import weka.core.Instances;
  * @author Luciano Barbosa
  * @version 1.0
  */
-public class WekaTargetClassifier implements TargetClassifier {
+public class SmileTargetClassifier implements TargetClassifier {
 
-	private final Classifier classifier;
+	private final Classifier<double[]> classifier;
 	private final Instances instances;
 	private final String[] attributes;
 	private final StopList stoplist;
     private final double relevanceThreshold;
   
-	public WekaTargetClassifier(Classifier classifier, double relevanceThreshold,
+	public SmileTargetClassifier(Classifier<double[]> classifier, double relevanceThreshold,
 	                            Instances instances, String[] attributes, StopList stoplist){
 		this.classifier = classifier;
         this.relevanceThreshold = relevanceThreshold;
@@ -159,7 +159,7 @@ public class WekaTargetClassifier implements TargetClassifier {
             
             Instances insts = createWekaIntances(attributes, classValues);
             
-            return new WekaTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
+            return new SmileTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
 
         } catch (FileNotFoundException e) {
             throw new IllegalArgumentException("Could not find file: " + modelFile, e);
@@ -203,7 +203,7 @@ public class WekaTargetClassifier implements TargetClassifier {
             params.features_file = resolveRelativePath(basePath, params.features_file);
             params.stopwords_file = resolveRelativePath(basePath, params.stopwords_file);
 
-            return WekaTargetClassifier.create(
+            return SmileTargetClassifier.create(
                     params.model_file,
                     params.features_file,
                     params.relevanceThreshold,

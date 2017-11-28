@@ -34,6 +34,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.text.ParseException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -51,8 +52,12 @@ import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
 import focusedCrawler.util.vsm.VSMVector;
-import weka.classifiers.functions.SMO;
-import weka.classifiers.trees.RandomForest;
+import smile.classification.RandomForest;
+import smile.classification.SVM;
+import smile.classification.SVM.Multiclass;
+import smile.data.AttributeDataset;
+import smile.data.parser.ArffParser;
+import smile.math.kernel.GaussianKernel;
 
 /**
  * <p> </p>
@@ -66,9 +71,9 @@ import weka.classifiers.trees.RandomForest;
  * @author Luciano Barbosa
  * @version 1.0
  */
-public class WekaTargetClassifierBuilder {
+public class SmileTargetClassifierBuilder {
 
-	private static Logger logger = LoggerFactory.getLogger(WekaTargetClassifierBuilder.class);
+	private static Logger logger = LoggerFactory.getLogger(SmileTargetClassifierBuilder.class);
 
     protected VSMVector[][] trainingExamples = null;
 
@@ -84,11 +89,11 @@ public class WekaTargetClassifierBuilder {
   
 	protected StopList stoplist;
 	
-    public WekaTargetClassifierBuilder(File dir, File dirTest, StopList stoplist) throws SAXException, IOException {
+    public SmileTargetClassifierBuilder(File dir, File dirTest, StopList stoplist) throws SAXException, IOException {
     	this(dir,dirTest,stoplist,Integer.MAX_VALUE);
     }
     
-    public WekaTargetClassifierBuilder(File input, File inputTest, StopList stoplist, int numOfElems) throws SAXException, IOException {
+    public SmileTargetClassifierBuilder(File input, File inputTest, StopList stoplist, int numOfElems) throws SAXException, IOException {
     	trainingExamples = new VSMVector[2][];
     	this.stoplist = stoplist;
     	if((new File (input + File.separator + "positive")).isDirectory()){
@@ -120,7 +125,7 @@ public class WekaTargetClassifierBuilder {
     	}
     }
 
-    public WekaTargetClassifierBuilder(String[][] pages, StopList stoplist, int size) throws SAXException, IOException {
+    public SmileTargetClassifierBuilder(String[][] pages, StopList stoplist, int size) throws SAXException, IOException {
     	trainingExamples = new VSMVector[size][];
     	for (int i = 0; i < size; i++) {
 			String[] levelPages = pages[i];
@@ -358,8 +363,8 @@ public class WekaTargetClassifierBuilder {
     		    stopwords = StopListFile.DEFAULT;
     		}
     		
-            WekaTargetClassifierBuilder builder =
-                    new WekaTargetClassifierBuilder(trainingDataPath, testDataPath, stopwords);
+    		SmileTargetClassifierBuilder builder =
+                    new SmileTargetClassifierBuilder(trainingDataPath, testDataPath, stopwords);
             builder.centroid2Weka(wekaInputFile);
     	}
     	catch (SAXException | IOException ex1) {
@@ -367,26 +372,35 @@ public class WekaTargetClassifierBuilder {
     	}
     }
     
-    public static void trainModel(String trainingPath, String outputPath, String learner) {
+    public static void trainModel(String trainingPath, String outputPath, String learner) throws IOException, ParseException {
         if(learner==null) {
-            learner = "SMO";
+            learner = "SVM";
         }
         
         System.out.println("Training "+ learner+" model...");
-        if(learner.equals("SMO")) {
-            SMO.main(new String[] {
-                "-M",
-                "-d", outputPath + "/pageclassifier.model",
-                "-t", trainingPath + "/weka.arff",
-                "-C", "0.01"
-            });
+		ArffParser arffParser = new ArffParser();
+		arffParser.setResponseIndex(4);
+		AttributeDataset trainingData = arffParser.parse(SmileTargetClassifier.class.getClass().getResourceAsStream(trainingPath));
+		double[][] x = trainingData.toArray(new double[trainingData.size()][]);
+		int[] y = trainingData.toArray(new int[trainingData.size()]);
+		if(learner.equals("SVM")) {
+        	SVM<double[]> svmModel = new SVM<double[]>(new GaussianKernel(8.0), 0.01);
+//            SVM.main(new String[] {
+//                "-M",
+//                "-d", outputPath + "/pageclassifier.model",
+//                "-t", trainingPath + "/weka.arff",
+//                "-C", "0.01"
+//            });
+        	svmModel.learn(x, y);
+        	svmModel.finish();
         } else if(learner.equals("RandomForest")) {
-            RandomForest.main(new String[] {
-//              "-K", "5", // k-fold cross validation
-                "-I", "100", // Number of trees to build
-                "-d", outputPath + "/pageclassifier.model",
-                "-t", trainingPath + "/weka.arff"
-            });
+        	RandomForest randomForest = new RandomForest(x, y, 100);
+//            RandomForest.main(new String[] {
+////              "-K", "5", // k-fold cross validation
+//                "-I", "100", // Number of trees to build
+//                "-d", outputPath + "/pageclassifier.model",
+//                "-t", trainingPath + "/weka.arff"
+//            });
         } else {
             System.out.println("Unknow learner: "+learner);
             return;

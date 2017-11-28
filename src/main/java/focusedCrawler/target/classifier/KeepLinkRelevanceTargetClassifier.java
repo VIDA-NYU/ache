@@ -36,7 +36,7 @@ public class KeepLinkRelevanceTargetClassifier implements TargetClassifier {
 
         public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters) throws JsonProcessingException, IOException {
             if(parameters != null) {
-                TargetClassifier wekaClassifier = new WekaTargetClassifier.Builder().build(basePath, yaml, parameters);
+                TargetClassifier wekaClassifier = new SmileTargetClassifier.Builder().build(basePath, yaml, parameters);
                 return new KeepLinkRelevanceTargetClassifier(wekaClassifier);
             } else {
                 return new KeepLinkRelevanceTargetClassifier(null);

@@ -12,7 +12,7 @@ import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.string.StopList;
-import weka.classifiers.Classifier;
+import smile.classification.Classifier;
 import weka.core.Instances;
 
 public class LNClassifier {

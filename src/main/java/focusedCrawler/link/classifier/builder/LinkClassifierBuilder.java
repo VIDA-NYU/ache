@@ -42,7 +42,7 @@ import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
-import weka.classifiers.Classifier;
+import smile.classification.Classifier;
 import weka.core.Instances;
 import weka.core.SerializationHelper;
 
@@ -86,7 +86,7 @@ public class LinkClassifierBuilder {
 		String wekaInputAsString = createWekaInput(instances, false);
         
 		logger.info("Training new link classifier...");
-		Classifier classifier = trainWekaClassifier(wekaInputAsString);
+		Classifier classifier = trainSmileClassifier(wekaInputAsString);
 
         String modelFile = linkClassifierFolder.resolve("link_classifier.model").toString();
         String featuresFile = linkClassifierFolder.resolve("link_classifier.features").toString();

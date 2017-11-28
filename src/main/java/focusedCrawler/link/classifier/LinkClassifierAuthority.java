@@ -10,8 +10,7 @@ import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import weka.classifiers.Classifier;
-import weka.core.Instances;
+import smile.classification.Classifier;
 
 public class LinkClassifierAuthority implements LinkClassifier{
 
