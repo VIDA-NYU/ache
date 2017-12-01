@@ -113,27 +113,36 @@ class StartCrawler extends React.Component {
     return this.state.crawlType === crawlType ? 'active' : '';
   }
 
-  isValidCrawlerId(crawlerId) {
+  hasValidCrawlerId(crawlerId) {
     const validChars = /^[0-9A-Za-z_-]+$/;
     return this.state.crawlerId && validChars.test(this.state.crawlerId);
   }
 
   showErrorCrawlerId() {
-    return this.state.crawlerId && !this.isValidCrawlerId();
+    return this.state.crawlerId && !this.hasValidCrawlerId();
+  }
+
+  formIsValid() {
+    if (!this.state.crawlType)
+      return false;
+    const hasCrawlerId = this.hasValidCrawlerId();
+    if (this.state.crawlType === 'DeepCrawl') {
+      const hasValidSeeds = this.state.seeds && this.state.seeds.length > 0;
+      return hasValidSeeds && hasCrawlerId;
+    } else if (this.state.crawlType === 'FocusedCrawl') {
+      return this.state.modelFile && !this.state.invalidModel && hasCrawlerId;
+    } else {
+      return false;
+    }
   }
 
   render() {
     // render launch Crawler pages
     const isStarting = this.state.starting;
-    const hasValidSeeds = this.state.seeds && this.state.seeds.length;
-    const hasCrawlerId = this.isValidCrawlerId();
+    const hasValidSeeds = this.state.seeds && this.state.seeds.length > 0;
+    const hasCrawlerId = this.hasValidCrawlerId();
 
-    let enableStart = null;
-    if (this.state.crawlType === 'DeepCrawl') {
-      enableStart = hasValidSeeds > 0 && !isStarting && hasCrawlerId;
-    } else {
-      enableStart = this.state.modelFile !== null && !isStarting && hasCrawlerId;
-    }
+    const enableStart = this.formIsValid() && !isStarting;
 
     let crawlDescription;
     if(this.state.crawlType === 'DeepCrawl') {
@@ -186,6 +195,7 @@ class StartCrawler extends React.Component {
                 <label htmlFor="seedsInputFile">Model package:</label>
                 <input type="file" className="form-control-file" id="modelInputFile" aria-describedby="modelFileHelp" onChange={(e)=>this.handleSelectModelFile(e)} />
                 <small id="modelFileHelp" className="form-text text-muted">Please select the model file downloaded from DDT (&lt;domain-name&gt;_model.zip).</small>
+                { this.state.invalidModel && <p className="text-danger">Invalid model file. Select a zip file.</p>}
               </div>
             }
 
@@ -196,10 +206,8 @@ class StartCrawler extends React.Component {
               </div>
               { isStarting && <small className="form-text text-muted"><br/>Starting crawler... Hang tight.</small> }
             </div>
-
             { this.state.seeds && <p>Loaded {this.state.seeds.length} URLs from file.</p>}
             { this.state.seedsContent && <div><pre>{this.state.seedsContent}</pre></div> }
-            { this.state.invalidModel && <p className="text-danger">Invalid model file. Select a zip file.</p>}
           </form>
         </div>
       </div>

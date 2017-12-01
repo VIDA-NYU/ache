@@ -60,7 +60,7 @@ class AlertMessage extends React.Component {
 class AlertMessages extends React.Component {
 
   render() {
-    if(!this.props.messages)
+    if(!this.props.messages || this.props.messages.length === 0)
       return null;
     else return (
       <div>
