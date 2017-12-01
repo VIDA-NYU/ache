@@ -19,7 +19,7 @@ body {
 }
 
 .main-content {
-  padding: 40px 15px;
+  padding: 5px 30px;
 }
 
 .message {
@@ -59,7 +59,7 @@ body {
   padding: 0px;
   max-width: 100%;
   /*
-   * Hide anythin larger than 1 lines and use ellipsis.
+   * Hide anything larger than 1 line and use ellipsis.
    */
   overflow: hidden;
   height: 20px;
@@ -73,7 +73,7 @@ body {
 
 .hit-item .hit-description {
   /*
-   * Hide anythin larger than 3 lines and use ellipsis.
+   * Hide anything larger than 3 lines and use ellipsis.
    */
   overflow: hidden;
   text-overflow: ellipsis;
