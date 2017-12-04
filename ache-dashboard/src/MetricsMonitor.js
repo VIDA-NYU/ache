@@ -5,7 +5,7 @@ import {api} from './RestApi';
 class SeriesPlot extends React.Component {
 
   plotsPerLine = 2;
-  plotWidth = 1000/this.plotsPerLine;
+  plotWidth = 900/this.plotsPerLine;
   plotHeight = 250;
 
   render() {
@@ -15,8 +15,8 @@ class SeriesPlot extends React.Component {
     }
     var divClass = 'col-md-'+(12/this.plotsPerLine);
     return (
-      <div className={divClass}>
-        <XYPlot width={this.plotWidth} height={this.plotHeight} margin={{left: 100}}>
+      <div className={divClass} style={{'text-align':'center'}}>
+        <XYPlot width={this.plotWidth} height={this.plotHeight} margin={{left: 80}}>
           <HorizontalGridLines />
           {lines}
           <XAxis />
@@ -181,7 +181,7 @@ class MetricsMonitor extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <div className="panel panel-default">
-              <div className="panel-heading"><b>General Metrics</b></div>
+              <div className="panel-heading"><b>General</b></div>
               <table className="table table-striped">
                 <tbody>
                   <tr>
@@ -204,7 +204,7 @@ class MetricsMonitor extends React.Component {
               </table>
             </div>
             <div className="panel panel-default">
-              <div className="panel-heading"><b>HTTP Response Metrics</b></div>
+              <div className="panel-heading"><b>HTTP Response</b></div>
               <table className="table table-striped">
                 <tbody>
                   <tr>
@@ -257,27 +257,27 @@ class MetricsMonitor extends React.Component {
               </table>
             </div>
             <div className="panel panel-default">
-              <div className="panel-heading"><b>Performance</b></div>
+              <div className="panel-heading"><b>Page Fetcher Performance</b></div>
               <table className="table table-striped">
                 <tbody>
                   <tr>
-                    <td>Page Fetch Time (Mean)</td>
+                    <td>Fetch Time (Mean)</td>
                     <td>{metrics['timers']['downloader.fetch.time'].mean.toFixed(2)+' ms'}</td>
                   </tr>
                   <tr>
-                    <td>Page Fetch Time (Percentile 75) </td>
+                    <td>Fetch Time (Percentile 75) </td>
                     <td>{metrics['timers']['downloader.fetch.time'].p75.toFixed(2)+' ms'}</td>
                   </tr>
                   <tr>
-                    <td>Page Fetch Time (Percentile 95) </td>
+                    <td>Fetch Time (Percentile 95) </td>
                     <td>{metrics['timers']['downloader.fetch.time'].p95.toFixed(2)+' ms'}</td>
                   </tr>
                   <tr>
-                    <td>Page Fetch Rate: Last 15 min (pages/sec) </td>
+                    <td>Fetch Rate: Last 15 min (pages/sec) </td>
                     <td>{metrics['timers']['downloader.fetch.time'].m15_rate.toFixed(2)+' pages/sec'}</td>
                   </tr>
                   <tr>
-                    <td>Page Fetch Rate: Last 5 min (pages/sec) </td>
+                    <td>Fetch Rate: Last 5 min (pages/sec) </td>
                     <td>{metrics['timers']['downloader.fetch.time'].m5_rate.toFixed(2)+' pages/sec'}</td>
                   </tr>
                 </tbody>
