@@ -139,9 +139,6 @@ class StartCrawler extends React.Component {
   render() {
     // render launch Crawler pages
     const isStarting = this.state.starting;
-    const hasValidSeeds = this.state.seeds && this.state.seeds.length > 0;
-    const hasCrawlerId = this.hasValidCrawlerId();
-
     const enableStart = this.formIsValid() && !isStarting;
 
     let crawlDescription;
