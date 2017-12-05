@@ -42,7 +42,6 @@ import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
 import smile.classification.Classifier;
-import weka.core.Instances;
 
 /**
  * <p> </p>
@@ -59,42 +58,50 @@ import weka.core.Instances;
 public class SmileTargetClassifier implements TargetClassifier {
 
 	private final Classifier<double[]> classifier;
-	private final Instances instances;
+//	private final double[][]  instances;
 	private final String[] attributes;
 	private final StopList stoplist;
     private final double relevanceThreshold;
   
-	public SmileTargetClassifier(Classifier<double[]> classifier, double relevanceThreshold,
-	                            Instances instances, String[] attributes, StopList stoplist){
+//	public SmileTargetClassifier(Classifier<double[]> classifier, double relevanceThreshold,
+//	                            double[][] instances, String[] attributes, StopList stoplist){
+//		this.classifier = classifier;
+//        this.relevanceThreshold = relevanceThreshold;
+//		this.instances = instances;
+//		this.attributes = attributes;
+//		this.stoplist = stoplist;
+//	}
+	
+	public SmileTargetClassifier(Classifier<double[]> classifier, double relevanceThreshold, 
+			String[] attributes, StopList stoplist) {
 		this.classifier = classifier;
-        this.relevanceThreshold = relevanceThreshold;
-		this.instances = instances;
+		this.relevanceThreshold = relevanceThreshold;
 		this.attributes = attributes;
 		this.stoplist = stoplist;
 	}
 
 	public TargetRelevance classify(Page page) throws TargetClassifierException{
 		try{
-			double[] classificationResult = distributionForInstance(page);
-			final double relevanceProbability = classificationResult[0];
-            if (relevanceProbability > relevanceThreshold) {
-				return new TargetRelevance(true, relevanceProbability);
+			double classificationResult = distributionForInstance(page);
+//			final double relevanceProbability = classificationResult[0];
+            if (classificationResult == 0.0) {
+				return TargetRelevance.IRRELEVANT;
 			} else {
-			    return new TargetRelevance(false, relevanceProbability);
+			    return TargetRelevance.RELEVANT;
 			}
 		}catch(Exception ex){
 			throw new TargetClassifierException(ex.getMessage(), ex);
 		}
 	}
 
-    private double[] distributionForInstance(Page page) throws TargetClassifierException {
-        double[] result = null;
+    private double distributionForInstance(Page page) throws TargetClassifierException {
+        double result = 0.0;
         try {
             double[] values = getValues(page);
             synchronized (classifier) {
-                weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-                instanceWeka.setDataset(instances);
-                result = classifier.distributionForInstance(instanceWeka);
+//                weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
+//                instanceWeka.setDataset(instances);
+                result = classifier.predict(values); //predict returns int
             }
         } catch (Exception ex) {
             throw new TargetClassifierException(ex.getMessage(), ex);
@@ -157,9 +164,10 @@ public class SmileTargetClassifier implements TargetClassifier {
             String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
             String[] classValues = featureConfig.getParam("CLASS_VALUES", " ");
             
-            Instances insts = createWekaIntances(attributes, classValues);
+//            Instances insts = createWekaIntances(attributes, classValues);
             
-            return new SmileTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
+//            return new SmileTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
+            return new SmileTargetClassifier(classifier, relevanceThreshold, attributes, stoplist);
 
         } catch (FileNotFoundException e) {
             throw new IllegalArgumentException("Could not find file: " + modelFile, e);
@@ -172,20 +180,36 @@ public class SmileTargetClassifier implements TargetClassifier {
         }
     }
 
-    private static Instances createWekaIntances(String[] attributes, String[] classValues) {
-        weka.core.FastVector vectorAtt = new weka.core.FastVector();
-        for (int i = 0; i < attributes.length; i++) {
-            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-        }
-        weka.core.FastVector classAtt = new weka.core.FastVector();
-        for (int i = 0; i < classValues.length; i++) {
-            classAtt.addElement(classValues[i]);
-        }
-        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-        Instances instances = new Instances("target_classification", vectorAtt, 1);
-        instances.setClassIndex(attributes.length);
-        return instances;
-    }
+//    private static Instances createWekaIntances(String[] attributes, String[] classValues) {
+//        weka.core.FastVector vectorAtt = new weka.core.FastVector();
+//        for (int i = 0; i < attributes.length; i++) {
+//            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
+//        }
+//        weka.core.FastVector classAtt = new weka.core.FastVector();
+//        for (int i = 0; i < classValues.length; i++) {
+//            classAtt.addElement(classValues[i]);
+//        }
+//        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
+//        Instances instances = new Instances("target_classification", vectorAtt, 1);
+//        instances.setClassIndex(attributes.length);
+//        return instances;
+//    }
+    
+    
+//    private static double[][] createSmileIntances(String[] attributes, String[] classValues) {
+//        weka.core.FastVector vectorAtt = new weka.core.FastVector();
+//        for (int i = 0; i < attributes.length; i++) {
+//            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
+//        }
+//        weka.core.FastVector classAtt = new weka.core.FastVector();
+//        for (int i = 0; i < classValues.length; i++) {
+//            classAtt.addElement(classValues[i]);
+//        }
+//        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
+//        Instances instances = new Instances("target_classification", vectorAtt, 1);
+//        instances.setClassIndex(attributes.length);
+//        return instances;
+//    }
     
     static class WekaClassifierConfig {
         public String features_file = "pageclassifier.features";

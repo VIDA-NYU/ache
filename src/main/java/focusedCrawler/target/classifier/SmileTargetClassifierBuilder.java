@@ -31,6 +31,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -47,6 +48,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
+import focusedCrawler.util.SmileUtil;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
@@ -58,6 +60,9 @@ import smile.classification.SVM.Multiclass;
 import smile.data.AttributeDataset;
 import smile.data.parser.ArffParser;
 import smile.math.kernel.GaussianKernel;
+import smile.math.kernel.LinearKernel;
+import smile.math.kernel.PolynomialKernel;
+import smile.validation.CrossValidation;
 
 /**
  * <p> </p>
@@ -372,19 +377,23 @@ public class SmileTargetClassifierBuilder {
     	}
     }
     
-    public static void trainModel(String trainingPath, String outputPath, String learner) throws IOException, ParseException {
+    public static void trainModel(String trainingPath, String outputPath, String learner) throws IOException, ParseException  {
         if(learner==null) {
             learner = "SVM";
         }
         
         System.out.println("Training "+ learner+" model...");
+        String modelFilePath = outputPath + "/pageclassifier.model";
 		ArffParser arffParser = new ArffParser();
-		arffParser.setResponseIndex(4);
-		AttributeDataset trainingData = arffParser.parse(SmileTargetClassifier.class.getClass().getResourceAsStream(trainingPath));
+		arffParser.setResponseIndex(0);
+		FileInputStream fis = new FileInputStream(new File(trainingPath + "/weka.arff")); 
+		System.out.println(trainingPath + "/weka.arff");
+		AttributeDataset trainingData = arffParser.parse(fis);
 		double[][] x = trainingData.toArray(new double[trainingData.size()][]);
 		int[] y = trainingData.toArray(new int[trainingData.size()]);
 		if(learner.equals("SVM")) {
-        	SVM<double[]> svmModel = new SVM<double[]>(new GaussianKernel(8.0), 0.01);
+        	SVM<double[]> svmModel = new SVM<double[]>(new LinearKernel(), 0.01);
+        	
 //            SVM.main(new String[] {
 //                "-M",
 //                "-d", outputPath + "/pageclassifier.model",
@@ -393,14 +402,18 @@ public class SmileTargetClassifierBuilder {
 //            });
         	svmModel.learn(x, y);
         	svmModel.finish();
+        	SmileUtil.writeSmileClassifier(modelFilePath, svmModel);
         } else if(learner.equals("RandomForest")) {
+        	CrossValidation crossValidation = new CrossValidation(trainingData.size(), 5);
         	RandomForest randomForest = new RandomForest(x, y, 100);
+        	
 //            RandomForest.main(new String[] {
 ////              "-K", "5", // k-fold cross validation
 //                "-I", "100", // Number of trees to build
 //                "-d", outputPath + "/pageclassifier.model",
 //                "-t", trainingPath + "/weka.arff"
 //            });
+        	SmileUtil.writeSmileClassifier(modelFilePath, randomForest);
         } else {
             System.out.println("Unknow learner: "+learner);
             return;

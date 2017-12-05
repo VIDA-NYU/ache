@@ -155,9 +155,7 @@ public class LinkNeighborhoodWrapper {
 
     while (wordsFields.hasNext()) {
       Instance instance = new Instance(features);
-//      System.out.println(">>>Instance:"+instance.toString());
       String url = (String)wordsFields.next();
-//      System.out.println("1.URL:" + url);
       WordField[] words = (WordField[])linkFields.get(url);
       for(int j = 0; j < words.length; j++){
         WordField wordField = words[j];

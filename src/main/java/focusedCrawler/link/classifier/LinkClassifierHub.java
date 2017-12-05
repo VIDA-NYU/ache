@@ -10,7 +10,9 @@ import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import smile.classification.Classifier;
-import weka.core.Instances;
+import smile.classification.SVM;
+//import weka.core.Instances;
+
 
 /**
  * This class implements the link classifier for the hub links.
@@ -20,7 +22,7 @@ import weka.core.Instances;
 public class LinkClassifierHub implements LinkClassifier{
 
 	private Classifier classifier;
-	private Instances instances;
+//	private Instances instances;
 	private LinkNeighborhoodWrapper wrapper;
 	private String[] attributes;
 	
@@ -28,9 +30,15 @@ public class LinkClassifierHub implements LinkClassifier{
 		
 	}
 	
-	public LinkClassifierHub(Classifier classifier, Instances instances, LinkNeighborhoodWrapper wrapper,String[] attributes) {
+//	public LinkClassifierHub(Classifier classifier, Instances instances, LinkNeighborhoodWrapper wrapper,String[] attributes) {
+//		this.classifier = classifier;
+//		this.instances = instances;
+//		this.wrapper = wrapper;
+//		this.attributes = attributes;
+//	}
+	
+	public LinkClassifierHub(Classifier classifier, LinkNeighborhoodWrapper wrapper,String[] attributes) {
 		this.classifier = classifier;
-		this.instances = instances;
 		this.wrapper = wrapper;
 		this.attributes = attributes;
 	}
@@ -47,9 +55,11 @@ public class LinkClassifierHub implements LinkClassifier{
 					String url = (String)iter.next();
 			        Instance instance = (Instance)urlWords.get(url);
 			        double[] values = instance.getValues();
-			        weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-			        instanceWeka.setDataset(instances);
-			        double[] prob = classifier.distributionForInstance(instanceWeka);
+//			        weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
+//			        instanceWeka.setDataset(instances);
+//			        double[] prob = classifier.distributionForInstance(instanceWeka);
+			        double[] prob = new double[2];
+			        int predictedValue = ((SVM<double[]>)classifier).predict(values, prob);
 			        double relevance = LinkRelevance.DEFAULT_HUB_RELEVANCE + prob[0]*100;
 			        result = new LinkRelevance(ln.getLink(),relevance);
 				}
