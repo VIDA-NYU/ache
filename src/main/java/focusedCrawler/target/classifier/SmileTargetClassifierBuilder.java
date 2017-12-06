@@ -385,7 +385,7 @@ public class SmileTargetClassifierBuilder {
         System.out.println("Training "+ learner+" model...");
         String modelFilePath = outputPath + "/pageclassifier.model";
 		ArffParser arffParser = new ArffParser();
-		arffParser.setResponseIndex(0);
+		arffParser.setResponseIndex(7486);
 		FileInputStream fis = new FileInputStream(new File(trainingPath + "/weka.arff")); 
 		System.out.println(trainingPath + "/weka.arff");
 		AttributeDataset trainingData = arffParser.parse(fis);
