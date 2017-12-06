@@ -94,6 +94,7 @@ public class SmileTargetClassifierBuilder {
   
 	protected StopList stoplist;
 	
+	protected static int responseIndex = 0;
     public SmileTargetClassifierBuilder(File dir, File dirTest, StopList stoplist) throws SAXException, IOException {
     	this(dir,dirTest,stoplist,Integer.MAX_VALUE);
     }
@@ -278,6 +279,7 @@ public class SmileTargetClassifierBuilder {
     			attributes.add(elem.getWord());
     			header.append(" REAL");
     			header.append("\n");
+    			responseIndex++;
     		}
     	}
     	header.append("@ATTRIBUTE class {");
@@ -385,7 +387,8 @@ public class SmileTargetClassifierBuilder {
         System.out.println("Training "+ learner+" model...");
         String modelFilePath = outputPath + "/pageclassifier.model";
 		ArffParser arffParser = new ArffParser();
-		arffParser.setResponseIndex(7486);
+		arffParser.setResponseIndex(responseIndex);
+//		arffParser.setResponseIndex(7486);
 		FileInputStream fis = new FileInputStream(new File(trainingPath + "/weka.arff")); 
 		System.out.println(trainingPath + "/weka.arff");
 		AttributeDataset trainingData = arffParser.parse(fis);
@@ -402,9 +405,11 @@ public class SmileTargetClassifierBuilder {
 //            });
         	svmModel.learn(x, y);
         	svmModel.finish();
+        	svmModel.trainPlattScaling(x, y);
         	SmileUtil.writeSmileClassifier(modelFilePath, svmModel);
         } else if(learner.equals("RandomForest")) {
         	CrossValidation crossValidation = new CrossValidation(trainingData.size(), 5);
+        	
         	RandomForest randomForest = new RandomForest(x, y, 100);
         	
 //            RandomForest.main(new String[] {

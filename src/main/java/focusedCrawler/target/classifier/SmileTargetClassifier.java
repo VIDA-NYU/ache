@@ -42,6 +42,7 @@ import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
 import smile.classification.Classifier;
+import smile.classification.SVM;
 
 /**
  * <p> </p>
@@ -82,9 +83,9 @@ public class SmileTargetClassifier implements TargetClassifier {
 
 	public TargetRelevance classify(Page page) throws TargetClassifierException{
 		try{
-			double classificationResult = distributionForInstance(page);
+			double[] classificationResult = distributionForInstance(page);
 //			final double relevanceProbability = classificationResult[0];
-            if (classificationResult == 0.0) {
+            if (classificationResult[0] < relevanceThreshold) {
 				return TargetRelevance.IRRELEVANT;
 			} else {
 			    return TargetRelevance.RELEVANT;
@@ -94,14 +95,14 @@ public class SmileTargetClassifier implements TargetClassifier {
 		}
 	}
 
-    private double distributionForInstance(Page page) throws TargetClassifierException {
-        double result = 0.0;
+    private double[] distributionForInstance(Page page) throws TargetClassifierException {
+        double[] result = new double[2];
         try {
             double[] values = getValues(page);
             synchronized (classifier) {
 //                weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
 //                instanceWeka.setDataset(instances);
-                result = classifier.predict(values); //predict returns int
+                ((SVM<double[]>) classifier).predict(values, result); //predict returns int
             }
         } catch (Exception ex) {
             throw new TargetClassifierException(ex.getMessage(), ex);
