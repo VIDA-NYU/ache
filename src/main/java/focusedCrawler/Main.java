@@ -164,9 +164,9 @@ public class Main {
             
             new File(outputPath).mkdirs();
             
-            // generate the input for weka
+            // generate the input for smile
             System.out.println("Preparing training data...");
-            SmileTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/weka.arff" );
+            SmileTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/smile_input.arff" );
             
             // generate the model
             System.out.println("Training model...");

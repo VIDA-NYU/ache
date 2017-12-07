@@ -58,7 +58,7 @@ public class TargetClassifierFactory {
                 classifier = new KeepLinkRelevanceTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
             
-            if("weka".equals(classifierType)) {
+            if("smile".equals(classifierType)) {
                 classifier = new SmileTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
             
@@ -70,7 +70,7 @@ public class TargetClassifierFactory {
             }
         }
         
-        // create classic weka classifer to maintain compatibility with older versions
+        // create classic smile classifer to maintain compatibility with older versions
         return SmileTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
     }
 

@@ -251,7 +251,7 @@ public class SmileTargetClassifierBuilder {
   
     Vector<String> attributes = new Vector<String>(); 
   
-    public String[] centroid2Weka(String output) throws FileNotFoundException,IOException {
+    public String[] centroid2Smile(String output) throws FileNotFoundException,IOException {
     	OutputStream fout= new FileOutputStream(output,false);
     	OutputStream bout= new BufferedOutputStream(fout);
     	OutputStreamWriter outputFile = new OutputStreamWriter(bout);
@@ -354,7 +354,7 @@ public class SmileTargetClassifierBuilder {
   
     public static void createInputFile(String stopwordsFile,
                                        String trainingPath,
-                                       String wekaInputFile) {
+                                       String smileInputFile) {
     	try {
     	    StopList stopwords = null;
     		File testDataPath = null;
@@ -368,10 +368,10 @@ public class SmileTargetClassifierBuilder {
     		
     		SmileTargetClassifierBuilder builder =
                     new SmileTargetClassifierBuilder(trainingDataPath, testDataPath, stopwords);
-            builder.centroid2Weka(wekaInputFile);
+            builder.centroid2Smile(smileInputFile);
     	}
     	catch (SAXException | IOException ex1) {
-    		throw new RuntimeException("Failed to generate weka input file.", ex1);
+    		throw new RuntimeException("Failed to generate smile input file.", ex1);
     	}
     }
     
@@ -384,8 +384,8 @@ public class SmileTargetClassifierBuilder {
         String modelFilePath = outputPath + "/pageclassifier.model";
 		ArffParser arffParser = new ArffParser();
 		arffParser.setResponseIndex(responseIndex);
-		FileInputStream fis = new FileInputStream(new File(trainingPath + "/weka.arff")); 
-		System.out.println(trainingPath + "/weka.arff");
+		FileInputStream fis = new FileInputStream(new File(trainingPath + "/smile_input.arff")); 
+		System.out.println(trainingPath + "/smile_input.arff");
 		AttributeDataset trainingData = arffParser.parse(fis);
 		double[][] x = trainingData.toArray(new double[trainingData.size()][]);
 		int[] y = trainingData.toArray(new int[trainingData.size()]);
@@ -412,7 +412,7 @@ public class SmileTargetClassifierBuilder {
             FileWriter featuresWriter = new FileWriter(features);
             //featuresWriter.write("");
             featuresWriter.write("CLASS_VALUES  S NS" + "\n" + "ATTRIBUTES");
-            String wekkaFilePath = trainingPath + "/weka.arff";
+            String wekkaFilePath = trainingPath + "/smile_input.arff";
             Scanner wekkaFileScanner = new Scanner(new File(wekkaFilePath));
             while(wekkaFileScanner.hasNext()){
                 String nextLine = wekkaFileScanner.nextLine();

@@ -146,7 +146,7 @@ public class SmileTargetClassifier implements TargetClassifier {
     }
 
     
-    static class WekaClassifierConfig {
+    static class SmileClassifierConfig {
         public String features_file = "pageclassifier.features";
         public String model_file = "pageclassifier.features";
         public String stopwords_file = null;
@@ -157,7 +157,7 @@ public class SmileTargetClassifier implements TargetClassifier {
 
         public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters) throws IOException {
 
-            WekaClassifierConfig params = yaml.treeToValue(parameters, WekaClassifierConfig.class);
+        	SmileClassifierConfig params = yaml.treeToValue(parameters, SmileClassifierConfig.class);
             params.model_file = resolveRelativePath(basePath, params.model_file);
             params.features_file = resolveRelativePath(basePath, params.features_file);
             params.stopwords_file = resolveRelativePath(basePath, params.stopwords_file);
