@@ -23,11 +23,7 @@
 */
 package focusedCrawler.target.classifier;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
 import java.nio.file.Path;
 
 import org.xml.sax.SAXException;
@@ -60,20 +56,10 @@ import smile.classification.SVM;
 public class SmileTargetClassifier implements TargetClassifier {
 
 	private final SoftClassifier<double[]> classifier;
-//	private final double[][]  instances;
 	private final String[] attributes;
 	private final StopList stoplist;
     private final double relevanceThreshold;
   
-//	public SmileTargetClassifier(Classifier<double[]> classifier, double relevanceThreshold,
-//	                            double[][] instances, String[] attributes, StopList stoplist){
-//		this.classifier = classifier;
-//        this.relevanceThreshold = relevanceThreshold;
-//		this.instances = instances;
-//		this.attributes = attributes;
-//		this.stoplist = stoplist;
-//	}
-	
 	public SmileTargetClassifier(SoftClassifier<double[]> classifier, double relevanceThreshold, 
 			String[] attributes, StopList stoplist) {
 		this.classifier = classifier;
@@ -85,7 +71,6 @@ public class SmileTargetClassifier implements TargetClassifier {
 	public TargetRelevance classify(Page page) throws TargetClassifierException{
 		try{
 			double[] classificationResult = distributionForInstance(page);
-//			final double relevanceProbability = classificationResult[0];
             if (classificationResult[0] < relevanceThreshold) {
 				return TargetRelevance.IRRELEVANT;
 			} else {
@@ -101,8 +86,6 @@ public class SmileTargetClassifier implements TargetClassifier {
         try {
             double[] values = getValues(page);
             synchronized (classifier) {
-//                weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-//                instanceWeka.setDataset(instances);
                 ((SVM<double[]>) classifier).predict(values, result); //predict returns int
             }
         } catch (Exception ex) {
@@ -159,44 +142,9 @@ public class SmileTargetClassifier implements TargetClassifier {
             SoftClassifier<double[]> classifier = SmileUtil.loadSmileClassifier(modelFile);
             String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
             String[] classValues = featureConfig.getParam("CLASS_VALUES", " ");
-            
-//            Instances insts = createWekaIntances(attributes, classValues);
-            
-//            return new SmileTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
             return new SmileTargetClassifier(classifier, relevanceThreshold, attributes, stoplist);
-
     }
 
-//    private static Instances createWekaIntances(String[] attributes, String[] classValues) {
-//        weka.core.FastVector vectorAtt = new weka.core.FastVector();
-//        for (int i = 0; i < attributes.length; i++) {
-//            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-//        }
-//        weka.core.FastVector classAtt = new weka.core.FastVector();
-//        for (int i = 0; i < classValues.length; i++) {
-//            classAtt.addElement(classValues[i]);
-//        }
-//        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-//        Instances instances = new Instances("target_classification", vectorAtt, 1);
-//        instances.setClassIndex(attributes.length);
-//        return instances;
-//    }
-    
-    
-//    private static double[][] createSmileIntances(String[] attributes, String[] classValues) {
-//        weka.core.FastVector vectorAtt = new weka.core.FastVector();
-//        for (int i = 0; i < attributes.length; i++) {
-//            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-//        }
-//        weka.core.FastVector classAtt = new weka.core.FastVector();
-//        for (int i = 0; i < classValues.length; i++) {
-//            classAtt.addElement(classValues[i]);
-//        }
-//        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-//        Instances instances = new Instances("target_classification", vectorAtt, 1);
-//        instances.setClassIndex(attributes.length);
-//        return instances;
-//    }
     
     static class WekaClassifierConfig {
         public String features_file = "pageclassifier.features";

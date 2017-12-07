@@ -16,7 +16,6 @@ import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.classifier.SmileTargetClassifierBuilder;
-//import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.tools.StartRestServer;
 import io.airlift.airline.Arguments;
 import io.airlift.airline.Cli;
@@ -167,12 +166,10 @@ public class Main {
             
             // generate the input for weka
             System.out.println("Preparing training data...");
-//            WekaTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/weka.arff" );
             SmileTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/weka.arff" );
             
             // generate the model
             System.out.println("Training model...");
-//            WekaTargetClassifierBuilder.trainModel(trainingPath, outputPath, learner);
             try {
 				SmileTargetClassifierBuilder.trainModel(trainingPath, outputPath, learner);
 			} catch (IOException | java.text.ParseException e) {
@@ -183,7 +180,6 @@ public class Main {
             
             // generate features file
             System.out.println("Creating feature file...");
-//            WekaTargetClassifierBuilder.createFeaturesFile(outputPath,trainingPath);
             SmileTargetClassifierBuilder.createFeaturesFile(outputPath,trainingPath);
             
             System.out.println("done.");

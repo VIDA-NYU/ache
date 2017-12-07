@@ -46,7 +46,6 @@ public class ClassifierFactoryTest {
 
         TargetClassifier classifier = TargetClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
-//        assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
         assertThat(classifier, is(instanceOf(SmileTargetClassifier.class)));
     }
     
@@ -57,7 +56,6 @@ public class ClassifierFactoryTest {
 
         TargetClassifier classifier = TargetClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
-//        assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
         assertThat(classifier, is(instanceOf(SmileTargetClassifier.class)));
     }
 

@@ -59,7 +59,6 @@ import smile.classification.SVM;
 import smile.data.AttributeDataset;
 import smile.data.parser.ArffParser;
 import smile.math.kernel.LinearKernel;
-import smile.validation.CrossValidation;
 
 /**
  * <p> </p>
@@ -385,7 +384,6 @@ public class SmileTargetClassifierBuilder {
         String modelFilePath = outputPath + "/pageclassifier.model";
 		ArffParser arffParser = new ArffParser();
 		arffParser.setResponseIndex(responseIndex);
-//		arffParser.setResponseIndex(7486);
 		FileInputStream fis = new FileInputStream(new File(trainingPath + "/weka.arff")); 
 		System.out.println(trainingPath + "/weka.arff");
 		AttributeDataset trainingData = arffParser.parse(fis);
@@ -393,28 +391,13 @@ public class SmileTargetClassifierBuilder {
 		int[] y = trainingData.toArray(new int[trainingData.size()]);
 		if(learner.equals("SVM")) {
         	SVM<double[]> svmModel = new SVM<double[]>(new LinearKernel(), 0.01);
-        	
-//            SVM.main(new String[] {
-//                "-M",
-//                "-d", outputPath + "/pageclassifier.model",
-//                "-t", trainingPath + "/weka.arff",
-//                "-C", "0.01"
-//            });
         	svmModel.learn(x, y);
         	svmModel.finish();
         	svmModel.trainPlattScaling(x, y);
         	SmileUtil.writeSmileClassifier(modelFilePath, svmModel);
         } else if(learner.equals("RandomForest")) {
-        	CrossValidation crossValidation = new CrossValidation(trainingData.size(), 5);
-        	
+//        	TODO: CrossValidation crossValidation = new CrossValidation(trainingData.size(), 5);
         	RandomForest randomForest = new RandomForest(x, y, 100);
-        	
-//            RandomForest.main(new String[] {
-////              "-K", "5", // k-fold cross validation
-//                "-I", "100", // Number of trees to build
-//                "-d", outputPath + "/pageclassifier.model",
-//                "-t", trainingPath + "/weka.arff"
-//            });
         	SmileUtil.writeSmileClassifier(modelFilePath, randomForest);
         } else {
             System.out.println("Unknow learner: "+learner);
