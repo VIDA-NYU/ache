@@ -10,16 +10,16 @@ import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import smile.classification.Classifier;
+import smile.classification.SoftClassifier;
 import smile.classification.SVM;
 
 public class LinkClassifierAuthority implements LinkClassifier{
 
 	  private LinkNeighborhoodWrapper wrapper;
 	  private String[] attributes;
-	  private Classifier classifier;
+	  private SoftClassifier<double[]> classifier;
 	  
-	  public LinkClassifierAuthority(Classifier<double[]> classifier,  LinkNeighborhoodWrapper wrapper,String[] attributes) {
+	  public LinkClassifierAuthority(SoftClassifier<double[]> classifier,  LinkNeighborhoodWrapper wrapper,String[] attributes) {
 		  this.wrapper = wrapper;
 		  this.attributes = attributes;
 		  this.classifier = classifier;
@@ -56,7 +56,7 @@ public class LinkClassifierAuthority implements LinkClassifier{
 //		        		  instanceWeka.setDataset(instances);
 //		        		  double[] prob = classifier.distributionForInstance(instanceWeka);
 		        		  double[] prob = new double[2];
-		        		  int predictedValue = ((SVM) classifier).predict(values, prob);
+		        		  int predictedValue = classifier.predict(values, prob);
 		        		  relevance = LinkRelevance.DEFAULT_AUTH_RELEVANCE + (prob[0]*100);
 		        	  }
 			          linkRelevance[count] = new LinkRelevance(url, relevance);

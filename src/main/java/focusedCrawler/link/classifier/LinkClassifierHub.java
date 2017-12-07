@@ -9,7 +9,7 @@ import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import smile.classification.Classifier;
+import smile.classification.SoftClassifier;
 import smile.classification.SVM;
 //import weka.core.Instances;
 
@@ -21,7 +21,7 @@ import smile.classification.SVM;
  */
 public class LinkClassifierHub implements LinkClassifier{
 
-	private Classifier classifier;
+	private SoftClassifier<double[]> classifier;
 //	private Instances instances;
 	private LinkNeighborhoodWrapper wrapper;
 	private String[] attributes;
@@ -37,7 +37,7 @@ public class LinkClassifierHub implements LinkClassifier{
 //		this.attributes = attributes;
 //	}
 	
-	public LinkClassifierHub(Classifier classifier, LinkNeighborhoodWrapper wrapper,String[] attributes) {
+	public LinkClassifierHub(SoftClassifier<double[]> classifier, LinkNeighborhoodWrapper wrapper,String[] attributes) {
 		this.classifier = classifier;
 		this.wrapper = wrapper;
 		this.attributes = attributes;

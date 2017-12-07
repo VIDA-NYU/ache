@@ -43,7 +43,7 @@ import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
-import smile.classification.Classifier;
+import smile.classification.SoftClassifier;
 import smile.classification.SVM;
 import smile.data.Attribute;
 import smile.data.AttributeDataset;
@@ -92,7 +92,7 @@ public class LinkClassifierBuilder {
 		AttributeDataset inputDataset = createSmileInput(instances, false);
         
 		logger.info("Training new link classifier...");
-		Classifier<double[]> classifier = trainSmileClassifier(inputDataset);
+		SoftClassifier<double[]> classifier = trainSmileClassifier(inputDataset);
 
         String modelFile = linkClassifierFolder.resolve("link_classifier.model").toString();
         String featuresFile = linkClassifierFolder.resolve("link_classifier.features").toString();
@@ -114,7 +114,7 @@ public class LinkClassifierBuilder {
 	}
 
     public LinkClassifier createLinkClassifierImpl(String[] attributes, String[] classValues,
-            Classifier classifier, String className, int levels) {
+    		SoftClassifier<double[]> classifier, String className, int levels) {
 
         LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
 
@@ -147,7 +147,7 @@ public class LinkClassifierBuilder {
         return linkClassifier;
     }
     
-    public Classifier<double[]> trainSmileClassifier(AttributeDataset smileInput ) throws Exception {
+    public SoftClassifier<double[]> trainSmileClassifier(AttributeDataset smileInput ) throws Exception {
         SVM<double[]> classifier = new SVM<double[]>(new LinearKernel(), 1.0);
         int[] y = new int[smileInput.y().length];
         for(int i = 0 ; i < y.length; i++) {
@@ -305,7 +305,7 @@ public class LinkClassifierBuilder {
 
         // Train actual classifier
         AttributeDataset smileInput = createSmileInput(instances, true);
-        Classifier<double[]> classifier = trainSmileClassifier(smileInput);
+        SoftClassifier<double[]> classifier = trainSmileClassifier(smileInput);
 
         String[] classValues = new String[] {"POS", "NEG"};
         return createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub", 0);

@@ -37,11 +37,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.ParameterFile;
+import focusedCrawler.util.SmileUtil;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
-import smile.classification.Classifier;
+import smile.classification.SoftClassifier;
 import smile.classification.SVM;
 
 /**
@@ -58,7 +59,7 @@ import smile.classification.SVM;
  */
 public class SmileTargetClassifier implements TargetClassifier {
 
-	private final Classifier<double[]> classifier;
+	private final SoftClassifier<double[]> classifier;
 //	private final double[][]  instances;
 	private final String[] attributes;
 	private final StopList stoplist;
@@ -73,7 +74,7 @@ public class SmileTargetClassifier implements TargetClassifier {
 //		this.stoplist = stoplist;
 //	}
 	
-	public SmileTargetClassifier(Classifier<double[]> classifier, double relevanceThreshold, 
+	public SmileTargetClassifier(SoftClassifier<double[]> classifier, double relevanceThreshold, 
 			String[] attributes, StopList stoplist) {
 		this.classifier = classifier;
 		this.relevanceThreshold = relevanceThreshold;
@@ -154,14 +155,8 @@ public class SmileTargetClassifier implements TargetClassifier {
                                           double relevanceThreshold,
                                           StopList stoplist)
                                           throws IOException {
-        try {
             ParameterFile featureConfig = new ParameterFile(featureFile);
-
-            InputStream is = new FileInputStream(modelFile);
-            ObjectInputStream objectInputStream = new ObjectInputStream(is);
-            Classifier classifier = (Classifier) objectInputStream.readObject();
-            is.close();
-
+            SoftClassifier<double[]> classifier = SmileUtil.loadSmileClassifier(modelFile);
             String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
             String[] classValues = featureConfig.getParam("CLASS_VALUES", " ");
             
@@ -170,15 +165,6 @@ public class SmileTargetClassifier implements TargetClassifier {
 //            return new SmileTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
             return new SmileTargetClassifier(classifier, relevanceThreshold, attributes, stoplist);
 
-        } catch (FileNotFoundException e) {
-            throw new IllegalArgumentException("Could not find file: " + modelFile, e);
-        }
-        catch (ClassNotFoundException e) {
-            throw new IllegalArgumentException("Could not deserialize classifier from file:"+modelFile, e);
-        }
-        catch (IOException e) {
-            throw new IllegalArgumentException("Could not load classifier.", e);
-        }
     }
 
 //    private static Instances createWekaIntances(String[] attributes, String[] classValues) {

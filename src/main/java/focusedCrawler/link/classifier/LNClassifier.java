@@ -1,9 +1,5 @@
 package focusedCrawler.link.classifier;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -13,12 +9,12 @@ import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.SmileUtil;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.string.StopList;
-import smile.classification.Classifier;
+import smile.classification.SoftClassifier;
 import smile.classification.SVM;
 
 public class LNClassifier {
 
-	private final Classifier classifier;
+	private final SoftClassifier<double[]> classifier;
 //	private final Instances instances;
 	private final LinkNeighborhoodWrapper wrapper;
 	private final String[] attributes;
@@ -31,7 +27,7 @@ public class LNClassifier {
 //		this.attributes = attributes;
 //	}
 	
-	public LNClassifier(Classifier classifier, LinkNeighborhoodWrapper wrapper,
+	public LNClassifier(SoftClassifier<double[]> classifier, LinkNeighborhoodWrapper wrapper,
 			String[] attributes) {
 		this.classifier = classifier;
 		this.wrapper = wrapper;
@@ -50,7 +46,7 @@ public class LNClassifier {
 //            double[] probs = classifier.distributionForInstance(instanceWeka);
 //        	return probs;
         	double[] prob = new double[2];
-	        int predictedValue = ((SVM<double[]>)classifier).predict(values, prob);
+	        int predictedValue = classifier.predict(values, prob);
         	return prob;
         }
 	}
@@ -80,7 +76,7 @@ public class LNClassifier {
 	    
 	    LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
 	    
-	    Classifier classifier = SmileUtil.loadSmileClassifier(modelFilePath);
+	    SoftClassifier<double[]> classifier = SmileUtil.loadSmileClassifier(modelFilePath);
 	    
 //	    return new LNClassifier(classifier, insts, wrapper, attributes);
 	    return new LNClassifier(classifier, wrapper, attributes);

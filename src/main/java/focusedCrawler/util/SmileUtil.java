@@ -8,15 +8,15 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
-import smile.classification.Classifier;
+import smile.classification.SoftClassifier;
 
 public class SmileUtil {
 
-	public static Classifier<double[]> loadSmileClassifier(String modelFilePath) {
+	public static SoftClassifier<double[]> loadSmileClassifier(String modelFilePath) {
         try {
             InputStream is = new FileInputStream(modelFilePath);
             ObjectInputStream objectInputStream = new ObjectInputStream(is);
-            Classifier<double[]> classifier = (Classifier<double[]>) objectInputStream.readObject();
+            SoftClassifier<double[]> classifier = (SoftClassifier<double[]>) objectInputStream.readObject();
             objectInputStream.close();
             return classifier;
         } catch (IOException | ClassNotFoundException e) {
@@ -26,7 +26,7 @@ public class SmileUtil {
     }
 	
 	
-	public static void writeSmileClassifier(String modelFilePath, Classifier<double[]> classifier) {
+	public static void writeSmileClassifier(String modelFilePath, SoftClassifier<double[]> classifier) {
         try {
             OutputStream os = new FileOutputStream(modelFilePath);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(os);

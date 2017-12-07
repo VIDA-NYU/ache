@@ -56,12 +56,9 @@ import focusedCrawler.util.vsm.VSMElementComparator;
 import focusedCrawler.util.vsm.VSMVector;
 import smile.classification.RandomForest;
 import smile.classification.SVM;
-import smile.classification.SVM.Multiclass;
 import smile.data.AttributeDataset;
 import smile.data.parser.ArffParser;
-import smile.math.kernel.GaussianKernel;
 import smile.math.kernel.LinearKernel;
-import smile.math.kernel.PolynomialKernel;
 import smile.validation.CrossValidation;
 
 /**
