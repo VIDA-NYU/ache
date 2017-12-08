@@ -90,7 +90,6 @@ class Crawlers extends React.Component {
   }
 
   updateResponse(response) {
-    console.log(this.state.serverError);
     if('FETCH_ERROR' === response) {
       if(!this.state.serverError) {
         this.messages.error('Failed to connect to ACHE server.');
@@ -120,7 +119,7 @@ class Crawlers extends React.Component {
           <AlertMessages messages={this.messages.display()} />
           <h2>Crawlers</h2>
           <p>
-            <Link className="btn btn-default" to='/crawlers/start'><i className="glyphicon glyphicon-plus" />&nbsp;Start Crawler</Link>
+            <Link className="btn btn-default" to='/start'><i className="glyphicon glyphicon-plus" />&nbsp;Start Crawler</Link>
           </p>
           { hasCrawlers && crawlersTable }
           {

@@ -4,14 +4,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
 
 import com.amazonaws.util.StringInputStream;
 
+import focusedCrawler.util.WildcardMatcher;
 import spark.Filter;
 import spark.Request;
 import spark.Response;
@@ -23,20 +22,24 @@ public class StaticFileHandlerFilter implements Filter {
     private static final String INDEX_PATH = "public/index.html";
 
     private StaticFilesConfiguration staticFilesHandler;
-    private Set<String> indexHtmlPaths;
+    private WildcardMatcher patterns;
     private String basePath;
 
+
     public StaticFileHandlerFilter(List<String> indexHtmlPaths, String basePath) {
-        this.basePath = basePath;
+        String path = basePath;
+        path = (path != null && path.startsWith("/")) ? path : "/" + path;
+        path = (path != null && path.endsWith("/")) ? path : path + "/";
+        this.basePath = path;
         this.staticFilesHandler = new StaticFilesConfiguration();
         this.staticFilesHandler.configure("/public");
-        this.indexHtmlPaths = new HashSet<>(indexHtmlPaths);
+        this.patterns = WildcardMatcher.fromWhitelist(indexHtmlPaths);
     }
 
     @Override
     public void handle(Request request, Response response) throws Exception {
         String path = request.pathInfo();
-        if (indexHtmlPaths.contains(path)) {
+        if (patterns.matches(path)) {
             renderIndexHtml(request, response);
         } else {
             staticFilesHandler.consume(request.raw(), response.raw());
@@ -53,6 +56,7 @@ public class StaticFileHandlerFilter implements Filter {
         if(basePath != null && !basePath.isEmpty()) {
             String meta = String.format("<meta name=\"base_path\" content=\"%s\">", basePath);
             indexHtml = indexHtml.replaceFirst("<head>", "<head>" + meta);
+            indexHtml = indexHtml.replaceAll("=\"./static/", "=\"" + basePath + "static/");
         }
         writeResponse(request, response, indexHtml);
     }

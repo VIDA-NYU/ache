@@ -7,7 +7,7 @@ import StartCrawler from './StartCrawler'
 import Search from './Search'
 import MetricsMonitor from './MetricsMonitor'
 import {Messages} from './AlertMessage'
-
+import {BASE_PATH} from './Config'
 import ache_logo_png from './img/ache-logo.png';
 
 class Header extends React.Component {
@@ -31,7 +31,7 @@ class Header extends React.Component {
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
               <Navigation to="/" label="Crawlers" activeOnlyWhenExact={true} />
-              <Navigation to="/crawlers/start" label="Start Crawl" activeOnlyWhenExact={true} />
+              <Navigation to="/start" label="Start Crawl" activeOnlyWhenExact={true} />
             </ul>
           </div>
         </div>
@@ -53,20 +53,14 @@ class App extends React.Component {
   messages = new Messages();
 
   render() {
-    let meta = document.getElementsByName("base_path")[0];
-    let basePath;
-    if(meta !== undefined) {
-      basePath = meta.content;
-    }
-
     return (
-      <Router basename={basePath}>
+      <Router basename={BASE_PATH}>
         <div>
           <Header/>
           <div className="container">
             <div className="main-content">
               <Route exact path="/" component={(props) => <Crawlers {...props} messages={this.messages} />} />
-              <Route exact path="/crawlers/start" component={(props) => <StartCrawler {...props} messages={this.messages} />} />
+              <Route exact path="/start" component={(props) => <StartCrawler {...props} messages={this.messages} />} />
               <Route exact path="/monitoring/:crawler_id" component={MetricsMonitor} />
               <Route exact path="/search/:crawler_id" component={Search}/>
             </div>

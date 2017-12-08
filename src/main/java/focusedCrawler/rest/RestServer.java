@@ -70,7 +70,10 @@ public class RestServer {
             "/",
             "/index.html",
             "/search",
-            "/monitoring"
+            "/monitoring",
+            "/monitoring/*",
+            "/start",
+            "/start?*"
         );
         server.before("/*", new StaticFileHandlerFilter(indexes, restConfig.getBasePath()));
 
