@@ -13,6 +13,7 @@ class Messages {
   }
 
   display() {
+    this.clearOldMessages();
     for(let m of this.data) {
       if(!m.firstShownAt)
         m.firstShownAt = Date.now();
@@ -20,10 +21,13 @@ class Messages {
     return this.data;
   }
 
-  clearMessages() {
+  clearOldMessages() {
     const timeLimitMs = 5000; // 5 secs
     let now = Date.now();
-    this.data = this.data.filter(m => !((now - m.firstShownAt) > timeLimitMs));
+    this.data = this.data.filter(m =>
+      !m.firstShownAt ||
+      ((now - m.firstShownAt) < timeLimitMs)
+    );
   }
 
 }

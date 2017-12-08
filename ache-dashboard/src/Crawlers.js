@@ -66,7 +66,6 @@ class Crawlers extends React.Component {
   }
 
   componentWillUnmount() {
-    this.messages.clearMessages();
     clearInterval(this.timerID);
   }
 

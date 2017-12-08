@@ -26,10 +26,6 @@ class StartCrawler extends React.Component {
     this.parseUrlQueryParameters();
   }
 
-  componentWillUnmount() {
-    this.messages.clearMessages();
-  }
-
   componentWillMount() {
     this.parseUrlQueryParameters();
   }
