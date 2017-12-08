@@ -15,7 +15,7 @@ class SeriesPlot extends React.Component {
     }
     var divClass = 'col-md-'+(12/this.plotsPerLine);
     return (
-      <div className={divClass} style={{'text-align':'center'}}>
+      <div className={divClass} style={{'textAlign':'center'}}>
         <XYPlot width={this.plotWidth} height={this.plotHeight} margin={{left: 80}}>
           <HorizontalGridLines />
           {lines}
