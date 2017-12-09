@@ -5,6 +5,8 @@
 - Upgraded gradle-node plugin to version 1.2.0
 - Removed BerkeleyDB dependency (issue #143)
 - Allow for running multiple crawlers in a single server (issue #103)
+- REST API endpoints modified to support multiple crawlers (issue #103)
+- Web interface modified to support multiple crawlers (issue #103)
 - Display more metrics in crawler monitoring page
 - ...
 
