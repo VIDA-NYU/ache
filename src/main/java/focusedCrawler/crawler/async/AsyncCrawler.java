@@ -108,6 +108,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         Configuration config = new Configuration(configPath);
 
         MetricsManager metricsManager = new MetricsManager(false, dataPath);
+
         LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath,
                 modelPath, config.getLinkStorageConfig(), metricsManager);
 
