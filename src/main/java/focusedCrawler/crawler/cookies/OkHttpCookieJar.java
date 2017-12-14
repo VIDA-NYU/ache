@@ -45,17 +45,15 @@ public class OkHttpCookieJar implements CookieJar {
     public List<Cookie> loadForRequest(HttpUrl url) {
         List<Cookie> allCookies = new ArrayList<>();
 
-        if (!url.host().equals(url.topPrivateDomain())
-                && !url.host().equals("www." + url.topPrivateDomain())) {
-            String strUrl = url.host();
-            for (int i = 0; i < strUrl.length(); i++) {
+        String host = url.host();
+        String topPrivateDomain = url.topPrivateDomain();
 
-                if (strUrl.charAt(i) == '.') {
-                    HttpUrl url1 = HttpUrl.parse("https://" + strUrl.substring(i + 1));
-
-                    allCookies.addAll(loadValidCookies(url1));
-
-                    if (strUrl.substring(i + 1).equals(url.topPrivateDomain())) {
+        if (!host.equals(topPrivateDomain) && !host.equals("www." + topPrivateDomain)) {
+            for (int i = 0; i < host.length(); i++) {
+                if (host.charAt(i) == '.') {
+                    HttpUrl subDomainUrl = HttpUrl.parse("https://" + host.substring(i + 1));
+                    allCookies.addAll(loadValidCookies(subDomainUrl));
+                    if (host.substring(i + 1).equals(topPrivateDomain)) {
                         break;
                     }
                 }
