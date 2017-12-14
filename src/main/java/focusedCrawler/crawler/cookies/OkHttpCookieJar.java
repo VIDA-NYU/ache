@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.slf4j.Logger;
@@ -25,7 +24,7 @@ public class OkHttpCookieJar implements CookieJar {
         cookieJar.put(url.host(), new ArrayList<>(cookies));
     }
 
-    private List<Cookie> loadValidCookies(HttpUrl url){
+    private List<Cookie> loadValidCookies(HttpUrl url) {
         List<Cookie> validCookies = new ArrayList<>();
         List<Cookie> cooky = cookieJar.get(url.host());
         if (cooky != null) {
@@ -46,19 +45,20 @@ public class OkHttpCookieJar implements CookieJar {
     public List<Cookie> loadForRequest(HttpUrl url) {
         List<Cookie> allCookies = new ArrayList<>();
 
-        if(!url.host().equals(url.topPrivateDomain()) && !url.host().equals("www."+url.topPrivateDomain())) {
+        if (!url.host().equals(url.topPrivateDomain())
+                && !url.host().equals("www." + url.topPrivateDomain())) {
             String strUrl = url.host();
             for (int i = 0; i < strUrl.length(); i++) {
 
                 if (strUrl.charAt(i) == '.') {
-                    HttpUrl url1 = HttpUrl.parse("https://"+strUrl.substring(i + 1));
+                    HttpUrl url1 = HttpUrl.parse("https://" + strUrl.substring(i + 1));
 
                     allCookies.addAll(loadValidCookies(url1));
 
                     if (strUrl.substring(i + 1).equals(url.topPrivateDomain())) {
                         break;
                     }
-                 }
+                }
             }
         }
 
