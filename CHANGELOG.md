@@ -8,6 +8,7 @@
 - REST API endpoints modified to support multiple crawlers (issue #103)
 - Web interface modified to support multiple crawlers (issue #103)
 - Display more metrics in crawler monitoring page
+- Upgrade RocksDB (org.rocksdb:rocksdbjni) to version 5.8.7 (issue #142)
 - ...
 
 
