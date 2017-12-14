@@ -35,11 +35,11 @@ public class StaticFileHandlerFilter implements Filter {
     }
 
     private String normalizeBasePath(String basePath) {
-        String path = basePath;
-        if (path != null && !path.startsWith("/")) {
+        String path = (basePath == null) ? "/" : basePath;
+        if (!path.startsWith("/")) {
             path = "/" + path;
         }
-        if (path != null && !path.endsWith("/")) {
+        if (!path.endsWith("/")) {
             path = path + "/";
         }
         return path;
