@@ -19,8 +19,7 @@ if(api.authorization !== undefined) {
 
 class LabelsManager {
 
-  constructor(apiAddress, crawlerId) {
-    this.apiAddress = apiAddress;
+  constructor(crawlerId) {
     this.crawlerId = crawlerId;
     this.listeners = [];
     this.labelsCache = {};
@@ -263,9 +262,9 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.crawlerId = this.props.match.params.crawler_id;
-    const elasticsearchAddress = ACHE_API_ADDRESS + '/crawls/' + this.crawlerId;
+    const elasticsearchAddress = ACHE_API_ADDRESS + 'crawls/' + this.crawlerId;
     this.searchkit = new SearchkitManager(elasticsearchAddress, searchkitProps);
-    this.labelsManager = new LabelsManager(ACHE_API_ADDRESS, this.crawlerId);
+    this.labelsManager = new LabelsManager(this.crawlerId);
     this.hitItemElement = <HitItem labelsManager={this.labelsManager} />;
     this.state = {message:"Loading...", searchEnabled: false};
     api.get('/crawls/' + this.crawlerId + '/status')
