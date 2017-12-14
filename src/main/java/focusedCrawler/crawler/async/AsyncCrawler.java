@@ -11,6 +11,8 @@ import com.google.common.util.concurrent.AbstractExecutionThreadService;
 
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
+import focusedCrawler.crawler.cookies.Cookie;
+import focusedCrawler.crawler.cookies.CookieUtils;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorage;
@@ -129,6 +131,17 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
 
     public Configuration getConfig() {
         return config;
+    }
+    
+    /**
+     * Add cookies to the right fetcher.
+     * @param cookies
+     */
+    public void addCookies(HashMap<String, List<Cookie>> cookies) {
+        if (cookies == null) {
+            throw new NullPointerException("Cookies argument is null");
+        }
+        CookieUtils.addCookies(cookies, downloader.getFetcher());
     }
 
 }

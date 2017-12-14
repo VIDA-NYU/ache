@@ -1,5 +1,6 @@
 package focusedCrawler.rest.resources;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 
@@ -17,6 +19,7 @@ import focusedCrawler.crawler.CrawlersManager;
 import focusedCrawler.crawler.CrawlersManager.CrawlContext;
 import focusedCrawler.crawler.CrawlersManager.CrawlType;
 import focusedCrawler.crawler.async.AsyncCrawler;
+import focusedCrawler.crawler.cookies.Cookie;
 import focusedCrawler.util.MetricsManager;
 import spark.Request;
 import spark.Route;
@@ -163,6 +166,43 @@ public class CrawlerResource {
         }
     };
 
+    public Route addCookies = (request, response) -> {
+        String crawlerId = request.params(":crawler_id");
+
+        CrawlContext context = crawlersManager.getCrawl(crawlerId);
+        if (context == null) {
+            response.status(HttpServletResponse.SC_NOT_FOUND);
+            return ImmutableMap.of(
+                    "message", "Crawler not found for crawler_id " + crawlerId,
+                    "addedCookies", false);
+        }
+
+        try {
+            HashMap<String, List<Cookie>> params = json.readValue(request.body(),
+                    new TypeReference<HashMap<String, List<Cookie>>>() {});
+
+            if (params == null || params.isEmpty()) {
+                response.status(HttpServletResponse.SC_BAD_REQUEST);
+                return ImmutableMap.of(
+                        "message", "No valid cookies provided.",
+                        "addedCookies", false);
+            }
+
+            context.getCrawler().addCookies(params);
+
+            return ImmutableMap.of(
+                    "message", "cookies added successfully.",
+                    "addedCookies", true);
+
+        } catch (Exception e) {
+            logger.error("Failed to add cookies.", e);
+            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            return ImmutableMap.of(
+                    "message", "Failed to add cookies to crawler " + crawlerId,
+                    "addedCookies", false);
+        }
+    };
+    
     private Optional<Boolean> getParamAsBoolean(String paramName, Request request) {
         try {
             Boolean valueOf = Boolean.valueOf(request.queryParams(paramName));
@@ -183,5 +223,6 @@ public class CrawlerResource {
     public static class AddSeedsParams {
         public List<String> seeds;
     }
+    
 
 }

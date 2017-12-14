@@ -121,6 +121,10 @@ public class HttpDownloader implements Closeable {
         setupMetrics(metricsManager);
     }
 
+    public BaseFetcher getFetcher() {
+    	return fetcher;
+    }
+    
     private void setupMetrics(MetricsManager metrics) {
         fetchTimer = metrics.getTimer("downloader.fetch.time");
         handlerTimer = metrics.getTimer("downloader.handler.time");

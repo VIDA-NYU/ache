@@ -9,6 +9,7 @@
 - Web interface modified to support multiple crawlers (issue #103)
 - Display more metrics in crawler monitoring page
 - Upgrade RocksDB (org.rocksdb:rocksdbjni) to version 5.8.7 (issue #142)
+- Allow cookies be modified dynamically via REST API endpoint (issue #114)
 - ...
 
 

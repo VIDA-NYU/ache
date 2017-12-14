@@ -32,6 +32,7 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -92,6 +93,7 @@ import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.crawler.cookies.ConcurrentCookieJar;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
@@ -151,20 +153,9 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 
     private IdleConnectionMonitorThread monitor;
     
-    //Store cookies loaded from configuration file
-    private CookieStore globalCookieStore = null; 
+    // Store cookies loaded from configuration file
+    private CookieStore globalCookieStore = null;
 
-    private ThreadLocal<CookieStore> localCookieStore = new ThreadLocal<CookieStore>() {
-        protected CookieStore initialValue() {
-            LocalCookieStore cookieStore = new LocalCookieStore();
-            if (globalCookieStore != null) {
-                //Copy global cookie to local thread cookie
-                List<Cookie> cookies = globalCookieStore.getCookies();
-                cookieStore.addCookies((Cookie[]) cookies.toArray(new Cookie[cookies.size()]));
-            }
-            return cookieStore;
-        }
-    };
 
     private static final String SSL_CONTEXT_NAMES[] = { "TLS", "Default", "SSL", };
 
@@ -603,8 +594,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         // Without this we get killed w/lots of threads, due to sync() on single
         // cookie store.
         HttpContext localContext = new BasicHttpContext();
-        CookieStore cookieStore = localCookieStore.get();
-        localContext.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
+        localContext.setAttribute(HttpClientContext.COOKIE_STORE, globalCookieStore);
 
         StringBuilder fetchTrace = null;
         if (LOGGER.isTraceEnabled()) {
@@ -1105,4 +1095,48 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     public void setUserAgentString(String userAgentString) {
         this._userAgentString = userAgentString;
     }
+
+    /**
+     * Update cookie store with a map of cookies.
+     * key : domain name
+     * value : List of cookies associated with that domain name
+     * @param cookies
+     * @throws NullPointerException if the cookies argument is null
+     */
+	public void updateCookieStore(Map<String, List<Cookie>> cookies) {
+		if(cookies == null) {
+			throw new NullPointerException("Cookies argument can not be null");
+		}
+		if(globalCookieStore == null) {
+			globalCookieStore = new ConcurrentCookieJar();
+		}
+		for(List<Cookie> listOfCookies : cookies.values()) {
+			for(Cookie cookie: listOfCookies) {
+				globalCookieStore.addCookie(cookie);
+			}
+		}
+	}
+
+	/**
+	 * Updates the current cookie store with cookie
+	 * @param cookie
+	 * @throws NullPointerException if the cookie argument is null
+	 */
+	public void updateCookieStore(Cookie cookie) {
+		if(cookie == null) {
+			throw new NullPointerException("Argument cookie is null.");
+		}
+		if(globalCookieStore == null) {
+			globalCookieStore = new ConcurrentCookieJar();
+		}
+		globalCookieStore.addCookie(cookie);
+	}
+	
+	/**
+	 * Returns cookie store for testing.
+	 * @return
+	 */
+	public CookieStore getCookieStore() {
+		return globalCookieStore;
+	}
 }

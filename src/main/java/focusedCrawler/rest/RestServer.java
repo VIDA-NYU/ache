@@ -96,6 +96,7 @@ public class RestServer {
         server.get( "/crawls/:crawler_id/prometheus", promethize(crawlerResource.metricsResource));
         server.get( "/crawls/:crawler_id/stopCrawl",  json(crawlerResource.stopCrawl));
         server.post("/crawls/:crawler_id/seeds",      json(crawlerResource.addSeeds));
+        server.post("/crawls/:crawler_id/cookies",    json(crawlerResource.addCookies));
         server.get( "/crawls/:crawler_id/labels",     json(labelsResource.getLabels));
         server.put( "/crawls/:crawler_id/labels",     json(labelsResource.addLabels));
         server.post("/crawls/:crawler_id/labels",     json(labelsResource.addLabels));
