@@ -4,14 +4,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
 
 import com.amazonaws.util.StringInputStream;
 
+import focusedCrawler.util.WildcardMatcher;
 import spark.Filter;
 import spark.Request;
 import spark.Response;
@@ -22,39 +21,28 @@ public class StaticFileHandlerFilter implements Filter {
 
     private static final String INDEX_PATH = "public/index.html";
 
+    private String indexHtml;
     private StaticFilesConfiguration staticFilesHandler;
-    private Set<String> indexHtmlPaths;
+    private WildcardMatcher patterns;
     private String basePath;
 
     public StaticFileHandlerFilter(List<String> indexHtmlPaths, String basePath) {
-        this.basePath = basePath;
         this.staticFilesHandler = new StaticFilesConfiguration();
         this.staticFilesHandler.configure("/public");
-        this.indexHtmlPaths = new HashSet<>(indexHtmlPaths);
+        this.patterns = WildcardMatcher.fromWhitelist(indexHtmlPaths);
+        this.basePath = normalizeBasePath(basePath);
+        this.indexHtml = readIndexHtmlFile();
     }
 
-    @Override
-    public void handle(Request request, Response response) throws Exception {
-        String path = request.pathInfo();
-        if (indexHtmlPaths.contains(path)) {
-            renderIndexHtml(request, response);
-        } else {
-            staticFilesHandler.consume(request.raw(), response.raw());
+    private String normalizeBasePath(String basePath) {
+        String path = basePath;
+        if (path != null && !path.startsWith("/")) {
+            path = "/" + path;
         }
-    }
-
-    private void renderIndexHtml(Request request, Response response) {
-        String indexHtml = readIndexHtmlFile();
-        String authHeader = request.headers("Authorization");
-        if (authHeader != null && !authHeader.isEmpty()) {
-            String meta = String.format("<meta name=\"authorization\" content=\"%s\">", authHeader);
-            indexHtml = indexHtml.replaceFirst("<head>", "<head>" + meta);
+        if (path != null && !path.endsWith("/")) {
+            path = path + "/";
         }
-        if(basePath != null && !basePath.isEmpty()) {
-            String meta = String.format("<meta name=\"base_path\" content=\"%s\">", basePath);
-            indexHtml = indexHtml.replaceFirst("<head>", "<head>" + meta);
-        }
-        writeResponse(request, response, indexHtml);
+        return path;
     }
 
     private String readIndexHtmlFile() {
@@ -64,6 +52,47 @@ public class StaticFileHandlerFilter implements Filter {
         } catch (IOException e) {
             throw new RuntimeException("Failed to read file: " + INDEX_PATH, e);
         }
+    }
+
+    @Override
+    public void handle(Request request, Response response) throws Exception {
+        String path = request.pathInfo();
+        boolean requestConsumed = false;
+        if (patterns.matches(path)) {
+            renderIndexHtml(request, response);
+            requestConsumed = true;
+        } else {
+            requestConsumed = staticFilesHandler.consume(request.raw(), response.raw());
+        }
+        if(requestConsumed) {
+            response.body(""); // needed to suppress spark-java route mapping error log
+        }
+    }
+
+    private void renderIndexHtml(Request request, Response response) {
+        String indexHtml = this.indexHtml;
+        indexHtml = injectAuthorizationMetaTag(request, indexHtml);
+        indexHtml = injectBasePathMetaTag(indexHtml);
+        writeResponse(request, response, indexHtml);
+    }
+
+    private String injectBasePathMetaTag(String indexHtml) {
+        if (basePath == null || basePath.isEmpty()) {
+            return indexHtml;
+        }
+        String meta = String.format("<meta name=\"base_path\" content=\"%s\">", basePath);
+        indexHtml = indexHtml.replaceFirst("<head>", "<head>" + meta);
+        indexHtml = indexHtml.replaceAll("=\"./static/", "=\"" + basePath + "static/");
+        return indexHtml;
+    }
+
+    private String injectAuthorizationMetaTag(Request request, String indexHtml) {
+        String authHeader = request.headers("Authorization");
+        if (authHeader == null || authHeader.isEmpty()) {
+            return indexHtml;
+        }
+        String meta = String.format("<meta name=\"authorization\" content=\"%s\">", authHeader);
+        return indexHtml.replaceFirst("<head>", "<head>" + meta);
     }
 
     private void writeResponse(Request request, Response response, String file) {
