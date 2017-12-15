@@ -43,7 +43,7 @@ public class ClassifierFactoryTest {
     public void shouldCreateSmileClassifier() throws Exception {
         // given
         String path = ClassifierFactoryTest.class.getResource("smile_classifier_config/").getPath();
-
+        System.out.println(path);
         TargetClassifier classifier = TargetClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
         assertThat(classifier, is(instanceOf(SmileTargetClassifier.class)));
