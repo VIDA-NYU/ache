@@ -59,6 +59,9 @@ import smile.classification.SVM;
 import smile.data.AttributeDataset;
 import smile.data.parser.ArffParser;
 import smile.math.kernel.LinearKernel;
+import smile.validation.ConfusionMatrix;
+import smile.validation.CrossValidation;
+import smile.math.Math;
 
 /**
  * <p> </p>
@@ -389,12 +392,53 @@ public class SmileTargetClassifierBuilder {
 		AttributeDataset trainingData = arffParser.parse(fis);
 		double[][] x = trainingData.toArray(new double[trainingData.size()][]);
 		int[] y = trainingData.toArray(new int[trainingData.size()]);
+		
 		if(learner.equals("SVM")) {
+			long start = System.currentTimeMillis();
+			//Train the Model
         	SVM<double[]> svmModel = new SVM<double[]>(new LinearKernel(), 0.01);
         	svmModel.learn(x, y);
         	svmModel.finish();
         	svmModel.trainPlattScaling(x, y);
-        	SmileUtil.writeSmileClassifier(modelFilePath, svmModel);
+        	long timeTaken = (System.currentTimeMillis() - start)/1000; 
+        	System.out.println("Time taken to build model: " +  timeTaken +" seconds");
+        	//Test on training data. 
+        	start = System.currentTimeMillis();
+        	int[] predictedY = new int[y.length]; 
+        	predictedY = svmModel.predict(x);
+        	timeTaken = (System.currentTimeMillis() - start)/1000;
+        	System.out.println("Time taken to test model on training data:" + timeTaken + " seconds");
+        	System.out.println();
+        	System.out.println();
+        	System.out.println("=== Error on training data ===");
+        	printStatistics(predictedY, y);
+        	
+        	System.out.println("=== Cross-validation ===");
+        	int numberOfFolds = 10;
+        	CrossValidation cv = new CrossValidation(y.length, numberOfFolds);
+        	int minError = Integer.MAX_VALUE;
+        	SVM<double[]> finalModel = null;
+        	for (int i = 0; i < numberOfFolds; i++) {
+        		double[][] trainx = Math.slice(x, cv.train[i]);
+        	    int[] trainy = Math.slice(y, cv.train[i]);
+        	    SVM<double[]> svm = new SVM<>(new LinearKernel(), 0.01);
+        	    svm.learn(trainx, trainy);
+        	    svmModel.finish();
+            	svmModel.trainPlattScaling(x, y);
+            	int error = 0;
+            	int[] index = cv.test[i];
+        	    for(int v: index) {
+        	    	if (y[v] != svm.predict(x[v])) {
+        	            error++;
+        	    	}
+        	    }
+        	    if(error < minError) {
+        	    	finalModel = svm;
+        	    }
+        	}
+        	predictedY = finalModel.predict(x);
+        	printStatistics(predictedY, y);
+        	SmileUtil.writeSmileClassifier(modelFilePath, finalModel);
         } else if(learner.equals("RandomForest")) {
 //        	TODO: CrossValidation crossValidation = new CrossValidation(trainingData.size(), 5);
         	RandomForest randomForest = new RandomForest(x, y, 100);
@@ -405,6 +449,29 @@ public class SmileTargetClassifierBuilder {
         }
     }
     
+    private static void printStatistics(int[] predictedY, int[]  y) {
+    	int totalNumberOfInstances = y.length;
+    	int correctlyClassifiedInstances = getCountOfCorrectlyClassifiedInstances(predictedY, y);
+    	
+    	System.out.println("Correctly Classified Instances: " + correctlyClassifiedInstances );
+    	System.out.println("Incorrectly Classified Instances: " + (totalNumberOfInstances - correctlyClassifiedInstances));
+    	System.out.println("Total Number of Instances: " +  totalNumberOfInstances );  
+    	System.out.println();
+    	System.out.println();
+    	System.out.println("=== Confusion Matrix ===");
+    	ConfusionMatrix confusionMatrix = new ConfusionMatrix(y , predictedY);
+    	System.out.println(confusionMatrix);
+	}
+
+	private static int getCountOfCorrectlyClassifiedInstances(int[] prediction, int[] truth){
+    	int count = 0;
+    	for(int i = 0; i < truth.length; i++) {
+    		if(prediction[i] == truth[i]) {
+    			count++;
+    		}
+    	}
+    	return count;
+    }
     public static void createFeaturesFile(String outputPath, String trainingPath) {
         File features = new File(outputPath + File.separator + "pageclassifier.features");
         try {
