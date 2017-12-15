@@ -423,8 +423,8 @@ public class SmileTargetClassifierBuilder {
         	    int[] trainy = Math.slice(y, cv.train[i]);
         	    SVM<double[]> svm = new SVM<>(new LinearKernel(), 0.01);
         	    svm.learn(trainx, trainy);
-        	    svmModel.finish();
-            	svmModel.trainPlattScaling(x, y);
+        	    svm.finish();
+        	    svm.trainPlattScaling(x, y);
             	int error = 0;
             	int[] index = cv.test[i];
         	    for(int v: index) {
