@@ -15,9 +15,11 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     
     private static final Logger logger = LoggerFactory.getLogger(FetchedResultHandler.class);
     
+    private String crawlerId;
     private TargetStorage targetStorage;
 
-    public FetchedResultHandler(TargetStorage targetStorage) {
+    public FetchedResultHandler(String crawlerId, TargetStorage targetStorage) {
+        this.crawlerId = crawlerId;
         this.targetStorage = targetStorage;
     }
     
@@ -47,7 +49,7 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
         try {
             Page page = new Page(response);
             page.setLinkRelevance(link);
-
+            page.setCrawlerId(crawlerId);
             if (page.isHtml()) {
                 PaginaURL pageParser = new PaginaURL(page);
                 page.setParsedData(new ParsedData(pageParser));

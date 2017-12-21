@@ -10,6 +10,7 @@
 - Display more metrics in crawler monitoring page
 - Upgrade RocksDB (org.rocksdb:rocksdbjni) to version 5.8.7 (issue #142)
 - Allow cookies be modified dynamically via REST API endpoint (issue #114)
+- Added crawlerId field to JSON output of target repositories
 - ...
 
 

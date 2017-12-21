@@ -101,8 +101,8 @@ public class CrawlersManager {
         context.dataPath = dataPath;
         context.seedPath = seedPath;
         context.modelPath = modelPath;
-        context.crawler = AsyncCrawler.create(configPath, dataPath, seedPath, modelPath,
-                esIndexName, esTypeName);
+        context.crawler = AsyncCrawler.create(crawlerId, configPath, dataPath, seedPath, modelPath,
+            esIndexName, esTypeName);
 
         crawlers.put(crawlerId, context);
         return context;

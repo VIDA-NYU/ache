@@ -30,7 +30,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     private MetricsManager metricsManager;
     private Configuration config;
 
-    public AsyncCrawler(TargetStorage targetStorage, LinkStorage linkStorage,
+    public AsyncCrawler(String crawlerId, TargetStorage targetStorage, LinkStorage linkStorage,
                         Configuration config, String dataPath, MetricsManager metricsManager) {
 
         this.targetStorage = targetStorage;
@@ -41,7 +41,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         HttpDownloaderConfig downloaderConfig = config.getCrawlerConfig().getDownloaderConfig();
         this.downloader = new HttpDownloader(downloaderConfig, dataPath, metricsManager);
 
-        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
+        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(crawlerId, targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
         this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage,
                 downloaderConfig.getUserAgentName()));
@@ -104,7 +104,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         logger.info("Shutdown finished.");
     }
 
-    public static AsyncCrawler create(String configPath, String dataPath, String seedPath,
+    public static AsyncCrawler create(String crawlerId, String configPath, String dataPath, String seedPath,
             String modelPath, String esIndexName, String esTypeName) throws Exception {
 
         Configuration config = new Configuration(configPath);
@@ -118,7 +118,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
                 esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage,
                 metricsManager);
 
-        return new AsyncCrawler(targetStorage, linkStorage, config, dataPath, metricsManager);
+        return new AsyncCrawler(crawlerId, targetStorage, linkStorage, config, dataPath, metricsManager);
     }
 
     public MetricsManager getMetricsManager() {

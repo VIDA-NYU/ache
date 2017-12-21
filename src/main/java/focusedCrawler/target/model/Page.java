@@ -30,6 +30,7 @@ public class Page implements Serializable {
     private String contentType;
     private Map<String, List<String>> responseHeaders;
     private long fetchTime;
+    private String crawlerId;
     
     private LinkRelevance linkRelevance;
     private ParsedData parsedData;
@@ -294,6 +295,14 @@ public class Page implements Serializable {
 
     public String getFinalUrl() {
         return redirectedURL == null ? url.toString() : redirectedURL.toString();
+    }
+
+    public String getCrawlerId() {
+        return this.crawlerId;
+    }
+
+    public void setCrawlerId(String crawlerId) {
+        this.crawlerId = crawlerId;
     }
 
 }
