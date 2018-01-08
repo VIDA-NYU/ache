@@ -39,7 +39,6 @@ import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
 import smile.classification.SoftClassifier;
-import smile.classification.SVM;
 
 /**
  * <p> </p>
@@ -86,7 +85,7 @@ public class SmileTargetClassifier implements TargetClassifier {
         try {
             double[] values = getValues(page);
             synchronized (classifier) {
-                ((SVM<double[]>) classifier).predict(values, result); //predict returns int
+                classifier.predict(values, result); // predict returns int
             }
         } catch (Exception ex) {
             throw new TargetClassifierException(ex.getMessage(), ex);

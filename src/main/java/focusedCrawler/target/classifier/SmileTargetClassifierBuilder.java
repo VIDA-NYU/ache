@@ -31,7 +31,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -58,10 +57,10 @@ import smile.classification.RandomForest;
 import smile.classification.SVM;
 import smile.data.AttributeDataset;
 import smile.data.parser.ArffParser;
+import smile.math.Math;
 import smile.math.kernel.LinearKernel;
 import smile.validation.ConfusionMatrix;
 import smile.validation.CrossValidation;
-import smile.math.Math;
 
 /**
  * <p> </p>

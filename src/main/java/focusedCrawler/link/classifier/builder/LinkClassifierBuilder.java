@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.StringReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -43,8 +42,8 @@ import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
-import smile.classification.SoftClassifier;
 import smile.classification.SVM;
+import smile.classification.SoftClassifier;
 import smile.data.Attribute;
 import smile.data.AttributeDataset;
 import smile.data.NumericAttribute;
@@ -129,15 +128,24 @@ public class LinkClassifierBuilder {
         }
         return linkClassifier;
     }
-    
-    public SoftClassifier<double[]> trainSmileClassifier(AttributeDataset smileInput ) throws Exception {
+
+    public SoftClassifier<double[]> trainSmileClassifier(AttributeDataset smileInput)
+            throws Exception {
         SVM<double[]> classifier = new SVM<double[]>(new LinearKernel(), 1.0);
-        int[] y = new int[smileInput.y().length];
-        for(int i = 0 ; i < y.length; i++) {
-        	y[i] = (int) smileInput.y()[i];
-        }
-        classifier.learn(smileInput.x(), y);
+        int[] y = asIntVector(smileInput.y());
+        double[][] x = smileInput.x();
+        classifier.learn(x, y);
+        classifier.finish();
+        classifier.trainPlattScaling(x, y);
         return classifier;
+    }
+
+    private int[] asIntVector(double[] doubleVec) {
+        int[] intVec = new int[doubleVec.length];
+        for (int i = 0; i < intVec.length; i++) {
+            intVec[i] = (int) doubleVec[i];
+        }
+        return intVec;
     }
 
     private void writeFeaturesFile(String featuresFile, String[] features)
@@ -313,7 +321,8 @@ public class LinkClassifierBuilder {
     }
 
     /**
-     * This method creates the a line in the smile file for each instance
+     * This method creates the a line in the smile file for each instance.
+     * 
      * @param attributes
      * @param instances
      * @param dataset
@@ -326,12 +335,9 @@ public class LinkClassifierBuilder {
     		features[i] = attributes[i].getName();
     	}
     	this.features = features;
-        StringBuffer buffer = new StringBuffer();
         for (int i = 0; i < instances.size(); i++) {
             Sampler<LinkNeighborhood> levelSamples = instances.get(i);
-
             for (LinkNeighborhood ln : levelSamples.getSamples()) {
-                StringBuffer line = new StringBuffer();
                 HashMap<String, Instance> featureValue = wrapper.extractLinks(ln, features);
                 Iterator<String> iter = featureValue.keySet().iterator();
                 while (iter.hasNext()) {
@@ -346,6 +352,7 @@ public class LinkClassifierBuilder {
 
 	/**
 	 * This method selects the  features to be used by the classifier.
+	 * 
 	 * @param allNeighbors
 	 * @param backlink
 	 * @return
