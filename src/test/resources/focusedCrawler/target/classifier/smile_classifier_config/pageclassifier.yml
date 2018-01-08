@@ -1,0 +1,5 @@
+type: smile
+parameters:
+  features_file: pageclassifier.features
+  model_file: pageclassifier.model
+  stopwords_file: stoplist.txt

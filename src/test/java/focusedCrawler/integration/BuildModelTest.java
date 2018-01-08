@@ -24,7 +24,7 @@ public class BuildModelTest {
     public TemporaryFolder tempFolder = new TemporaryFolder();
 
     @Test
-    public void wekaFeaturesFileShouldBeGeneratedInTheProperFormat() throws Exception {
+    public void smileFeaturesFileShouldBeGeneratedInTheProperFormat() throws Exception {
         
         String trainingPath = BuildModelTest.class.getResource("build_model_test").getFile();
         String modelPath    = tempFolder.newFolder().toString();

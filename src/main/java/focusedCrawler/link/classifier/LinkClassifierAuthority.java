@@ -10,21 +10,19 @@ import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import weka.classifiers.Classifier;
-import weka.core.Instances;
+import smile.classification.SoftClassifier;
+import smile.classification.SVM;
 
 public class LinkClassifierAuthority implements LinkClassifier{
 
 	  private LinkNeighborhoodWrapper wrapper;
 	  private String[] attributes;
-	  private Classifier classifier;
-	  private Instances instances;
+	  private SoftClassifier<double[]> classifier;
 	  
-	  public LinkClassifierAuthority(Classifier classifier, Instances instances, LinkNeighborhoodWrapper wrapper,String[] attributes) {
+	  public LinkClassifierAuthority(SoftClassifier<double[]> classifier,  LinkNeighborhoodWrapper wrapper,String[] attributes) {
 		  this.wrapper = wrapper;
 		  this.attributes = attributes;
 		  this.classifier = classifier;
-		  this.instances = instances;
 	  }
 	  
 	  public LinkClassifierAuthority() {
@@ -53,9 +51,8 @@ public class LinkClassifierAuthority implements LinkClassifier{
 		        	  if(!page.getURL().getHost().equals(url.getHost())){
 		        		  Instance instance = entry.getValue();
 		        		  double[] values = instance.getValues();
-		        		  weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-		        		  instanceWeka.setDataset(instances);
-		        		  double[] prob = classifier.distributionForInstance(instanceWeka);
+		        		  double[] prob = new double[2];
+		        		  int predictedValue = classifier.predict(values, prob);
 		        		  relevance = LinkRelevance.DEFAULT_AUTH_RELEVANCE + (prob[0]*100);
 		        	  }
 			          linkRelevance[count] = new LinkRelevance(url, relevance);
@@ -90,9 +87,8 @@ public class LinkClassifierAuthority implements LinkClassifier{
 		    		  if(classifier != null){
 		    			  Instance instance = (Instance) entry.getValue();
 		    			  double[] values = instance.getValues();
-		    			  weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-		    			  instanceWeka.setDataset(instances);
-		    			  double[] prob = classifier.distributionForInstance(instanceWeka);
+		    			  double[] prob = new double[2];
+		        		  int predictedValue = ((SVM<double[]>) classifier).predict(values, prob);
 		    			  if(prob[0] == 1){
 		    				  prob[0] = 0.99;
 		    			  }
