@@ -1,6 +1,7 @@
 package focusedCrawler;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +15,7 @@ import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.seedfinder.SeedFinder;
-import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
+import focusedCrawler.target.classifier.SmileTargetClassifierBuilder;
 import focusedCrawler.tools.StartRestServer;
 import io.airlift.airline.Arguments;
 import io.airlift.airline.Cli;
@@ -143,7 +144,7 @@ public class Main {
         
     }
 
-    @Command(name = "buildModel", description = "Builds a model for a Weka target classifier")
+    @Command(name = "buildModel", description = "Builds a model for a Smile target classifier")
     public static class BuildModel implements Runnable {
         
         @Option(name = {"-t", "--trainingDataDir"}, required = true, description = "Path to folder containing training data")
@@ -155,7 +156,7 @@ public class Main {
         @Option(name = {"-c", "--stopWordsFile"}, required = false, description = "Path to stopwords file")
         String stopWordsFile;
 
-        @Option(name = {"-l", "--learner"}, required = false, description = "Machine-learning algorithm to be used to train the model (SMO, RandomForest)")
+        @Option(name = {"-l", "--learner"}, required = false, description = "Machine-learning algorithm to be used to train the model (SVM, RandomForest)")
         String learner;
         
         @Override
@@ -163,17 +164,23 @@ public class Main {
             
             new File(outputPath).mkdirs();
             
-            // generate the input for weka
+            // generate the input for smile
             System.out.println("Preparing training data...");
-            WekaTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/weka.arff" );
+            SmileTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/smile_input.arff" );
             
             // generate the model
             System.out.println("Training model...");
-            WekaTargetClassifierBuilder.trainModel(trainingPath, outputPath, learner);
+            try {
+				SmileTargetClassifierBuilder.trainModel(trainingPath, outputPath, learner);
+			} catch (IOException | java.text.ParseException e) {
+				System.out.printf("Failed to build model.\n\n");
+                e.printStackTrace(System.out);
+                System.exit(1);
+			}
             
             // generate features file
             System.out.println("Creating feature file...");
-            WekaTargetClassifierBuilder.createFeaturesFile(outputPath,trainingPath);
+            SmileTargetClassifierBuilder.createFeaturesFile(outputPath,trainingPath);
             
             System.out.println("done.");
         }

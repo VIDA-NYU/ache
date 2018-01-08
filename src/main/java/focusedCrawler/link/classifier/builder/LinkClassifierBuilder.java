@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.StringReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -35,6 +34,7 @@ import focusedCrawler.link.classifier.LinkClassifierImpl;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.Sampler;
+import focusedCrawler.util.SmileUtil;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.persistence.Tuple;
@@ -42,9 +42,12 @@ import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
-import weka.classifiers.Classifier;
-import weka.core.Instances;
-import weka.core.SerializationHelper;
+import smile.classification.SVM;
+import smile.classification.SoftClassifier;
+import smile.data.Attribute;
+import smile.data.AttributeDataset;
+import smile.data.NumericAttribute;
+import smile.math.kernel.LinearKernel;
 
 public class LinkClassifierBuilder {
     
@@ -83,10 +86,10 @@ public class LinkClassifierBuilder {
 		
 	    List<Sampler<LinkNeighborhood>> instances = loadTrainingInstances(relUrls, levels);
 		
-		String wekaInputAsString = createWekaInput(instances, false);
+		AttributeDataset inputDataset = createSmileInput(instances, false);
         
 		logger.info("Training new link classifier...");
-		Classifier classifier = trainWekaClassifier(wekaInputAsString);
+		SoftClassifier<double[]> classifier = trainSmileClassifier(inputDataset);
 
         String modelFile = linkClassifierFolder.resolve("link_classifier.model").toString();
         String featuresFile = linkClassifierFolder.resolve("link_classifier.features").toString();
@@ -94,7 +97,7 @@ public class LinkClassifierBuilder {
         logger.info("Link Clasifier model file: "+modelFile);
         logger.info("Link Clasifier features file: "+featuresFile);
         
-        SerializationHelper.write(modelFile, classifier);
+        SmileUtil.writeSmileClassifier(modelFile, classifier);
         writeFeaturesFile(featuresFile, features);
 
         String[] classValues = null;
@@ -108,46 +111,41 @@ public class LinkClassifierBuilder {
 	}
 
     public LinkClassifier createLinkClassifierImpl(String[] attributes, String[] classValues,
-            Classifier classifier, String className, int levels) {
+    		SoftClassifier<double[]> classifier, String className, int levels) {
 
         LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
 
-        weka.core.FastVector vectorAtt = new weka.core.FastVector();
-        for (int i = 0; i < attributes.length; i++) {
-            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-        }
-        weka.core.FastVector classAtt = new weka.core.FastVector();
-        for (int i = 0; i < classValues.length; i++) {
-            classAtt.addElement(classValues[i]);
-        }
-        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-        Instances insts = new Instances("link_classification", vectorAtt, 1);
-        insts.setClassIndex(attributes.length);
-
         LinkClassifier linkClassifier = null;
         if (className.indexOf("LinkClassifierImpl") != -1) {
-            LNClassifier lnClassifier = new LNClassifier(classifier, insts, wrapper, attributes);
+        	LNClassifier lnClassifier = new LNClassifier(classifier, wrapper, attributes);
             linkClassifier = new LinkClassifierImpl(lnClassifier);
         }
         if (className.indexOf("LinkClassifierAuthority") != -1) {
-            linkClassifier = new LinkClassifierAuthority(classifier, insts, wrapper, attributes);
+            linkClassifier = new LinkClassifierAuthority(classifier,  wrapper, attributes);
         }
         if (className.indexOf("LinkClassifierHub") != -1) {
-            linkClassifier = new LinkClassifierHub(classifier, insts, wrapper, attributes);
+            linkClassifier = new LinkClassifierHub(classifier, wrapper, attributes);
         }
         return linkClassifier;
     }
-    
-    public Classifier trainWekaClassifier(String wekaInputAsString) throws Exception {
-        Instances data = null;
-        try(StringReader reader = new StringReader(wekaInputAsString)) {
-            data = new Instances(reader);
-        }
-        data.setClassIndex(data.numAttributes() - 1);
-        Classifier classifier = new weka.classifiers.functions.SMO();
-        classifier.setOptions(weka.core.Utils.splitOptions("-C 1.0 -L 0.0010 -P 1.0E-12 -N 0 -M -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0\" -no-cv"));
-        classifier.buildClassifier(data);
+
+    public SoftClassifier<double[]> trainSmileClassifier(AttributeDataset smileInput)
+            throws Exception {
+        SVM<double[]> classifier = new SVM<double[]>(new LinearKernel(), 1.0);
+        int[] y = asIntVector(smileInput.y());
+        double[][] x = smileInput.x();
+        classifier.learn(x, y);
+        classifier.finish();
+        classifier.trainPlattScaling(x, y);
         return classifier;
+    }
+
+    private int[] asIntVector(double[] doubleVec) {
+        int[] intVec = new int[doubleVec.length];
+        for (int i = 0; i < intVec.length; i++) {
+            intVec[i] = (int) doubleVec[i];
+        }
+        return intVec;
     }
 
     private void writeFeaturesFile(String featuresFile, String[] features)
@@ -225,7 +223,6 @@ public class LinkClassifierBuilder {
     public LinkClassifier backlinkTraining(HashMap<String, VSMElement> outlinkWeights)
             throws Exception {
 
-        // HashMap<String,VSMElement> sitesCount = new HashMap<String, VSMElement>();
         List<VSMElement> trainingSet = new ArrayList<VSMElement>();
         Tuple<String>[] tuples = graphRep.getHubGraph();
         for (int i = 0; i < tuples.length; i++) {
@@ -288,7 +285,7 @@ public class LinkClassifierBuilder {
 
 
         // TODO Following code is not really doing a sample, it's just converting it the lists in
-        // Sampler objects to be compatible with createWekaInput method. Need to do some refactoring
+        // Sampler objects to be compatible with createSmileInput method. Need to do some refactoring
         // in this whole class.
         List<Sampler<LinkNeighborhood>> instances = new ArrayList<Sampler<LinkNeighborhood>>(2);
         Sampler<LinkNeighborhood> posSamples = new Sampler<LinkNeighborhood>(posSites.size());
@@ -297,27 +294,17 @@ public class LinkClassifierBuilder {
         instances.add(negSamples);
 
         // Train actual classifier
-        String wekaInput = createWekaInput(instances, true);
-        Classifier classifier = trainWekaClassifier(wekaInput);
+        AttributeDataset smileInput = createSmileInput(instances, true);
+        SoftClassifier<double[]> classifier = trainSmileClassifier(smileInput);
 
         String[] classValues = new String[] {"POS", "NEG"};
         return createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub", 0);
     }
 
 
-    /**
-     * Creates the weka input file
-     * 
-     * @param instances
-     * @param backlink
-     * @return
-     * @throws IOException
-     */
-    private String createWekaInput(List<Sampler<LinkNeighborhood>> instances, boolean backlink)
+    
+    private AttributeDataset createSmileInput(List<Sampler<LinkNeighborhood>> instances, boolean backlink)
             throws IOException {
-
-        StringBuffer output = new StringBuffer();
-        output.append("@relation classifier\n");
         List<LinkNeighborhood> allInstances = new ArrayList<LinkNeighborhood>();
         for (int i = 0; i < instances.size(); i++) {
             Sampler<LinkNeighborhood> sampler = instances.get(i);
@@ -325,78 +312,56 @@ public class LinkClassifierBuilder {
                 allInstances.add(ln);
             }
         }
-        features = selectBestFeatures(allInstances, backlink);
-        for (int i = 0; i < features.length; i++) {
-            output.append("@attribute " + features[i] + " REAL \n");
-        }
-        output.append("@attribute class {");
-        for (int i = 1; i < instances.size(); i++) {
-            output.append(i + ",");
-        }
-        output.append(instances.size() + "}\n");
-        output.append("\n");
-        output.append("@data\n");
-        output.append(generatLines(features, instances));
+        Attribute[] attributes = selectBestFeaturesForSmile(allInstances, backlink);
+        AttributeDataset dataset =  new AttributeDataset("link_classifier", attributes);
+        
+        generatLines(attributes, instances, dataset);
 
-        return output.toString();
+        return dataset;
     }
 
     /**
-     * This method creates the a line in the weka file for each instance
+     * This method creates the a line in the smile file for each instance.
      * 
-     * @param features
+     * @param attributes
      * @param instances
-     * @return
+     * @param dataset
      * @throws IOException
      */
-    private String generatLines(String[] features, List<Sampler<LinkNeighborhood>> instances)
+    private void generatLines(Attribute[] attributes, List<Sampler<LinkNeighborhood>> instances, AttributeDataset dataset)
             throws IOException {
-        StringBuffer buffer = new StringBuffer();
+    	String[] features = new String[attributes.length];
+    	for(int i = 0 ; i < attributes.length; i ++) {
+    		features[i] = attributes[i].getName();
+    	}
+    	this.features = features;
         for (int i = 0; i < instances.size(); i++) {
             Sampler<LinkNeighborhood> levelSamples = instances.get(i);
-
             for (LinkNeighborhood ln : levelSamples.getSamples()) {
-                StringBuffer line = new StringBuffer();
                 HashMap<String, Instance> featureValue = wrapper.extractLinks(ln, features);
                 Iterator<String> iter = featureValue.keySet().iterator();
                 while (iter.hasNext()) {
                     String url = (String) iter.next();
                     Instance instance = (Instance) featureValue.get(url);
                     double[] values = instance.getValues();
-                    line.append("{");
-                    boolean containsValue = false;
-                    for (int l = 0; l < values.length; l++) {
-                        if (values[l] > 0) {
-                            containsValue = true;
-                            line.append(l + " " + (int) values[l]);
-                            line.append(",");
-                        }
-                    }
-                    line.append(values.length + " " + (i + 1));
-                    line.append("}");
-                    line.append("\n");
-                    if (containsValue) {
-                        buffer.append(line);
-                    } else {
-                        line = new StringBuffer();
-                    }
+                    dataset.add(values);
                 }
             }
         }
-        return buffer.toString();
     }
 
 	/**
 	 * This method selects the  features to be used by the classifier.
+	 * 
 	 * @param allNeighbors
 	 * @param backlink
 	 * @return
 	 * @throws MalformedURLException
 	 */
-    private String[] selectBestFeatures(List<LinkNeighborhood> allNeighbors, boolean backlink)
+    private Attribute[] selectBestFeaturesForSmile(List<LinkNeighborhood> allNeighbors, boolean backlink)
             throws MalformedURLException {
 
-		List<String> finalWords = new ArrayList<>();
+		List<Attribute> finalWords = new ArrayList<>();
 		Set<String> usedURLTemp = new HashSet<>();
 		Map<String, WordFrequency> urlWords = new HashMap<>();
 		Map<String, WordFrequency> anchorWords = new HashMap<>();
@@ -464,32 +429,26 @@ public class LinkClassifierBuilder {
 		Vector<WordFrequency> aroundFinal = filterData1.filter(aroundVector,null);
 		String[] aroundTemp = new String[aroundFinal.size()];
 
-//		    System.out.println("AROUND:"+aroundVector);
 		for (int i = 0; i < aroundFinal.size(); i++) {
 			WordFrequency wf = aroundFinal.elementAt(i);
-//		      System.out.println("around_"+wf.getWord()  + ":" + wf.getFrequency());
-			finalWords.add("around_"+wf.getWord());
+			NumericAttribute attribute = new NumericAttribute("around_"+wf.getWord());
+			finalWords.add(attribute);
 			aroundTemp[i] = wf.getWord();
 		}
 		fieldWords[WordField.AROUND] = aroundTemp;
 
 		    
 		Vector<WordFrequency> urlVector = new Vector<>(urlWords.values());
-//		    System.out.println("URL1:"+urlVector);
 		Collections.sort(urlVector,new WordFrequencyComparator());
 		FilterData filterData2 = new FilterData(150,2);
 		@SuppressWarnings("unchecked")
         Vector<WordFrequency> urlFinal = filterData2.filter(urlVector,(Vector<WordFrequency>)aroundFinal.clone());
 		String[] urlTemp = new String[urlFinal.size()];
 
-//		    String[] urlTemp = new String[3];
-
-//		    System.out.println("URL:"+urlVector);
-
 		for (int i = 0; i < urlTemp.length; i++) {
 			WordFrequency wf = urlFinal.elementAt(i);
-//		      System.out.println("url_"+wf.getWord()  + ":" + wf.getFrequency());
-			finalWords.add("url_"+wf.getWord());
+			NumericAttribute attribute = new NumericAttribute("url_"+wf.getWord());
+			finalWords.add(attribute);
 			urlTemp[i] = wf.getWord();
 		}
 		fieldWords[WordField.URLFIELD] = urlTemp;
@@ -501,11 +460,10 @@ public class LinkClassifierBuilder {
 			Vector<WordFrequency> anchorFinal = filterData3.filter(anchorVector,null);
 			String[] anchorTemp = new String[anchorFinal.size()];
 
-//			    System.out.println("ANCHOR:"+anchorVector);
 			for (int i = 0; i < anchorFinal.size(); i++) {
 				WordFrequency wf = anchorFinal.elementAt(i);
-//			    System.out.println("anchor_"+wf.getWord() + ":" + wf.getFrequency());
-				finalWords.add("anchor_"+wf.getWord());
+				NumericAttribute attribute = new NumericAttribute("anchor_"+wf.getWord());
+				finalWords.add(attribute);
 				anchorTemp[i] = wf.getWord();
 			}
 			fieldWords[WordField.ANCHOR] = anchorTemp;
@@ -513,7 +471,7 @@ public class LinkClassifierBuilder {
 
 		wrapper.setFeatures(fieldWords);
 
-		String[] features = new String[finalWords.size()];
+		Attribute[] features = new Attribute[finalWords.size()];
 		finalWords.toArray(features);
 		return features;
 	}
