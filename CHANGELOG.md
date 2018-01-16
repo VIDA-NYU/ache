@@ -1,5 +1,9 @@
 # ACHE Crawer Change Log
 
+## Version 0.11.0-SNAPSHOT (Unreleased)
+
+- ...
+
 ## Version 0.10.0 (2018-01-16)
 
 We are pleased to announce version 0.10.0 of ACHE Crawler! This release contains very important changes, which include support for running multiple crawlers in a single server (multi-tenancy), and the start of our migration to Apache License 2 (APLv2).
@@ -20,7 +24,7 @@ Following is a detailed log of the major changes since last version:
   - `searchkit` to version 2.3.0
   - `npm` to version 5.6.0
 - Allow cookies be modified dynamically via REST API endpoint (issue #114)
-- Added 'crawlerId' field to JSON output of target repositories to track provenance of crawled pages
+- Added `crawlerId` field to JSON output of target repositories to track provenance of crawled pages
 
 
 ## Version 0.9.0 (2017-11-07)
