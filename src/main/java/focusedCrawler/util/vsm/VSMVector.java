@@ -633,7 +633,7 @@ public class VSMVector {
 	  for(VSMElement elem : elems.values()) {
           temp.add(elem);
       }
-      Collections.sort(temp,new VSMElementComparator());
+      Collections.sort(temp, VSMElement.DESC_ORDER_COMPARATOR);
       VSMElement[] res = new VSMElement[n];
       for (int i = 0; i < temp.size() && i < n; i++) {
           res[i] = temp.elementAt(i);
@@ -649,7 +649,7 @@ public class VSMVector {
           VSMElement elem = iter.next();
           temp.add(elem);
       }
-      Collections.sort(temp,new VSMElementComparator());
+      Collections.sort(temp, VSMElement.DESC_ORDER_COMPARATOR);
       buf.append("[");
       for (int i = 0; i < temp.size(); i++) {
           VSMElement elem = temp.elementAt(i);
