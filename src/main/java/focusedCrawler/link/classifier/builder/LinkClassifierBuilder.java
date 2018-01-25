@@ -41,7 +41,6 @@ import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.vsm.VSMElement;
-import focusedCrawler.util.vsm.VSMElementComparator;
 import smile.classification.SVM;
 import smile.classification.SoftClassifier;
 import smile.data.Attribute;
@@ -249,7 +248,7 @@ public class LinkClassifierBuilder {
         System.out.println("TOTAL TRAINING:" + trainingSet.size());
 		
 		
-        Collections.sort(trainingSet, new VSMElementComparator());
+        Collections.sort(trainingSet, VSMElement.DESC_ORDER_COMPARATOR);
 
         List<LinkNeighborhood> allLNs = new ArrayList<LinkNeighborhood>();
         for (int i = 0; i < trainingSet.size(); i++) {

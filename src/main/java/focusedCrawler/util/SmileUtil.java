@@ -12,10 +12,11 @@ import smile.classification.SoftClassifier;
 
 public class SmileUtil {
 
-	public static SoftClassifier<double[]> loadSmileClassifier(String modelFilePath) {
+    public static SoftClassifier<double[]> loadSmileClassifier(String modelFilePath) {
         try {
             InputStream is = new FileInputStream(modelFilePath);
             ObjectInputStream objectInputStream = new ObjectInputStream(is);
+            @SuppressWarnings("unchecked")
             SoftClassifier<double[]> classifier = (SoftClassifier<double[]>) objectInputStream.readObject();
             objectInputStream.close();
             return classifier;
@@ -24,9 +25,10 @@ public class SmileUtil {
                     "Failed to load smile classifier instance from file: " + modelFilePath, e);
         }
     }
-	
-	
-	public static void writeSmileClassifier(String modelFilePath, SoftClassifier<double[]> classifier) {
+
+
+    public static void writeSmileClassifier(String modelFilePath,
+            SoftClassifier<double[]> classifier) {
         try {
             OutputStream os = new FileOutputStream(modelFilePath);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(os);
@@ -37,5 +39,5 @@ public class SmileUtil {
                     "Failed to write smile classifier instance from file: " + modelFilePath, e);
         }
     }
-	
+
 }
