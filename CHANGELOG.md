@@ -2,7 +2,7 @@
 
 ## Version 0.11.0-SNAPSHOT (Unreleased)
 
-- Removed dependency on Weka and reimplemented all code based using SMILE.
+- Removed dependency on Weka and reimplemented all machine-learning code using SMILE.
 - Added option to skip cross-validation on `ache buildModel` command
 - Added option to configure max number of features on `ache buildModel` command
 
