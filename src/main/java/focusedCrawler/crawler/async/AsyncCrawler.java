@@ -11,6 +11,8 @@ import com.google.common.util.concurrent.AbstractExecutionThreadService;
 
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
+import focusedCrawler.crawler.cookies.Cookie;
+import focusedCrawler.crawler.cookies.CookieUtils;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorage;
@@ -28,7 +30,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     private MetricsManager metricsManager;
     private Configuration config;
 
-    public AsyncCrawler(TargetStorage targetStorage, LinkStorage linkStorage,
+    public AsyncCrawler(String crawlerId, TargetStorage targetStorage, LinkStorage linkStorage,
                         Configuration config, String dataPath, MetricsManager metricsManager) {
 
         this.targetStorage = targetStorage;
@@ -39,7 +41,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         HttpDownloaderConfig downloaderConfig = config.getCrawlerConfig().getDownloaderConfig();
         this.downloader = new HttpDownloader(downloaderConfig, dataPath, metricsManager);
 
-        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
+        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(crawlerId, targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
         this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage,
                 downloaderConfig.getUserAgentName()));
@@ -102,12 +104,13 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         logger.info("Shutdown finished.");
     }
 
-    public static AsyncCrawler create(String configPath, String dataPath, String seedPath,
+    public static AsyncCrawler create(String crawlerId, String configPath, String dataPath, String seedPath,
             String modelPath, String esIndexName, String esTypeName) throws Exception {
 
         Configuration config = new Configuration(configPath);
 
         MetricsManager metricsManager = new MetricsManager(false, dataPath);
+
         LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath,
                 modelPath, config.getLinkStorageConfig(), metricsManager);
 
@@ -115,7 +118,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
                 esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage,
                 metricsManager);
 
-        return new AsyncCrawler(targetStorage, linkStorage, config, dataPath, metricsManager);
+        return new AsyncCrawler(crawlerId, targetStorage, linkStorage, config, dataPath, metricsManager);
     }
 
     public MetricsManager getMetricsManager() {
@@ -128,6 +131,17 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
 
     public Configuration getConfig() {
         return config;
+    }
+    
+    /**
+     * Add cookies to the right fetcher.
+     * @param cookies
+     */
+    public void addCookies(HashMap<String, List<Cookie>> cookies) {
+        if (cookies == null) {
+            throw new NullPointerException("Cookies argument is null");
+        }
+        CookieUtils.addCookies(cookies, downloader.getFetcher());
     }
 
 }

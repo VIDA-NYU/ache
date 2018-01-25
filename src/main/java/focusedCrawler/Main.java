@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.Configuration;
+import focusedCrawler.crawler.CrawlersManager;
+import focusedCrawler.crawler.CrawlersManager.CrawlContext;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
@@ -214,6 +216,9 @@ public class Main {
     @Command(name = "startCrawl", description = "Starts a crawler")
     public static class StartCrawl implements Runnable {
 
+        @Option(name = {"-cid", "--crawlerId"}, required = false, description = "An unique identifier for this crawler")
+        String crawlerId = "default";
+
         @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
         String configPath;
         
@@ -221,7 +226,7 @@ public class Main {
         String modelPath;
         
         @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
-        String dataOutputPath;
+        String dataPath;
         
         @Option(name = {"-s", "--seed"}, required = true, description = "Path to file of seed URLs")
         String seedPath;
@@ -235,14 +240,17 @@ public class Main {
         @Override
         public void run() {
             try {
-                AsyncCrawler crawler = AsyncCrawler.create(configPath, dataOutputPath, seedPath,
-                        modelPath, esIndexName, esTypeName);
+                Configuration config = new Configuration(configPath);
+                CrawlersManager crawlManager = new CrawlersManager(dataPath, config);
 
-                RestServer restServer = RestServer.create(configPath, dataOutputPath, esIndexName, esTypeName);
-                restServer.setCrawler(crawler);
+                CrawlContext crawlerContext = crawlManager.createCrawler(crawlerId, configPath,
+                        seedPath, modelPath, esIndexName, esTypeName);
+
+                RestServer restServer = RestServer.create(config.getRestConfig(), crawlManager);
                 restServer.start();
 
                 try {
+                    AsyncCrawler crawler = crawlerContext.getCrawler();
                     crawler.startAsync();
                     crawler.awaitTerminated();
                 } finally {

@@ -1,7 +1,7 @@
 .. _restapi:
 
-REST API
-#################
+Web Server & REST API
+#####################
 
 When an ACHE crawl is started, it automatically starts a REST API on port 8080.
 If that port is busy, it will try the following ports (8081, 8082, etc).
@@ -44,9 +44,9 @@ configuration::
 API Endpoints
 -------------
 
-.. http:post:: /startCrawl
+.. http:post:: /crawls/(string:crawler_id)/startCrawl
 
-    Starts a crawl.
+    Starts a crawler with the crawler id ``crawler_id``.
 
     :reqjson string crawlType: Type of crawl to be started. Either ``DeepCrawl`` or ``FocusedCrawl``.
     :reqjson string model: (**Required for FocusedCrawl**) A base64 encoded string of the zipped model file.
@@ -86,9 +86,9 @@ API Endpoints
 
 
 
-.. http:get:: /status
+.. http:get:: /crawls/(string:crawler_id)/status
 
-    Returns the status of the currently running crawl.
+    Returns the status of the crawler with crawler id ``crawler_id``.
 
     Response body example:
 
@@ -96,16 +96,17 @@ API Endpoints
 
       {
         "status": 200,
-        "version": "0.9.0-SNAPSHOT",
+        "version": "0.10.0",
         "searchEnabled": false,
         "crawlerRunning": true,
         "crawlerState": "RUNNING"
       }
 
-.. http:get:: /metrics
+.. http:get:: /crawls/(string:crawler_id)/metrics
 
-    Returns detailed runtime metrics of the current crawler execution. Metrics
-    are generated using the Dropwizard Metrics library.
+    Returns detailed runtime metrics of the crawler with crawler id
+    ``crawler_id``. The metrics returned are generated using the
+    `Dropwizard Metrics` library.
 
     Response body example:
 
@@ -209,12 +210,13 @@ API Endpoints
           }
         }
 
-.. http:get:: /stopCrawl
+.. http:get:: /crawls/(string:crawler_id)/stopCrawl
 
-    Stops the crawler execution if there is a crawler running.
+    Stops the crawler with crawler id ``crawler_id`` if it is running.
 
     :query boolean awaitStopped: One of ``true`` or ``false`` (default).
-      Indicates whether the request should block until the crawler is completely stopped.
+      Indicates whether the request should block until the crawler is completely
+      stopped.
 
     Response body example:
 
@@ -226,9 +228,9 @@ API Endpoints
         "crawlerStopped": false
       }
 
-.. http:post:: /seeds
+.. http:post:: /crawls/(string:crawler_id)/seeds
 
-    Adds more seeds to the crawl if there is a crawler running.
+    Adds seeds to the crawler with crawler id ``crawler_id``.
 
     :reqjson array seeds: An array containing the URLs to be added to the crawl
       that is currently running.

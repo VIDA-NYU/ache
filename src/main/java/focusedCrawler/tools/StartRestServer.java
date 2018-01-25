@@ -1,6 +1,8 @@
 package focusedCrawler.tools;
 
 import focusedCrawler.Main;
+import focusedCrawler.config.Configuration;
+import focusedCrawler.crawler.CrawlersManager;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.util.CliTool;
 import io.airlift.airline.Command;
@@ -33,9 +35,14 @@ public class StartRestServer extends CliTool {
 
     @Override
     public void execute() throws Exception {
+        Configuration baseConfig;
         if (configPath != null && !configPath.isEmpty()) {
+            baseConfig = new Configuration(configPath);
+        } else {
+            baseConfig = new Configuration();
         }
-        RestServer server = RestServer.create(configPath, dataPath, esIndexName, esTypeName);
+        CrawlersManager crawlManager = new CrawlersManager(dataPath, baseConfig);
+        RestServer server = RestServer.create(baseConfig.getRestConfig(), crawlManager);
         server.start();
     }
 

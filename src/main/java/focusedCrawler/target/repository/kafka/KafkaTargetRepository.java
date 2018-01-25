@@ -81,7 +81,7 @@ public class KafkaTargetRepository implements TargetRepository {
                     .setContentType(page.getContentType())
                     .setResponseHeaders(page.getResponseHeaders())
                     .setRawContent(page.getContentAsString())
-                    .setCrawler("ACHE")
+                    .setCrawler(page.getCrawlerId())
                     .build();
                 value = serializeAsJson(obj);
             } else {

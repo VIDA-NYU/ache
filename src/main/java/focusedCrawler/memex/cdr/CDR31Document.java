@@ -8,10 +8,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringJoiner;
+import java.util.TreeMap;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.tika.mime.MediaType;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -61,6 +63,8 @@ public class CDR31Document implements Serializable {
     @JsonProperty("version")
     private final float version = 3.1f;
 
+    private Map<String, Object> extraFields;
+
     public CDR31Document() {
         // required from JSON deserialization
     }
@@ -76,6 +80,7 @@ public class CDR31Document implements Serializable {
         this.timestampCrawl = builder.timestampCrawl;
         this.timestampIndex = builder.timestampIndex;
         this.url = builder.url;
+        this.extraFields = builder.extraFields;
     }
 
     public String getUrl() {
@@ -119,6 +124,11 @@ public class CDR31Document implements Serializable {
         return version;
     }
 
+    @JsonAnyGetter
+    public Map<String, Object> getExtraFields() {
+        return this.extraFields;
+    }
+
     public static class Builder {
 
         private static final TikaExtractor extractor = new TikaExtractor();
@@ -134,6 +144,7 @@ public class CDR31Document implements Serializable {
         private Date timestampCrawl;
         private Date timestampIndex;
         private String url;
+        private Map<String, Object> extraFields = new TreeMap<>();
 
         public CDR31Document build() {
 
@@ -238,6 +249,11 @@ public class CDR31Document implements Serializable {
 
         public Builder setObjects(List<CDR31MediaObject> mediaObjects) {
             this.objects = mediaObjects;
+            return this;
+        }
+
+        public Builder addExtraField(String fieldName, Object fieldValue) {
+            this.extraFields.put(fieldName, fieldValue);
             return this;
         }
     }
