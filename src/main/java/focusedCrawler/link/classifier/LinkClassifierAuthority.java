@@ -11,7 +11,6 @@ import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import smile.classification.SoftClassifier;
-import smile.classification.SVM;
 
 public class LinkClassifierAuthority implements LinkClassifier{
 
@@ -52,7 +51,7 @@ public class LinkClassifierAuthority implements LinkClassifier{
 		        		  Instance instance = entry.getValue();
 		        		  double[] values = instance.getValues();
 		        		  double[] prob = new double[2];
-		        		  int predictedValue = classifier.predict(values, prob);
+		        		  classifier.predict(values, prob);
 		        		  relevance = LinkRelevance.DEFAULT_AUTH_RELEVANCE + (prob[0]*100);
 		        	  }
 			          linkRelevance[count] = new LinkRelevance(url, relevance);
@@ -88,7 +87,7 @@ public class LinkClassifierAuthority implements LinkClassifier{
 		    			  Instance instance = (Instance) entry.getValue();
 		    			  double[] values = instance.getValues();
 		    			  double[] prob = new double[2];
-		        		  int predictedValue = ((SVM<double[]>) classifier).predict(values, prob);
+		        		  classifier.predict(values, prob);
 		    			  if(prob[0] == 1){
 		    				  prob[0] = 0.99;
 		    			  }

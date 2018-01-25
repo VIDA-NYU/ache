@@ -33,7 +33,7 @@ public class LNClassifier {
 		double[] values = instance.getValues();
         synchronized (classifier) {
         	double[] prob = new double[2];
-	        int predictedValue = classifier.predict(values, prob);
+	        classifier.predict(values, prob);
         	return prob;
         }
 	}
