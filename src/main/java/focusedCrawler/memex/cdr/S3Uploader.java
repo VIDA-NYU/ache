@@ -12,34 +12,40 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.google.common.base.Preconditions;
 
 public class S3Uploader {
     
     private final AmazonS3 s3client;
     private String bucketName = "";
     
-    public S3Uploader(String access_key_id, String secret_key_id, String bucketName, String region) {
-        System.out.println("S3 Access Key: "+access_key_id);
-        System.out.println("S3 Secret Key ID: "+secret_key_id);
-        System.out.println("S3 Bucket Name: "+bucketName);
-        BasicAWSCredentials awsCreds = new BasicAWSCredentials(access_key_id, secret_key_id);
+    public S3Uploader(String accessKeyId, String secretKeyId, String bucketName, String region) {
+        System.out.println("Initializing S3 Uploader...");
+        Preconditions.checkNotNull(accessKeyId, "S3 access key id can not be null");
+        Preconditions.checkNotNull(secretKeyId, "S3 secret key id can not be null");
+        Preconditions.checkNotNull(bucketName, "S3 bucket name can not be null");
+        Preconditions.checkNotNull(region, "S3 region can not be null");
+        System.out.println("S3 Access Key: " + accessKeyId);
+        System.out.println("S3 Secret Key ID: " + secretKeyId);
+        System.out.println("S3 Bucket Name: " + bucketName);
+        System.out.println("S3 Region: " + region);
+
+        BasicAWSCredentials awsCreds = new BasicAWSCredentials(accessKeyId, secretKeyId);
         this.s3client = AmazonS3ClientBuilder.standard()
                         .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
                         .withRegion(region)
                         .build();
         this.bucketName = bucketName;
-        System.out.println("Initializing S3 Uploader");
     }
 
- 
-    public String upload(String keyName, byte[] content) throws IOException { 
-         try { 
+    public String upload(String keyName, byte[] content) throws IOException {
+        try {
             InputStream is = new ByteArrayInputStream(content);
             ObjectMetadata metadata = new ObjectMetadata();
             metadata.setContentLength(content.length);
             PutObjectRequest put = new PutObjectRequest(this.bucketName, keyName, is, metadata);
             s3client.putObject(put);
-         } catch (AmazonServiceException ase) {
+        } catch (AmazonServiceException ase) {
             System.out.println("Caught an AmazonServiceException, which " +
                     "means your request made it " +
                     "to Amazon S3, but was rejected with an error response" +
@@ -61,7 +67,4 @@ public class S3Uploader {
         return "https://s3.amazonaws.com/" + this.bucketName + "/" + keyName;
     }
 
-    public static void main(String args[]) {
-        return;
-    }
 }

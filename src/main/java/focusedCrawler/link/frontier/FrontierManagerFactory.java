@@ -29,7 +29,7 @@ public class FrontierManagerFactory {
         
         Frontier frontier = new Frontier(directory, config.getMaxCacheUrlsSize(), config.getPersistentHashtableBackend());
         
-        LinkFilter linkFilter = new LinkFilter(configPath);
+        LinkFilter linkFilter = new LinkFilter.Builder().withConfigPath(configPath).build();
         
         LinkSelector linkSelector = createLinkSelector(config);
         logger.info("LINK_SELECTOR: " + linkSelector.getClass().getName());

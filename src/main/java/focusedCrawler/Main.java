@@ -9,13 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.Configuration;
+import focusedCrawler.crawler.CrawlersManager;
+import focusedCrawler.crawler.CrawlersManager.CrawlContext;
 import focusedCrawler.crawler.async.AsyncCrawler;
-import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.seedfinder.SeedFinder;
-import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.tools.StartRestServer;
 import io.airlift.airline.Arguments;
@@ -50,8 +50,6 @@ public class Main {
                 StartRestServer.class,
                 BuildModel.class,
                 AddSeeds.class,
-                StartLinkStorage.class,
-                StartCrawlManager.class,
                 SeedFinder.class,
                 RunCliTool.class
             );
@@ -209,88 +207,12 @@ public class Main {
         
     }
 
-    @Command(name = "startLinkStorage", description = "Starts a LinkStorage server")
-    public static class StartLinkStorage implements Runnable {
-
-        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to a folder to store link storage data")
-        String dataOutputPath;
-        
-        @Option(name = {"-c", "--configDir"}, required = true, description = "Path to configuration files folder")
-        String configPath;
-        
-        @Option(name = {"-m", "--modelDir"}, required = true, description = "")
-        String modelPath;
-
-        @Option(name = {"-s", "--seed"}, required = false, description = "Path to the file containing seed URLs")
-        String seedPath;
-        
-        public void run() {
-            try {
-                Configuration config = new Configuration(configPath);
-                LinkStorage.runServer(configPath, seedPath, dataOutputPath, modelPath, config.getLinkStorageConfig());
-            } catch (Throwable t) {
-                logger.error("Something bad happened to LinkStorage :(", t);
-            }
-        }
-
-    }
-
-    @Command(name = "startTargetStorage", description = "Starts a TargetStorage server")
-    public static class StartTargetStorage implements Runnable {
-
-        @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
-        String configPath;
-        
-        @Option(name = {"-m", "--modelDir"}, required = false, description = "Path to folder containing page classifier model")
-        String modelPath;
-        
-        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
-        String dataOutputPath;
-        
-        @Option(name = {"-e", "--elasticIndex"}, required = false, description = "Elasticsearch index name to be used")
-        String esIndexName;
-
-        @Option(name = {"-t", "--elasticType"}, required = false, description = "Elasticsearch type name to be used")
-        String esTypeName;
-
-        @Override
-        public void run() {
-            try {
-                Configuration config = new Configuration(configPath);
-                TargetStorage.runServer(configPath, modelPath, dataOutputPath, esIndexName, esTypeName, config);
-            } catch (Throwable t) {
-                logger.error("Something bad happened to TargetStorage :(", t);
-            }
-            
-        }
-
-    }
-
-    @Command(name = "startCrawlManager", description = "Starts a LinkStorage server")
-    public static class StartCrawlManager implements Runnable {
-
-        @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
-        String configPath;
-
-        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to a folder to store crawl manager data")
-        String dataPath;
-
-        @Override
-        public void run() {
-            try {
-                Configuration config = new Configuration(configPath);
-                AsyncCrawler.run(config, dataPath);
-                
-            } catch (Throwable t) {
-                logger.error("Something bad happened to CrawlManager :(", t);
-            }
-        }
-
-    }
-
     @Command(name = "startCrawl", description = "Starts a crawler")
     public static class StartCrawl implements Runnable {
 
+        @Option(name = {"-cid", "--crawlerId"}, required = false, description = "An unique identifier for this crawler")
+        String crawlerId = "default";
+
         @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
         String configPath;
         
@@ -298,7 +220,7 @@ public class Main {
         String modelPath;
         
         @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
-        String dataOutputPath;
+        String dataPath;
         
         @Option(name = {"-s", "--seed"}, required = true, description = "Path to file of seed URLs")
         String seedPath;
@@ -312,14 +234,17 @@ public class Main {
         @Override
         public void run() {
             try {
-                AsyncCrawler crawler = AsyncCrawler.create(configPath, dataOutputPath, seedPath,
-                        modelPath, esIndexName, esTypeName);
+                Configuration config = new Configuration(configPath);
+                CrawlersManager crawlManager = new CrawlersManager(dataPath, config);
 
-                RestServer restServer = RestServer.create(configPath, dataOutputPath, esIndexName, esTypeName);
-                restServer.setCrawler(crawler);
+                CrawlContext crawlerContext = crawlManager.createCrawler(crawlerId, configPath,
+                        seedPath, modelPath, esIndexName, esTypeName);
+
+                RestServer restServer = RestServer.create(config.getRestConfig(), crawlManager);
                 restServer.start();
 
                 try {
+                    AsyncCrawler crawler = crawlerContext.getCrawler();
                     crawler.startAsync();
                     crawler.awaitTerminated();
                 } finally {

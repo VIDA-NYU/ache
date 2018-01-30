@@ -24,24 +24,11 @@ import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.MetricsManager;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageDefault;
-import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.distribution.StorageBinder;
+import focusedCrawler.util.StorageException;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 
-/**
- *
- * <p>Description: This class receives links to be inserted
- * in frontier, sends links to crawler and starts the link storage server.</p>
- *
- * <p>Copyright: Copyright (c) 2004</p>
- *
- * @author Luciano Barbosa
- * @version 1.0
- */
-public class LinkStorage extends StorageDefault {
+public class LinkStorage {
 
     public static final Logger logger = LoggerFactory.getLogger(LinkStorage.class);
 
@@ -54,11 +41,13 @@ public class LinkStorage extends StorageDefault {
     private final boolean insertSiteMaps;
     private final boolean disallowSitesInRobotsTxt;
 
+
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager) throws IOException {
         this(config, frontierManager, null);
     }
-    
+
+
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager,
                        OnlineLearning onlineLearning) throws IOException {
@@ -71,7 +60,6 @@ public class LinkStorage extends StorageDefault {
     }
 
     public void close(){
-        
         logger.info("Shutting down FrontierManager...");
         this.frontierManager.close();
         logger.info("done.");
@@ -117,7 +105,7 @@ public class LinkStorage extends StorageDefault {
             try {
                 frontierManager.insert(LinkRelevance.createForward(link, 1.0d));
             } catch (Exception e) {
-                logger.error("Failed to insert link into the frontier: "+link);
+                logger.error("Failed to insert link into the frontier: "+link, e);
             }
         }
         logger.info("Added {} URLs from sitemap.", sitemapData.links.size());
@@ -150,8 +138,9 @@ public class LinkStorage extends StorageDefault {
             }
 
             if (onlineLearning != null) {
-                onlineLearning.pushFeedback(page);
+                onlineLearning.notifyPageCrawled(page);
             }
+            
         } catch (Exception ex) {
             logger.info("Failed to insert page into LinkStorage.", ex);
             throw new StorageException(ex.getMessage(), ex);
@@ -171,29 +160,9 @@ public class LinkStorage extends StorageDefault {
         }
     }
 
-    public static void runServer(String configPath, String seedFilePath,
-                                 String dataOutputPath, String modelPath,
-                                 LinkStorageConfig config)
-                                 throws FrontierPersistentException {
-        try {
-            MetricsManager metricsManager = new MetricsManager();
-            Storage linkStorage = createLinkStorage(configPath, seedFilePath,
-                                                    dataOutputPath, modelPath,
-                                                    config, metricsManager);
-
-            StorageBinder binder = new StorageBinder(config.getStorageServerConfig());
-            binder.bind(linkStorage);
-        } catch (Exception e) {
-            logger.error("Problem while starting LinkStorage.", e);
-        }
-    }
-    
-    public static Storage createLinkStorage(String configPath, String seedFile, 
-                                            String dataPath, String modelPath,
-                                            LinkStorageConfig config,
-                                            MetricsManager metricsManager)
-                                            throws FrontierPersistentException,
-                                                   IOException {
+    public static LinkStorage create(String configPath, String seedFile, String dataPath,
+            String modelPath, LinkStorageConfig config, MetricsManager metricsManager)
+            throws FrontierPersistentException, IOException {
         
         Path stoplistPath = Paths.get(configPath, "/stoplist.txt");
         StopList stoplist;
@@ -210,6 +179,7 @@ public class LinkStorage extends StorageDefault {
         OnlineLearning onlineLearning = null;
         if (config.isUseOnlineLearning()) {
             onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager);
+            
         }
         
         return new LinkStorage(config, frontierManager, onlineLearning);
@@ -225,15 +195,16 @@ public class LinkStorage extends StorageDefault {
         switch (onlineLearningType) {
             case "FORWARD_CLASSIFIER_BINARY":
                 return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                 ForwardOnlineLearning.Type.BINARY, dataPath);
+                        ForwardOnlineLearning.Type.BINARY, dataPath);
             case "FORWARD_CLASSIFIER_LEVELS":
                 return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                 ForwardOnlineLearning.Type.LEVELS, dataPath);
+                        ForwardOnlineLearning.Type.LEVELS, dataPath);
             case "LINK_CLASSIFIERS":
                 return new BipartiteOnlineLearning(config.getLearningLimit(), frontierManager, cb,
-                                                   dataPath);
+                        dataPath);
             default:
-                throw new IllegalArgumentException("Unknown online learning method: " + onlineLearningType);
+                throw new IllegalArgumentException(
+                        "Unknown online learning method: " + onlineLearningType);
         }
     }
 

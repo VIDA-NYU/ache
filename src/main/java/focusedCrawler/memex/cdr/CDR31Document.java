@@ -8,12 +8,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringJoiner;
+import java.util.TreeMap;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.tika.mime.MediaType;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -27,6 +28,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @JsonInclude(Include.NON_NULL)
 public class CDR31Document implements Serializable {
 
+    @JsonProperty("_id")
     private String _id;
 
     @JsonProperty("content_type")
@@ -61,6 +63,8 @@ public class CDR31Document implements Serializable {
     @JsonProperty("version")
     private final float version = 3.1f;
 
+    private Map<String, Object> extraFields;
+
     public CDR31Document() {
         // required from JSON deserialization
     }
@@ -76,6 +80,7 @@ public class CDR31Document implements Serializable {
         this.timestampCrawl = builder.timestampCrawl;
         this.timestampIndex = builder.timestampIndex;
         this.url = builder.url;
+        this.extraFields = builder.extraFields;
     }
 
     public String getUrl() {
@@ -102,17 +107,26 @@ public class CDR31Document implements Serializable {
         return rawContent;
     }
 
+    public Map<String, String> getResponseHeaders() {
+        return responseHeaders;
+    }
+
     public String getContentType() {
         return contentType;
     }
 
-    @JsonIgnore
+    @JsonProperty("_id")
     public String getId() {
         return this._id;
     }
 
     public float getVersion() {
         return version;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getExtraFields() {
+        return this.extraFields;
     }
 
     public static class Builder {
@@ -130,6 +144,7 @@ public class CDR31Document implements Serializable {
         private Date timestampCrawl;
         private Date timestampIndex;
         private String url;
+        private Map<String, Object> extraFields = new TreeMap<>();
 
         public CDR31Document build() {
 
@@ -139,8 +154,8 @@ public class CDR31Document implements Serializable {
                 throw new IllegalArgumentException("Field 'raw_content' is mandatory");
             if (this.crawler == null)
                 throw new IllegalArgumentException("Field 'crawler' is mandatory");
-            if (this.team == null)
-                throw new IllegalArgumentException("Field 'team' is mandatory");
+//            if (this.team == null)
+//                throw new IllegalArgumentException("Field 'team' is mandatory");
             if (this.timestampIndex == null)
                 throw new IllegalArgumentException("Field 'timestampIndex' is mandatory");
 
@@ -234,6 +249,11 @@ public class CDR31Document implements Serializable {
 
         public Builder setObjects(List<CDR31MediaObject> mediaObjects) {
             this.objects = mediaObjects;
+            return this;
+        }
+
+        public Builder addExtraField(String fieldName, Object fieldValue) {
+            this.extraFields.put(fieldName, fieldValue);
             return this;
         }
     }

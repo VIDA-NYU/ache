@@ -6,13 +6,13 @@ What is inside the output directory?
 
 Depending on the configuration settings, ACHE may creates different folders under the data output directory:
 
-  * **data_pages**: contains raw-data of crawled pages (including relevant, irrelevant and non-html content). The sub-directories and file formats depends on the configured *Data Format* being using. See :ref:`Data Formats <dataformat-filesystem>` for more information.
+  * **data_pages**: contains raw-data of crawled pages (including relevant, irrelevant and non-HTML content). The sub-directories and file formats depends on the configured *Data Format* being using. See :ref:`Data Formats <dataformat-filesystem>` for more information.
   * **data_monitor**: contains TSV-formatted log files with information about the status of the crawl, including relevant and irrelevant pages along with their scores, download requests and its metadata, etc.
-  * **data_url**, **data_backlinks**, **data_hosts**: are where the persistent storages keep data needed for crawler operatio such as the frontier, the links graph, and metadata about crawled hosts.
+  * **data_url**, **data_backlinks**, **data_hosts**: are where the persistent storages keep data needed for crawler operation such as the frontier, the links graph, and metadata about crawled hosts.
 
 When will the crawler stop?
 ---------------------------
-The crawler will run until it downloads all links discovered during the crawling process, or util it hits maximum number of visited pages as configured in the ``ache.yml`` file.
+The crawler will run until it downloads all links discovered during the crawling process, or until it hits maximum number of visited pages as configured in the ``ache.yml`` file.
 You can also look at ``<data-output>/data_monitor/harvestinfo.csv`` to check how many pages have been downloaded and decide whether you want to stop the crawler manually.
 
 How to limit the number of visited pages?
@@ -33,7 +33,7 @@ Does ACHE crawl webpages in languages other than English?
 ---------------------------------------------------------
 ACHE does language detection and can be configured to ignore pages with non-English content.
 You can enable or disable language detection in the configuration file by changing ``target_storage.english_language_detection_enabled``.
-Detection of other languagues are currently not available, but could easily be supported in the future.
+Detection of other languages are currently not available, but could easily be supported in the future.
 
 Is there any limit on number of crawled webpages per website?
 -------------------------------------------------------------
@@ -46,9 +46,9 @@ A ``javax.net.ssl.SSLHandshakeException : handshake_failure`` usually occurs whe
 
 Why am I getting a *SSL Protocol Exception* for some sites?
 ---------------------------------------------------------------------------------------------
-A ``javax.net.ssl.SSLProtocolException : unrecognized_name`` is a server misconfiguration issue. Most probably, this website is hosted on a virtual server. A simple solution is to disable SNI extension by adding ``-Djsse.enableSNIExtension=false`` as VM options when running Ache. However, keep in mind that disabling SNI will cause certificate validation failures for some sites which use mutiple hostnames behind a shared IP.
+A ``javax.net.ssl.SSLProtocolException : unrecognized_name`` is a server misconfiguration issue. Most probably, this website is hosted on a virtual server. A simple solution is to disable SNI extension by adding ``-Djsse.enableSNIExtension=false`` as VM options when running ACHE. However, keep in mind that disabling SNI will cause certificate validation failures for some sites which use mutiple host-names behind a shared IP.
 
 
 Where to report bugs?
 ---------------------
-We welcome feedback. Please submit any suggestions or bug reports using the Github issue tracker (https://github.com/ViDA-NYU/ache/issues)
+We welcome feedback. Please submit any suggestions or bug reports using the GitHub issue tracker (https://github.com/ViDA-NYU/ache/issues)

@@ -1,0 +1,9 @@
+newyork.backpage.com: 
+ type: wildcard
+ whitelist:
+  - "http://*.backpage.com/SportsEquipForSale*"
+  - "http://*.backpage.com/"
+asdf.somesite.org:
+  type: wildcard
+  whitelist:
+   - "http://boards.site.org/abcd/*"

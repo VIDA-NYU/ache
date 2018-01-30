@@ -2,6 +2,8 @@ package focusedCrawler.rest.resources;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -13,6 +15,12 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.ImmutableMap;
+
+import focusedCrawler.crawler.CrawlersManager;
+import focusedCrawler.crawler.CrawlersManager.CrawlContext;
+import focusedCrawler.rest.Transformers;
+import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import spark.Route;
 
 public class ElasticsearchProxyResource {
@@ -20,25 +28,39 @@ public class ElasticsearchProxyResource {
     private static final Logger logger = LoggerFactory.getLogger(ElasticsearchProxyResource.class);
 
     private CloseableHttpClient httpclient;
+    private CrawlersManager crawlersManager;
 
-    private String esHostAddress;
-    private String esIndexName;
-    private String esTypeName;
-
-    public ElasticsearchProxyResource(String esHostAddress, String esIndexName, String esTypeName) {
-        this.esHostAddress = esHostAddress;
-        this.esIndexName = esIndexName;
-        this.esTypeName = esTypeName;
+    public ElasticsearchProxyResource(CrawlersManager crawlerManager) {
+        this.crawlersManager = crawlerManager;
         this.httpclient = HttpClients.createDefault();
     }
 
     public Route searchApi = (request, response) -> {
+
+        String crawlerId = request.params(":crawler_id");
+
+        CrawlContext context = crawlersManager.getCrawl(crawlerId);
+        if (context == null) {
+            response.status(HttpServletResponse.SC_NOT_FOUND);
+            response.header("Content-Type", "application/json");
+            return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
+        }
+
+        if (!context.isSearchEnabled()) {
+            response.status(HttpServletResponse.SC_BAD_REQUEST);
+            response.header("Content-Type", "application/json");
+            return Transformers.json.render(ImmutableMap.of(
+                "message", "No Elasticsearch index configured"));
+        }
+
+        ElasticSearchConfig esConfig = context.getEsConfig();
         try {
             String query = "";
             for (String param : request.queryParams()) {
                 query += param + "=" + request.queryParams(param);
             }
-            String url = String.format("%s/%s/%s/_search", esHostAddress, esIndexName, esTypeName);
+            String url = String.format("%s/%s/%s/_search", esConfig.getRestApiHosts().get(0),
+                esConfig.getIndexName(), esConfig.getTypeName());
             if (!query.isEmpty()) {
                 url += "?" + query;
             }

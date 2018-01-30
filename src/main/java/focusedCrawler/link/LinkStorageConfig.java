@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.PersistentHashtable.DB;
-import focusedCrawler.util.storage.StorageConfig;
 
 public class LinkStorageConfig {
 
@@ -72,9 +72,6 @@ public class LinkStorageConfig {
     @JsonUnwrapped
     private BackSurferConfig backSurferConfig = new BackSurferConfig();
 
-    @JsonUnwrapped
-    private final StorageConfig serverConfig;
-
     @JsonProperty("link_storage.download_sitemap_xml")
     private boolean downloadSitemapXml = false;
 
@@ -100,18 +97,16 @@ public class LinkStorageConfig {
     private int schedulerMaxLinks = 100000;
 
     @JsonProperty("link_storage.persistent_hashtable.backend")
-    private String persistentHashtableBackend = "ROCKSDB";
+    private PersistentHashtable.DB persistentHashtableBackend = PersistentHashtable.DB.ROCKSDB;
 
     @JsonProperty("link_storage.link_classifier.max_depth")
     private int maxDepth;
 
     public LinkStorageConfig() {
-        this.serverConfig = new StorageConfig();
     }
 
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
-        this.serverConfig = StorageConfig.create(config, "link_storage.server.");
     }
 
     public int getMaxPagesPerDomain() {
@@ -184,10 +179,6 @@ public class LinkStorageConfig {
         return recrawlMinRelevanceInterval;
     }
 
-    public StorageConfig getStorageServerConfig() {
-        return serverConfig;
-    }
-
     public boolean getDownloadSitemapXml() {
         return downloadSitemapXml;
     }
@@ -210,16 +201,12 @@ public class LinkStorageConfig {
     }
 
     /**
-     * Returns the value of the persistent hashtable to be used in the backend
+     * Returns the value of the persistent hashtable to be used in the backend.
      * The default value is RocksDB.
      * @return
      */
     public DB getPersistentHashtableBackend() {
-        if(persistentHashtableBackend.equalsIgnoreCase(DB.BERKELEYDB.name())){
-            return DB.BERKELEYDB;
-        }else{
-            return DB.ROCKSDB;
-        }
+        return persistentHashtableBackend;
     }
 
     public int getMaxDepth() {

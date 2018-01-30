@@ -8,8 +8,6 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import focusedCrawler.seedfinder.RelevanceModel;
-
 public class RelevanceModelTest {
     
     @Test

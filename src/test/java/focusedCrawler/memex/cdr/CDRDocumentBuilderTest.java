@@ -138,6 +138,7 @@ public class CDRDocumentBuilderTest {
                 .setResponseHeaders(responseHeaders)
                 .setTimestampCrawl(date)
                 .setTimestampIndex(date)
+                .addExtraField("crawler_id", "mycrawler")
                 .buildAsJson();
 
         JsonNode node = new ObjectMapper().readTree(json);
@@ -176,6 +177,9 @@ public class CDRDocumentBuilderTest {
         assertThat(obj0.get("response_headers"), is(notNullValue()));
         assertThat(obj0.get("response_headers").get("name1").asText(), is("value1,value2"));
         assertThat(obj0.get("response_headers").get("name2").asText(), is("value3"));
+
+        assertThat(node.get("crawler_id"), is(notNullValue()));
+        assertThat(node.get("crawler_id").asText(), is("mycrawler"));
     }
 
 }

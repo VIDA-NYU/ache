@@ -9,7 +9,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.config.Configuration;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
@@ -22,22 +22,19 @@ import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.MultipleTargetRepositories;
 import focusedCrawler.target.repository.TargetRepository;
+import focusedCrawler.target.repository.WarcTargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
-import focusedCrawler.util.CommunicationException;
+import focusedCrawler.target.repository.kafka.KafkaTargetRepository;
 import focusedCrawler.util.LangDetection;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageConfig;
-import focusedCrawler.util.storage.StorageDefault;
-import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.distribution.StorageBinder;
-import focusedCrawler.util.storage.distribution.StorageCreator;
+import focusedCrawler.util.MetricsManager;
+import focusedCrawler.util.StorageException;
 
-public class TargetStorage extends StorageDefault {
+public class TargetStorage {
 	
 	public static final Logger logger = LoggerFactory.getLogger(TargetStorage.class);
 
     private TargetRepository targetRepository;
-    private Storage linkStorage;
+    private LinkStorage linkStorage;
     private TargetClassifier targetClassifier;
     private TargetStorageConfig config;
     private LangDetection langDetector = new LangDetection();
@@ -45,7 +42,7 @@ public class TargetStorage extends StorageDefault {
     
     public TargetStorage(TargetClassifier targetClassifier,
                          TargetRepository targetRepository, 
-                         Storage linkStorage,
+                         LinkStorage linkStorage,
                        	 TargetStorageMonitor monitor,
                        	 TargetStorageConfig config) {
         
@@ -59,16 +56,13 @@ public class TargetStorage extends StorageDefault {
     /**
      * Inserts a page into the repository.
      */
-    @Override
-    public Object insert(Object obj) throws StorageException {
-        Page page = (Page) obj;
+    public Object insert(Page page) {
 
         // non-html pages saved directly
         if (!page.isHtml()) {
             page.setTargetRelevance(TargetRelevance.IRRELEVANT);
             targetRepository.insert(page);
             monitor.countPage(page, false, 0.0d);
-            logger.info("Non-HTML content found at: "+page.getURL()+" - saved content type: "+page.getContentType());
             return null;
         }
 
@@ -118,38 +112,15 @@ public class TargetStorage extends StorageDefault {
                 logger.info("Visited page limit exceeded. Exiting crawler. pagelimit=" + config.getVisitedPageLimit());
                 System.exit(0);
             }
-        } catch (CommunicationException ex) {
-            logger.error("Communication error while inserting.", ex);
-            throw new StorageException(ex.getMessage(), ex);
-        } catch (TargetClassifierException tce) {
-            logger.error("Classification error while inserting.", tce);
+        } catch (TargetClassifierException | StorageException e) {
+            logger.error("Unexpected error while inserting page.", e);
         }
         return null;
     }
 
-    public static void runServer(String configPath, String modelPath, String dataPath,
-                                 String indexName, String typeName, Configuration config) {
-        try {
-            TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
-
-            StorageConfig linkStorageConfig = config.getLinkStorageConfig().getStorageServerConfig();
-            Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
-
-            Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, indexName,
-                    typeName, targetStorageConfig, linkStorage);
-
-            StorageBinder binder = new StorageBinder(targetStorageConfig.getStorageServerConfig());
-            binder.bind(targetStorage);
-
-        } catch (Exception e) {
-            logger.error("Error while starting TargetStorage", e);
-        }
-    }
-    
-	public static Storage createTargetStorage(String configPath, String modelPath, String dataPath,
-                                              String esIndexName, String esTypeName, 
-                                              TargetStorageConfig config, Storage linkStorage)
-                                              throws IOException {
+    public static TargetStorage create(String configPath, String modelPath, String dataPath,
+            String esIndexName, String esTypeName, TargetStorageConfig config,
+            LinkStorage linkStorage, MetricsManager metricsManager) throws IOException {
         
         // if one wants to use a classifier
         TargetClassifier targetClassifier = null;
@@ -176,16 +147,18 @@ public class TargetStorage extends StorageDefault {
             throw new IllegalArgumentException("No valid data formats configured.");
         }
 
-        TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath);
+        TargetStorageMonitor monitor = null;
+        if(metricsManager != null) {
+        	monitor = new TargetStorageMonitor(dataPath, metricsManager);
+        }else {
+        	monitor = new TargetStorageMonitor(dataPath);
+        }
 
-        Storage targetStorage = new TargetStorage(targetClassifier, targetRepository,
-                                                  linkStorage, monitor, config);
-        
-        return targetStorage;
+        return new TargetStorage(targetClassifier, targetRepository, linkStorage, monitor, config);
     }
 
     private static TargetRepository createRepository(String dataFormat, String dataPath,
-            String esIndexName, String esTypeName, TargetStorageConfig config) {
+            String esIndexName, String esTypeName, TargetStorageConfig config) throws IOException {
         
         Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());
         boolean compressData = config.getCompressData();
@@ -204,18 +177,23 @@ public class TargetStorage extends StorageDefault {
             case "FILESYSTEM_HTML":
                 return new FileSystemTargetRepository(targetDirectory, DataFormat.HTML,
                                                       hashFilename, compressData);
+            case "WARC":
+                return new WarcTargetRepository(targetDirectory, config.getWarcMaxFileSize(),
+                                                config.getCompressWarc());
+            case "KAFKA":
+                return new KafkaTargetRepository(config.getKafkaConfig());
             case "ELASTICSEARCH":
-                if (esIndexName == null || esIndexName.isEmpty()) {
-                    throw new IllegalArgumentException("ElasticSearch index name not provided!");
-                }
-                if (esTypeName == null || esTypeName.isEmpty()) {
-                    esTypeName = "page";
-                }
                 ElasticSearchConfig esconfig = config.getElasticSearchConfig();
+                if (esIndexName != null && !esIndexName.isEmpty()) {
+                    esconfig.setIndexName(esIndexName);
+                }
+                if (esTypeName != null && !esTypeName.isEmpty()) {
+                    esconfig.setTypeName(esTypeName);
+                }
                 if (esconfig.getRestApiHosts() == null) {
-                    return new ElasticSearchTargetRepository(esconfig, esIndexName, esTypeName);
+                    return new ElasticSearchTargetRepository(esconfig);
                 } else {
-                    return new ElasticSearchRestTargetRepository(esconfig, esIndexName, esTypeName);
+                    return new ElasticSearchRestTargetRepository(esconfig);
                 }
             default:
                 throw new IllegalArgumentException("Invalid data format provided: " + dataFormat);

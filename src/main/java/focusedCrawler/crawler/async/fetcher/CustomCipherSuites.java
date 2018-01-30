@@ -1,10 +1,10 @@
 package focusedCrawler.crawler.async.fetcher;
 
 
-import okhttp3.CipherSuite;
-
 import java.util.Arrays;
 import java.util.List;
+
+import okhttp3.CipherSuite;
 
 public class CustomCipherSuites {
 

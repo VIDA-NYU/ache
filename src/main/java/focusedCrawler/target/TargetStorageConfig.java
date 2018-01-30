@@ -5,6 +5,7 @@ import static java.util.Arrays.asList;
 import java.io.IOException;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
@@ -12,7 +13,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
-import focusedCrawler.util.storage.StorageConfig;
+import focusedCrawler.target.repository.kafka.KafkaConfig;
 
 public class TargetStorageConfig {
 
@@ -32,6 +33,13 @@ public class TargetStorageConfig {
     // FILES repository
     @JsonProperty("target_storage.data_format.files.max_file_size")
     private long maxFileSize = 256 * 1024 * 1024;
+
+    // WARC repository
+    @JsonProperty("target_storage.data_format.warc.max_file_size")
+    private long warcMaxFileSize = 250 * 1024 * 1024;
+
+    @JsonProperty("target_storage.data_format.warc.compress")
+    private boolean compressWarc = true;
 
     // ELASTICSEARCH repository
     @JsonUnwrapped
@@ -54,15 +62,13 @@ public class TargetStorageConfig {
     private boolean englishLanguageDetectionEnabled = false;
 
     @JsonUnwrapped
-    private StorageConfig serverConfig;
+    private KafkaConfig kafkaConfig;
 
     public TargetStorageConfig() {
-        this.serverConfig = new StorageConfig();
     }
 
     public TargetStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
-        this.serverConfig = StorageConfig.create(config, "target_storage.server.");
     }
 
     public String getTargetStorageDirectory() {
@@ -106,10 +112,6 @@ public class TargetStorageConfig {
         return englishLanguageDetectionEnabled;
     }
 
-    public StorageConfig getStorageServerConfig() {
-        return serverConfig;
-    }
-
     public boolean getHashFileName() {
         return hashFileName;
     }
@@ -117,9 +119,32 @@ public class TargetStorageConfig {
     public boolean getCompressData() {
         return compressData;
     }
-    
+
     public long getMaxFileSize() {
         return maxFileSize;
+    }
+
+    public boolean getCompressWarc() {
+        return compressWarc;
+    }
+
+    public long getWarcMaxFileSize() {
+        return warcMaxFileSize;
+    }
+
+    public KafkaConfig getKafkaConfig() {
+        return kafkaConfig;
+    }
+
+    @JsonIgnore
+    public boolean isElasticsearchRestEnabled() {
+        if (dataFormats.contains("ELASTICSEARCH")) {
+            List<String> hosts = elasticSearchConfig.getRestApiHosts();
+            if (hosts != null && !hosts.isEmpty()) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

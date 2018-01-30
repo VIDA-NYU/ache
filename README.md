@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ViDA-NYU/ache.svg?branch=master)](https://travis-ci.org/ViDA-NYU/ache)
 [![Documentation Status](https://readthedocs.org/projects/ache/badge/?version=latest)](http://ache.readthedocs.io/en/latest/?badge=latest)
+[![Gitter](https://badges.gitter.im/ViDA-NYU/ache.svg)](https://gitter.im/ViDA-NYU/ache?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Coverage Status](https://coveralls.io/repos/ViDA-NYU/ache/badge.svg?branch=master&service=github)](https://coveralls.io/github/ViDA-NYU/ache?branch=master)
 
 # ACHE Focused Crawler
@@ -41,13 +42,11 @@ cd ache
 ```
 
 which will generate an installation package under `ache/build/install/`.
-To install ACHE binaries into ``/opt`` and make it available on the command-line run:
+You can then make `ache` command available in the terminal by adding ACHE binaries to the `PATH` environment variable:
 
-```
-sudo mv build/install/ache /opt/
-echo 'export ACHE_HOME="/opt/ache"' | sudo tee -a /etc/profile.d/ache.sh
-echo 'export PATH="$ACHE_HOME/bin:$PATH"' | sudo tee -a /etc/profile.d/ache.sh
-source /etc/profile.d/ache.sh
+```bash
+export ACHE_HOME="{path-to-cloned-ache-repository}/build/install/ache"
+export PATH="$ACHE_HOME/bin:$PATH"
 ```
 
 ### Running using Docker
@@ -80,8 +79,8 @@ If you use Conda, you can install `ache` from Anaconda Cloud by running:
 conda install -c vida-nyu ache
 ```
 
-*NOTE: Only tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
-If you want to try the most recent version, please clone the repository and build from source.*
+*NOTE: Only released tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
+If you want to try the most recent version, please clone the repository and build from source or use the Docker version.*
 
 ## Running ACHE
 
@@ -115,19 +114,23 @@ For long crawls, you should run ACHE in background using a tool like nohup.
 
 ### Data Formats
 
-ACHE can store data in different data formats. The data format can be configured by changing the key `target_storage.data_format.type` in the [configuration file](https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/ache.yml). The data formats available now are:
+ACHE can output data in multiple formats. The data formats currently available are:
 
-- FILESYSTEM_HTML (default) - only raw content is stored in plain text files.
-- FILESYSTEM_JSON - raw content and some metadata is stored using JSON format in files.
-- FILESYSTEM_CBOR - raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
-- FILES - raw content and metadata is stored in rolling compressed files of fixed size.
+- FILES (default) - raw content and metadata is stored in rolling compressed files of fixed size.
 - ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index.
+- KAFKA - pushes raw content and metadata to an Apache Kafka topic.
+- WARC - stores data using the standard format used by the Web Archive and Common Crawl.
+- FILESYSTEM_HTML - only raw page content is stored in plain text files.
+- FILESYSTEM_JSON - raw content and metadata is stored using JSON format in files.
+- FILESYSTEM_CBOR - raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
 
-For more details on data format configurations, see the [data formats documentation](http://ache.readthedocs.io/en/latest/data-formats.html) page.
+For more details on how to configure data formats, see the [data formats documentation](http://ache.readthedocs.io/en/latest/data-formats.html) page.
 
 ## Bug Reports and Questions
 
 We welcome user feedback. Please submit any suggestions, questions or bug reports using the [Github issue tracker](https://github.com/ViDA-NYU/ache/issues).
+
+We also have a chat room on [Gitter](https://gitter.im/ViDA-NYU/ache).
 
 ## Contributing
 

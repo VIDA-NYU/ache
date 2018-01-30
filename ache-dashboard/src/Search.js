@@ -4,29 +4,41 @@ import {
   ActionBar, ActionBarRow, HitsStats, ViewSwitcherToggle, SelectedFilters,
   ResetFilters, Pagination
 } from "searchkit";
-import URLUtils from './URLUtils';
 import {without} from "lodash";
-import {ACHE_API_ADDRESS} from './Config';
+import URLUtils from './URLUtils';
 
-const searchkit = new SearchkitManager(ACHE_API_ADDRESS);
+import {ACHE_API_ADDRESS} from './Config';
+import {api} from './RestApi';
+
+var searchkitProps;
+if(api.authorization !== undefined) {
+  searchkitProps = {
+    httpHeaders: {'Authorization': api.authorization}
+  };
+}
 
 class LabelsManager {
 
-  constructor(apiAddress) {
-    this.apiAddress = apiAddress;
+  constructor(crawlerId) {
+    this.crawlerId = crawlerId;
     this.listeners = [];
-    fetch(apiAddress + "/labels")
-      .then(function(response) {
-        return response.json();
-      }, function(error) {
-        return 'FETCH_ERROR';
-      })
-      .then(this.updateLabelsCache.bind(this));
+    this.labelsCache = {};
+    api.get('/crawls/' + this.crawlerId + '/labels')
+       .then(this.updateLabelsCache.bind(this));
   }
 
+  /*
+   * Register a callback function that is called any time that labels change.
+   * It returns a function that can be used to unregister the listener added by
+   * calling it. For example:
+   *
+   *   let stopListening = lm.addListener(fn);
+   *   stopListening(); // calling this will remove fn fuction from listeners
+   *
+   */
   addListener(fn) {
     this.listeners.push(fn);
-    return ()=>{
+    return () => {
       this.listeners = without(this.listeners, fn);
     }
   }
@@ -47,20 +59,13 @@ class LabelsManager {
   }
 
   sendLabels(labels, callback) {
-    fetch(this.apiAddress + "/labels", {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(labels)
-      })
-      .then(function(response) {
-        return response.json();
-      }, function(error) {
-        return 'FETCH_ERROR';
-      })
-      .then(this.updateLabelsCache.bind(this))
-      .then(callback);
+    let config = {
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(labels)
+    };
+    api.put('/crawls/' + this.crawlerId + '/labels', config)
+       .then(this.updateLabelsCache.bind(this))
+       .then(callback);
   }
 
   isRelevant(url) {
@@ -73,18 +78,17 @@ class LabelsManager {
 
 }
 
-const labelsManager = new LabelsManager(ACHE_API_ADDRESS);
-
 class HitItem extends React.Component {
 
   constructor(props) {
     super(props);
-    this.labelsManager = labelsManager;
-    this.stopListening = this.labelsManager.addListener(()=> this.setState({}));
+    this.labelsManager = props.labelsManager;
+    // forces re-render every time a label changes
+    this.stopListeningLabelChanges = this.labelsManager.addListener(()=> this.setState({}));
   }
 
   componentWillUnmount() {
-    this.stopListening();
+    this.stopListeningLabelChanges();
   }
 
   formatDate(timestamp) {
@@ -178,14 +182,14 @@ class HitItem extends React.Component {
       <div className="row hit-item">
         <div className="col-sm-12">
           <div className="hit-title">
-            <a href={source.url} target="_blank">{pageTitle}</a>
+            <a href={source.url} target="_blank" rel="noopener noreferrer">{pageTitle}</a>
           </div>
           <div className="hit-url">
-            <a href={source.url} target="_blank">{source.url}</a>
+            <a href={source.url} target="_blank" rel="noopener noreferrer">{source.url}</a>
           </div>
           <div className="row">
             <div className="col-sm-2 hit-image">
-              <img src={this.extractImageFromSource(source)} alt="" />
+              <img src={this.extractImageFromSource(source)} alt="" referrerPolicy="no-referrer" />
             </div>
             <div className="col-sm-10">
               <div className="hit-description">{pageDesc}</div>
@@ -214,8 +218,8 @@ class LabelAllButtons extends React.Component {
 
   constructor(props) {
     super(props);
-    this.labelsManager = labelsManager;
-    this.stopListeningResults = searchkit.addResultsListener(this.updateResults.bind(this));
+    this.labelsManager = props.labelsManager;
+    this.stopListeningResults = this.props.searchkit.addResultsListener(this.updateResults.bind(this));
   }
 
   componentWillUnmount() {
@@ -257,14 +261,14 @@ class Search extends React.Component {
 
   constructor(props) {
     super(props);
-    fetch(ACHE_API_ADDRESS + "/status")
-      .then(function(response) {
-        return response.json();
-      }, function(error) {
-        return 'FETCH_ERROR';
-      })
-      .then(this.setupSearch.bind(this));
+    this.crawlerId = this.props.match.params.crawler_id;
+    const elasticsearchAddress = ACHE_API_ADDRESS + 'crawls/' + this.crawlerId;
+    this.searchkit = new SearchkitManager(elasticsearchAddress, searchkitProps);
+    this.labelsManager = new LabelsManager(this.crawlerId);
+    this.hitItemElement = <HitItem labelsManager={this.labelsManager} />;
     this.state = {message:"Loading...", searchEnabled: false};
+    api.get('/crawls/' + this.crawlerId + '/status')
+       .then(this.setupSearch.bind(this));
   }
 
   setupSearch(status) {
@@ -289,7 +293,7 @@ class Search extends React.Component {
   }
 
   render() {
-
+    const hitItemElement = this.hitItemElement;
     const enabled = this.state.searchEnabled;
     const message = this.state.message;
     let checkboxLabels = {
@@ -303,23 +307,19 @@ class Search extends React.Component {
             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {message}
           </div>
           :
-          <SearchkitProvider searchkit={searchkit} >
+          <SearchkitProvider searchkit={this.searchkit} >
             <div className="row">
 
               <div className="col-sm-3">
-                <RefinementListFilter id="filter_relevance" title="Relevance" field="isRelevant" size={2} operator="OR" translations={checkboxLabels} />
-                <RefinementListFilter id="filter_domain" title="Domain" field="domain" size={15} operator="OR" />
-                {/*
-                <RefinementListFilter id="filter_words" title="Words" field="words" size={5}/>
-                <RangeFilter min={0} max={100} field="timestamp_crawl" id="timestamp_crawl" title="Crawl Time" showHistogram={true}/>
-                <DynamicRangeFilter field="timestamp_index" id="timestamp_index" title="Indexing Time" rangeFormatter={formatDate}/>
-                */}
+                <RefinementListFilter id="filter_relevance" title="Relevance"
+                  field="isRelevant" size={2} operator="OR"
+                  translations={checkboxLabels} />
+                <RefinementListFilter id="filter_domain" title="Domain"
+                  field="domain" size={15} operator="OR" />
               </div>
 
               <div className="col-sm-9">
-
                   <SearchBox searchOnChange={true} searchThrottleTime={1000} />
-
                   <ActionBar>
                     <ActionBarRow>
               				<HitsStats translations={{"hitstats.results_found":"{hitCount} results found."}}/>
@@ -330,10 +330,11 @@ class Search extends React.Component {
                       <ResetFilters/>
                     </ActionBarRow>
                   </ActionBar>
-                  <Hits hitsPerPage={10} highlightFields={["title"]} sourceFilter={["_id", "isRelevant", "title", "url", "retrieved", "text", "html"]} itemComponent={HitItem} />
-                  <LabelAllButtons/>
+                  <Hits hitsPerPage={10} highlightFields={["title"]}
+                    sourceFilter={["_id", "isRelevant", "title", "url", "retrieved", "text", "html"]}
+                    itemComponent={hitItemElement} />
+                  <LabelAllButtons searchkit={this.searchkit} />
                   <Pagination showNumbers={true}/>
-
               </div>
             </div>
           </SearchkitProvider>

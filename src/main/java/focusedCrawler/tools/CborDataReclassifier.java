@@ -23,7 +23,7 @@ public class CborDataReclassifier {
         Path inputLocation = Paths.get(args[0]);
         Path negativeDirectory = Paths.get(args[1]);
 
-        LinkFilter linkfilter = new LinkFilter(Paths.get(args[2]).toString());
+        LinkFilter linkfilter = new LinkFilter.Builder().withWhitelistFile(args[2]).build();
 
         int filesMoved = 0;
         int filesTotal = 0;

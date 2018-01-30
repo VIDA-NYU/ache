@@ -6,18 +6,20 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.PaginaURL;
-import focusedCrawler.util.storage.Storage;
 
 public class FetchedResultHandler implements HttpDownloader.Callback {
     
     private static final Logger logger = LoggerFactory.getLogger(FetchedResultHandler.class);
     
-    private Storage targetStorage;
+    private String crawlerId;
+    private TargetStorage targetStorage;
 
-    public FetchedResultHandler(Storage targetStorage) {
+    public FetchedResultHandler(String crawlerId, TargetStorage targetStorage) {
+        this.crawlerId = crawlerId;
         this.targetStorage = targetStorage;
     }
     
@@ -47,7 +49,7 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
         try {
             Page page = new Page(response);
             page.setLinkRelevance(link);
-
+            page.setCrawlerId(crawlerId);
             if (page.isHtml()) {
                 PaginaURL pageParser = new PaginaURL(page);
                 page.setParsedData(new ParsedData(pageParser));

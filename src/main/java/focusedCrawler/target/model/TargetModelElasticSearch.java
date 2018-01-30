@@ -8,11 +8,9 @@ import java.util.Map;
 
 import com.google.common.net.InternetDomainName;
 
-import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import de.l3s.boilerpipe.extractors.DefaultExtractor;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.PaginaURL;
-import focusedCrawler.util.readability.Readability;
 
 public class TargetModelElasticSearch {
 
@@ -29,9 +27,6 @@ public class TargetModelElasticSearch {
 	private String isRelevant;
 	private double relevance;
 
-	private String readabilityOuterHtml;
-	private String readabilityInnerHtml;
-
 	public TargetModelElasticSearch() {
 		// mandatory for object unserialization
 	}
@@ -40,8 +35,7 @@ public class TargetModelElasticSearch {
 		this.url = page.getURL().toString();
 		this.retrieved = new Date();
 		this.domain = page.getDomainName();
-		// this.html = page.getContentAsString();
-
+		this.html = page.getContentAsString();
 		this.responseHeaders = page.getResponseHeaders();
 		this.topPrivateDomain = LinkRelevance.getTopLevelDomain(page.getDomainName());
 		this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
@@ -51,11 +45,8 @@ public class TargetModelElasticSearch {
 			this.title = page.getParsedData().getTitle();
 			this.relevance = page.getTargetRelevance().getRelevance();
 			try {
-				Readability readability = new Readability(page.getContentAsString());
-				readability.init();
-
-				this.text = DefaultExtractor.getInstance().getText(readability.html());
-			} catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
+				this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
+			} catch (Exception e) {
 				this.text = "";
 			}
 		}
@@ -184,20 +175,12 @@ public class TargetModelElasticSearch {
 		this.relevance = relevance;
 	}
 
-	public String getReadabilityOuterHtml() {
-		return readabilityOuterHtml;
+	public Map<String, List<String>> getResponseHeaders() {
+		return responseHeaders;
 	}
 
-	public void setReadabilityOuterHtml(String readabilityOuterHtml) {
-		this.readabilityOuterHtml = readabilityOuterHtml;
-	}
-
-	public String getReadabilityInnerHtml() {
-		return readabilityInnerHtml;
-	}
-
-	public void setReadabilityInnerHtml(String readabilityInnerHtml) {
-		this.readabilityInnerHtml = readabilityInnerHtml;
+	public void setResponseHeaders(Map<String, List<String>> responseHeaders) {
+		this.responseHeaders = responseHeaders;
 	}
 
 }
