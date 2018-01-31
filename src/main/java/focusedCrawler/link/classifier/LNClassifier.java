@@ -60,11 +60,11 @@ public class LNClassifier {
 
     public void writeToFolder(Path linkClassifierFolder) throws IOException {
         String featuresFile = linkClassifierFolder.resolve("link_classifier.features").toString();
-        logger.info("Link Clasifier features file: " + featuresFile);
+        logger.info("Link Classifier features file: " + featuresFile);
         writeFeaturesFile(featuresFile, attributes);
 
         String modelFile = linkClassifierFolder.resolve("link_classifier.model").toString();
-        logger.info("Link Clasifier model file: " + modelFile);
+        logger.info("Link Classifier model file: " + modelFile);
         SmileUtil.writeSmileClassifier(modelFile, classifier);
     }
 
