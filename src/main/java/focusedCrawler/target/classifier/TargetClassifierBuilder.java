@@ -118,11 +118,26 @@ public class TargetClassifierBuilder {
         System.out.println("Writing features file to: " + featuresFilePath.toString());
         createFeaturesFile(featuresFilePath, features);
         
+        //
+        // Generating pageclassifier.yml
+        //
+        Path ymlFilePath = Paths.get(outputPath, "pageclassifier.yml");
+        System.out.println("Writing pageclassifier.yml file to: " + ymlFilePath.toString());
+        createPageClassifierYml(ymlFilePath);
+
+        // Remove temporary file
         Files.delete(Paths.get(arffFilePath));
-        
+
         System.out.println("done.");
-        
-        
+    }
+
+    private void createPageClassifierYml(Path ymlFilePath) throws IOException {
+        FileWriter fwriter = new FileWriter(ymlFilePath.toFile());
+        fwriter.write("type: smile\n");
+        fwriter.write("parameters:\n");
+        fwriter.write("  features_file: pageclassifier.features\n");
+        fwriter.write("  model_file: pageclassifier.model\n");
+        fwriter.close();
     }
 
     private void createFeaturesFile(Path featuresFilePath, List<VSMElement> features) {
