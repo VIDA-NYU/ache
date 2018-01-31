@@ -33,9 +33,7 @@ import java.util.List;
 public class FilterData {
 
 	private int maxElements;
-
 	private int maxWordSize;
-
 
 	public FilterData(int maxElements, int maxWordSize) {
 		this.maxElements = maxElements;
@@ -121,7 +119,7 @@ public class FilterData {
 				}
 			}
 		}
-		Collections.sort(wordFreqList, new WordSizeComparator());
+		Collections.sort(wordFreqList, WordFrequency.WORD_SIZE_ASC_COMPARATOR);
 		for (int i = 0; i < wordFreqList.size(); i++) {
 			WordFrequency firstWordFreq = wordFreqList.get(i);
 			String word = firstWordFreq.getWord();
@@ -152,8 +150,8 @@ public class FilterData {
 				}
 			}
 		}
-		Collections.sort(finalWords, new WordFrequencyComparator());
+		Collections.sort(finalWords, WordFrequency.WORD_FREQUENCY_DESC_COMPARATOR);
 		return finalWords;
 	}
-}
 
+}

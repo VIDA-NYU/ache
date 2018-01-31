@@ -100,7 +100,7 @@ public class LinkClassifierFeatureSelector {
         String[][] fieldWords = new String[WordField.FIELD_NAMES.length][];
 
         List<WordFrequency> aroundVector = new ArrayList<>(aroundWords.values());
-        Collections.sort(aroundVector, new WordFrequencyComparator());
+        Collections.sort(aroundVector, WordFrequency.WORD_FREQUENCY_DESC_COMPARATOR);
         FilterData filterData1 = new FilterData(100, 2);
         List<WordFrequency> aroundFinal = filterData1.filter(aroundVector, null);
         String[] aroundTemp = new String[aroundFinal.size()];
@@ -114,7 +114,7 @@ public class LinkClassifierFeatureSelector {
 
 
         List<WordFrequency> urlVector = new ArrayList<>(urlWords.values());
-        Collections.sort(urlVector, new WordFrequencyComparator());
+        Collections.sort(urlVector, WordFrequency.WORD_FREQUENCY_DESC_COMPARATOR);
         FilterData filterData2 = new FilterData(150, 2);
         List<WordFrequency> urlFinal = filterData2.filter(urlVector, new ArrayList<>(aroundFinal));
         String[] urlTemp = new String[urlFinal.size()];
@@ -128,7 +128,7 @@ public class LinkClassifierFeatureSelector {
 
         if (!backlink) {
             List<WordFrequency> anchorVector = new ArrayList<>(anchorWords.values());
-            Collections.sort(anchorVector, new WordFrequencyComparator());
+            Collections.sort(anchorVector, WordFrequency.WORD_FREQUENCY_DESC_COMPARATOR);
             FilterData filterData3 = new FilterData(150, 2);
             List<WordFrequency> anchorFinal = filterData3.filter(anchorVector, null);
             String[] anchorTemp = new String[anchorFinal.size()];
