@@ -3,6 +3,9 @@ package focusedCrawler.target.classifier;
 import java.io.FileInputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import focusedCrawler.util.SmileUtil;
 import smile.classification.RandomForest;
@@ -145,10 +148,28 @@ public class SmileTargetClassifierBuilder {
         System.out.printf("  Prediction errors: %d\n", errors);
         System.out.printf("           Accuracy: %.5f\n", accuracy);
         System.out.printf("\nConfusion Matrix\n\n");
-        System.out.println(new ConfusionMatrix(truth, predictions));
+        System.out.println(confusionMatrix(truth, predictions));
         System.out.println();
 
         return accuracy;
+    }
+
+    private static String confusionMatrix(int[] truth, int[] predictions) {
+        // SMILE's ConfusionMatrix class throws an ArrayIndexOutOfBoundsException when truth vector
+        // contains less classes than possible classes in the predictions vector. Here we just check
+        // that condition to avoid stopping due to this error.
+        Set<Integer> ySet = new HashSet<>();
+        int maxClass = 0;
+        for (int i = 0; i < truth.length; i++) {
+            ySet.add(truth[i]);
+            maxClass = java.lang.Math.max(maxClass, predictions[i]);
+            maxClass = java.lang.Math.max(maxClass, truth[i]);
+        }
+        if (maxClass >= ySet.size()) {
+            return String.format("[Can't print confusion matrix for %d class(es)]", ySet.size());
+        } else {
+            return new ConfusionMatrix(truth, predictions).toString();
+        }
     }
 
     private static int countErrors(int[] predictions, int[] thruth) {
