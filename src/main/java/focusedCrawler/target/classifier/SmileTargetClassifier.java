@@ -154,9 +154,10 @@ public class SmileTargetClassifier implements TargetClassifier {
     
     public static class Builder {
 
-        public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters) throws IOException {
+        public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters)
+                throws IOException {
 
-        	SmileClassifierConfig params = yaml.treeToValue(parameters, SmileClassifierConfig.class);
+            SmileClassifierConfig params = yaml.treeToValue(parameters, SmileClassifierConfig.class);
             params.model_file = resolveRelativePath(basePath, params.model_file);
             params.features_file = resolveRelativePath(basePath, params.features_file);
             params.stopwords_file = resolveRelativePath(basePath, params.stopwords_file);
