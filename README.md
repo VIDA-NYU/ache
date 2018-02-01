@@ -21,7 +21,7 @@ ACHE supports many features, such as:
 - REST API and web-based user interface for crawler monitoring
 - Crawling of hidden services using TOR proxies
 
-# License
+## License
 
 Starting from version 0.11.0 onwards, ACHE is licensed under Apache 2.0.
 Previous versions were licensed under GNU GPL license.
