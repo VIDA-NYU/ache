@@ -1,4 +1,4 @@
-type: weka
+type: smile
 parameters:
   features_file: pageclassifier.features
   model_file: pageclassifier.model

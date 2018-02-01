@@ -1,91 +1,84 @@
 package focusedCrawler.link.classifier;
 
-import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.util.Iterator;
-import java.util.Map;
+import java.nio.file.Path;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.classifier.builder.Instance;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.util.ParameterFile;
+import focusedCrawler.util.SmileUtil;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.string.StopList;
-import weka.classifiers.Classifier;
-import weka.core.Instances;
+import smile.classification.SoftClassifier;
 
 public class LNClassifier {
 
-	private final Classifier classifier;
-	private final Instances instances;
-	private final LinkNeighborhoodWrapper wrapper;
-	private final String[] attributes;
+    private static final Logger logger = LoggerFactory.getLogger(LNClassifier.class);
 
-	public LNClassifier(Classifier classifier, Instances instances,
-	                    LinkNeighborhoodWrapper wrapper, String[] attributes) {
-		this.classifier = classifier;
-		this.instances = instances;
-		this.wrapper = wrapper;
-		this.attributes = attributes;
-	}
-	
-	public double[] classify(LinkNeighborhood ln) throws Exception {
-		Map<String, Instance> urlWords = wrapper.extractLinksFull(ln, attributes);
-		Iterator<String> iter = urlWords.keySet().iterator();
-		String url = iter.next();
-		Instance instance = (Instance)urlWords.get(url);
-		double[] values = instance.getValues();
+    private final SoftClassifier<double[]> classifier;
+    private final LinkNeighborhoodWrapper wrapper;
+    private final String[] attributes;
+    private String[] classValues;
+
+    public LNClassifier(SoftClassifier<double[]> classifier, LinkNeighborhoodWrapper wrapper,
+            String[] attributes, String[] classValues) {
+        this.classifier = classifier;
+        this.wrapper = wrapper;
+        this.attributes = attributes;
+        this.classValues = classValues;
+    }
+
+    public double[] classify(LinkNeighborhood ln) throws Exception {
+        Instance instance = wrapper.extractToInstanceWithImageFeatures(ln, attributes);
+        double[] values = instance.getValues();
+        double[] prob = new double[classValues.length];
         synchronized (classifier) {
-            weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-            instanceWeka.setDataset(instances);
-            double[] probs = classifier.distributionForInstance(instanceWeka);
-            return probs;
-        }
-	}
-	
-	public static LNClassifier create(String featureFilePath,
-	                                  String modelFilePath,
-	                                  StopList stoplist) {
-	    ParameterFile config = new ParameterFile(featureFilePath); 
-	    String[] attributes = config.getParam("ATTRIBUTES", " ");
-	    String[] classValues = config.getParam("CLASS_VALUES", " ");
-	    return create(attributes, classValues, modelFilePath, stoplist);
-	}
-	
-	public static LNClassifier create(String[] attributes, String[] classValues,
-	                                  String modelFilePath, StopList stoplist) {
-	    weka.core.FastVector vectorAtt = new weka.core.FastVector();
-	    for (int i = 0; i < attributes.length; i++) {
-	        vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-	    }
-	    weka.core.FastVector classAtt = new weka.core.FastVector();
-	    for (int i = 0; i < classValues.length; i++) {
-	        classAtt.addElement(classValues[i]);
-	    }
-	    vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-	    Instances insts = new Instances("link_classification", vectorAtt, 1);
-	    insts.setClassIndex(attributes.length);
-	    
-	    LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
-	    
-	    Classifier classifier = loadWekaClassifier(modelFilePath);
-	    
-	    return new LNClassifier(classifier, insts, wrapper, attributes);
-	    
-	}
-    
-    private static Classifier loadWekaClassifier(String modelFilePath) {
-        try {
-            InputStream is = new FileInputStream(modelFilePath);
-            ObjectInputStream objectInputStream = new ObjectInputStream(is);
-            Classifier classifier = (Classifier) objectInputStream.readObject();
-            objectInputStream.close();
-            return classifier;
-        } catch (IOException | ClassNotFoundException e) {
-            throw new IllegalArgumentException(
-                    "Failed to load weka classifier instance from file: " + modelFilePath, e);
+            classifier.predict(values, prob);
+            return prob;
         }
     }
-	
+
+    public static LNClassifier create(String featureFilePath,
+            String modelFilePath,
+            StopList stoplist) {
+        ParameterFile config = new ParameterFile(featureFilePath);
+        String[] attributes = config.getParam("ATTRIBUTES", " ");
+        String[] classValues = config.getParam("CLASS_VALUES", " ");
+        return create(attributes, classValues, modelFilePath, stoplist);
+    }
+
+    public static LNClassifier create(String[] attributes, String[] classValues,
+            String modelFilePath, StopList stoplist) {
+        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
+        SoftClassifier<double[]> classifier = SmileUtil.loadSmileClassifier(modelFilePath);
+        return new LNClassifier(classifier, wrapper, attributes, classValues);
+    }
+
+    public void writeToFolder(Path linkClassifierFolder) throws IOException {
+        String featuresFile = linkClassifierFolder.resolve("link_classifier.features").toString();
+        logger.info("Link Classifier features file: " + featuresFile);
+        writeFeaturesFile(featuresFile, attributes);
+
+        String modelFile = linkClassifierFolder.resolve("link_classifier.model").toString();
+        logger.info("Link Classifier model file: " + modelFile);
+        SmileUtil.writeSmileClassifier(modelFile, classifier);
+    }
+
+    private void writeFeaturesFile(String featuresFile, String[] features) throws IOException {
+        FileWriter outputFile = new FileWriter(featuresFile, false);
+        outputFile.write("CLASS_VALUES");
+        for (int i = 0; i < classValues.length; i++) {
+            outputFile.write(" " + classValues[i]);
+        }
+        outputFile.write("\nATTRIBUTES");
+        for (int i = 0; i < features.length; i++) {
+            outputFile.write(" " + features[i]);
+        }
+        outputFile.close();
+    }
+
 }

@@ -1,33 +1,5 @@
-/*
-############################################################################
-##
-## Copyright (C) 2006-2009 University of Utah. All rights reserved.
-##
-## This file is part of DeepPeep.
-##
-## This file may be used under the terms of the GNU General Public
-## License version 2.0 as published by the Free Software Foundation
-## and appearing in the file LICENSE.GPL included in the packaging of
-## this file.  Please review the following to ensure GNU General Public
-## Licensing requirements will be met:
-## http://www.opensource.org/licenses/gpl-license.php
-##
-## If you are unsure which license is appropriate for your use (for
-## instance, you are interested in developing a commercial derivative
-## of DeepPeep), please contact us at deeppeep@sci.utah.edu.
-##
-## This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-##
-############################################################################
-*/
 package focusedCrawler.util.vsm;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.StringReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collections;
@@ -36,26 +8,9 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Vector;
 
-import org.cyberneko.html.parsers.DOMParser;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
-
-/**
- * <p>Title: </p>
- *
- * <p>Description: </p>
- *
- * @author not attributable
- * @version 1.0
- */
 
 public class VSMVector {
 
@@ -67,95 +22,9 @@ public class VSMVector {
   
   private String id;
   
-  public VSMVector() {
-    this.elems = new HashMap<>();
-  }
-
   public VSMVector(StopList stoplist) {
 	    this.elems = new HashMap<>();
 	    this.stoplist = stoplist;
-  }
-  
-  public VSMVector(String file, boolean isForm, StopList stoplist) throws MalformedURLException, IOException, SAXException {
-	  this.stoplist = stoplist;
-      this.elems = new HashMap<>();
-      if(isForm){
-          DOMParser parser = new DOMParser();
-          if((file.toLowerCase()).indexOf("<form ") != -1){//verify if the string is the name of file or the content of form
-              parser.parse(new InputSource(new BufferedReader(new StringReader(file))));
-          }else{
-              parser.parse(file);
-          }
-          String srcForm = "";
-          Document doc = parser.getDocument();
-          NodeList list = doc.getElementsByTagName("form");
-          StringBuffer source = new StringBuffer();
-          parse(list.item(0), source, new StringBuffer(), "html", stoplist);
-          srcForm = source.toString().toLowerCase();
-          PaginaURL formPage = new PaginaURL(new URL("http://www"),srcForm, stoplist);
-
-          stemPage(formPage, true);
-      } else {
-          StringBuffer content = new StringBuffer();
-          BufferedReader input = new BufferedReader(new FileReader(new File(
-                  file)));
-          for (String line = input.readLine(); line != null;
-                  line = input.readLine()) {
-
-              content.append(line);
-              content.append("\n");
-
-          }
-          input.close();
-          String src = content.toString();
-          PaginaURL page = new PaginaURL(new URL("http://www"), src, stoplist);
-          addTitle(page, stoplist);
-          stemPage(page, false);
-      }
-  }
-  
-  private void addTitle(PaginaURL page, StopList stoplist) throws MalformedURLException{
-	  this.stoplist = stoplist;
-	  PaginaURL title = new PaginaURL(new URL("http://www"),page.titulo(), stoplist);
-	  String[] titleWords = title.palavras();
-	  String[] metaTerms = page.palavrasMeta();
-	  int[] metaOccurrencies = page.ocorrenciasMeta();
-	  for (int i = 0; i < metaTerms.length; i++) {
-          String word = metaTerms[i].toLowerCase();
- 		   word = stemmer.stem(word);
- 		   if(word.indexOf("No term") != -1){
-             continue;
-          }
- 		   if(word.length() > 2 ){
- 			   word = "meta" + word;
- 			   VSMElement vsmElem = this.getElement(word);
- 	             if(vsmElem == null){
- 	               this.addElement(new VSMElement(word,metaOccurrencies[i]));
- 	             }else{
- 	               double weight = vsmElem.getWeight();
- 	               this.addElement(new VSMElement(word,weight+1));
- 	             }
- 	         }
-      }
-	  
-      for (int i = 0; i < titleWords.length; i++) {
-    	  String word = titleWords[i].toLowerCase();
-    	  
-  		   word = stemmer.stem(word);
-  		   if(word.indexOf("No term") != -1){
-              continue;
-           }
-  		   if(word.length() > 2 ){
-  			   word = "title" + word;
-  			   VSMElement vsmElem = this.getElement(word);
-  			   if(vsmElem == null){
-  				   this.addElement(new VSMElement(word,1));
-  			   }else{
-  				   double weight = vsmElem.getWeight();
-  	               this.addElement(new VSMElement(word,weight+1));
-  			   }
-  		   }
-      }
   }
 
   public VSMVector(String document, StopList stoplist, boolean stem) throws   MalformedURLException {
@@ -176,7 +45,6 @@ public class VSMVector {
 	            if(frequencies[i] == 0){
 	            	 continue;
 	             }
-//	             if(words[i].length() > 2 ){
 	               VSMElement vsmElem = this.getElement(words[i]);
 	               if(vsmElem == null){
 	                   this.addElement(new VSMElement(words[i],1));
@@ -184,57 +52,58 @@ public class VSMVector {
 	                   double weight = vsmElem.getWeight();
 	                   this.addElement(new VSMElement(words[i],1+weight));
 	               }
-//	             }
 	        }
 	  }
   }
   
+    private void addTitle(PaginaURL page, StopList stoplist) throws MalformedURLException {
+        this.stoplist = stoplist;
+        PaginaURL title = new PaginaURL(new URL("http://www"), page.titulo(), stoplist);
+        String[] titleWords = title.palavras();
+        String[] metaTerms = page.palavrasMeta();
+        int[] metaOccurrencies = page.ocorrenciasMeta();
+        for (int i = 0; i < metaTerms.length; i++) {
+            String word = metaTerms[i].toLowerCase();
+            word = stemmer.stem(word);
+            if (word.indexOf("No term") != -1) {
+                continue;
+            }
+            if (word.length() > 2) {
+                word = "meta" + word;
+                VSMElement vsmElem = this.getElement(word);
+                if (vsmElem == null) {
+                    this.addElement(new VSMElement(word, metaOccurrencies[i]));
+                } else {
+                    double weight = vsmElem.getWeight();
+                    this.addElement(new VSMElement(word, weight + 1));
+                }
+            }
+        }
+
+        for (int i = 0; i < titleWords.length; i++) {
+            String word = titleWords[i].toLowerCase();
+
+            word = stemmer.stem(word);
+            if (word.indexOf("No term") != -1) {
+                continue;
+            }
+            if (word.length() > 2) {
+                word = "title" + word;
+                VSMElement vsmElem = this.getElement(word);
+                if (vsmElem == null) {
+                    this.addElement(new VSMElement(word, 1));
+                } else {
+                    double weight = vsmElem.getWeight();
+                    this.addElement(new VSMElement(word, weight + 1));
+                }
+            }
+        }
+    }
+
   public String getId(){
 	  return this.id;
   }
   
-  public VSMVector(String id, String document, StopList stoplist) throws
-  	MalformedURLException {
-	  this(document,stoplist);
-	  this.id = id;
-  }
-  
-  public VSMVector(String document, StopList stoplist) throws MalformedURLException {
-	  
-	  if(!document.contains("<html>")){
-		  document = "<html> " + document + " </html>"; 
-	  }
-	  this.stoplist = stoplist;
-	  this.elems = new HashMap<>();
-      PaginaURL page = new PaginaURL(new URL("http://www"), document, stoplist);
-      addTitle(page, stoplist);
-	  stemPage(page, false);
-
-  }
-
-  public VSMVector(PaginaURL page, StopList stoplist) throws  MalformedURLException {
-	  this.stoplist = stoplist;
-	  this.elems = new HashMap<>();
-	  stemPage(page, false);
-  }
-
-  
-  public VSMVector(String []words, StopList stoplist) throws MalformedURLException, IOException, SAXException {
-	  this.stoplist = stoplist;
-	  String word;
-    
-	  for (int i = 0; i < words.length; i++) {
-		  word = stemmer.stem(words[i]);
-		  VSMElement vsmElem = this.getElement(word);
-		  if(vsmElem == null){
-			  this.addElement(new VSMElement(word, 1));
-		  }else{
-			  double weight = vsmElem.getWeight();
-			  this.addElement(new VSMElement(word, 1+weight));
-		  }
-	  }
-  }
-
   public void addElements(String []words) {
     for (int i = 0; i < words.length; i++) {
     	this.addElement(words[i]);
@@ -247,8 +116,6 @@ public class VSMVector {
 
 
   public void addElement(VSMElement elem){
-//	  if(!stoplist.eIrrelevante(elem.getWord())){
-//		  word = stemmer.stem(word);
 		  VSMElement vsmElem = this.getElement(elem.getWord());
 		  if(vsmElem == null){
 			  elems.put(elem.getWord(), elem);
@@ -256,7 +123,6 @@ public class VSMVector {
 			  double weight = vsmElem.getWeight();
 			  elems.put(elem.getWord(),new VSMElement(elem.getWord(), elem.getWeight()+weight));
 		  }
-//	  }
   }
 
   public VSMElement getElement(String word){
@@ -360,13 +226,10 @@ public class VSMVector {
     	  VSMElement elemA = iterA.next();
     	  VSMElement elemB = vectorB.getElement(elemA.getWord());
           if( elemB != null){ //overlap
-//            numerator = numerator + elemA.getWeight()*elemB.getWeight();
         	  numerator = numerator + 1;
           }
       }
       double denominator = vectorA.size() + vectorB.size() - numerator;
-//        System.out.println("NUMERATOR:"+numerator);
-//        System.out.println("NUMERATOR:"+denominator);
       return numerator/denominator;
   }
   
@@ -378,7 +241,6 @@ public class VSMVector {
     	  VSMElement elemA = iterA.next();
     	  VSMElement elemB = vectorB.getElement(elemA.getWord());
           if( elemB != null){ //overlap
-//            numerator = numerator + elemA.getWeight()*elemB.getWeight();
         	  numerator = numerator + 1;
           }
       }
@@ -435,16 +297,6 @@ public class VSMVector {
         
         double den = (Math.sqrt(denominatorA)*Math.sqrt(denominatorB));
         double weight = numerator/den;
-//        if(weight > 0.52 && weight < 0.53){
-//            System.out.println("A:" + vectorA.toString());
-//            System.out.println("B:" + vectorB.toString());
-//            System.out.println("NUMERATOR:"+numerator);
-//            System.out.println("DENOMINA:"+denominatorA);
-//            System.out.println("DENOMINB:"+denominatorB);
-//            System.out.println("DENOMIN:"+den);
-//            System.out.println("SIM:"+weight);
-//        }
-        
         return weight;
       }
 
@@ -479,8 +331,7 @@ public class VSMVector {
     	}
     }
 
-    public static HashMap<String, Integer> calculateIDFs(VSMVector[] vectors) throws IOException,
-        SAXException {
+    public static HashMap<String, Integer> calculateIDFs(VSMVector[] vectors) {
 
       HashMap<String, Integer> idfs = new HashMap<>();
 
@@ -505,8 +356,7 @@ public class VSMVector {
       return idfs;
     }
 
-    public HashMap<String, Integer> calculateWordOccurence(VSMVector[] vectors) throws IOException,
-        SAXException {
+    public HashMap<String, Integer> calculateWordOccurence(VSMVector[] vectors) {
 
         HashMap<String, Integer> idfs = new HashMap<>();
 
@@ -633,7 +483,7 @@ public class VSMVector {
 	  for(VSMElement elem : elems.values()) {
           temp.add(elem);
       }
-      Collections.sort(temp,new VSMElementComparator());
+      Collections.sort(temp, VSMElement.DESC_ORDER_COMPARATOR);
       VSMElement[] res = new VSMElement[n];
       for (int i = 0; i < temp.size() && i < n; i++) {
           res[i] = temp.elementAt(i);
@@ -649,7 +499,7 @@ public class VSMVector {
           VSMElement elem = iter.next();
           temp.add(elem);
       }
-      Collections.sort(temp,new VSMElementComparator());
+      Collections.sort(temp, VSMElement.DESC_ORDER_COMPARATOR);
       buf.append("[");
       for (int i = 0; i < temp.size(); i++) {
           VSMElement elem = temp.elementAt(i);
@@ -664,92 +514,4 @@ public class VSMVector {
 	  elems.remove(word);
   }
   
-  private void parse(Node node, StringBuffer source, StringBuffer sourceTemp, String father,StopList stoplist) {
-//    System.out.println(node.getClass().getName());
-//    System.out.println("Name "+ node.getNodeName());
-//    System.out.println("Type "+ node.getNodeType());
-//    System.out.println("Value "+ node.getNodeValue());
-      if(node == null){
-        return;
-      }
-      String value = node.getNodeValue() + " of";
-       if(Node.TEXT_NODE == node.getNodeType()){
-
-           if(value.trim().indexOf("<") == -1){
-
-              PaginaURL pageTemp = null;
-              String[] words = null;
-              try {
-                pageTemp = new PaginaURL(new URL("http://www"),value, stoplist);
-                words = pageTemp.palavras();
-              }
-              catch (MalformedURLException ex) {
-
-              }
-              for(int i = 0; words != null && i < words.length; i++){
-
-//              String stem = stemmer.stem(words[i]);
-//              if(stem.equals("Invalid term")){
-//                stem = words[i];
-//              }
-//              if(stem.indexOf("check") != -1){
-//                stem = "check";
-//              }
-//
-//              if(!father.equals("OPTION")){
-//                source.append("body");
-//                source.append(stem);
-//                source.append(" ");
-//              }else{
-//                source.append(stem);
-//                source.append(" ");
-//              }
-                String stem = words[i];
-                try{
-                  stem = stemmer.stem(words[i]);
-                }catch(Exception e){
-                }
-                if(!father.equals("OPTION")){
-
-                  if(stem.equals("Invalid term")){
-                    stem = words[i];
-                  }
-                  if(stem.indexOf("check") != -1){
-                    stem = "check";
-                  }
-                  source.append("body");
-                  source.append(stem);
-                  source.append(" ");
-                }else{
-                  source.append(stem);
-                  source.append(" ");
-                }
-              }
-
-
-              }
-           return;
-         }
-         if(node.getNodeName().equals("INPUT")){
-           NamedNodeMap attrs = node.getAttributes();
-           for (int i = 0; i < attrs.getLength(); i++) {
-             Node attr = attrs.item(i);
-             String attrName = ((attr.getNodeName().trim()).toLowerCase());
-             String attrValue = ((attr.getNodeValue().trim()).toLowerCase());
-             if(attrName.equals("type") && !attrValue.equals("hidden")){
-               source = source.append(sourceTemp);
-               sourceTemp.delete(0,sourceTemp.length());
-             }
-           }
-         }
-         father = node.getNodeName();
-         NodeList children = node.getChildNodes();
-         if (children != null) {
-           int len = children.getLength();
-           for (int i = 0; i < len; i++){
-             parse(children.item(i),source,sourceTemp, father, stoplist);
-           }
-         }
-       }
-
 }

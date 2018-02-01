@@ -57,12 +57,18 @@ public class TargetClassifierFactory {
             if("keep_link_relevance".equals(classifierType)) {
                 classifier = new KeepLinkRelevanceTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
-            
-            if("weka".equals(classifierType)) {
-                classifier = new WekaTargetClassifier.Builder().build(basePath, yaml, parameters);
+
+            if ("smile".equals(classifierType)) {
+                classifier = new SmileTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
             
-            if(classifier != null) {
+            if ("weka".equals(classifierType)) {
+                throw new IllegalArgumentException(
+                        "The 'weka' classifier is not supported anymore and was replaced by the 'smile' classifier. "
+                                + "Please rebuild your model using the ACHE's buildModel command.");
+            }
+
+            if (classifier != null) {
                 return classifier;
             } else {
                 String errorMsg = "Could not instantiate classifier using config: " + configPath;
@@ -70,8 +76,8 @@ public class TargetClassifierFactory {
             }
         }
         
-        // create classic weka classifer to maintain compatibility with older versions
-        return WekaTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
+        // create classic smile classifer to maintain compatibility with older versions
+        return SmileTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
     }
 
 }
