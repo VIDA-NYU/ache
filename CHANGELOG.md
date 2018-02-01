@@ -5,6 +5,7 @@
 - Removed dependency on Weka and reimplemented all machine-learning code using SMILE.
 - Added option to skip cross-validation on `ache buildModel` command
 - Added option to configure max number of features on `ache buildModel` command
+- Changed license from GNU GPL to Apache 2.0
 
 ## Version 0.10.0 (2018-01-16)
 
