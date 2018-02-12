@@ -25,7 +25,7 @@ available. The following subsections describe how to configure them:
 * :ref:`url_regex <pageclassifier_url_regex>`
 * :ref:`body_regex <pageclassifier_body_regex>`
 * :ref:`regex <pageclassifier_regex>`
-* :ref:`smile <pageclassifier_smile>` (weka before version 0.11.0)
+* :ref:`smile <pageclassifier_smile>` (a.k.a "weka" before version 0.11.0)
 
 
 .. _pageclassifier_title_regex:
@@ -134,14 +134,17 @@ configuration, a page would have to:
 
 .. _pageclassifier_smile:
 
-smile (weka before version 0.11.0)
------------------------------------
+smile (a.k.a "weka" before version 0.11.0)
+------------------------------------------
 
-.. Note ::
+.. Warning ::
 
   This classifier was previously known as ``weka`` before version 0.11.0, and has
   been re-implemented using `SMILE library <http://haifengl.github.io/smile/>`_
-  which has more permissive open-source license (Apache v2).
+  which uses a more permissive open-source license (Apache 2.0).
+  If you have models built using a previous ACHE version, you will need to
+  re-build your model before upgrading ACHE to a version equal or greater
+  than 0.11.0.
 
 Classifies pages using a machine-learning based text classifier (SVM, Random Forest)
 trained using ACHE's ``buildModel`` command.
