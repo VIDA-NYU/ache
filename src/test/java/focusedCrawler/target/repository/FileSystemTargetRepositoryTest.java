@@ -35,6 +35,7 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelCbor;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
+import focusedCrawler.util.CloseableIterator;
 
 
 public class FileSystemTargetRepositoryTest {
@@ -231,10 +232,10 @@ public class FileSystemTargetRepositoryTest {
         repository.insert(target1);
         repository.insert(target2);
         
-        Iterator<TargetModelJson> it = repository.iterator();
+        CloseableIterator<Page> it = repository.pagesIterator();
         
         // then
-        TargetModelJson page;
+        Page page;
         
         assertThat(it.hasNext(), is(true));
         page = it.next();
@@ -264,7 +265,7 @@ public class FileSystemTargetRepositoryTest {
         FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename);
         
         // when
-        Iterator<TargetModelJson> it = repository.iterator();
+        CloseableIterator<Page> it = repository.pagesIterator();
         
         // then
         assertThat(it.hasNext(), is(false));

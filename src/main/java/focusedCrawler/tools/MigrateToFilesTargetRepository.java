@@ -2,13 +2,11 @@ package focusedCrawler.tools;
 
 
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.model.TargetModelCbor;
-import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
-import focusedCrawler.target.repository.FileSystemTargetRepository.FileContentIterator;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.util.CliTool;
+import focusedCrawler.util.CloseableIterator;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
@@ -43,20 +41,16 @@ public class MigrateToFilesTargetRepository extends CliTool {
 
         int processedPages = 0;
         
-        FileSystemTargetRepository oldRep = new FileSystemTargetRepository(inputPath, dataFormat, hashFilename, compressData);
+        FileSystemTargetRepository oldRep =
+                new FileSystemTargetRepository(inputPath, dataFormat, hashFilename, compressData);
         FilesTargetRepository newRep = new FilesTargetRepository(outputPath);
         
-        try (FileContentIterator<?> oldIt = oldRep.iterator()) {
+        try (CloseableIterator<Page> oldIt = oldRep.pagesIterator()) {
             while (oldIt.hasNext()) {
                 try {
-                    TargetModelJson target = null;
-                    if (dataFormat == DataFormat.CBOR) {
-                        target = new TargetModelJson(new Page((TargetModelCbor) oldIt.next()));
-                    } else if (dataFormat == DataFormat.JSON) {
-                        target = (TargetModelJson) oldIt.next();
-                    }
-                    newRep.insert(target);
-                } catch(Exception e) {
+                    Page page = oldIt.next();
+                    newRep.insert(page);
+                } catch (Exception e) {
                     System.out.println("Ignoring file due to failure.");
                     e.printStackTrace(System.out);
                     continue;
@@ -69,7 +63,8 @@ public class MigrateToFilesTargetRepository extends CliTool {
 
             }
         }
-        
+        newRep.close();
+        oldRep.close();
         System.out.printf("Finished processing %d pages.\n", processedPages);
     }
 

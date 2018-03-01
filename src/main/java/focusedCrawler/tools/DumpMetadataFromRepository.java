@@ -7,10 +7,10 @@ import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.hash.Hashing;
 
-import focusedCrawler.target.model.TargetModelJson;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.FilesTargetRepository;
-import focusedCrawler.target.repository.FilesTargetRepository.RepositoryIterator;
 import focusedCrawler.util.CliTool;
+import focusedCrawler.util.CloseableIterator;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
@@ -45,26 +45,27 @@ public class DumpMetadataFromRepository extends CliTool {
         }
         
         int totalPages = 0;
-        RepositoryIterator it = repository.iterator();
-        while(it.hasNext()) {
-            TargetModelJson page = it.next();
+        try (CloseableIterator<Page> it = repository.pagesIterator()) {
+            while (it.hasNext()) {
+                Page page = it.next();
+                String url = page.getFinalUrl();
+                String id = Hashing.sha256().hashBytes(url.getBytes()).toString();
+                String signature = Hashing.md5().hashBytes(page.getContent()).toString();
 
-            String id = Hashing.sha256().hashBytes(page.getUrl().getBytes()).toString();
-            String signature = Hashing.md5().hashBytes(page.getContent()).toString();
-            
-            Map<String, Object> obj = new HashMap<String, Object>();
-            obj.put("id", id);
-            obj.put("url", page.getUrl());
-            obj.put("signature", signature);
-            obj.put("score", page.getRelevance().getRelevance());
-            obj.put("team", "NYU");
-            obj.put("timestamp_fetch", page.getFetchTime());
-            
-            out.println(jsonMapper.writeValueAsString(obj));
-            
-            totalPages++;
-            if (totalPages % 1000 == 0) {
-                System.out.printf("Processed %s pages...\n", totalPages);
+                Map<String, Object> obj = new HashMap<String, Object>();
+                obj.put("id", id);
+                obj.put("url", url);
+                obj.put("signature", signature);
+                obj.put("score", page.getTargetRelevance().getRelevance());
+                obj.put("team", "NYU");
+                obj.put("timestamp_fetch", page.getFetchTime());
+
+                out.println(jsonMapper.writeValueAsString(obj));
+
+                totalPages++;
+                if (totalPages % 1000 == 0) {
+                    System.out.printf("Processed %s pages...\n", totalPages);
+                }
             }
         }
         repository.close();

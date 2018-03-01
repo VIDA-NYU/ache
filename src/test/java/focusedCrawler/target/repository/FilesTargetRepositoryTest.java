@@ -11,7 +11,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -22,8 +21,7 @@ import org.junit.rules.TemporaryFolder;
 
 import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.model.TargetModelJson;
-import focusedCrawler.target.repository.FilesTargetRepository.RepositoryIterator;
+import focusedCrawler.util.CloseableIterator;
 
 
 public class FilesTargetRepositoryTest {
@@ -56,14 +54,14 @@ public class FilesTargetRepositoryTest {
 		repository.insert(target);
 		repository.close();
 		// then
-		RepositoryIterator it = repository.iterator();
+		CloseableIterator<Page> it = repository.pagesIterator();
 		assertThat(it.hasNext(), is(true));
-		TargetModelJson page = it.next();
+		Page page = it.next();
         assertThat(page.getContentAsString(), is(html));
-        assertThat(page.getUrl(), is(url));
+        assertThat(page.getFinalUrl(), is(url));
         assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
-        assertThat(page.getRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
-        assertThat(page.getRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
+        assertThat(page.getTargetRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
+        assertThat(page.getTargetRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
 	}
 	
 	@Test
@@ -85,10 +83,10 @@ public class FilesTargetRepositoryTest {
         repository.insert(target2);
         repository.close();
         
-        Iterator<TargetModelJson> it = repository.iterator();
+        CloseableIterator<Page> it = repository.pagesIterator();
         
         // then
-        TargetModelJson page;
+        Page page;
         
         assertThat(it.hasNext(), is(true));
         page = it.next();
@@ -122,7 +120,7 @@ public class FilesTargetRepositoryTest {
         FilesTargetRepository repository = new FilesTargetRepository(folder);
         
         // when
-        Iterator<TargetModelJson> it = repository.iterator();
+        CloseableIterator<Page> it = repository.pagesIterator();
         
         // then
         assertThat(it.hasNext(), is(false));

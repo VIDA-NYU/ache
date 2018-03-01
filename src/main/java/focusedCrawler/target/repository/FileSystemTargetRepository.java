@@ -11,6 +11,7 @@ import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -33,6 +34,7 @@ import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelCbor;
 import focusedCrawler.target.model.TargetModelJson;
+import focusedCrawler.util.CloseableIterator;
 
 /**
  * A target repository that stores pages in the file system. Files are organized per domain,
@@ -225,21 +227,21 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
         return object;
     }
-    
-    
-    public <T> FileContentIterator<T> iterator() {
-        return new FileContentIterator<T>(new FilesIterator(directory));
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
+        return new PagesIterator(new FilesIterator(directory));
     }
 
     public FilesIterator filesIterator() {
         return new FilesIterator(directory);
     };
     
-    public class FileContentIterator<T> implements Iterator<T>, Closeable {
+    public class PagesIterator implements CloseableIterator<Page> {
         
         private FilesIterator fileIterator;
 
-        public FileContentIterator(FilesIterator fileIterator) {
+        public PagesIterator(FilesIterator fileIterator) {
             this.fileIterator = fileIterator;
         }
         
@@ -249,13 +251,30 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
 
         @Override
-        public T next() {
+        public Page next() {
             if(!fileIterator.hasNext()) {
                 return null;
             }
             Path filePath = fileIterator.next();
             try {
-                return readFile(filePath);
+                if (dataFormat.equals(DataFormat.CBOR)) {
+                    TargetModelCbor object = readFile(filePath);
+                    return new Page(object);
+                } else if (dataFormat.equals(DataFormat.JSON)) {
+                    TargetModelJson object = readFile(filePath);
+                    return new Page(object);
+                } else if (dataFormat.equals(DataFormat.HTML)) {
+                    URL url;
+                    if(hashFilename) {
+                        url = new URL("http://"+filePath);
+                    } else {
+                        url = new URL(URLDecoder.decode(filePath.toString(), "UTF-8"));
+                    }
+                    String object = readFile(filePath);
+                    return new Page(url, object);
+                } else {
+                    throw new IllegalStateException("Unsuported data format: "+dataFormat);
+                }
             } catch (Exception e) {
                 String f = filePath == null ? null : filePath.toString();
                 throw new IllegalStateException("Failed to read file: "+f, e);

@@ -128,6 +128,21 @@ public class TargetStorage {
             targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 
+        TargetRepository targetRepository =
+                createTargetRepository(dataPath, esIndexName, esTypeName, config);
+
+        TargetStorageMonitor monitor = null;
+        if(metricsManager != null) {
+        	monitor = new TargetStorageMonitor(dataPath, metricsManager);
+        }else {
+        	monitor = new TargetStorageMonitor(dataPath);
+        }
+
+        return new TargetStorage(targetClassifier, targetRepository, linkStorage, monitor, config);
+    }
+
+    public static TargetRepository createTargetRepository(String dataPath, String esIndexName,
+            String esTypeName, TargetStorageConfig config) throws IOException {
         List<String> dataFormats = config.getDataFormats();
 
         List<TargetRepository> repositories = new ArrayList<>();
@@ -146,15 +161,7 @@ public class TargetStorage {
         } else {
             throw new IllegalArgumentException("No valid data formats configured.");
         }
-
-        TargetStorageMonitor monitor = null;
-        if(metricsManager != null) {
-        	monitor = new TargetStorageMonitor(dataPath, metricsManager);
-        }else {
-        	monitor = new TargetStorageMonitor(dataPath);
-        }
-
-        return new TargetStorage(targetClassifier, targetRepository, linkStorage, monitor, config);
+        return targetRepository;
     }
 
     private static TargetRepository createRepository(String dataFormat, String dataPath,
@@ -164,7 +171,9 @@ public class TargetStorage {
         boolean compressData = config.getCompressData();
         boolean hashFilename = config.getHashFileName();
 
-        logger.info("Using DATA_FORMAT: " + dataFormat);
+        logger.info("Loading repository with data_format={} from {}",
+                dataFormat, targetDirectory.toString());
+
         switch (dataFormat) {
             case "FILES":
                 return new FilesTargetRepository(targetDirectory, config.getMaxFileSize());
