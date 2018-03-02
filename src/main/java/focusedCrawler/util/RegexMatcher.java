@@ -25,8 +25,10 @@ public class RegexMatcher implements TextMatcher {
     private RegexMatcher(List<String> regexes, boolean reverse) {
         this.reverse = reverse;
         this.isEmpty = regexes == null || regexes.isEmpty();
-        for (String pattern : regexes) {
-            patterns.add(Pattern.compile(pattern, Pattern.CASE_INSENSITIVE | Pattern.DOTALL));
+        if(!this.isEmpty) {
+            for (String pattern : regexes) {
+                patterns.add(Pattern.compile(pattern, Pattern.CASE_INSENSITIVE | Pattern.DOTALL));
+            }
         }
     }
 
