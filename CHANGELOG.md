@@ -6,6 +6,7 @@
 - Added option to skip cross-validation on `ache buildModel` command
 - Added option to configure max number of features on `ache buildModel` command
 - Changed license from GNU GPL to Apache 2.0
+- Added tool (ache run ReplayCrawl) to replay old crawls using a new configuration file
 
 ## Version 0.10.0 (2018-01-16)
 

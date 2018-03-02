@@ -39,7 +39,9 @@ public class FrontierManagerFactory {
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
                                                               linkSelector, recrawlSelector, linkFilter,
                                                               metricsManager);
-        frontierManager.addSeeds(ParameterFile.getSeeds(seedFile));
+        if(seedFile != null) {
+            frontierManager.addSeeds(ParameterFile.getSeeds(seedFile));
+        }
         return frontierManager;
     }
 

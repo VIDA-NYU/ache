@@ -68,7 +68,9 @@ public class Page implements Serializable {
 
     public Page(TargetModelJson target) throws MalformedURLException {
         this.url = new URL(target.getUrl());
-        this.redirectedURL = new URL(target.getRedirectedUrl());
+        if(target.getRedirectedUrl() != null) {
+            this.redirectedURL = new URL(target.getRedirectedUrl());
+        }
         this.content = target.getContent();
         this.responseHeaders = target.getResponseHeaders();
         this.fetchTime = target.getFetchTime();
