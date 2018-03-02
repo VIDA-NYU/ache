@@ -63,9 +63,9 @@ public class TargetClassifierFactory {
             }
             
             if ("weka".equals(classifierType)) {
-                throw new IllegalArgumentException(
-                        "The 'weka' classifier is not supported anymore and was replaced by the 'smile' classifier. "
-                                + "Please rebuild your model using the ACHE's buildModel command.");
+                throw new IllegalArgumentException("The 'weka' classifier is not supported anymore"
+                        + " and was replaced by the 'smile' classifier. Please rebuild your model "
+                        + "using ACHE's buildModel command (and using and up-to-date version of ACHE).");
             }
 
             if (classifier != null) {
@@ -77,7 +77,14 @@ public class TargetClassifierFactory {
         }
         
         // create classic smile classifer to maintain compatibility with older versions
-        return SmileTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
+        try {
+            return SmileTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Failed to load target classifier model. "
+                    + "Please make sure that you provided the correct path to the model "
+                    + "and that your model was created using an up-to-date version that "
+                    + "supports SMILE target classifier.", e);
+        }
     }
 
 }
