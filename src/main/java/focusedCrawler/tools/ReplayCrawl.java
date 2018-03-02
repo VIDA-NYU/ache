@@ -25,6 +25,7 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.util.CliTool;
 import focusedCrawler.util.CloseableIterator;
+import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.MetricsManager;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
@@ -40,8 +41,13 @@ public class ReplayCrawl extends CliTool {
             description = "Path to input crawler data directory")
     String inputDataPath;
 
-    @Option(name = {"-icp", "--input-config-path"}, required = true, description = "")
+    @Option(name = {"-icp", "--input-config-path"}, required = true,
+            description = "Path to config path of the input crawl")
     String inputConfigPath;
+
+    @Option(name = {"-ilf", "--input-link-filter"}, required = true,
+            description = "Path to a .yml link fiter file")
+    private String inputLinkFilterPath;
 
     @Option(name = {"-cid", "--crawlerId"}, required = false,
             description = "An unique identifier for this crawler")
@@ -58,6 +64,9 @@ public class ReplayCrawl extends CliTool {
     @Option(name = {"-o", "--outputDir"}, required = true,
             description = "Path to folder which model built should be stored")
     String dataPath;
+
+    @Option(name = {"-s", "--seed"}, required = false, description = "Path to file of seed URLs")
+    String seedPath;
 
     @Option(name = {"-e", "--elasticIndex"}, required = false,
             description = "Name of Elasticsearch index to be used")
@@ -78,7 +87,6 @@ public class ReplayCrawl extends CliTool {
 
         MetricsManager metricsManager = new MetricsManager(false, dataPath);
 
-        String seedPath = null; // no need for seed since we're just replaying a previous crawl
         LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath,
                 modelPath, config.getLinkStorageConfig(), metricsManager);
 
@@ -97,8 +105,15 @@ public class ReplayCrawl extends CliTool {
                 inputConfig.getLinkStorageConfig().getMaxCacheUrlsSize(),
                 inputConfig.getLinkStorageConfig().getPersistentHashtableBackend());
 
-        replay(crawlerId, targetStorage, linkStorage, config, inputRepository, inputFrontier);
+        LinkFilter inputLinkFilter = new LinkFilter.Builder()
+                .fromYamlFile(inputLinkFilterPath).build();
 
+
+        this.replay(crawlerId, targetStorage, linkStorage, config, inputRepository,
+                inputFrontier, inputLinkFilter);
+
+
+        inputFrontier.close();
         inputRepository.close();
         targetStorage.close();
         linkStorage.close();
@@ -106,7 +121,8 @@ public class ReplayCrawl extends CliTool {
     }
 
     public void replay(String crawlerId, TargetStorage targetStorage, LinkStorage linkStorage,
-            Configuration config, TargetRepository inputRepository, Frontier inputFrontier)
+            Configuration config, TargetRepository inputRepository, Frontier inputFrontier,
+            LinkFilter inputLinkFilter)
             throws Exception {
 
         Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
@@ -119,21 +135,38 @@ public class ReplayCrawl extends CliTool {
                 downloaderConfig.getUserAgentName()));
 
         int processedPages = 0;
+        int ignoredPages = 0;
         try (CloseableIterator<Page> it = inputRepository.pagesIterator()) {
             while (it.hasNext()) {
+
+                if (processedPages % 1000 == 0) {
+                    double ignoredPercent = 100 * ignoredPages / (double) processedPages;
+                    System.out.printf("processed_pages = %d ignored = %d  ignored_percent = %.2f\n",
+                            processedPages, ignoredPages, ignoredPercent);
+                }
+
                 try {
                     Page page = it.next();
+
+                    String requestedUrl = page.getRequestedUrl();
+                    if (!inputLinkFilter.accept(requestedUrl)) {
+                        // logger.warn("Ignoring link because of filter: {}", requestedUrl);
+                        ignoredPages++;
+                        continue;
+                    }
+
                     String contentType = page.getContentType();
                     if (contentType == null || contentType.isEmpty()) {
                         logger.warn("Ignoring page with no content type.");
+                        ignoredPages++;
                         continue;
                     }
-                    String requestedUrl = page.getRequestedUrl();
 
                     LinkRelevance lr = inputFrontier.get(requestedUrl);
                     if (lr == null) {
                         logger.warn("Ignoring link because it is not present in the frontier: {}",
                                 requestedUrl);
+                        ignoredPages++;
                         continue;
                     }
 
@@ -153,9 +186,7 @@ public class ReplayCrawl extends CliTool {
                 } catch (Exception e) {
                     logger.error("An unexpected error happened.", e);
                 }
-                if (processedPages++ % 1000 == 0) {
-                    System.out.printf("Processed %s pages.\n", processedPages);
-                }
+                processedPages++;
             }
             System.out.printf("Processed %s pages.\n", processedPages);
             System.out.printf("done.\n");
