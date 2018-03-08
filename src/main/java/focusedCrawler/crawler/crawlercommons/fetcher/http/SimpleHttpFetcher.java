@@ -31,6 +31,8 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -75,6 +77,7 @@ import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -90,6 +93,7 @@ import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.crawler.cookies.ConcurrentCookieJar;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
@@ -148,13 +152,10 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private static final int DEFAULT_KEEP_ALIVE_DURATION = 5000;
 
     private IdleConnectionMonitorThread monitor;
+    
+    // Store cookies loaded from configuration file
+    private CookieStore globalCookieStore = null;
 
-    private ThreadLocal<CookieStore> localCookieStore = new ThreadLocal<CookieStore>() {
-        protected CookieStore initialValue() {
-            CookieStore cookieStore = new LocalCookieStore();
-            return cookieStore;
-        }
-    };
 
     private static final String SSL_CONTEXT_NAMES[] = { "TLS", "Default", "SSL", };
 
@@ -171,7 +172,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     transient private CloseableHttpClient _httpClient;
     transient private PoolingHttpClientConnectionManager _connectionManager;
 
-
+    
 
     private static class MyRequestRetryHandler implements HttpRequestRetryHandler {
         private int _maxRetryCount;
@@ -512,6 +513,10 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         _maxRetryCount = maxRetryCount;
     }
 
+    public void setCookieStore(CookieStore cookieStore) {
+        globalCookieStore = cookieStore;
+    }
+
     @Override
     public FetchedResult get(String url, Payload payload) throws BaseFetchException {
         try {
@@ -589,8 +594,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         // Without this we get killed w/lots of threads, due to sync() on single
         // cookie store.
         HttpContext localContext = new BasicHttpContext();
-        CookieStore cookieStore = localCookieStore.get();
-        localContext.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
+        localContext.setAttribute(HttpClientContext.COOKIE_STORE, globalCookieStore);
 
         StringBuilder fetchTrace = null;
         if (LOGGER.isTraceEnabled()) {
@@ -1091,4 +1095,48 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     public void setUserAgentString(String userAgentString) {
         this._userAgentString = userAgentString;
     }
+
+    /**
+     * Update cookie store with a map of cookies.
+     * key : domain name
+     * value : List of cookies associated with that domain name
+     * @param cookies
+     * @throws NullPointerException if the cookies argument is null
+     */
+	public void updateCookieStore(Map<String, List<Cookie>> cookies) {
+		if(cookies == null) {
+			throw new NullPointerException("Cookies argument can not be null");
+		}
+		if(globalCookieStore == null) {
+			globalCookieStore = new ConcurrentCookieJar();
+		}
+		for(List<Cookie> listOfCookies : cookies.values()) {
+			for(Cookie cookie: listOfCookies) {
+				globalCookieStore.addCookie(cookie);
+			}
+		}
+	}
+
+	/**
+	 * Updates the current cookie store with cookie
+	 * @param cookie
+	 * @throws NullPointerException if the cookie argument is null
+	 */
+	public void updateCookieStore(Cookie cookie) {
+		if(cookie == null) {
+			throw new NullPointerException("Argument cookie is null.");
+		}
+		if(globalCookieStore == null) {
+			globalCookieStore = new ConcurrentCookieJar();
+		}
+		globalCookieStore.addCookie(cookie);
+	}
+	
+	/**
+	 * Returns cookie store for testing.
+	 * @return
+	 */
+	public CookieStore getCookieStore() {
+		return globalCookieStore;
+	}
 }

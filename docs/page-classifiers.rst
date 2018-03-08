@@ -1,3 +1,5 @@
+.. _pageclassifiers:
+
 Target Page Classifiers
 #######################
 
@@ -6,6 +8,8 @@ Target Page Classifiers
 ACHE uses target page classifiers to distinguish between relevant and irrelevant pages.
 Page classifiers are flexible and can be as simple as a simple regular expression,
 or a sophisticated machine-learning based classification model.
+
+
 
 Configuring Page Classifiers
 ============================
@@ -21,7 +25,7 @@ available. The following subsections describe how to configure them:
 * :ref:`url_regex <pageclassifier_url_regex>`
 * :ref:`body_regex <pageclassifier_body_regex>`
 * :ref:`regex <pageclassifier_regex>`
-* :ref:`weka <pageclassifier_weka>`
+* :ref:`smile <pageclassifier_smile>` (a.k.a "weka" before version 0.11.0)
 
 
 .. _pageclassifier_title_regex:
@@ -128,37 +132,54 @@ configuration, a page would have to:
           - .*bar.*
           - .*foo.*
 
-.. _pageclassifier_weka:
+.. _pageclassifier_smile:
 
-weka
------------
+smile (a.k.a "weka" before version 0.11.0)
+------------------------------------------
 
-Classifies pages using a machine-learning based text classifier (SVM, Random Forest) trained using ACHE's `buildModel` command. Current classifier implementation uses the library Weka.
+.. Warning ::
 
-You need to provide the path for a *features_file*, a *model_file*, and a *stopwords_file* file containing the stop-words used during the training process:
+  This classifier was previously known as ``weka`` before version 0.11.0, and has
+  been re-implemented using `SMILE library <http://haifengl.github.io/smile/>`_
+  which uses a more permissive open-source license (Apache 2.0).
+  If you have models built using a previous ACHE version, you will need to
+  re-build your model before upgrading ACHE to a version equal or greater
+  than 0.11.0.
+
+Classifies pages using a machine-learning based text classifier (SVM, Random Forest)
+trained using ACHE's ``buildModel`` command.
+A `smile` classifier consists of a *features_file*, a *model_file*, and a
+*stopwords_file* file (which contains the stop-words used during the training
+process):
 
 .. code-block:: yaml
 
-  type: weka
+  type: smile
   parameters:
     features_file: pageclassifier.features
     model_file: pageclassifier.model
     stopwords_file: stoplist.txt
 
-You can build these files by training a model, as detailed in the next sub-section.
+All these files can be built automatically by training a model using the command
+``ache buildModel``, as detailed in the next sub-section. You can also run
+``ache help buildModel`` to see more options available.
+
 
 Alternatively, you can use the `Domain Discovery Tool (DDT) <https://github.com/ViDA-NYU/domain_discovery_tool>`_ to gather training data and build automatically these files.
 DDT is a interactive web-based application that helps the user with the process of training a page classifier for ACHE.
 
-Building a model for the weka page classifier
-*********************************************
+Building a model for the smile page classifier
+**********************************************
 
-To create the files ``pageclassifier.features`` and ``pageclassifier.model``, you
-can use ACHE's command line.
-You will need positive (relevant) and negative (irrelevant) examples of web pages to train the page classifier.
-You should store the HTML content of each web page in a plain text file. These files should be placed in two directories, named `positive` and `negative`, which reside in another empty directory. You can see an example at `config/sample_training_data <https://github.com/ViDA-NYU/ache/tree/master/config/sample_training_data>`_.
+To create the necessary configuration files, you will need to gather
+positive (relevant) and negative (irrelevant) examples of web pages to train
+the page classifier.
+You should store the HTML content of each web page in a plain text file.
+These files should be placed in two directories, named ``positive` and
+``negative``, which reside in another empty directory.
+See an example at `config/sample_training_data <https://github.com/ViDA-NYU/ache/tree/master/config/sample_training_data>`_.
 
-Here is how you build a model from these examples using ACHE's commmand line::
+Here is how you build a model from these examples using ACHE's command line::
 
   ache buildModel -t <training data path> -o <output path for model> -c <stopwords file path>
 

@@ -12,10 +12,10 @@ import java.util.Set;
 import com.google.common.hash.HashCode;
 import com.google.common.hash.Hashing;
 
-import focusedCrawler.target.model.TargetModelJson;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.FilesTargetRepository;
-import focusedCrawler.target.repository.FilesTargetRepository.RepositoryIterator;
 import focusedCrawler.util.CliTool;
+import focusedCrawler.util.CloseableIterator;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
@@ -64,43 +64,45 @@ public class DuplicateDetector extends CliTool {
         Map<String, Integer>  totalCounts = new HashMap<>();
         Map<String, Integer> dupCounts = new HashMap<>();
         
-        RepositoryIterator it = repository.iterator();
-        while(it.hasNext()) {
-            TargetModelJson page = it.next();
-            String host = new URL(page.getUrl()).getHost();
-            
-            HashCode code = Hashing.sha1().hashBytes(page.getContent());
-            String fingerprint = code.toString();
-            
-            if(seen.contains(fingerprint)) {
-                Integer dupCount = dupCounts.get(host);
-                if(dupCount == null) {
-                    dupCount = 0;
+        try (CloseableIterator<Page> it = repository.pagesIterator()) {
+            while (it.hasNext()) {
+                Page page = it.next();
+                String host = new URL(page.getFinalUrl()).getHost();
+
+                HashCode code = Hashing.sha1().hashBytes(page.getContent());
+                String fingerprint = code.toString();
+
+                if (seen.contains(fingerprint)) {
+                    Integer dupCount = dupCounts.get(host);
+                    if (dupCount == null) {
+                        dupCount = 0;
+                    }
+                    dupCount++;
+                    dupCounts.put(host, dupCount);
+
+                    dupPages++;
+                } else {
+                    if (dedupRepository != null) {
+                        dedupRepository.insert(page);
+                    }
+                    seen.add(fingerprint);
+                    uniqPages++;
                 }
-                dupCount++;
-                dupCounts.put(host, dupCount);
-                
-                dupPages++;
-            } else {
-                if(dedupRepository != null) {
-                    dedupRepository.insert(page);
+
+                Integer totalCount = totalCounts.get(host);
+                if (totalCount == null) {
+                    totalCount = 0;
                 }
-                seen.add(fingerprint);
-                uniqPages++;
-            }
-            
-            Integer totalCount =  totalCounts.get(host);
-            if(totalCount == null) {
-                totalCount = 0;
-            }
-            totalCount++;
-            totalCounts.put(host, totalCount);
-            
-            totalPages++;
-            if (totalPages % 1000 == 0) {
-                System.out.printf("Processed %s pages...\n", totalPages);
+                totalCount++;
+                totalCounts.put(host, totalCount);
+
+                totalPages++;
+                if (totalPages % 1000 == 0) {
+                    System.out.printf("Processed %s pages...\n", totalPages);
+                }
             }
         }
+
         repository.close();
         if(dedupRepository != null) {
             dedupRepository.close();

@@ -6,25 +6,43 @@ import static org.junit.Assert.assertThat;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
 
 import com.sun.net.httpserver.HttpServer;
 
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.util.MetricsManager;
 
+@RunWith(Parameterized.class)
 public class HttpDownloaderTest {
-    
-    private HttpDownloader downloader;
-    
-    @Before
-    public void setUp() {
-        this.downloader = new HttpDownloader();
+
+//    @Before
+//    public void setUp() {
+//        this.downloader = new HttpDownloader();
+//    }
+
+    @Parameter
+    public HttpDownloader downloader;
+
+    /*
+     * This test runs multiple times for each of the following parameters,
+     * to make sure that it works with all underlying fetcher implementations.
+     */
+    @Parameters
+    public static Iterable<? extends Object> data() {
+        HttpDownloader simple = new HttpDownloader();
+        HttpDownloader okHttp = new HttpDownloader(new HttpDownloaderConfig("okHttp"), null, new MetricsManager(false));
+        return Arrays.asList(simple, okHttp);
     }
 
     @Test

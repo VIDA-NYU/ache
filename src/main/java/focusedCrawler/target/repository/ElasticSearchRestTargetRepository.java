@@ -26,10 +26,12 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.google.common.collect.ImmutableMap;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.util.CloseableIterator;
 
 public class ElasticSearchRestTargetRepository implements TargetRepository {
     
@@ -45,11 +47,9 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
     private String typeName;
     private String indexName;
     
-    public ElasticSearchRestTargetRepository(ElasticSearchConfig config,
-                                             String indexName,
-                                             String typeName) {
-        this.indexName = indexName;
-        this.typeName = typeName;
+    public ElasticSearchRestTargetRepository(ElasticSearchConfig config) {
+        this.indexName = config.getIndexName();
+        this.typeName = config.getTypeName();
         this.client = createRestClient(config);
         this.createIndexMapping(indexName);
     }
@@ -86,7 +86,9 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"text\":             {\"type\": \"string\"},"
                 + "    \"title\":            {\"type\": \"string\"},"
                 + "    \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"}"
+                + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "    \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
             
@@ -99,8 +101,10 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
                 + "    \"text\":             {\"type\": \"text\"},"
                 + "    \"title\":            {\"type\": \"text\"},"
-                + "    \"url\":              {\"type\": \"keyword\",\"index\":true},"
-                + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true}"
+                + "    \"url\":              {\"type\": \"keyword\",\"index\": true},"
+                + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true},"
+                + "    \"isRelevant\":       {\"type\": \"keyword\",\"index\": true},"
+                + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
             
@@ -109,8 +113,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
             String mapping =
                      "{"
                    + "  \"mappings\": {"
-                   + "    \"target\": "+ pageProperties + ","
-                   + "    \"negative\": "+ pageProperties
+                   + "    \"" + typeName + "\": " + pageProperties
                    + "  }"
                    + "}";
             
@@ -131,19 +134,19 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         return new NStringEntity(mapping, ContentType.APPLICATION_JSON);
     }
 
-    public boolean insert(Page target) {
-        return index(target);
-    }
-
-    private boolean index(Page page) {
-
-        TargetModelElasticSearch data = new TargetModelElasticSearch(page);
-
+    @Override
+    public boolean insert(Page page) {
+        TargetModelElasticSearch document = new TargetModelElasticSearch(page);
         String docId = encodeUrl(page.getURL().toString());
-        String endpoint = "/" + indexName + "/" + typeName + "/" + docId;
-        AbstractHttpEntity entity = createJsonEntity(serializeAsJson(data));
+        // We use upsert to avoid overriding existing fields in previously indexed documents
+        String endpoint = String.format("/%s/%s/%s/_update", indexName, typeName, docId);
+        Map<String, ?> body = ImmutableMap.of(
+            "doc", document,
+            "doc_as_upsert", true
+        );
+        AbstractHttpEntity entity = createJsonEntity(serializeAsJson(body));
         try {
-            Response response = client.performRequest("PUT", endpoint, EMPTY_MAP, entity);
+            Response response = client.performRequest("POST", endpoint, EMPTY_MAP, entity);
             return response.getStatusLine().getStatusCode() == 201;
         } catch (IOException e) {
             throw new RuntimeException("Failed to index page.", e);
@@ -209,6 +212,12 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         } catch (IOException e) {
             throw new RuntimeException("Failed to close Elasticsearch REST client", e);
         }
+    }
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
+        throw new UnsupportedOperationException(
+                "Iterator not supportted for ElasticSearchRestTargetRepository yet");
     }
 
 }

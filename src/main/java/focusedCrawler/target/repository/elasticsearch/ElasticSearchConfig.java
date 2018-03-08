@@ -11,13 +11,13 @@ public class ElasticSearchConfig {
     //
     @JsonProperty("target_storage.data_format.elasticsearch.host")
     private String host = "localhost";
-    
+
     @JsonProperty("target_storage.data_format.elasticsearch.port")
     private int port = 9300;
-    
+
     @JsonProperty("target_storage.data_format.elasticsearch.cluster_name")
     private String clusterName = "elasticsearch";
-    
+
     //
     // Elasticsearch REST API parameters
     //
@@ -33,7 +33,16 @@ public class ElasticSearchConfig {
     @JsonProperty("target_storage.data_format.elasticsearch.rest.max_retry_timeout_millis")
     private int restMaxRetryTimeoutMillis = 60000;
 
-    public ElasticSearchConfig() { }
+    //
+    // Index and type parameters
+    //
+    @JsonProperty("target_storage.data_format.elasticsearch.index_name")
+    private String indexName = "ache-data";
+
+    @JsonProperty("target_storage.data_format.elasticsearch.type_name")
+    private String typeName = "page";
+
+    public ElasticSearchConfig() {}
 
     public ElasticSearchConfig(String hostname, int port, String clusterName) {
         this.host = hostname;
@@ -67,6 +76,22 @@ public class ElasticSearchConfig {
 
     public int getRestMaxRetryTimeoutMillis() {
         return restMaxRetryTimeoutMillis;
+    }
+
+    public String getIndexName() {
+        return indexName;
+    }
+
+    public void setIndexName(String indexName) {
+        this.indexName = indexName;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 
 }

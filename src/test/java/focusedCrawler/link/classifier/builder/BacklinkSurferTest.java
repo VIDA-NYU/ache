@@ -14,7 +14,7 @@ import java.util.Map;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.junit.Test;
 
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.link.LinkStorageConfig.BackSurferConfig;
 import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
@@ -28,7 +28,7 @@ public class BacklinkSurferTest {
         props.put("link_storage.backsurfer.moz.access_id", "mozscape-4a1d0827fc");
         props.put("link_storage.backsurfer.moz.secret_key", "d6ea0c3b253ab44425769e422624a0f");
         
-        BackSurferConfig config = new ConfigService(props).getLinkStorageConfig().getBackSurferConfig();
+        BackSurferConfig config = new Configuration(props).getLinkStorageConfig().getBackSurferConfig();
         BacklinkSurfer surfer = new BacklinkSurfer(config);
         
         URL url = new URL("http://www.bbc.co.uk/news/health-30577776");
@@ -46,7 +46,7 @@ public class BacklinkSurferTest {
     public void backlinksShouldBeDownloadedFromGoogle() throws MalformedURLException, IOException {
         // given
         Map<String, String> props = new HashMap<>();
-        BackSurferConfig config = new ConfigService(props).getLinkStorageConfig().getBackSurferConfig();
+        BackSurferConfig config = new Configuration(props).getLinkStorageConfig().getBackSurferConfig();
         BacklinkSurfer surfer = new BacklinkSurfer(config);
 
         URL url = new URL("http://www.bbc.co.uk");

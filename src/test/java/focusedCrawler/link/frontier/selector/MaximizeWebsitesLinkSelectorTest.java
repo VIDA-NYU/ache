@@ -12,7 +12,6 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.link.frontier.selector.MaximizeWebsitesLinkSelector;
 
 public class MaximizeWebsitesLinkSelectorTest {
 

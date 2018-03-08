@@ -1,3 +1,7 @@
+// BasePath.js needs to be the first import in order to configure
+//  webpack's publicPath correctly
+import "./BasePath";
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';

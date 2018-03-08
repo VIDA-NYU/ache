@@ -28,6 +28,9 @@ import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Comparator;
+import java.util.regex.Pattern;
+
+import org.apache.commons.validator.routines.UrlValidator;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonParser;
@@ -46,6 +49,11 @@ public class LinkRelevance implements Serializable {
     public static double DEFAULT_HUB_RELEVANCE = 100;
     public static double DEFAULT_AUTH_RELEVANCE = 200;
     
+    private static final UrlValidator validator = new UrlValidator(new String[] {"http","https"});
+    // .onion links aren't accepted by the validator
+    // Regex ".[^.]+" --> any string of at least 1 char without dot
+    private static final Pattern onionPattern = Pattern.compile("https?://.[^.]+\\.onion.*");
+
     public enum Type {
         FORWARD, ROBOTS, SITEMAP
     }
@@ -54,6 +62,13 @@ public class LinkRelevance implements Serializable {
         @Override
         public int compare(LinkRelevance o1, LinkRelevance o2) {
             return Double.compare(o2.getRelevance(), o1.getRelevance());
+        }
+    };
+    
+    public static Comparator<LinkRelevance> DESC_ABS_ORDER_COMPARATOR = new Comparator<LinkRelevance>() {
+        @Override
+        public int compare(LinkRelevance o1, LinkRelevance o2) {
+            return Double.compare(Math.abs(o2.getRelevance()), Math.abs(o1.getRelevance()));
         }
     };
 
@@ -66,15 +81,15 @@ public class LinkRelevance implements Serializable {
         // required for JSON serialization
     }
 
-    public LinkRelevance(String string, double relevance) throws MalformedURLException {
-        this(new URL(string), relevance);
+    public LinkRelevance(String url, double relevance) throws MalformedURLException {
+        this(new URL(url), relevance);
     }
 
     public LinkRelevance(URL url, double relevance) {
         this(url, relevance, Type.FORWARD);
     }
 
-    public LinkRelevance(String url, double relevance, Type type) throws MalformedURLException {
+    private LinkRelevance(String url, double relevance, Type type) throws MalformedURLException {
         this(new URL(url), relevance, type);
     }
 
@@ -97,7 +112,7 @@ public class LinkRelevance implements Serializable {
     }
     
     @JsonIgnore
-    private InternetDomainName getDomainName(String host) {
+    private static InternetDomainName getDomainName(String host) {
         InternetDomainName domain = InternetDomainName.from(host);
         if(host.startsWith("www.")) {
             return InternetDomainName.from(host.substring(4));
@@ -108,10 +123,13 @@ public class LinkRelevance implements Serializable {
     
     @JsonIgnore
     public String getTopLevelDomainName() {
-        String host = url.getHost();
+        return getTopLevelDomain(url.getHost());
+    }
+
+    public static String getTopLevelDomain(String host) {
         InternetDomainName domain = null;
         try {
-            domain = this.getDomainName(host);
+            domain = getDomainName(host);
             if(domain.isUnderPublicSuffix()) {
                 return domain.topPrivateDomain().toString();
             } else {
@@ -123,7 +141,7 @@ public class LinkRelevance implements Serializable {
             if(InetAddresses.isInetAddress(host)) {
                 return host;
             }
-            throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+url+"]", e);
+            throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+host+"]", e);
         }
     }
     
@@ -142,6 +160,40 @@ public class LinkRelevance implements Serializable {
             JsonNode node = parser.getCodec().readTree(parser);
             return new URL(node.asText());
         }
+    }
+
+    public static LinkRelevance createForward(String url, double relevance) {
+        try {
+            if (isValid(url)) {
+                return new LinkRelevance(url, relevance, Type.FORWARD);
+            }
+        } catch (MalformedURLException e) {
+        }
+        return null;
+    }
+
+    public static LinkRelevance createSitemap(String url, double relevance) {
+        try {
+            if (isValid(url)) {
+                return new LinkRelevance(url, relevance, Type.SITEMAP);
+            }
+        } catch (MalformedURLException e) {
+        }
+        return null;
+    }
+
+    public static LinkRelevance createRobots(String url, double relevance) {
+        try {
+            if (isValid(url)) {
+                return new LinkRelevance(url, relevance, Type.ROBOTS);
+            }
+        } catch (MalformedURLException e) {
+        }
+        return null;
+    }
+
+    private static boolean isValid(String url) {
+        return validator.isValid(url) || onionPattern.matcher(url).matches();
     }
 
 }

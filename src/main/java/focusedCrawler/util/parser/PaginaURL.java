@@ -26,8 +26,6 @@
 package focusedCrawler.util.parser;
 
 
-import java.io.File;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,6 +37,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 import java.util.Vector;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.validator.routines.UrlValidator;
@@ -49,20 +48,26 @@ import focusedCrawler.crawler.crawlercommons.filters.basic.BasicURLNormalizer;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
+import okhttp3.HttpUrl;
 
 
 public class PaginaURL {
     
-    private static final String[] schemes = {"http","https"};
-    private static final UrlValidator urlValidator = new UrlValidator(schemes);
     public static final Logger logger = LoggerFactory.getLogger(PaginaURL.class);
-    
-    private static final List<String> invalidParameters = Arrays.asList("sid","phpsessid","sessionid", "jsessionid");
-	private static final BasicURLNormalizer urlNormalizer = new BasicURLNormalizer(new TreeSet<>(invalidParameters), false);
-	
+
+    private static final String[] schemes = {"http", "https"};
+    private static final UrlValidator urlValidator = new UrlValidator(schemes);
+    // TOR links (.onion) aren't accepted by the URL validator, so we check them using a regex.
+    // Regex ".[^.]+" --> any string of at least 1 char without dot
+    private static final Pattern onionValidator = Pattern.compile("https?://.[^.]+\\.onion.*");
+    private static final List<String> invalidParameters =
+            Arrays.asList("sid", "phpsessid", "sessionid", "jsessionid");
+    private static final BasicURLNormalizer urlNormalizer =
+            new BasicURLNormalizer(new TreeSet<>(invalidParameters), false);
+
     private int                MAXPALAVRAS = -1;
     public static final int    MAX_PARAGRAPH_SIZE = 255;
-    private URL                pagina = null;
+    private URL                baseUrl = null;
     private String             titulo = "";
     private String             paragrafo = "";
     private String[]           palavras = new String[0];
@@ -85,11 +90,10 @@ public class PaginaURL {
     private int                forms = 0;
     private int                images = 0;
 
-    private transient Vector<String> texto = new Vector<String>();
-    private transient Vector<String> textoMeta = new Vector<String>();
+    private transient List<String> texto = new ArrayList<String>();
+    private transient List<String> textoMeta = new ArrayList<String>();
     private URL[]              URLabsolutas = null;
-    private Vector<String>     links = new Vector<String>();
-    private Vector<String>     mailList = new Vector<String>();    // Vector de e-mails para o lights
+    private List<String>     links = new ArrayList<String>();
     private boolean            noindex = false;
     private boolean            nofollow = false;
     public static boolean      USAR_DESCRIPTION = false;
@@ -119,7 +123,7 @@ public class PaginaURL {
             MAXPALAVRAS = -1;
         }
 
-        pagina = url;
+        this.baseUrl = url;
         this.noindex = noindex;
         this.nofollow = nofollow;
         this.stoplist = stoplist;
@@ -225,7 +229,7 @@ public class PaginaURL {
                 aroundTemp.toArray(around);
                 ln.setAround(around);
                 
-                if (getURL().getHost().equals(ln.getLink().getHost())) {
+                if (baseUrl != null && baseUrl.getHost().equals(ln.getLink().getHost())) {
                     ln.setSameSite(true);
                 }
                 tempLN.add(ln);
@@ -260,10 +264,10 @@ public class PaginaURL {
         int    posicao_da_palavra 			   = 1;
 
         // UTILIZANDO AS PALAVRAS DA URL COMO INFORMACAO TEXTUAL
-        if (pagina != null && !filterURL) {
+        if (baseUrl != null && !filterURL) {
 
 
-            StringTokenizer url_pontos = new StringTokenizer(pagina.getHost(),"./:");
+            StringTokenizer url_pontos = new StringTokenizer(baseUrl.getHost(),"./:");
 
             while (url_pontos.hasMoreTokens()) {
                 String parte_host = url_pontos.nextToken();
@@ -303,7 +307,7 @@ public class PaginaURL {
         boolean tagOption = false;
         int     pos_caracter_especial = -1;
         char    quote_char = '\0';
-        URL     base = pagina;    // pagina = URL da pagina atual...
+        HttpUrl base = (baseUrl == null) ? null : HttpUrl.get(baseUrl);
 
         Vector<String>  frames = new Vector<String>();
         char    c = '\0';
@@ -370,7 +374,6 @@ public class PaginaURL {
 
                         /* INICIO - Esperando texto ou caracter de abertura de tag '<' */
 
-                        // System.out.println("Entrei no inicio e caractere=" + c);
                         if (c == '<') {
                             estado = TAG_NAME;
                             tagName = "";
@@ -473,9 +476,6 @@ public class PaginaURL {
 //                                                  insideATag = false;
 
                       }
-//                      if(anchor.indexOf("school") != -1){
-//                        System.out.println("TEST");
-//                      }
                         /* PALAVRA - palavra pronta */
                         if (!em_script && (str.length() > 0)) {
                             if (em_body && paragrafo.length() + str.length() < MAX_PARAGRAPH_SIZE) {
@@ -561,7 +561,6 @@ public class PaginaURL {
                         }
                         else {
                             if (str.equals("BASE")) {
-//                                System.out.println("EM TAG_NAME, str="+str + ", c="+c+", tagTitulo="+tagTitulo);
                                 if (c == '>') {
                                     estado = FECHANDO;
                                 } else {
@@ -607,8 +606,6 @@ public class PaginaURL {
     //                                tag_tipo_fim = true;
                                     estado = FECHANDO;
                                 } else if ((c != '\r') && (c != '\n')) {
-
-                                    // System.out.println("Estou NO CAMINHO CERTO!!!!");
                                     str += c;
                                     n++;
                                 } else {
@@ -652,7 +649,6 @@ public class PaginaURL {
 
                     case FECHANDO:
                         /* FECHANDO - expecting a close bracket, anything else is an error */
-//                        System.out.println("END OF TAG:"+tagName);
 //                        if(ln!=null){
 //                          ln.setAnchor(anchor);
 //                          System.out.println("URL---"+ln.getLink());
@@ -841,7 +837,7 @@ public class PaginaURL {
                         if ((c == ' ') || (c == '"') || (c == '\n') || (c == ',')) {
                             ignorar_espacos = false;
 
-                            textoMeta.addElement(str);    // adiciona a palavra na variavel texto
+                            textoMeta.add(str);    // adiciona a palavra na variavel texto
 
                             for (int contadorI = 0;
                                     contadorI < PONTUACAO_PALAVRAS_META;
@@ -920,17 +916,10 @@ public class PaginaURL {
 
                         if (fimDeString) {
                             tagName = tagName.toLowerCase();
-
-//                            System.out.println("TAG:"+tagName);
                             atributo = atributo.toLowerCase();
-
-//                            System.out.println("[VALOR, estado='"+estado+"', c="+c+"] "+tagName+"."+atributo+"="+str);
-
-                            if (tagName.equals("a")
-                                    && atributo.equals("href")) {
+                            if (tagName.equals("a") && atributo.equals("href")) {
                                   insideATag = true;
-                                  String urlTemp = adicionaLink(str, base);
-                                  //System.out.println("----URL:"+urlTemp);
+                                  String urlTemp = addLink(str, base);
                                   if(urlTemp!= null && urlTemp.startsWith("http")){
                                 	  if(ln!=null){
                                 		  addLinkNeighborhood(ln, anchor, numOfwordsAnchor);
@@ -943,22 +932,20 @@ public class PaginaURL {
                                 	      // Ignoring Exception on purpose since the URL in page is not proper
                                 	  }
                                   }
-//                                System.out.println("CREATE LINK:"  + urlTemp);
-                            } else if (tagName.equals("link")
-                                       && atributo.equals("href")) {
-                                String urlTemp = adicionaLink(str, base);
-                                if(urlTemp!= null && urlTemp.startsWith("http")){
+                            } else if (tagName.equals("link") && atributo.equals("href")) {
+                            	String urlTemp = null;
+                            	if(!str.contains(".css") && !str.endsWith(".js")) {
+                            		urlTemp = addLink(str, base);
+                            	}
+                            	if(urlTemp!= null && urlTemp.startsWith("http")){
                                     try {
                                         ln = new LinkNeighborhood(new URL(urlTemp));
                                     } catch (Exception e) {
                                         // Ignoring Exception on purpose since the URL in page is not proper
                                     }
                                 }
-//                                System.out.println("CREATE LINK:"  + urlTemp);
-                            } else if (tagName.equals("area")
-                                       && atributo.equals("href")) {
-                                adicionaLink(str, base);
-                                String urlTemp = adicionaLink(str, base);
+                            } else if (tagName.equals("area") && atributo.equals("href")) {
+                                String urlTemp = addLink(str, base);
                                 if(urlTemp!= null && urlTemp.startsWith("http")){
                                   ln = new LinkNeighborhood(new URL(urlTemp));
                                 }
@@ -968,7 +955,7 @@ public class PaginaURL {
                             		ln.setImgSource(str);
                             	}
                             	try {
-                            		imagens.add(parseLink(base,str).toString());	
+                            		imagens.add(resolveHttpLink(base,str).toString());	
 								} catch (Exception e) {
 									// TODO: handle exception
 								}
@@ -977,12 +964,10 @@ public class PaginaURL {
 //                            else if((tagName.equals("area") || tagName.equals("a"))&& atributo.equals("alt")){
 //                            	anchor = anchor + " " + str.toLowerCase();
 //                            } 
-                            else if (tagName.equals("frame")
-                                       && atributo.equals("src")) {
+                            else if (tagName.equals("frame") && atributo.equals("src")) {
                                 frames.addElement(str);
-                                adicionaLink(str, base);
+                                addLink(str, base);
                             } else if (tagName.equals("img") && (atributo.equals("alt") || atributo.equals("title") || atributo.equals("id"))) {
-//                                System.out.println("img.alt.str="+str);
                             	Vector<String> altWords = new Vector<String>();
                             	StringTokenizer st = new StringTokenizer(str);
                                 while(st.hasMoreTokens()) {
@@ -1074,11 +1059,10 @@ public class PaginaURL {
                                     }
                                 }
 
-//                                System.out.println("meta.content.str="+str);
                                 StringTokenizer st = new StringTokenizer(str);
                                 while(st.hasMoreTokens()) {
                                     String token = st.nextToken();
-                                    textoMeta.addElement(token);    // adiciona a palavra na variavel texto
+                                    textoMeta.add(token);    // adiciona a palavra na variavel texto
                                     for (int contadorI = 0;
                                             contadorI < PONTUACAO_PALAVRAS_META;
                                             contadorI++) {
@@ -1105,10 +1089,11 @@ public class PaginaURL {
                                         != -1) {
                                     nofollow = true;
                                 }
-                            } else if (tagName.equals("base")
-                                       && atributo.equals("href")) {
+                            } else if (tagName.equals("base") && atributo.equals("href")) {
                                 try {
-                                    base = parseLink(pagina, str);
+                                    HttpUrl oldBase = (baseUrl == null) ? null : HttpUrl.get(baseUrl);
+                                    String newBase = resolveHttpLink(oldBase, str);
+                                    base = (newBase == null) ? null : HttpUrl.parse(newBase);
                                 } catch (Exception e) {
                                 }                           // ignora
                              }
@@ -1182,7 +1167,6 @@ public class PaginaURL {
     protected void organizaDados() {
 
         // Cria arrays temporarios a partir da Hashtable
-        // System.out.println("ORGANIZA DADOS");
         //int      size = palavra_posicoes.size();
         int      size = palavra_pontos.size();
         String[] words = new String[size];
@@ -1426,388 +1410,62 @@ public class PaginaURL {
         return '\0';
     }
 
-    /**
-     * Este metodo adiciona um link na lista de links desta pagina
-     * E' usado quando a pagina e' construida
-     */
-    protected String adicionaLink(String link, URL base) {
+    protected String addLink(String link, HttpUrl base) {
         if (nofollow) {
             return "";
         }
-
-        try {
-
-            // System.out.println();
-            // System.out.println("link1='"+link+"'");
-            // System.out.println("urlX='"+new URL(pagina,link)+"'");
-            link = link.trim();
-
-            URL url = parseLink(base, link);
-            
-            url = removeFragmentsIfAny(url);
-
-            link = url.toString();
-
-            // System.out.println("url.getProtocol()='"+url.getProtocol()+"'");
-            if (url.getProtocol().equals("mailto")) {
-                int idx = link.indexOf("?");
-
-                // System.out.println("am idx="+idx);
-                if (idx >= 0) {
-                    link = link.substring(0, idx);
-                }
-
-                idx = link.indexOf(",");
-
-                if (idx >= 0) {
-                    if (idx + 1 < link.length()) {
-                        String link2 = "mailto:" + link.substring(idx + 1);
-
-                        adicionaLink(link2, base);
+        link = link.trim();
+        link = resolveHttpLink(base, link);
+        if (link == null) {
+            return "";
+        }
+        link = removeFragmentsIfAny(link);
+        link = StringEscapeUtils.unescapeHtml4(link);
+        if (urlValidator.isValid(link) || onionValidator.matcher(link).matches()) {
+            link = urlNormalizer.filter(link);
+            if (link != null) {
+                boolean exists = links.contains(link);
+                if (!exists) {
+                    if (base != null && !link.equals(base.toString())) {
+                        links.add(link);
+                    } else {
+                        links.add(link);
                     }
-
-                    link = link.substring(0, idx);
                 }
-
-                if (!mailList.contains(link)) {
-                    mailList.addElement(link);
-                }
-            } else {
-            	link = StringEscapeUtils.unescapeHtml4(link);
-            	// ONION links aren't accepted by the validator
-            	// Regex ".[^.]+" --> any string of at least 1 char without dot
-            	String onionRegex = "https?://.[^.]+\\.onion.*";
-
-                // System.out.println(urlValidator.isValid(link));
-                if(urlValidator.isValid(link) || link.matches(onionRegex)) {
-                	
-                	link = urlNormalizer.filter(link);
-                	
-                    boolean existe = links.contains(link);
-                    if (!existe) {
-                        if (base != null) {
-                            if (!link.equals(base.toString())) {
-                                link = processarRedirecionamentos(link);
-                                
-                                if (link != null) {
-                                    links.addElement(link);
-                                }
-                            }
-                        } else {
-                            link = processarRedirecionamentos(link);
-                            
-                            if (link != null) {
-                                links.addElement(link);
-                            }
-                        }
-                    }
-                } else {
-                    // link is invalid
-                    link = null;
-                }
-    
             }
-        } catch (MalformedURLException mfue) {
-        }    // ignora
+        } else {
+            // link is invalid
+            link = null;
+        }
         return link;
-     }
+    }
 
-    protected URL removeFragmentsIfAny(URL inputURL){
-        if(inputURL.toString().contains("#")){
-            try {
-                return (new URL(inputURL.toString().substring(0, inputURL.toString().indexOf('#'))));
-            } catch (MalformedURLException e) {
-                logger.error("Links exracted from the page not in poper format.",e);
-            }
+    protected String removeFragmentsIfAny(String inputURL) {
+        int fragmentPosition = inputURL.indexOf('#');
+        if (fragmentPosition != -1) {
+            return inputURL.substring(0, fragmentPosition);
         }
         return inputURL;
     }
-    
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param link
-     *
-     * @return
-     *
-     * @see
-     */
-    protected String processarRedirecionamentos(String link) {
 
-        // System.out.println("processarRedirecionamentos");
-        if (link.indexOf("www.cade.com.br") > 0
-                && link.indexOf("&Redirect=") > 0) {
-            return null;
-        }
-        else if (link.indexOf(" ") != -1) {
-            return null;
-        }
-        else {
-            return link;
-        }
-
-        /*
-         * {
-         * try {
-         * URL u = new URL(link);
-         * //        System.out.println("URL TIPO"+TiposURL.tipoURL(u));
-         * if( TiposURL.tipoURL(u) == TiposURL.E_MAIL )
-         * return link;
-         * //        System.out.println("TIPO E_MAIL");
-         * if( TiposURL.tipoURL(u) != TiposURL.LINK )
-         * return null;
-         * //        System.out.println("TIPO_LINK");
-         * HttpURLConnection u_c = (HttpURLConnection)u.openConnection();
-         * //        System.out.println("RESPONSE_CODE = "+u_c.getResponseCode());
-         * if( u_c.getResponseCode() != HttpURLConnection.HTTP_OK )
-         * return null;
-         * URL u_f = u_c.getURL();
-         * //        System.out.println("PASSEI NO TESTE"+u_f);
-         * return (u_f == null ? null : u_f.toString());
-         * }
-         * catch(Exception exc)
-         * {
-         * return null;
-         * }
-         * }
-         */
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param base
-     * @param link
-     *
-     * @return
-     *
-     * @throws MalformedURLException
-     *
-     * @see
-     */
-    protected URL parseLink(URL base,
-                            String link) throws MalformedURLException {
-        String  original = link;
-        int     i, limit, c;
-        int     start = 0;
-        String  newProtocol = null;
-        boolean aRef = false;
-        String  protocol = null;
-        String  host = null;
-        int     port = -1;
-        String  file = null;
-//        String  ref = null;
-
+    protected String resolveHttpLink(HttpUrl base, String link) {
+        HttpUrl resolvedUrl;
         try {
-            limit = link.length();
-
-            while ((limit > 0) && (link.charAt(limit - 1) <= ' ')) {
-                limit--;    // eliminate trailing whitespace
-            }
-
-            while ((start < limit) && (link.charAt(start) <= ' ')) {
-                start++;    // eliminate leading whitespace
-            }
-
-            if (link.regionMatches(true, start, "url:", 0, 4)) {
-                start += 4;
-            }
-
-            if (start < link.length() && link.charAt(start) == '#') {
-
-                /*
-                 * we're assuming this is a ref relative to the context URL.
-                 * This means protocols cannot start w/ '#', but we must parse
-                 * ref URL's like: "hello:there" w/ a ':' in them.
-                 */
-                aRef = true;
-            }
-
-            for (i = start;
-                    !aRef && (i < limit) && ((c = link.charAt(i)) != '/');
-                    i++) {
-                if (c == ':') {
-                    newProtocol = link.substring(start, i).toLowerCase();
-                    start = i + 1;
-
-                    break;
-                }
-            }
-
-            // Only use our context if the protocols match.
-            if ((base != null)
-                    && ((newProtocol == null)
-                        || newProtocol.equals(base.getProtocol()))) {
-                protocol = base.getProtocol();
-                host = base.getHost();
-                port = base.getPort();
-                file = base.getFile();
+            if (base == null) {
+                resolvedUrl = HttpUrl.parse(link);
             } else {
-                protocol = newProtocol;
+                resolvedUrl = base.resolve(link);
             }
-
-            if (protocol == null) {
-                throw new MalformedURLException("no protocol: " + original);
-            }
-
-            // if ((handler = getURLStreamHandler(protocol)) == null) {
-            // throw new MalformedURLException("unknown protocol: "+protocol);
-            // }
-            i = link.indexOf('#', start);
-
-            if (i >= 0) {
-//                ref = link.substring(i + 1, limit);
-                limit = i;
-            }
-
-            // if ("http".equals(protocol)) return parseURL(protocol, host, port, file, ref, link, start, limit);
-            if ("http".equals(protocol)) {
-                return parseURL(protocol, host, port, file, null, link,
-                                start, limit);
-            } else {
-                return new URL(base, link);
-            }
-        } catch (MalformedURLException e) {
-            throw e;
         } catch (Exception e) {
-            throw new MalformedURLException(original + ": " + e);
+            // The link is invalid or malformed
+            resolvedUrl = null;
+            // logger.debug(String.format("Failed to resolve URL: base={%s} link={%s}",
+            // base.toString(), link), e);
         }
-    }
-
-    /**
-     * Faz o parse dos links dado a representacao do link (igual ao que esta no tag)
-     * e sua base
-     */
-    protected URL parseURL(String protocol, String host, int port,
-                           String file, String ref, String spec, int start,
-                           int limit) throws MalformedURLException {
-
-        // System.out.println("--------------------------");
-        // System.out.println("pu protocol='"+protocol+"'");
-        // System.out.println("pu host='"+host+"'");
-        // System.out.println("pu port='"+port+"'");
-        // System.out.println("pu file='"+file+"'");
-        // System.out.println("pu ref='"+ref+"'");
-        // System.out.println("pu spec='"+spec+"'");
-        if (file != null) {
-            int index_barra = file.lastIndexOf('/');
-            int index_ponto = file.lastIndexOf('.');
-
-            if (index_barra > index_ponto &&!file.endsWith("/")) {
-                file += '/';
-
-                // System.out.println("pu file2='"+file+"'");
-                // System.out.println("--------------------------");
-            }
-        }
-
-        int i;
-
-        if ((start <= limit - 2) && (spec.charAt(start) == '/')
-                && (spec.charAt(start + 1) == '/')) {
-            start += 2;
-            i = spec.indexOf('/', start);
-
-            if (i < 0) {
-                i = limit;
-            }
-
-            int prn = spec.indexOf(':', start);
-
-            port = -1;
-
-            if ((prn < i) && (prn >= 0)) {
-                try {
-                    port = Integer.parseInt(spec.substring(prn + 1, i));
-                } catch (Exception e) {
-
-                    // ignore bogus port numbers
-                }
-
-                if (prn > start) {
-                    host = spec.substring(start, prn);
-                }
-            } else {
-                host = spec.substring(start, i);
-            }
-
-            start = i;
-            file = null;
-        } else if (host == null) {
-            host = "";
-        }
-
-        if (start < limit) {
-
-            /*
-             * If the context URL is a CGI URL, the context to be the
-             * URL's file up to the / before ? character.
-             */
-            if (file != null) {
-                int questionMarkIndex = file.indexOf('?');
-
-                if (questionMarkIndex > -1) {
-                    int lastSlashIndex = file.lastIndexOf('?',
-                                                          questionMarkIndex);
-
-                    file = file.substring(0, ++lastSlashIndex);
-                }
-            }
-
-            if (spec.charAt(start) == '/') {
-                file = spec.substring(start, limit);
-            } else if (file != null && file.length() > 0) {
-
-                /*
-                 * relative to the context file - use either
-                 * Unix separators || platform separators
-                 */
-                int ind = Math.max(file.lastIndexOf('/'),
-                                   file.lastIndexOf(File.separatorChar));
-
-                file = file.substring(0, ind) + "/"
-                       + spec.substring(start, limit);
-            } else {
-                file = "/" + spec.substring(start, limit);
-            }
-        }
-
-        if ((file == null) || (file.length() == 0)) {
-            file = "/";
-        }
-
-        while ((i = file.indexOf("/./")) >= 0) {
-            file = file.substring(0, i) + file.substring(i + 2);
-        }
-
-        while ((i = file.indexOf("/../")) >= 0) {
-            if ((limit = file.lastIndexOf('/', i - 1)) >= 0) {
-                file = file.substring(0, limit) + file.substring(i + 3);
-            } else {
-                file = file.substring(i + 3);
-            }
-        }
-
-        if (file.endsWith("/..")) {
-            i = file.length() - 3;
-
-            if ((limit = file.lastIndexOf('/', i - 1)) >= 0) {
-                file = file.substring(0, limit);
-            } else {
-                file = "";
-            }
-        }
-
-        if (file.length() == 0) {
-            file = "/";
-        }
-
-        if (ref == null) {
-            return new URL(protocol, host, port, file);
+        if (resolvedUrl == null) {
+            return null;
         } else {
-            return new URL(protocol, host, port, file + "#" + ref);
+            return resolvedUrl.toString();
         }
     }
 
@@ -1881,7 +1539,7 @@ public class PaginaURL {
         termo = termo.toLowerCase().trim();
         resultado = !irrelevante(termo);
         if( resultado ) {
-            texto.addElement(termo);
+            texto.add(termo);
         }
         return resultado;
     }
@@ -2071,7 +1729,7 @@ public class PaginaURL {
     }
 
     public URL getURL() {
-        return pagina;
+        return baseUrl;
     }
 
     public String titulo() {
@@ -2126,7 +1784,7 @@ public class PaginaURL {
 
             for (int i = 0; i < links.size(); i++) {
                 try {
-                    URLabsolutas[i] = new URL(links.elementAt(i).toString());
+                    URLabsolutas[i] = new URL(links.get(i).toString());
                 } catch (Throwable t) {
                 } // ignora
             }

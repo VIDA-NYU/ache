@@ -36,13 +36,13 @@ import org.slf4j.LoggerFactory;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
-import focusedCrawler.util.persistence.bdb.BerkeleyDBHashTable;
+import focusedCrawler.link.frontier.Visitor;
 import focusedCrawler.util.persistence.rocksdb.RocksDBHashtable;
 
 public class PersistentHashtable<T> {
     
-    enum DB {
-        BERKELEYDB, ROCKSDB
+    public enum DB {
+        ROCKSDB
     }
     
     private static Logger logger = LoggerFactory.getLogger(PersistentHashtable.class);
@@ -53,29 +53,33 @@ public class PersistentHashtable<T> {
 	private List<Tuple<T>> tempList = new ArrayList<>(tempMaxSize);
 
     private Cache<String, T> cache;
-	
-	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
-	    this(path, cacheSize, contentClass, DB.ROCKSDB);
-	}
-	
-	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass, DB backend) {
-	    File file = new File(path);
-	    if(!file.exists()) {
-	        file.mkdirs();
-	    }
-	    this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
-	    if(backend == DB.BERKELEYDB) {
-            try {
-                this.persistentTable = new BerkeleyDBHashTable<T>(file, contentClass);
-            } catch (Exception e) {
-                throw new RuntimeException("Failed to open BerkeleyDB database at "+path, e);
-            }
-        } else {
-            this.persistentTable = new RocksDBHashtable<>(file.getPath(), contentClass);
+
+    public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
+        this(path, cacheSize, contentClass, DB.ROCKSDB);
+    }
+
+    public PersistentHashtable(String path, int cacheSize, Class<T> contentClass, DB backend) {
+        File file = new File(path);
+        if (!file.exists()) {
+            file.mkdirs();
         }
-	}
-	
-	public List<Tuple<T>> getTable() {
+        this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
+        if (backend == DB.ROCKSDB) {
+            this.persistentTable = new RocksDBHashtable<>(file.getPath(), contentClass);
+        } else {
+            throw new UnsupportedOperationException(
+                    "No database backend available for: " + backend);
+        }
+    }
+
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls.
+     * 
+     * @return
+     * @throws Exception
+     */
+    @Deprecated
+    public List<Tuple<T>> getTable() {
         try {
             return persistentTable.listElements();
         } catch (Exception e) {
@@ -83,11 +87,12 @@ public class PersistentHashtable<T> {
         }
 	}
 
-	/**
-	 * Use method {@link #getTable()} instead.
-	 * @return
-	 */
-	@SuppressWarnings("unchecked")
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls.
+     * 
+     * @return
+     */
+    @SuppressWarnings("unchecked")
 	@Deprecated
 	public Tuple<T>[] getTableAsArray() {
 		List<Tuple<T>> table = getTable();
@@ -140,6 +145,7 @@ public class PersistentHashtable<T> {
 		persistentTable.close();
 	}
 	
+	@Deprecated
 	public synchronized List<Tuple<T>> orderedSet(final Comparator<T> valueComparator) {
         try {
             List<Tuple<T>> elements = persistentTable.listElements();
@@ -163,6 +169,15 @@ public class PersistentHashtable<T> {
             throw new RuntimeException("Failed to open hashtable iterator.", e);
         }
     }
-    
-   
+
+    public void visitTuples(Visitor<Tuple<T>> visitor) {
+        try(TupleIterator<T> it = iterator()) {
+            while (it.hasNext()) {
+                visitor.visit(it.next());
+            }
+        } catch (Exception e) {
+            logger.error("Failed to close iterator.", e);
+        }
+    }
+
 }

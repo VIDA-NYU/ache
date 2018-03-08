@@ -12,6 +12,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+import focusedCrawler.util.persistence.PersistentHashtable.DB;
+
 public class HostManagerTest {
     
     @Rule
@@ -24,14 +26,14 @@ public class HostManagerTest {
     public void shouldInsertAndPersistHostData() throws IOException {
         // given
         Path path = Paths.get(tmp.newFolder().getAbsolutePath());
-        HostManager hosts = new HostManager(path);
+        HostManager hosts = new HostManager(path, DB.ROCKSDB);
         String host = "www.example.com";
         String anotherHost = "www.another-example.com";
 
         // when
         hosts.insert(host);
         hosts.close();
-        hosts = new HostManager(path);
+        hosts = new HostManager(path, DB.ROCKSDB);
         
         assertThat(hosts.isKnown(host), is(true));
         assertThat(hosts.isKnown(anotherHost), is(false));

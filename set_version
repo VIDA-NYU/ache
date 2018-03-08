@@ -23,8 +23,8 @@ elif [[ "$OS" == 'Darwin' ]]; then
   sed -i ".bkp" "s/version = '$OLD_VERSION'/version = '$NEW_VERSION'/" build.gradle
   sed -i ".bkp" "s/    version: $OLD_VERSION/    version: $NEW_VERSION/" conda.recipe/meta.yaml
   sed -i ".bkp" "s/    git_tag: $OLD_VERSION/    git_tag: $NEW_VERSION/" conda.recipe/meta.yaml
-  sed -i "s/version = u'$OLD_VERSION'/version = u'$NEW_VERSION'/" docs/conf.py
-  sed -i "s/release = u'$OLD_VERSION'/release = u'$NEW_VERSION'/" docs/conf.py
+  sed -i ".bkp" "s/version = u'$OLD_VERSION'/version = u'$NEW_VERSION'/" docs/conf.py
+  sed -i ".bkp" "s/release = u'$OLD_VERSION'/release = u'$NEW_VERSION'/" docs/conf.py
   rm build.gradle.bkp
   rm conda.recipe/meta.yaml.bkp
   rm docs/conf.py.bkp

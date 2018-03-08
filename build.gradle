@@ -7,13 +7,12 @@ apply plugin: 'com.github.kt3k.coveralls'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 compileJava.options.encoding = "UTF-8"
-version = '0.9.0-SNAPSHOT'
+version = '0.11.0-SNAPSHOT'
 mainClassName = 'focusedCrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError"]
 
 repositories {
     mavenCentral()
-    maven { url "http://download.oracle.com/maven/" } // for BerkeleyDB
 }
 
 dependencies {
@@ -26,7 +25,7 @@ dependencies {
     compile 'org.apache.commons:commons-compress:1.12'
     compile 'commons-codec:commons-codec:1.10'
     compile 'commons-validator:commons-validator:1.5.1'
-    compile 'com.github.crawler-commons:crawler-commons:0.7'
+    compile 'com.github.crawler-commons:crawler-commons:0.8'
     compile 'org.apache.httpcomponents:httpclient:4.5.2'
     // CLI
     compile 'io.airlift:airline:0.7'
@@ -35,33 +34,49 @@ dependencies {
     compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.8.5'
     compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.5'
     compile 'com.esotericsoftware:kryo:4.0.0'
-    // Database engines
-    compile 'org.rocksdb:rocksdbjni:4.11.2'
-    compile 'com.sleepycat:je:3.3.75' // BerkeleyDB
     // Others
+    compile 'org.rocksdb:rocksdbjni:5.8.7'
     compile 'org.apache.tika:tika-parsers:1.14'
     compile 'com.syncthemall:boilerpipe:1.2.2'
     compile 'net.sourceforge.nekohtml:nekohtml:1.9.22'
-    compile 'nz.ac.waikato.cms.weka:weka-stable:3.6.13'
+    compile 'com.github.haifengl:smile-core:1.5.0'
     compile 'org.apache.lucene:lucene-core:4.10.4'
     compile 'org.elasticsearch:elasticsearch:1.4.4'
-    compile 'org.elasticsearch.client:rest:5.3.0'
+    compile 'org.elasticsearch.client:elasticsearch-rest-client:5.6.3'
     compile 'io.dropwizard.metrics:metrics-core:3.1.3'
     compile 'io.dropwizard.metrics:metrics-json:3.1.3'
     compile 'io.dropwizard.metrics:metrics-jvm:3.1.3'
-    
+    compile 'com.amazonaws:aws-java-sdk-s3:1.11.213'
+    compile 'org.jsoup:jsoup:1.10.3'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile group: 'org.apache.kafka', name: 'kafka-clients', version: '0.11.0.1'
+
+    compile('org.netpreserve.commons:webarchive-commons:1.1.8') {
+      exclude group: 'org.apache.hadoop', module: 'hadoop-core'
+      exclude group: 'junit', module: 'junit'
+    }
+
     // REST server dependencies
     compile "com.sparkjava:spark-core:2.5.3"
     
-    
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-all:1.3'
+    testCompile 'org.mockito:mockito-core:1.10.+'
     testCompile 'org.eclipse.jetty:jetty-server:9.3.6.v20151106' // for tests of crawler commons library fork
+    testCompile 'com.squareup.okhttp3:mockwebserver:3.8.1'
     
     // TODO fill these in from Maven Central instead of that local libs dir
     compile files('libs/jsonic-1.2.0.jar') // recommend updating this, it's for langdetect.jar
     compile files('libs/langdetect-03-03-2014.jar') // TODO why isn't this in maven central
+}
 
+
+//
+// Make sure that ache-dashboard is compiled and copied into resources folder
+// before the resources are processed and bundled into the JAR file
+//
+processResources {
+    dependsOn ':ache-dashboard:install'
 }
 
 
@@ -86,8 +101,9 @@ task copyConfig {
     outputs.dir f
     doLast {
         copy {
-            from "config/sample_config"
+            from "config/"
             into "$buildDir/config"
+            exclude "sample_model", "sample_training_data", "sample.seeds"
         }
     }
 }
@@ -121,3 +137,5 @@ jacocoTestReport {
         })
     }
 }
+
+

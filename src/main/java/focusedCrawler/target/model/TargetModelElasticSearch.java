@@ -3,11 +3,13 @@ package focusedCrawler.target.model;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 import com.google.common.net.InternetDomainName;
 
-import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import de.l3s.boilerpipe.extractors.DefaultExtractor;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.PaginaURL;
 
 public class TargetModelElasticSearch {
@@ -21,32 +23,32 @@ public class TargetModelElasticSearch {
     private String[] wordsMeta;
     private String topPrivateDomain;
     private String html;
+    private Map<String, List<String>> responseHeaders;
+    private String isRelevant;
+    private double relevance;
     
     public TargetModelElasticSearch() {
         // mandatory for object unserialization
     }
 
     public TargetModelElasticSearch(Page page) {
-
         this.url = page.getURL().toString();
         this.retrieved = new Date();
         this.domain = page.getDomainName();
         this.html = page.getContentAsString();
-        this.words = page.getParsedData().getWords();
-        this.wordsMeta = page.getParsedData().getWordsMeta();
-        this.title = page.getParsedData().getTitle();
-        
-        try {
-            this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
-        } catch (BoilerpipeProcessingException e) {
-            this.text = "";
-        }
-
-        InternetDomainName domainName = InternetDomainName.from(page.getDomainName());
-        if (domainName.isUnderPublicSuffix()) {
-            this.topPrivateDomain = domainName.topPrivateDomain().toString();
-        } else {
-            this.topPrivateDomain = domainName.toString();
+        this.responseHeaders = page.getResponseHeaders();
+        this.topPrivateDomain = LinkRelevance.getTopLevelDomain(page.getDomainName());
+        this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
+        if (page.isHtml()) {
+            this.words = page.getParsedData().getWords();
+            this.wordsMeta = page.getParsedData().getWordsMeta();
+            this.title = page.getParsedData().getTitle();
+            this.relevance = page.getTargetRelevance().getRelevance();
+            try {
+                this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
+            } catch (Exception e) {
+                this.text = "";
+            }
         }
     }
 
@@ -153,8 +155,32 @@ public class TargetModelElasticSearch {
         return html;
     }
 
-    public void setHml(String html) {
+    public void setHtml(String html) {
         this.html = html;
+    }
+
+    public String getIsRelevant() {
+        return isRelevant;
+    }
+
+    public void setIsRelevant(String isRelevant) {
+        this.isRelevant = isRelevant;
+    }
+
+    public double getRelevance() {
+        return relevance;
+    }
+
+    public void setRelevance(double relevance) {
+        this.relevance = relevance;
+    }
+
+    public Map<String, List<String>> getResponseHeaders() {
+        return responseHeaders;
+    }
+
+    public void setResponseHeaders(Map<String, List<String>> responseHeaders) {
+        this.responseHeaders = responseHeaders;
     }
 
 }

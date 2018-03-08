@@ -3,17 +3,16 @@ package focusedCrawler.tools;
 import java.io.PrintStream;
 
 import focusedCrawler.target.classifier.TargetClassifier;
-import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
+import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
-import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
-import focusedCrawler.target.repository.FileSystemTargetRepository.FileContentIterator;
 import focusedCrawler.target.repository.FilesTargetRepository;
-import focusedCrawler.target.repository.FilesTargetRepository.RepositoryIterator;
+import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.util.CliTool;
+import focusedCrawler.util.CloseableIterator;
 import focusedCrawler.util.parser.PaginaURL;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
@@ -57,42 +56,38 @@ public class PrintClassifierProbabilitiesTargetRepository extends CliTool {
         }
         
         TargetClassifier classifier = TargetClassifierFactory.create(modelPath);
-        
-        if(filesRepository) {
-            FilesTargetRepository repository = new FilesTargetRepository(inputPath);
-            try(RepositoryIterator it = repository.iterator()) {
-                while(it.hasNext()) {
-                    TargetModelJson target = it.next();
-                    printClassifierOutput(classifier, target, out);
-                }
-            }
+        TargetRepository repository;
+        if (filesRepository) {
+            repository = new FilesTargetRepository(inputPath);
         } else {
-            FileSystemTargetRepository repository = new FileSystemTargetRepository(inputPath, DataFormat.JSON, hashFilename, compressData);
-            try(FileContentIterator<TargetModelJson> it = repository.iterator()) {
-                while(it.hasNext()) {
-                    TargetModelJson target = it.next();
-                    printClassifierOutput(classifier, target, out);
-                }
+            repository = new FileSystemTargetRepository(inputPath,
+                    DataFormat.JSON, hashFilename, compressData);
+        }
+
+        try (CloseableIterator<Page> it = repository.pagesIterator()) {
+            while (it.hasNext()) {
+                Page target = it.next();
+                printClassifierOutput(classifier, target, out);
             }
         }
 
+        repository.close();
     }
 
-    private void printClassifierOutput(TargetClassifier classifier, TargetModelJson target, PrintStream out) {
+    private void printClassifierOutput(TargetClassifier classifier, Page page, PrintStream out) {
         try {
-            Page page = new Page(target);
             PaginaURL pageParser = new PaginaURL(page);
             page.setParsedData(new ParsedData(pageParser));
             
             TargetRelevance relevance = classifier.classify(page);
             
-            out.printf("%.6f %s\n", relevance.getRelevance(), target.getUrl());
+            out.printf("%.6f %s\n", relevance.getRelevance(), page.getFinalUrl());
             count++;
             if(count % 1000 == 0) {
                 System.out.printf("Processed %d files...\n", count);
             }
         } catch (Exception e) {
-            System.err.printf("Failed to process URL: %s", target.getUrl());
+            System.err.printf("Failed to process URL: %s", page.getFinalUrl());
             e.printStackTrace(System.err);
         }
     }

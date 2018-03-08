@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.List;
 import java.util.SimpleTimeZone;
 import java.util.StringTokenizer;
 import java.util.TimeZone;
@@ -109,7 +110,7 @@ public class ParameterFile {
         loadHash();
     }
 
-    static public String[] getSeeds(String seedFile) {
+    static public List<String> getSeeds(String seedFile) {
         ArrayList<String> urls = new ArrayList<String>();
         try {
             File file = new File(seedFile);
@@ -123,7 +124,7 @@ public class ParameterFile {
                 }
             }
             fileReader.close();
-            return urls.toArray(new String[urls.size()]);
+            return urls;
         } catch (Exception e) {
             logger.error("Error while reading seed list", e);
             return null;

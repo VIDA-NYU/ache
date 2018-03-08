@@ -19,29 +19,107 @@ body {
 }
 
 .main-content {
-  padding: 40px 15px;
+  padding: 20px 30px;
 }
 
-.search-unavailable {
+.message {
   text-align: center;
 }
 
-.sk-hits-hit__url {
-  color:#006621;
-  padding: 0px;
-  max-width: 100%;
+.hit-item {
+  padding: 13px 20px;
+}
+
+.hit-item .hit-title {
+  padding-bottom: 4px;
+}
+
+.hit-item .hit-title a {
+  font-size: 18px;
+  font-weight: bold;
+  /*
+   * Hide anythin larger than 1 lines and use ellipsis.
+   */
   overflow: hidden;
   height: 20px;
   text-overflow: ellipsis;
   display: -webkit-box;
-  line-height: 20px;     /* fallback */
-  max-height: 20px;      /* fallback */
-  -webkit-line-clamp: 1; /* number of lines to show */
+  line-height: 20px;
+  max-height: 20px;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 
-.sk-hits-hit__retrieved {
-  color: #337ab7;
+.hit-item .hit-url {
+  padding-bottom: 8px;
+}
+
+.hit-item .hit-url a {
+  color:#006621;
+  padding: 0px;
+  max-width: 100%;
+  /*
+   * Hide anything larger than 1 line and use ellipsis.
+   */
+  overflow: hidden;
+  height: 20px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;
+  max-height: 20px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.hit-item .hit-description {
+  /*
+   * Hide anything larger than 3 lines and use ellipsis.
+   */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 20px;
+  max-height: 64px;
+}
+
+.hit-item .hit-image {
+  padding-right: 0;
+}
+
+.hit-item .hit-image img {
+  max-width: 100%;
+  max-height: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+.hit-item .hit-properties {
+  padding-top: 5px;
+}
+
+ul.list-inline li button {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.relevant {
+  color: #5cb85c;
+}
+
+.irrelevant {
+  color: #d9534f
+}
+
+.label-all {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.label-all .btn {
+  margin:2px;
+  background-color: transparent;
 }
 
 /* ****************** */
@@ -101,17 +179,6 @@ body {
     cursor: pointer;
     margin-top: 5px;
 }
-
-.sk-hits-hit__details {
-  padding: 20px;
-}
-
-.sk-hits-hit__details a.sk-hits-hit__title {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  font-size: 18px;
-}
-
 
 .sk-selected-filters {
     display: flex;
@@ -253,8 +320,6 @@ body {
   padding: 10px 0;
 }
 
-
-
 .sk-layout {
     box-sizing: border-box;
     background: #f4f4f4;
@@ -267,6 +332,7 @@ body {
 
 .sk-panel {
     width: 100%;
+    padding-bottom: 10px;
 }
 
 .sk-range-histogram {
@@ -364,4 +430,64 @@ body {
     margin-left: -4px;
     border-width: 4px 4px 0;
     border-top-color: #6c6c6c
+}
+
+/* Pagination */
+
+.sk-pagination-navigation.is-numbered {
+    width: 600px;
+}
+
+.sk-pagination-navigation {
+    width: 300px;
+    margin: 10px auto;
+}
+
+.sk-pagination-navigation .sk-toggle-option:first-child,
+.sk-pagination-navigation .sk-toggle-option:last-child {
+    -webkit-box-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+}
+
+.sk-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    text-align: center;
+    border-radius: 3px;
+    max-height: 30px;
+}
+
+.sk-toggle-option:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.sk-toggle-option {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 10px;
+    border-right: none;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sk-toggle-option:last-child {
+    border-radius: 0 3px 3px 0;
+    border-right: 1px solid #ccc;
+}
+
+.sk-toggle-option.is-active {
+    background-color: #ddd;
+    color: #080808;
+    /* border-color: #08c; */
 }

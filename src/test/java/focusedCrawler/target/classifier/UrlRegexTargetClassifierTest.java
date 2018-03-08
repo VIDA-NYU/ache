@@ -11,11 +11,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.LinkFilter;
-import focusedCrawler.util.LinkFilter.LinkBlackList;
-import focusedCrawler.util.LinkFilter.LinkWhiteList;
 
 public class UrlRegexTargetClassifierTest {
 
@@ -28,7 +25,7 @@ public class UrlRegexTargetClassifierTest {
             "https?://www\\.mydomain\\.com.*",
             "https?://www\\.somedomain\\.com/forum/.*"
         );
-        UrlRegexTargetClassifier classifier = new UrlRegexTargetClassifier(urlPatterns);
+        UrlRegexTargetClassifier classifier = UrlRegexTargetClassifier.fromRegularExpressions(urlPatterns);
         
         List<String> urlsThatMatch = Arrays.asList(
             "http://some.domain.com/thread/something",
@@ -78,8 +75,10 @@ public class UrlRegexTargetClassifierTest {
             ".*/new_user\\.php.*"   // disallow links with path "/new_user.php"
         );
         
-        LinkFilter linkfilter = new LinkFilter(new LinkWhiteList(whitelistRegexes),
-                                               new LinkBlackList(blacklistRegexes));
+        LinkFilter linkfilter = new LinkFilter.Builder()
+                .withWhitelistRegexes(whitelistRegexes)
+                .withBlacklistRegexes(blacklistRegexes)
+                .build();
         
         UrlRegexTargetClassifier classifier = new UrlRegexTargetClassifier(linkfilter);
         
