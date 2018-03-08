@@ -45,7 +45,7 @@ public class ReplayCrawl extends CliTool {
             description = "Path to config path of the input crawl")
     String inputConfigPath;
 
-    @Option(name = {"-ilf", "--input-link-filter"}, required = true,
+    @Option(name = {"-ilf", "--input-link-filter"}, required = false,
             description = "Path to a .yml link fiter file")
     private String inputLinkFilterPath;
 
@@ -105,8 +105,12 @@ public class ReplayCrawl extends CliTool {
                 inputConfig.getLinkStorageConfig().getMaxCacheUrlsSize(),
                 inputConfig.getLinkStorageConfig().getPersistentHashtableBackend());
 
-        LinkFilter inputLinkFilter = new LinkFilter.Builder()
-                .fromYamlFile(inputLinkFilterPath).build();
+        LinkFilter inputLinkFilter = null;
+        if (inputLinkFilterPath != null) {
+            inputLinkFilter = new LinkFilter.Builder()
+                    .fromYamlFile(inputLinkFilterPath)
+                    .build();
+        }
 
 
         this.replay(crawlerId, targetStorage, linkStorage, config, inputRepository,
@@ -140,7 +144,8 @@ public class ReplayCrawl extends CliTool {
             while (it.hasNext()) {
 
                 if (processedPages % 1000 == 0) {
-                    double ignoredPercent = 100 * ignoredPages / (double) processedPages;
+                    double ignoredPercent =
+                            processedPages > 0 ? (100 * ignoredPages / (double) processedPages) : 0;
                     System.out.printf("processed_pages = %d ignored = %d  ignored_percent = %.2f\n",
                             processedPages, ignoredPages, ignoredPercent);
                 }
@@ -149,7 +154,7 @@ public class ReplayCrawl extends CliTool {
                     Page page = it.next();
 
                     String requestedUrl = page.getRequestedUrl();
-                    if (!inputLinkFilter.accept(requestedUrl)) {
+                    if (inputLinkFilter != null && !inputLinkFilter.accept(requestedUrl)) {
                         // logger.warn("Ignoring link because of filter: {}", requestedUrl);
                         ignoredPages++;
                         continue;
@@ -188,6 +193,11 @@ public class ReplayCrawl extends CliTool {
                 }
                 processedPages++;
             }
+
+            double ignoredPercent =
+                    processedPages > 0 ? (100 * ignoredPages / (double) processedPages) : 0;
+            System.out.printf("processed_pages = %d ignored = %d  ignored_percent = %.2f\n",
+                    processedPages, ignoredPages, ignoredPercent);
             System.out.printf("Processed %s pages.\n", processedPages);
             System.out.printf("done.\n");
         }

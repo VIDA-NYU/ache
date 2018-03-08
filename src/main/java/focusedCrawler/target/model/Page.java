@@ -299,6 +299,10 @@ public class Page implements Serializable {
         return redirectedURL == null ? url.toString() : redirectedURL.toString();
     }
 
+    public String getFinalUrlHost() {
+        return redirectedURL == null ? url.getHost() : redirectedURL.getHost();
+    }
+
     public String getCrawlerId() {
         return this.crawlerId;
     }
