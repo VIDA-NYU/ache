@@ -41,21 +41,22 @@ public class Tokenizers {
                 ts.close();
                 return tokens;
             } catch (IOException e) {
-                throw new RuntimeException("Shigle tokenization failed for string: "+cleanText, e);
+                throw new RuntimeException(
+                        "Shigle tokenization failed for string: " + cleanText, e);
             }
         }
-        
+
         public Set<String> tokensSet(String cleanText) {
             return new HashSet<String>(tokenize(cleanText));
         }
-        
+
         public Set<Integer> hashedTokenSet(String cleanText) {
             HashSet<Integer> hashedTokens = new HashSet<>();
-            for(String token : tokenize(cleanText)) {
+            for (String token : tokenize(cleanText)) {
                 hashedTokens.add(murmur.hashString(token, Charsets.UTF_8).asInt());
             }
             return hashedTokens;
-        }        
+        }
 
     }
 

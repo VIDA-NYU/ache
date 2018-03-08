@@ -10,6 +10,12 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.util.Tokenizers;
 import focusedCrawler.util.Tokenizers.ShingleTokenizer;
 
+/**
+ * Builds a "index" of near-duplicate pages using locality-sensitive hashing.
+ * 
+ * @author aeciosantos
+ *
+ */
 public class DuplicatePageIndexer {
     
     public static Logger logger = LoggerFactory.getLogger(DuplicatePageIndexer.class);

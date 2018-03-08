@@ -4,16 +4,37 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+/*
+ * Generates a family of hash functions that can be used for locality-sensitive hashing (LSH).
+ */
 public class MinHasher {
-    
+
     public final int nextPrime = 2147483587;
     public final int maxValue = nextPrime - 1;
     public int[] coeffA;
     public int[] coeffB;
     public int numOfHashes;
+    private int seed;
 
+    /**
+     * Creates a family of universal hash functions. Uses a fixed seed number (chosen randomly) to
+     * generate the hash functions.
+     * 
+     * @param numOfHashes The number of hash functions to generate.
+     */
     public MinHasher(int numOfHashes) {
+        this(numOfHashes, 1947);
+    }
+
+    /**
+     * Creates a family of universal hash functions.
+     * 
+     * @param numOfHashes The number of hash functions to generate.
+     * @param seed The seed number used to generate the hash functions.
+     */
+    public MinHasher(int numOfHashes, int seed) {
         this.numOfHashes = numOfHashes;
+        this.seed = seed;
         this.coeffA = pickRandCoefficients(numOfHashes);
         this.coeffB = pickRandCoefficients(numOfHashes);
     }
@@ -37,7 +58,7 @@ public class MinHasher {
     private int[] pickRandCoefficients(int k) {
         int[] rands = new int[k];
         HashSet<Integer> seen = new HashSet<Integer>(k);
-        Random random = new Random();
+        Random random = new Random(seed);
         int i = 0;
         while (k > 0) {
             int randIndex = random.nextInt(maxValue);

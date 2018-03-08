@@ -9,42 +9,52 @@ import com.google.common.collect.ArrayListMultimap;
 
 import focusedCrawler.util.persistence.rocksdb.RocksDBHashtable;
 
+/**
+ * Implementation of locality-sensitive hashing algorithm for finding near-duplicate content.
+ * 
+ * @author aeciosantos
+ *
+ */
 public class LSH {
-    
+
     private final int nBands;
     private final int nRows;
     private final LSHStorage bandsStorage;
-    
+
     public LSH(int nHashes, double jaccardThreshold) {
         this(nHashes, computeNumberOfBandsForThreshold(nHashes, jaccardThreshold));
     }
-    
+
     public LSH(int nHashes, int nBands) {
         this(nHashes, nBands, new InMemoryStorage(nBands));
     }
-    
+
     public LSH(int nHashes, double jaccardThreshold, String dataPath) {
-        this(nHashes, computeNumberOfBandsForThreshold(nHashes, jaccardThreshold), new DBStorage(dataPath));
+        this(nHashes, computeNumberOfBandsForThreshold(nHashes, jaccardThreshold),
+                new DBStorage(dataPath));
     }
-    
+
     public LSH(int nHashes, int nBands, String dataPath) {
         this(nHashes, nBands, new DBStorage(dataPath));
     }
-    
+
     public LSH(int nHashes, int nBands, LSHStorage bandsStorage) {
         if ((nHashes % nBands) != 0) {
-            throw new IllegalArgumentException("Bands must divide nHashes (" + nHashes + ") evenly");
+            throw new IllegalArgumentException(
+                    "Bands must divide nHashes (" + nHashes + ") evenly");
         }
         this.nBands = nBands;
         this.nRows = nHashes / nBands;
         this.bandsStorage = bandsStorage;
     }
 
-    public double targetThreshold(int nHashes, int nBands) {
-        return Math.pow(1.0 / nHashes, (1.0 / (nHashes / nBands)));
-    }
-
-
+    /**
+     * Finds the number of bands that need to be used for a given similarity threshold.
+     * 
+     * @param nHashes
+     * @param jaccardThreshold
+     * @return
+     */
     private static int computeNumberOfBandsForThreshold(int nHashes, double jaccardThreshold) {
         int bands = nHashes;
         while (bands > 1) {
@@ -86,13 +96,15 @@ public class LSH {
         return candidates;
     }
 
-    interface LSHStorage {
+    protected interface LSHStorage {
+
         public void insertToBand(int b, String hh, String key);
 
         public Collection<String> getValues(int b, String hh);
+
     }
-    
-    static class InMemoryStorage implements LSHStorage {
+
+    protected static class InMemoryStorage implements LSHStorage {
 
         private final ArrayListMultimap<String, String>[] maps;
 
@@ -113,7 +125,7 @@ public class LSH {
         }
     }
 
-    static class DBStorage implements LSHStorage {
+    protected static class DBStorage implements LSHStorage {
 
         private final RocksDBHashtable<TreeSet<String>> maps;
 
