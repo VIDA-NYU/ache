@@ -1447,15 +1447,22 @@ public class PaginaURL {
         }
         return inputURL;
     }
-    
+
     protected String resolveHttpLink(HttpUrl base, String link) {
         HttpUrl resolvedUrl;
-        if(base == null) {
-            resolvedUrl = HttpUrl.parse(link);
-        } else {
-            resolvedUrl = base.resolve(link);
+        try {
+            if (base == null) {
+                resolvedUrl = HttpUrl.parse(link);
+            } else {
+                resolvedUrl = base.resolve(link);
+            }
+        } catch (Exception e) {
+            // The link is invalid or malformed
+            resolvedUrl = null;
+            // logger.debug(String.format("Failed to resolve URL: base={%s} link={%s}",
+            // base.toString(), link), e);
         }
-        if(resolvedUrl == null) {
+        if (resolvedUrl == null) {
             return null;
         } else {
             return resolvedUrl.toString();
