@@ -61,6 +61,15 @@ public class TargetStorageConfig {
     @JsonProperty("target_storage.english_language_detection_enabled")
     private boolean englishLanguageDetectionEnabled = false;
 
+    @JsonProperty("target_storage.near_duplicate_detection.enabled")
+    private boolean nearDuplicateDetectionEnabled = false;
+
+    @JsonProperty("target_storage.near_duplicate_detection.store")
+    private boolean storeNearDuplicates = false;
+
+    @JsonProperty("target_storage.near_duplicate_detection.similarity")
+    private double nearDuplicatesSimilarityThreshold = 0.9;
+
     @JsonUnwrapped
     private KafkaConfig kafkaConfig;
 
@@ -145,6 +154,18 @@ public class TargetStorageConfig {
             }
         }
         return false;
+    }
+
+    public boolean isNearDuplicateDetectionEnabled() {
+        return nearDuplicateDetectionEnabled;
+    }
+
+    public boolean ignoreNearDuplicates() {
+        return storeNearDuplicates;
+    }
+
+    public double getNearDuplicatesSimilarityThreshold() {
+        return nearDuplicatesSimilarityThreshold;
     }
 
 }

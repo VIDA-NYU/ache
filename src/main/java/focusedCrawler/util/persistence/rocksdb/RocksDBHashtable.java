@@ -82,7 +82,7 @@ public class RocksDBHashtable<T> implements HashtableDb<T>, Closeable {
 
     @Override
     public List<Tuple<T>> listElements() {
-        List<Tuple<T>> items = new ArrayList<>();;
+        List<Tuple<T>> items = new ArrayList<>();
         try(RocksDBIterator it = new RocksDBIterator()) {
             while(it.hasNext()) {
                 items.add(it.next());

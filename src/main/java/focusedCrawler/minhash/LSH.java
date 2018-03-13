@@ -1,5 +1,7 @@
 package focusedCrawler.minhash;
 
+import java.nio.ByteBuffer;
+import java.nio.IntBuffer;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -7,7 +9,7 @@ import java.util.TreeSet;
 
 import com.google.common.collect.ArrayListMultimap;
 
-import focusedCrawler.util.persistence.rocksdb.RocksDBHashtable;
+import focusedCrawler.util.persistence.rocksdb.BytesObjectHashtable;
 
 /**
  * Implementation of locality-sensitive hashing algorithm for finding near-duplicate content.
@@ -31,7 +33,7 @@ public class LSH {
 
     public LSH(int nHashes, double jaccardThreshold, String dataPath) {
         this(nHashes, computeNumberOfBandsForThreshold(nHashes, jaccardThreshold),
-                new DBStorage(dataPath));
+            new DBStorage(dataPath));
     }
 
     public LSH(int nHashes, int nBands, String dataPath) {
@@ -41,7 +43,7 @@ public class LSH {
     public LSH(int nHashes, int nBands, LSHStorage bandsStorage) {
         if ((nHashes % nBands) != 0) {
             throw new IllegalArgumentException(
-                    "Bands must divide nHashes (" + nHashes + ") evenly");
+                "Bands must divide nHashes (" + nHashes + ") evenly");
         }
         this.nBands = nBands;
         this.nRows = nHashes / nBands;
@@ -69,44 +71,55 @@ public class LSH {
         return bands;
     }
 
-    public void insert(String key, int[] hashes) {
-        for (int b = 0; b < nBands; b++) {
-            StringBuffer sb = new StringBuffer();
-            for (int r = 0; r < nRows; r++) {
-                sb.append(Integer.toHexString(hashes[b * nRows + r]));
-            }
-            String hh = sb.toString();
-            bandsStorage.insertToBand(b, hh, key);
+    public void insert(int id, int[] minhashes) {
+        for (int band = 0; band < nBands; band++) {
+            int[] hashes = computeHash(minhashes, band, nRows);
+            bandsStorage.insertToBand(band, hashes, id);
         }
     }
 
-    public Set<String> query(int[] hashes) {
-        Set<String> candidates = new HashSet<String>();
-        for (int b = 0; b < nBands; b++) {
-            StringBuffer sb = new StringBuffer();
-            for (int r = 0; r < nRows; r++) {
-                sb.append(Integer.toHexString(hashes[b * nRows + r]));
-            }
-            String hh = sb.toString();
-            Collection<String> values = bandsStorage.getValues(b, hh);
-            if (values != null) {
+    public Set<Integer> query(int[] minhashes) {
+        Set<Integer> candidates = new HashSet<Integer>();
+        for (int band = 0; band < nBands; band++) {
+            int[] hashes = computeHash(minhashes, band, nRows);
+            Collection<Integer> values = bandsStorage.getValues(band, hashes);
+            if (values != null && !values.isEmpty()) {
                 candidates.addAll(values);
             }
         }
         return candidates;
     }
 
+    public boolean isDuplicate(int[] minhashes) {
+        for (int band = 0; band < nBands; band++) {
+            int[] hashes = computeHash(minhashes, band, nRows);
+            Collection<Integer> values = bandsStorage.getValues(band, hashes);
+            if (values != null && !values.isEmpty()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static int[] computeHash(int[] minhashes, int band, int nRows) {
+        int[] hashes = new int[nRows];
+        for (int r = 0; r < nRows; r++) {
+            hashes[r] = minhashes[band * nRows + r];
+        }
+        return hashes;
+    }
+
     protected interface LSHStorage {
 
-        public void insertToBand(int b, String hh, String key);
+        public void insertToBand(int band, int[] hashes, int id);
 
-        public Collection<String> getValues(int b, String hh);
+        public Collection<Integer> getValues(int band, int[] hashes);
 
     }
 
     protected static class InMemoryStorage implements LSHStorage {
 
-        private final ArrayListMultimap<String, String>[] maps;
+        private final ArrayListMultimap<String, Integer>[] maps;
 
         @SuppressWarnings("unchecked")
         public InMemoryStorage(int nBands) {
@@ -116,37 +129,62 @@ public class LSH {
             }
         }
 
-        public void insertToBand(int band, String hexHash, String key) {
-            maps[band].put(hexHash, key);
+        @Override
+        public void insertToBand(int band, int[] hashes, int id) {
+            maps[band].put(toHex(hashes), id);
         }
 
-        public Collection<String> getValues(int band, String hexHash) {
-            return maps[band].get(hexHash);
+        @Override
+        public Collection<Integer> getValues(int band, int[] hashes) {
+            return maps[band].get(toHex(hashes));
+        }
+
+        private static String toHex(int[] hashes) {
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < hashes.length; i++) {
+                sb.append(Integer.toHexString(hashes[i]));
+            }
+            return sb.toString();
         }
     }
 
-    protected static class DBStorage implements LSHStorage {
+    @SuppressWarnings("rawtypes")
+    protected static class DBStorage extends BytesObjectHashtable<TreeSet> implements LSHStorage {
 
-        private final RocksDBHashtable<TreeSet<String>> maps;
-
-        @SuppressWarnings({"unchecked", "rawtypes"})
         public DBStorage(String path) {
-            maps = new RocksDBHashtable(path, TreeSet.class);
+            super(path, TreeSet.class);
         }
 
-        public void insertToBand(int band, String hexHash, String key) {
-            String hashtableKey = band + hexHash;
-            TreeSet<String> keysSet = maps.get(hashtableKey);
-            if (keysSet == null) {
-                keysSet = new TreeSet<>();
+        @Override
+        public void insertToBand(int band, int[] hashes, int id) {
+            byte[] hashtableKey = createKey(band, hashes);
+            @SuppressWarnings("unchecked")
+            TreeSet<Integer> idsSet = super.getObject(hashtableKey);
+            if (idsSet == null) {
+                idsSet = new TreeSet<>();
             }
-            keysSet.add(key);
-            maps.put(hashtableKey, keysSet);
+            idsSet.add(id);
+            super.put(hashtableKey, idsSet);
         }
 
-        public Collection<String> getValues(int band, String hexHash) {
-            String hashtableKey = band + hexHash;
-            return maps.get(hashtableKey);
+        @Override
+        public Collection<Integer> getValues(int band, int[] hashes) {
+            byte[] hashtableKey = createKey(band, hashes);
+            @SuppressWarnings("unchecked")
+            TreeSet<Integer> bytes = super.getObject(hashtableKey);
+            if (bytes == null) {
+                return null;
+            } else {
+                return bytes;
+            }
+        }
+
+        private byte[] createKey(int band, int[] hashes) {
+            ByteBuffer byteBuffer = ByteBuffer.allocate((hashes.length + 1) * 4);
+            IntBuffer intBuffer = byteBuffer.asIntBuffer();
+            intBuffer.put(band);
+            intBuffer.put(hashes);
+            return byteBuffer.array();
         }
 
     }
