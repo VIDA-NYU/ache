@@ -1,51 +1,55 @@
 package focusedCrawler.util.persistence.rocksdb;
 
-import java.io.ByteArrayOutputStream;
+import focusedCrawler.util.CloseableIterator;
+import focusedCrawler.util.IteratorBase;
+import focusedCrawler.util.KV;
+import focusedCrawler.util.Kryos;
 
-import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
+public class BytesObjectHashtable<T>
+        extends AbstractRocksDbHashtable
+        implements Iterable<KV<byte[], T>> {
 
-public class BytesObjectHashtable<T> extends BytesBytesHashtable {
-
-    private static final ThreadLocal<Kryo> KRYOS = new ThreadLocal<Kryo>() {
-        protected Kryo initialValue() {
-            Kryo kryo = new Kryo();
-            return kryo;
-        };
-    };
-
-    private Class<T> contentClass;
+    private Kryos<T> kryos;
 
     public BytesObjectHashtable(String path, Class<T> contentClass) {
         super(path);
-        this.contentClass = contentClass;
+        this.kryos = new Kryos<>(contentClass);
     }
 
     public void put(byte[] key, T value) {
-        byte[] valueBytes = serializeObject(value);
-        super.put(key, valueBytes);
+        byte[] valueBytes = kryos.serializeObject(value);
+        putBytes(key, valueBytes);
     }
 
-    private byte[] serializeObject(T value) {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        Output output = new Output(baos);
-        KRYOS.get().writeObject(output, value);
-        output.flush();
-        return baos.toByteArray();
-    }
-
-    public T getObject(byte[] key) {
-        byte[] value = super.get(key);
+    public T get(byte[] key) {
+        byte[] value = getBytes(key);
         if (value == null) {
             return null;
         }
-        return unserializeObject(value);
+        return kryos.unserializeObject(value);
     }
 
-    private T unserializeObject(byte[] value) {
-        Input input = new Input(value);
-        return KRYOS.get().readObject(input, contentClass);
+    @Override
+    public CloseableIterator<KV<byte[], T>> iterator() {
+        return new BytesObjectIterator(new RocksDBIterator(super.db));
+    }
+
+    private class BytesObjectIterator
+            extends IteratorBase<KV<byte[], byte[]>>
+            implements CloseableIterator<KV<byte[], T>> {
+
+        public BytesObjectIterator(CloseableIterator<KV<byte[], byte[]>> it) {
+            super(it);
+        }
+
+        @Override
+        public KV<byte[], T> next() {
+            KV<byte[], byte[]> next = it.next();
+            if (next == null)
+                return null;
+            T value = kryos.unserializeObject(next.getValue());
+            return new KV<byte[], T>(next.getKey(), value);
+        }
     }
 
 }

@@ -1,6 +1,6 @@
 package focusedCrawler.util.persistence.rocksdb;
 
-public class StringIntHashtable extends BytesBytesHashtable {
+public class StringIntHashtable extends AbstractRocksDbHashtable {
 
     public final int absentValue = -1;
 
@@ -11,7 +11,7 @@ public class StringIntHashtable extends BytesBytesHashtable {
     protected StringIntHashtable() {}
 
     public int get(String key) {
-        byte[] bytes = super.get(stringToBytes(key));
+        byte[] bytes = getBytes(stringToBytes(key));
         if (bytes == null) {
             return absentValue;
         } else {
@@ -20,7 +20,7 @@ public class StringIntHashtable extends BytesBytesHashtable {
     }
 
     public void put(String key, int value) {
-        super.put(stringToBytes(key), intToBytes(value));
+        putBytes(stringToBytes(key), intToBytes(value));
     }
 
 }

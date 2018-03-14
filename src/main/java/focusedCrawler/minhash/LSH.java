@@ -159,7 +159,7 @@ public class LSH {
         public void insertToBand(int band, int[] hashes, int id) {
             byte[] hashtableKey = createKey(band, hashes);
             @SuppressWarnings("unchecked")
-            TreeSet<Integer> idsSet = super.getObject(hashtableKey);
+            TreeSet<Integer> idsSet = super.get(hashtableKey);
             if (idsSet == null) {
                 idsSet = new TreeSet<>();
             }
@@ -171,7 +171,7 @@ public class LSH {
         public Collection<Integer> getValues(int band, int[] hashes) {
             byte[] hashtableKey = createKey(band, hashes);
             @SuppressWarnings("unchecked")
-            TreeSet<Integer> bytes = super.getObject(hashtableKey);
+            TreeSet<Integer> bytes = super.get(hashtableKey);
             if (bytes == null) {
                 return null;
             } else {
