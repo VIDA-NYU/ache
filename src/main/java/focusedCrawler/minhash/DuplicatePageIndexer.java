@@ -74,13 +74,16 @@ public class DuplicatePageIndexer {
     }
 
     public DuplicatePageIndexer(String dataPath, double jaccardThreshold) {
-        Path base = Paths.get(dataPath);
+        this(Paths.get(dataPath), jaccardThreshold);
+    }
+
+    public DuplicatePageIndexer(Path dataPath, double jaccardThreshold) {
+        Path basePath = dataPath.resolve("near_duplicates");
+        this.neardupLog = new LogFile(dataPath.resolve("data_monitor/nearduplicates.csv"));
+        this.lsh = new LSH(numHashes, jaccardThreshold, basePath.resolve("lsh").toString());
+        this.urlToId = new StringIntHashtable(basePath.resolve("keys_db").toString());
+        this.idToUrl = new IntStringHashtable(basePath.resolve("ids_db").toString());
         this.jaccardThreshold = jaccardThreshold;
-        this.lsh = new LSH(numHashes, jaccardThreshold,
-            base.resolve("near_duplicates").toString());
-        this.neardupLog = new LogFile(base.resolve("data_monitor/nearduplicates.csv"));
-        this.urlToId = new StringIntHashtable(base.resolve("keys_db").toString());
-        this.idToUrl = new IntStringHashtable(base.resolve("ids_db").toString());
     }
 
     public void insert(String key, String text) {
@@ -135,16 +138,11 @@ public class DuplicatePageIndexer {
     }
 
     public boolean detectAndIndex(String text, String url) {
-        Set<String> duplicates = findNearDuplicates(text);
-        boolean isNearDuplicate = !duplicates.isEmpty();
-        insert(url, text);
-        if (isNearDuplicate) {
-            neardupLog.printf("%s", url);
-            for (String duplicate : duplicates) {
-                neardupLog.printf(" %s", duplicate);
-            }
-            neardupLog.printf("\n");
+        boolean isNearDuplicate = isNearDuplicate(text);
+        if (neardupLog != null && isNearDuplicate) {
+            neardupLog.printf("%s\n", url);
         }
+        insert(url, text);
         return isNearDuplicate;
     }
 

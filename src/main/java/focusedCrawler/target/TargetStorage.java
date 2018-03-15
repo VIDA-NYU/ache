@@ -42,13 +42,10 @@ public class TargetStorage {
     private TargetStorageMonitor monitor;
     private DuplicatePageIndexer duplicatesIndexer;
     
-    public TargetStorage(TargetClassifier targetClassifier,
-                         TargetRepository targetRepository, 
-                         LinkStorage linkStorage,
-                       	 TargetStorageMonitor monitor,
-                       	 TargetStorageConfig config,
-                       	 DuplicatePageIndexer duplicatesIndexer) {
-        
+    public TargetStorage(TargetClassifier targetClassifier, TargetRepository targetRepository,
+            LinkStorage linkStorage, TargetStorageMonitor monitor,
+            TargetStorageConfig config, DuplicatePageIndexer duplicatesIndexer) {
+
         this.targetClassifier = targetClassifier;
         this.targetRepository = targetRepository;
         this.linkStorage = linkStorage;

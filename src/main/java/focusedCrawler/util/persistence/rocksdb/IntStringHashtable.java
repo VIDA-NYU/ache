@@ -22,4 +22,3 @@ public class IntStringHashtable extends AbstractRocksDbHashtable {
     }
 
 }
-
