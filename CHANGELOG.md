@@ -7,6 +7,7 @@
 - Added option to configure max number of features on `ache buildModel` command
 - Changed license from GNU GPL to Apache 2.0
 - Added tool (ache run ReplayCrawl) to replay old crawls using a new configuration file
+- Added near-duplicate page detection using min-hashing and LSH
 
 ## Version 0.10.0 (2018-01-16)
 

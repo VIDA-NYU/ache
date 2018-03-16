@@ -35,7 +35,7 @@ public class Page implements Serializable {
     private LinkRelevance linkRelevance;
     private ParsedData parsedData;
     private TargetRelevance targetRelevance;
-
+    private boolean isNearDuplicate = false;
     private boolean auth = false;
     
     public Page() {
@@ -309,6 +309,14 @@ public class Page implements Serializable {
 
     public void setCrawlerId(String crawlerId) {
         this.crawlerId = crawlerId;
+    }
+
+    public boolean isNearDuplicate() {
+        return isNearDuplicate;
+    }
+
+    public void setNearDuplicate(boolean isNearDuplicate) {
+        this.isNearDuplicate = isNearDuplicate;
     }
 
 }

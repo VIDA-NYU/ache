@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.LinkStorage;
+import focusedCrawler.minhash.DuplicatePageIndexer;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
@@ -39,18 +40,18 @@ public class TargetStorage {
     private TargetStorageConfig config;
     private LangDetection langDetector = new LangDetection();
     private TargetStorageMonitor monitor;
+    private DuplicatePageIndexer duplicatesIndexer;
     
-    public TargetStorage(TargetClassifier targetClassifier,
-                         TargetRepository targetRepository, 
-                         LinkStorage linkStorage,
-                       	 TargetStorageMonitor monitor,
-                       	 TargetStorageConfig config) {
-        
+    public TargetStorage(TargetClassifier targetClassifier, TargetRepository targetRepository,
+            LinkStorage linkStorage, TargetStorageMonitor monitor,
+            TargetStorageConfig config, DuplicatePageIndexer duplicatesIndexer) {
+
         this.targetClassifier = targetClassifier;
         this.targetRepository = targetRepository;
         this.linkStorage = linkStorage;
         this.config = config;
         this.monitor = monitor;
+        this.duplicatesIndexer = duplicatesIndexer;
     }
 
     /**
@@ -70,6 +71,16 @@ public class TargetStorage {
             // Only accept English language
             if (this.langDetector.isEnglish(page) == false) {
                 logger.info("Ignoring non-English page: " + page.getURL().toString());
+                return null;
+            }
+        }
+
+        if (config.isNearDuplicateDetectionEnabled()) {
+            String text = page.getParsedData().getCleanText();
+            String key = page.getRequestedUrl();
+            boolean isNearDuplicate = duplicatesIndexer.detectAndIndex(text, key);
+            page.setNearDuplicate(isNearDuplicate);
+            if (config.ignoreNearDuplicates() && isNearDuplicate) {
                 return null;
             }
         }
@@ -132,13 +143,20 @@ public class TargetStorage {
                 createTargetRepository(dataPath, esIndexName, esTypeName, config);
 
         TargetStorageMonitor monitor = null;
-        if(metricsManager != null) {
-        	monitor = new TargetStorageMonitor(dataPath, metricsManager);
-        }else {
-        	monitor = new TargetStorageMonitor(dataPath);
+        if (metricsManager != null) {
+            monitor = new TargetStorageMonitor(dataPath, metricsManager);
+        } else {
+            monitor = new TargetStorageMonitor(dataPath);
         }
 
-        return new TargetStorage(targetClassifier, targetRepository, linkStorage, monitor, config);
+        DuplicatePageIndexer duplicatesIndexer = null;
+        if (config.isNearDuplicateDetectionEnabled()) {
+            double similarityThreshold = config.getNearDuplicatesSimilarityThreshold();
+            duplicatesIndexer = new DuplicatePageIndexer(dataPath, similarityThreshold);
+        }
+
+        return new TargetStorage(targetClassifier, targetRepository, linkStorage,
+                monitor, config, duplicatesIndexer);
     }
 
     public static TargetRepository createTargetRepository(String dataPath, String esIndexName,

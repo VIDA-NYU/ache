@@ -17,54 +17,55 @@ repositories {
 
 dependencies {
     // Logging
-    compile 'org.slf4j:slf4j-api:1.7.+'
-    compile 'ch.qos.logback:logback-classic:1.1.+'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.+'
     // Commons
-    compile 'com.google.guava:guava:20.0'
-    compile 'org.apache.commons:commons-lang3:3.4'
-    compile 'org.apache.commons:commons-compress:1.12'
-    compile 'commons-codec:commons-codec:1.10'
-    compile 'commons-validator:commons-validator:1.5.1'
-    compile 'com.github.crawler-commons:crawler-commons:0.8'
-    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    compile group: 'com.google.guava', name: 'guava', version: '20.0'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    compile group: 'org.apache.commons', name: 'commons-compress', version: '1.12'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
+    compile group: 'commons-validator', name: 'commons-validator', version: '1.5.1'
+    compile group: 'com.github.crawler-commons', name: 'crawler-commons', version: '0.8'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
     // CLI
-    compile 'io.airlift:airline:0.7'
+    compile group: 'io.airlift', name: 'airline', version: '0.7'
     // Data serialization
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
-    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.8.5'
-    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.5'
-    compile 'com.esotericsoftware:kryo:4.0.0'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.5'
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-cbor', version: '2.8.5'
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.8.5'
+    compile group: 'com.esotericsoftware', name: 'kryo', version: '4.0.0'
     // Others
-    compile 'org.rocksdb:rocksdbjni:5.8.7'
-    compile 'org.apache.tika:tika-parsers:1.14'
-    compile 'com.syncthemall:boilerpipe:1.2.2'
-    compile 'net.sourceforge.nekohtml:nekohtml:1.9.22'
-    compile 'com.github.haifengl:smile-core:1.5.0'
-    compile 'org.apache.lucene:lucene-core:4.10.4'
-    compile 'org.elasticsearch:elasticsearch:1.4.4'
-    compile 'org.elasticsearch.client:elasticsearch-rest-client:5.6.3'
-    compile 'io.dropwizard.metrics:metrics-core:3.1.3'
-    compile 'io.dropwizard.metrics:metrics-json:3.1.3'
-    compile 'io.dropwizard.metrics:metrics-jvm:3.1.3'
-    compile 'com.amazonaws:aws-java-sdk-s3:1.11.213'
-    compile 'org.jsoup:jsoup:1.10.3'
-    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile group: 'org.rocksdb', name: 'rocksdbjni', version: '5.8.7'
+    compile group: 'org.apache.tika', name: 'tika-parsers', version: '1.14'
+    compile group: 'com.syncthemall', name: 'boilerpipe', version: '1.2.2'
+    compile group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
+    compile group: 'com.github.haifengl', name: 'smile-core', version: '1.5.0'
+    compile group: 'org.apache.lucene', name: 'lucene-core', version: '4.10.4'
+    compile group: 'org.elasticsearch', name: 'elasticsearch', version: '1.4.4'
+    compile group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '5.6.3'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-core', version: '3.1.3'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-json', version: '3.1.3'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '3.1.3'
+    compile group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.11.213'
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.10.3'
+    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.8.1'
     compile group: 'org.apache.kafka', name: 'kafka-clients', version: '0.11.0.1'
+    compile group: 'org.roaringbitmap', name: 'RoaringBitmap', version: '0.7.8'
+    // REST server dependencies
+    compile group: 'com.sparkjava', name: 'spark-core', version: '2.5.3'
 
     compile('org.netpreserve.commons:webarchive-commons:1.1.8') {
       exclude group: 'org.apache.hadoop', module: 'hadoop-core'
       exclude group: 'junit', module: 'junit'
     }
 
-    // REST server dependencies
-    compile "com.sparkjava:spark-core:2.5.3"
-    
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.hamcrest:hamcrest-all:1.3'
-    testCompile 'org.mockito:mockito-core:1.10.+'
-    testCompile 'org.eclipse.jetty:jetty-server:9.3.6.v20151106' // for tests of crawler commons library fork
-    testCompile 'com.squareup.okhttp3:mockwebserver:3.8.1'
-    
+    // Test time dependencies
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '1.10.+'
+    testCompile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.3.6.v20151106' // for tests of crawler commons library fork
+    testCompile group: 'com.squareup.okhttp3', name: 'mockwebserver', version: '3.8.1'
+
     // TODO fill these in from Maven Central instead of that local libs dir
     compile files('libs/jsonic-1.2.0.jar') // recommend updating this, it's for langdetect.jar
     compile files('libs/langdetect-03-03-2014.jar') // TODO why isn't this in maven central
