@@ -1,15 +1,18 @@
 package focusedCrawler.minhash;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
-import com.google.common.collect.ArrayListMultimap;
+import org.roaringbitmap.RoaringBitmap;
+import org.roaringbitmap.buffer.ImmutableRoaringBitmap;
 
-import focusedCrawler.util.persistence.rocksdb.BytesObjectHashtable;
+import focusedCrawler.util.persistence.rocksdb.BytesBytesHashtable;
 
 /**
  * Implementation of locality-sensitive hashing algorithm for finding near-duplicate content.
@@ -33,7 +36,7 @@ public class LSH {
 
     public LSH(int nHashes, double jaccardThreshold, String dataPath) {
         this(nHashes, computeNumberOfBandsForThreshold(nHashes, jaccardThreshold),
-            new DBStorage(dataPath));
+                new DBStorage(dataPath));
     }
 
     public LSH(int nHashes, int nBands, String dataPath) {
@@ -43,7 +46,7 @@ public class LSH {
     public LSH(int nHashes, int nBands, LSHStorage bandsStorage) {
         if ((nHashes % nBands) != 0) {
             throw new IllegalArgumentException(
-                "Bands must divide nHashes (" + nHashes + ") evenly");
+                    "Bands must divide nHashes (" + nHashes + ") evenly");
         }
         this.nBands = nBands;
         this.nRows = nHashes / nBands;
@@ -78,23 +81,22 @@ public class LSH {
         }
     }
 
-    public Set<Integer> query(int[] minhashes) {
-        Set<Integer> candidates = new HashSet<Integer>();
+    public Iterator<Integer> query(int[] minhashes) {
+        RoaringBitmap candidates = new RoaringBitmap();
         for (int band = 0; band < nBands; band++) {
             int[] hashes = computeHash(minhashes, band, nRows);
-            Collection<Integer> values = bandsStorage.getValues(band, hashes);
-            if (values != null && !values.isEmpty()) {
-                candidates.addAll(values);
+            RoaringBitmap idsBitmap = bandsStorage.getValues(band, hashes);
+            if (idsBitmap != null) {
+                candidates.or(idsBitmap);
             }
         }
-        return candidates;
+        return candidates.iterator();
     }
 
     public boolean isDuplicate(int[] minhashes) {
         for (int band = 0; band < nBands; band++) {
             int[] hashes = computeHash(minhashes, band, nRows);
-            Collection<Integer> values = bandsStorage.getValues(band, hashes);
-            if (values != null && !values.isEmpty()) {
+            if (bandsStorage.contains(band, hashes)) {
                 return true;
             }
         }
@@ -113,70 +115,89 @@ public class LSH {
 
         public void insertToBand(int band, int[] hashes, int id);
 
-        public Collection<Integer> getValues(int band, int[] hashes);
+        public boolean contains(int band, int[] hashes);
+
+        public RoaringBitmap getValues(int band, int[] hashes);
 
     }
 
     protected static class InMemoryStorage implements LSHStorage {
 
-        private final ArrayListMultimap<String, Integer>[] maps;
+        private final Map<String, RoaringBitmap> maps = new HashMap<>();
 
-        @SuppressWarnings("unchecked")
-        public InMemoryStorage(int nBands) {
-            maps = new ArrayListMultimap[nBands];
-            for (int i = 0; i < nBands; i++) {
-                maps[i] = ArrayListMultimap.create();
+        public InMemoryStorage(int nBands) {}
+
+        @Override
+        public void insertToBand(int band, int[] hashes, int id) {
+            String hexkey = toHex(band, hashes);
+            RoaringBitmap idsBitmap = maps.get(hexkey);
+            if (idsBitmap == null) {
+                idsBitmap = RoaringBitmap.bitmapOf(id);
+                maps.put(hexkey, idsBitmap);
+            } else {
+                idsBitmap.add(id);
             }
         }
 
         @Override
-        public void insertToBand(int band, int[] hashes, int id) {
-            maps[band].put(toHex(hashes), id);
+        public RoaringBitmap getValues(int band, int[] hashes) {
+            RoaringBitmap idsBitmap = maps.get(toHex(band, hashes));
+            return idsBitmap == null ? null : idsBitmap;
         }
 
-        @Override
-        public Collection<Integer> getValues(int band, int[] hashes) {
-            return maps[band].get(toHex(hashes));
-        }
-
-        private static String toHex(int[] hashes) {
+        private static String toHex(int band, int[] hashes) {
             StringBuffer sb = new StringBuffer();
+            sb.append(Integer.toHexString(band));
             for (int i = 0; i < hashes.length; i++) {
                 sb.append(Integer.toHexString(hashes[i]));
             }
             return sb.toString();
         }
+
+        @Override
+        public boolean contains(int band, int[] hashes) {
+            RoaringBitmap idsBitmap = maps.get(toHex(band, hashes));
+            return (idsBitmap != null && !idsBitmap.isEmpty()) ? true : false;
+        }
     }
 
-    @SuppressWarnings("rawtypes")
-    protected static class DBStorage extends BytesObjectHashtable<TreeSet> implements LSHStorage {
+    protected static class DBStorage extends BytesBytesHashtable implements LSHStorage {
 
         public DBStorage(String path) {
-            super(path, TreeSet.class);
+            super(path);
         }
 
         @Override
         public void insertToBand(int band, int[] hashes, int id) {
             byte[] hashtableKey = createKey(band, hashes);
-            @SuppressWarnings("unchecked")
-            TreeSet<Integer> idsSet = super.get(hashtableKey);
-            if (idsSet == null) {
-                idsSet = new TreeSet<>();
+            byte[] idsBitmapBytes = super.get(hashtableKey);
+            if (idsBitmapBytes == null) {
+                RoaringBitmap idsBitmap = RoaringBitmap.bitmapOf(id);
+                idsBitmapBytes = serializeBitmap(idsBitmap);
+            } else {
+                RoaringBitmap idsBitmap = unserializeBitmap(idsBitmapBytes);
+                idsBitmap.add(id);
+                idsBitmapBytes = serializeBitmap(idsBitmap);
             }
-            idsSet.add(id);
-            super.put(hashtableKey, idsSet);
+            super.put(hashtableKey, idsBitmapBytes);
         }
 
         @Override
-        public Collection<Integer> getValues(int band, int[] hashes) {
+        public RoaringBitmap getValues(int band, int[] hashes) {
             byte[] hashtableKey = createKey(band, hashes);
-            @SuppressWarnings("unchecked")
-            TreeSet<Integer> bytes = super.get(hashtableKey);
-            if (bytes == null) {
+            byte[] bitmapBytes = super.get(hashtableKey);
+            if (bitmapBytes == null) {
                 return null;
             } else {
-                return bytes;
+                return unserializeBitmap(bitmapBytes);
             }
+        }
+
+        @Override
+        public boolean contains(int band, int[] hashes) {
+            byte[] hashtableKey = createKey(band, hashes);
+            byte[] bitmapBytes = super.get(hashtableKey);
+            return bitmapBytes != null;
         }
 
         private byte[] createKey(int band, int[] hashes) {
@@ -187,6 +208,20 @@ public class LSH {
             return byteBuffer.array();
         }
 
+        private RoaringBitmap unserializeBitmap(byte[] bitmapBytes) {
+            ByteBuffer bb = ByteBuffer.wrap(bitmapBytes);
+            return new ImmutableRoaringBitmap(bb).toRoaringBitmap();
+        }
+
+        private byte[] serializeBitmap(RoaringBitmap bitmap) {
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            try (DataOutputStream dos = new DataOutputStream(bos)) {
+                bitmap.serialize(dos);
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to serialize roaring bitmap.");
+            }
+            return bos.toByteArray();
+        }
     }
 
 }

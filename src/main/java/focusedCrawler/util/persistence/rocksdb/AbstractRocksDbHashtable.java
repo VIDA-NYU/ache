@@ -1,6 +1,7 @@
 package focusedCrawler.util.persistence.rocksdb;
 
 import java.io.Closeable;
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 
 import org.rocksdb.Options;
@@ -21,6 +22,10 @@ public abstract class AbstractRocksDbHashtable implements Closeable {
     protected AbstractRocksDbHashtable() {}
 
     public AbstractRocksDbHashtable(String path) {
+        File file = new File(path);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
         this.options = new Options();
         this.options.setCreateIfMissing(true);
         try {

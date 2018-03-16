@@ -4,6 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -44,8 +45,8 @@ public class DuplicatePageIndexer {
             Map<String, Integer> map = new HashMap<>();
 
             public int get(String key) {
-                Integer v = map.get(key);
-                return v == null ? absentValue : v;
+                Integer value = map.get(key);
+                return value == null ? absentValue : value;
             }
 
             public void put(String key, int value) {
@@ -92,6 +93,15 @@ public class DuplicatePageIndexer {
         lsh.insert(keyId, signatures);
     }
 
+    public boolean detectAndIndex(String text, String url) {
+        boolean isNearDuplicate = isNearDuplicate(text);
+        if (neardupLog != null && isNearDuplicate) {
+            neardupLog.printf("%s\n", url);
+        }
+        insert(url, text);
+        return isNearDuplicate;
+    }
+
     private synchronized int getId(String key) {
         int id = urlToId.get(key);
         if (id == urlToId.absentValue) {
@@ -115,9 +125,10 @@ public class DuplicatePageIndexer {
 
     public Set<String> findNearDuplicates(String text) {
         int[] signatures = computeMinHashSignatures(text);
-        Set<Integer> duplicateIds = lsh.query(signatures);
+        Iterator<Integer> duplicateIds = lsh.query(signatures);
         Set<String> keys = new HashSet<String>();
-        for (int id : duplicateIds) {
+        while (duplicateIds.hasNext()) {
+            int id = duplicateIds.next();
             keys.add(getUrlBy(id));
         }
         return keys;
@@ -135,15 +146,6 @@ public class DuplicatePageIndexer {
             logger.warn("Failed to parse clean text into shingles.", e);
             return new int[0];
         }
-    }
-
-    public boolean detectAndIndex(String text, String url) {
-        boolean isNearDuplicate = isNearDuplicate(text);
-        if (neardupLog != null && isNearDuplicate) {
-            neardupLog.printf("%s\n", url);
-        }
-        insert(url, text);
-        return isNearDuplicate;
     }
 
 }
