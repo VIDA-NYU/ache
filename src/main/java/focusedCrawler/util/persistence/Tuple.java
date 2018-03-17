@@ -25,33 +25,25 @@ package focusedCrawler.util.persistence;
 
 import java.io.Serializable;
 
-import com.sleepycat.persist.model.Entity;
-import com.sleepycat.persist.model.PrimaryKey;
-
 @SuppressWarnings("serial")
-@Entity
 public class Tuple<T> implements Serializable {
-	
-	@PrimaryKey
-	private String key;
-	
-	private T value;
-	
-	public Tuple(){
-		
-	}
-	
-	public Tuple(String key, T value){
-		this.key = key;
-		this.value = value;
-	}
-	
-	public String getKey(){
-		return key;
-	}
-	
-	public T getValue(){
-		return value;
-	}
-	
+
+    private String key;
+    private T value;
+
+    public Tuple() {}
+
+    public Tuple(String key, T value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
 }

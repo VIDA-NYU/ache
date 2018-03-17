@@ -34,7 +34,7 @@ public class PersistentHashtableTest {
      */
     @Parameters
     public static Iterable<? extends Object> data() {
-        return Arrays.asList(PersistentHashtable.DB.BERKELEYDB, PersistentHashtable.DB.ROCKSDB);
+        return Arrays.asList(PersistentHashtable.DB.ROCKSDB);
     }
 
     @Test

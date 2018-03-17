@@ -31,6 +31,7 @@ import com.google.common.collect.ImmutableMap;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.util.CloseableIterator;
 
 public class ElasticSearchRestTargetRepository implements TargetRepository {
     
@@ -211,6 +212,12 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         } catch (IOException e) {
             throw new RuntimeException("Failed to close Elasticsearch REST client", e);
         }
+    }
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
+        throw new UnsupportedOperationException(
+                "Iterator not supportted for ElasticSearchRestTargetRepository yet");
     }
 
 }

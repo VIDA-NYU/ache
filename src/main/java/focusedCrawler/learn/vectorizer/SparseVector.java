@@ -47,4 +47,13 @@ public class SparseVector {
         return vector;
     }
 
+    public double[] toDoubleVector(Vectorizer textVectorizer) {
+        int n = textVectorizer.numberOfFeatures();
+        double[] vector = new double[n];
+        for (int i = 0; i < n; i++) {
+            vector[i] = get(i);
+        }
+        return vector;
+    }
+
 }

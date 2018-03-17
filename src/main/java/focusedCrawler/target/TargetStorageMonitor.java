@@ -70,7 +70,12 @@ public class TargetStorageMonitor {
     }
     
     public synchronized void countPage(Page page, boolean isRelevant, double prob) {
-        long currentTime = System.currentTimeMillis();
+        long currentTime;
+        if (page.getFetchTime() == 0) {
+            currentTime = System.currentTimeMillis();
+        } else {
+            currentTime = page.getFetchTime();
+        }
         totalOfPages++;
         totalNumberOfUrlsDownloaded.inc();
         fCrawledPages.printf("%s\t%d\n", page.getURL().toString(), currentTime);

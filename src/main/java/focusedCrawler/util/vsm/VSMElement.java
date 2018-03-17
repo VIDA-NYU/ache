@@ -23,43 +23,46 @@
 */
 package focusedCrawler.util.vsm;
 
-/**
- * <p>Title: </p>
- *
- * <p>Description: </p>
- *
- *
- * @author not attributable
- * @version 1.0
- */
+import java.util.Comparator;
+
 public class VSMElement {
 
-  private String word;
-  private double weight;
+    /**
+     * Comparator to be used when one wants to order VSMElements in descendant order.
+     */
+    public static Comparator<VSMElement> DESC_ORDER_COMPARATOR = new Comparator<VSMElement>() {
+        @Override
+        public int compare(VSMElement o1, VSMElement o2) {
+            return Double.compare(o2.getWeight(), o1.getWeight());
+        }
+    };
 
-  public VSMElement(String word, double weight) {
-    this.word = word;
-    this.weight = weight;
-  }
+    private String word;
+    private double weight;
 
-  public String getWord(){
-    return word;
-  }
+    public VSMElement(String word, double weight) {
+        this.word = word;
+        this.weight = weight;
+    }
 
-  public double getWeight(){
-    return weight;
-  }
+    public String getWord() {
+        return word;
+    }
 
-  public void setWord(String word){
-    this.word = word;
-  }
+    public double getWeight() {
+        return weight;
+    }
 
-  public void setWeight(double weight){
-    this.weight = weight;
-  }
+    public void setWord(String word) {
+        this.word = word;
+    }
 
-  public String toString(){
-      return word + " " + weight;
-  }
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public String toString() {
+        return word + " " + weight;
+    }
 
 }

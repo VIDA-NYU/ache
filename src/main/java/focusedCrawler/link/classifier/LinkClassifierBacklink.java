@@ -3,8 +3,8 @@ package focusedCrawler.link.classifier;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import focusedCrawler.link.classifier.builder.Instance;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
@@ -25,7 +25,7 @@ public class LinkClassifierBacklink implements LinkClassifier {
     public LinkRelevance[] classify(Page page) throws LinkClassifierException {
         try {
             LinkNeighborhood[] lns = page.getParsedData().getLinkNeighborhood();
-            HashMap<String, Instance> urlWords = wrapper.extractLinks(lns, attributes);
+            Map<String, Instance> urlWords = wrapper.extractLinks(lns, attributes);
             
             List<LinkRelevance> linkRelevance = new ArrayList<>();
             for(String urlStr : urlWords.keySet()) {

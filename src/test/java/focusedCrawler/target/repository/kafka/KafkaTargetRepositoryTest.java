@@ -48,6 +48,7 @@ public class KafkaTargetRepositoryTest {
     public void shouldSendDataToKafka() throws IOException {
         // given
         Page target = new Page(new URL(url), html, responseHeaders);
+        target.setCrawlerId("mycrawler");
         target.setTargetRelevance(TargetRelevance.RELEVANT);
         String topicName = "ache-data-topic";
 
@@ -71,12 +72,14 @@ public class KafkaTargetRepositoryTest {
         assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
         assertThat(page.getRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
         assertThat(page.getRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
+        assertThat(page.getCrawlerId(), is("mycrawler"));
     }
 
     @Test
     public void shouldSendDataToKafkaUsingCDR31() throws IOException {
         // given
         Page target = new Page(new URL(url), html, responseHeaders);
+        target.setCrawlerId("mycrawler");
         target.setTargetRelevance(TargetRelevance.RELEVANT);
         String topicName = "ache-data-topic";
 
@@ -98,7 +101,7 @@ public class KafkaTargetRepositoryTest {
         assertThat(page.getRawContent(), is(html));
         assertThat(page.getUrl(), is(url));
         assertThat(page.getResponseHeaders().get("content-type"), is("text/html"));
-        assertThat(page.getCrawler(), is("ACHE"));
+        assertThat(page.getCrawler(), is("mycrawler"));
     }
 
 }

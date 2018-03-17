@@ -21,6 +21,7 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.target.repository.kafka.KafkaConfig.Format;
+import focusedCrawler.util.CloseableIterator;
 
 public class KafkaTargetRepository implements TargetRepository {
 
@@ -81,7 +82,7 @@ public class KafkaTargetRepository implements TargetRepository {
                     .setContentType(page.getContentType())
                     .setResponseHeaders(page.getResponseHeaders())
                     .setRawContent(page.getContentAsString())
-                    .setCrawler("ACHE")
+                    .setCrawler(page.getCrawlerId())
                     .build();
                 value = serializeAsJson(obj);
             } else {
@@ -129,6 +130,12 @@ public class KafkaTargetRepository implements TargetRepository {
         } catch (Exception e) {
             throw new RuntimeException("Failed to close Kafka producer client", e);
         }
+    }
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
+        throw new UnsupportedOperationException(
+                "Iterator not supportted for KafkaTargetRepository yet");
     }
 
 }

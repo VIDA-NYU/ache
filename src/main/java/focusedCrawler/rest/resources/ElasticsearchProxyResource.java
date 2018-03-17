@@ -17,7 +17,8 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.ImmutableMap;
 
-import focusedCrawler.config.Configuration;
+import focusedCrawler.crawler.CrawlersManager;
+import focusedCrawler.crawler.CrawlersManager.CrawlContext;
 import focusedCrawler.rest.Transformers;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import spark.Route;
@@ -27,22 +28,32 @@ public class ElasticsearchProxyResource {
     private static final Logger logger = LoggerFactory.getLogger(ElasticsearchProxyResource.class);
 
     private CloseableHttpClient httpclient;
-    private ElasticSearchConfig esConfig;
+    private CrawlersManager crawlersManager;
 
-    public ElasticsearchProxyResource(Configuration config) {
+    public ElasticsearchProxyResource(CrawlersManager crawlerManager) {
+        this.crawlersManager = crawlerManager;
         this.httpclient = HttpClients.createDefault();
-        this.updateConfig(config);
     }
 
     public Route searchApi = (request, response) -> {
 
-        if (esConfig == null) {
+        String crawlerId = request.params(":crawler_id");
+
+        CrawlContext context = crawlersManager.getCrawl(crawlerId);
+        if (context == null) {
+            response.status(HttpServletResponse.SC_NOT_FOUND);
+            response.header("Content-Type", "application/json");
+            return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
+        }
+
+        if (!context.isSearchEnabled()) {
             response.status(HttpServletResponse.SC_BAD_REQUEST);
             response.header("Content-Type", "application/json");
             return Transformers.json.render(ImmutableMap.of(
                 "message", "No Elasticsearch index configured"));
         }
 
+        ElasticSearchConfig esConfig = context.getEsConfig();
         try {
             String query = "";
             for (String param : request.queryParams()) {
@@ -82,26 +93,6 @@ public class ElasticsearchProxyResource {
         } catch (IOException e) {
             logger.error("Failed to close http client.", e);
         }
-    }
-
-    public void updateConfig(Configuration config) {
-        if (config != null && config.getTargetStorageConfig().isElasticsearchRestEnabled()) {
-            this.esConfig = config.getTargetStorageConfig().getElasticSearchConfig();
-        } else {
-            this.esConfig = null;
-        }
-    }
-
-    public boolean isElasticsearchEnabled() {
-        return esConfig != null;
-    }
-
-    public String getIndexName() {
-        return esConfig.getIndexName();
-    }
-
-    public String getTypeName() {
-        return esConfig.getTypeName();
     }
 
 }

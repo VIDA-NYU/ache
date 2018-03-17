@@ -24,36 +24,35 @@
 package focusedCrawler.link.classifier.builder;
 
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Vector;
+import java.util.List;
 
 
 public class FilterData {
 
 	private int maxElements;
-
 	private int maxWordSize;
-
 
 	public FilterData(int maxElements, int maxWordSize) {
 		this.maxElements = maxElements;
 		this.maxWordSize = maxWordSize;
 	}
 
-	public Vector<WordFrequency> filter(Vector<WordFrequency> sortList, Vector<WordFrequency> aroundWords){
+	public List<WordFrequency> filter(List<WordFrequency> sortList, List<WordFrequency> aroundWords){
 
 		boolean stem = aroundWords != null;
-		Vector<WordFrequency> filteredWords = new Vector<>();
+		List<WordFrequency> filteredWords = new ArrayList<>();
 		int minFreq = 5;
 		int count = 0;
 		int i = 0;
-		int maxFreq = ((WordFrequency)sortList.firstElement()).getFrequency();
+		int maxFreq = sortList.get(0).getFrequency();
 		if(maxFreq <= 10){
 			minFreq = 1;
 		}
 		while (i < sortList.size() && (count < maxElements || stem)) {
-			WordFrequency wordFrequency = (WordFrequency)sortList.elementAt(i);
+			WordFrequency wordFrequency = sortList.get(i);
 			String word = wordFrequency.getWord();
 			int frequency = wordFrequency.getFrequency();
 			if(word.length() > maxWordSize){
@@ -65,10 +64,10 @@ public class FilterData {
 			i++;
 		}
 		if(stem){
-		    Vector<WordFrequency> stemmedWords =  stemming(filteredWords, aroundWords, sortList);
-		    Vector<WordFrequency> result = new Vector<>();
+		    List<WordFrequency> stemmedWords = stemming(filteredWords, aroundWords, sortList);
+		    List<WordFrequency> result = new ArrayList<>();
 			for (int j = 0; j < maxElements && j < stemmedWords.size(); j++) {
-				result.add(stemmedWords.elementAt(j));
+				result.add(stemmedWords.get(j));
 			}
 			return result;
 		}else{
@@ -76,13 +75,13 @@ public class FilterData {
 		}
 	}
 	
-	public Vector<WordFrequency> filter(Vector<WordFrequency> sortList){
-	    Vector<WordFrequency> filteredWords = new Vector<>();
+	public List<WordFrequency> filter(List<WordFrequency> sortList){
+	    List<WordFrequency> filteredWords = new ArrayList<>();
 		int count = 0;
 		int i = 0;
 		
 		while (i < sortList.size() && count < maxElements) {
-			WordFrequency wordFrequency = (WordFrequency)sortList.elementAt(i);
+			WordFrequency wordFrequency = sortList.get(i);
 			String word = wordFrequency.getWord();
 			
 			if(word.length() > maxWordSize){
@@ -94,17 +93,17 @@ public class FilterData {
 		return stemming(filteredWords, null, sortList);
 	}
 
-	private Vector<WordFrequency> stemming(Vector<WordFrequency> wordFreqList, Vector<WordFrequency> aroundWords, Vector<WordFrequency> initialList){
-	    Vector<WordFrequency> finalWords = new Vector<>();
+	private List<WordFrequency> stemming(List<WordFrequency> wordFreqList, List<WordFrequency> aroundWords, List<WordFrequency> initialList){
+	    List<WordFrequency> finalWords = new ArrayList<>();
 		HashSet<String> usedWords = new HashSet<>();
 		if(aroundWords != null){
 			for (int i = 0; i < aroundWords.size(); i++) {
 				boolean exist = false;
-				WordFrequency firstWordFreq = (WordFrequency)aroundWords.elementAt(i);
+				WordFrequency firstWordFreq = aroundWords.get(i);
 				String word = firstWordFreq.getWord();
 				firstWordFreq = new WordFrequency(word,0);
 				for (int j = 0; j < wordFreqList.size(); j++) {
-					WordFrequency wordFreqTemp = (WordFrequency) wordFreqList.elementAt(j);
+					WordFrequency wordFreqTemp = wordFreqList.get(j);
 					if(word.equals(wordFreqTemp.getWord())){
 						exist = true;
 						break;
@@ -120,19 +119,26 @@ public class FilterData {
 				}
 			}
 		}
-		Collections.sort(wordFreqList, new WordSizeComparator());
+		Collections.sort(wordFreqList, WordFrequency.WORD_SIZE_ASC_COMPARATOR);
 		for (int i = 0; i < wordFreqList.size(); i++) {
-			WordFrequency firstWordFreq = (WordFrequency)wordFreqList.elementAt(i);
+			WordFrequency firstWordFreq = wordFreqList.get(i);
 			String word = firstWordFreq.getWord();
-			if(word != null &&
-					(usedWords.contains(word) ||
-							(word.equals("net") || word.equals("http") || word.equals("www") || word.equals("cfm") || word.equals("cgi") ||
-									word.equals("asp") || word.equals("php") || word.equals("jsp")))){//test
+            if (word != null &&
+                    (usedWords.contains(word) ||
+                            (word.equals("net") ||
+                                    word.equals("http") ||
+                                    word.equals("www") ||
+                                    word.equals("cfm") ||
+                                    word.equals("cgi") ||
+                                    word.equals("asp") ||
+                                    word.equals("php") ||
+                                    word.equals("jsp"))
+			        ) ) {
 				continue;
 			}
 			if(word != null){
 				for (int j = 0; j < initialList.size(); j++) {
-					WordFrequency wordFreqTemp = (WordFrequency) initialList.elementAt(j);
+					WordFrequency wordFreqTemp = initialList.get(j);
 					if (wordFreqTemp.getWord() != null &&
 							wordFreqTemp.getWord().indexOf(word) != -1) {
 						usedWords.add(wordFreqTemp.getWord());
@@ -144,8 +150,8 @@ public class FilterData {
 				}
 			}
 		}
-		Collections.sort(finalWords, new WordFrequencyComparator());
+		Collections.sort(finalWords, WordFrequency.WORD_FREQUENCY_DESC_COMPARATOR);
 		return finalWords;
 	}
-}
 
+}

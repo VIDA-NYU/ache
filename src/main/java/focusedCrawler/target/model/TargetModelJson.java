@@ -33,6 +33,9 @@ public class TargetModelJson implements Serializable {
     @JsonProperty("relevance")
     private TargetRelevance relevance;
 
+    @JsonProperty("crawler_id")
+    private String crawlerId;
+
     public TargetModelJson() {
         // required for JSON deserialization
     }
@@ -47,6 +50,7 @@ public class TargetModelJson implements Serializable {
         this.fetchTime = page.getFetchTime();
         this.contentType = page.getContentType();
         this.relevance = page.getTargetRelevance();
+        this.crawlerId = page.getCrawlerId();
     }
 
     public String getUrl() {
@@ -104,6 +108,14 @@ public class TargetModelJson implements Serializable {
 
     public void setRelevance(TargetRelevance relevance) {
         this.relevance = relevance;
+    }
+
+    public String getCrawlerId() {
+        return crawlerId;
+    }
+
+    public void setCrawlerId(String crawlerId) {
+        this.crawlerId = crawlerId;
     }
 
     /*

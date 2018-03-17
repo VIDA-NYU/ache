@@ -8,31 +8,28 @@ import org.apache.commons.codec.digest.DigestUtils;
 import com.github.jparkie.pdd.ProbabilisticDeDuplicator;
 import com.github.jparkie.pdd.impl.RLBSBFDeDuplicator;
 
-import focusedCrawler.learn.classifier.weka.WekaOnlineClassifier;
-import focusedCrawler.learn.classifier.weka.WekaVectorizer;
+import focusedCrawler.learn.classifier.smile.DoubleVectorizer;
+import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
+import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.learn.vectorizer.HashingVectorizer;
 import focusedCrawler.learn.vectorizer.Vectorizer;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.AlphaNumTokenizer;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import weka.classifiers.Classifier;
-import weka.classifiers.bayes.NaiveBayesUpdateable;
-import weka.core.Instance;
-import weka.core.SparseInstance;
 
 public class LinkClassifierDeduplication implements LinkClassifier {
 
-    private static final String NODUP = "nodup";
-    private static final String DUP = "dup";
-    private static final String[] CLASS_VALUES = new String[] {NODUP, DUP};
+    private static final int NODUP = 0;
+    private static final int DUP = 1;
+    private static final int[] CLASS_VALUES = new int[] {NODUP, DUP};
 
     private HashingVectorizer vectorizer = new HashingVectorizer();
 
-    private WekaOnlineClassifier<String> wekaClassifier;
-    private WekaVectorizer<String> wekaVectorizer = new WekaVectorizer<String>() {
+    private SmileOnlineClassifier<String> classifier;
+    private DoubleVectorizer<String> wekaVectorizer = new DoubleVectorizer<String>() {
         @Override
-        public Instance toInstance(String object) {
+        public double[] toInstance(String object) {
             return convertToWekaInstance(object, vectorizer);
         }
     };
@@ -41,10 +38,9 @@ public class LinkClassifierDeduplication implements LinkClassifier {
     final ProbabilisticDeDuplicator deduper = RLBSBFDeDuplicator.create(NUM_BITS, 0.03D);
 
     public LinkClassifierDeduplication() {
-        Classifier classifierImpl = new NaiveBayesUpdateable();
+        Learner classifierImpl = Learner.SVM;
         String[] features = vectorizer.getFeaturesAsArray();
-        this.wekaClassifier =
-                new WekaOnlineClassifier<>(classifierImpl, features, CLASS_VALUES, wekaVectorizer);
+        this.classifier = new SmileOnlineClassifier<>(classifierImpl, features, CLASS_VALUES, wekaVectorizer);
         this.vectorizer = new HashingVectorizer();
     }
 
@@ -70,8 +66,8 @@ public class LinkClassifierDeduplication implements LinkClassifier {
     private void updateClassifierModel(Page page) {
         String md5hex = DigestUtils.md5Hex(page.getContent());
         String url = page.getURL().toString();
-        String instanceClass = isDuplicate(md5hex) ? DUP : NODUP;
-        wekaClassifier.updateModel(url, instanceClass);
+        int instanceClass = isDuplicate(md5hex) ? DUP : NODUP;
+        classifier.updateModel(url, instanceClass);
     }
 
     private boolean isDuplicate(String fingerprint) {
@@ -84,20 +80,20 @@ public class LinkClassifierDeduplication implements LinkClassifier {
     @Override
     public LinkRelevance classify(LinkNeighborhood ln) {
         String url = ln.getLink().toString();
-        double[] probabilities = wekaClassifier.classify(url);
+        double[] probabilities = classifier.classify(url);
         double nonDupProbability = probabilities[0];
         System.out.println("SCORE nondup-prob: " + nonDupProbability + " dup-prob:"
                 + probabilities[1] + " url: " + url);
         return new LinkRelevance(ln.getLink(), nonDupProbability);
     }
 
-    public static Instance convertToWekaInstance(String url, Vectorizer vectorizer) {
+    public static double[] convertToWekaInstance(String url, Vectorizer vectorizer) {
+        double[] inst = new double[vectorizer.numberOfFeatures()];
         List<String> urlTokens = AlphaNumTokenizer.parseTokens(url);
-        Instance inst = new SparseInstance(vectorizer.numberOfFeatures() + 1);
         for (String token : urlTokens) {
             int index = vectorizer.getIndexOfFeature(token);
             if (index >= 0) {
-                inst.setValue(index, 1);
+                inst[index] = 1;
             }
         }
         return inst;

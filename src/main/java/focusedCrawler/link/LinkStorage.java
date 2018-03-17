@@ -174,7 +174,8 @@ public class LinkStorage {
         
         LinkClassifierFactory.setDefaultStoplist(stoplist);
 
-        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, modelPath, seedFile, metricsManager);
+        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath,
+                dataPath, modelPath, seedFile, metricsManager);
 
         OnlineLearning onlineLearning = null;
         if (config.isUseOnlineLearning()) {

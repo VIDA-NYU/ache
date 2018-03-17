@@ -1,6 +1,6 @@
 package focusedCrawler.util.persistence;
 
-import java.util.Iterator;
+import focusedCrawler.util.CloseableIterator;
 
 /**
  * Represents an iterator of a {@link PersistentHashtable}. Requesting a operator may open
@@ -22,6 +22,6 @@ import java.util.Iterator;
  *
  * @param <T>
  */
-public interface TupleIterator<T> extends AutoCloseable, Iterator<Tuple<T>> {
+public interface TupleIterator<T> extends CloseableIterator<Tuple<T>> {
 
 }

@@ -9,20 +9,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import focusedCrawler.learn.classifier.weka.WekaOnlineClassifier;
-import focusedCrawler.learn.classifier.weka.WekaVectorizer;
+import focusedCrawler.learn.classifier.smile.DoubleVectorizer;
+import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
+import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.learn.vectorizer.HashingVectorizer;
 import focusedCrawler.link.classifier.LinkClassifierDeduplication;
-import weka.classifiers.Classifier;
-import weka.classifiers.UpdateableClassifier;
-import weka.classifiers.bayes.NaiveBayes;
-import weka.core.Instance;
 
 public class RunOnlineDedupClassifier {
     
-    private static final String NOT_DUPLICATE = "nodup";
-    private static final String DUPLICATE = "dup";
-    static String[] classes = new String[]{NOT_DUPLICATE, DUPLICATE};
+    private static final int NOT_DUPLICATE = 0;
+    private static final int DUPLICATE = 1;
+    static int[] classes = new int[]{NOT_DUPLICATE, DUPLICATE};
     
     
     public static void main(String[] args) throws Exception {
@@ -48,14 +45,14 @@ public class RunOnlineDedupClassifier {
 
         
         List<String> trainingData = new ArrayList<>();
-        List<String> trainingDataClasses = new ArrayList<>();
+        List<Integer> trainingDataClasses = new ArrayList<>();
         
         int dupCount = 0;
         int nodupCount = 0;
         for (DupLine dup : trainFileData) {
             
             int numberOfDups = urlsByHash.get(dup.hash).size();
-            String instanceClass = numberOfDups > 1 ? DUPLICATE : NOT_DUPLICATE;
+            int instanceClass = numberOfDups > 1 ? DUPLICATE : NOT_DUPLICATE;
             
 //            double percentNoDup = nodupCount / (double) (dupCount+nodupCount);
 ////            System.out.printf("Percent NoDup: %.4f\n", percentNoDup);
@@ -63,7 +60,7 @@ public class RunOnlineDedupClassifier {
 //                continue;
 //            }
             
-            if (instanceClass.equals(DUPLICATE)) {
+            if (instanceClass == DUPLICATE) {
                 dupCount++;
             } else {
                 nodupCount++;
@@ -86,35 +83,31 @@ public class RunOnlineDedupClassifier {
 //            List<String> urlTokens = Sequence.parseTokens(trainingData.get(i));
 //            vectorizer.partialFit(urlTokens);
 //        }
+
         
-//        Classifier classifierImpl = new SPegasos();
-//        Classifier classifierImpl = new NaiveBayesUpdateable();
-        Classifier classifierImpl = new NaiveBayes();
-//        Classifier classifierImpl = new SMO();
-//        Classifier classifierImpl = new J48();
-//        Classifier classifierImpl = new RandomForest();
-//        REPTree tree = new REPTree();
-//        tree.setOptions(new String[] {"-L", "8"});
-//        Classifier classifierImpl = new AdditiveRegression(tree);
+        
+//        Learner learner = Learner.SVM;
+        Learner learner = Learner.GRADIENT_BOOSTING;
+//        Learner learner = Learner.RANDOM_FOREST;
 
         String[] featuresArray = vectorizer.getFeaturesAsArray();
 
-        WekaVectorizer<String> wekaVectorizer = new WekaVectorizer<String>() {
+        DoubleVectorizer<String> wekaVectorizer = new DoubleVectorizer<String>() {
             @Override
-            public Instance toInstance(String object) {
+            public double[] toInstance(String object) {
                 return LinkClassifierDeduplication.convertToWekaInstance(object, vectorizer);
             }
         };
-        WekaOnlineClassifier<String> classifier =
-                new WekaOnlineClassifier<>(classifierImpl, featuresArray, classes, wekaVectorizer);
+        SmileOnlineClassifier<String> classifier =
+                new SmileOnlineClassifier<>(learner, featuresArray, classes, wekaVectorizer);
 
-        if (classifierImpl instanceof UpdateableClassifier) {
-            for (int i = 0; i < trainingData.size(); i++) {
-                classifier.updateModel(trainingData.get(i), trainingDataClasses.get(i));
-            }
-        } else {
+//        if (classifierImpl instanceof SoftClassifier) {
+//            for (int i = 0; i < trainingData.size(); i++) {
+//                classifier.updateModel(trainingData.get(i), trainingDataClasses.get(i));
+//            }
+//        } else {
             classifier.buildModel(trainingData, trainingDataClasses);
-        }
+//        }
 
 
         System.out.println("Reading test data...");
@@ -123,7 +116,7 @@ public class RunOnlineDedupClassifier {
 
         // Collections.shuffle(testFileData, new Random(0));
 
-        // evaluate(classifier, testFileData);
+         evaluate(classifier, testFileData);
 
         System.out.println("Sorting by predition...");
         testFileData.sort((DupLine d1, DupLine d2) -> {
@@ -135,7 +128,7 @@ public class RunOnlineDedupClassifier {
 
         System.out.println("Writring results file...");
         FileWriter f = new FileWriter("/home/aeciosantos/workdata/dedup/weka."
-                + classifierImpl.getClass().getSimpleName() + ".txt");
+                + learner + ".txt");
         for (DupLine d : testFileData) {
             String actualClass = d.numOfDups > 1 ? "0" : "1";
             f.write(actualClass);
@@ -144,7 +137,7 @@ public class RunOnlineDedupClassifier {
         f.close();
     }
 
-    private static void evaluate(WekaOnlineClassifier<String> classifier,
+    private static void evaluate(SmileOnlineClassifier<String> classifier,
             List<DupLine> testFileData) {
         int dupCount = 0;
         int nodupCount = 0;
@@ -153,7 +146,7 @@ public class RunOnlineDedupClassifier {
 
             // int numberOfDups = urlsByHash.get(dup.hash).size();
             int numberOfDups = dup.numOfDups;
-            String actualClass = numberOfDups > 1 ? DUPLICATE : NOT_DUPLICATE;
+            int actualClass = numberOfDups > 1 ? DUPLICATE : NOT_DUPLICATE;
 
 
 
@@ -162,10 +155,10 @@ public class RunOnlineDedupClassifier {
             //
             double percentNoDup = nodupCount / (double) (dupCount + nodupCount);
             // System.out.printf("Percent NoDup: %.4f\n", percentNoDup);
-            if (actualClass.equals(NOT_DUPLICATE) && percentNoDup > 0.5d) {
+            if (actualClass == NOT_DUPLICATE && percentNoDup > 0.5d) {
                 continue;
             }
-            if (actualClass.equals(DUPLICATE)) {
+            if (actualClass == DUPLICATE) {
                 dupCount++;
             } else {
                 nodupCount++;
@@ -176,17 +169,17 @@ public class RunOnlineDedupClassifier {
             //
             double[] result = classifier.classify(dup.url);
             double score = result[0];
-            String prediction = score > 0.5d ? NOT_DUPLICATE : DUPLICATE;
+            int prediction = score > 0.5d ? NOT_DUPLICATE : DUPLICATE;
             // System.out.printf("%.4f %s %s\n", score, prediction, actualClass);
 
-            if (prediction.equals(DUPLICATE)) { // is dup
-                if (actualClass.equals(DUPLICATE)) {
+            if (prediction == DUPLICATE) { // is dup
+                if (actualClass == DUPLICATE) {
                     tp++;
                 } else {
                     fp++;
                 }
             } else { // not dup
-                if (actualClass.equals(NOT_DUPLICATE)) {
+                if (actualClass == NOT_DUPLICATE) {
                     tn++;
                 } else {
                     fn++;

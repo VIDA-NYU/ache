@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.zip.GZIPOutputStream;
@@ -28,13 +27,14 @@ import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hasher;
 import com.google.common.hash.Hashing;
 
-import focusedCrawler.target.model.TargetModelJson;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.WarcTargetRepository;
 import focusedCrawler.tools.SimpleBulkIndexer;
 import focusedCrawler.util.CliTool;
+import focusedCrawler.util.CloseableIterator;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
@@ -183,17 +183,17 @@ public class AcheToCdrExporter extends CliTool {
         this.bulkIndexer = initializeElasticsearchIndexer();
         this.kafkaProducer = initializeKafkaProducer();
 
-        Iterator<TargetModelJson> it;
         if(!skipUpload) {
             // Process media files
             System.out.println("Pre-processing media files...");
-            it = createIterator();
-            while (it.hasNext()) {
-                TargetModelJson pageModel = it.next();
-                try {
-                    processMediaFile(pageModel);
-                } catch (Exception e) {
-                    System.err.println("Failed to process record.\n" + e.toString());
+            try(CloseableIterator<Page> it = createIterator()) {
+                while (it.hasNext()) {
+                    Page pageModel = it.next();
+                    try {
+                        processMediaFile(pageModel);
+                    } catch (Exception e) {
+                        System.err.println("Failed to process record.\n" + e.toString());
+                    }
                 }
             }
             mediaObjectCache.commit();
@@ -201,17 +201,18 @@ public class AcheToCdrExporter extends CliTool {
 
         // Process HTML files
         System.out.println("Processing HTML pages...");
-        it = createIterator();
-        while (it.hasNext()) {
-            TargetModelJson pageModel = it.next();
-            try {
-                processRecord(pageModel);
-                processedPages++;
-                if (processedPages % 100 == 0) {
-                    System.out.printf("Processed %d pages\n", processedPages);
+        try(CloseableIterator<Page> it = createIterator()) {
+            while (it.hasNext()) {
+                Page pageModel = it.next();
+                try {
+                    processRecord(pageModel);
+                    processedPages++;
+                    if (processedPages % 100 == 0) {
+                        System.out.printf("Processed %d pages\n", processedPages);
+                    }
+                } catch (Exception e) {
+                    System.err.println("Failed to process record.\n" + e.toString());
                 }
-            } catch (Exception e) {
-                System.err.println("Failed to process record.\n" + e.toString());
             }
         }
         System.out.printf("Processed %d pages\n", processedPages);
@@ -254,27 +255,27 @@ public class AcheToCdrExporter extends CliTool {
         return null;
     }
 
-    private Iterator<TargetModelJson> createIterator() throws IOException {
+    private CloseableIterator<Page> createIterator() throws IOException {
         switch (repositoryType) {
             case FILESYSTEM_JSON:
                 return new FileSystemTargetRepository(inputPath, DataFormat.JSON,
-                        hashFilename, compressData).iterator();
+                        hashFilename, compressData).pagesIterator();
             case WARC:
-                return new WarcTargetRepository(inputPath).targetModelJsonIterator();
+                return new WarcTargetRepository(inputPath).pagesIterator();
             case FILES:
-                return new FilesTargetRepository(inputPath).iterator();
+                return new FilesTargetRepository(inputPath).pagesIterator();
             default:
                 throw new IllegalArgumentException("Unsuported data format: " + repositoryType);
         }
     }
 
-    private void processMediaFile(TargetModelJson pageModel) throws IOException {
+    private void processMediaFile(Page pageModel) throws IOException {
         // What if contentType is empty but the object is an image.
         //
         String contentType = pageModel.getContentType();
 
         if (contentType == null || contentType.isEmpty()) {
-            System.err.println("Ignoring URL with no content-type: " + pageModel.getUrl());
+            System.err.println("Ignoring URL with no content-type: " + pageModel.getFinalUrl());
             return;
         }
 
@@ -289,11 +290,11 @@ public class AcheToCdrExporter extends CliTool {
         createCDR31MediaObject(pageModel);
     }
 
-    private void processRecord(TargetModelJson pageModel) throws IOException {
-        String contentType = pageModel.getContentType();
+    private void processRecord(Page page) throws IOException {
+        String contentType = page.getContentType();
 
         if (contentType == null || contentType.isEmpty()) {
-            System.err.println("Ignoring URL with no content-type: " + pageModel.getUrl());
+            System.err.println("Ignoring URL with no content-type: " + page.getFinalUrl());
             return;
         }
 
@@ -301,20 +302,20 @@ public class AcheToCdrExporter extends CliTool {
             return;
         }
 
-        if (skipRelevant && pageModel.getRelevance().isRelevant()) {
+        if (skipRelevant && page.getTargetRelevance().isRelevant()) {
             return;
         }
 
-        if (skipIrrelevant && !pageModel.getRelevance().isRelevant()) {
+        if (skipIrrelevant && !page.getTargetRelevance().isRelevant()) {
             return;
         }
 
         if (cdrVersion == CDRVersion.CDRv31) {
-            createCDR31DocumentJson(pageModel);
+            createCDR31DocumentJson(page);
         } else if (cdrVersion == CDRVersion.CDRv2) {
-            createCDR2DocumentJson(pageModel);
+            createCDR2DocumentJson(page);
         } else {
-            createCDR3DocumentJson(pageModel);
+            createCDR3DocumentJson(page);
         }
 
         String docAsCdrJson = jsonMapper.writeValueAsString(doc);
@@ -333,24 +334,24 @@ public class AcheToCdrExporter extends CliTool {
             try {
                 kafkaProducer.send(record);
             } catch (Exception e) {
-                System.err.println("Failed to deliver document to Kafka: " + pageModel.getUrl());
+                System.err.println("Failed to deliver document to Kafka: " + page.getFinalUrl());
                 e.printStackTrace();
             }
         }
     }
 
-    public void createCDR2DocumentJson(TargetModelJson pageModel) {
+    public void createCDR2DocumentJson(Page page) {
         HashMap<String, Object> crawlData = new HashMap<>();
-        crawlData.put("response_headers", pageModel.getResponseHeaders());
+        crawlData.put("response_headers", page.getResponseHeaders());
 
         CDR2Document.Builder builder = new CDR2Document.Builder()
-                .setUrl(pageModel.getUrl())
-                .setTimestamp(pageModel.getFetchTime())
-                .setContentType(pageModel.getContentType())
+                .setUrl(page.getFinalUrl())
+                .setTimestamp(page.getFetchTime())
+                .setContentType(page.getContentType())
                 .setVersion("2.0")
                 .setTeam("NYU")
                 .setCrawler("ACHE")
-                .setRawContent(pageModel.getContentAsString())
+                .setRawContent(page.getContentAsString())
                 .setCrawlData(crawlData);
 
         CDR2Document doc = builder.build();
@@ -358,38 +359,38 @@ public class AcheToCdrExporter extends CliTool {
         this.doc = doc;
     }
 
-    public void createCDR3DocumentJson(TargetModelJson pageModel) {
+    public void createCDR3DocumentJson(Page page) {
         HashMap<String, Object> crawlData = new HashMap<>();
-        crawlData.put("response_headers", pageModel.getResponseHeaders());
+        crawlData.put("response_headers", page.getResponseHeaders());
 
         CDR3Document.Builder builder = new CDR3Document.Builder()
-                .setUrl(pageModel.getUrl())
-                .setTimestampCrawl(new Date(pageModel.getFetchTime()))
+                .setUrl(page.getFinalUrl())
+                .setTimestampCrawl(new Date(page.getFetchTime()))
                 .setTimestampIndex(new Date())
-                .setContentType(pageModel.getContentType())
+                .setContentType(page.getContentType())
                 .setTeam("NYU")
                 .setCrawler("ACHE")
-                .setRawContent(pageModel.getContentAsString());
+                .setRawContent(page.getContentAsString());
 
         CDR3Document doc = builder.build();
         this.id = doc.getId();
         this.doc = doc;
     }
 
-    public void createCDR31MediaObject(TargetModelJson pageModel) throws IOException {
+    public void createCDR31MediaObject(Page page) throws IOException {
         // Hash and upload to S3
-        String storedUrl = this.uploadMediaFile(pageModel.getContent(), pageModel.getUrl());
+        String storedUrl = this.uploadMediaFile(page.getContent(), page.getFinalUrl());
 
         // Create Media Object for the image
         CDR31MediaObject obj = new CDR31MediaObject();
-        obj.setContentType(pageModel.getContentType());
-        obj.setTimestampCrawl(new Date(pageModel.getFetchTime()));
-        obj.setObjOriginalUrl(pageModel.getUrl());
+        obj.setContentType(page.getContentType());
+        obj.setTimestampCrawl(new Date(page.getFetchTime()));
+        obj.setObjOriginalUrl(page.getFinalUrl());
         obj.setObjStoredUrl(storedUrl);
-        obj.setResponseHeaders(pageModel.getResponseHeaders());
+        obj.setResponseHeaders(page.getResponseHeaders());
 
         // Save it for including into the HTML pages later
-        this.mediaObjectCache.put(pageModel.getUrl(), obj);
+        this.mediaObjectCache.put(page.getFinalUrl(), obj);
     }
 
     private String uploadMediaFile(byte[] content, String url) throws IOException {
@@ -421,9 +422,9 @@ public class AcheToCdrExporter extends CliTool {
 //        }
 //    }
 
-    public String[] extractImgLinks(TargetModelJson pageModel) {
+    public String[] extractImgLinks(Page page) {
         HashSet<String> links = new HashSet<>();
-        Document doc = Jsoup.parse(pageModel.getContentAsString());
+        Document doc = Jsoup.parse(page.getContentAsString());
         Elements media = doc.select("[src]");
         for (Element src : media) {
             if (src.tagName().equals("img")) {
@@ -433,11 +434,11 @@ public class AcheToCdrExporter extends CliTool {
         return links.toArray(new String[links.size()]);
     }
 
-    public void createCDR31DocumentJson(TargetModelJson pageModel) {
+    public void createCDR31DocumentJson(Page page) {
 
         List<CDR31MediaObject> mediaObjects = new ArrayList<>();
         if (!skipUpload) {
-            String[] imgLinks = extractImgLinks(pageModel);
+            String[] imgLinks = extractImgLinks(page);
             for (String link : imgLinks) {
                 CDR31MediaObject object = this.mediaObjectCache.get(link);
                 if (object != null) {
@@ -447,12 +448,12 @@ public class AcheToCdrExporter extends CliTool {
         }
 
         CDR31Document.Builder builder = new CDR31Document.Builder()
-                .setUrl(pageModel.getUrl())
-                .setTimestampCrawl(new Date(pageModel.getFetchTime()))
+                .setUrl(page.getFinalUrl())
+                .setTimestampCrawl(new Date(page.getFetchTime()))
                 .setTimestampIndex(new Date())
-                .setContentType(pageModel.getContentType())
-                .setResponseHeaders(pageModel.getResponseHeaders())
-                .setRawContent(pageModel.getContentAsString())
+                .setContentType(page.getContentType())
+                .setResponseHeaders(page.getResponseHeaders())
+                .setRawContent(page.getContentAsString())
                 .setObjects(mediaObjects)
                 .setTeam("NYU")
                 .setCrawler("ACHE");

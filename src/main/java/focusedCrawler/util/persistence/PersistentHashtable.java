@@ -1,27 +1,5 @@
-/*
-############################################################################
-##
-## Copyright (C) 2006-2009 University of Utah. All rights reserved.
-##
-## This file is part of DeepPeep.
-##
-## This file may be used under the terms of the GNU General Public
-## License version 2.0 as published by the Free Software Foundation
-## and appearing in the file LICENSE.GPL included in the packaging of
-## this file.  Please review the following to ensure GNU General Public
-## Licensing requirements will be met:
-## http://www.opensource.org/licenses/gpl-license.php
-##
-## If you are unsure which license is appropriate for your use (for
-## instance, you are interested in developing a commercial derivative
-## of DeepPeep), please contact us at deeppeep@sci.utah.edu.
-##
-## This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-##
-############################################################################
-*/
 package focusedCrawler.util.persistence;
+
 import java.io.File;
 import java.lang.reflect.Array;
 import java.net.URLEncoder;
@@ -37,44 +15,43 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
 import focusedCrawler.link.frontier.Visitor;
-import focusedCrawler.util.persistence.bdb.BerkeleyDBHashTable;
-import focusedCrawler.util.persistence.rocksdb.RocksDBHashtable;
+import focusedCrawler.util.CloseableIterator;
+import focusedCrawler.util.IteratorBase;
+import focusedCrawler.util.KV;
+import focusedCrawler.util.persistence.rocksdb.StringObjectHashtable;
 
 public class PersistentHashtable<T> {
-    
+
     public enum DB {
-        BERKELEYDB, ROCKSDB
+        ROCKSDB
     }
-    
+
     private static Logger logger = LoggerFactory.getLogger(PersistentHashtable.class);
-	
-	private HashtableDb<T> persistentTable;
-	
-	private int tempMaxSize = 1000;
-	private List<Tuple<T>> tempList = new ArrayList<>(tempMaxSize);
+
+    private StringObjectHashtable<T> persistentTable;
+
+    private int tempMaxSize = 1000;
+    private List<KV<String, T>> tempList = new ArrayList<>(tempMaxSize);
 
     private Cache<String, T> cache;
-	
-	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
-	    this(path, cacheSize, contentClass, DB.ROCKSDB);
-	}
-	
-	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass, DB backend) {
-	    File file = new File(path);
-	    if(!file.exists()) {
-	        file.mkdirs();
-	    }
-	    this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
-	    if(backend == DB.BERKELEYDB) {
-            try {
-                this.persistentTable = new BerkeleyDBHashTable<T>(file, contentClass);
-            } catch (Exception e) {
-                throw new RuntimeException("Failed to open BerkeleyDB database at "+path, e);
-            }
-        } else {
-            this.persistentTable = new RocksDBHashtable<>(file.getPath(), contentClass);
+
+    public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
+        this(path, cacheSize, contentClass, DB.ROCKSDB);
+    }
+
+    public PersistentHashtable(String path, int cacheSize, Class<T> contentClass, DB backend) {
+        File file = new File(path);
+        if (!file.exists()) {
+            file.mkdirs();
         }
-	}
+        this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
+        if (backend == DB.ROCKSDB) {
+            this.persistentTable = new StringObjectHashtable<>(file.getPath(), contentClass);
+        } else {
+            throw new UnsupportedOperationException(
+                    "No database backend available for: " + backend);
+        }
+    }
 
     /**
      * DEPRECATED: may cause OutOfMemoryError on large crawls.
@@ -84,12 +61,16 @@ public class PersistentHashtable<T> {
      */
     @Deprecated
     public List<Tuple<T>> getTable() {
-        try {
-            return persistentTable.listElements();
+        try (TupleIterator<T> it = this.iterator()) {
+            List<Tuple<T>> items = new ArrayList<>();
+            while (it.hasNext()) {
+                items.add(it.next());
+            }
+            return items;
         } catch (Exception e) {
             throw new RuntimeException("Failed to get hashtable values.", e);
         }
-	}
+    }
 
     /**
      * DEPRECATED: may cause OutOfMemoryError on large crawls.
@@ -97,32 +78,32 @@ public class PersistentHashtable<T> {
      * @return
      */
     @SuppressWarnings("unchecked")
-	@Deprecated
-	public Tuple<T>[] getTableAsArray() {
-		List<Tuple<T>> table = getTable();
-		return table.toArray((Tuple<T>[]) Array.newInstance(Tuple.class, table.size()));
-	}
-	
-	public synchronized T get(String key){
-		try {
-			key = URLEncoder.encode(key, "UTF-8");
-			
-			T obj = cache.getIfPresent(key);
-			if(obj == null){
-				obj = persistentTable.get(key);
-			}
-			return obj;
-		} catch (Exception e) {
-			logger.error("Failed to get key from hashtable.", e);
-			return null;
-		}
-	}
-	
+    @Deprecated
+    public Tuple<T>[] getTableAsArray() {
+        List<Tuple<T>> table = getTable();
+        return table.toArray((Tuple<T>[]) Array.newInstance(Tuple.class, table.size()));
+    }
+
+    public synchronized T get(String key) {
+        try {
+            key = URLEncoder.encode(key, "UTF-8");
+
+            T obj = cache.getIfPresent(key);
+            if (obj == null) {
+                obj = persistentTable.get(key);
+            }
+            return obj;
+        } catch (Exception e) {
+            logger.error("Failed to get key from hashtable.", e);
+            return null;
+        }
+    }
+
     public synchronized boolean put(String key, T value) {
         try {
             key = URLEncoder.encode(key, "UTF-8");
             cache.put(key, value);
-            tempList.add(new Tuple<T>(key, value));
+            tempList.add(new KV<String, T>(key, value));
             if (tempList.size() == tempMaxSize) {
                 commit();
             }
@@ -134,25 +115,25 @@ public class PersistentHashtable<T> {
     }
 
     public synchronized void commit() {
-        if(tempList.size() == 0)
+        if (tempList.isEmpty())
             return;
-		try {
-		    persistentTable.put(tempList);
-		    tempList = new ArrayList<>();
-		} catch (Exception e) {
-			throw new RuntimeException("Failed to commit persistent hashtable.", e);
-		}
-	}
-	
-	public synchronized void close() {
-		this.commit();
-		persistentTable.close();
-	}
-	
-	@Deprecated
-	public synchronized List<Tuple<T>> orderedSet(final Comparator<T> valueComparator) {
+        if (!tempList.isEmpty()) {
+            for (KV<String, T> tuple : tempList) {
+                persistentTable.put(tuple.getKey(), tuple.getValue());
+            }
+            tempList.clear();
+        }
+    }
+
+    public synchronized void close() {
+        this.commit();
+        persistentTable.close();
+    }
+
+    @Deprecated
+    public synchronized List<Tuple<T>> orderedSet(final Comparator<T> valueComparator) {
         try {
-            List<Tuple<T>> elements = persistentTable.listElements();
+            List<Tuple<T>> elements = getTable();
             Collections.sort(elements, new Comparator<Tuple<T>>() {
                 @Override
                 public int compare(Tuple<T> o1, Tuple<T> o2) {
@@ -168,14 +149,14 @@ public class PersistentHashtable<T> {
     public TupleIterator<T> iterator() {
         try {
             this.commit();
-            return persistentTable.iterator();
+            return new TupleIteratorImpl(persistentTable.iterator());
         } catch (Exception e) {
             throw new RuntimeException("Failed to open hashtable iterator.", e);
         }
     }
 
     public void visitTuples(Visitor<Tuple<T>> visitor) {
-        try(TupleIterator<T> it = iterator()) {
+        try (TupleIterator<T> it = iterator()) {
             while (it.hasNext()) {
                 visitor.visit(it.next());
             }
@@ -184,4 +165,22 @@ public class PersistentHashtable<T> {
         }
     }
 
+    private class TupleIteratorImpl
+            extends IteratorBase<KV<String, T>>
+            implements TupleIterator<T> {
+
+        public TupleIteratorImpl(CloseableIterator<KV<String, T>> it) {
+            super(it);
+        }
+
+        @Override
+        public Tuple<T> next() {
+            KV<String, T> next = it.next();
+            if (next == null)
+                return null;
+            else
+                return new Tuple<>(next.getKey(), next.getValue());
+        }
+
+    }
 }

@@ -30,11 +30,12 @@ public class Page implements Serializable {
     private String contentType;
     private Map<String, List<String>> responseHeaders;
     private long fetchTime;
+    private String crawlerId;
     
     private LinkRelevance linkRelevance;
     private ParsedData parsedData;
     private TargetRelevance targetRelevance;
-
+    private boolean isNearDuplicate = false;
     private boolean auth = false;
     
     public Page() {
@@ -67,7 +68,9 @@ public class Page implements Serializable {
 
     public Page(TargetModelJson target) throws MalformedURLException {
         this.url = new URL(target.getUrl());
-        this.redirectedURL = new URL(target.getRedirectedUrl());
+        if(target.getRedirectedUrl() != null) {
+            this.redirectedURL = new URL(target.getRedirectedUrl());
+        }
         this.content = target.getContent();
         this.responseHeaders = target.getResponseHeaders();
         this.fetchTime = target.getFetchTime();
@@ -294,6 +297,26 @@ public class Page implements Serializable {
 
     public String getFinalUrl() {
         return redirectedURL == null ? url.toString() : redirectedURL.toString();
+    }
+
+    public String getFinalUrlHost() {
+        return redirectedURL == null ? url.getHost() : redirectedURL.getHost();
+    }
+
+    public String getCrawlerId() {
+        return this.crawlerId;
+    }
+
+    public void setCrawlerId(String crawlerId) {
+        this.crawlerId = crawlerId;
+    }
+
+    public boolean isNearDuplicate() {
+        return isNearDuplicate;
+    }
+
+    public void setNearDuplicate(boolean isNearDuplicate) {
+        this.isNearDuplicate = isNearDuplicate;
     }
 
 }

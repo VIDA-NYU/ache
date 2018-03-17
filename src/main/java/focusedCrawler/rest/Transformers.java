@@ -70,6 +70,7 @@ public class Transformers {
         };
     }
 
+    @SuppressWarnings("rawtypes")
     public static String parse(Object result){
         MetricRegistry registry = (MetricRegistry) result;
         StringBuilder sb = new StringBuilder();

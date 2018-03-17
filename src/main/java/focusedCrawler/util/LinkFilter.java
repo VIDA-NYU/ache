@@ -152,16 +152,16 @@ public class LinkFilter {
                     } else {
                         switch (pattern.type.toLowerCase()) {
                             case "regex":
-                                hostsWhitelists.put(entry.getKey(),
-                                        RegexMatcher.fromWhitelist(pattern.whitelist));
-                                hostsBlacklists.put(entry.getKey(),
-                                        RegexMatcher.fromBlacklist(pattern.blacklist));
+                                if (pattern.whitelist != null)
+                                    hostsWhitelists.put(entry.getKey(), RegexMatcher.fromWhitelist(pattern.whitelist));
+                                if (pattern.blacklist != null)
+                                    hostsBlacklists.put(entry.getKey(), RegexMatcher.fromBlacklist(pattern.blacklist));
                                 break;
                             case "wildcard":
-                                hostsWhitelists.put(entry.getKey(),
-                                        WildcardMatcher.fromWhitelist(pattern.whitelist));
-                                hostsBlacklists.put(entry.getKey(),
-                                        WildcardMatcher.fromBlacklist(pattern.blacklist));
+                                if (pattern.whitelist != null)
+                                    hostsWhitelists.put(entry.getKey(), WildcardMatcher.fromWhitelist(pattern.whitelist));
+                                if (pattern.blacklist != null)
+                                    hostsBlacklists.put(entry.getKey(), WildcardMatcher.fromBlacklist(pattern.blacklist));
                                 break;
                             default:
                                 throw new IllegalArgumentException(

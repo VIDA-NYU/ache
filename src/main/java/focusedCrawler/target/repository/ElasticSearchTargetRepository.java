@@ -11,6 +11,7 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchClientFactory;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.util.CloseableIterator;
 
 public class ElasticSearchTargetRepository implements TargetRepository {
     
@@ -88,6 +89,12 @@ public class ElasticSearchTargetRepository implements TargetRepository {
     @Override
     public void close() {
         client.close();
+    }
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
+        throw new UnsupportedOperationException(
+                "Iterator not supportted for ElasticSearchTargetRepository yet");
     }
 
 }
