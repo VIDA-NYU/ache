@@ -113,7 +113,7 @@ public class VectorizersTest {
 
     @Test
     public void shouldHashVectorize() {
-        HashingVectorizer hv = new HashingVectorizer(4, false, Tokenizers.alphaNumeric());
+        HashingVectorizer hv = new HashingVectorizer(Tokenizers.alphaNumeric(), 4, false);
         String i1 = "asdf qwer sdfg";
         SparseVector v1 = hv.transform(i1);
 
