@@ -3,6 +3,8 @@ package focusedCrawler.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import focusedCrawler.tokenizers.Tokenizer;
+
 /**
  * Simple text tokenizer that breaks text into alpha-numeric tokens. Tokens are any contiguous
  * sequence of letters or any sequence of numbers. Any other character is considered punctuation and
@@ -13,10 +15,15 @@ import java.util.List;
  * @author aeciosantos
  *
  */
-public class AlphaNumTokenizer {
+public class AlphaNumTokenizer implements Tokenizer {
 
     private static enum CharType {
-        DIGIT, ALPHA, PUNCTUATION
+        DIGIT, ALPHA, PUNCTUATION, SPACE
+    }
+
+    @Override
+    public List<String> tokenize(String text) {
+        return parseTokens(text);
     }
 
     public static List<String> parseTokens(String text) {
@@ -36,20 +43,22 @@ public class AlphaNumTokenizer {
 
         i++;
         while (i < text.length()) {
-
             ch = text.charAt(i);
             type = getCharType(ch);
 
             if (type != previousType || previousType.equals(CharType.PUNCTUATION)) {
                 // build token
-                sequence.add(token.toString());
-                token = new StringBuilder();
+                if (token.length() > 0) {
+                    sequence.add(token.toString());
+                    token = new StringBuilder();
+                }
             }
-            token.append(ch);
+
+            if (type != CharType.SPACE) {
+                token.append(ch);
+            }
 
             previousType = type;
-            type = getCharType(ch);
-
             i++;
         }
 
@@ -66,6 +75,8 @@ public class AlphaNumTokenizer {
             return CharType.DIGIT;
         } else if (Character.isLetter(currentChar)) {
             return CharType.ALPHA;
+        } else if (currentChar == ' ') {
+            return CharType.SPACE;
         } else {
             return CharType.PUNCTUATION;
         }

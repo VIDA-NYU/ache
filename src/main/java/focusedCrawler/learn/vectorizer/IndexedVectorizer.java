@@ -1,14 +1,18 @@
 package focusedCrawler.learn.vectorizer;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public abstract class IndexedVectorizer implements Vectorizer {
+import focusedCrawler.learn.classifier.smile.DoubleVectorizer;
+import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import it.unimi.dsi.fastutil.objects.Object2IntRBTreeMap;
 
-    private Map<String, Integer> featureIdx = new HashMap<>();
+public abstract class IndexedVectorizer implements Vectorizer, DoubleVectorizer<String> {
+
+    private Object2IntMap<String> featureIdx = new Object2IntRBTreeMap<>();
     private List<String> features = new ArrayList<>();
+
+    abstract public void fit(List<String> trainingData);
 
     public void addFeature(String feature) {
         Integer idx = featureIdx.get(feature);
@@ -44,6 +48,12 @@ public abstract class IndexedVectorizer implements Vectorizer {
 
     public String[] getFeaturesAsArray() {
         return (String[]) features.toArray(new String[features.size()]);
+    }
+
+    @Override
+    public double[] toDoubleVector(String text) {
+        SparseVector vector = transform(text);
+        return vector.toDoubleVector(this);
     }
 
 }

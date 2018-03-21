@@ -1,9 +1,9 @@
 package focusedCrawler.learn.vectorizer;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
+
+import it.unimi.dsi.fastutil.ints.Int2DoubleMap;
+import it.unimi.dsi.fastutil.ints.Int2DoubleRBTreeMap;
 
 /**
  * Represents a sparse vector using a map of feature index to feature values.
@@ -13,7 +13,7 @@ import java.util.Map.Entry;
  */
 public class SparseVector {
 
-    private Map<Integer, Double> features = new HashMap<>();
+    private Int2DoubleMap features = new Int2DoubleRBTreeMap();
 
     public double get(String feature, Vectorizer vectorizer) {
         int idx = vectorizer.getIndexOfFeature(feature);
@@ -34,8 +34,10 @@ public class SparseVector {
      */
     public void hstack(SparseVector vector) {
         int size = this.features.size();
-        for (Entry<Integer, Double> entry : vector.features.entrySet()) {
-            this.features.put(entry.getKey() + size, entry.getValue());
+        for (Int2DoubleMap.Entry entry : vector.features.int2DoubleEntrySet()) {
+            int key = entry.getKey() + size;
+            double value = entry.getValue();
+            this.features.put(key, value);
         }
     }
 

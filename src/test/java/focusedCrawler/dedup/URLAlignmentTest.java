@@ -13,6 +13,7 @@ import org.junit.Test;
 import focusedCrawler.dedup.rules.UrlAlignment.RewriteRule;
 import focusedCrawler.dedup.rules.UrlAlignment.Sequence;
 import focusedCrawler.dedup.rules.UrlAlignment.TokenSet;
+import focusedCrawler.util.AlphaNumTokenizer;
 
 public class URLAlignmentTest {
     
@@ -45,6 +46,18 @@ public class URLAlignmentTest {
         assertThat(s.get(8).first().token, is("1"));
         assertThat(s.get(9).first().token, is("."));
         assertThat(s.get(10).first().token, is("htm"));
+    }
+
+    @Test
+    public void shouldParseTextAndIgnoreSpaces() {
+        // given
+        String text = "asdf  qwer zxcv";
+        // when
+        List<String> s = new AlphaNumTokenizer().tokenize(text);
+        // then
+        assertThat(s.get(0), is("asdf"));
+        assertThat(s.get(1), is("qwer"));
+        assertThat(s.get(2), is("zxcv"));
     }
 
     @Test

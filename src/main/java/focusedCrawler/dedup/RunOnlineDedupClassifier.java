@@ -9,126 +9,109 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import focusedCrawler.learn.classifier.smile.DoubleVectorizer;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
+import focusedCrawler.learn.vectorizer.BinaryTextVectorizer;
 import focusedCrawler.learn.vectorizer.HashingVectorizer;
-import focusedCrawler.link.classifier.LinkClassifierDeduplication;
+import focusedCrawler.learn.vectorizer.IndexedVectorizer;
+import focusedCrawler.tokenizers.Tokenizers;
+import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
-public class RunOnlineDedupClassifier {
-    
+@Command(name = "RunOnlineDedupClassifier", description = "")
+public class RunOnlineDedupClassifier extends CliTool {
+
     private static final int NOT_DUPLICATE = 0;
     private static final int DUPLICATE = 1;
-    static int[] classes = new int[]{NOT_DUPLICATE, DUPLICATE};
-    
-    
+    static int[] classes = new int[] {NOT_DUPLICATE, DUPLICATE};
+
+    @Option(name = {"-i", "--input-path"}, required = false)
+    String inputPath = "/home/aeciosantos/workdata/dedup/";
+
+    @Option(name = {"--train"}, required = false)
+    String trainFile = inputPath + "crawleval_dups.csv.train";
+
+    @Option(name = {"--test"}, required = false)
+    String testFile = inputPath + "crawleval_dups.csv.test";
+
+    @Option(name = {"--timestamp"}, required = false)
+    boolean timestamp = true;
+
+    @Option(name = {"--learner"}, required = false)
+    Learner learner = Learner.SVM;
+
+    @Option(name = "--output-file", description = "The output file", required = false)
+    private String outputFile = "/home/aeciosantos/workdata/dedup/smile.";
+
     public static void main(String[] args) throws Exception {
-        
-        String inputPath = "/home/aeciosantos/workdata/dedup/";
-        
-//        String trainFile = inputPath+"spark/common-crawl_count_digest_url_top1000__part-00000.train";
-//        String testFile  = inputPath+"spark/common-crawl_count_digest_url_top1000__part-00000.test";
-//        boolean timestamp = false;
-        
-        String trainFile = inputPath + "crawleval_dups.csv.train";
-        String testFile = inputPath + "crawleval_dups.csv.test";
-        boolean timestamp = true;
+        CliTool.run(args, new RunOnlineDedupClassifier());
+    }
+
+    @Override
+    public void execute() throws Exception {
 
         System.out.println("Reading training data...");
         List<DupLine> trainFileData = readInputFile(trainFile, timestamp);
-        
-        System.out.println("size: "+trainFileData.size());
-        
+        System.out.println("training data size: " + trainFileData.size());
+
         System.out.println("Grouping duplicates by content hash...");
         Map<String, List<String>> urlsByHash = groupByContentHash(trainFileData);
 
-
-        
         List<String> trainingData = new ArrayList<>();
         List<Integer> trainingDataClasses = new ArrayList<>();
-        
+
         int dupCount = 0;
         int nodupCount = 0;
         for (DupLine dup : trainFileData) {
-            
             int numberOfDups = urlsByHash.get(dup.hash).size();
             int instanceClass = numberOfDups > 1 ? DUPLICATE : NOT_DUPLICATE;
-            
-//            double percentNoDup = nodupCount / (double) (dupCount+nodupCount);
-////            System.out.printf("Percent NoDup: %.4f\n", percentNoDup);
-//            if(instanceClass.equals(NOT_DUPLICATE) && percentNoDup > 0.5d) {
-//                continue;
-//            }
-            
+            double percentNoDup = nodupCount / (double) (dupCount + nodupCount);
+            if (instanceClass == NOT_DUPLICATE && percentNoDup > 0.5d) {
+                continue;
+            }
             if (instanceClass == DUPLICATE) {
                 dupCount++;
             } else {
                 nodupCount++;
             }
-            
             trainingData.add(dup.url);
             trainingDataClasses.add(instanceClass);
-//            System.out.println(instanceClass + " " + numberOfDups + " " + dup.url);
         }
-        
-        
-        
-        
-        
-        HashingVectorizer vectorizer = new HashingVectorizer(12, true);
-//        BinaryTextVectorizer vectorizer = new BinaryTextVectorizer(true);
-//        UrlParserVectorizer vectorizer = new UrlParserVectorizer();
-        
-//        for (int i = 0; i < trainingData.size(); i++) {
-//            List<String> urlTokens = Sequence.parseTokens(trainingData.get(i));
-//            vectorizer.partialFit(urlTokens);
-//        }
 
-        
-        
-//        Learner learner = Learner.SVM;
-        Learner learner = Learner.GRADIENT_BOOSTING;
-//        Learner learner = Learner.RANDOM_FOREST;
 
+        System.out.println("Training vectorizer...");
+        IndexedVectorizer vectorizer;
+        vectorizer = new HashingVectorizer(Tokenizers.alphaNumeric(), 12, true);
+        vectorizer = new BinaryTextVectorizer(Tokenizers.url(), true);
+        vectorizer = new BinaryTextVectorizer(Tokenizers.alphaNumeric(), true);
+        vectorizer.fit(trainingData);
+
+
+        System.out.println("Building model...");
         String[] featuresArray = vectorizer.getFeaturesAsArray();
-
-        DoubleVectorizer<String> wekaVectorizer = new DoubleVectorizer<String>() {
-            @Override
-            public double[] toInstance(String object) {
-                return LinkClassifierDeduplication.convertToWekaInstance(object, vectorizer);
-            }
-        };
-        SmileOnlineClassifier<String> classifier =
-                new SmileOnlineClassifier<>(learner, featuresArray, classes, wekaVectorizer);
-
-//        if (classifierImpl instanceof SoftClassifier) {
-//            for (int i = 0; i < trainingData.size(); i++) {
-//                classifier.updateModel(trainingData.get(i), trainingDataClasses.get(i));
-//            }
-//        } else {
-            classifier.buildModel(trainingData, trainingDataClasses);
-//        }
+        SmileOnlineClassifier<String> classifier = new SmileOnlineClassifier<>(
+                learner, featuresArray, classes, vectorizer);
+        classifier.buildModel(trainingData, trainingDataClasses);
 
 
         System.out.println("Reading test data...");
         List<DupLine> testFileData = readInputFile(testFile, timestamp);
-        System.out.println("Test size: " + testFileData.size());
+        System.out.println("test data size: " + testFileData.size());
 
-        // Collections.shuffle(testFileData, new Random(0));
-
-         evaluate(classifier, testFileData);
+        System.out.println("Testing model...");
+        evaluate(classifier, testFileData);
 
         System.out.println("Sorting by predition...");
         testFileData.sort((DupLine d1, DupLine d2) -> {
             double scoreD1 = classifier.classify(d1.url)[0];
             double scoreD2 = classifier.classify(d2.url)[0];
-            System.out.println(scoreD1 + " " + scoreD2);
             return Double.compare(scoreD2, scoreD1); // reverse
         });
 
         System.out.println("Writring results file...");
-        FileWriter f = new FileWriter("/home/aeciosantos/workdata/dedup/weka."
-                + learner + ".txt");
+
+        FileWriter f = new FileWriter(outputFile + learner + ".txt");
         for (DupLine d : testFileData) {
             String actualClass = d.numOfDups > 1 ? "0" : "1";
             f.write(actualClass);
@@ -148,8 +131,6 @@ public class RunOnlineDedupClassifier {
             int numberOfDups = dup.numOfDups;
             int actualClass = numberOfDups > 1 ? DUPLICATE : NOT_DUPLICATE;
 
-
-
             //
             // Class balancing
             //
@@ -158,6 +139,7 @@ public class RunOnlineDedupClassifier {
             if (actualClass == NOT_DUPLICATE && percentNoDup > 0.5d) {
                 continue;
             }
+
             if (actualClass == DUPLICATE) {
                 dupCount++;
             } else {
@@ -176,12 +158,14 @@ public class RunOnlineDedupClassifier {
                 if (actualClass == DUPLICATE) {
                     tp++;
                 } else {
+                    // predicted as duplicate, but was not_duplicate
                     fp++;
                 }
             } else { // not dup
                 if (actualClass == NOT_DUPLICATE) {
                     tn++;
                 } else {
+                    // predicted as not_duplicate, but was duplicate
                     fn++;
                 }
             }

@@ -18,8 +18,8 @@ import focusedCrawler.learn.vectorizer.BinaryTextVectorizer;
 import focusedCrawler.learn.vectorizer.FeatureStackVectorizer;
 import focusedCrawler.learn.vectorizer.SparseVector;
 import focusedCrawler.learn.vectorizer.UrlAlignmentVectorizer;
-import focusedCrawler.learn.vectorizer.UrlParserVectorizer;
 import focusedCrawler.learn.vectorizer.Vectorizer;
+import focusedCrawler.tokenizers.Tokenizers;
 
 public class ComputeFeatures {
 
@@ -61,7 +61,8 @@ public class ComputeFeatures {
             System.out.println("Fitting text vectorizer on training data...");
 
             BinaryTextVectorizer textVectorizer = new BinaryTextVectorizer();
-            textVectorizer.fit(trainDupClusters);
+            List<String> urls = toUrlList(trainDupClusters);
+            textVectorizer.fit(urls);
 
             trainFileName = outputPath + new File(trainFile).getName() + ".ranklib.terms";
             testFileName = outputPath + new File(testFile).getName() + ".ranklib.terms";
@@ -71,8 +72,9 @@ public class ComputeFeatures {
         } else if ("urlparts".equals(feature)) {
             System.out.println("Fitting URL parser vectorizer on training data...");
 
-            UrlParserVectorizer parserVectorizer = new UrlParserVectorizer();
-            parserVectorizer.fit(urlsByHash);
+            BinaryTextVectorizer parserVectorizer = new BinaryTextVectorizer(Tokenizers.url(), false);
+            List<String> urls = toUrlList(urlsByHash);
+            parserVectorizer.fit(urls);
 
             trainFileName = outputPath + new File(trainFile).getName() + ".ranklib.urlparts";
             testFileName = outputPath + new File(testFile).getName() + ".ranklib.urlparts";
@@ -83,13 +85,13 @@ public class ComputeFeatures {
             System.out.println("Fitting stacked vectorizers on training data...");
 
             BinaryTextVectorizer textVectorizer = new BinaryTextVectorizer();
-            textVectorizer.fit(trainDupClusters);
+            textVectorizer.fit(toUrlList(trainDupClusters));
 
             UrlAlignmentVectorizer urlAlignmentVectorizer = new UrlAlignmentVectorizer();
             urlAlignmentVectorizer.fit(urlsByHash);
 
-            UrlParserVectorizer urlparserVectorizer = new UrlParserVectorizer();
-            urlparserVectorizer.fit(urlsByHash);
+            BinaryTextVectorizer urlparserVectorizer = new BinaryTextVectorizer(Tokenizers.url(), false);
+            urlparserVectorizer.fit(toUrlList(urlsByHash));
 
             trainFileName = outputPath + new File(trainFile).getName() + ".ranklib.stack";
             testFileName = outputPath + new File(testFile).getName() + ".ranklib.stack";
@@ -164,6 +166,26 @@ public class ComputeFeatures {
         testOutput.close();
 
         System.out.println("done.");
+    }
+
+    private static List<String> toUrlList(Map<String, List<String>> urlsByHash) {
+        List<String> urls = new ArrayList<>();
+        for (Entry<String, List<String>> dup : urlsByHash.entrySet()) {
+            for (String url : dup.getValue()) {
+                urls.add(url);
+            }
+        }
+        return urls;
+    }
+
+    private static List<String> toUrlList(List<DupCluster> trainDupClusters) {
+        List<String> urls = new ArrayList<>();
+        for (DupCluster dup : trainDupClusters) {
+            for (String url : dup.getDupUrls()) {
+                urls.add(url);
+            }
+        }
+        return urls;
     }
 
     private static List<DupCluster> createDupClusters(Map<String, List<String>> urlsByHash) {

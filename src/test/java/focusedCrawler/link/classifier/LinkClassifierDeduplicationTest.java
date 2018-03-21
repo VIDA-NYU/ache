@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Arrays;
 
 import org.junit.Test;
 
@@ -30,12 +29,10 @@ public class LinkClassifierDeduplicationTest {
         dedup.classify(pageL1);
         dedup.classify(pageL2);
         dedup.classify(pageL3);
+        dedup.buildModel();
 
         LinkRelevance[] ln2 = dedup.classify(page2);
-        System.err.println(Arrays.deepToString(ln2));
-
         LinkRelevance[] ln3 = dedup.classify(page3);
-        System.err.println(Arrays.deepToString(ln3));
 
         assertTrue(ln3[0].getRelevance() > ln2[0].getRelevance());
     }

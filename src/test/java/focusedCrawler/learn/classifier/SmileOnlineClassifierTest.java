@@ -3,16 +3,13 @@ package focusedCrawler.learn.classifier;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
 
-import focusedCrawler.learn.classifier.smile.DoubleVectorizer;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.learn.vectorizer.BinaryTextVectorizer;
-import focusedCrawler.learn.vectorizer.SparseVector;
 
 public class SmileOnlineClassifierTest {
     
@@ -39,27 +36,14 @@ public class SmileOnlineClassifierTest {
 
         BinaryTextVectorizer textVectorizer = new BinaryTextVectorizer();
         for (String i : trainingData) {
-            textVectorizer.partialFit(Arrays.asList(i.split(" ")));
+            textVectorizer.partialFit(i);
         }
 
         String[] attributes = textVectorizer.getFeaturesAsArray();
         int[] classValues = {RELEVANT, IRELEVANT};
 
-        DoubleVectorizer<String> vectorizer = new DoubleVectorizer<String>() {
-            @Override
-            public double[] toInstance(String text) {
-                SparseVector vector = textVectorizer.transform(text);
-                double[] instance = vector.toDoubleVector(textVectorizer);
-                for (int i = 0; i < instance.length; i++) {
-                    System.out.println(i + " => " + vector.get(i) + "  " + textVectorizer.getFeature(i));
-                }
-                System.out.println();
-                return instance;
-            }
-        };
-
         // when
-        SmileOnlineClassifier<String> classifier = new SmileOnlineClassifier<>(Learner.SVM, attributes, classValues, vectorizer);
+        SmileOnlineClassifier<String> classifier = new SmileOnlineClassifier<>(Learner.SVM, attributes, classValues, textVectorizer);
         classifier.buildModel(trainingData, classes);
         double[] result = classifier.classify("zxcv asdf");
 

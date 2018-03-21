@@ -78,7 +78,7 @@ public class Sampler<T> {
      *
      * @return A sequence of the samples. No guarantee is provided on the order of the samples.
      */
-    public Iterable<T> getSamples() {
+    public List<T> getSamples() {
         return reservoir;
     }
     

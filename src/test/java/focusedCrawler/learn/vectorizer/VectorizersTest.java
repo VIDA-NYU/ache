@@ -3,15 +3,11 @@ package focusedCrawler.learn.vectorizer;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
 
-import focusedCrawler.learn.vectorizer.BinaryTextVectorizer;
-import focusedCrawler.learn.vectorizer.FeatureStackVectorizer;
-import focusedCrawler.learn.vectorizer.HashingVectorizer;
-import focusedCrawler.learn.vectorizer.SparseVector;
+import focusedCrawler.tokenizers.Tokenizers;
 
 public class VectorizersTest {
 
@@ -19,8 +15,8 @@ public class VectorizersTest {
     public void shouldCreateSparseVectors() {
         // given
         BinaryTextVectorizer vectorizer = new BinaryTextVectorizer();
-        List<String> i1 = Arrays.asList("asdf", "qwer");
-        List<String> i2 = Arrays.asList("asdf", "sdfg");
+        String i1 = "asdf qwer";
+        String i2 = "asdf sdfg";
 
         // when
         SparseVector v1 = vectorizer.fitTransform(i1);
@@ -42,14 +38,12 @@ public class VectorizersTest {
     public void shouldRememberVocabulary() {
         // given
         BinaryTextVectorizer vectorizer = new BinaryTextVectorizer();
-        List<String> i1 = Arrays.asList("asdf", "qwer");
-        List<String> i2 = Arrays.asList("asdf", "sdfg");
+        String i1 = "asdf qwer";
+        String i2 = "asdf sdfg";
 
         // when
         vectorizer.partialFit(i1);
-
         SparseVector v2 = vectorizer.transform(i2);
-
 
         // then
         assertThat(vectorizer.numberOfFeatures(), is(2));
@@ -62,15 +56,14 @@ public class VectorizersTest {
     @Test
     public void shouldCreateQuadraticFeatures() {
         // given
-        BinaryTextVectorizer vectorizer = new BinaryTextVectorizer(true);
-        List<String> i1 = Arrays.asList("asdf", "qwer");
-        List<String> i2 = Arrays.asList("asdf", "sdfg", "qwer");
+        BinaryTextVectorizer vectorizer = new BinaryTextVectorizer(Tokenizers.alphaNumeric(), true);
+        String i1 = "asdf qwer";
+        String i2 = "asdf sdfg qwer";
 
         // when
         vectorizer.partialFit(i1);
 
         SparseVector v2 = vectorizer.transform(i2);
-
 
         // then
         assertThat(vectorizer.numberOfFeatures(), is(3));
@@ -85,11 +78,11 @@ public class VectorizersTest {
     public void shouldStackVectors() {
         // given
         BinaryTextVectorizer vectorizer1 = new BinaryTextVectorizer();
-        List<String> i1 = Arrays.asList("asdf");
+        String i1 = "asdf";
         vectorizer1.partialFit(i1);
 
         BinaryTextVectorizer vectorizer2 = new BinaryTextVectorizer();
-        List<String> i2 = Arrays.asList("qwer");
+        String i2 = "qwer";
         vectorizer2.partialFit(i2);
 
         String i3 = "asdf qwer";
@@ -120,11 +113,11 @@ public class VectorizersTest {
 
     @Test
     public void shouldHashVectorize() {
-        HashingVectorizer hv = new HashingVectorizer(4, false);
-        List<String> i1 = Arrays.asList("asdf", "qwer", "sdfg");
+        HashingVectorizer hv = new HashingVectorizer(4, false, Tokenizers.alphaNumeric());
+        String i1 = "asdf qwer sdfg";
         SparseVector v1 = hv.transform(i1);
 
-        List<String> i2 = Arrays.asList("asdf", "zxcv", "wert");
+        String i2 = "asdf zxcv wert";
         hv.transform(i2);
         SparseVector v2 = hv.transform(i2);
 

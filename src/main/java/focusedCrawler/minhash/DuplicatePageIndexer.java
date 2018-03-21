@@ -11,9 +11,9 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.tokenizers.ShingleTokenizer;
+import focusedCrawler.tokenizers.Tokenizers;
 import focusedCrawler.util.LogFile;
-import focusedCrawler.util.Tokenizers;
-import focusedCrawler.util.Tokenizers.ShingleTokenizer;
 import focusedCrawler.util.persistence.rocksdb.IntStringHashtable;
 import focusedCrawler.util.persistence.rocksdb.StringIntHashtable;
 

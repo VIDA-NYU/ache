@@ -1,6 +1,8 @@
 package focusedCrawler.link.classifier;
 
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -8,14 +10,13 @@ import org.apache.commons.codec.digest.DigestUtils;
 import com.github.jparkie.pdd.ProbabilisticDeDuplicator;
 import com.github.jparkie.pdd.impl.RLBSBFDeDuplicator;
 
-import focusedCrawler.learn.classifier.smile.DoubleVectorizer;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.learn.vectorizer.HashingVectorizer;
-import focusedCrawler.learn.vectorizer.Vectorizer;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
-import focusedCrawler.util.AlphaNumTokenizer;
+import focusedCrawler.tokenizers.Tokenizers;
+import focusedCrawler.util.Sampler;
 import focusedCrawler.util.parser.LinkNeighborhood;
 
 public class LinkClassifierDeduplication implements LinkClassifier {
@@ -24,24 +25,24 @@ public class LinkClassifierDeduplication implements LinkClassifier {
     private static final int DUP = 1;
     private static final int[] CLASS_VALUES = new int[] {NODUP, DUP};
 
-    private HashingVectorizer vectorizer = new HashingVectorizer();
-
+    private HashingVectorizer hashingVectorizer = new HashingVectorizer(Tokenizers.alphaNumeric());
     private SmileOnlineClassifier<String> classifier;
-    private DoubleVectorizer<String> wekaVectorizer = new DoubleVectorizer<String>() {
-        @Override
-        public double[] toInstance(String object) {
-            return convertToWekaInstance(object, vectorizer);
-        }
-    };
-
+    
+    private int maxSamples = 500;
+    private int instancesCounter = 0;
+    private int buildModelThreshold = 50;
+    
+    private Sampler<String> duplicates = new Sampler<>(maxSamples);
+    private Sampler<String> unique = new Sampler<>(maxSamples);
+    
     final long NUM_BITS = 128 * 8L * 1024L * 1024L;
     final ProbabilisticDeDuplicator deduper = RLBSBFDeDuplicator.create(NUM_BITS, 0.03D);
 
     public LinkClassifierDeduplication() {
-        Learner classifierImpl = Learner.SVM;
-        String[] features = vectorizer.getFeaturesAsArray();
-        this.classifier = new SmileOnlineClassifier<>(classifierImpl, features, CLASS_VALUES, wekaVectorizer);
-        this.vectorizer = new HashingVectorizer();
+        Learner classifierType = Learner.SVM;
+        String[] features = hashingVectorizer.getFeaturesAsArray();
+        this.classifier = new SmileOnlineClassifier<>(classifierType, features, CLASS_VALUES, hashingVectorizer);
+        this.hashingVectorizer = new HashingVectorizer();
     }
 
     public LinkRelevance[] classify(Page page) throws LinkClassifierException {
@@ -64,10 +65,37 @@ public class LinkClassifierDeduplication implements LinkClassifier {
     }
 
     private void updateClassifierModel(Page page) {
-        String md5hex = DigestUtils.md5Hex(page.getContent());
         String url = page.getURL().toString();
+        byte[] content = page.getContent();
+        updateClassifier(url, content);
+    }
+
+    private void updateClassifier(String url, byte[] content) {
+        String md5hex = DigestUtils.md5Hex(content);
         int instanceClass = isDuplicate(md5hex) ? DUP : NODUP;
-        classifier.updateModel(url, instanceClass);
+        if (instanceClass == DUP) {
+            duplicates.sample(url);
+        } else {
+            unique.sample(url);
+        }
+        if (instancesCounter % buildModelThreshold == 0) {
+            buildModel();
+        }
+        //classifier.updateModel(url, instanceClass);
+    }
+
+    public void buildModel() {
+        List<String> trainingData = new ArrayList<>();
+        List<Integer> labels = new ArrayList<>();
+        trainingData.addAll(unique.getSamples());
+        for (int i = 0; i < unique.getSamples().size(); i++) {
+            labels.add(NODUP);
+        }
+        trainingData.addAll(duplicates.getSamples());
+        for (int i = 0; i < duplicates.getSamples().size(); i++) {
+            labels.add(DUP);
+        }
+        classifier.buildModel(trainingData, labels);
     }
 
     private boolean isDuplicate(String fingerprint) {
@@ -79,24 +107,17 @@ public class LinkClassifierDeduplication implements LinkClassifier {
 
     @Override
     public LinkRelevance classify(LinkNeighborhood ln) {
-        String url = ln.getLink().toString();
-        double[] probabilities = classifier.classify(url);
-        double nonDupProbability = probabilities[0];
-        System.out.println("SCORE nondup-prob: " + nonDupProbability + " dup-prob:"
-                + probabilities[1] + " url: " + url);
-        return new LinkRelevance(ln.getLink(), nonDupProbability);
+        URL url = ln.getLink();
+        double nonDupProbability = classifyURL(url.toString());
+        return new LinkRelevance(url, nonDupProbability);
     }
 
-    public static double[] convertToWekaInstance(String url, Vectorizer vectorizer) {
-        double[] inst = new double[vectorizer.numberOfFeatures()];
-        List<String> urlTokens = AlphaNumTokenizer.parseTokens(url);
-        for (String token : urlTokens) {
-            int index = vectorizer.getIndexOfFeature(token);
-            if (index >= 0) {
-                inst[index] = 1;
-            }
-        }
-        return inst;
+    public double classifyURL(String url) {
+        double[] probabilities = classifier.classify(url);
+        double nonDupProbability = probabilities[0];
+        System.out.printf("nondup-prob: %.5f dup-prob: %.5f url: %s\n",
+                nonDupProbability , probabilities[1], url);
+        return nonDupProbability;
     }
 
 }

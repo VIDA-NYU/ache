@@ -46,7 +46,7 @@ public class SmileOnlineClassifier<T> {
 
     public double[] classify(T x) {
         double[] result = new double[classValues.length];
-        double[] instance = vectorizer.toInstance(x);
+        double[] instance = vectorizer.toDoubleVector(x);
         synchronized (classifier) {
             classifier.predict(instance, result);
         }
@@ -54,13 +54,15 @@ public class SmileOnlineClassifier<T> {
     }
 
     public void updateModel(T x, int y) {
-        double[] instance = vectorizer.toInstance(x);
+        double[] instance = vectorizer.toDoubleVector(x);
         Preconditions.checkArgument(instance.length == attributes.length,
                 "Vectorized instance must have same number of attributes of this classifier");
         if (classifier instanceof OnlineClassifier) {
             @SuppressWarnings("unchecked")
             OnlineClassifier<double[]> updateable = (OnlineClassifier<double[]>) classifier;
             updateable.learn(instance, y);
+        } else {
+            throw new UnsupportedOperationException("This classifier does not support updates.");
         }
     }
 
@@ -111,7 +113,7 @@ public class SmileOnlineClassifier<T> {
     private double[][] createDataVectors(List<T> trainingData, DoubleVectorizer<T> vectorizer) {
         double[][] x = new double[trainingData.size()][attributes.length];
         for (int i = 0; i < trainingData.size(); i++) {
-            double[] instance = vectorizer.toInstance(trainingData.get(i));
+            double[] instance = vectorizer.toDoubleVector(trainingData.get(i));
             Preconditions.checkArgument(instance.length == attributes.length,
                     "Vectorized instance must have same number of attributes of this classifier");
             x[i] = instance;
