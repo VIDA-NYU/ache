@@ -1,5 +1,7 @@
 package focusedCrawler.learn.vectorizer;
 
+import java.util.List;
+
 public class FeatureStackVectorizer extends IndexedVectorizer {
 
     private Vectorizer[] vectorizers;
@@ -20,6 +22,11 @@ public class FeatureStackVectorizer extends IndexedVectorizer {
             stackedVector.hstack(v.transform(url));
         }
         return stackedVector;
+    }
+
+    @Override
+    public void fit(List<String> trainingData) {
+        // no-op
     }
 
 }

@@ -71,4 +71,9 @@ public class UrlAlignmentVectorizer extends IndexedVectorizer {
         return SparseVector.binary(matchedAlignments, this);
     }
 
+    @Override
+    public void fit(List<String> trainingData) {
+        throw new UnsupportedOperationException("Method not supported");
+    }
+
 }
