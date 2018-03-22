@@ -1,35 +1,32 @@
 package focusedCrawler.tools;
 
-
+import focusedCrawler.config.Configuration;
+import focusedCrawler.target.TargetRepositoryFactory;
+import focusedCrawler.target.TargetStorageConfig;
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.repository.FileSystemTargetRepository;
-import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
-import focusedCrawler.target.repository.FilesTargetRepository;
+import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.util.CliTool;
 import focusedCrawler.util.CloseableIterator;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
-@Command(name="MigrateToFilesTargetRepository", description="Migrate a FS repository to a FILES repository")
-public class MigrateToFilesTargetRepository extends CliTool {
+@Command(name="MigrateTargetRepository", description="Migrate an repository to another repository")
+public class MigrateTargetRepository extends CliTool {
     
     @Option(name = "--input-path", required = true, description = "Path to old input data_target folder")
     private String inputPath;
+    
+    @Option(name = "--input-config", required = true, description = "Path to config of the input repository")
+    private String inputConfigPath;
 
     @Option(name = "--output-path", required = true, description = "Path to new output data_target folder")
     private String outputPath;
-
-    @Option(name = "--hash-file-name", required = false, description = "If the repository uses hashed file names")
-    private boolean hashFilename = false;
-
-    @Option(name = "--compressed-data", required = false, description = "If the repository uses compressed files")
-    private boolean compressData = false;
-
-    @Option(name = "--data-format", required = false, description = "The data format used by the old repository")
-    private DataFormat dataFormat = DataFormat.JSON;
+    
+    @Option(name = "--output-config", required = true, description = "Path to config of the output repository")
+    private String outputConfigPath;
     
     public static void main(String[] args) throws Exception {
-        CliTool.run(args, new MigrateToFilesTargetRepository());
+        CliTool.run(args, new MigrateTargetRepository());
     }
 
     @Override
@@ -41,9 +38,11 @@ public class MigrateToFilesTargetRepository extends CliTool {
 
         int processedPages = 0;
         
-        FileSystemTargetRepository oldRep =
-                new FileSystemTargetRepository(inputPath, dataFormat, hashFilename, compressData);
-        FilesTargetRepository newRep = new FilesTargetRepository(outputPath);
+        TargetStorageConfig inputConfig = new Configuration(inputConfigPath).getTargetStorageConfig();
+        TargetRepository oldRep = TargetRepositoryFactory.create(inputPath, null, null, inputConfig);
+        
+        TargetStorageConfig outputConfig = new Configuration(outputConfigPath).getTargetStorageConfig();
+        TargetRepository newRep = TargetRepositoryFactory.create(outputPath, null, null, outputConfig);
         
         try (CloseableIterator<Page> oldIt = oldRep.pagesIterator()) {
             while (oldIt.hasNext()) {

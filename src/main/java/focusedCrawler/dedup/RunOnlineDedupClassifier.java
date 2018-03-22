@@ -12,8 +12,10 @@ import java.util.Map;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.learn.vectorizer.BinaryTextVectorizer;
+import focusedCrawler.learn.vectorizer.FeatureStackVectorizer;
 import focusedCrawler.learn.vectorizer.HashingVectorizer;
 import focusedCrawler.learn.vectorizer.IndexedVectorizer;
+import focusedCrawler.learn.vectorizer.UrlAlignmentVectorizer;
 import focusedCrawler.tokenizers.Tokenizers;
 import focusedCrawler.util.CliTool;
 import io.airlift.airline.Command;
@@ -25,6 +27,10 @@ public class RunOnlineDedupClassifier extends CliTool {
     private static final int NOT_DUPLICATE = 0;
     private static final int DUPLICATE = 1;
     static int[] classes = new int[] {NOT_DUPLICATE, DUPLICATE};
+
+    enum Features {
+        TERMS, TERMS_HASHING, RULES, URL_TOKENS, ALL
+    }
 
     @Option(name = {"-i", "--input-path"}, required = false)
     String inputPath = "/home/aeciosantos/workdata/dedup/";
@@ -40,6 +46,9 @@ public class RunOnlineDedupClassifier extends CliTool {
 
     @Option(name = {"--learner"}, required = false)
     Learner learner = Learner.SVM;
+
+    @Option(name = {"--features"}, required = false)
+    Features features = Features.TERMS;
 
     @Option(name = "--output-file", description = "The output file", required = false)
     private String outputFile = "/home/aeciosantos/workdata/dedup/smile.";
@@ -81,12 +90,7 @@ public class RunOnlineDedupClassifier extends CliTool {
 
 
         System.out.println("Training vectorizer...");
-        IndexedVectorizer vectorizer;
-        vectorizer = new HashingVectorizer(Tokenizers.alphaNumeric(), 12, true);
-        vectorizer = new BinaryTextVectorizer(Tokenizers.url(), true);
-        vectorizer = new BinaryTextVectorizer(Tokenizers.alphaNumeric(), true);
-        vectorizer.fit(trainingData);
-
+        IndexedVectorizer vectorizer = createVectorizer(urlsByHash, trainingData);
 
         System.out.println("Building model...");
         String[] featuresArray = vectorizer.getFeaturesAsArray();
@@ -118,6 +122,45 @@ public class RunOnlineDedupClassifier extends CliTool {
             f.write(" qid:1 1:0.0\n");
         }
         f.close();
+    }
+
+    private IndexedVectorizer createVectorizer(Map<String, List<String>> urlsByHash,
+            List<String> trainingData) {
+        IndexedVectorizer vectorizer;
+        BinaryTextVectorizer termsVectorizer =
+                new BinaryTextVectorizer(Tokenizers.alphaNumeric(), true);
+        HashingVectorizer termsHashingVectorizer =
+                new HashingVectorizer(Tokenizers.alphaNumeric(), 12, true);
+        UrlAlignmentVectorizer rulesVectorizer = new UrlAlignmentVectorizer();
+        BinaryTextVectorizer urlTokensVectorizer = new BinaryTextVectorizer(Tokenizers.url(), true);
+        switch (features) {
+            case TERMS:
+                termsVectorizer.fit(trainingData);
+                vectorizer = termsVectorizer;
+                break;
+            case TERMS_HASHING:
+                termsHashingVectorizer.fit(trainingData);
+                vectorizer = termsHashingVectorizer;
+                break;
+            case RULES:
+                rulesVectorizer.fit(urlsByHash);
+                vectorizer = rulesVectorizer;
+                break;
+            case URL_TOKENS:
+                urlTokensVectorizer.fit(trainingData);
+                vectorizer = urlTokensVectorizer;
+                break;
+            case ALL:
+                termsVectorizer.fit(trainingData);
+                rulesVectorizer.fit(urlsByHash);
+                urlTokensVectorizer.fit(trainingData);
+                FeatureStackVectorizer all = new FeatureStackVectorizer(termsVectorizer,
+                        rulesVectorizer, urlTokensVectorizer);
+                vectorizer = all;
+            default:
+                throw new IllegalArgumentException("Invalid feature set");
+        }
+        return vectorizer;
     }
 
     private static void evaluate(SmileOnlineClassifier<String> classifier,
@@ -153,21 +196,16 @@ public class RunOnlineDedupClassifier extends CliTool {
             double score = result[0];
             int prediction = score > 0.5d ? NOT_DUPLICATE : DUPLICATE;
             // System.out.printf("%.4f %s %s\n", score, prediction, actualClass);
-
-            if (prediction == DUPLICATE) { // is dup
-                if (actualClass == DUPLICATE) {
-                    tp++;
-                } else {
-                    // predicted as duplicate, but was not_duplicate
-                    fp++;
-                }
-            } else { // not dup
-                if (actualClass == NOT_DUPLICATE) {
-                    tn++;
-                } else {
-                    // predicted as not_duplicate, but was duplicate
-                    fn++;
-                }
+            if (prediction == DUPLICATE && actualClass == DUPLICATE) {
+                tp++;
+            } else if (prediction == DUPLICATE && actualClass == NOT_DUPLICATE) {
+                // predicted as duplicate, but was not_duplicate
+                fp++;
+            } else if (prediction == NOT_DUPLICATE && actualClass == NOT_DUPLICATE) {
+                tn++;
+            } else if (prediction == NOT_DUPLICATE && actualClass == DUPLICATE) {
+                // predicted as not_duplicate, but was duplicate
+                fn++;
             }
 
             total++;
@@ -176,7 +214,6 @@ public class RunOnlineDedupClassifier extends CliTool {
                         "precision: %.4f recall: %.4f fdr: %.4f npv: %.4f\n",
                         (tp / (double) (tp + fp)),
                         (tp / (double) (tp + fn)),
-                        // (fn/(double)(tn+fn)),
                         (fp / (double) (fp + tp)),
                         (tn / (double) (tn + fn)));
             }
@@ -184,9 +221,12 @@ public class RunOnlineDedupClassifier extends CliTool {
         }
         System.out.println("Final result:");
         System.out.printf(
-                "precision: %.4f recall: %.4f\n",
+                "precision: %.4f recall: %.4f fdr: %.4f npv: %.4f\n",
                 (tp / (double) (tp + fp)),
-                (tp / (double) (tp + fn)));
+                (tp / (double) (tp + fn)),
+                (fp / (double) (fp + tp)),
+                (tn / (double) (tn + fn)));
+        System.out.printf("tp: %.4f fp: %.4f fn: %.4f tn: %.4f\n", tp, fp, fn, tn);
     }
 
     private static Map<String, List<String>> groupByContentHash(List<DupLine> trainData) {
