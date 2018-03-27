@@ -32,19 +32,12 @@ import java.net.URL;
 public class LinkNeighborhood implements Serializable {
 
     private URL link;
-
     private String[] anchor = new String[0];
-
     private String[] around = new String[0];
-
     private String imgSource;
-
     private String[] imgAlt;
-
     private int aroundPosition;
-
     private int numOfWordsAnchor;
-
     private boolean sameSite = false;
 
     public LinkNeighborhood(URL link) {

@@ -48,7 +48,6 @@ public class SmileOnlineClassifierTest {
         double[] result = classifier.classify("zxcv asdf");
 
         // then
-//        System.out.println(result[0] + " " + result[1]);
         assertTrue(result[0] < 0.5); // relevant
         assertTrue(result[1] > 0.5); // irrelevant
     }
