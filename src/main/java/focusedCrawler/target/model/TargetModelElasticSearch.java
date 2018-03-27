@@ -1,6 +1,5 @@
 package focusedCrawler.target.model;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
 import java.util.List;
@@ -10,6 +9,7 @@ import com.google.common.net.InternetDomainName;
 
 import de.l3s.boilerpipe.extractors.DefaultExtractor;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.util.Urls;
 import focusedCrawler.util.parser.PaginaURL;
 
 public class TargetModelElasticSearch {
@@ -26,42 +26,47 @@ public class TargetModelElasticSearch {
     private Map<String, List<String>> responseHeaders;
     private String isRelevant;
     private double relevance;
-    
+    private String crawlerId;
+
     public TargetModelElasticSearch() {
-        // mandatory for object unserialization
+        // mandatory for object deserialization
     }
 
     public TargetModelElasticSearch(Page page) {
         this.url = page.getURL().toString();
-        this.retrieved = new Date();
+        this.retrieved = page.getFetchTime() > 0 ? new Date(page.getFetchTime()) : new Date();
         this.domain = page.getDomainName();
-        this.html = page.getContentAsString();
         this.responseHeaders = page.getResponseHeaders();
         this.topPrivateDomain = LinkRelevance.getTopLevelDomain(page.getDomainName());
+        this.crawlerId = page.getCrawlerId();
         this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
         if (page.isHtml()) {
-            this.words = page.getParsedData().getWords();
-            this.wordsMeta = page.getParsedData().getWordsMeta();
-            this.title = page.getParsedData().getTitle();
-            this.relevance = page.getTargetRelevance().getRelevance();
-            try {
-                this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
-            } catch (Exception e) {
-                this.text = "";
+            String contentAsString = page.getContentAsString();
+            this.html = contentAsString;
+            ParsedData parsedData = page.getParsedData();
+            if (parsedData != null) {
+                this.words = parsedData.getWords();
+                this.wordsMeta = parsedData.getWordsMeta();
+                this.title = parsedData.getTitle();
+            }
+            if (page.getTargetRelevance() != null) {
+                this.relevance = page.getTargetRelevance().getRelevance();
+            }
+            if (contentAsString != null) {
+                try {
+                    this.text = DefaultExtractor.getInstance().getText(contentAsString);
+                } catch (Exception e) {
+                    this.text = "";
+                }
             }
         }
     }
 
     public TargetModelElasticSearch(TargetModelCbor model) {
 
-        URL url;
-        try {
-            url = new URL(model.url);
-        } catch (MalformedURLException e) {
-            throw new IllegalArgumentException("page has an invalid URL: " + model.url);
-        }
+        URL url = Urls.toJavaURL(model.url);
         String rawContent = (String) model.response.get("body");
-        
+
         Page page = new Page(url, rawContent);
         page.setParsedData(new ParsedData(new PaginaURL(url, rawContent)));
 
@@ -181,6 +186,10 @@ public class TargetModelElasticSearch {
 
     public void setResponseHeaders(Map<String, List<String>> responseHeaders) {
         this.responseHeaders = responseHeaders;
+    }
+
+    public String getCrawlerId() {
+        return crawlerId;
     }
 
 }

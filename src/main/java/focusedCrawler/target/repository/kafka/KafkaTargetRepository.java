@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 
 import focusedCrawler.memex.cdr.CDR31Document;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.target.repository.kafka.KafkaConfig.Format;
@@ -73,24 +74,29 @@ public class KafkaTargetRepository implements TargetRepository {
     @Override
     public boolean insert(Page page) {
         String value;
-        if (KafkaConfig.Format.CDR31 == format) {
-            if (page.getContentType().startsWith("text/html")) {
-                CDR31Document obj = new CDR31Document.Builder()
-                    .setUrl(page.getFinalUrl())
-                    .setTimestampCrawl(new Date(page.getFetchTime()))
-                    .setTimestampIndex(new Date())
-                    .setContentType(page.getContentType())
-                    .setResponseHeaders(page.getResponseHeaders())
-                    .setRawContent(page.getContentAsString())
-                    .setCrawler(page.getCrawlerId())
-                    .build();
-                value = serializeAsJson(obj);
-            } else {
-                // TODO: Handle image "objects"
-                return false;
-            }
-        } else {
-            value = serializeAsJson(new TargetModelJson(page));
+        switch (format) {
+            case CDR31:
+                if (page.getContentType().startsWith("text/html")) {
+                    CDR31Document obj = new CDR31Document.Builder()
+                            .setUrl(page.getFinalUrl())
+                            .setTimestampCrawl(new Date(page.getFetchTime()))
+                            .setTimestampIndex(new Date())
+                            .setContentType(page.getContentType())
+                            .setResponseHeaders(page.getResponseHeaders())
+                            .setRawContent(page.getContentAsString())
+                            .setCrawler(page.getCrawlerId())
+                            .build();
+                    value = serializeAsJson(obj);
+                } else {
+                    // TODO: Handle image "objects"
+                    return false;
+                }
+                break;
+            case ELASTIC:
+                value = serializeAsJson(new TargetModelElasticSearch(page));
+                break;
+            default:
+                value = serializeAsJson(new TargetModelJson(page));
         }
         String key = encodeUrl(page.getURL().toString());
 

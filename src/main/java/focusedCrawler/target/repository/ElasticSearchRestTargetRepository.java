@@ -88,6 +88,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "    \"crawlerId\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
@@ -104,6 +105,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"url\":              {\"type\": \"keyword\",\"index\": true},"
                 + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true},"
                 + "    \"isRelevant\":       {\"type\": \"keyword\",\"index\": true},"
+                + "    \"crawlerId\":        {\"type\": \"keyword\",\"index\": true},"
                 + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";

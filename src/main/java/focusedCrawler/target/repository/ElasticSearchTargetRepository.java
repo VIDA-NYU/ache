@@ -49,6 +49,7 @@ public class ElasticSearchTargetRepository implements TargetRepository {
                 + "  \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "  \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "  \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "  \"crawlerId\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "  \"relevance\":        {\"type\": \"double\"}"
                 + " }"
                 + "}";
