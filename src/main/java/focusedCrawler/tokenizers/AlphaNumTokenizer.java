@@ -1,9 +1,7 @@
-package focusedCrawler.util;
+package focusedCrawler.tokenizers;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import focusedCrawler.tokenizers.Tokenizer;
 
 /**
  * Simple text tokenizer that breaks text into alpha-numeric tokens. Tokens are any contiguous
@@ -16,6 +14,8 @@ import focusedCrawler.tokenizers.Tokenizer;
  *
  */
 public class AlphaNumTokenizer implements Tokenizer {
+    
+    public static final AlphaNumTokenizer INSTANCE = new AlphaNumTokenizer();
 
     private static enum CharType {
         DIGIT, ALPHA, PUNCTUATION, SPACE

@@ -1,7 +1,5 @@
 package focusedCrawler.tokenizers;
 
-import focusedCrawler.util.AlphaNumTokenizer;
-
 public class Tokenizers {
 
     public static ShingleTokenizer shingles(int size) {
@@ -9,11 +7,15 @@ public class Tokenizers {
     }
 
     public static AlphaNumTokenizer alphaNumeric() {
-        return new AlphaNumTokenizer();
+        return AlphaNumTokenizer.INSTANCE;
     }
-    
+
     public static UrlTokenizer url() {
-        return new UrlTokenizer();
+        return UrlTokenizer.INSTANCE;
+    }
+
+    public static WhitespaceTokenizer whitespace() {
+        return WhitespaceTokenizer.INSTANCE;
     }
 
 }

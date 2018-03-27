@@ -13,7 +13,7 @@ import org.junit.Test;
 import focusedCrawler.dedup.rules.UrlAlignment.RewriteRule;
 import focusedCrawler.dedup.rules.UrlAlignment.Sequence;
 import focusedCrawler.dedup.rules.UrlAlignment.TokenSet;
-import focusedCrawler.util.AlphaNumTokenizer;
+import focusedCrawler.tokenizers.AlphaNumTokenizer;
 
 public class URLAlignmentTest {
     

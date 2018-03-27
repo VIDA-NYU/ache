@@ -7,7 +7,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-class UrlTokenizer implements Tokenizer {
+public class UrlTokenizer implements Tokenizer {
+
+    static final UrlTokenizer INSTANCE = new UrlTokenizer();
 
     public List<String> tokenize(String urlStr) {
         try {

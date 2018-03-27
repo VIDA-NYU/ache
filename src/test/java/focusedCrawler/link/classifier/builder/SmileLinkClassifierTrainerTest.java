@@ -14,6 +14,7 @@ import java.util.List;
 import org.junit.Test;
 
 import focusedCrawler.link.classifier.LNClassifier;
+import focusedCrawler.tokenizers.Tokenizers;
 import focusedCrawler.util.Sampler;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.string.StopListFile;
@@ -102,11 +103,11 @@ public class SmileLinkClassifierTrainerTest {
 
     }
 
-    private LinkNeighborhood createLinkNeighborhood(String asdf) throws MalformedURLException {
-        String url = "http://example.com/" + asdf + "/";
+    private LinkNeighborhood createLinkNeighborhood(String term) throws MalformedURLException {
+        String url = "http://example.com/" + term + "/";
         LinkNeighborhood ln = new LinkNeighborhood(new URL(url));
-        ln.setAnchor(new String[] {"anchor", "text", asdf});
-        ln.setAround(new String[] {"around", asdf});
+        ln.setAnchor(Tokenizers.whitespace().tokenizeToArray("anchor text " + term));
+        ln.setAround(Tokenizers.whitespace().tokenizeToArray("around " + term));
         return ln;
     }
 

@@ -13,7 +13,7 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import focusedCrawler.util.AlphaNumTokenizer;
+import focusedCrawler.tokenizers.AlphaNumTokenizer;
 
 public class UrlAlignment {
 
