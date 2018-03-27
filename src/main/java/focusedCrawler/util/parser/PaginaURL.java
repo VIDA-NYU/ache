@@ -25,82 +25,52 @@
 
 package focusedCrawler.util.parser;
 
-
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.StringTokenizer;
-import java.util.TreeSet;
-import java.util.Vector;
-import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.commons.validator.routines.UrlValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.crawler.crawlercommons.filters.basic.BasicURLNormalizer;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.util.Tokenizers;
+import focusedCrawler.util.Urls;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
 import okhttp3.HttpUrl;
-
 
 public class PaginaURL {
     
     public static final Logger logger = LoggerFactory.getLogger(PaginaURL.class);
 
-    private static final String[] schemes = {"http", "https"};
-    private static final UrlValidator urlValidator = new UrlValidator(schemes);
-    // TOR links (.onion) aren't accepted by the URL validator, so we check them using a regex.
-    // Regex ".[^.]+" --> any string of at least 1 char without dot
-    private static final Pattern onionValidator = Pattern.compile("https?://.[^.]+\\.onion.*");
-    private static final List<String> invalidParameters =
-            Arrays.asList("sid", "phpsessid", "sessionid", "jsessionid");
-    private static final BasicURLNormalizer urlNormalizer =
-            new BasicURLNormalizer(new TreeSet<>(invalidParameters), false);
+    public static final int MAX_PARAGRAPH_SIZE = 255;
+    public static final int MAX_SIZE_HOST = 255;
+    public static final boolean USE_DESCRIPTION = false;
 
-    private int                MAXPALAVRAS = -1;
-    public static final int    MAX_PARAGRAPH_SIZE = 255;
-    private URL                baseUrl = null;
-    private String             titulo = "";
-    private String             paragrafo = "";
-    private String[]           palavras = new String[0];
-    private int[]              ocorrencias = new int[0];
-    private String[]           palavrasMeta = new String[0];
-    private int[]              ocorrenciasMeta = new int[0];
-    private double             relevance = 0;
+    private static final int TERM_SCORE_TITULO      = 7;
+    private static final int TERM_SCORE_DESCRIPTION = 5;
+    private static final int TERM_SCORE_URL         = 3;
+    private static final int TERM_SCORE_TEXTO       = 2;
+    private static final int TERM_SCORE_OPTION      = 1;
+    private static final int TERM_SCORE_META        = 1;
+    private static final int TERM_SCORE_ALT         = 1;
+    
+    private URL baseUrl = null;
+    private String titulo = "";
+    private String paragrafo = "";
+    private double relevance = 0;
+    private int frames = 0;
+    private int forms = 0;
+    private int images = 0;
+    private boolean nofollow = false;
 
-    /**
-     * palavras_ordem \uFFFD um Hastable que mapeia uma palavras(um termo) a sua lista
-     * de posicoes no documento. <BR>
-     * Esta lista contem as posicoes do termo no texto. Ex:
-     * no texto acima a lista da palavra "um" seria <3,9>. <BR>
-     * Os tipo do Hashtable sao String que mapeia um Vector de Integer.
-     */
-    private Hashtable<String, Vector<Integer>> palavra_posicoes = new Hashtable<>();
-    private Hashtable<String, Integer> palavra_pontos = new Hashtable<>();
-    private Hashtable<String, Vector<Integer>> palavra_posicoes_meta = new Hashtable<>();
-    private int                frames = 0;
-    private int                forms = 0;
-    private int                images = 0;
-
-    private transient List<String> texto = new ArrayList<String>();
-    private transient List<String> textoMeta = new ArrayList<String>();
-    private URL[]              URLabsolutas = null;
-    private List<String>     links = new ArrayList<String>();
-    private boolean            noindex = false;
-    private boolean            nofollow = false;
-    public static boolean      USAR_DESCRIPTION = false;
-    public static int          MAX_SIZE_HOST = 255;
-
-    private transient StopList stoplist;
-    private boolean            ordenarTermos = true;
+    private URL[] absoluteURLs = null;
+    private List<String> links = new ArrayList<String>();
+    private TermStatistics termStats = new TermStatistics();
     
     public PaginaURL(Page page) {
         this(page.getURL(), page.getContentAsString());
@@ -111,23 +81,13 @@ public class PaginaURL {
     }
 
     public PaginaURL(URL url, String content, StopList stoplist) {
-        this(url, content, false, false, -1, stoplist);
+        this(url, content, false, false, stoplist);
     }
 
-    public PaginaURL(URL url, String arquivo, boolean noindex, boolean nofollow,
-                     int max, StopList stoplist) {
-
-        if (max > 0) {
-            MAXPALAVRAS = max;
-        } else {
-            MAXPALAVRAS = -1;
-        }
-
+    public PaginaURL(URL url, String arquivo, boolean noindex, boolean nofollow,StopList stoplist) {
         this.baseUrl = url;
-        this.noindex = noindex;
         this.nofollow = nofollow;
-        this.stoplist = stoplist;
-
+        this.termStats = new TermStatistics(stoplist, noindex);
         if (!arquivo.equals("")) {
             separadorTextoCodigo(arquivo);
         }
@@ -204,12 +164,11 @@ public class PaginaURL {
     private ArrayList<String> around = new ArrayList<String>();
     private ArrayList<LinkNeighborhood> linkNeigh = new ArrayList<LinkNeighborhood>();
     private ArrayList<String>  imagens = new ArrayList<String>();
-    
 
     public synchronized LinkNeighborhood[] getLinkNeighboor() {
         HashSet<String> unique = new HashSet<String>();
 
-        Vector<LinkNeighborhood> tempLN = new Vector<LinkNeighborhood>();
+        List<LinkNeighborhood> tempLN = new ArrayList<LinkNeighborhood>();
         for (int i = 0; i < linkNeigh.size(); i++) {
             LinkNeighborhood ln = linkNeigh.get(i);
 
@@ -218,7 +177,7 @@ public class PaginaURL {
                 unique.add(id);
 
                 int pointer = ln.getAroundPosition();
-                Vector<String> aroundTemp = new Vector<String>();
+                List<String> aroundTemp = new ArrayList<String>();
                 for (int j = pointer - (10 + ln.getNumWordsAnchor()); j < pointer + 10; j++) {
                     if (j >= 0 && j < around.size() && (j < pointer - ln.getNumWordsAnchor() || j > pointer - 1)) {
                         aroundTemp.add(around.get(j).toLowerCase());
@@ -246,57 +205,49 @@ public class PaginaURL {
         }
     	
         boolean obj_isRDF = false;
-        boolean ignorar_espacos = true;
+        boolean ignoreSpaces = true;
         boolean tag_tipo_fim = false;
         boolean em_script = false;
-        boolean ehInicioALT = true;
+        boolean isBeginALT = true;
         boolean em_titulo = false;
         boolean em_option = false;
         boolean em_comentario = false;
         int num_comentario = 0;
-        int     PONTUACAO_PALAVRAS_TEXTO       = 2;
-        int     PONTUACAO_PALAVRAS_OPTION      = 1;
-        int     PONTUACAO_PALAVRAS_URL         = 3;
-        int     PONTUACAO_PALAVRAS_META        = 1;
-        int     PONTUACAO_PALAVRAS_TITULO      = 7;
-        int     PONTUACAO_PALAVRAS_DESCRIPTION = 5;
-        int     PONTUACAO_PALAVRAS_ALT         = 1;
-        int    posicao_da_palavra 			   = 1;
+        
+        int wordPosition = 1;
 
-        // UTILIZANDO AS PALAVRAS DA URL COMO INFORMACAO TEXTUAL
+        
+        // Using URL words and textual information
         if (baseUrl != null && !filterURL) {
 
+            StringTokenizer urlTokenizer = new StringTokenizer(baseUrl.getHost(), "./:");
 
-            StringTokenizer url_pontos = new StringTokenizer(baseUrl.getHost(),"./:");
+            while (urlTokenizer.hasMoreTokens()) {
+                String hostPart = urlTokenizer.nextToken();
 
-            while (url_pontos.hasMoreTokens()) {
-                String parte_host = url_pontos.nextToken();
+                if (!hostPart.equals("www")
+                        && !hostPart.equals("org")
+                        && !hostPart.equals("gov")
+                        && !hostPart.equals("com")
+                        && !hostPart.equals("br")
+                        && !hostPart.equals("onion")) {
 
-                if (!parte_host.equals("www")
-                    &&!parte_host.equals("org")
-                    &&!parte_host.equals("gov")
-                    &&!parte_host.equals("com")
-                    &&!parte_host.equals("br")
-                    &&!parte_host.equals("onion")) {
-
-                    boolean adicionou = adicionaAoVetorDeTexto(parte_host);
-
-                    if( adicionou ) {
-                        adicionaTermoPosicao(parte_host,posicao_da_palavra);    // atualiza o centroide
-                        adicionaPontuacaoTermo(parte_host,PONTUACAO_PALAVRAS_URL);
-                        String parte_host_sem_acento = Acentos.retirarNotacaoHTMLAcentosANSI(parte_host);
-                        if( !parte_host_sem_acento.equals(parte_host) ) {
-                            adicionou = adicionaAoVetorDeTexto(parte_host_sem_acento);
-                            if( adicionou ) {
-                                adicionaTermoPosicao(parte_host_sem_acento,posicao_da_palavra);    // atualiza o centroide
-                                adicionaPontuacaoTermo(parte_host_sem_acento,PONTUACAO_PALAVRAS_URL);
+                    boolean added = termStats.addTermToText(hostPart);
+                    if (added) {
+                        termStats.addTermPosition(hostPart, wordPosition);
+                        termStats.addTermScore(hostPart, TERM_SCORE_URL);
+                        String cleanHostPart = Acentos.retirarNotacaoHTMLAcentosANSI(hostPart);
+                        if (!cleanHostPart.equals(hostPart)) {
+                            added = termStats.addTermToText(cleanHostPart);
+                            if (added) {
+                                termStats.addTermPosition(cleanHostPart, wordPosition);
+                                termStats.addTermScore(cleanHostPart, TERM_SCORE_URL);
                             }
                         }
-                        posicao_da_palavra++;
+                        wordPosition++;
                     }
                 }
             }
-
         }
 
         boolean em_body = false;
@@ -309,7 +260,7 @@ public class PaginaURL {
         char    quote_char = '\0';
         HttpUrl base = (baseUrl == null) ? null : HttpUrl.get(baseUrl);
 
-        Vector<String>  frames = new Vector<String>();
+        List<String>  frames = new ArrayList<String>();
         char    c = '\0';
         char    ant1 = '\0';
         char    ant2 = '\0';
@@ -325,7 +276,7 @@ public class PaginaURL {
 
         boolean insideATag = false;
 
-        boolean em_meta_description = false; // thiago
+        boolean in_meta_description = false; // thiago
         String  str_da_metatag_description = null; // thiago
 
         final int INICIO = 1;
@@ -338,7 +289,7 @@ public class PaginaURL {
         final int VALOR = 8;
         final int META_TAG = 10;
         final int ALT_TAG = 11;
-        int       estado = INICIO;
+        int state = INICIO;
 
         try {
 
@@ -359,29 +310,29 @@ public class PaginaURL {
                     }
 
                     n++;
-                } else if (ignorar_espacos) {
+                } else if (ignoreSpaces) {
                     if (Character.isWhitespace(c)) {
                         n++;
                     } else {
-                        ignorar_espacos = false;
+                        ignoreSpaces = false;
                     }
                 } else {
                     boolean fimDeString = false;
 
-                    switch (estado) {
+                    switch (state) {
 
                     case INICIO:
 
                         /* INICIO - Esperando texto ou caracter de abertura de tag '<' */
 
                         if (c == '<') {
-                            estado = TAG_NAME;
+                            state = TAG_NAME;
                             tagName = "";
                             tag_tipo_fim = false;
                             em_meta_robots = false;
                             n++;
                         } else {
-                            estado = TOKEN_PALAVRA;
+                            state = TOKEN_PALAVRA;
                             pos_caracter_especial = -1;
                         }
 
@@ -435,7 +386,7 @@ public class PaginaURL {
                                               + ch;
                                     } else {
                                         str = str.substring(0, posicao);
-                                        estado = PALAVRA;
+                                        state = PALAVRA;
 
                                         if (em_titulo) {
                                             titulo += str + ch;
@@ -448,7 +399,7 @@ public class PaginaURL {
                                 }
                             }
                         } else {
-                            estado = PALAVRA;
+                            state = PALAVRA;
 
                             if (em_titulo) {
                                 titulo += str;
@@ -471,66 +422,69 @@ public class PaginaURL {
                     case PALAVRA:
                       if(insideATag){
                         anchor = anchor + " " + str.toLowerCase();
-
                         numOfwordsAnchor++;
 //                                                  insideATag = false;
-
                       }
                         /* PALAVRA - palavra pronta */
                         if (!em_script && (str.length() > 0)) {
                             if (em_body && paragrafo.length() + str.length() < MAX_PARAGRAPH_SIZE) {
                                 if (Character.isWhitespace(c)) {
-                                    paragrafo +=
-                                        str + c;    // atualiza variavel paragrafo
+                                    paragrafo += str + c;
                                 } else {
                                     paragrafo += str + " ";
                                 }
                             }
 
                             if (!em_titulo) {
-                                boolean adicionou = adicionaAoVetorDeTexto(str);
-                                if( adicionou ) {
-                                  around.add(str);
-                                  adicionaTermoPosicao(str,posicao_da_palavra);    // atualiza o centroide
-                                  if(em_option){
-                                      adicionaPontuacaoTermo(str,PONTUACAO_PALAVRAS_OPTION);
-                                    }else{
-                                      adicionaPontuacaoTermo(str,PONTUACAO_PALAVRAS_TEXTO);
+                                boolean adicionou = termStats.addTermToText(str);
+                                if (adicionou) {
+                                    around.add(str);
+                                    termStats.addTermPosition(str, wordPosition);
+                                    if (em_option) {
+                                        termStats.addTermScore(str, TERM_SCORE_OPTION);
+                                    } else {
+                                        termStats.addTermScore(str, TERM_SCORE_TEXTO);
                                     }
-                                    String str_sem_acento = Acentos.retirarNotacaoHTMLAcentosANSI(str);
-                                    if( !str_sem_acento.equals(str) ) {
-                                        adicionou = adicionaAoVetorDeTexto(str_sem_acento);
-                                        if( adicionou ) {
-                                            adicionaTermoPosicao(str_sem_acento,posicao_da_palavra);    // atualiza o centroide
-                                            if(em_option){
-                                              adicionaPontuacaoTermo(str_sem_acento,PONTUACAO_PALAVRAS_OPTION);
-                                            }else{
-                                              adicionaPontuacaoTermo(str_sem_acento,PONTUACAO_PALAVRAS_TEXTO);
+                                    String str_sem_acento =
+                                            Acentos.retirarNotacaoHTMLAcentosANSI(str);
+                                    if (!str_sem_acento.equals(str)) {
+                                        adicionou = termStats.addTermToText(str_sem_acento);
+                                        if (adicionou) {
+                                            termStats.addTermPosition(str_sem_acento,
+                                                    wordPosition); // atualiza o centroide
+                                            if (em_option) {
+                                                termStats.addTermScore(
+                                                        str_sem_acento,
+                                                        TERM_SCORE_OPTION);
+                                            } else {
+                                                termStats.addTermScore(
+                                                        str_sem_acento,
+                                                        TERM_SCORE_TEXTO);
                                             }
                                         }
                                     }
-                                    posicao_da_palavra++;
+                                    wordPosition++;
                                 }
                             } else {
-                                boolean adicionou = adicionaAoVetorDeTexto(str);
+                                boolean adicionou = termStats.addTermToText(str);
                                 if( adicionou ) {
-                                    adicionaTermoPosicao(str,posicao_da_palavra);    // atualiza o centroide
-                                    adicionaPontuacaoTermo(str,PONTUACAO_PALAVRAS_TITULO);
+                                    termStats.addTermPosition(str,wordPosition);    // atualiza o centroide
+                                    termStats.addTermScore(str,TERM_SCORE_TITULO);
                                     String str_sem_acento = Acentos.retirarNotacaoHTMLAcentosANSI(str);
                                     if( !str_sem_acento.equals(str) ) {
-                                        adicionou = adicionaAoVetorDeTexto(str_sem_acento);
+                                        adicionou = termStats.addTermToText(str_sem_acento);
                                         if( adicionou ) {
-                                            adicionaTermoPosicao(str_sem_acento,posicao_da_palavra);    // atualiza o centroide
-                                            adicionaPontuacaoTermo(str_sem_acento,PONTUACAO_PALAVRAS_TITULO);
+                                            termStats.addTermPosition(str_sem_acento,wordPosition);    // atualiza o centroide
+                                            termStats.addTermScore(str_sem_acento,TERM_SCORE_TITULO);
                                         }
                                     }
-                                    posicao_da_palavra++;
+                                    wordPosition++;
                                 }
                             }
                         }
 
-                        estado = INICIO;
-                        ignorar_espacos = true;
+                        state = INICIO;
+                        ignoreSpaces = true;
                         str = "";
 
                         break;
@@ -545,7 +499,7 @@ public class PaginaURL {
                                 }
                                 else {
                                     str = "";
-                                    estado = INICIO;
+                                    state = INICIO;
                                 }
                                 n++;
                             } else if ( c == '>'){
@@ -553,7 +507,7 @@ public class PaginaURL {
                                     fimDeString = true;
                                     tag_tipo_fim = true;
                                     tagScript = true;
-                                    estado = FECHANDO;
+                                    state = FECHANDO;
                                 } else {
                                      n++;
                                 }
@@ -562,7 +516,7 @@ public class PaginaURL {
                         else {
                             if (str.equals("BASE")) {
                                 if (c == '>') {
-                                    estado = FECHANDO;
+                                    state = FECHANDO;
                                 } else {
                                     n++;
                                 }
@@ -584,8 +538,8 @@ public class PaginaURL {
 //                                    }
 
                                     fimDeString = true;
-                                    estado = ATRIBUTO;
-                                    ignorar_espacos = true;
+                                    state = ATRIBUTO;
+                                    ignoreSpaces = true;
                                     n++;
                                 } else if (c == '/') {
                                     if (tagName.length() == 0) {
@@ -593,7 +547,7 @@ public class PaginaURL {
                                             true;    /* indicates end tag if no tag name read yet */
                                     } else if (obj_isRDF) {    /* otherwise its an empty tag (RDF only) */
                                         fimDeString = true;
-                                        estado = FECHANDO;
+                                        state = FECHANDO;
                                     } 
 //                                    else {
 //                                        organizaDados(); //new
@@ -604,15 +558,15 @@ public class PaginaURL {
                                 } else if (c == '>') {
                                     fimDeString = true;
     //                                tag_tipo_fim = true;
-                                    estado = FECHANDO;
+                                    state = FECHANDO;
                                 } else if ((c != '\r') && (c != '\n')) {
                                     str += c;
                                     n++;
                                 } else {
                                     fimDeString = true;
-                                    estado =
+                                    state =
                                         ATRIBUTO;    /* note - mozilla allows newline after tag name */
-                                    ignorar_espacos = true;
+                                    ignoreSpaces = true;
                                     n++;
                                 }
 
@@ -620,7 +574,7 @@ public class PaginaURL {
                                     if (str.startsWith("!--")) {    /* html comment */
                                         em_comentario = true;
                                         num_comentario++;
-                                        estado = INICIO;
+                                        state = INICIO;
                                     } else {
                                         str = str.toLowerCase();
                                         tagName = str;
@@ -690,17 +644,16 @@ public class PaginaURL {
                             tagBody = false;
                             tagScript = false;
                             tagOption = false;
-                            estado = INICIO;
+                            state = INICIO;
                             str = "";
                             tagName = "";
 
                             numOfwordsAnchor = 0;
-                            ignorar_espacos = true;
+                            ignoreSpaces = true;
                             n++;
                         } 
                         else {
-                        	
-                            organizaDados(); //new
+                            termStats.sortData();
                             return;                         /* error */
                         }
 
@@ -726,14 +679,14 @@ public class PaginaURL {
                         if (quote_char == '\0') {
                             if ((((c == '/') && obj_isRDF) || (c == '>'))
                                     && (str.length() == 0)) {
-                                estado = FECHANDO;
+                                state = FECHANDO;
                             } else if ((c == ' ') || (c == '=')
                                        || (c == '\n') || (c == '\r')
                                        || ((c == '/') && obj_isRDF)
                                        || (c == '>')) {
                                 atributo = str;
                                 str = "";
-                                estado = IGUAL;
+                                state = IGUAL;
                                 /* if non-null attribute name */
                             } else {
                                 str += c;
@@ -764,11 +717,11 @@ public class PaginaURL {
 ***/
                             if ((c == ' ') || (c == '\n')
                                     || (c == '\r')) {
-                                ignorar_espacos = true;
+                                ignoreSpaces = true;
                                 n++;
                             } else if (c == '=') {
-                                ignorar_espacos = true;
-                                estado = VALOR;
+                                ignoreSpaces = true;
+                                state = VALOR;
                                 n++;
                             } else {    /* no value for the attribute - error in RDF? */
                                 str = "";
@@ -779,40 +732,40 @@ public class PaginaURL {
                                     tagScript = false;
                                     tagBody = false;
                                     tagTitulo = false;
-                                    estado = FECHANDO;
+                                    state = FECHANDO;
                                 } else {
-                                    ignorar_espacos = true;
+                                    ignoreSpaces = true;
                                     n++;
                                 }
                             }
                         break;
 
                     case ALT_TAG: // nao usa mais, foi mudado, ver no estado VALOR 
-                        if (((c == ' ') || (c == '"')) && ehInicioALT) {
-                            ignorar_espacos = false;
+                            if (((c == ' ') || (c == '"')) && isBeginALT) {
+                                ignoreSpaces = false;
 
-                            boolean adicionou = adicionaAoVetorDeTexto(str);
-                            if( adicionou ) {
-                                adicionaTermoPosicao(str,posicao_da_palavra);    // atualiza o centroide
-                                adicionaPontuacaoTermo(str,PONTUACAO_PALAVRAS_ALT);
-                                String str_sem_acento = Acentos.retirarNotacaoHTMLAcentosANSI(str);
-                                if( !str_sem_acento.equals(str) ) {
-                                    adicionou = adicionaAoVetorDeTexto(str_sem_acento);
-                                    if( adicionou ) {
-                                        adicionaTermoPosicao(str_sem_acento,posicao_da_palavra);    // atualiza o centroide
-                                        adicionaPontuacaoTermo(str_sem_acento,PONTUACAO_PALAVRAS_ALT);
+                                boolean adicionou = termStats.addTermToText(str);
+                                if (adicionou) {
+                                    termStats.addTermPosition(str, wordPosition);
+                                    termStats.addTermScore(str, TERM_SCORE_ALT);
+                                    String cleanTerm = Acentos.retirarNotacaoHTMLAcentosANSI(str);
+                                    if (!cleanTerm.equals(str)) {
+                                        adicionou = termStats.addTermToText(cleanTerm);
+                                        if (adicionou) {
+                                            termStats.addTermPosition(cleanTerm, wordPosition);
+                                            termStats.addTermScore(cleanTerm, TERM_SCORE_ALT);
+                                        }
                                     }
+                                    wordPosition++;
                                 }
-                                posicao_da_palavra++;
-                            }
 
-                            str = "";
-                            ehInicioALT = false;
+                                str = "";
+                                isBeginALT = false;
                         } else {
                             if (c == '>') {
 //                                estado = INICIO; //nao sei se esta' ok
-                                estado = VALOR;
-                                ehInicioALT = true;
+                                state = VALOR;
+                                isBeginALT = true;
                             } else {
                                 if (c == '.' || c == ',') {
                                 } else {
@@ -821,8 +774,8 @@ public class PaginaURL {
                                         str += c;
                                     } else {
                                         if (c == '"') {
-                                            estado = ATRIBUTO;
-                                            ehInicioALT = true;
+                                            state = ATRIBUTO;
+                                            isBeginALT = true;
                                         }
                                     }
                                 }
@@ -835,20 +788,12 @@ public class PaginaURL {
 
                     case META_TAG: // nao usa mais, foi mudado, ver no estado VALOR [ogm]
                         if ((c == ' ') || (c == '"') || (c == '\n') || (c == ',')) {
-                            ignorar_espacos = false;
-
-                            textoMeta.add(str);    // adiciona a palavra na variavel texto
-
-                            for (int contadorI = 0;
-                                    contadorI < PONTUACAO_PALAVRAS_META;
-                                    contadorI++) {
-                                adicionaTermoMetaPosicao(str, textoMeta.size());
-                            }
-
+                            ignoreSpaces = false;
+                            termStats.addTermToMeta(str, TERM_SCORE_META);
                             str = "";
                         } else {
                             if (c == '>') {
-                                estado = INICIO;
+                                state = INICIO;
 //                                estado = VALOR;
                             } else {
                                 if (c == '.' || c == ',') {
@@ -889,17 +834,17 @@ public class PaginaURL {
                         if (quote_char == '\0') {
                             if ((c == '/') && obj_isRDF) {
                                 fimDeString = true;
-                                estado = FECHANDO;
+                                state = FECHANDO;
                                 n++;
 //                            } else if (c == '>' || str.length() > 10000) {
                             } else if (c == '>' || str.length() > 100000) {
                                 fimDeString = true;
-                                estado = FECHANDO;
+                                state = FECHANDO;
                             } else if ((c == ' ') || (c == '\r')
                                        || (c == '\n')) {
                                 fimDeString = true;
-                                ignorar_espacos = true;
-                                estado = ATRIBUTO;    /* if non-null value name */
+                                ignoreSpaces = true;
+                                state = ATRIBUTO;    /* if non-null value name */
                                 n++;
                             } else if (include) {
                                 str += c;
@@ -955,20 +900,17 @@ public class PaginaURL {
                             		ln.setImgSource(str);
                             	}
                             	try {
-                            		imagens.add(resolveHttpLink(base,str).toString());	
+                            		imagens.add(Urls.resolveHttpLink(base,str).toString());	
 								} catch (Exception e) {
 									// TODO: handle exception
 								}
                                 
                             } 
-//                            else if((tagName.equals("area") || tagName.equals("a"))&& atributo.equals("alt")){
-//                            	anchor = anchor + " " + str.toLowerCase();
-//                            } 
                             else if (tagName.equals("frame") && atributo.equals("src")) {
-                                frames.addElement(str);
+                                frames.add(str);
                                 addLink(str, base);
                             } else if (tagName.equals("img") && (atributo.equals("alt") || atributo.equals("title") || atributo.equals("id"))) {
-                            	Vector<String> altWords = new Vector<String>();
+                                List<String> altWords = new ArrayList<String>();
                             	StringTokenizer st = new StringTokenizer(str);
                                 while(st.hasMoreTokens()) {
                                     String token = st.nextToken();
@@ -999,19 +941,19 @@ public class PaginaURL {
                                     if(token.equals("")){
                                     	break;
                                     }
-                                    boolean adicionou = adicionaAoVetorDeTexto(token);
+                                    boolean adicionou = termStats.addTermToText(token);
                                     if( adicionou ) {
-                                        adicionaTermoPosicao(token,posicao_da_palavra);    // atualbejiza o centroide
-                                        adicionaPontuacaoTermo(token,PONTUACAO_PALAVRAS_ALT);
-                                        String token_sem_acento = Acentos.retirarNotacaoHTMLAcentosANSI(token);
-                                        if( !token_sem_acento.equals(token) ) {
-                                            adicionou = adicionaAoVetorDeTexto(token_sem_acento);
+                                        termStats.addTermPosition(token, wordPosition);
+                                        termStats.addTermScore(token,TERM_SCORE_ALT);
+                                        String cleanToken = Acentos.retirarNotacaoHTMLAcentosANSI(token);
+                                        if( !cleanToken.equals(token) ) {
+                                            adicionou = termStats.addTermToText(cleanToken);
                                             if( adicionou ) {
-                                                adicionaTermoPosicao(token_sem_acento,posicao_da_palavra);    // atualiza o centroide
-                                                adicionaPontuacaoTermo(token_sem_acento,PONTUACAO_PALAVRAS_ALT);
+                                                termStats.addTermPosition(cleanToken, wordPosition);
+                                                termStats.addTermScore(cleanToken,TERM_SCORE_ALT);
                                             }
                                         }
-                                        posicao_da_palavra++;
+                                        wordPosition++;
                                     }
                                 }
                                 if(ln != null){
@@ -1027,33 +969,32 @@ public class PaginaURL {
 											terms[indexTerms] = current[i];
 										}
                                 		for (int i = 0; i < altWords.size(); i++,indexTerms++) {
-                                			terms[indexTerms] = altWords.elementAt(i);
+                                			terms[indexTerms] = altWords.get(i);
 										}
                                 		ln.setImgAlt(terms);
                                 	}
                                 }
-                            } else if (tagName.equals("meta")
-                                       && atributo.equals("content")) {
-                                if( em_meta_description ) {
+                            } else if (tagName.equals("meta") && atributo.equals("content")) {
+                                if( in_meta_description ) {
                                     str_da_metatag_description = str;
-                                    em_meta_description = false;
-                                    if( USAR_DESCRIPTION ) {
+                                    in_meta_description = false;
+                                    if( USE_DESCRIPTION ) {
                                         StringTokenizer st = new StringTokenizer(str);
                                         while(st.hasMoreTokens()) {
                                             String token = st.nextToken();
-                                            boolean adicionou = adicionaAoVetorDeTexto(token);
+                                            boolean adicionou = termStats.addTermToText(token);
                                             if( adicionou ) {
-                                                adicionaTermoPosicao(token,posicao_da_palavra);    // atualiza o centroide
-                                                adicionaPontuacaoTermo(token,PONTUACAO_PALAVRAS_DESCRIPTION);
+                                                termStats.addTermPosition(token,wordPosition);    // atualiza o centroide
+                                                termStats.addTermScore(token,TERM_SCORE_DESCRIPTION);
                                                 String token_sem_acento = Acentos.retirarNotacaoHTMLAcentosANSI(token);
                                                 if( !token_sem_acento.equals(token) ) {
-                                                    adicionou = adicionaAoVetorDeTexto(token_sem_acento);
+                                                    adicionou = termStats.addTermToText(token_sem_acento);
                                                     if( adicionou ) {
-                                                        adicionaTermoPosicao(token_sem_acento,posicao_da_palavra);    // atualiza o centroide
-                                                        adicionaPontuacaoTermo(token_sem_acento,PONTUACAO_PALAVRAS_DESCRIPTION);
+                                                        termStats.addTermPosition(token_sem_acento,wordPosition);    // atualiza o centroide
+                                                        termStats.addTermScore(token_sem_acento,TERM_SCORE_DESCRIPTION);
                                                     }
                                                 }
-                                                posicao_da_palavra++;
+                                                wordPosition++;
                                             }
                                         }
                                     }
@@ -1062,40 +1003,30 @@ public class PaginaURL {
                                 StringTokenizer st = new StringTokenizer(str);
                                 while(st.hasMoreTokens()) {
                                     String token = st.nextToken();
-                                    textoMeta.add(token);    // adiciona a palavra na variavel texto
-                                    for (int contadorI = 0;
-                                            contadorI < PONTUACAO_PALAVRAS_META;
-                                            contadorI++) {
-                                        adicionaTermoMetaPosicao(token, textoMeta.size());
-                                    }
+                                    termStats.addTermToMeta(token, TERM_SCORE_META);
                                 }
-                            } else if (tagName.equals("meta")
-                                       && atributo.equals("name")) {
+                            } else if (tagName.equals("meta") && atributo.equals("name")) {
                                 if (str.toLowerCase().equals("robot")) {
                                     em_meta_robots = true;
                                 }
                                 if (str.toLowerCase().equals("description") || str.toLowerCase().equals("descricao")) {
-                                    //System.out.println("meta.description.str="+str);
-                                    em_meta_description = true;
+                                    in_meta_description = true;
                                 }
-                            } else if (em_meta_robots
-                                       && atributo.equals("content")) {
-                                if (str.toLowerCase().indexOf("noindex")
-                                        != -1) {
-                                    noindex = true;
+                            } else if (em_meta_robots && atributo.equals("content")) {
+                                if (str.toLowerCase().indexOf("noindex") != -1) {
+                                    termStats.setNoindex(true);
                                 }
-
-                                if (str.toLowerCase().indexOf("nofollow")
-                                        != -1) {
+                                if (str.toLowerCase().indexOf("nofollow") != -1) {
                                     nofollow = true;
                                 }
                             } else if (tagName.equals("base") && atributo.equals("href")) {
                                 try {
                                     HttpUrl oldBase = (baseUrl == null) ? null : HttpUrl.get(baseUrl);
-                                    String newBase = resolveHttpLink(oldBase, str);
+                                    String newBase = Urls.resolveHttpLink(oldBase, str);
                                     base = (newBase == null) ? null : HttpUrl.parse(newBase);
                                 } catch (Exception e) {
-                                }                           // ignora
+                                    // ignore invalid URLs
+                                }
                              }
 
                             str = "";
@@ -1109,25 +1040,25 @@ public class PaginaURL {
                     }
                 }
             }
-            if( USAR_DESCRIPTION ) {
+            if( USE_DESCRIPTION ) {
                 if( str_da_metatag_description != null ) {
                     paragrafo = str_da_metatag_description;
                 }
             }
-            if( estado == PALAVRA && str != null && !"".equals(str) ) {
-                boolean adicionou = adicionaAoVetorDeTexto(str);
+            if( state == PALAVRA && str != null && !"".equals(str) ) {
+                boolean adicionou = termStats.addTermToText(str);
                 if( adicionou ) {
-                    adicionaTermoPosicao(str,posicao_da_palavra);    // atualiza o centroide
-                    adicionaPontuacaoTermo(str,PONTUACAO_PALAVRAS_TEXTO);
+                    termStats.addTermPosition(str,wordPosition);    // atualiza o centroide
+                    termStats.addTermScore(str,TERM_SCORE_TEXTO);
                     String str_sem_acento = Acentos.retirarNotacaoHTMLAcentosANSI(str);
                     if( !str_sem_acento.equals(str) ) {
-                        adicionou = adicionaAoVetorDeTexto(str_sem_acento);
+                        adicionou = termStats.addTermToText(str_sem_acento);
                         if( adicionou ) {
-                            adicionaTermoPosicao(str_sem_acento,posicao_da_palavra);    // atualiza o centroide
-                            adicionaPontuacaoTermo(str_sem_acento,PONTUACAO_PALAVRAS_TEXTO);
+                            termStats.addTermPosition(str_sem_acento,wordPosition);    // atualiza o centroide
+                            termStats.addTermScore(str_sem_acento,TERM_SCORE_TEXTO);
                         }
                     }
-                    posicao_da_palavra++;
+                    wordPosition++;
                 }
             }
         } catch (Exception e) {
@@ -1135,124 +1066,15 @@ public class PaginaURL {
         }
         this.frames = frames.size();
         this.images = imagens.size();
-        organizaDados();
-
+        this.termStats.sortData();
     }
 
     private void addLinkNeighborhood(LinkNeighborhood ln, String anchor, int numOfwordsAnchor) {
-        String[] anchorArray = tokenizeAnchorText(anchor);
-        
+        String[] anchorArray = Tokenizers.whitespace().tokenizeToArray(anchor);
         ln.setAnchor(anchorArray);
         ln.setAroundPosition(around.size());
         ln.setNumberOfWordsAnchor(numOfwordsAnchor);
-        
         linkNeigh.add(ln.clone());
-    }
-
-    private String[] tokenizeAnchorText(String anchor) {
-        ArrayList<String> anchorTemp = new ArrayList<String>();
-        StringTokenizer tokenizer = new StringTokenizer(anchor," ");
-        while(tokenizer.hasMoreTokens()){
-          anchorTemp.add(tokenizer.nextToken());
-        }
-        return (String[]) anchorTemp.toArray(new String[anchorTemp.size()]);
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @see
-     */
-    protected void organizaDados() {
-
-        // Cria arrays temporarios a partir da Hashtable
-        //int      size = palavra_posicoes.size();
-        int      size = palavra_pontos.size();
-        String[] words = new String[size];
-        int[]    numbers = new int[size];
-
-        int      sizeMeta = palavra_posicoes_meta.size();
-        String[] wordsMeta = new String[sizeMeta];
-        int[]    numbersMeta = new int[sizeMeta];
-        int	i = 0;
-
-        for (Enumeration<String> seriewords = palavra_pontos.keys();
-                seriewords.hasMoreElements(); ) {
-            words[i] = ((String) seriewords.nextElement());
-            i++;
-        }
-
-        i = 0;
-
-        for (Enumeration<Integer> serienumbers = palavra_pontos.elements();
-                serienumbers.hasMoreElements(); ) {
-            //numbers[i] = ((Vector) serienumbers.nextElement()).size();
-            numbers[i] = serienumbers.nextElement().intValue();
-            i++;
-        }
-
-        i = 0;
-
-        for (Enumeration<String> seriewordsMeta = palavra_posicoes_meta.keys();
-                seriewordsMeta.hasMoreElements(); ) {
-            wordsMeta[i] = seriewordsMeta.nextElement();
-            i++;
-        }
-
-        i = 0;
-
-        for (Enumeration<Vector<Integer>> serienumbersMeta = palavra_posicoes_meta.elements();
-                serienumbersMeta.hasMoreElements(); ) {
-            numbersMeta[i] = serienumbersMeta.nextElement().size();
-            i++;
-        }
-
-
-        // Ordena os arrays em ordem decrescente.
-        if (ordenarTermos) {
-            ordeneOcorrenc(numbers, words);
-            ordeneOcorrenc(numbersMeta, wordsMeta);
-            // Copia os arrays para os atributos da pagina.
-        }
-
-        if (MAXPALAVRAS >= 0) {
-            int npalavras = Math.min(size, MAXPALAVRAS);
-            int npalavrasMeta = Math.min(sizeMeta, MAXPALAVRAS);
-
-            palavras = new String[npalavras];
-            ocorrencias = new int[npalavras];
-
-            palavrasMeta = new String[npalavrasMeta];
-            ocorrenciasMeta = new int[npalavrasMeta];
-
-
-            for (i = 0; i < npalavras; i++) {
-                palavras[i] = words[i];
-                ocorrencias[i] = numbers[i];
-            }
-
-            for (i = 0; i < npalavrasMeta; i++) {
-                palavrasMeta[i] = wordsMeta[i];
-                ocorrenciasMeta[i] = numbersMeta[i];
-            }
-
-
-            while (i < size) {
-                palavra_posicoes.remove(words[i]);    // remove os termos que nao serao usados
-                i++;
-            }
-            while (i < sizeMeta) {
-                palavra_posicoes_meta.remove(wordsMeta[i]);    // remove os termos que nao serao usados
-                i++;
-            }
-
-        } else {
-            palavras = words;
-            ocorrencias = numbers;
-            palavrasMeta = wordsMeta;
-            ocorrenciasMeta = numbersMeta;
-        }
     }
 
     /**
@@ -1415,14 +1237,14 @@ public class PaginaURL {
             return "";
         }
         link = link.trim();
-        link = resolveHttpLink(base, link);
+        link = Urls.resolveHttpLink(base, link);
         if (link == null) {
             return "";
         }
-        link = removeFragmentsIfAny(link);
+        link = Urls.removeFragmentsIfAny(link);
         link = StringEscapeUtils.unescapeHtml4(link);
-        if (urlValidator.isValid(link) || onionValidator.matcher(link).matches()) {
-            link = urlNormalizer.filter(link);
+        if (Urls.isValid(link)) {
+            link = Urls.normalize(link);
             if (link != null) {
                 boolean exists = links.contains(link);
                 if (!exists) {
@@ -1438,282 +1260,6 @@ public class PaginaURL {
             link = null;
         }
         return link;
-    }
-
-    protected String removeFragmentsIfAny(String inputURL) {
-        int fragmentPosition = inputURL.indexOf('#');
-        if (fragmentPosition != -1) {
-            return inputURL.substring(0, fragmentPosition);
-        }
-        return inputURL;
-    }
-
-    protected String resolveHttpLink(HttpUrl base, String link) {
-        HttpUrl resolvedUrl;
-        try {
-            if (base == null) {
-                resolvedUrl = HttpUrl.parse(link);
-            } else {
-                resolvedUrl = base.resolve(link);
-            }
-        } catch (Exception e) {
-            // The link is invalid or malformed
-            resolvedUrl = null;
-            // logger.debug(String.format("Failed to resolve URL: base={%s} link={%s}",
-            // base.toString(), link), e);
-        }
-        if (resolvedUrl == null) {
-            return null;
-        } else {
-            return resolvedUrl.toString();
-        }
-    }
-
-    /**
-     * Este metodo incrementa a pontuacao de um termo na pagina.
-     * E' usado quando a pagina e' construida
-     */
-    protected void adicionaPontuacaoTermo(String termo, int pontos) {
-        if (noindex) {
-            return;
-        }
-
-        if (palavra_pontos == null) {
-            palavra_pontos = new Hashtable<>();
-        }
-
-        termo = termo.toLowerCase();
-        boolean dominio = termo.startsWith("#") && termo.endsWith("#");
-        if(!irrelevante(termo) || dominio) {
-            Integer p_pontos = (Integer) palavra_pontos.get(termo);
-
-            if (p_pontos == null) {
-                p_pontos = new Integer(pontos);
-            }
-            else {
-                p_pontos = new Integer(p_pontos.intValue()+pontos);
-            }
-
-            palavra_pontos.put(termo, p_pontos);
-        }
-    }
-    /**
-     * Este metodo incrementa a pontuacao de um termo na pagina.
-     * E' usado quando a pagina e' construida
-     */
-    protected void adicionaPontuacaoTermoSemStopList(String termo, int pontos) {
-        if (noindex) {
-            return;
-        }
-
-        if (palavra_pontos == null) {
-            palavra_pontos = new Hashtable<>();
-        }
-
-        termo = termo.toLowerCase();
-        Integer p_pontos = (Integer) palavra_pontos.get(termo);
-
-        if (p_pontos == null) {
-            p_pontos = new Integer(pontos);
-        }
-        else {
-            p_pontos = new Integer(p_pontos.intValue()+pontos);
-        }
-
-        palavra_pontos.put(termo, p_pontos);
-    }
-
-    /**
-     * Este metodo incrementa a pontuacao de um termo na pagina.
-     * E' usado quando a pagina e' construida
-     */
-    protected boolean adicionaAoVetorDeTexto(String termo) {
-        boolean resultado = false;
-        if (noindex) {
-            return resultado;
-        }
-
-        if (texto == null) {
-            texto = new Vector<>();
-        }
-        termo = termo.toLowerCase().trim();
-        resultado = !irrelevante(termo);
-        if( resultado ) {
-            texto.add(termo);
-        }
-        return resultado;
-    }
-
-
-        /**
-     * Este metodo adiciona um termo na lista de termos com suas posicoes
-     * e' dado tambem uma posicao do termo.
-     * E' usado quando a pagina e' construida
-     */
-    protected void adicionaTermoPosicaoSemStopList(String termo, int pos) {
-        if (noindex) {
-            return;
-        }
-
-        if (palavra_posicoes == null) {
-            palavra_posicoes = new Hashtable<>();
-        }
-
-        termo = termo.toLowerCase();
-         Vector<Integer> posicoes = palavra_posicoes.get(termo);
-
-            if (posicoes == null) {
-                    posicoes = new Vector<>();
-
-                    palavra_posicoes.put(termo, posicoes);
-                    posicoes.addElement(new Integer(pos));
-
-            } else {
-                posicoes.addElement(new Integer(pos));
-            }
-    }
-
-
-
-    /**
-     * Este metodo adiciona um termo na lista de termos com suas posicoes
-     * e' dado tambem uma posicao do termo.
-     * E' usado quando a pagina e' construida
-     */
-    protected void adicionaTermoPosicao(String termo, int pos) {
-        if (noindex) {
-            return;
-        }
-        
-        
-        if (palavra_posicoes == null) {
-            palavra_posicoes = new Hashtable<>();
-        }
-
-        termo = termo.toLowerCase();
-        boolean dominio = termo.startsWith("#") && termo.endsWith("#");
-        if(!irrelevante(termo) || dominio) {
-            Vector<Integer> posicoes = palavra_posicoes.get(termo);
-
-            if (posicoes == null) {
-                if (!irrelevante(termo)) {
-                    posicoes = new Vector<>();
-
-                    palavra_posicoes.put(termo, posicoes);
-                    posicoes.addElement(new Integer(pos));
-                }
-            } else {
-                posicoes.addElement(new Integer(pos));
-            }
-        }
-
-    }
-
-
-    /**
-     * Este metodo adiciona um termo na lista de termos com suas posicoes
-     * e' dado tambem uma posicao do termo.
-     * E' usado quando a pagina e' construida
-     */
-    protected void adicionaTermoMetaPosicao(String termo, int pos) {
-        if (noindex) {
-            return;
-        }
-
-        if (palavra_posicoes_meta == null) {
-            palavra_posicoes_meta = new Hashtable<>();
-        }
-
-        termo = termo.toLowerCase();
-
-        Vector<Integer> posicoesMeta = palavra_posicoes_meta.get(termo);
-
-        if (posicoesMeta == null) {
-            if (!irrelevante(termo)) {
-                posicoesMeta = new Vector<>();
-
-                palavra_posicoes_meta.put(termo, posicoesMeta);
-                posicoesMeta.addElement(new Integer(pos));
-            }
-        } else {
-            posicoesMeta.addElement(new Integer(pos));
-        }
-    }
-
-    /**
-     * Identifica se uma palavra e considerada insignificante, isto e,
-     * nao vale a pena ser armazenada.
-     */
-    protected boolean irrelevante(String str) {
-        boolean result = false;
-
-        if (stoplist != null) {
-            result = stoplist.isIrrelevant(str);
-        }
-
-        return result;
-    }
-
-    /**
-     * Recebe dois arrays, um com n palavras, e outro com as ocorrencias
-     * associadas a cada palavra, e os ordena em ordem decrescente de
-     * ocorrencia, para que tenhamos as palavras que ocorrem mais no comeco
-     * do array.
-     */
-    private void ordeneOcorrenc(int a[], String b[]) {
-        quicksort_num(a, 0, a.length - 1, b);
-    }
-
-    private void quicksort_num(int a[], int left, int right, String b[]) {
-        int pivot;
-        int l = left;
-        int r = right;
-
-        if (left < right) {
-            pivot = a[(left + right) / 2];
-
-            while (l <= r) {
-                while (a[l] > pivot & l < right) {
-                    l++;
-                }
-
-                while (a[r] < pivot & r > left) {
-                    r--;
-                }
-
-                if (l <= r) {
-                    troque1(a, l, r);
-                    troque2(b, l, r);
-
-                    l++;
-                    r--;
-                }
-            }
-
-            if (left < r) {
-                quicksort_num(a, left, r, b);
-            }
-
-            if (l < right) {
-                quicksort_num(a, l, right, b);
-            }
-        }
-    }
-
-    // Funcoes auxiliares do quicksort
-    private void troque1(int a[], int i, int j) {
-        int temp;
-
-        temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
-    }
-
-    private void troque2(String a[], int i, int j) {
-        String temp;
-        temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
     }
 
     public ArrayList<String> getImages() {
@@ -1732,7 +1278,7 @@ public class PaginaURL {
         return baseUrl;
     }
 
-    public String titulo() {
+    public String title() {
         return titulo;
     }
 
@@ -1740,56 +1286,50 @@ public class PaginaURL {
         return paragrafo;
     }
 
-    public String[] palavras() {
-        return palavras;
+    public String[] words() {
+        return termStats.words();
     }
 
-    public String palavras_to_string() {
-        if (palavras.length == 0)
-            return "";
-        String text = palavras[0];
-        for (int i = 1; i < palavras.length; i++) {
-            text = text + "  " + palavras[i];
-        }
-        return text;
+    public String wordsAsString() {
+        return termStats.wordsAsString();
     }
 
     public int[] ocorrencias() {
-        return ocorrencias;
+        return termStats.occurrences();
     }
 
-    public String[] palavrasMeta() {
-        return palavrasMeta;
+    public String[] wordsMeta() {
+        return termStats.wordsMeta();
     }
 
-    public int[] ocorrenciasMeta() {
-        return ocorrenciasMeta;
+    public int[] occurrencesMeta() {
+        return termStats.occurrencesMeta();
     }
 
-    public int numeroDeFrames() {
+    public int numberOfFrames() {
         return frames;
     }
 
-    public int numeroDeFormularios() {
+    public int numberOfForms() {
         return forms;
     }
 
-    public int numeroDeImagens() {
+    public int numberOfImagens() {
         return images;
     }
 
     public URL[] links() {
-        if (URLabsolutas == null) {
-            URLabsolutas = new URL[links.size()];
-
+        if (absoluteURLs == null) {
+            absoluteURLs = new URL[links.size()];
             for (int i = 0; i < links.size(); i++) {
                 try {
-                    URLabsolutas[i] = new URL(links.get(i).toString());
+                    absoluteURLs[i] = new URL(links.get(i).toString());
                 } catch (Throwable t) {
-                } // ignora
+                    // ignore invalid URLs
+                }
             }
         }
-        return URLabsolutas;
+        return absoluteURLs;
     }
 
 }

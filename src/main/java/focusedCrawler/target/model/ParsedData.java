@@ -17,10 +17,10 @@ public class ParsedData implements Serializable {
     private LinkNeighborhood[] linkNeighborhood;
 
     public ParsedData(PaginaURL page) {
-        this.words = page.palavras();
-        this.wordsMeta = page.palavrasMeta();
-        this.title = page.titulo();
-        this.cleanText = page.palavras_to_string();
+        this.words = page.words();
+        this.wordsMeta = page.wordsMeta();
+        this.title = page.title();
+        this.cleanText = page.wordsAsString();
         this.linkNeighborhood = page.getLinkNeighboor();
         this.links = page.links();
     }

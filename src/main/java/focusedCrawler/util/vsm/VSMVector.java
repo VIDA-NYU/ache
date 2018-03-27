@@ -39,7 +39,7 @@ public class VSMVector {
 	  if(stem){
 		  stemPage(page,false);  
 	  }else{
-	        String[] words = page.palavras();
+	        String[] words = page.words();
 	        int[] frequencies = page.ocorrencias();
 	        for (int i = 0; i < words.length; i++) {
 	            if(frequencies[i] == 0){
@@ -58,10 +58,10 @@ public class VSMVector {
   
     private void addTitle(PaginaURL page, StopList stoplist) throws MalformedURLException {
         this.stoplist = stoplist;
-        PaginaURL title = new PaginaURL(new URL("http://www"), page.titulo(), stoplist);
-        String[] titleWords = title.palavras();
-        String[] metaTerms = page.palavrasMeta();
-        int[] metaOccurrencies = page.ocorrenciasMeta();
+        PaginaURL title = new PaginaURL(new URL("http://www"), page.title(), stoplist);
+        String[] titleWords = title.words();
+        String[] metaTerms = page.wordsMeta();
+        int[] metaOccurrencies = page.occurrencesMeta();
         for (int i = 0; i < metaTerms.length; i++) {
             String word = metaTerms[i].toLowerCase();
             word = stemmer.stem(word);
@@ -382,7 +382,7 @@ public class VSMVector {
 
     private void stemPage(PaginaURL page, boolean isForm){
     	
-       String[] words = page.palavras();
+       String[] words = page.words();
        int[] frequencies = page.ocorrencias();
        for (int i = 0; i < words.length; i++) {
          String word = null;

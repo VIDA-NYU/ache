@@ -80,7 +80,8 @@ public class RobotsAndSitemapTest {
         }
 
         for (String url : shouldNOTBeDownloaded) {
-            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
+            LinkRelevance link = new LinkRelevance("http://127.0.0.1:1234/" + url, LinkRelevance.DEFAULT_RELEVANCE);
+            System.out.println(link);
             assertThat("URL="+url, frontier.exist(link), is(nullValue()));
         }
     }

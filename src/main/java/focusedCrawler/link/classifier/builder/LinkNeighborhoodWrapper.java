@@ -226,7 +226,7 @@ public class LinkNeighborhoodWrapper {
         if (useImageFeatures) {
             if (ln.getImgSrc() != null) {
                 PaginaURL pageParser = new PaginaURL(new URL("http://"), ln.getImgSrc(), stoplist);
-                addFeaturesToWordFieldList(words, pageParser.palavras(), WordField.SRC);
+                addFeaturesToWordFieldList(words, pageParser.words(), WordField.SRC);
             }
             addFeaturesToWordFieldList(words, ln.getImgAlt(), WordField.ALT);
         }
@@ -253,7 +253,7 @@ public class LinkNeighborhoodWrapper {
             wordsFields.add(new WordField(WordField.URLFIELD, host));
         }
         PaginaURL pageParser = new PaginaURL(url, url.getFile(), stoplist);
-        String[] terms = pageParser.palavras();
+        String[] terms = pageParser.words();
         for (int i = 0; i < terms.length; i++) {
             wordsFields.add(new WordField(WordField.URLFIELD, stemming(terms[i])));
         }
