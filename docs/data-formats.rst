@@ -30,7 +30,7 @@ The suffix in the data format name determines how content of each file is format
 
 
 When using any ``FILESYSTEM_*`` data format, you can enable compression (DEFLATE)
-of the data stored in the files enabling the following line in the config file::
+of the data stored in the files enabling the following line in the configuration file::
 
   target_storage.data_format.filesystem.compress_data: true
 
