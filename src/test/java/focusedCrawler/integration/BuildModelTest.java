@@ -19,26 +19,26 @@ import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
 
 public class BuildModelTest {
-    
+
     @Rule
     public TemporaryFolder tempFolder = new TemporaryFolder();
 
     @Test
     public void smileFeaturesFileShouldBeGeneratedInTheProperFormat() throws Exception {
-        
+
         String trainingPath = BuildModelTest.class.getResource("build_model_test").getFile();
-        String modelPath    = tempFolder.newFolder().toString();
-        
+        String modelPath = tempFolder.newFolder().toString();
+
         // Train a page classifier model
         String[] args = {"buildModel", "-t", trainingPath, "-o", modelPath};
         Main.main(args);
 
         // Load model trained
         TargetClassifier tc = TargetClassifierFactory.create(modelPath);
-        
+
         // Classify one example from training data just for sanity check
-        Page samplePositivePage = readOnePageFromFolder(trainingPath+"/positive");
-        Page sampleNegativePage = readOnePageFromFolder(trainingPath+"/negative");
+        Page samplePositivePage = readOnePageFromFolder(trainingPath + "/positive");
+        Page sampleNegativePage = readOnePageFromFolder(trainingPath + "/negative");
         assertThat(tc.classify(samplePositivePage).isRelevant(), is(true));
         assertThat(tc.classify(sampleNegativePage).isRelevant(), is(false));
     }
@@ -48,7 +48,7 @@ public class BuildModelTest {
         assertThat(allPositivePages.length, is(6));
         String positiveFileName = allPositivePages[0].getName();
         String fileContent = new String(Files.readAllBytes(Paths.get(allPositivePages[0].getAbsolutePath())));
-        Page samplePositivePage = new Page(new URL(URLDecoder.decode(positiveFileName, "UTF-8")), fileContent);
+        Page samplePositivePage =  new Page(new URL(URLDecoder.decode(positiveFileName, "UTF-8")), fileContent);
         return samplePositivePage;
     }
 

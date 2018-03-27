@@ -17,7 +17,7 @@ public class SmileOnlineClassifierTest {
     private static final int IRELEVANT = 1;
 
     @Test
-    public void shouldTrainWekaClassifier() {
+    public void shouldTrainSmileClassifier() {
 
         List<String> trainingData = new ArrayList<>();
         List<Integer> classes = new ArrayList<>();
@@ -48,7 +48,7 @@ public class SmileOnlineClassifierTest {
         double[] result = classifier.classify("zxcv asdf");
 
         // then
-        System.out.println(result[0] + " " + result[1]);
+//        System.out.println(result[0] + " " + result[1]);
         assertTrue(result[0] < 0.5); // relevant
         assertTrue(result[1] > 0.5); // irrelevant
     }
