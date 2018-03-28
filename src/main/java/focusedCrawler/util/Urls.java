@@ -1,6 +1,7 @@
 package focusedCrawler.util;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
@@ -70,6 +71,14 @@ public class Urls {
             return null;
         } else {
             return resolvedUrl.toString();
+        }
+    }
+
+    public static URL toJavaURL(String url) {
+        try {
+            return new URL(url);
+        } catch (MalformedURLException e) {
+            throw new IllegalArgumentException("Invalid URL provided: " + url, e);
         }
     }
 
