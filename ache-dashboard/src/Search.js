@@ -112,13 +112,15 @@ class HitItem extends React.Component {
 
   extractDescription(input) {
     // try to extraction description from metatag og:description
-    var ogdesc = input.html.match(/<meta property="og:description" content="(.*?)"/i);
     var clean = '[No Description Available]';
     if(input.text !== null) {
       clean = input.text;
     }
-    if(ogdesc !== null) {
-      clean = ogdesc[1] + ' || ' + clean;
+    if(input.html !== null) {
+      var ogdesc = input.html.match(/<meta property="og:description" content="(.*?)"/i);
+      if(ogdesc !== null) {
+        clean = ogdesc[1] + ' || ' + clean;
+      }
     }
     clean = clean.replace(/\\n/g, " ");
     clean = clean.replace(/\s\s+/g, ' ' );
