@@ -5,8 +5,9 @@ automatic configuration of the ACHE software stack.
 
 ## Dependecies
 
-If you are setting up an Elasticsearch cluster, you will also need to clone [ansible-elasticsearch](https://github.com/elastic/ansible-elasticsearch)
-and make sure the symbolic link `elasticsearch` in this folder points to the
+If you are setting up an Elasticsearch cluster, you will also need to clone
+[ansible-elasticsearch](https://github.com/elastic/ansible-elasticsearch)
+and make sure the symbolic link at `roles/elasticsearch` points to the
 path where you cloned the `ansible-elasticsearch` role.
 
 ## Usage
