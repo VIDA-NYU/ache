@@ -15,6 +15,18 @@ import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.persistence.TupleIterator;
 
+/**
+ * This class manages the crawler scheduling process. All links known by the crawler are stored in
+ * the Frontier (which is usually very large to fit in main memory). These links are periodically
+ * loaded into the scheduler (in-memory) based on their link priorities. Not all links can be
+ * loaded, so LinkSelector are used to determine which links should be loaded from the frontier to
+ * the scheduler. In order to be efficient and keep a high crawling rate, the scheduler should
+ * always have links available to be returned to the crawler agent
+ * (#{@link focusedCrawler.crawler.async.AsyncCrawler).
+ * 
+ * @author aeciosantos
+ *
+ */
 public class CrawlScheduler {
 
     private static final Logger logger = LoggerFactory.getLogger(CrawlScheduler.class);
@@ -68,6 +80,14 @@ public class CrawlScheduler {
         frontierLoadTimer = metricsManager.getTimer("frontier_manager.load.time");
     }
     
+    /**
+     * This method loads links from the frontier (stored in disk) to the scheduler. The is scheduler
+     * is a in-memory data structure that prioritizes links base on score and also politeness
+     * constraints. Which links are selected to be inserted in the frontier is determined the policy
+     * implemented by the LinkSelector configured.
+     * 
+     * @param numberOfLinks
+     */
     private synchronized void loadQueue(int numberOfLinks) {
         logger.info("Loading more links from frontier into the scheduler...");
         frontier.commit();
@@ -160,7 +180,11 @@ public class CrawlScheduler {
     }
 
     public boolean hasPendingLinks() {
-        return hasUncrawledLinks || recrawlSelector != null || loadIsRunning.get() || scheduler.hasPendingLinks();
+        return hasPendingLinksInFrontier() || scheduler.hasPendingLinks();
+    }
+
+    private boolean hasPendingLinksInFrontier() {
+        return hasUncrawledLinks || recrawlSelector != null || loadIsRunning.get();
     }
 
     public LinkRelevance nextLink(boolean asyncLoad) {
@@ -171,7 +195,7 @@ public class CrawlScheduler {
     }
 
     private void maybeLoadQueue(boolean asyncLoad) {
-        if (!hasUncrawledLinks) {
+        if (!hasPendingLinksInFrontier()) {
             return;
         }
         if (!asyncLoad) {
