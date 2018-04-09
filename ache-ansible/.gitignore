@@ -1,0 +1,3 @@
+*.inventory
+inventory/
+.DS_Store

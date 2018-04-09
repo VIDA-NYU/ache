@@ -1,0 +1,35 @@
+- name: Creates directory /data/ddt
+  become: true
+  become_method: sudo
+  become_user: root
+  file:
+    path: /data/ddt
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+
+#- copy:
+#    src: "{{ item }}"
+#    dest: /data/ddt/
+#  with_fileglob:
+#    - ddt/*
+
+- name: Create DDT docker-compose.yml file
+  template:
+    src: docker-compose.yml.j2
+    dest: /data/ddt/docker-compose.yml
+
+- name: Stop DDT containers if running
+  shell: docker-compose stop -t 30
+  args:
+    chdir: /data/ddt/
+
+- name: Update docker images
+  shell: docker-compose pull
+  args:
+    chdir: /data/ddt/
+
+- name: Start DDT containers
+  shell: docker-compose up -d
+  args:
+    chdir: /data/ddt/

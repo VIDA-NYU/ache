@@ -1,0 +1,7 @@
+elasticsearch_volume: ./data-es/:/usr/share/elasticsearch/data
+elasticsearch_image: elasticsearch:1.6
+elasticsearch_env_vars:
+  - "xpack.security.enabled=false"
+  - "cluster.name=docker-cluster"
+  - "bootstrap.memory_lock=true"
+  #- "ES_JAVA_OPTS=-Xms8G -Xmx8G"

@@ -1,0 +1,30 @@
+---
+- name: Creates directory /data/elasticsearch
+  become: true
+  become_method: sudo
+  become_user: root
+  file:
+    path: /data/elasticsearch
+    state: directory
+    owner: ubuntu
+
+#- copy:
+#    src: elasticsearch/docker-compose.yml
+#    dest: /data/elasticsearch/docker-compose.yml
+- name: Create docker-compose.yml file
+  template: src=docker-compose.yml.j2 dest=/data/elasticsearch/docker-compose.yml
+
+- name: Stop Elasticsearch if running
+  shell: docker-compose stop -t 60
+  args:
+    chdir: /data/elasticsearch/
+
+- name: Update images
+  shell: docker-compose pull
+  args:
+    chdir: /data/elasticsearch/
+
+- name: Start Elasticsearch
+  shell: docker-compose up -d
+  args:
+    chdir: /data/elasticsearch/
