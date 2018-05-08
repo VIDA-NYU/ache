@@ -12,60 +12,62 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
-import focusedCrawler.util.string.StopListFile;
-
 public class TargetClassifierFactory {
-    
+
     private static final Logger logger = LoggerFactory.getLogger(TargetClassifierFactory.class);
 
     public static TargetClassifier create(String modelPath) throws IOException {
-        
+
         logger.info("Loading TargetClassifier...");
-        
+
         Path basePath = Paths.get(modelPath);
         Path configPath = Paths.get(modelPath, "/pageclassifier.yml");
         File configFile = Paths.get(modelPath, "pageclassifier.yml").toFile();
-        
-        if(configFile.exists() && configFile.canRead()) {
-        
+
+        if (configFile.exists() && configFile.canRead()) {
+
             ObjectMapper yaml = new ObjectMapper(new YAMLFactory());
-            
+
             JsonNode tree = yaml.readTree(configFile);
             String classifierType = tree.get("type").asText();
             JsonNode parameters = tree.get("parameters");
-            
-            logger.info("TARGET_CLASSIFIER: "+classifierType);
-            
+
+            logger.info("TARGET_CLASSIFIER: " + classifierType);
+
             TargetClassifier classifier = null;
-            
-            if("url_regex".equals(classifierType)) {
-                classifier = new UrlRegexTargetClassifier.Builder().build(basePath, yaml, parameters);
+
+            if ("url_regex".equals(classifierType)) {
+                classifier =
+                        new UrlRegexTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
-            
-            if("title_regex".equals(classifierType)) {
-                classifier = new TitleRegexTargetClassifier.Builder().build(basePath, yaml, parameters);
+
+            if ("title_regex".equals(classifierType)) {
+                classifier =
+                        new TitleRegexTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
-            
-            if("body_regex".equals(classifierType)) {
-                classifier = new BodyRegexTargetClassifier.Builder().build(basePath, yaml, parameters);
+
+            if ("body_regex".equals(classifierType)) {
+                classifier =
+                        new BodyRegexTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
-            
-            if("regex".equals(classifierType)) {
-                classifier = new RegexTargetClassifier.Builder().build(basePath , yaml, parameters);
+
+            if ("regex".equals(classifierType)) {
+                classifier = new RegexTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
-            
-            if("keep_link_relevance".equals(classifierType)) {
-                classifier = new KeepLinkRelevanceTargetClassifier.Builder().build(basePath, yaml, parameters);
+
+            if ("keep_link_relevance".equals(classifierType)) {
+                classifier = new KeepLinkRelevanceTargetClassifier.Builder().build(basePath, yaml,
+                        parameters);
             }
 
             if ("smile".equals(classifierType)) {
                 classifier = new SmileTargetClassifier.Builder().build(basePath, yaml, parameters);
             }
-            
+
             if ("weka".equals(classifierType)) {
                 throw new IllegalArgumentException("The 'weka' classifier is not supported anymore"
                         + " and was replaced by the 'smile' classifier. Please rebuild your model "
-                        + "using ACHE's buildModel command (and using and up-to-date version of ACHE).");
+                        + "using ACHE's buildModel command of an up-to-date version of ACHE.");
             }
 
             if (classifier != null) {
@@ -75,16 +77,12 @@ public class TargetClassifierFactory {
                 throw new IllegalArgumentException(errorMsg);
             }
         }
-        
-        // create classic smile classifer to maintain compatibility with older versions
-        try {
-            return SmileTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
-        } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("Failed to load target classifier model. "
-                    + "Please make sure that you provided the correct path to the model "
-                    + "and that your model was created using an up-to-date version that "
-                    + "supports SMILE target classifier.", e);
-        }
+
+        throw new IllegalArgumentException("Failed to load target classifier model. "
+                + "Please make sure that:"
+                + " 1) you provided the correct path to the model"
+                + " 2) your model was build using an ACHE version compatible with this version"
+                + " 3) your model path contains a pageclassifier.yml file");
     }
 
 }
