@@ -10,6 +10,7 @@
 - Added near-duplicate page detection using min-hashing and LSH
 - Support ELASTIC format in Kafka data format (issue #155)
 - Upgrade react-scripts to get rid of vulnerable transitive dependency (hoek:4.2.0)
+- Upgrade npm version to 6.0.0 on gradle build script
 
 ## Version 0.10.0 (2018-01-16)
 
