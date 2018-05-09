@@ -48,15 +48,12 @@ public class ClassifierFactoryTest {
         assertThat(classifier, is(notNullValue()));
         assertThat(classifier, is(instanceOf(SmileTargetClassifier.class)));
     }
-    
-    @Test
-    public void shouldCreateSmileClassifierUsingOldConfigs() throws Exception {
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldNotSupportClassifierConfigWithoutYmlFile() throws Exception {
         // given
         String path = ClassifierFactoryTest.class.getResource("old_classifier_config/").getPath();
-
         TargetClassifier classifier = TargetClassifierFactory.create(path);
-        assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(SmileTargetClassifier.class)));
     }
 
 }
