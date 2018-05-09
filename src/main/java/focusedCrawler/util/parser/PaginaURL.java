@@ -900,7 +900,7 @@ public class PaginaURL {
                             		ln.setImgSource(str);
                             	}
                             	try {
-                            		imagens.add(Urls.resolveHttpLink(base,str).toString());	
+                            		imagens.add(Urls.resolveHttpLinkAsString(base,str).toString());
 								} catch (Exception e) {
 									// TODO: handle exception
 								}
@@ -1022,7 +1022,7 @@ public class PaginaURL {
                             } else if (tagName.equals("base") && atributo.equals("href")) {
                                 try {
                                     HttpUrl oldBase = (baseUrl == null) ? null : HttpUrl.get(baseUrl);
-                                    String newBase = Urls.resolveHttpLink(oldBase, str);
+                                    String newBase = Urls.resolveHttpLinkAsString(oldBase, str);
                                     base = (newBase == null) ? null : HttpUrl.parse(newBase);
                                 } catch (Exception e) {
                                     // ignore invalid URLs
@@ -1237,7 +1237,7 @@ public class PaginaURL {
             return "";
         }
         link = link.trim();
-        link = Urls.resolveHttpLink(base, link);
+        link = Urls.resolveHttpLinkAsString(base, link);
         if (link == null) {
             return "";
         }

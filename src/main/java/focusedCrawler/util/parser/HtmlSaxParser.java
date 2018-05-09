@@ -1,5 +1,12 @@
 package focusedCrawler.util.parser;
 
+import focusedCrawler.util.Urls;
+import okhttp3.HttpUrl;
+import org.cyberneko.html.parsers.SAXParser;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.xml.sax.*;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.net.MalformedURLException;
@@ -7,24 +14,10 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.TreeSet;
-import java.util.regex.Pattern;
-
-import org.apache.commons.validator.routines.UrlValidator;
-import org.cyberneko.html.parsers.SAXParser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.xml.sax.Attributes;
-import org.xml.sax.ContentHandler;
-import org.xml.sax.InputSource;
-import org.xml.sax.Locator;
-import org.xml.sax.SAXException;
-
-import focusedCrawler.crawler.crawlercommons.filters.basic.BasicURLNormalizer;
 
 public class HtmlSaxParser extends SAXParser implements ContentHandler {
+
 
     public static void main(String[] args) throws Exception {
 
@@ -66,23 +59,12 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
 
     public static final Logger logger = LoggerFactory.getLogger(HtmlSaxParser.class);
 
-    private final String[] schemes = {"http", "https"};
-    private final UrlValidator urlValidator = new UrlValidator(schemes);
-
-    // ONION links aren't accepted by the validator
-    // Regex ".[^.]+" --> any string of at least 1 char without dot
-    private Pattern onionRegex = Pattern.compile("https?://.[^.]+\\.onion.*");
-
-    private static final List<String> invalidParameters =
-            Arrays.asList("sid", "phpsessid", "sessionid", "jsessionid");
-    private static final BasicURLNormalizer urlNormalizer =
-            new BasicURLNormalizer(new TreeSet<>(invalidParameters), false);
-
 
     private TextType textState = TextType.TEXT;
     private List<Anchor> anchors = new ArrayList<>();
     private List<String> images;
-    private String baseUrl;
+    private HttpUrl base;
+
     private StringBuilder title = new StringBuilder();
     private StringBuilder text = new StringBuilder();
     private StringBuilder anchorText = new StringBuilder();
@@ -94,7 +76,7 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
     }
 
     public HtmlSaxParser(String url, String html) {
-        this.baseUrl = url;
+        this.base = HttpUrl.parse(url);
         // super.setContentHandler(new BoilerpipeHTMLContentHandler());
         setContentHandler(this);
         InputSource input = new InputSource(new StringReader(html));
@@ -121,23 +103,38 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
         System.out.println("(" + localName + " " + qName + " " + uri);
         switch (tagName) {
             case "BASE": {
+                //
+                // Handles the BASE tag which sets the URL that should be used for resolving
+                // relative links
+                //
                 String href = atts.getValue("href");
                 if (href != null && !href.isEmpty()) {
                     // All extracted links should be relative to the href of <base> tag
-                    this.baseUrl = href;
+                    try {
+                        HttpUrl newBase = Urls.resolveHttpLink(this.base, href);
+                        if (newBase != null) {
+                            this.base = newBase;
+                        }
+                    } catch (Exception e) {
+                        // ignore invalid URLs
+                    }
                 }
                 break;
             }
             case "A": {
                 this.textState = TextType.ANCHOR_TEXT;
                 String href = atts.getValue("href");
-                createLink(href);
+                String link = createLink(this.base, href);
+                if (link != null) {
+                    this.currentHref = link;
+                    this.currentHrefTextStart = text.length();
+                }
                 break;
             }
             case "IMG": {
                 String href = atts.getValue("href");
                 if (href != null && !href.isEmpty()) {
-                    images.add(href);
+                    images.add(createLink(this.base, href));
                 }
                 break;
             }
@@ -154,35 +151,43 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
         }
     }
 
-    private void createLink(String href) {
-        String url = null;
-        if (href == null || href.isEmpty())
-            return;
-        else
-            url = href.trim();
+    private String createLink(HttpUrl base, String href) {
+        if (href == null || href.isEmpty()) {
+            return null;
+        }
 
-        if (url.startsWith("javacript:"))
-            return;
+        String url = href;
+
+        if (url.startsWith(" ") || url.endsWith(" ")) {
+            url = href.trim();
+        }
+
+        if (url.startsWith("javascript:")) {
+            return null;
+        }
 
         if (url.startsWith("mailto:")) {
-            // TODO store email
-            return;
+            return null;
         }
 
         if (url.startsWith("tel:")) {
-            // TODO store phone number
-            return;
+            return null;
         }
 
-        String absoluteUrl = resolveRelativeHref(href, baseUrl);
-        if (absoluteUrl == null || absoluteUrl.isEmpty())
-            return;
+        if (url.startsWith("data:")) {
+            return null;
+        }
 
-        if (!(urlValidator.isValid(absoluteUrl) || onionRegex.matcher(absoluteUrl).matches()))
-            return;
+        String absoluteUrl = Urls.resolveHttpLinkAsString(base, href);
+        if (absoluteUrl == null || absoluteUrl.isEmpty()) {
+            return null;
+        }
 
-        this.currentHref = urlNormalizer.filter(absoluteUrl);
-        this.currentHrefTextStart = text.length();
+        if (!Urls.isValid(absoluteUrl)) {
+            return null;
+        }
+
+        return Urls.normalize(absoluteUrl);
     }
 
     @Override
@@ -192,7 +197,6 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
         switch (tagName) {
             case "A":
                 if (currentHref != null && !currentHref.isEmpty()) {
-                    // TODO: validate href? unescape?
                     anchors.add(new Anchor(currentHref, currentHrefTextStart, text.length(),
                             anchorText.toString().trim()));
                     currentHref = null;
@@ -238,17 +242,29 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
         }
     }
 
-    private String resolveRelativeHref(String href, String baseUrl) {
-        URL absoluteUrl = resolveRelativeHrefToUrl(href, baseUrl);
-        return absoluteUrl == null ? null : absoluteUrl.toString();
+    public URL[] links() {
+        List<URL> links = new ArrayList<>();
+        for (Anchor anchor : anchors) {
+            URL absoluteUrl = Urls.toJavaURL(anchor.href);
+            if (absoluteUrl != null) {
+                links.add(absoluteUrl);
+            }
+        }
+        return (URL[]) links.toArray(new URL[links.size()]);
     }
 
-    private URL resolveRelativeHrefToUrl(String href, String baseUrl) {
-        try {
-            return new URL(new URL(baseUrl), href);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException("Invalid URL: " + baseUrl + " - " + href, e);
+    public LinkNeighborhood[] getLinkNeighboor() {
+        List<LinkNeighborhood> links = new ArrayList<>();
+        for (Anchor anchor : anchors) {
+            URL absoluteUrl = Urls.toJavaURL(anchor.href);
+            LinkNeighborhood ln = new LinkNeighborhood(absoluteUrl);
+            links.add(ln);
         }
+        return (LinkNeighborhood[]) links.toArray(new LinkNeighborhood[links.size()]);
+    }
+
+    public URL getURL() {
+        return base != null ? base.url() : null;
     }
 
     @Override
@@ -289,34 +305,6 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
     @Override
     public void endPrefixMapping(String prefix) throws SAXException {
         System.out.println("NekoHtmlSaxParser.endPrefixMapping()");
-    }
-
-    public URL[] links() {
-        List<URL> links = new ArrayList<>();
-        for (Anchor anchor : anchors) {
-            URL absoluteUrl = resolveRelativeHrefToUrl(anchor.href, baseUrl);
-            links.add(absoluteUrl);
-        }
-        return (URL[]) links.toArray(new URL[links.size()]);
-    }
-
-
-    public LinkNeighborhood[] getLinkNeighboor() {
-        List<LinkNeighborhood> links = new ArrayList<>();
-        for (Anchor anchor : anchors) {
-            URL absoluteUrl = resolveRelativeHrefToUrl(anchor.href, baseUrl);
-            LinkNeighborhood ln = new LinkNeighborhood(absoluteUrl);
-            links.add(ln);
-        }
-        return (LinkNeighborhood[]) links.toArray(new LinkNeighborhood[links.size()]);
-    }
-
-    public URL getURL() {
-        try {
-            return new URL(baseUrl);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException("Invalid URL: " + baseUrl, e);
-        }
     }
 
 }
