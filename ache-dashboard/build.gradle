@@ -6,7 +6,7 @@ node {
   // Enable automatic download and install local copy of Node/NPM
   download = true
   // Version of npm to use.
-  npmVersion = '6.0.0'
+  npmVersion = '5.8.0'
 }
 
 task build(type: NpmTask, dependsOn: [npmInstall]) {
