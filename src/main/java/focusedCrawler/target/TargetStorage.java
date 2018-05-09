@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.LinkStorage;
+import focusedCrawler.minhash.DuplicatePageIndexer;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
@@ -39,18 +40,18 @@ public class TargetStorage {
     private TargetStorageConfig config;
     private LangDetection langDetector = new LangDetection();
     private TargetStorageMonitor monitor;
+    private DuplicatePageIndexer duplicatesIndexer;
     
-    public TargetStorage(TargetClassifier targetClassifier,
-                         TargetRepository targetRepository, 
-                         LinkStorage linkStorage,
-                       	 TargetStorageMonitor monitor,
-                       	 TargetStorageConfig config) {
-        
+    public TargetStorage(TargetClassifier targetClassifier, TargetRepository targetRepository,
+            LinkStorage linkStorage, TargetStorageMonitor monitor,
+            TargetStorageConfig config, DuplicatePageIndexer duplicatesIndexer) {
+
         this.targetClassifier = targetClassifier;
         this.targetRepository = targetRepository;
         this.linkStorage = linkStorage;
         this.config = config;
         this.monitor = monitor;
+        this.duplicatesIndexer = duplicatesIndexer;
     }
 
     /**
@@ -70,6 +71,16 @@ public class TargetStorage {
             // Only accept English language
             if (this.langDetector.isEnglish(page) == false) {
                 logger.info("Ignoring non-English page: " + page.getURL().toString());
+                return null;
+            }
+        }
+
+        if (config.isNearDuplicateDetectionEnabled()) {
+            String text = page.getParsedData().getCleanText();
+            String key = page.getRequestedUrl();
+            boolean isNearDuplicate = duplicatesIndexer.detectAndIndex(text, key);
+            page.setNearDuplicate(isNearDuplicate);
+            if (config.ignoreNearDuplicates() && isNearDuplicate) {
                 return null;
             }
         }
@@ -128,6 +139,28 @@ public class TargetStorage {
             targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 
+        TargetRepository targetRepository =
+                createTargetRepository(dataPath, esIndexName, esTypeName, config);
+
+        TargetStorageMonitor monitor = null;
+        if (metricsManager != null) {
+            monitor = new TargetStorageMonitor(dataPath, metricsManager);
+        } else {
+            monitor = new TargetStorageMonitor(dataPath);
+        }
+
+        DuplicatePageIndexer duplicatesIndexer = null;
+        if (config.isNearDuplicateDetectionEnabled()) {
+            double similarityThreshold = config.getNearDuplicatesSimilarityThreshold();
+            duplicatesIndexer = new DuplicatePageIndexer(dataPath, similarityThreshold);
+        }
+
+        return new TargetStorage(targetClassifier, targetRepository, linkStorage,
+                monitor, config, duplicatesIndexer);
+    }
+
+    public static TargetRepository createTargetRepository(String dataPath, String esIndexName,
+            String esTypeName, TargetStorageConfig config) throws IOException {
         List<String> dataFormats = config.getDataFormats();
 
         List<TargetRepository> repositories = new ArrayList<>();
@@ -146,15 +179,7 @@ public class TargetStorage {
         } else {
             throw new IllegalArgumentException("No valid data formats configured.");
         }
-
-        TargetStorageMonitor monitor = null;
-        if(metricsManager != null) {
-        	monitor = new TargetStorageMonitor(dataPath, metricsManager);
-        }else {
-        	monitor = new TargetStorageMonitor(dataPath);
-        }
-
-        return new TargetStorage(targetClassifier, targetRepository, linkStorage, monitor, config);
+        return targetRepository;
     }
 
     private static TargetRepository createRepository(String dataFormat, String dataPath,
@@ -164,7 +189,9 @@ public class TargetStorage {
         boolean compressData = config.getCompressData();
         boolean hashFilename = config.getHashFileName();
 
-        logger.info("Using DATA_FORMAT: " + dataFormat);
+        logger.info("Loading repository with data_format={} from {}",
+                dataFormat, targetDirectory.toString());
+
         switch (dataFormat) {
             case "FILES":
                 return new FilesTargetRepository(targetDirectory, config.getMaxFileSize());

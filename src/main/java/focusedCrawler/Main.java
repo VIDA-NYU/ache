@@ -9,12 +9,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.Configuration;
+import focusedCrawler.crawler.CrawlersManager;
+import focusedCrawler.crawler.CrawlersManager.CrawlContext;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.seedfinder.SeedFinder;
-import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
+import focusedCrawler.target.classifier.TargetClassifierBuilder;
 import focusedCrawler.tools.StartRestServer;
 import io.airlift.airline.Arguments;
 import io.airlift.airline.Cli;
@@ -143,39 +145,45 @@ public class Main {
         
     }
 
-    @Command(name = "buildModel", description = "Builds a model for a Weka target classifier")
+    @Command(name = "buildModel", description = "Builds a model for a Smile target classifier")
     public static class BuildModel implements Runnable {
         
-        @Option(name = {"-t", "--trainingDataDir"}, required = true, description = "Path to folder containing training data")
-        String trainingPath;
+        @Option(name = {"-t", "--trainingDataDir"}, required = true,
+                description = "Path to folder containing training data")
+        String trainingDataPath;
 
-        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
+        @Option(name = {"-o", "--outputDir"}, required = true,
+                description = "Path to folder which model built should be stored")
         String outputPath;
 
-        @Option(name = {"-c", "--stopWordsFile"}, required = false, description = "Path to stopwords file")
+        @Option(name = {"-c", "--stopWordsFile"}, required = false,
+                description = "Path to stopwords file")
         String stopWordsFile;
 
-        @Option(name = {"-l", "--learner"}, required = false, description = "Machine-learning algorithm to be used to train the model (SMO, RandomForest)")
+        @Option(name = {"-l", "--learner"}, required = false,
+                description = "Machine-learning algorithm to be used to train the model (SVM, RandomForest)")
         String learner;
-        
+
+        @Option(name = {"-nocv", "--no-cross-validation"}, required = false,
+                description = "If should skip cross-validation (train on full data)")
+        boolean skipCrossValidation = false;
+
+        @Option(name = {"-mf", "--max-features"}, required = false,
+                description = "The maximum number of features to be used")
+        int maxFeatures = 5000;
+
         @Override
         public void run() {
-            
-            new File(outputPath).mkdirs();
-            
-            // generate the input for weka
-            System.out.println("Preparing training data...");
-            WekaTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/weka.arff" );
-            
-            // generate the model
-            System.out.println("Training model...");
-            WekaTargetClassifierBuilder.trainModel(trainingPath, outputPath, learner);
-            
-            // generate features file
-            System.out.println("Creating feature file...");
-            WekaTargetClassifierBuilder.createFeaturesFile(outputPath,trainingPath);
-            
-            System.out.println("done.");
+            try {
+                new File(outputPath).mkdirs();
+                TargetClassifierBuilder builder = new TargetClassifierBuilder(stopWordsFile, true,
+                        skipCrossValidation, maxFeatures);
+                builder.train(learner, trainingDataPath, outputPath);
+            } catch (Exception e) {
+                System.out.printf("Failed to build model.\n\n");
+                e.printStackTrace(System.out);
+                System.exit(1);
+            }
         }
         
     }
@@ -208,6 +216,9 @@ public class Main {
     @Command(name = "startCrawl", description = "Starts a crawler")
     public static class StartCrawl implements Runnable {
 
+        @Option(name = {"-cid", "--crawlerId"}, required = false, description = "An unique identifier for this crawler")
+        String crawlerId = "default";
+
         @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
         String configPath;
         
@@ -215,7 +226,7 @@ public class Main {
         String modelPath;
         
         @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
-        String dataOutputPath;
+        String dataPath;
         
         @Option(name = {"-s", "--seed"}, required = true, description = "Path to file of seed URLs")
         String seedPath;
@@ -229,14 +240,17 @@ public class Main {
         @Override
         public void run() {
             try {
-                AsyncCrawler crawler = AsyncCrawler.create(configPath, dataOutputPath, seedPath,
-                        modelPath, esIndexName, esTypeName);
+                Configuration config = new Configuration(configPath);
+                CrawlersManager crawlManager = new CrawlersManager(dataPath, config);
 
-                RestServer restServer = RestServer.create(configPath, dataOutputPath, esIndexName, esTypeName);
-                restServer.setCrawler(crawler);
+                CrawlContext crawlerContext = crawlManager.createCrawler(crawlerId, configPath,
+                        seedPath, modelPath, esIndexName, esTypeName);
+
+                RestServer restServer = RestServer.create(config.getRestConfig(), crawlManager);
                 restServer.start();
 
                 try {
+                    AsyncCrawler crawler = crawlerContext.getCrawler();
                     crawler.startAsync();
                     crawler.awaitTerminated();
                 } finally {

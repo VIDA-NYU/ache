@@ -31,6 +31,7 @@ import com.google.common.collect.ImmutableMap;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.util.CloseableIterator;
 
 public class ElasticSearchRestTargetRepository implements TargetRepository {
     
@@ -87,6 +88,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "    \"crawlerId\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
@@ -103,6 +105,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"url\":              {\"type\": \"keyword\",\"index\": true},"
                 + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true},"
                 + "    \"isRelevant\":       {\"type\": \"keyword\",\"index\": true},"
+                + "    \"crawlerId\":        {\"type\": \"keyword\",\"index\": true},"
                 + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
@@ -211,6 +214,12 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         } catch (IOException e) {
             throw new RuntimeException("Failed to close Elasticsearch REST client", e);
         }
+    }
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
+        throw new UnsupportedOperationException(
+                "Iterator not supportted for ElasticSearchRestTargetRepository yet");
     }
 
 }

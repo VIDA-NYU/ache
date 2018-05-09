@@ -31,6 +31,7 @@ import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.crawler.cookies.OkHttpCookieJar;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
@@ -44,33 +45,44 @@ import focusedCrawler.crawler.crawlercommons.fetcher.http.BaseHttpFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.UserAgent;
 import okhttp3.CipherSuite;
 import okhttp3.ConnectionSpec;
+import okhttp3.Cookie;
 import okhttp3.OkHttpClient;
+import okhttp3.OkHttpClient.Builder;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 
+@SuppressWarnings("serial")
 public class OkHttpFetcher extends BaseHttpFetcher {
+
     private static Logger LOGGER = LoggerFactory.getLogger(OkHttpFetcher.class);
 
-    private static final String TEXT_MIME_TYPES[] = { "text/html", "application/x-asp", "application/xhtml+xml", "application/vnd.wap.xhtml+xml", };
+    private static final String TEXT_MIME_TYPES[] = {
+        "text/html",
+        "application/x-asp",
+        "application/xhtml+xml",
+        "application/vnd.wap.xhtml+xml"
+    };
 
     private static final int DEFAULT_MAX_THREADS = 1;
 
     transient private OkHttpClient _httpClient;
+    private OkHttpCookieJar cookieJar ;
+    private int connectTimeoutTime;
+    private int readTimeoutTime;
 
-    private int connectTimeOuttime;
-    private int readTimeOuttime;
-
-    public OkHttpFetcher(UserAgent userAgent, int connectTimeOutTime, int readTimeOutTime) {
-        this(DEFAULT_MAX_THREADS, userAgent,connectTimeOutTime,readTimeOutTime);
+    public OkHttpFetcher(UserAgent userAgent) {
+        this(DEFAULT_MAX_THREADS, userAgent, null, 30000, 30000);
     }
 
-    public OkHttpFetcher(int maxThreads, UserAgent userAgent, int connectTimeOutTime, int readTimeOutTime) {
+    public OkHttpFetcher(int maxThreads, UserAgent userAgent, OkHttpCookieJar cookieJar,
+                         int connectTimeoutTime, int readTimeoutTime) {
         super(maxThreads, userAgent);
-        _httpClient = null;
-        this.connectTimeOuttime = connectTimeOutTime;
-        this.readTimeOuttime = readTimeOutTime;
+        this._httpClient = null;
+        this.cookieJar = cookieJar;
+        this.connectTimeoutTime = connectTimeoutTime;
+        this.readTimeoutTime = readTimeoutTime;
     }
 
     public FetchedResult get(String url, Payload payload) throws BaseFetchException {
@@ -128,10 +140,10 @@ public class OkHttpFetcher extends BaseHttpFetcher {
         }
     }
 
-    private int getRedirectCount(Response response){
-        Integer count =0;
+    private int getRedirectCount(Response response) {
+        Integer count = 0;
         Response previous = response.priorResponse();
-        while (previous != null){
+        while (previous != null) {
             count++;
             previous = previous.priorResponse();
         }
@@ -300,9 +312,9 @@ public class OkHttpFetcher extends BaseHttpFetcher {
     private void init() {
         if (_httpClient == null) {
             synchronized (OkHttpFetcher.class) {
-                if (_httpClient != null)
+                if (_httpClient != null) {
                     return;
-
+                }
 //                _httpClient = new OkHttpClient(); // default
 //                _httpClient = getCustomOkHttpClient(); // custom ciphers
                 _httpClient = getUnsafeOkHttpClient(); // all trusting trust manager, all default ciphers
@@ -335,27 +347,35 @@ public class OkHttpFetcher extends BaseHttpFetcher {
             // Install the all-trusting trust manager
             final SSLContext sslContext = SSLContext.getInstance("SSL");
             sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
-            // Create an ssl socket factory with our all-trusting manager
+
+            // Create an SSL socket factory with our all-trusting manager
             final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
 
-            OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                    .sslSocketFactory(sslSocketFactory, (X509TrustManager) trustAllCerts[0])
-                    .hostnameVerifier(new HostnameVerifier() {
-                        @Override
-                        public boolean verify(String s, SSLSession sslSession) {
-                            return true;
-                        }
-                    }).connectTimeout(connectTimeOuttime, TimeUnit.MILLISECONDS)
-                    .readTimeout(readTimeOuttime,TimeUnit.MILLISECONDS)
-                    .build();
+            HostnameVerifier noopHostnameVerifier = new HostnameVerifier() {
+                @Override
+                public boolean verify(String s, SSLSession sslSession) {
+                    return true;
+                }
+            };
 
-            return okHttpClient;
+            OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder()
+                    .sslSocketFactory(sslSocketFactory, (X509TrustManager) trustAllCerts[0])
+                    .hostnameVerifier(noopHostnameVerifier)
+                    .connectTimeout(connectTimeoutTime, TimeUnit.MILLISECONDS)
+                    .readTimeout(readTimeoutTime, TimeUnit.MILLISECONDS);
+
+            if (cookieJar != null) {
+                clientBuilder.cookieJar(cookieJar);
+            }
+
+            return clientBuilder.build();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    private OkHttpClient getCustomOkHttpClient(){
+    private OkHttpClient getCustomOkHttpClient() {
+        
         final ConnectionSpec specModernTLS = new ConnectionSpec.Builder(ConnectionSpec.MODERN_TLS)
                 .cipherSuites(new CustomCipherSuites().getCustomCipherSuites().toArray(new CipherSuite[0]))
                 .build();
@@ -366,9 +386,10 @@ public class OkHttpFetcher extends BaseHttpFetcher {
         final ConnectionSpec specCompatibleTLS = new ConnectionSpec.Builder(ConnectionSpec.COMPATIBLE_TLS)
                 .build();
 
-
         final List<ConnectionSpec> specs = new ArrayList<>();
-        specs.add(specModernTLS); specs.add(specClearText); specs.add(specCompatibleTLS);
+        specs.add(specModernTLS);
+        specs.add(specClearText);
+        specs.add(specCompatibleTLS);
 
         X509TrustManager trustManager;
         SSLSocketFactory sslSocketFactory;
@@ -376,21 +397,29 @@ public class OkHttpFetcher extends BaseHttpFetcher {
         try {
             trustManager = defaultTrustManager();
             sslSocketFactory = defaultSslSocketFactory(trustManager);
-            SSLSocketFactory customSslSocketFactory = new DelegatingSSLSocketFactory(sslSocketFactory) {
-                @Override protected SSLSocket configureSocket(SSLSocket socket) throws IOException {
-                    socket.setEnabledCipherSuites(javaNames(specModernTLS.cipherSuites()));
-                    return socket;
-                }
-            };
 
-            return new OkHttpClient.Builder()
-                    .connectionSpecs(specs)
-                    .sslSocketFactory(customSslSocketFactory,trustManager)
-                    .connectTimeout(connectTimeOuttime, TimeUnit.MILLISECONDS)
-                    .readTimeout(readTimeOuttime,TimeUnit.MILLISECONDS)
-                    .build();
+            SSLSocketFactory customSslSocketFactory =
+                    new DelegatingSSLSocketFactory(sslSocketFactory) {
+                        @Override
+                        protected SSLSocket configureSocket(SSLSocket socket) throws IOException {
+                            socket.setEnabledCipherSuites(javaNames(specModernTLS.cipherSuites()));
+                            return socket;
+                        }
+                    };
 
-        }catch (GeneralSecurityException gse){        }
+            Builder clientBuilder = new OkHttpClient.Builder().connectionSpecs(specs)
+                    .sslSocketFactory(customSslSocketFactory, trustManager)
+                    .connectTimeout(connectTimeoutTime, TimeUnit.MILLISECONDS)
+                    .readTimeout(readTimeoutTime, TimeUnit.MILLISECONDS);
+
+            if (cookieJar != null) {
+                clientBuilder.cookieJar(cookieJar);
+            }
+
+            return clientBuilder.build();
+
+        } catch (GeneralSecurityException gse) {
+        }
 
         return new OkHttpClient();
     }
@@ -420,7 +449,6 @@ public class OkHttpFetcher extends BaseHttpFetcher {
         return (X509TrustManager) trustManagers[0];
 
     }
-
 
     private static String[] javaNames(List<CipherSuite> cipherSuites) {
         String[] result = new String[cipherSuites.size()];
@@ -490,6 +518,10 @@ public class OkHttpFetcher extends BaseHttpFetcher {
             }
         }
         return false;
+    }
+
+    public void updateCookies(Map<String, List<Cookie>> map) {
+        this.cookieJar.update(map);
     }
 
 

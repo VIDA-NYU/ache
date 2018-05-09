@@ -54,12 +54,13 @@ public class RobotsAndSitemapTest {
         String configPath = basePath + "/config/";
         String seedPath = basePath + "/seeds.txt";
         String modelPath = basePath + "/model/";
+        String crawlerId = "crawl1";
 
         // when
-        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath };
+        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath, "-cid", crawlerId };
         Main.main(args);
 
-        Frontier frontier = openFrontier(outputPath, configPath);
+        Frontier frontier = openFrontier(outputPath + "/" + crawlerId, configPath);
 
         List<String> shouldBeDownloaded = asList(
                 "index.html",
@@ -79,7 +80,8 @@ public class RobotsAndSitemapTest {
         }
 
         for (String url : shouldNOTBeDownloaded) {
-            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
+            LinkRelevance link = new LinkRelevance("http://127.0.0.1:1234/" + url, LinkRelevance.DEFAULT_RELEVANCE);
+            System.out.println(link);
             assertThat("URL="+url, frontier.exist(link), is(nullValue()));
         }
     }
@@ -92,12 +94,12 @@ public class RobotsAndSitemapTest {
         String configPath = basePath + "/config/";
         String seedPath = basePath + "/seeds.txt";
         String modelPath = basePath + "/model/";
+        String crawlerId = "crawl1";
 
         // when
-        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath };
+        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath, "-cid", crawlerId };
         Main.main(args);
-
-        Frontier frontier = openFrontier(outputPath, configPath);
+        Frontier frontier = openFrontier(outputPath + "/" + crawlerId, configPath);
 
         List<String> shouldBeDownloaded = asList(
                 "index.html",
@@ -130,13 +132,14 @@ public class RobotsAndSitemapTest {
         String configPath = basePath + "/config2/";
         String seedPath = basePath + "/seeds.txt";
         String modelPath = basePath + "/model/";
+        String crawlerId = "crawl1";
 
         // when
-        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath };
+        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath, "-cid", crawlerId };
         Main.main(args);
 
         // then
-        Frontier frontier = openFrontier(outputPath, configPath);
+        Frontier frontier = openFrontier(outputPath + "/" + crawlerId, configPath);
 
         List<String> shouldNOTBeDownloaded = asList(
                 "page-listed-on-sitemap-1.html",

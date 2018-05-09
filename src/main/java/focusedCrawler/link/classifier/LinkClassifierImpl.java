@@ -44,8 +44,7 @@ import focusedCrawler.util.parser.LinkNeighborhood;
 
 public class LinkClassifierImpl implements LinkClassifier{
 
-	private final int[] weights = new int[]{2,1,0};
-	private final int intervalRandom = 100;
+    private final int[] weights = new int[] {2, 1, 0};
 	private final LNClassifier lnClassifier;
 
 	public LinkClassifierImpl(LNClassifier lnClassifier) {
@@ -93,7 +92,7 @@ public class LinkClassifierImpl implements LinkClassifier{
 			  probability = 99;
 		  }
 		  classificationResult = weights[classificationResult];
-		  double result = (classificationResult * intervalRandom) + probability ;  	
+		  double result = (classificationResult * 100) + probability;
 		  linkRel = new LinkRelevance(ln.getLink(),result);
 	  } catch (Exception ex) {
 	      throw new LinkClassifierException("Failed to classify link: "+ln.getLink().toString(), ex);

@@ -149,6 +149,10 @@ public class Frontier {
         LinkRelevance link = urlRelevance.get(linkRelev.getURL().toString());
         return link == null ? null : link.getRelevance();
     }
+    
+    public LinkRelevance get(String url) throws FrontierPersistentException {
+        return urlRelevance.get(url);
+    }
 
     /**
      * It deletes a URL from frontier (marks as visited).

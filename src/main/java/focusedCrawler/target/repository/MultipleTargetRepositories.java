@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.target.model.Page;
+import focusedCrawler.util.CloseableIterator;
 
 public class MultipleTargetRepositories implements TargetRepository {
 
@@ -47,6 +48,11 @@ public class MultipleTargetRepositories implements TargetRepository {
                         + repository.getClass().getCanonicalName(), e);
             }
         }
+    }
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
+        throw new UnsupportedOperationException("Iterator not supportted for multiple repositories");
     }
 
 }

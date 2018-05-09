@@ -23,6 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import focusedCrawler.memex.cdr.CDR31Document;
 import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.model.TargetModelJson;
 
 public class KafkaTargetRepositoryTest {
@@ -48,6 +49,7 @@ public class KafkaTargetRepositoryTest {
     public void shouldSendDataToKafka() throws IOException {
         // given
         Page target = new Page(new URL(url), html, responseHeaders);
+        target.setCrawlerId("mycrawler");
         target.setTargetRelevance(TargetRelevance.RELEVANT);
         String topicName = "ache-data-topic";
 
@@ -71,12 +73,14 @@ public class KafkaTargetRepositoryTest {
         assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
         assertThat(page.getRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
         assertThat(page.getRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
+        assertThat(page.getCrawlerId(), is("mycrawler"));
     }
 
     @Test
     public void shouldSendDataToKafkaUsingCDR31() throws IOException {
         // given
         Page target = new Page(new URL(url), html, responseHeaders);
+        target.setCrawlerId("mycrawler");
         target.setTargetRelevance(TargetRelevance.RELEVANT);
         String topicName = "ache-data-topic";
 
@@ -98,7 +102,37 @@ public class KafkaTargetRepositoryTest {
         assertThat(page.getRawContent(), is(html));
         assertThat(page.getUrl(), is(url));
         assertThat(page.getResponseHeaders().get("content-type"), is("text/html"));
-        assertThat(page.getCrawler(), is("ACHE"));
+        assertThat(page.getCrawler(), is("mycrawler"));
+    }
+
+    @Test
+    public void shouldSendDataToKafkaUsingElasticsearchJsonFormat() throws IOException {
+        // given
+        Page target = new Page(new URL(url), html, responseHeaders);
+        target.setCrawlerId("mycrawler");
+        target.setTargetRelevance(TargetRelevance.RELEVANT);
+        String topicName = "ache-data-topic";
+
+        StringSerializer ss = new StringSerializer();
+        MockProducer<String, String> producer = new MockProducer<>(true, ss, ss);
+
+        KafkaConfig.Format format = KafkaConfig.Format.ELASTIC;
+
+        KafkaTargetRepository repository = new KafkaTargetRepository(producer, topicName, format);
+
+        // when
+        repository.insert(target);
+        repository.close();
+
+        // then
+        List<ProducerRecord<String, String>> history = producer.history();
+
+        TargetModelElasticSearch page =
+                mapper.readValue(history.get(0).value(), TargetModelElasticSearch.class);
+        assertThat(page.getHtml(), is(html));
+        assertThat(page.getUrl(), is(url));
+        assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
+        assertThat(page.getCrawlerId(), is("mycrawler"));
     }
 
 }

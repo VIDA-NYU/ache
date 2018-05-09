@@ -40,23 +40,20 @@ public class ClassifierFactoryTest {
     }
     
     @Test
-    public void shouldCreateWekaClassifier() throws Exception {
+    public void shouldCreateSmileClassifier() throws Exception {
         // given
-        String path = ClassifierFactoryTest.class.getResource("weka_classifier_config/").getPath();
-
+        String path = ClassifierFactoryTest.class.getResource("smile_classifier_config/").getPath();
+        System.out.println(path);
         TargetClassifier classifier = TargetClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
+        assertThat(classifier, is(instanceOf(SmileTargetClassifier.class)));
     }
-    
-    @Test
-    public void shouldCreateWekaClassifierUsingOldConfigs() throws Exception {
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldNotSupportClassifierConfigWithoutYmlFile() throws Exception {
         // given
         String path = ClassifierFactoryTest.class.getResource("old_classifier_config/").getPath();
-
         TargetClassifier classifier = TargetClassifierFactory.create(path);
-        assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
     }
 
 }

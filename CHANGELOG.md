@@ -1,13 +1,43 @@
 # ACHE Crawer Change Log
 
-## Version 0.10.0-SNAPSHOT (Unreleased)
+## Version 0.11.0-SNAPSHOT (Unreleased)
+
+- Removed dependency on Weka and reimplemented all machine-learning code using SMILE.
+- Added option to skip cross-validation on `ache buildModel` command
+- Added option to configure max number of features on `ache buildModel` command
+- Changed license from GNU GPL to Apache 2.0
+- Added tool (ache run ReplayCrawl) to replay old crawls using a new configuration file
+- Added near-duplicate page detection using min-hashing and LSH
+- Support ELASTIC format in Kafka data format (issue #155)
+- Upgrade react-scripts to get rid of vulnerable transitive dependency (hoek:4.2.0)
+- Upgrade npm version to 5.8.0 on gradle build script
+- Changed `smile` target page classifier to use Platt's scaling only when the
+parameter 'relevance_threshold' is provided in the `pageclassifier.yml` file.
+
+## Version 0.10.0 (2018-01-16)
+
+We are pleased to announce version 0.10.0 of ACHE Crawler! This release contains very important changes, which include support for running multiple crawlers in a single server (multi-tenancy), and the start of our migration to Apache License 2 (APLv2).
+
+Following is a detailed log of the major changes since last version:
 
 - Upgraded gradle-node plugin to version 1.2.0
 - Removed BerkeleyDB dependency (issue #143)
-- ...
+- Allow for running multiple crawlers in a single server (issue #103)
+- REST API endpoints modified to support multiple crawlers (issue #103)
+- Web interface modified to support multiple crawlers (issue #103)
+- Display more metrics in crawler monitoring page
+- Upgrade RocksDB (org.rocksdb:rocksdbjni) to version 5.8.7 (issue #142)
+- Upgraded build script plugin "gradle-node" to version 1.2.0
+- Upgraded javascript dependencies from crawler web-interface:
+  - `react` to version 16.2.0
+  - `react-vis` to version 1.7.9
+  - `searchkit` to version 2.3.0
+  - `npm` to version 5.6.0
+- Allow cookies be modified dynamically via REST API endpoint (issue #114)
+- Added `crawlerId` field to JSON output of target repositories to track provenance of crawled pages
 
 
-## Version 0.9.0
+## Version 0.9.0 (2017-11-07)
 
 We are pleased to announce version 0.9.0 of ACHE Focused Crawler! We also recently reached the milestone of 100+ starts on GitHub, 55+ forks, and 1000+ commits in the current git repository.  We would like to thanks all users for the feedback we have received in the past year.
 
@@ -48,7 +78,7 @@ This is a large release and it brings many improvements to the documentation and
 - Repositories for relevant and irrelevant pages are now stored in the same folder (or same Elasticsearch index) and page entries include new properties to identify pages as relevant or irrelevant according to the target page classifier output. Double check the data formats documentation page and make sure you make appropriate changes if needed.
 
 
-## Version 0.8.0
+## Version 0.8.0 (2017-04-27)
 
 We are pleased to announce version 0.8.0 of ACHE Focused Crawler.
 
@@ -95,7 +125,7 @@ Following is the detailed log of major changes since last version.
 - Moved SeedFinder documentation from wiki to Sphinx documentation
 
 
-## Version 0.7.0
+## Version 0.7.0 (2016-11-27)
 
 There were more than 100 commits since the last release 0.6.0 in July 8. Following are some of the improvements.
 
@@ -140,7 +170,7 @@ Other minor improvement such as:
 - More refactoring, code cleaning, and tests (coverage 44%)
 
 
-## Version 0.6.0
+## Version 0.6.0 (2016-07-08)
 
 We are pleased to announce version 0.6.0 of ACHE Focused Crawler. Here we list the major changes since last version.
 
@@ -152,7 +182,7 @@ We are pleased to announce version 0.6.0 of ACHE Focused Crawler. Here we list t
 - More unit tests and integration tests (coverage raised to 42%)
 
 
-## Version 0.5.0
+## Version 0.5.0 (2016-04-20)
 
 We are pleased to announce version 0.5.0 of ACHE Focused Crawler. Here we list the major changes since last version.
 
@@ -166,7 +196,7 @@ We are pleased to announce version 0.5.0 of ACHE Focused Crawler. Here we list t
 - More code cleaning and refactorings
 
 
-## Version 0.4.0
+## Version 0.4.0 (2016-01-28)
 
 We are pleased to announce version 0.4.0 of ACHE Crawler. Here we list the major changes since last version.
 
@@ -203,7 +233,7 @@ We are pleased to announce version 0.4.0 of ACHE Crawler. Here we list the major
 - Removed lots of unused code and code cleaning
 
 
-## Version 0.3.1
+## Version 0.3.1 (2015-07-22)
 
 We are pleased to announce version 0.3.1 of ACHE Crawler. This is a minor release with some changes:
 - Added config files to final package distribution
@@ -211,7 +241,7 @@ We are pleased to announce version 0.3.1 of ACHE Crawler. This is a minor releas
 - Some code refactorings
 
 
-## Version 0.3.0
+## Version 0.3.0 (2015-07-14)
 
 We are pleased to announce version 0.3.0 of ACHE Crawler. Here we list the major changes since version 0.2.0 (note that some changes break compatibility with previous releases).
 
@@ -243,3 +273,7 @@ We are pleased to announce version 0.3.0 of ACHE Crawler. Here we list the major
 ### Refactorings:
 - Refactored tens of classes in the crawler
 
+
+## Version 0.2.0 (2015-04-01)
+
+First version release on GitHub.

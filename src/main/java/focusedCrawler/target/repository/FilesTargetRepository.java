@@ -26,6 +26,7 @@ import com.google.common.io.CountingOutputStream;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelJson;
+import focusedCrawler.util.CloseableIterator;
 
 /**
  * A target repository that stores pages in compressed (DEFLATE) text files containing one JSON
@@ -118,17 +119,14 @@ public class FilesTargetRepository implements TargetRepository {
     public void close() {
         IOUtils.closeQuietly(currentFile);
     }
-    
-    public RepositoryIterator iterator() {
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
         return new RepositoryIterator(new JsonLinesIterator(directory));
     }
 
-    public JsonLinesIterator jsonLinesIterator() {
-        return new JsonLinesIterator(directory);
-    };
-    
-    public class RepositoryIterator implements Iterator<TargetModelJson>, Closeable {
-        
+    public class RepositoryIterator implements CloseableIterator<Page> {
+
         private JsonLinesIterator jsonLinesIterator;
 
         public RepositoryIterator(JsonLinesIterator fileIterator) {
@@ -141,13 +139,14 @@ public class FilesTargetRepository implements TargetRepository {
         }
 
         @Override
-        public TargetModelJson next() {
+        public Page next() {
             if(!jsonLinesIterator.hasNext()) {
                 return null;
             }
             String jsonLine = jsonLinesIterator.next();
             try {
-                return jsonMapper.readValue(jsonLine, TargetModelJson.class);
+                TargetModelJson jsonModel = jsonMapper.readValue(jsonLine, TargetModelJson.class);
+                return new Page(jsonModel);
             } catch (Exception e) {
                 String json = jsonLine == null ? null : jsonLine.toString();
                 throw new IllegalStateException("Failed to unserialize json: "+json, e);
@@ -249,5 +248,4 @@ public class FilesTargetRepository implements TargetRepository {
         }
         
     }
-    
 }
