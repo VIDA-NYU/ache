@@ -7,7 +7,7 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-router-dom": "^4.0.0",
-    "react-scripts": "1.0.17",
+    "react-scripts": "1.1.4",
     "react-vis": "^1.7.9",
     "searchkit": "^2.3.0",
     "whatwg-fetch": "^2.0.3"

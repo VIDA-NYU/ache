@@ -1,6 +1,8 @@
 package focusedCrawler.integration;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.lessThan;
 import static org.junit.Assert.assertThat;
 
 import java.io.File;
@@ -16,6 +18,7 @@ import org.junit.rules.TemporaryFolder;
 import focusedCrawler.Main;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
+import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 
 public class BuildModelTest {
@@ -39,8 +42,14 @@ public class BuildModelTest {
         // Classify one example from training data just for sanity check
         Page samplePositivePage = readOnePageFromFolder(trainingPath + "/positive");
         Page sampleNegativePage = readOnePageFromFolder(trainingPath + "/negative");
-        assertThat(tc.classify(samplePositivePage).isRelevant(), is(true));
-        assertThat(tc.classify(sampleNegativePage).isRelevant(), is(false));
+
+        TargetRelevance positive = tc.classify(samplePositivePage);
+        assertThat(positive.isRelevant(), is(true));
+        assertThat(positive.getRelevance(), greaterThan(0.5));
+
+        TargetRelevance negative = tc.classify(sampleNegativePage);
+        assertThat(negative.isRelevant(), is(false));
+        assertThat(negative.getRelevance(), lessThan(0.5));
     }
 
     private Page readOnePageFromFolder(String positiveFolder) throws Exception {
