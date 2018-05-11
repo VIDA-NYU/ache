@@ -27,9 +27,9 @@ public class BipartiteOnlineLearning extends OnlineLearning {
     private LinkClassifierBuilder classifierBuilder;
     private String dataPath;
     
-    public BipartiteOnlineLearning(int learnLimit, FrontierManager frontierManager,
+    public BipartiteOnlineLearning(int learnLimit, boolean async, FrontierManager frontierManager,
             LinkClassifierBuilder classifierBuilder, String dataPath) {
-        super(learnLimit, frontierManager);
+        super(learnLimit, async, frontierManager);
         this.frontierManager = frontierManager;
         this.classifierBuilder = classifierBuilder;
         this.dataPath = dataPath;
