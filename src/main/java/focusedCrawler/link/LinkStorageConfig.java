@@ -57,6 +57,9 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.online_learning.enabled")
     private boolean useOnlineLearning = false;
 
+    @JsonProperty("link_storage.online_learning.async")
+    private boolean onlineLearningAsync = true;
+
     @JsonProperty("link_storage.online_learning.type")
     private String onlineMethod = "FORWARD_CLASSIFIER_BINARY";
 
@@ -141,6 +144,10 @@ public class LinkStorageConfig {
 
     public boolean isUseOnlineLearning() {
         return useOnlineLearning;
+    }
+
+    public boolean isOnlineLearningAsync() {
+        return onlineLearningAsync;
     }
 
     public String getOnlineMethod() {

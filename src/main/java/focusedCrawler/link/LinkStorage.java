@@ -195,13 +195,16 @@ public class LinkStorage {
         logger.info("Online Learning method:" + onlineLearningType);
         switch (onlineLearningType) {
             case "FORWARD_CLASSIFIER_BINARY":
-                return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
+                return new ForwardOnlineLearning(config.getLearningLimit(),
+                        config.isOnlineLearningAsync(), frontierManager, cb,
                         ForwardOnlineLearning.Type.BINARY, dataPath);
             case "FORWARD_CLASSIFIER_LEVELS":
-                return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
+                return new ForwardOnlineLearning(config.getLearningLimit(),
+                        config.isOnlineLearningAsync(), frontierManager, cb,
                         ForwardOnlineLearning.Type.LEVELS, dataPath);
             case "LINK_CLASSIFIERS":
-                return new BipartiteOnlineLearning(config.getLearningLimit(), frontierManager, cb,
+                return new BipartiteOnlineLearning(config.getLearningLimit(),
+                        config.isOnlineLearningAsync(), frontierManager, cb,
                         dataPath);
             default:
                 throw new IllegalArgumentException(
