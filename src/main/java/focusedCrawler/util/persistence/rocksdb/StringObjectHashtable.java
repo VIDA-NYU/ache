@@ -12,7 +12,11 @@ public class StringObjectHashtable<T>
     private Kryos<T> kryos;
 
     public StringObjectHashtable(String path, Class<T> contentClass) {
-        super(path);
+        this(path, contentClass, false);
+    }
+
+    public StringObjectHashtable(String path, Class<T> contentClass, boolean readOnly) {
+        super(path, readOnly);
         this.kryos = new Kryos<>(contentClass);
     }
 

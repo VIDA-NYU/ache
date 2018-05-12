@@ -28,7 +28,11 @@ public class RocksDBTargetRepository implements TargetRepository {
     }
 
     public RocksDBTargetRepository(String directory) {
-        this.db = new StringObjectHashtable<>(directory, Page.class);
+        this(directory, false);
+    }
+
+    public RocksDBTargetRepository(String directory, boolean readOnly) {
+        this.db = new StringObjectHashtable<>(directory, Page.class, readOnly);
     }
 
     public boolean insert(Page target) {

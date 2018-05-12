@@ -22,14 +22,22 @@ public abstract class AbstractRocksDbHashtable implements Closeable {
     protected AbstractRocksDbHashtable() {}
 
     public AbstractRocksDbHashtable(String path) {
+        this(path, false);
+    }
+
+    public AbstractRocksDbHashtable(String path, boolean readOnly) {
         File file = new File(path);
-        if (!file.exists()) {
+        if (!file.exists() && !readOnly) {
             file.mkdirs();
         }
-        this.options = new Options();
-        this.options.setCreateIfMissing(true);
         try {
-            this.db = RocksDB.open(options, path);
+            this.options = new Options();
+            if (readOnly) {
+                this.db = RocksDB.openReadOnly(options, path);
+            } else {
+                this.options.setCreateIfMissing(true);
+                this.db = RocksDB.open(options, path);
+            }
         } catch (RocksDBException e) {
             throw new RuntimeException("Failed to open database at " + path, e);
         }
