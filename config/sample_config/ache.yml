@@ -89,6 +89,11 @@ link_storage.link_classifier.type: LinkClassifierBaseline
 #link_storage.link_classifier.type: LinkClassifierImpl
 #link_storage.link_classifier.parameters.class_values: ["0", "1", "2"]
 
+# Restricts crawler to follow links within a given "hops" of the seeds
+#link_storage.link_classifier.type: MaxDepthLinkClassifier
+#link_storage.link_classifier.max_depth: 1
+
+
 # Retrain link classifiers on-the-fly
 link_storage.online_learning.enabled: false
 
