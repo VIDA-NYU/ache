@@ -1,9 +1,8 @@
 package focusedCrawler.learn.vectorizer;
 
-import java.util.List;
-
 import it.unimi.dsi.fastutil.ints.Int2DoubleMap;
-import it.unimi.dsi.fastutil.ints.Int2DoubleRBTreeMap;
+import it.unimi.dsi.fastutil.ints.Int2DoubleOpenHashMap;
+import java.util.List;
 
 /**
  * Represents a sparse vector using a map of feature index to feature values.
@@ -13,16 +12,23 @@ import it.unimi.dsi.fastutil.ints.Int2DoubleRBTreeMap;
  */
 public class SparseVector {
 
-    private Int2DoubleMap features = new Int2DoubleRBTreeMap();
+    private final Int2DoubleMap features;
+
+    public SparseVector() {
+        this.features = new Int2DoubleOpenHashMap();
+        this.features.defaultReturnValue(0d);
+    }
 
     public double get(String feature, Vectorizer vectorizer) {
         int idx = vectorizer.getIndexOfFeature(feature);
         return idx < 0 ? 0d : get(idx);
     }
 
+    /**
+     * Returns the values of the given index. If index does not exist, return zero as default value
+     */
     public double get(int idx) {
-        Double value = features.get(idx);
-        return value == null ? 0d : value;
+        return features.get(idx);
     }
 
     /**

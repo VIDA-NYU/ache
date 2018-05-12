@@ -73,13 +73,13 @@ public class BinaryTextVectorizer extends IndexedVectorizer {
     }
 
     private List<String> filterFeatures(List<String> features) {
-        List<String> copy = new ArrayList<>(features);
-        Iterator<String> it = copy.iterator();
-        while (it.hasNext()) {
-            if (!super.contains(it.next()))
-                it.remove();
+        List<String> result = new ArrayList<>(features.size());
+        for (String f : features) {
+            if (super.contains(f)) {
+                result.add(f);
+            }
         }
-        return copy;
+        return result;
     }
 
 }
