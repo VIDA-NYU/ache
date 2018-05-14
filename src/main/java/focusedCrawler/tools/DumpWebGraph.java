@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.Configuration;
-import focusedCrawler.target.TargetStorage;
+import focusedCrawler.target.TargetRepositoryFactory;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.target.repository.TargetRepository;
@@ -49,7 +49,7 @@ public class DumpWebGraph extends CliTool {
     public void execute() throws Exception {
 
         Configuration inputConfig = new Configuration(inputConfigPath);
-        TargetRepository inputRepository = TargetStorage.createTargetRepository(inputDataPath,
+        TargetRepository inputRepository = TargetRepositoryFactory.create(inputDataPath,
                 null, null, inputConfig.getTargetStorageConfig());
 
         PrintStream pageToPageFile = null;

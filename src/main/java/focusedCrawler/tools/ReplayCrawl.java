@@ -20,6 +20,7 @@ import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.TargetRepositoryFactory;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.TargetRepository;
@@ -95,7 +96,7 @@ public class ReplayCrawl extends CliTool {
                 metricsManager);
 
         Configuration inputConfig = new Configuration(inputConfigPath);
-        TargetRepository inputRepository = TargetStorage.createTargetRepository(inputDataPath,
+        TargetRepository inputRepository = TargetRepositoryFactory.create(inputDataPath,
                 null, null, inputConfig.getTargetStorageConfig());
 
         String directory = Paths.get(inputDataPath,
