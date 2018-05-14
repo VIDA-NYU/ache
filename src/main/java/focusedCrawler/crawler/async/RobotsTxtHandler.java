@@ -6,8 +6,7 @@ import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import crawlercommons.robots.BaseRobotRules;
-import crawlercommons.robots.BaseRobotsParser;
+import crawlercommons.robots.SimpleRobotRules;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
@@ -19,10 +18,10 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
     @SuppressWarnings("serial")
     public static class RobotsData implements Serializable {
 
-        public BaseRobotRules robotRules;
+        public SimpleRobotRules robotRules;
         public LinkRelevance link;
 
-        public RobotsData(LinkRelevance link, BaseRobotRules robotRules) {
+        public RobotsData(LinkRelevance link, SimpleRobotRules robotRules) {
             this.link = link;
             this.robotRules = robotRules;
         }
@@ -30,7 +29,7 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
     
     private static final Logger logger = LoggerFactory.getLogger(RobotsTxtHandler.class);
     
-    private BaseRobotsParser parser = new SimpleRobotRulesParser();
+    private SimpleRobotRulesParser parser = new SimpleRobotRulesParser();
     private LinkStorage linkStorage;
     private String userAgentName;
     
@@ -65,17 +64,17 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
     
     private void processRobot(LinkRelevance link, FetchedResult response, boolean fetchFailed) {
         
-        BaseRobotRules robotRules;
+        SimpleRobotRules robotRules;
         if(fetchFailed || response == null) {
-            robotRules = parser.failedFetch(HttpStatus.SC_GONE);
+            robotRules = (SimpleRobotRules) parser.failedFetch(HttpStatus.SC_GONE);
         }
         else {
             String contentType = response.getContentType();
             boolean isPlainText = (contentType != null) && (contentType.startsWith("text/plain"));
             if ((response.getNumRedirects() > 0) && !isPlainText) {
-                robotRules = parser.failedFetch(HttpStatus.SC_GONE);
+                robotRules = (SimpleRobotRules) parser.failedFetch(HttpStatus.SC_GONE);
             } else {
-                robotRules = parser.parseContent(
+                robotRules = (SimpleRobotRules) parser.parseContent(
                     response.getFetchedUrl(),
                     response.getContent(),
                     response.getContentType(),
