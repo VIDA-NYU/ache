@@ -1,0 +1,27 @@
+#
+# Example of configuration for running ACHE server behind a nginx proxy
+#
+
+# Configure ELASTICSEARCH and FILES data formats
+target_storage.data_formats:
+  - ELASTICSEARCH
+  - FILES
+target_storage.data_format.elasticsearch.rest.hosts:
+  - http://elasticsearch:9200
+
+# Enables "scope" to only crawl pages that belong to domains of seed URLs
+link_storage.link_strategy.use_scope: true
+
+# Configure the minimum time interval (in milliseconds) to wait between requests
+# to the same host to avoid overloading servers. If you are crawling your own
+# web site, you can descrease this value to speed-up the crawl.
+link_storage.scheduler.host_min_access_interval: 5000
+
+# Enables discovery of links using the Sitemaps protocol
+link_storage.download_sitemap_xml: true
+
+# Configure the User-Agent of the crawler
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+
+http.base_path: /ache
