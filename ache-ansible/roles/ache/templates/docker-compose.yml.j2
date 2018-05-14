@@ -1,0 +1,17 @@
+version: '2'
+services:
+  ache:
+    image: "{{ ache_image }}"
+    entrypoint: {{ ache_entrypoint }}
+{% if ache_env_vars is defined %}
+    environment:
+{% for envvar in ache_env_vars %}
+      - {{ envvar }}
+{% endfor %}
+{% endif %}
+    ports:
+      - "{{ ache_port }}:8080"
+    volumes:
+{% for volume in ache_volumes %}
+      - {{ volume }}
+{% endfor %}

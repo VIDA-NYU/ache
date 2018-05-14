@@ -1,0 +1,10 @@
+ache_image: vidanyu/ache:latest
+ache_entrypoint: /ache/bin/ache startServer -c /config/ -d /data
+ache_port: 8080
+ache_volumes:
+  - "./data-ache/:/data"
+  - "./:/config"
+#ache_env_vars:
+#  - "JAVA_OPTS=-Xms1g -Xmx1g"
+#ache_seeds:
+# - http://en.wikipedia.org/

@@ -1,0 +1,33 @@
+#
+# Setup docker packages
+#
+- name: Ensure docker depedencies are installed
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+    - curl
+
+- name: Add docker apt key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+    state: present
+  register: add_repository_key
+  ignore_errors: true
+
+- name: Add docker apt repository
+  #shell: add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  #apt_repository: repo='deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable' state=present update_cache=yes
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+    state: present
+    update_cache: yes
+
+- name: Install Docker CE package
+  apt:
+    name: docker-ce
+    state: present

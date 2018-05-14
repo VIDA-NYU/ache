@@ -1,0 +1,13 @@
+- become: true
+  become_method: sudo
+  become_user: root
+  shell: curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+
+- name: Changing perm of docker-compose, adding "+x"
+  file: dest=/usr/local/bin/docker-compose mode=a+x
+
+- name: Add user to the docker group
+  user:
+    append: yes
+    name: ubuntu
+    group: docker

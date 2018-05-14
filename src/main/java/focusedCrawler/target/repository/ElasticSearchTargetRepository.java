@@ -13,6 +13,15 @@ import focusedCrawler.target.repository.elasticsearch.ElasticSearchClientFactory
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.CloseableIterator;
 
+/**
+ * DEPRECATED. Elasticsearch Transport Client is deprecated and will be removed in future versions.
+ * For this reason support for this class is deprecated and will be removed too. Use
+ * {@link ElasticSearchRestTargetRepository} instead.
+ * 
+ * @author aeciosantos
+ *
+ */
+@Deprecated
 public class ElasticSearchTargetRepository implements TargetRepository {
     
     private static final ObjectMapper mapper = new ObjectMapper();

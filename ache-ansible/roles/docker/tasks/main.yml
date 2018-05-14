@@ -1,0 +1,12 @@
+# Install docker
+- include_tasks: docker.yml
+
+# Make sure service is configured
+- name: Ensure Docker is started and enabled at boot.
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+# Install docker compose
+- include_tasks: docker-compose.yml
