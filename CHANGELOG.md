@@ -14,6 +14,7 @@
 - Changed `smile` target page classifier to use Platt's scaling only when the
 parameter 'relevance_threshold' is provided in the `pageclassifier.yml` file.
 - Added Ansible scripts for automatic deployment
+- Added RocksDB-based target repository (RocksDBTargetRepository)
 
 
 ## Version 0.10.0 (2018-01-16)
