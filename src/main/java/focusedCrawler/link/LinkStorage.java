@@ -1,5 +1,8 @@
 package focusedCrawler.link;
 
+import focusedCrawler.dedup.DupDetector;
+import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
+import focusedCrawler.link.classifier.online.DeduplicationOnlineLearning;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -149,19 +152,29 @@ public class LinkStorage {
     }
 
     /**
-     * This method sends a link to crawler
-     * @throws DataNotFoundException 
+     * This method returns a link to crawler
      */
-    public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
+    public synchronized LinkRelevance select(Object obj)
+            throws StorageException, DataNotFoundException {
+        return this.select(true);
+    }
+
+    public synchronized LinkRelevance selectSync() throws StorageException, DataNotFoundException {
+        return select(false);
+    }
+
+    public synchronized LinkRelevance select(boolean asyncLoad)
+            throws StorageException, DataNotFoundException {
         try {
-            return frontierManager.nextURL(true);
+            return frontierManager.nextURL(asyncLoad);
         } catch (FrontierPersistentException e) {
             throw new StorageException(e.getMessage(), e);
         }
     }
 
     public static LinkStorage create(String configPath, String seedFile, String dataPath,
-            String modelPath, LinkStorageConfig config, MetricsManager metricsManager)
+            String modelPath, LinkStorageConfig config, MetricsManager metricsManager,
+            DupDetector dupDetector)
             throws FrontierPersistentException, IOException {
         
         Path stoplistPath = Paths.get(configPath, "/stoplist.txt");
@@ -179,7 +192,7 @@ public class LinkStorage {
 
         OnlineLearning onlineLearning = null;
         if (config.isUseOnlineLearning()) {
-            onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager);
+            onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager, dupDetector);
             
         }
         
@@ -187,12 +200,12 @@ public class LinkStorage {
     }
 
     private static OnlineLearning createOnlineLearning(String dataPath, LinkStorageConfig config,
-                                                       StopList stoplist,
-                                                       FrontierManager frontierManager) {
+            StopList stoplist, FrontierManager frontierManager,
+            DupDetector dupDetector) {
 
         LinkClassifierBuilder cb = new LinkClassifierBuilder(dataPath, stoplist, frontierManager);
         String onlineLearningType = config.getOnlineMethod();
-        logger.info("Online Learning method:" + onlineLearningType);
+        logger.info("Online Learning method: " + onlineLearningType);
         switch (onlineLearningType) {
             case "FORWARD_CLASSIFIER_BINARY":
                 return new ForwardOnlineLearning(config.getLearningLimit(),
@@ -206,6 +219,10 @@ public class LinkStorage {
                 return new BipartiteOnlineLearning(config.getLearningLimit(),
                         config.isOnlineLearningAsync(), frontierManager, cb,
                         dataPath);
+            case "DEDUPLICATION":
+                return new DeduplicationOnlineLearning(config.getLearningLimit(),
+                        config.isOnlineLearningAsync(), frontierManager, dupDetector,
+                        Learner.SVM);
             default:
                 throw new IllegalArgumentException(
                         "Unknown online learning method: " + onlineLearningType);

@@ -5,6 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -171,14 +172,14 @@ public class LSH {
         public void insertToBand(int band, int[] hashes, int id) {
             byte[] hashtableKey = createKey(band, hashes);
             byte[] idsBitmapBytes = super.get(hashtableKey);
+            RoaringBitmap idsBitmap;
             if (idsBitmapBytes == null) {
-                RoaringBitmap idsBitmap = RoaringBitmap.bitmapOf(id);
-                idsBitmapBytes = serializeBitmap(idsBitmap);
+                idsBitmap = RoaringBitmap.bitmapOf(id);
             } else {
-                RoaringBitmap idsBitmap = unserializeBitmap(idsBitmapBytes);
+                idsBitmap = unserializeBitmap(idsBitmapBytes);
                 idsBitmap.add(id);
-                idsBitmapBytes = serializeBitmap(idsBitmap);
             }
+            idsBitmapBytes = serializeBitmap(idsBitmap);
             super.put(hashtableKey, idsBitmapBytes);
         }
 

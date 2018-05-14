@@ -19,7 +19,7 @@ public class LinkClassifierFactory {
         String typeOfClassifier = config.getTypeOfClassifier();
         switch (typeOfClassifier) {
             case "LinkClassifierDeduplication":
-                return new LinkClassifierDeduplication();
+                return new LinkClassifierDeduplication(null);
             case "LinkClassifierBreadthSearch":
                 return new LinkClassifierBreadthSearch();
             case "LinkClassifierBaseline":

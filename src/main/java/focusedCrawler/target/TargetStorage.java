@@ -1,12 +1,12 @@
 package focusedCrawler.target;
 
+import focusedCrawler.dedup.DupDetector;
 import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.LinkStorage;
-import focusedCrawler.minhash.DuplicatePageIndexer;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
@@ -27,18 +27,18 @@ public class TargetStorage {
     private TargetStorageConfig config;
     private LangDetection langDetector = new LangDetection();
     private TargetStorageMonitor monitor;
-    private DuplicatePageIndexer duplicatesIndexer;
+    private DupDetector dupDetector;
 
     public TargetStorage(TargetClassifier targetClassifier, TargetRepository targetRepository,
             LinkStorage linkStorage, TargetStorageMonitor monitor,
-            TargetStorageConfig config, DuplicatePageIndexer duplicatesIndexer) {
+            TargetStorageConfig config, DupDetector dupDetector) {
 
         this.targetClassifier = targetClassifier;
         this.targetRepository = targetRepository;
         this.linkStorage = linkStorage;
         this.config = config;
         this.monitor = monitor;
-        this.duplicatesIndexer = duplicatesIndexer;
+        this.dupDetector = dupDetector;
     }
 
     /**
@@ -65,7 +65,7 @@ public class TargetStorage {
         if (config.isNearDuplicateDetectionEnabled()) {
             String text = page.getParsedData().getCleanText();
             String key = page.getRequestedUrl();
-            boolean isNearDuplicate = duplicatesIndexer.detectAndIndex(text, key);
+            boolean isNearDuplicate = dupDetector.detectAndIndex(key, text);
             page.setNearDuplicate(isNearDuplicate);
             if (config.ignoreNearDuplicates() && isNearDuplicate) {
                 return null;
@@ -119,7 +119,8 @@ public class TargetStorage {
 
     public static TargetStorage create(String configPath, String modelPath, String dataPath,
             String esIndexName, String esTypeName, TargetStorageConfig config,
-            LinkStorage linkStorage, MetricsManager metricsManager) throws IOException {
+            LinkStorage linkStorage, MetricsManager metricsManager,
+            DupDetector dupDetector) throws IOException {
 
         // if one wants to use a classifier
         TargetClassifier targetClassifier = null;
@@ -137,14 +138,8 @@ public class TargetStorage {
             monitor = new TargetStorageMonitor(dataPath);
         }
 
-        DuplicatePageIndexer duplicatesIndexer = null;
-        if (config.isNearDuplicateDetectionEnabled()) {
-            double similarityThreshold = config.getNearDuplicatesSimilarityThreshold();
-            duplicatesIndexer = new DuplicatePageIndexer(dataPath, similarityThreshold);
-        }
-
         return new TargetStorage(targetClassifier, targetRepository, linkStorage,
-                monitor, config, duplicatesIndexer);
+                monitor, config, dupDetector);
     }
 
     public void close() {

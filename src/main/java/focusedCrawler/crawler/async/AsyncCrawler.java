@@ -1,5 +1,12 @@
 package focusedCrawler.crawler.async;
 
+import focusedCrawler.dedup.DupDetector;
+import focusedCrawler.dedup.HashMapDupDetector;
+import focusedCrawler.dedup.ProbabilisticExactDupDetector;
+import focusedCrawler.link.classifier.online.DeduplicationOnlineLearning.DuplicationType;
+import focusedCrawler.minhash.DupDetectorFactory;
+import focusedCrawler.minhash.DuplicatePageIndexer;
+import focusedCrawler.target.TargetStorageConfig;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -111,12 +118,16 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
 
         MetricsManager metricsManager = new MetricsManager(false, dataPath);
 
+        TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
+
+        DupDetector dupDetector = DupDetectorFactory.create(config, dataPath);
+
         LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath,
-                modelPath, config.getLinkStorageConfig(), metricsManager);
+                modelPath, config.getLinkStorageConfig(), metricsManager, dupDetector);
 
         TargetStorage targetStorage = TargetStorage.create(configPath, modelPath, dataPath,
                 esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage,
-                metricsManager);
+                metricsManager, dupDetector);
 
         return new AsyncCrawler(crawlerId, targetStorage, linkStorage, config, dataPath, metricsManager);
     }

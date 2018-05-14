@@ -44,9 +44,9 @@ public class DuplicatePageIndexerTest {
     @Before
     public void setUp() throws IOException {
         if (inMemory) {
-            deduper = new DuplicatePageIndexer();
+            deduper = new DuplicatePageIndexer(0.9);
         } else {
-            deduper = new DuplicatePageIndexer(tempFolder.newFolder().toString());
+            deduper = new DuplicatePageIndexer(tempFolder.newFolder().toString(), 0.9);
         }
     }
 
@@ -62,14 +62,14 @@ public class DuplicatePageIndexerTest {
         deduper.insert(url1, content1);
 
         // then
-        assertThat(deduper.isNearDuplicate(content2), is(true));
+        assertThat(deduper.isNearDuplicate(url1, content2), is(true));
 
         Set<String> dups = deduper.findNearDuplicates(content2);
         assertThat(dups, is(notNullValue()));
         assertThat(dups.size(), is(1));
         assertThat(dups.iterator().next(), is(url1));
 
-        assertThat(deduper.isNearDuplicate(content3), is(false));
+        assertThat(deduper.isNearDuplicate(url1, content3), is(false));
     }
 
     private String readFileAsString(String filename) throws IOException {

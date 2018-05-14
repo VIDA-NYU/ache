@@ -1,5 +1,7 @@
 package focusedCrawler.tools;
 
+import focusedCrawler.dedup.DupDetector;
+import focusedCrawler.minhash.DupDetectorFactory;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
@@ -88,12 +90,14 @@ public class ReplayCrawl extends CliTool {
 
         MetricsManager metricsManager = new MetricsManager(false, dataPath);
 
+        DupDetector dupDetector = DupDetectorFactory.create(config, dataPath);
+
         LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath,
-                modelPath, config.getLinkStorageConfig(), metricsManager);
+                modelPath, config.getLinkStorageConfig(), metricsManager, dupDetector);
 
         TargetStorage targetStorage = TargetStorage.create(configPath, modelPath, dataPath,
                 esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage,
-                metricsManager);
+                metricsManager, dupDetector);
 
         Configuration inputConfig = new Configuration(inputConfigPath);
         TargetRepository inputRepository = TargetRepositoryFactory.create(inputDataPath,

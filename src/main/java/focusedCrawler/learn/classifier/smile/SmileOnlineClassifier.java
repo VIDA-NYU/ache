@@ -115,7 +115,8 @@ public class SmileOnlineClassifier<T> {
         for (int i = 0; i < trainingData.size(); i++) {
             double[] instance = vectorizer.toDoubleVector(trainingData.get(i));
             Preconditions.checkArgument(instance.length == attributes.length,
-                    "Vectorized instance must have same number of attributes of this classifier");
+                    "Vectorized instance must have same number of attributes of this classifier. instance_size: %s classifier: %s",
+                    instance.length, attributes.length);
             x[i] = instance;
         }
         return x;

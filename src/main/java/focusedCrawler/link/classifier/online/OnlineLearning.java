@@ -18,7 +18,10 @@ public abstract class OnlineLearning implements Runnable {
     private volatile AtomicBoolean wasSignalled = new AtomicBoolean(false);
 
     private final boolean async;
-    private final int learnLimit;
+    private final boolean dinamicLearnLimit = true;
+    private int learnLimit;
+    private int maxLearnLimit = 10000;
+
     private AtomicInteger pageCounter = new AtomicInteger(0);
     private FrontierManager frontierManager;
 
@@ -95,6 +98,9 @@ public abstract class OnlineLearning implements Runnable {
                 doNotify(); // triggers execution of online learning in background thread
             } else {
                 executeLearning();
+            }
+            if (dinamicLearnLimit) {
+                learnLimit = Math.min(2 * learnLimit, maxLearnLimit);
             }
         }
         numberOfPages++;

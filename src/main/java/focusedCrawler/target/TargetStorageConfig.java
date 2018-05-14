@@ -2,6 +2,7 @@ package focusedCrawler.target;
 
 import static java.util.Arrays.asList;
 
+import focusedCrawler.link.classifier.online.DeduplicationOnlineLearning.DuplicationType;
 import java.io.IOException;
 import java.util.List;
 
@@ -69,6 +70,9 @@ public class TargetStorageConfig {
 
     @JsonProperty("target_storage.near_duplicate_detection.similarity")
     private double nearDuplicatesSimilarityThreshold = 0.9;
+
+    @JsonProperty("target_storage.near_duplicate_detection.type")
+    private  DuplicationType duplicateDetectorType = DuplicationType.NEAR_DUP;
 
     @JsonUnwrapped
     private KafkaConfig kafkaConfig;
@@ -168,4 +172,7 @@ public class TargetStorageConfig {
         return nearDuplicatesSimilarityThreshold;
     }
 
+    public DuplicationType getDuplicateDetectorType() {
+        return duplicateDetectorType;
+    }
 }
