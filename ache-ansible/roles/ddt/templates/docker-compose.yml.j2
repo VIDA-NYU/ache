@@ -1,0 +1,34 @@
+version: '2'
+services:
+#  elasticsearch:
+#    image: elasticsearch:1.6
+#    container_name: elastic
+#    environment:
+#      - xpack.security.enabled=false
+#      - cluster.name=docker-cluster
+#      - bootstrap.memory_lock=true
+#    ulimits:
+#      memlock:
+#        soft: -1
+#        hard: -1
+#    volumes:
+#      - ./data/:/usr/share/elasticsearch/data # elasticsearch data storage
+#    ports:
+#      - 9200:9200
+  ddt:
+    image: vidanyu/ddt:integration-with-radviz
+    container_name: dd_tool
+{% if aws_es_private_ip is defined %}
+    environment:
+      ELASTICSEARCH_SERVER: {{ aws_es_private_ip }}
+{% elif groups.elasticsearch[0] is defined %}
+    environment:
+      ELASTICSEARCH_SERVER: {{ hostvars[groups.elasticsearch[0]]['ansible_ssh_host'] }}
+{% endif %}
+    ports:
+      - "8084:8084"
+      - "8080:8080"
+#    links:
+#      - elasticsearch
+    volumes:
+      - ./data/:/ddt/domain_discovery_tool/server/data # ddt data storage
