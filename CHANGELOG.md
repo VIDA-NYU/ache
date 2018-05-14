@@ -9,6 +9,7 @@
 - Added tool (ache run ReplayCrawl) to replay old crawls using a new configuration file
 - Added near-duplicate page detection using min-hashing and LSH
 - Support ELASTIC format in Kafka data format (issue #155)
+- Added Ansible scripts for automatic deployment
 
 ## Version 0.10.0 (2018-01-16)
 
