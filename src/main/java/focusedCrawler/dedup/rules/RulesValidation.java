@@ -16,6 +16,7 @@ import java.util.Set;
 
 import com.google.common.collect.Lists;
 
+import focusedCrawler.dedup.DupDetector;
 import focusedCrawler.dedup.rules.UrlAlignment.RewriteRule;
 import focusedCrawler.dedup.rules.UrlAlignment.Sequence;
 
@@ -110,20 +111,20 @@ public class RulesValidation {
     private static Set<RewriteRule> createCandidateRules(Map<String, List<String>> trainSet) {
         Set<RewriteRule> rules = new HashSet<>();
         for (Entry<String, List<String>> entry : trainSet.entrySet()) {
-
             // String contentHash = entry.getKey();
-            List<String> urls = entry.getValue();
-
             // System.out.println("Creating rule for: "+contentHash);
-
-            int size = Math.min(urls.size(), K);
-            Sequence alignment = Sequence.multipleAlignment(urls.subList(0, size));
-            RewriteRule rule = new RewriteRule(alignment);
+            List<String> urls = entry.getValue();
+            RewriteRule rule = createRewriteRule(urls);
             rules.add(rule);
-
             // System.out.println(rule);
         }
         return rules;
+    }
+
+    private static RewriteRule createRewriteRule(List<String> urls) {
+        int size = Math.min(urls.size(), K);
+        Sequence alignment = Sequence.multipleAlignment(urls.subList(0, size));
+        return new RewriteRule(alignment);
     }
 
     private static List<RewriteRule> validateRules(Map<String, List<String>> validationSet,
@@ -246,6 +247,16 @@ public class RulesValidation {
             }
         }
         return normalized;
+    }
+
+    public List<RewriteRule> buildRules(DupDetector.DupData dupData) {
+        List<RewriteRule> rules = new ArrayList<>();
+        for (List<String> dupCluster : dupData.duplicates) {
+            RewriteRule rewriteRule = createRewriteRule(dupCluster);
+//            System.out.println(rewriteRule.toString());
+            rules.add(rewriteRule);
+        }
+        return rules;
     }
 
 }

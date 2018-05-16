@@ -39,20 +39,29 @@ public class LinkClassifierDeduplicationTest {
     @Parameters
     public static Iterable<? extends Object> data() {
         return Arrays.asList(
-                new Configuration(ImmutableMap.of(
-                        "target_storage.near_duplicate_detection.enabled", true,
-                        "target_storage.near_duplicate_detection.type", "EXACT_DUP"
-                )),
-                new Configuration(ImmutableMap.of(
-                        "target_storage.near_duplicate_detection.enabled", true,
-                        "target_storage.near_duplicate_detection.type", "NEAR_DUP",
-                        "target_storage.near_duplicate_detection.similarity", 0.95
-                ))
-                // FIXME
-//                new Configuration(ImmutableMap.of(
-//                        "target_storage.near_duplicate_detection.enabled", true,
-//                        "target_storage.near_duplicate_detection.type", "PROBABILISTIC_EXACT_DUP"
-//                ))
+            new Configuration(ImmutableMap.of(
+                "target_storage.near_duplicate_detection.enabled", true,
+                "target_storage.near_duplicate_detection.type", "EXACT_DUP",
+                "link_storage.online_learning.dedup.type", "CLASSIFIER",
+                "link_storage.online_learning.dedup.classifier.learner", "SVM"
+            )),
+            new Configuration(ImmutableMap.of(
+                "target_storage.near_duplicate_detection.enabled", true,
+                "target_storage.near_duplicate_detection.type", "NEAR_DUP",
+                "target_storage.near_duplicate_detection.similarity", 0.95,
+                "link_storage.online_learning.dedup.type", "CLASSIFIER",
+                "link_storage.online_learning.dedup.classifier.learner", "SVM"
+            )),
+            new Configuration(ImmutableMap.of(
+                "target_storage.near_duplicate_detection.enabled", true,
+                "target_storage.near_duplicate_detection.type", "EXACT_DUP",
+                "link_storage.online_learning.dedup.type", "RULES"
+            ))
+            // FIXME
+//            new Configuration(ImmutableMap.of(
+//                "target_storage.near_duplicate_detection.enabled", true,
+//                "target_storage.near_duplicate_detection.type", "PROBABILISTIC_EXACT_DUP"
+//            ))
         );
     }
 
@@ -60,16 +69,19 @@ public class LinkClassifierDeduplicationTest {
     public void shouldTrainClassifierOnline() throws Exception {
 
         String dataPath =  tempFolder.newFolder().toString();
+        DeduplicationOnlineLearning.LearningType type = this.config.getLinkStorageConfig().getOnlineLearningDedupLearningType();
+        Learner learner = this.config.getLinkStorageConfig().getOnlineLearningClassifierLearner();
 
         DupDetector dupDetector = DupDetectorFactory.create(this.config, dataPath);
 
         DeduplicationOnlineLearning linkClassifierBuilder = new DeduplicationOnlineLearning(10,
-                false, null, dupDetector, Learner.SVM);
+                false, null, dupDetector, type, learner);
 
         Page page1 = createPage("http://example.com", createTestPage("example"));
         Page pageL1 = createPage("http://example.com/comment/1", createTestPage("login"));
         Page pageL2 = createPage("http://example.com/comment/2", createTestPage("login"));
         Page pageL3 = createPage("http://example.com/comment/3", createTestPage("login"));
+        Page pageL4 = createPage("http://example.com/comment/4", createTestPage("login"));
         Page page2 = createPage("http://example2.com", pageWithLink("http://example.com/comment/4"));
         Page page3 = createPage("http://example3.com", pageWithLink("http://example.com/asdf"));
 
@@ -77,6 +89,7 @@ public class LinkClassifierDeduplicationTest {
         dupDetector.detectAndIndex(pageL1.getRequestedUrl(), pageL1.getContentAsString());
         dupDetector.detectAndIndex(pageL2.getRequestedUrl(), pageL2.getContentAsString());
         dupDetector.detectAndIndex(pageL3.getRequestedUrl(), pageL3.getContentAsString());
+        dupDetector.detectAndIndex(pageL4.getRequestedUrl(), pageL4.getContentAsString());
 
         LinkClassifier dedup = linkClassifierBuilder.buildModel();
 

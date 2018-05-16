@@ -7,6 +7,8 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
+import focusedCrawler.link.classifier.online.DeduplicationOnlineLearning;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.PersistentHashtable.DB;
 
@@ -65,6 +67,12 @@ public class LinkStorageConfig {
 
     @JsonProperty("link_storage.online_learning.learning_limit")
     private int learningLimit = 500;
+
+    @JsonProperty("link_storage.online_learning.dedup.type")
+    private DeduplicationOnlineLearning.LearningType learningType = DeduplicationOnlineLearning.LearningType.CLASSIFIER;
+
+    @JsonProperty("link_storage.online_learning.dedup.classifier.learner")
+    private SmileOnlineClassifier.Learner classifierLearnerType = SmileOnlineClassifier.Learner.SVM;
 
     @JsonProperty("link_storage.link_selector")
     private String linkSelector = "TopkLinkSelector";
@@ -156,6 +164,14 @@ public class LinkStorageConfig {
 
     public int getLearningLimit() {
         return learningLimit;
+    }
+
+    public DeduplicationOnlineLearning.LearningType getOnlineLearningDedupLearningType() {
+        return learningType;
+    }
+
+    public SmileOnlineClassifier.Learner getOnlineLearningClassifierLearner() {
+        return classifierLearnerType;
     }
 
     public String getTargetStorageDirectory() {

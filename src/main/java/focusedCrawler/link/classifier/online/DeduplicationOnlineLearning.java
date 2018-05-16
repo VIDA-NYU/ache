@@ -2,18 +2,28 @@ package focusedCrawler.link.classifier.online;
 
 import focusedCrawler.dedup.DupDetector;
 import focusedCrawler.dedup.DupDetector.DupData;
+import focusedCrawler.dedup.rules.RulesValidation;
+import focusedCrawler.dedup.rules.UrlAlignment;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.learn.vectorizer.BinaryTextVectorizer;
 import focusedCrawler.learn.vectorizer.IndexedVectorizer;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierDeduplication;
+import focusedCrawler.link.classifier.LinkClassifierException;
+import focusedCrawler.link.classifier.LinkClassifierRewriteRules;
 import focusedCrawler.link.frontier.FrontierManager;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.tokenizers.Tokenizers;
 import focusedCrawler.util.Sampler;
+
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import focusedCrawler.util.parser.LinkNeighborhood;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,17 +42,19 @@ public class DeduplicationOnlineLearning extends OnlineLearning {
     private int instancesCounter = 0;
     private int buildModelThreshold = 50;
 
-    private Learner classifierType = Learner.SVM;
+    private final LearningType learningType;
+    private final Learner classifierType;
     private IndexedVectorizer vectorizer;
     private SmileOnlineClassifier<String> classifier;
     private DupDetector dupDetector;
 
     public DeduplicationOnlineLearning(int learnLimit, boolean async,
             FrontierManager frontierManager, DupDetector dupDetector,
-            Learner classifierType) {
+            LearningType learningType, Learner classifierType) {
         super(learnLimit, async, frontierManager);
         this.frontierManager = frontierManager;
         this.dupDetector = dupDetector;
+        this.learningType = learningType;
         this.classifierType = classifierType;
     }
 
@@ -79,6 +91,17 @@ public class DeduplicationOnlineLearning extends OnlineLearning {
         Sampler<String> duplicates = new Sampler<>(maxSamples);
         Sampler<String> unique = new Sampler<>(maxSamples);
         DupData dupData = dupDetector.getDuplicationSample();
+
+        if (learningType == LearningType.RULES) {
+            return buildRulesLinkClassifier(dupData);
+        } else {
+            return buildMachineLearningLinkClassifier(duplicates, unique, dupData);
+        }
+    }
+
+    private LinkClassifier buildMachineLearningLinkClassifier(Sampler<String> duplicates,
+                                                              Sampler<String> unique, DupData dupData) {
+
         for (List<String> dupCluster : dupData.duplicates) {
             for (String url : dupCluster) {
                 duplicates.sample(url);
@@ -108,6 +131,12 @@ public class DeduplicationOnlineLearning extends OnlineLearning {
         return new LinkClassifierDeduplication(classifier);
     }
 
+    private LinkClassifier buildRulesLinkClassifier(DupData dupData) {
+        RulesValidation rulesValidation = new RulesValidation();
+        List<UrlAlignment.RewriteRule> rules = rulesValidation.buildRules(dupData);
+        return new LinkClassifierRewriteRules(rules);
+    }
+
     private List<Integer> createListOfLabels(int value, int size) {
         List<Integer> labels = new ArrayList<>();
         for (int i = 0; i < size; i++) {
@@ -118,6 +147,10 @@ public class DeduplicationOnlineLearning extends OnlineLearning {
 
     public enum DuplicationType {
         EXACT_DUP, PROBABILISTIC_EXACT_DUP, NEAR_DUP
+    }
+
+    public enum LearningType {
+        CLASSIFIER, RULES
     }
 
 }

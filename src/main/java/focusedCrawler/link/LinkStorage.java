@@ -1,7 +1,6 @@
 package focusedCrawler.link;
 
 import focusedCrawler.dedup.DupDetector;
-import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.link.classifier.online.DeduplicationOnlineLearning;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -222,7 +221,8 @@ public class LinkStorage {
             case "DEDUPLICATION":
                 return new DeduplicationOnlineLearning(config.getLearningLimit(),
                         config.isOnlineLearningAsync(), frontierManager, dupDetector,
-                        Learner.SVM);
+                        config.getOnlineLearningDedupLearningType(),
+                        config.getOnlineLearningClassifierLearner());
             default:
                 throw new IllegalArgumentException(
                         "Unknown online learning method: " + onlineLearningType);
