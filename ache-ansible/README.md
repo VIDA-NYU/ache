@@ -29,8 +29,8 @@ elastic-1
 elastic-2
 
 [es_node:vars]
-es_cluster_name=cluster
-es_heap_size=16gb
+es_cluster_name=my-cluster
+es_heap_size=16G
 ```
 
 #### Run it:
