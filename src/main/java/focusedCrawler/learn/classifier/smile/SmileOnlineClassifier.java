@@ -79,14 +79,13 @@ public class SmileOnlineClassifier<T> {
         switch (classifierType) {
             case SVM:
                 SVM<double[]> svm;
-                double c = 0.1;
+                double c = 0.01;
                 if (numberOfClasses > 2) {
                     svm = new SVM<double[]>(new LinearKernel(), c, numberOfClasses,
                             Multiclass.ONE_VS_ALL);
                 } else {
                     svm = new SVM<double[]>(new LinearKernel(), c);
                 }
-                svm = new SVM<>(new LinearKernel(), 0.01);
                 svm.learn(x, y);
                 svm.finish();
                 svm.trainPlattScaling(x, y);
