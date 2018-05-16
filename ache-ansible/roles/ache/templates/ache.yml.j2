@@ -4,7 +4,8 @@
 {% if ache_config %}
 {{ ache_config | to_nice_yaml }}
 {% endif %}
-{% if ache_config['target_storage.data_formats'] is not defined %}
+{% if ((ache_config['target_storage.data_formats'] is not defined) and
+       (ache_config['target_storage.data_format.type'] is not defined)): %}
 target_storage.data_formats:
   - WARC
 {% if groups['es_node'] | length > 0 %}

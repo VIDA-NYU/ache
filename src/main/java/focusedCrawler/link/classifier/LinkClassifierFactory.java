@@ -20,6 +20,8 @@ public class LinkClassifierFactory {
         switch (typeOfClassifier) {
             case "LinkClassifierDeduplication":
                 return new LinkClassifierDeduplication(null);
+            case "LinkClassifierRandom":
+                return new LinkClassifierRandom();
             case "LinkClassifierBreadthSearch":
                 return new LinkClassifierBreadthSearch();
             case "LinkClassifierBaseline":
