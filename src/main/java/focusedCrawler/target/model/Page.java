@@ -39,7 +39,7 @@ public class Page implements Serializable {
     private boolean auth = false;
     
     public Page() {
-        // required for JSON serialization
+        // required for JSON de-serialization
     }
     
     public Page(URL url, String content) {

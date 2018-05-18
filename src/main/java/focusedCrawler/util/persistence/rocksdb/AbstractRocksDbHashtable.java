@@ -1,5 +1,6 @@
 package focusedCrawler.util.persistence.rocksdb;
 
+import com.google.common.base.Preconditions;
 import java.io.Closeable;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -45,6 +46,7 @@ public abstract class AbstractRocksDbHashtable implements Closeable {
     }
 
     protected byte[] getBytes(byte[] keyBytes) {
+        Preconditions.checkNotNull(this.db, "Make sure the database is open.");
         byte[] valueBytes;
         try {
             valueBytes = db.get(keyBytes);
