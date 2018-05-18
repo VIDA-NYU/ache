@@ -56,12 +56,13 @@ public class LinkClassifierDeduplicationTest {
                 "target_storage.near_duplicate_detection.enabled", true,
                 "target_storage.near_duplicate_detection.type", "EXACT_DUP",
                 "link_storage.online_learning.dedup.type", "RULES"
+            )),
+            new Configuration(ImmutableMap.of(
+                "target_storage.near_duplicate_detection.enabled", true,
+                "target_storage.near_duplicate_detection.type", "PROBABILISTIC_EXACT_DUP",
+                "link_storage.online_learning.dedup.type", "CLASSIFIER",
+                "link_storage.online_learning.dedup.classifier.learner", "SVM"
             ))
-            // FIXME
-//            new Configuration(ImmutableMap.of(
-//                "target_storage.near_duplicate_detection.enabled", true,
-//                "target_storage.near_duplicate_detection.type", "PROBABILISTIC_EXACT_DUP"
-//            ))
         );
     }
 
