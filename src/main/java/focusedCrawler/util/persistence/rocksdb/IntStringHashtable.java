@@ -3,7 +3,11 @@ package focusedCrawler.util.persistence.rocksdb;
 public class IntStringHashtable extends AbstractRocksDbHashtable {
 
     public IntStringHashtable(String path) {
-        super(path);
+        this(path, false);
+    }
+
+    public IntStringHashtable(String path, boolean readOnly) {
+        super(path, readOnly);
     }
 
     protected IntStringHashtable() {}

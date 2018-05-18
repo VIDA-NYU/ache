@@ -10,7 +10,11 @@ public class BytesBytesHashtable
     protected BytesBytesHashtable() {}
 
     public BytesBytesHashtable(String path) {
-        super(path);
+        super(path, false);
+    }
+
+    public BytesBytesHashtable(String path, boolean readOnly) {
+        super(path, readOnly);
     }
 
     public void put(byte[] key, byte[] value) {

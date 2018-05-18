@@ -94,12 +94,20 @@ public class DuplicatePageIndexer implements DupDetector {
     }
 
     public DuplicatePageIndexer(Path dataPath, double jaccardThreshold) {
+        this(dataPath, jaccardThreshold, false);
+    }
+
+    public DuplicatePageIndexer(String dataPath, double jaccardThreshold, boolean readOnly) {
+        this(Paths.get(dataPath), jaccardThreshold, readOnly);
+    }
+
+    public DuplicatePageIndexer(Path dataPath, double jaccardThreshold, boolean readOnly) {
         Path basePath = dataPath.resolve("near_duplicates");
         this.neardupLog = new LogFile(dataPath.resolve("data_monitor/nearduplicates.csv"));
         this.lsh = new LSH(DEFAULT_NUM_HASHES, jaccardThreshold,
-                basePath.resolve("lsh").toString());
-        this.urlToId = new StringIntHashtable(basePath.resolve("keys_db").toString());
-        this.idToUrl = new IntStringHashtable(basePath.resolve("ids_db").toString());
+                basePath.resolve("lsh").toString(), readOnly);
+        this.urlToId = new StringIntHashtable(basePath.resolve("keys_db").toString(), readOnly);
+        this.idToUrl = new IntStringHashtable(basePath.resolve("ids_db").toString(), readOnly);
     }
 
     public int insert(String key, String text) {

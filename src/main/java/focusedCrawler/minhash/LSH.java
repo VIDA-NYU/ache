@@ -36,12 +36,19 @@ public class LSH {
     }
 
     public LSH(int nHashes, double jaccardThreshold, String dataPath) {
-        this(nHashes, computeNumberOfBandsForThreshold(nHashes, jaccardThreshold),
-                new DBStorage(dataPath));
+        this(nHashes, jaccardThreshold, dataPath, false);
+    }
+
+    public LSH(int nHashes, double jaccardThreshold, String dataPath, boolean readOnly) {
+        this(nHashes, computeNumberOfBandsForThreshold(nHashes, jaccardThreshold), dataPath, readOnly);
     }
 
     public LSH(int nHashes, int nBands, String dataPath) {
-        this(nHashes, nBands, new DBStorage(dataPath));
+        this(nHashes, nBands, dataPath, false);
+    }
+
+    public LSH(int nHashes, int nBands, String dataPath, boolean readOnly) {
+        this(nHashes, nBands, new DBStorage(dataPath, readOnly));
     }
 
     public LSH(int nHashes, int nBands, LSHStorage bandsStorage) {
@@ -175,7 +182,11 @@ public class LSH {
     protected static class DBStorage extends BytesBytesHashtable implements LSHStorage {
 
         public DBStorage(String path) {
-            super(path);
+            this(path, false);
+        }
+
+        public DBStorage(String path, boolean readOnly) {
+            super(path, readOnly);
         }
 
         @Override

@@ -5,7 +5,11 @@ public class StringIntHashtable extends AbstractRocksDbHashtable {
     public final int absentValue = -1;
 
     public StringIntHashtable(String path) {
-        super(path);
+        this(path, false);
+    }
+
+    public StringIntHashtable(String path, boolean readOnly) {
+        super(path, readOnly);
     }
 
     protected StringIntHashtable() {}
