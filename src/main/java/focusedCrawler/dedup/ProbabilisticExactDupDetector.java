@@ -37,4 +37,9 @@ public class ProbabilisticExactDupDetector implements DupDetector {
         return null;
     }
 
+    @Override
+    public void close() {
+        // No-op
+    }
+
 }

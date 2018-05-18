@@ -112,6 +112,10 @@ public class LSH {
         return hashes;
     }
 
+    public void close() {
+        this.bandsStorage.close();
+    }
+
     protected interface LSHStorage {
 
         public void insertToBand(int band, int[] hashes, int id);
@@ -120,6 +124,7 @@ public class LSH {
 
         public RoaringBitmap getValues(int band, int[] hashes);
 
+        void close();
     }
 
     protected static class InMemoryStorage implements LSHStorage {
@@ -144,6 +149,11 @@ public class LSH {
         public RoaringBitmap getValues(int band, int[] hashes) {
             RoaringBitmap idsBitmap = maps.get(toHex(band, hashes));
             return idsBitmap == null ? null : idsBitmap;
+        }
+
+        @Override
+        public void close() {
+            // nothing to close
         }
 
         private static String toHex(int band, int[] hashes) {
@@ -222,6 +232,11 @@ public class LSH {
                 throw new RuntimeException("Failed to serialize roaring bitmap.");
             }
             return bos.toByteArray();
+        }
+
+        @Override
+        public void close() {
+            super.close();
         }
     }
 

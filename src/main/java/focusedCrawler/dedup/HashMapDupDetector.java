@@ -52,4 +52,9 @@ public class HashMapDupDetector implements DupDetector {
         return new DupData(dupClusters, uniqueSample);
     }
 
+    @Override
+    public void close() {
+        // No-op
+    }
+
 }

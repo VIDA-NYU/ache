@@ -210,4 +210,20 @@ public class DuplicatePageIndexer implements DupDetector {
         return new DupData(dupClusters, uniqueSample);
     }
 
+    @Override
+    public void close() {
+        if (this.neardupLog != null) {
+            this.neardupLog.close();
+        }
+        if (this.lsh != null) {
+            this.lsh.close();
+        }
+        if (this.urlToId != null) {
+            this.urlToId.close();
+        }
+        if (this.idToUrl != null) {
+            this.idToUrl.close();
+        }
+    }
+
 }

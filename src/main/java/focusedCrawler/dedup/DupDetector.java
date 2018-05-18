@@ -10,6 +10,8 @@ public interface DupDetector {
 
     DupData getDuplicationSample();
 
+    void close();
+
     public class DupData {
 
         public final List<List<String>> duplicates;
