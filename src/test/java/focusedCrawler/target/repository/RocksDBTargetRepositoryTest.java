@@ -8,7 +8,9 @@ import static org.junit.Assert.assertThat;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.CloseableIterator;
+import focusedCrawler.util.parser.PaginaURL;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
@@ -46,6 +48,8 @@ public class RocksDBTargetRepositoryTest {
         Page target = new Page(new URL(url), html, responseHeaders);
         target.setCrawlerId("mycrawler");
         target.setTargetRelevance(TargetRelevance.RELEVANT);
+        PaginaURL pageParser = new PaginaURL(target);
+        target.setParsedData(new ParsedData(pageParser));
 
         RocksDBTargetRepository repository = new RocksDBTargetRepository(dataPath);
 
