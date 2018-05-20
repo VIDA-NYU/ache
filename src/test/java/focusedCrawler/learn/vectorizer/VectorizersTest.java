@@ -2,7 +2,9 @@ package focusedCrawler.learn.vectorizer;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
@@ -19,8 +21,9 @@ public class VectorizersTest {
         String i2 = "asdf sdfg";
 
         // when
-        SparseVector v1 = vectorizer.fitTransform(i1);
-        SparseVector v2 = vectorizer.fitTransform(i2);
+        vectorizer.fit(Arrays.asList(i1, i2));
+        SparseVector v1 = vectorizer.transform(i1);
+        SparseVector v2 = vectorizer.transform(i2);
 
         // then
         assertThat(v1.get("asdf", vectorizer), is(1d));
@@ -42,7 +45,7 @@ public class VectorizersTest {
         String i2 = "asdf sdfg";
 
         // when
-        vectorizer.partialFit(i1);
+        vectorizer.fit(Arrays.asList(i1));
         SparseVector v2 = vectorizer.transform(i2);
 
         // then
@@ -54,6 +57,142 @@ public class VectorizersTest {
     }
 
     @Test
+    public void shouldGenerateNgrams() {
+        // given
+        BinaryTextVectorizer vectorizer = new BinaryTextVectorizer.Builder()
+                .withNgramSize(4)
+                .withMinDocFrequency(0)
+                .build();
+        String i1 = "asdf zxcv qwer sdfg";
+
+        // when
+        vectorizer.fit(Arrays.asList(i1));
+
+        SparseVector v = vectorizer.transform(i1);
+
+        // then
+        assertThat(vectorizer.numberOfFeatures(), is(10));
+
+        assertThat(v.get("asdf", vectorizer), is(1d));
+        assertThat(v.get("zxcv", vectorizer), is(1d));
+        assertThat(v.get("qwer", vectorizer), is(1d));
+        assertThat(v.get("sdfg", vectorizer), is(1d));
+
+        assertThat(v.get("asdf_zxcv", vectorizer), is(1d));
+        assertThat(v.get("zxcv_qwer", vectorizer), is(1d));
+        assertThat(v.get("qwer_sdfg", vectorizer), is(1d));
+
+        assertThat(v.get("asdf_zxcv_qwer", vectorizer), is(1d));
+        assertThat(v.get("zxcv_qwer_sdfg", vectorizer), is(1d));
+
+        assertThat(v.get("asdf_zxcv_qwer_sdfg", vectorizer), is(1d));
+
+        assertThat(v.get("zzzz", vectorizer), is(0d)); // is not know by vectorizer
+    }
+
+    @Test
+    public void shouldFilterFeaturesByMinDocumentFrequency() {
+        // given
+        BinaryTextVectorizer vectorizer = new BinaryTextVectorizer.Builder()
+                .withMinDocFrequency(2)
+                .build();
+        String i1 = "asdf qwer uiop";
+        String i2 = "asdf qwer sdfg";
+        String i3 = "asdf tyui";
+
+        // when
+        vectorizer.fit(Arrays.asList(i1, i2, i3));
+        SparseVector v2 = vectorizer.transform(i2);
+
+        // then: assert that there only 2 features are used
+        assertThat(vectorizer.numberOfFeatures(), is(2));
+
+        assertThat(v2.get("asdf", vectorizer), is(1d));
+        assertThat(v2.get("qwer", vectorizer), is(1d));
+        assertThat(v2.get("sdfg", vectorizer), is(0d)); // should be ignored by vectorizer
+        assertThat(v2.get("tyui", vectorizer), is(0d));
+    }
+
+    @Test
+    public void shouldFilterFeaturesByMaximumSize() {
+        // given
+        int maxFeatures = 2;
+        BinaryTextVectorizer vectorizer = new BinaryTextVectorizer.Builder()
+                .withMaxFeatures(maxFeatures)
+                .build();
+        String i1 = "asdf uiop gggg";
+        String i2 = "asdf qwer sdfg";
+        String i3 = "asdf qwer tyui";
+        String i4 = "asdf qwer tyui";
+
+        // when
+        vectorizer.fit(Arrays.asList(i1, i2, i3, i4));
+        SparseVector v2 = vectorizer.transform(i2);
+
+        // then: assert that there only 2 features are used
+        assertThat(vectorizer.numberOfFeatures(), is(maxFeatures));
+
+        assertThat(v2.get("asdf", vectorizer), is(1d));
+        assertThat(v2.get("qwer", vectorizer), is(1d));
+        assertThat(v2.get("sdfg", vectorizer), is(0d)); // should be ignored by vectorizer
+        assertThat(v2.get("tyui", vectorizer), is(0d));
+        assertThat(v2.get("uiop", vectorizer), is(0d));
+        assertThat(v2.get("gggd", vectorizer), is(0d));
+    }
+
+    @Test
+    public void shouldComputeNaiveBayesLogRatioFeatures() {
+        // given
+        BinaryTextVectorizer vectorizer = new BinaryTextVectorizer.Builder()
+                .withMinDocFrequency(1)
+                .withWeightType(BinaryTextVectorizer.WeightType.NB_LOG_RATIO)
+                .build();
+
+        String i1 = "asdf uiop";
+        String i2 = "asdf qwer sdfg";
+        String i3 = "zxcv qwer cvbn";
+        String i4 = "zxcv hjkl";
+
+        String i5 = "asdf zxcv qwer uiop hjkl";
+
+        // when
+        vectorizer.fit(
+                Arrays.asList(i1, i2, i3, i4),
+                Arrays.asList(0, 0, 1, 1));
+
+        SparseVector v = vectorizer.transform(i5);
+
+        // then
+        assertThat(vectorizer.numberOfFeatures(), is(7));
+
+        double asdf = v.get("asdf", vectorizer);
+        double zxcv = v.get("zxcv", vectorizer);
+        double qwer = v.get("qwer", vectorizer);
+        double uiop = v.get("uiop", vectorizer);
+        double hjkl = v.get("hjkl", vectorizer);
+
+        // "asdf" only happens on positive class,
+        // so it should be the most positive feature
+        assertTrue(asdf > zxcv);
+        assertTrue(asdf > qwer);
+        assertTrue(asdf > uiop);
+        assertTrue(asdf > hjkl);
+
+        // "zxcv" only happens on negative class,
+        // so it should be the most negative feature
+        assertTrue(zxcv < asdf);
+        assertTrue(zxcv < hjkl);
+        assertTrue(zxcv < qwer);
+        assertTrue(zxcv < hjkl);
+
+        // "qwer" appears equally in both classes,
+        // "uiop" is more positive, and "hjkl" is more negative
+        assertTrue(qwer == 0d);
+        assertTrue(uiop > qwer);
+        assertTrue(hjkl < qwer);
+    }
+
+    @Test
     public void shouldCreateQuadraticFeatures() {
         // given
         BinaryTextVectorizer vectorizer = new BinaryTextVectorizer(Tokenizers.alphaNumeric(), true);
@@ -61,7 +200,7 @@ public class VectorizersTest {
         String i2 = "asdf sdfg qwer";
 
         // when
-        vectorizer.partialFit(i1);
+        vectorizer.fit(Arrays.asList(i1));
 
         SparseVector v2 = vectorizer.transform(i2);
 
@@ -69,7 +208,7 @@ public class VectorizersTest {
         assertThat(vectorizer.numberOfFeatures(), is(3));
 
         assertThat(v2.get("asdf", vectorizer), is(1d));
-        assertThat(v2.get("asdfqwer", vectorizer), is(1d));
+        assertThat(v2.get("asdf_qwer", vectorizer), is(1d));
         assertThat(v2.get("sdfg", vectorizer), is(0d)); // is not know by vectorizer
         assertThat(v2.get("zxcv", vectorizer), is(0d));
     }
@@ -79,11 +218,11 @@ public class VectorizersTest {
         // given
         BinaryTextVectorizer vectorizer1 = new BinaryTextVectorizer();
         String i1 = "asdf";
-        vectorizer1.partialFit(i1);
+        vectorizer1.fit(Arrays.asList(i1));
 
         BinaryTextVectorizer vectorizer2 = new BinaryTextVectorizer();
         String i2 = "qwer";
-        vectorizer2.partialFit(i2);
+        vectorizer2.fit(Arrays.asList(i2));
 
         String i3 = "asdf qwer";
 

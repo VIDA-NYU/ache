@@ -2,7 +2,11 @@ package focusedCrawler.learn.vectorizer;
 
 import it.unimi.dsi.fastutil.ints.Int2DoubleMap;
 import it.unimi.dsi.fastutil.ints.Int2DoubleOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2DoubleMap;
+
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Represents a sparse vector using a map of feature index to feature values.
@@ -48,9 +52,23 @@ public class SparseVector {
     }
 
     public static SparseVector binary(List<String> features, Vectorizer vectorizer) {
+        return binary(new HashSet<>(features), vectorizer);
+    }
+
+    public static SparseVector binary(Set<String> features, Vectorizer vectorizer) {
         SparseVector vector = new SparseVector();
         for (String f : features) {
             vector.features.put(vectorizer.getIndexOfFeature(f), 1.0d);
+        }
+        return vector;
+    }
+
+    public static SparseVector weights(Object2DoubleMap<String> featureWeights, Vectorizer vectorizer) {
+        SparseVector vector = new SparseVector();
+        for (Object2DoubleMap.Entry<String> kv : featureWeights.object2DoubleEntrySet()) {
+            String feature = kv.getKey();
+            double weight = kv.getDoubleValue();
+            vector.features.put(vectorizer.getIndexOfFeature(feature), weight);
         }
         return vector;
     }
@@ -62,6 +80,20 @@ public class SparseVector {
             vector[i] = get(i);
         }
         return vector;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("SparseVector{");
+        for (Int2DoubleMap.Entry kv : features.int2DoubleEntrySet()) {
+            sb.append(kv.getIntKey());
+            sb.append(":");
+            sb.append(kv.getDoubleValue());
+            sb.append(", ");
+        }
+        sb.append("}");
+        return sb.toString();
     }
 
 }
