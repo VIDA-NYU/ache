@@ -17,7 +17,7 @@ public class AlphaNumTokenizer implements Tokenizer {
     
     public static final AlphaNumTokenizer INSTANCE = new AlphaNumTokenizer();
 
-    private static enum CharType {
+    private enum CharType {
         DIGIT, ALPHA, PUNCTUATION, SPACE
     }
 
@@ -31,7 +31,7 @@ public class AlphaNumTokenizer implements Tokenizer {
             return null;
         }
 
-        List<String> sequence = new ArrayList<String>();
+        List<String> sequence = new ArrayList<>();
         StringBuilder token = new StringBuilder();
 
         int i = 0;
