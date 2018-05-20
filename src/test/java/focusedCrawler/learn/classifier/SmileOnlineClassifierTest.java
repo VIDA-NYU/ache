@@ -35,9 +35,7 @@ public class SmileOnlineClassifierTest {
         classes.add(IRELEVANT);
 
         BinaryTextVectorizer textVectorizer = new BinaryTextVectorizer();
-        for (String i : trainingData) {
-            textVectorizer.partialFit(i);
-        }
+        textVectorizer.fit(trainingData);
 
         String[] attributes = textVectorizer.getFeaturesAsArray();
         int[] classValues = {RELEVANT, IRELEVANT};
