@@ -39,9 +39,10 @@ public class LinkClassifierRewriteRules implements LinkClassifier {
                 for (UrlAlignment.RewriteRule rule : rules) {
                     String url = lns[i].toString();
                     double relevance = 1.0d;
+//                    double relevance = Math.abs(page.getLinkRelevance().getRelevance()) - 1;
                     if (rule.matches(url)) {
 //                        url = rule.rewrite(url);
-                        relevance = 0.0;
+                        relevance = 1e-10;
                     }
                     links.add(new LinkRelevance(url, relevance));
                 }
