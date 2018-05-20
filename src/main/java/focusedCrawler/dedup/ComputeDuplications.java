@@ -1,36 +1,42 @@
 package focusedCrawler.dedup;
 
-import java.io.PrintStream;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import de.l3s.boilerpipe.extractors.KeepEverythingExtractor;
+import focusedCrawler.config.Configuration;
+import focusedCrawler.target.TargetRepositoryFactory;
+import focusedCrawler.target.TargetStorageConfig;
+import focusedCrawler.target.model.Page;
+import focusedCrawler.target.repository.TargetRepository;
+import focusedCrawler.util.CliTool;
+import io.airlift.airline.Option;
 import org.apache.commons.codec.digest.DigestUtils;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.PrintStream;
+import java.util.*;
+import java.util.Map.Entry;
 
-import de.l3s.boilerpipe.extractors.KeepEverythingExtractor;
-import focusedCrawler.target.model.Page;
-import focusedCrawler.target.repository.FileSystemTargetRepository;
-import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
+public class ComputeDuplications extends CliTool {
 
-public class ComputeDuplications {
+    @Option(name = {"-c", "--config-path"}, required = true)
+    private String configPath;
 
-    static final ObjectMapper jsonMapper = new ObjectMapper();
+    @Option(name = {"-i", "--input-path"}, required = true)
+    private String dataPath;
 
-    public static void main(String[] args) throws Exception {
+    @Option(name = "--output-file")
+    private String outputFile;
 
-        Path dataPath = Paths.get(args[0]);
-        String outputFile = args[1];
+    @Option(name = {"-max", "--max-pages"})
+    private int maxPages;
 
-        FileSystemTargetRepository repository =
-                new FileSystemTargetRepository(dataPath, DataFormat.JSON, true, false);
+    public static void main(String[] args) {
+        CliTool.run(args, new ComputeDuplications());
+    }
+
+    @Override
+    public void execute() throws Exception {
+        Configuration config = new Configuration(configPath);
+        TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
+        TargetRepository repository = TargetRepositoryFactory.create(dataPath, null, null, targetStorageConfig);
         Map<String, Set<String>> contentHashes = computeContentHashes(repository);
         printDups(contentHashes, outputFile);
     }
@@ -74,13 +80,14 @@ public class ComputeDuplications {
     }
 
 
-    private static Map<String, Set<String>> computeContentHashes(
-            FileSystemTargetRepository repository) throws Exception {
+    private Map<String, Set<String>> computeContentHashes(
+            TargetRepository repository) throws Exception {
 
         Map<String, Set<String>> contentHashMap = new HashMap<>();
         Iterator<Page> iterator = repository.pagesIterator();
-
-        while (iterator.hasNext()) {
+        int i = 0;
+        while (iterator.hasNext() || i > maxPages) {
+            i++;
             Page page = iterator.next();
 
             List<String> contentTypeHeader = page.getResponseHeaders().get("Content-Type");
