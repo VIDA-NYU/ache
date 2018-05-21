@@ -16,6 +16,10 @@ public class ParsedData implements Serializable {
     private URL[] links;
     private LinkNeighborhood[] linkNeighborhood;
 
+    public ParsedData() {
+        // required for deserialization
+    }
+
     public ParsedData(PaginaURL page) {
         this.words = page.words();
         this.wordsMeta = page.wordsMeta();

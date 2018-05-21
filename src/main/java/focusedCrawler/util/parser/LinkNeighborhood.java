@@ -40,6 +40,10 @@ public class LinkNeighborhood implements Serializable {
     private int numOfWordsAnchor;
     private boolean sameSite = false;
 
+    public LinkNeighborhood() {
+        // required for deserialization
+    }
+
     public LinkNeighborhood(URL link) {
         this.link = link;
     }

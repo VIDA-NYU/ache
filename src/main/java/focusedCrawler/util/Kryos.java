@@ -3,6 +3,7 @@ package focusedCrawler.util;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.serializers.CollectionSerializer;
 import de.javakaffee.kryoserializers.ArraysAsListSerializer;
 import de.javakaffee.kryoserializers.CollectionsEmptyListSerializer;
 import de.javakaffee.kryoserializers.CollectionsEmptyMapSerializer;
@@ -11,7 +12,9 @@ import de.javakaffee.kryoserializers.CollectionsSingletonListSerializer;
 import de.javakaffee.kryoserializers.CollectionsSingletonMapSerializer;
 import de.javakaffee.kryoserializers.CollectionsSingletonSetSerializer;
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 
 /**
@@ -33,8 +36,11 @@ public class Kryos<T> {
 
     private static void registerDeserializers(Kryo kryo) {
         // register deserializers for java collections that are not available by default
-        kryo.register(Arrays.asList("").getClass(), new ArraysAsListSerializer());
-        kryo.register(Arrays.asList("").getClass(), new ArraysAsListSerializer());
+        kryo.register(Arrays.asList("").getClass(), new CollectionSerializer(){
+            public Collection create (Kryo kryo, Input input, Class type) {
+                return new ArrayList();
+            }
+        });
         kryo.register(Collections.EMPTY_LIST.getClass(), new CollectionsEmptyListSerializer());
         kryo.register(Collections.EMPTY_MAP.getClass(), new CollectionsEmptyMapSerializer());
         kryo.register(Collections.EMPTY_SET.getClass(), new CollectionsEmptySetSerializer());
