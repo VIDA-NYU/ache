@@ -1,5 +1,6 @@
 package focusedCrawler.dedup;
 
+import focusedCrawler.learn.vectorizer.BinaryTextVectorizer.WeightType;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -28,7 +29,7 @@ public class RunOnlineDedupClassifier extends CliTool {
     private static final int DUPLICATE = 1;
     static int[] classes = new int[] {NOT_DUPLICATE, DUPLICATE};
 
-    enum Features {
+    public enum Features {
         TERMS, TERMS_HASHING, RULES, URL_TOKENS, ALL
     }
 
@@ -68,7 +69,7 @@ public class RunOnlineDedupClassifier extends CliTool {
         Map<String, List<String>> urlsByHash = groupByContentHash(trainFileData);
 
         List<String> trainingData = new ArrayList<>();
-        List<Integer> trainingDataClasses = new ArrayList<>();
+        List<Integer> labels = new ArrayList<>();
 
         int dupCount = 0;
         int nodupCount = 0;
@@ -85,18 +86,18 @@ public class RunOnlineDedupClassifier extends CliTool {
                 nodupCount++;
             }
             trainingData.add(dup.url);
-            trainingDataClasses.add(instanceClass);
+            labels.add(instanceClass);
         }
 
 
         System.out.println("Training vectorizer...");
-        IndexedVectorizer vectorizer = createVectorizer(urlsByHash, trainingData);
+        IndexedVectorizer vectorizer = createVectorizer(urlsByHash, trainingData, labels);
 
         System.out.println("Building model...");
         String[] featuresArray = vectorizer.getFeaturesAsArray();
         SmileOnlineClassifier<String> classifier = new SmileOnlineClassifier<>(
                 learner, featuresArray, classes, vectorizer);
-        classifier.buildModel(trainingData, trainingDataClasses);
+        classifier.buildModel(trainingData, labels);
 
 
         System.out.println("Reading test data...");
@@ -108,9 +109,7 @@ public class RunOnlineDedupClassifier extends CliTool {
 
         System.out.println("Sorting by predition...");
         testFileData.sort((DupLine d1, DupLine d2) -> {
-            double scoreD1 = classifier.classify(d1.url)[0];
-            double scoreD2 = classifier.classify(d2.url)[0];
-            return Double.compare(scoreD2, scoreD1); // reverse
+            return Double.compare(d2.dupProb, d1.dupProb); // reverse
         });
 
         System.out.println("Writring results file...");
@@ -125,17 +124,31 @@ public class RunOnlineDedupClassifier extends CliTool {
     }
 
     private IndexedVectorizer createVectorizer(Map<String, List<String>> urlsByHash,
-            List<String> trainingData) {
+            List<String> trainingData, List<Integer> labels) {
         IndexedVectorizer vectorizer;
-        BinaryTextVectorizer termsVectorizer =
-                new BinaryTextVectorizer(Tokenizers.alphaNumeric(), true);
+//        BinaryTextVectorizer termsVectorizer =
+//                new BinaryTextVectorizer(Tokenizers.alphaNumeric(), true);
+        BinaryTextVectorizer termsVectorizer = new BinaryTextVectorizer.Builder()
+                .withQuadraticFeatures(true)
+                .withTokenizer(Tokenizers.alphaNumeric())
+                .withWeightType(WeightType.NB_LOG_RATIO)
+                .withMaxFeatures(1000)
+                .withMinDocFrequency(10)
+                .build();
         HashingVectorizer termsHashingVectorizer =
                 new HashingVectorizer(Tokenizers.alphaNumeric(), 12, true);
         UrlAlignmentVectorizer rulesVectorizer = new UrlAlignmentVectorizer();
-        BinaryTextVectorizer urlTokensVectorizer = new BinaryTextVectorizer(Tokenizers.url(), true);
+//        BinaryTextVectorizer urlTokensVectorizer = new BinaryTextVectorizer(Tokenizers.url(), true);
+        BinaryTextVectorizer urlTokensVectorizer = new BinaryTextVectorizer.Builder()
+                .withQuadraticFeatures(true)
+                .withTokenizer(Tokenizers.url())
+                .withWeightType(WeightType.NB_LOG_RATIO)
+                .withMaxFeatures(1000)
+                .withMinDocFrequency(10)
+                .build();
         switch (features) {
             case TERMS:
-                termsVectorizer.fit(trainingData);
+                termsVectorizer.fit(trainingData, labels);
                 vectorizer = termsVectorizer;
                 break;
             case TERMS_HASHING:
@@ -151,12 +164,13 @@ public class RunOnlineDedupClassifier extends CliTool {
                 vectorizer = urlTokensVectorizer;
                 break;
             case ALL:
-                termsVectorizer.fit(trainingData);
+                termsVectorizer.fit(trainingData, labels);
                 rulesVectorizer.fit(urlsByHash);
-                urlTokensVectorizer.fit(trainingData);
+                urlTokensVectorizer.fit(trainingData, labels);
                 FeatureStackVectorizer all = new FeatureStackVectorizer(termsVectorizer,
                         rulesVectorizer, urlTokensVectorizer);
                 vectorizer = all;
+                break;
             default:
                 throw new IllegalArgumentException("Invalid feature set");
         }
@@ -194,6 +208,8 @@ public class RunOnlineDedupClassifier extends CliTool {
             //
             double[] result = classifier.classify(dup.url);
             double score = result[0];
+            dup.dupProb = score;
+
             int prediction = score > 0.5d ? NOT_DUPLICATE : DUPLICATE;
             // System.out.printf("%.4f %s %s\n", score, prediction, actualClass);
             if (prediction == DUPLICATE && actualClass == DUPLICATE) {
@@ -209,24 +225,26 @@ public class RunOnlineDedupClassifier extends CliTool {
             }
 
             total++;
-            if (total % 1000 == 0) {
-                System.out.printf(
-                        "precision: %.4f recall: %.4f fdr: %.4f npv: %.4f\n",
-                        (tp / (double) (tp + fp)),
-                        (tp / (double) (tp + fn)),
-                        (fp / (double) (fp + tp)),
-                        (tn / (double) (tn + fn)));
+            if (total % 5000 == 0) {
+                printMetrics(tp, fp, tn, fn);
             }
 
         }
         System.out.println("Final result:");
+        printMetrics(tp, fp, tn, fn);
+        System.out.printf("tp: %d fp: %d fn: %d tn: %d\n", tp, fp, fn, tn);
+    }
+
+    private static void printMetrics(int tp, int fp, int tn, int fn) {
+        double precision = (tp / (double) (tp + fp));
+        double recall =  (tp / (double) (tp + fn));
+        double f1 = 2 * precision * recall / (precision + recall);
+        double acc = (tp + tn) / (double)(tp + fp + tn + fn);
+        double fdr = fp / (double) (fp + tp);
+        double npv = tn / (double) (tn + fn);
         System.out.printf(
-                "precision: %.4f recall: %.4f fdr: %.4f npv: %.4f\n",
-                (tp / (double) (tp + fp)),
-                (tp / (double) (tp + fn)),
-                (fp / (double) (fp + tp)),
-                (tn / (double) (tn + fn)));
-        System.out.printf("tp: %.4f fp: %.4f fn: %.4f tn: %.4f\n", tp, fp, fn, tn);
+                "f1: %.4f acc: %.4f precision: %.4f recall: %.4f fdr: %.4f npv: %.4f\n",
+                f1, acc, precision, recall, fdr, npv);
     }
 
     private static Map<String, List<String>> groupByContentHash(List<DupLine> trainData) {
@@ -248,6 +266,7 @@ public class RunOnlineDedupClassifier extends CliTool {
         public long timestamp;
         public String url;
         public String hash;
+        public double dupProb;
     }
 
     public static List<DupLine> readInputFile(String filename, boolean timestamp)

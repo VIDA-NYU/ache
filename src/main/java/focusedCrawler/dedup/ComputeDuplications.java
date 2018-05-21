@@ -7,6 +7,7 @@ import focusedCrawler.target.TargetStorageConfig;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -14,6 +15,7 @@ import java.io.PrintStream;
 import java.util.*;
 import java.util.Map.Entry;
 
+@Command(name = "ComputeDuplications")
 public class ComputeDuplications extends CliTool {
 
     @Option(name = {"-c", "--config-path"}, required = true)
@@ -86,7 +88,7 @@ public class ComputeDuplications extends CliTool {
         Map<String, Set<String>> contentHashMap = new HashMap<>();
         Iterator<Page> iterator = repository.pagesIterator();
         int i = 0;
-        while (iterator.hasNext() || i > maxPages) {
+        while (iterator.hasNext() && i <= maxPages) {
             i++;
             Page page = iterator.next();
 
@@ -115,6 +117,9 @@ public class ComputeDuplications extends CliTool {
 
             // dups.add(page.getUrl());
             dups.add(page.getFetchTime() + " " + page.getRequestedUrl());
+            if (i % 100 == 0) {
+                System.out.println("Processed " + i + " pages");
+            }
         }
         return contentHashMap;
     }
