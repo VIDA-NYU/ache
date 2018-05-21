@@ -7,25 +7,17 @@ import focusedCrawler.dedup.rules.UrlAlignment;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.learn.vectorizer.BinaryTextVectorizer;
-import focusedCrawler.learn.vectorizer.IndexedVectorizer;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierDeduplication;
-import focusedCrawler.link.classifier.LinkClassifierException;
 import focusedCrawler.link.classifier.LinkClassifierRewriteRules;
 import focusedCrawler.link.frontier.FrontierManager;
-import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.model.ParsedData;
-import focusedCrawler.tokenizers.Tokenizers;
 import focusedCrawler.util.Sampler;
-
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-
-import focusedCrawler.util.parser.LinkNeighborhood;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DeduplicationOnlineLearning extends OnlineLearning {
 
@@ -37,14 +29,10 @@ public class DeduplicationOnlineLearning extends OnlineLearning {
     private static final int DUP = 1;
     private static final int[] CLASS_VALUES = new int[] {NODUP, DUP};
 
-    private int totalDups = 0;
-    private int maxSamples = 500;
-    private int instancesCounter = 0;
-    private int buildModelThreshold = 50;
+    private int maxSamples = 5000;
 
     private final LearningType learningType;
     private final Learner classifierType;
-    private IndexedVectorizer vectorizer;
     private SmileOnlineClassifier<String> classifier;
     private DupDetector dupDetector;
 
@@ -67,41 +55,19 @@ public class DeduplicationOnlineLearning extends OnlineLearning {
         frontierManager.updateOutlinkClassifier(outlinkClassifier);
     }
 
-    @Override
-    public void pageCrawledEvent(Page page) {
-        updateClassifierModel(page);
-    }
-
-    private void updateClassifierModel(Page page) {
-//        String url = page.getURL().toString();
-//        byte[] content = page.getParsedData().getCleanText().getBytes();
-//        boolean isDup = dupDetector.detectAndIndex(url, content);
-//        if (isDup) {
-//        if (page.isNearDuplicate()) {
-//            System.out.println("DUP: " + DigestUtils.md5Hex(content) + " URL: " + url);
-//            totalDups++;
-//        }
-//        instancesCounter++;
-//        double dupsPercent = 100 * totalDups / (double) instancesCounter;
-//        System.out.printf("total: %d dups-percent: %.4f %%\n", instancesCounter, dupsPercent);
-    }
-
     public LinkClassifier buildModel() {
-
-        Sampler<String> duplicates = new Sampler<>(maxSamples);
-        Sampler<String> unique = new Sampler<>(maxSamples);
         DupData dupData = dupDetector.getDuplicationSample();
-
         if (learningType == LearningType.RULES) {
             return buildRulesLinkClassifier(dupData);
         } else {
-            return buildMachineLearningLinkClassifier(duplicates, unique, dupData);
+            return buildMachineLearningLinkClassifier(dupData);
         }
     }
 
-    private LinkClassifier buildMachineLearningLinkClassifier(Sampler<String> duplicates,
-                                                              Sampler<String> unique, DupData dupData) {
+    private LinkClassifier buildMachineLearningLinkClassifier(DupData dupData) {
 
+        Sampler<String> duplicates = new Sampler<>(maxSamples);
+        Sampler<String> unique = new Sampler<>(maxSamples);
         for (List<String> dupCluster : dupData.duplicates) {
             for (String url : dupCluster) {
                 duplicates.sample(url);
@@ -120,7 +86,14 @@ public class DeduplicationOnlineLearning extends OnlineLearning {
         trainingData.addAll(duplicates.getSamples());
         labels.addAll(createListOfLabels(DUP, duplicates.getSamples().size()));
 
-        vectorizer = new BinaryTextVectorizer(Tokenizers.alphaNumeric(), true);
+        int minDocFrequency = (int) Math.min(5, 0.05 * trainingData.size());
+        BinaryTextVectorizer vectorizer = new BinaryTextVectorizer.Builder()
+                .withMinDocFrequency(minDocFrequency)
+                .withQuadraticFeatures(true)
+                .withMaxFeatures(5000)
+                .withWeightType(BinaryTextVectorizer.WeightType.BINARY)
+                .build();
+
         vectorizer.fit(trainingData);
         String[] features = vectorizer.getFeaturesAsArray();
 
