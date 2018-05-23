@@ -31,7 +31,11 @@ public class CrawlSimulation extends CliTool {
             description = "Path to input crawler data directory")
     private String inputRepositoryPath;
 
-    @Option(name = {"-c", "--config"}, required = true,
+    @Option(name = {"--oracle"}, required = false,
+            description = "If should only simulate an oracle crawling policy")
+    private boolean oracle = false;
+
+    @Option(name = {"-c", "--config"}, required = false,
             description = "Path to configuration files folder")
     private String configPath;
 
@@ -39,18 +43,15 @@ public class CrawlSimulation extends CliTool {
             description = "Path to folder containing page classifier model")
     private String modelPath;
 
-    @Option(name = {"-o", "--outputDir"}, required = true,
+    @Option(name = {"-o", "--outputDir"}, required = false,
             description = "Path to folder which model built should be stored")
     private String dataPath;
-
-    @Option(name = {"--oraclePath"}, required = true,
-            description = "Path to folder where oracle should be stored")
-    private String oraclePath;
 
     @Option(name = {"-s", "--seed"}, required = false, description = "Path to file of seed URLs")
     private String seedPath;
 
-    @Option(name = {"-mf", "--metrics-file"}, required = false, description = "Path to file of seed URLs")
+    @Option(name = {"-mf",
+            "--metrics-file"}, required = false, description = "Path to file of seed URLs")
     private String metricsFile;
 
     public static void main(String[] args) throws Exception {
@@ -60,65 +61,33 @@ public class CrawlSimulation extends CliTool {
     @Override
     public void execute() throws Exception {
 
+        RocksDBTargetRepository inputRepository = new RocksDBTargetRepository(inputRepositoryPath,
+                true);
+
         Configuration config = new Configuration(configPath);
-
-        RocksDBTargetRepository inputRepository = new RocksDBTargetRepository(inputRepositoryPath, true);
-
-        DupDetector oracleDupDetector = buildDuplicationOracle(inputRepository);
-
         DupDetector crawlDupDetector = DupDetectorFactory.create(config, dataPath);
+        if (oracle) {
+            runOracle(inputRepository, crawlDupDetector);
+            crawlDupDetector.close();
+            inputRepository.close();
+            return;
+        }
 
         LinkStorageConfig linkStorageConfig = config.getLinkStorageConfig();
         MetricsManager metricsManager = new MetricsManager(false, dataPath);
         LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath, modelPath,
                 linkStorageConfig, metricsManager, crawlDupDetector);
-
-        this.replay(linkStorage, inputRepository, crawlDupDetector, oracleDupDetector);
-        linkStorage.close();
-        metricsManager.close();
-
-        inputRepository.close();
-    }
-
-    private DupDetector buildDuplicationOracle(RocksDBTargetRepository inputRepository) {
-        System.out.println("Indexing all pages in oracle dup detector");
-
-        DuplicatePageIndexer oracleDupDetector;
-        double similarity = 0.95;
-
-        if (Files.exists(Paths.get(oraclePath))) {
-            // Oracle already exists, jut open oracle
-            System.out.println("Oracle directory already exists, reusing existing oracle.");
-            oracleDupDetector = new DuplicatePageIndexer(oraclePath, similarity);
-            return oracleDupDetector;
-        } else {
-            // Index all pages in dup detector
-            int processedPages = 0;
-            int ignoredLinks = 0;
-            oracleDupDetector = new DuplicatePageIndexer(oraclePath, similarity);
-            CloseableIterator<Page> it = inputRepository.pagesIterator();
-            while (it.hasNext()) {
-                Page page = it.next();
-                if (page.isHtml()) {
-                    processedPages++;
-                    String text = getCleanText(page);
-                    oracleDupDetector.detectAndIndex(page.getRequestedUrl(), text);
-                } else {
-                    ignoredLinks++;
-                }
-                if (processedPages % 1000 == 0) {
-                    System.out.printf("processed_pages = %d ignored = %d\n",
-                            processedPages, ignoredLinks);
-                }
-            }
+        try {
+            this.replay(linkStorage, inputRepository, crawlDupDetector);
+        } finally {
+            linkStorage.close();
+            metricsManager.close();
+            inputRepository.close();
         }
-        System.out.println("Done building oracle.");
-        return oracleDupDetector;
     }
 
     public void replay(LinkStorage linkStorage, RocksDBTargetRepository downloader,
-            DupDetector crawlDupDetector, DupDetector oracleDupDetector)
-            throws Exception {
+            DupDetector crawlDupDetector) throws Exception {
 
         int processedPages = 0;
         int missingLinks = 0;
@@ -141,7 +110,7 @@ public class CrawlSimulation extends CliTool {
                         processedPages, missingLinks, ignoredLinks);
             }
 
-            if(link.getType() == LinkRelevance.Type.FORWARD) {
+            if (link.getType() == LinkRelevance.Type.FORWARD) {
                 Page page = downloader.get(link.getURL().toString());
                 if (page != null) {
 
@@ -158,14 +127,9 @@ public class CrawlSimulation extends CliTool {
 
                         //
                         // Compute metrics and write to log file
-                        // Metrics must be computed using oracle information
                         //
                         crawledPages++;
-                        // TODO: FIX oracle. detectAndIndex always returns dups because it was indexed before!
-                        Set<String> dups = ((DuplicatePageIndexer) oracleDupDetector)
-                                .findNearDuplicates(text);
-                        dups.remove(key);
-                        if (!dups.isEmpty()) {
+                        if (isNearDuplicate) {
                             duplicatePages++;
                         }
                         int uniquePages = crawledPages - duplicatePages;
@@ -178,7 +142,7 @@ public class CrawlSimulation extends CliTool {
                 } else {
                     missingLinks++;
                 }
-                
+
             } else {
                 ignoredLinks++;
             }
@@ -191,7 +155,8 @@ public class CrawlSimulation extends CliTool {
                 }
             }
         }
-        System.out.printf("processed_pages = %d missing = %d ignored = %d\n", processedPages, missingLinks, ignoredLinks);
+        System.out.printf("processed_pages = %d missing = %d ignored = %d\n", processedPages,
+                missingLinks, ignoredLinks);
         System.out.printf("Total processed %s pages.\n", processedPages);
     }
 
@@ -199,6 +164,67 @@ public class CrawlSimulation extends CliTool {
         PaginaURL pageParser = new PaginaURL(page);
         page.setParsedData(new ParsedData(pageParser));
         return page.getParsedData().getCleanText();
+    }
+
+    /**
+     * Simulates the performance of a crawling policy that always crawls non-duplicate pages.
+     */
+    public void runOracle(RocksDBTargetRepository inputRepository, DupDetector crawlDupDetector)
+            throws Exception {
+
+        int processedPages = 0;
+        int ignoredLinks = 0;
+        int crawledPages = 0;
+        int duplicatePages = 0;
+        int uniquePages = 0;
+
+        PrintStream metricsLog;
+        if (metricsFile == null) {
+            metricsLog = System.out;
+        } else {
+            metricsLog = new PrintStream(new FileOutputStream(metricsFile), true);
+        }
+
+        CloseableIterator<Page> it = inputRepository.pagesIterator();
+
+        while (it.hasNext()) {
+            Page page = it.next();
+
+            if (processedPages % 100 == 0) {
+                System.out.printf("processed_pages = %d ignored = %d\n",
+                        processedPages, ignoredLinks);
+            }
+            // TODO: Should we deal with redirects here?
+            if (page.isHtml()) {
+                String text = getCleanText(page);
+                String key = page.getRequestedUrl();
+                boolean isNearDuplicate = crawlDupDetector.detectAndIndex(key, text);
+
+                //
+                // Compute metrics and write to log file
+                //
+                if (isNearDuplicate) {
+                    duplicatePages++;
+                } else {
+                    uniquePages++;
+                    crawledPages++;
+                    metricsLog.printf("%d %d %.4f\n", uniquePages, uniquePages, 100d);
+                }
+            } else {
+                ignoredLinks++;
+            }
+
+            processedPages++;
+        }
+
+        for (int i = 0; i < duplicatePages; i++) {
+            crawledPages++;
+            double harvestRate = (uniquePages / (double) crawledPages) * 100;
+            metricsLog.printf("%d %d %.4f\n", crawledPages, uniquePages, harvestRate);
+        }
+
+        System.out.printf("processed_pages = %d ignored = %d\n", processedPages, ignoredLinks);
+        System.out.printf("Total processed %s pages.\n", processedPages);
     }
 
 }
