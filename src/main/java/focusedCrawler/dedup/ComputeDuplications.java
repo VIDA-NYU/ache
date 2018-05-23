@@ -28,7 +28,7 @@ public class ComputeDuplications extends CliTool {
     private String outputFile;
 
     @Option(name = {"-max", "--max-pages"})
-    private int maxPages;
+    private int maxPages = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
         CliTool.run(args, new ComputeDuplications());

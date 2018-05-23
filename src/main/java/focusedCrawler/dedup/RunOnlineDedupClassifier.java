@@ -107,12 +107,12 @@ public class RunOnlineDedupClassifier extends CliTool {
         System.out.println("Testing model...");
         evaluate(classifier, testFileData);
 
-        System.out.println("Sorting by predition...");
+        System.out.println("Sorting by prediction...");
         testFileData.sort((DupLine d1, DupLine d2) -> {
             return Double.compare(d2.dupProb, d1.dupProb); // reverse
         });
 
-        System.out.println("Writring results file...");
+        System.out.println("Writing results file...");
 
         FileWriter f = new FileWriter(outputFile + learner + ".txt");
         for (DupLine d : testFileData) {
