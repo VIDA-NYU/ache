@@ -17,6 +17,7 @@
 - Added RocksDB-based target repository (RocksDBTargetRepository)
 - Fixed bug in ache-dashboard that prevented reloading search page on browser
   page refresh (issue #163)
+- Support Elasticsearch 6.x (issue #158)
 
 
 ## Version 0.10.0 (2018-01-16)
