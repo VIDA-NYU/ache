@@ -12,9 +12,11 @@
 - Upgrade react-scripts to get rid of vulnerable transitive dependency (hoek:4.2.0)
 - Upgrade npm version to 5.8.0 on gradle build script
 - Changed `smile` target page classifier to use Platt's scaling only when the
-parameter 'relevance_threshold' is provided in the `pageclassifier.yml` file.
+  parameter 'relevance_threshold' is provided in the `pageclassifier.yml` file.
 - Added Ansible scripts for automatic deployment
 - Added RocksDB-based target repository (RocksDBTargetRepository)
+- Fixed bug in ache-dashboard that prevented reloading search page on browser
+  page refresh (issue #163)
 
 
 ## Version 0.10.0 (2018-01-16)
