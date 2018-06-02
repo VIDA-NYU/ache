@@ -7,9 +7,13 @@ import io.airlift.airline.HelpOption;
 import io.airlift.airline.ParseException;
 import io.airlift.airline.SingleCommand;
 import io.airlift.airline.model.MetadataLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class CliTool implements Runnable {
-    
+
+    private static Logger logger = LoggerFactory.getLogger(CliTool.class);
+
     @Inject
     public HelpOption helpOption;
     
@@ -38,8 +42,8 @@ public abstract class CliTool implements Runnable {
             System.exit(1);
         }
         catch (Exception e) {
-            System.err.println("Failed to execute command.");
-            e.printStackTrace(System.err);
+            logger.error("Failed to execute command.", e);
+            System.exit(1);
         }
     }
     

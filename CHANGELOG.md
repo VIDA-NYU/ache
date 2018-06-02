@@ -3,6 +3,10 @@
 ## Version 0.12.0-SNAPSHOT
 
 - Upgrade `crawler-commons` dependency to version 0.9
+- Removed Elasticsearch transport-client-based repository
+- Removed Elasticsearch 1.4.4 binaries dependency
+- Added DumpDataFromElasticsearch tool for dumping documents from Elasticsearch
+  repositories
 
 ## Version 0.11.0
 

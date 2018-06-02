@@ -1,13 +1,14 @@
 package focusedCrawler.target.repository.elasticsearch;
 
-import org.elasticsearch.client.Client;
-import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.ImmutableSettings;
-import org.elasticsearch.common.settings.ImmutableSettings.Builder;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.node.Node;
-import org.elasticsearch.node.NodeBuilder;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.apache.http.HttpHost;
+import org.apache.http.client.config.RequestConfig.Builder;
+import org.elasticsearch.client.RestClient;
+import org.elasticsearch.client.RestClientBuilder.RequestConfigCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,50 +16,41 @@ public class ElasticSearchClientFactory {
 
     private static final Logger logger = LoggerFactory.getLogger(ElasticSearchClientFactory.class);
 
-    private static Node clientNode;
-    private static Client client;
+    public static RestClient createClient(ElasticSearchConfig config) {
 
-    @SuppressWarnings("resource")
-    public static Client createClient(ElasticSearchConfig config) {
+        HttpHost[] httpHosts = parseHostAddresses(config.getRestApiHosts());
 
-        if (client != null) {
-            return client;
-        }
+        RestClient client = RestClient.builder(httpHosts)
+                .setRequestConfigCallback(new RequestConfigCallback() {
+                    @Override
+                    public Builder customizeRequestConfig(
+                            Builder requestConfigBuilder) {
+                        return requestConfigBuilder
+                                .setConnectTimeout(config.getRestConnectTimeout())
+                                .setSocketTimeout(config.getRestSocketTimeout());
+                    }
+                })
+                .setMaxRetryTimeoutMillis(config.getRestMaxRetryTimeoutMillis())
+                .build();
 
-        String elasticSearchHost = config.getHost();
-        int elasticSearchPort = config.getPort();
-        String clusterName = config.getClusterName();
-
-        Builder settingsBuilder = ImmutableSettings.settingsBuilder();
-        if (clusterName != null) {
-            settingsBuilder.put("cluster.name", clusterName);
-        }
-        Settings settings = settingsBuilder.build();
-
-        if (elasticSearchHost != null) {
-            logger.info("Creating a ElasticSearch TransportClient for address: {}:{}",
-                    elasticSearchHost, elasticSearchPort);
-            int port = elasticSearchPort != 0 ? elasticSearchPort : 9300;
-            InetSocketTransportAddress socketAddress = new InetSocketTransportAddress(
-                    elasticSearchHost, port);
-            client = new TransportClient(settings).addTransportAddress(socketAddress);
-            return client;
-        } else {
-            logger.info("Creating a ElasticSearch Node Client for address: %s:%s",
-                    elasticSearchHost, elasticSearchPort);
-            clientNode = NodeBuilder.nodeBuilder().client(true).settings(settings).node();
-            client = clientNode.client();
-            return client;
-        }
+        logger.info("Initialized Elasticsearch REST client for: " + Arrays.toString(httpHosts));
+        return client;
     }
 
-    public void closeClient() {
-        if (client != null) {
-            client.close();
+    private static HttpHost[] parseHostAddresses(List<String> esHosts) {
+        List<HttpHost> hosts = new ArrayList<>();
+        for (String host : esHosts) {
+            try {
+                URL url = new URL(host);
+                int port = url.getPort() == -1 ? 9200 : url.getPort();
+                hosts.add(new HttpHost(url.getHost(), port, url.getProtocol()));
+            } catch (MalformedURLException e) {
+                throw new RuntimeException("Failed to initialize Elasticsearch REST client. "
+                        + "Invalid host: " + host, e);
+            }
         }
-        if (clientNode != null) {
-            clientNode.close();
-        }
+
+        return (HttpHost[]) hosts.toArray(new HttpHost[hosts.size()]);
     }
 
 }
