@@ -25,8 +25,8 @@ dependencies {
     compile group: 'org.apache.commons', name: 'commons-compress', version: '1.12'
     compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
     compile group: 'commons-validator', name: 'commons-validator', version: '1.5.1'
-    compile group: 'com.github.crawler-commons', name: 'crawler-commons', version: '0.8'
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    compile group: 'com.github.crawler-commons', name: 'crawler-commons', version: '0.9'
     // CLI
     compile group: 'io.airlift', name: 'airline', version: '0.7'
     // Data serialization

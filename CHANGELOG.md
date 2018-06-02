@@ -1,6 +1,10 @@
 # ACHE Crawer Change Log
 
-## Version 0.11.0-SNAPSHOT (Unreleased)
+## Version 0.12.0-SNAPSHOT
+
+- Upgrade `crawler-commons` dependency to version 0.9
+
+## Version 0.11.0
 
 - Removed dependency on Weka and reimplemented all machine-learning code using SMILE.
 - Added option to skip cross-validation on `ache buildModel` command
