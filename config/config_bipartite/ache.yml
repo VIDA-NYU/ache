@@ -1,0 +1,78 @@
+################## ACHE Configuration for Bipartite Crawling ###################
+
+#
+# Configurations for Target Storage
+#
+
+# Change to false if you don't want to store pages classified as irrelevant
+target_storage.store_negative_pages: false
+
+# Configure ELASTICSEARCH and FILES data formats
+target_storage.data_formats:
+  - ELASTICSEARCH
+  - FILES
+target_storage.data_format.elasticsearch.rest.hosts:
+  - http://elasticsearch:9200
+
+# Performs hard focus or soft focus. When hard focus is enabled,
+# the crawler only follows links from pages classified as relevant
+target_storage.hard_focus: true
+
+# Run bipartite crawler
+target_storage.bipartite: true
+
+# Store only pages that contain english text using language detector
+target_storage.english_language_detection_enabled: false
+
+#
+# Configurations for Link Storage
+#
+
+# Max number of pages to be crawled from each web domain
+link_storage.max_pages_per_domain: 100
+# Restricts the crawler to crawl the websites provided as seeds
+link_storage.link_strategy.use_scope: false
+# Allows the crawler to follow forward links
+link_storage.link_strategy.outlinks: true
+# Gets backlinks of the pages from a search engine used by the bipartite crawling
+link_storage.link_strategy.backlinks: true
+
+# Type of link classifier used by link storage
+link_storage.link_classifier.type: LinkClassifierBaseline
+
+# Retrain link classifiers on-the-fly
+link_storage.online_learning.enabled: true
+# Retrain link classifiers for bipartite crawling
+link_storage.online_learning.type: LINK_CLASSIFIERS
+# Learn iteration criterion (every n pages runs online learning)
+link_storage.online_learning.learning_limit: 500
+
+# Types of LinkSelectors available:
+link_storage.link_selector: TopkLinkSelector
+
+# Backlink surfer parameters
+#link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
+#link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+link_storage.scheduler.host_min_access_interval: 5000
+
+#
+# Configurations for Crawler Manager
+#
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+#crawler_manager.downloader.user_agent.email: someone@example.com
+#crawler_manager.downloader.user_agent.string: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+crawler_manager.downloader.valid_mime_types:
+ - text/xml
+ - text/html
+ - text/plain
+ - application/x-asp
+ - application/xhtml+xml
+ - application/vnd.wap.xhtml+xml
+
+#use okhttp3Fetcher instead of simpleHttpFetcher
+crawler_manager.downloader.use_okhttp3_fetcher: true
+
+# Discovery of new links using sitemap.xml protocol
+link_storage.download_sitemap_xml: false
