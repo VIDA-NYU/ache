@@ -66,6 +66,7 @@ public class ElasticsearchProxyResource {
             }
             HttpPost post = new HttpPost(url);
             post.setEntity(new StringEntity(request.body(), "UTF-8"));
+            post.addHeader("Content-Type", "application/json"); // mandatory since ES 6.x
             CloseableHttpResponse apiResponse = httpclient.execute(post);
             try {
                 HttpEntity entity = apiResponse.getEntity();

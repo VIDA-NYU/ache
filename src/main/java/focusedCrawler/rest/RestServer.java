@@ -69,7 +69,7 @@ public class RestServer {
         List<String> indexes = asList(
             "/",
             "/index.html",
-            "/search",
+            "/search/*",
             "/monitoring",
             "/monitoring/*",
             "/start",

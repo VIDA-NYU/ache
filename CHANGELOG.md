@@ -1,6 +1,14 @@
 # ACHE Crawer Change Log
 
-## Version 0.11.0-SNAPSHOT (Unreleased)
+## Version 0.12.0-SNAPSHOT
+
+- Upgrade `crawler-commons` dependency to version 0.9
+- Removed Elasticsearch transport-client-based repository
+- Removed Elasticsearch 1.4.4 binaries dependency
+- Added DumpDataFromElasticsearch tool for dumping documents from Elasticsearch
+  repositories
+
+## Version 0.11.0
 
 - Removed dependency on Weka and reimplemented all machine-learning code using SMILE.
 - Added option to skip cross-validation on `ache buildModel` command
@@ -12,9 +20,12 @@
 - Upgrade react-scripts to get rid of vulnerable transitive dependency (hoek:4.2.0)
 - Upgrade npm version to 5.8.0 on gradle build script
 - Changed `smile` target page classifier to use Platt's scaling only when the
-parameter 'relevance_threshold' is provided in the `pageclassifier.yml` file.
+  parameter 'relevance_threshold' is provided in the `pageclassifier.yml` file.
 - Added Ansible scripts for automatic deployment
 - Added RocksDB-based target repository (RocksDBTargetRepository)
+- Fixed bug in ache-dashboard that prevented reloading search page on browser
+  page refresh (issue #163)
+- Support Elasticsearch 6.x (issue #158)
 
 
 ## Version 0.10.0 (2018-01-16)

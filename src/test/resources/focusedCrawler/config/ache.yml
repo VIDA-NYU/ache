@@ -7,24 +7,10 @@
 # Change to false if don't want to store pages classified as irrelevant
 target_storage.store_negative_pages: false
 
-# Configuration for data format used to store crawled data
-
-# Enable this change target storage's data format
-#target_storage.data_format.type: FILESYSTEM_HTML
-#target_storage.data_format.type: FILESYSTEM_CBOR
-#target_storage.data_format.type: FILESYSTEM_JSON
-
-# Enable this to name files using a hash instead of encoded URL
-#target_storage.data_format.filesystem.hash_file_name: true
-
-# Enable this to compress the file content
-#target_storage.data_format.filesystem.compress_data: true
-
 # Enable this config to use ElasticSearch for target storage
 target_storage.data_format.type: ELASTICSEARCH
-target_storage.data_format.elasticsearch.host: elasticsearch.localhost
-target_storage.data_format.elasticsearch.port: 9999
-target_storage.data_format.elasticsearch.cluster_name: elasticsearch-test
+target_storage.data_format.elasticsearch.rest.hosts:
+  - http://node01:9201
 
 # Performs hard focus or soft focus. When hard focus is enabled,
 # the crawler only follows links from pages classified as relevant
@@ -57,10 +43,6 @@ link_storage.link_strategy.outlinks: false # GRAB_LINKS TRUE
 # Gets backlinks of the pages from a search engine used by the bipartite crawling
 link_storage.link_strategy.backlinks: true # SAVE_BACKLINKS FALSE
 
-# Type of link classifier used by link storage
-# - LinkClassifierBaseline: random link strategy when no page classifier is provided, or Soumen's baseline strategy when a page classifier is provided
-# - LinkClassifierImpl: link strategy using a link classifier
-# - LinkClassifierAuthority: link strategy for the bipartite crawling
 
 link_storage.link_classifier.type: LinkClassifierImpl
 link_storage.link_classifier.parameters.class_values: ["0", "1", "2"] #CLASS_VALUES 0 1 2
@@ -68,28 +50,14 @@ link_storage.link_classifier.parameters.class_values: ["0", "1", "2"] #CLASS_VAL
 # Retrain link classifiers on-the-fly
 link_storage.online_learning.enabled: false
 
-# Type of online learning (FORWARD_CLASSIFIER_BINARY,FORWARD_CLASSIFIER_BINARY)
-# - FORWARD_CLASSIFIER_BINARY: pos/neg link classifier
-# - FORWARD_CLASSIFIER_LEVELS: contextual graph with 3 levels
 link_storage.online_learning.type: FORWARD_CLASSIFIER_BINARY
 
 # Learn iteration criterion (every n pages runs online learning)
 link_storage.online_learning.learning_limit: 555
 
-# Types of LinkSelectors available:
-# - TopkLinkSelector
-# - SiteLinkSelector
-# - RandomLinkSelector
-# - NonRandomLinkSelector
-# - MultiLevelLinkSelector
-# - TopicLinkSelector
 link_storage.link_selector: TopkLinkSelector
 
 link_storage.max_size_cache_urls: 222222 # MAX_CACHE_URLS_SIZE 200000
-
-# Configurations for link storage's server
-link_storage.server.host: linkstorage.localhost # RMI_STORAGE_SERVER_HOST localhost
-link_storage.server.port: 19888 # RMI_STORAGE_SERVER_PORT 1988
 
 # Directory to store link storage's frontier database
 link_storage.directory: "data_url/dir"

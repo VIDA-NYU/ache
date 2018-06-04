@@ -46,9 +46,7 @@ public class ConfigurationTest {
 
         assertThat(config.getDataFormats(), contains("ELASTICSEARCH"));
         assertThat(config.getElasticSearchConfig(), is(notNullValue()));
-        assertThat(config.getElasticSearchConfig().getHost(), is("elasticsearch.localhost"));
-        assertThat(config.getElasticSearchConfig().getPort(), is(9999));
-        assertThat(config.getElasticSearchConfig().getClusterName(), is("elasticsearch-test"));
+        assertThat(config.getElasticSearchConfig().getRestApiHosts().get(0), is("http://node01:9201"));
     }
 
     @Test

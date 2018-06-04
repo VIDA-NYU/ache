@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.target.repository.ElasticSearchRestTargetRepository;
-import focusedCrawler.target.repository.ElasticSearchTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.MultipleTargetRepositories;
@@ -85,11 +84,8 @@ public class TargetRepositoryFactory {
                 if (esTypeName != null && !esTypeName.isEmpty()) {
                     esconfig.setTypeName(esTypeName);
                 }
-                if (esconfig.getRestApiHosts() == null) {
-                    return new ElasticSearchTargetRepository(esconfig);
-                } else {
-                    return new ElasticSearchRestTargetRepository(esconfig);
-                }
+                return new ElasticSearchRestTargetRepository(esconfig);
+
             default:
                 throw new IllegalArgumentException("Invalid data format provided: " + dataFormat);
         }
