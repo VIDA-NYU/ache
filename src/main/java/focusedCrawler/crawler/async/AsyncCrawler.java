@@ -1,11 +1,7 @@
 package focusedCrawler.crawler.async;
 
 import focusedCrawler.dedup.DupDetector;
-import focusedCrawler.dedup.HashMapDupDetector;
-import focusedCrawler.dedup.ProbabilisticExactDupDetector;
-import focusedCrawler.link.classifier.online.DeduplicationOnlineLearning.DuplicationType;
 import focusedCrawler.minhash.DupDetectorFactory;
-import focusedCrawler.minhash.DuplicatePageIndexer;
 import focusedCrawler.target.TargetStorageConfig;
 import java.util.HashMap;
 import java.util.List;

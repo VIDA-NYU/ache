@@ -1,4 +1,4 @@
-package focusedCrawler.tools;
+package focusedCrawler.tools.dedup;
 
 import focusedCrawler.config.Configuration;
 import focusedCrawler.dedup.DupDetector;
@@ -20,9 +20,9 @@ import java.io.FileOutputStream;
 import java.io.PrintStream;
 
 
-@Command(name = "DedupCrawlSimulation",
+@Command(name = "CrawlSimulation",
         description = "Run a crawl simulation based on data from a previous crawl using the new configurations.")
-public class DedupCrawlSimulation extends CliTool {
+public class CrawlSimulation extends CliTool {
 
     @Option(name = {"-ir", "--input-repository"}, required = true,
             description = "Path to input crawler data directory")
@@ -52,7 +52,7 @@ public class DedupCrawlSimulation extends CliTool {
     private String metricsFile;
 
     public static void main(String[] args) throws Exception {
-        CliTool.run(args, new DedupCrawlSimulation());
+        CliTool.run(args, new CrawlSimulation());
     }
 
     @Override

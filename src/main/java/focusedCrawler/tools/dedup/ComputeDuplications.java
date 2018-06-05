@@ -1,4 +1,4 @@
-package focusedCrawler.dedup;
+package focusedCrawler.tools.dedup;
 
 import de.l3s.boilerpipe.extractors.KeepEverythingExtractor;
 import focusedCrawler.config.Configuration;

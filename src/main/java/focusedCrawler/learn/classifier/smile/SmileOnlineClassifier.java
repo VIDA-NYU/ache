@@ -91,7 +91,7 @@ public class SmileOnlineClassifier<T> {
                 svm.trainPlattScaling(x, y);
                 return svm;
             case RANDOM_FOREST:
-                RandomForest randomForest = new RandomForest(x, y, 100);
+                RandomForest randomForest = new RandomForest(x, y, 300);
                 return randomForest;
             case GRADIENT_BOOSTING:
                 GradientTreeBoost gbt = new GradientTreeBoost(x, y, 300);

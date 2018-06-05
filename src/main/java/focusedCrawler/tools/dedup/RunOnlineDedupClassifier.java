@@ -1,4 +1,4 @@
-package focusedCrawler.dedup;
+package focusedCrawler.tools.dedup;
 
 import focusedCrawler.learn.vectorizer.BinaryTextVectorizer.WeightType;
 import java.io.BufferedReader;
@@ -33,14 +33,11 @@ public class RunOnlineDedupClassifier extends CliTool {
         TERMS, TERMS_HASHING, RULES, URL_TOKENS, ALL
     }
 
-    @Option(name = {"-i", "--input-path"}, required = false)
-    String inputPath = "/home/aeciosantos/workdata/dedup/";
+    @Option(name = {"--train"}, required = true)
+    String trainFile = "crawleval_dups.csv.train";
 
-    @Option(name = {"--train"}, required = false)
-    String trainFile = inputPath + "crawleval_dups.csv.train";
-
-    @Option(name = {"--test"}, required = false)
-    String testFile = inputPath + "crawleval_dups.csv.test";
+    @Option(name = {"--test"}, required = true)
+    String testFile = "crawleval_dups.csv.test";
 
     @Option(name = {"--timestamp"}, required = false)
     boolean timestamp = true;
@@ -51,8 +48,8 @@ public class RunOnlineDedupClassifier extends CliTool {
     @Option(name = {"--features"}, required = false)
     Features features = Features.TERMS;
 
-    @Option(name = "--output-file", description = "The output file", required = false)
-    private String outputFile = "/home/aeciosantos/workdata/dedup/smile.";
+    @Option(name = "--output-file", description = "The output file", required = true)
+    private String outputFile = null;
 
     public static void main(String[] args) throws Exception {
         CliTool.run(args, new RunOnlineDedupClassifier());

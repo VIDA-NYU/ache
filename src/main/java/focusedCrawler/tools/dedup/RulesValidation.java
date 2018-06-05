@@ -1,4 +1,4 @@
-package focusedCrawler.tools;
+package focusedCrawler.tools.dedup;
 
 import static java.util.Arrays.asList;
 
@@ -17,7 +17,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 
-public class DedupRulesValidation {
+public class RulesValidation {
 
     static Map<String, String> urlContent = new HashMap<String, String>();
     static Set<String> dust = new HashSet<String>();
