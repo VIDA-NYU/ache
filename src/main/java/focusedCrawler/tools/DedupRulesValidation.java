@@ -1,7 +1,9 @@
-package focusedCrawler.dedup.rules;
+package focusedCrawler.tools;
 
 import static java.util.Arrays.asList;
 
+import com.google.common.collect.Lists;
+import focusedCrawler.dedup.rules.RewriteRule;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -14,14 +16,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import com.google.common.collect.Lists;
 
-import focusedCrawler.dedup.DupDetector;
-import focusedCrawler.dedup.rules.UrlAlignment.RewriteRule;
-import focusedCrawler.dedup.rules.UrlAlignment.Sequence;
-
-
-public class RulesValidation {
+public class DedupRulesValidation {
 
     static Map<String, String> urlContent = new HashMap<String, String>();
     static Set<String> dust = new HashSet<String>();
@@ -32,15 +28,7 @@ public class RulesValidation {
 
     public static void main(String[] args) throws IOException {
 
-        String[] filename = {
-                "www.ar15.com_dups.txt",
-                "arguntrader.com_dups.txt",
-                "www.firearmstalk.com_dups.txt",
-                "www.nextechclassifieds.com_dups.txt",
-                "www.sturmgewehr.com_dups.txt",
-                "www.thefirearmblog.com_dups.txt"
-                // "data_target_dups.txt"
-        };
+        String[] filename = args;
 
         for (int i = 0; i < filename.length; i++) {
             System.out.println("========================================");
@@ -114,17 +102,10 @@ public class RulesValidation {
             // String contentHash = entry.getKey();
             // System.out.println("Creating rule for: "+contentHash);
             List<String> urls = entry.getValue();
-            RewriteRule rule = createRewriteRule(urls);
-            rules.add(rule);
+            rules.add(new RewriteRule(urls, K));
             // System.out.println(rule);
         }
         return rules;
-    }
-
-    private static RewriteRule createRewriteRule(List<String> urls) {
-        int size = Math.min(urls.size(), K);
-        Sequence alignment = Sequence.multipleAlignment(urls.subList(0, size));
-        return new RewriteRule(alignment);
     }
 
     private static List<RewriteRule> validateRules(Map<String, List<String>> validationSet,
@@ -247,16 +228,6 @@ public class RulesValidation {
             }
         }
         return normalized;
-    }
-
-    public List<RewriteRule> buildRules(DupDetector.DupData dupData) {
-        List<RewriteRule> rules = new ArrayList<>();
-        for (List<String> dupCluster : dupData.duplicates) {
-            RewriteRule rewriteRule = createRewriteRule(dupCluster);
-//            System.out.println(rewriteRule.toString());
-            rules.add(rewriteRule);
-        }
-        return rules;
     }
 
 }

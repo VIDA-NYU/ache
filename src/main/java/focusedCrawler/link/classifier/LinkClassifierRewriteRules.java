@@ -1,26 +1,19 @@
 package focusedCrawler.link.classifier;
 
-import focusedCrawler.dedup.rules.UrlAlignment;
-import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
+import focusedCrawler.dedup.rules.RewriteRule;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.LinkNeighborhood;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LinkClassifierRewriteRules implements LinkClassifier {
 
-    private SmileOnlineClassifier<String> classifier;
-    private List<UrlAlignment.RewriteRule> rules;
+    private List<RewriteRule> rules;
 
-    public LinkClassifierRewriteRules(SmileOnlineClassifier<String> classifier) {
-        this.classifier = classifier;
-    }
-
-    public LinkClassifierRewriteRules(List<UrlAlignment.RewriteRule> rules) {
+    public LinkClassifierRewriteRules(List<RewriteRule> rules) {
         this.rules = rules;
     }
 
@@ -36,7 +29,7 @@ public class LinkClassifierRewriteRules implements LinkClassifier {
         try {
             List<LinkRelevance> links = new ArrayList<>();
             for (int i = 0; i < lns.length; i++) {
-                for (UrlAlignment.RewriteRule rule : rules) {
+                for (RewriteRule rule : rules) {
                     String url = lns[i].toString();
                     double relevance = 1.0d;
 //                    double relevance = Math.abs(page.getLinkRelevance().getRelevance()) - 1;
@@ -56,25 +49,7 @@ public class LinkClassifierRewriteRules implements LinkClassifier {
 
     @Override
     public LinkRelevance classify(LinkNeighborhood ln) {
-        URL url = ln.getLink();
-        double nonDupProbability = classifyURL(url.toString());
-        return new LinkRelevance(url, nonDupProbability);
+        throw new UnsupportedOperationException("Method not supported yet.");
     }
-
-    public double classifyURL(String url) {
-        double nonDupProbability;
-        if (classifier == null) {
-            nonDupProbability = 1.0;
-        } else {
-            double[] probabilities = classifier.classify(url);
-            nonDupProbability = probabilities[0];
-        }
-//        if (nonDupProbability < 0.5) {
-//            System.out.printf("nondup-prob: %.5f dup-prob: %.5f url: %s\n", nonDupProbability,
-//                    1.0 - nonDupProbability, url);
-//        }
-        return nonDupProbability;
-    }
-
 
 }

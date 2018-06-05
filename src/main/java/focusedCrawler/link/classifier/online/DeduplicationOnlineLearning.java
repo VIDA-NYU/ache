@@ -2,8 +2,8 @@ package focusedCrawler.link.classifier.online;
 
 import focusedCrawler.dedup.DupDetector;
 import focusedCrawler.dedup.DupDetector.DupData;
-import focusedCrawler.dedup.rules.RulesValidation;
-import focusedCrawler.dedup.rules.UrlAlignment;
+import focusedCrawler.dedup.rules.RewriteRule;
+import focusedCrawler.dedup.rules.Sequence;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier;
 import focusedCrawler.learn.classifier.smile.SmileOnlineClassifier.Learner;
 import focusedCrawler.learn.vectorizer.BinaryTextVectorizer;
@@ -11,7 +11,6 @@ import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierDeduplication;
 import focusedCrawler.link.classifier.LinkClassifierRewriteRules;
 import focusedCrawler.link.frontier.FrontierManager;
-import focusedCrawler.target.model.Page;
 import focusedCrawler.util.Sampler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -105,8 +104,10 @@ public class DeduplicationOnlineLearning extends OnlineLearning {
     }
 
     private LinkClassifier buildRulesLinkClassifier(DupData dupData) {
-        RulesValidation rulesValidation = new RulesValidation();
-        List<UrlAlignment.RewriteRule> rules = rulesValidation.buildRules(dupData);
+        List<RewriteRule> rules = new ArrayList<>();
+        for (List<String> dupCluster : dupData.duplicates) {
+            rules.add(new RewriteRule(dupCluster));
+        }
         return new LinkClassifierRewriteRules(rules);
     }
 

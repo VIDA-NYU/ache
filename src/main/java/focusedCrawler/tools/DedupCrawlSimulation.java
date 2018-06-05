@@ -1,11 +1,11 @@
-package focusedCrawler.dedup;
+package focusedCrawler.tools;
 
 import focusedCrawler.config.Configuration;
+import focusedCrawler.dedup.DupDetector;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.minhash.DupDetectorFactory;
-import focusedCrawler.minhash.DuplicatePageIndexer;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.target.repository.RocksDBTargetRepository;
@@ -18,14 +18,11 @@ import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Set;
 
 
-@Command(name = "CrawlSimulation",
+@Command(name = "DedupCrawlSimulation",
         description = "Run a crawl simulation based on data from a previous crawl using the new configurations.")
-public class CrawlSimulation extends CliTool {
+public class DedupCrawlSimulation extends CliTool {
 
     @Option(name = {"-ir", "--input-repository"}, required = true,
             description = "Path to input crawler data directory")
@@ -55,7 +52,7 @@ public class CrawlSimulation extends CliTool {
     private String metricsFile;
 
     public static void main(String[] args) throws Exception {
-        CliTool.run(args, new CrawlSimulation());
+        CliTool.run(args, new DedupCrawlSimulation());
     }
 
     @Override

@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import focusedCrawler.dedup.rules.UrlAlignment.RewriteRule;
-import focusedCrawler.dedup.rules.UrlAlignment.Sequence;
+import focusedCrawler.dedup.rules.RewriteRule;
+import focusedCrawler.dedup.rules.Sequence;
 
 public class UrlAlignmentVectorizer extends IndexedVectorizer {
 
