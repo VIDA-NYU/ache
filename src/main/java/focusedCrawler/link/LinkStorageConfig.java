@@ -69,6 +69,9 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.link_selector")
     private String linkSelector = "TopkLinkSelector";
 
+    @JsonProperty("link_storage.link_selector.min_relevance")
+    private double linkSelectorMinRelevance = 0.0d;
+
     // TODO Remove target storage folder dependency from link storage
     private String targetStorageDirectory = "data_target/";
 
@@ -168,6 +171,10 @@ public class LinkStorageConfig {
 
     public String getLinkSelector() {
         return linkSelector;
+    }
+
+    public double getLinkSelectorMinRelevance() {
+        return linkSelectorMinRelevance;
     }
 
     public String getRecrawlSelector() {

@@ -7,6 +7,7 @@
 - Removed Elasticsearch 1.4.4 binaries dependency
 - Added DumpDataFromElasticsearch tool for dumping documents from Elasticsearch
   repositories
+- Added configuration for minimum relevance in link selectors
 
 ## Version 0.11.0
 

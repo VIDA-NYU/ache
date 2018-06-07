@@ -51,7 +51,7 @@ public class FrontierManagerFactory {
             throw new IllegalArgumentException("Link selector not configured: " + linkSelector);
         }
         if (linkSelector.equals("TopkLinkSelector")) {
-            return new TopkLinkSelector();
+            return new TopkLinkSelector(config.getLinkSelectorMinRelevance());
         } else if (linkSelector.equals("RandomLinkSelector")) {
             return new RandomLinkSelector();
         } else if (linkSelector.equals("NonRandomLinkSelector")) {
@@ -59,7 +59,7 @@ public class FrontierManagerFactory {
         } else if (linkSelector.equals("MultiLevelLinkSelector")) {
             return new MultiLevelLinkSelector();
         } else if (linkSelector.equals("MaximizeWebsitesLinkSelector")) {
-            return new MaximizeWebsitesLinkSelector();
+            return new MaximizeWebsitesLinkSelector(config.getLinkSelectorMinRelevance());
         } else {
             throw new IllegalArgumentException("Unknown link selector configured: " + linkSelector);
         }

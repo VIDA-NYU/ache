@@ -18,9 +18,20 @@ import focusedCrawler.link.frontier.LinkRelevance;
 public class MaximizeWebsitesLinkSelector implements LinkSelector {
     
     private static final int MAX_LINKS_PER_DOMAIN = 5000;
-    
+    private static final double DEFAULT_MIN_RELEVANCE = 0.0d;
+
+    private final double minRelevance;
+
     private Map<String, MinMaxPriorityQueue<LinkRelevance>> topkLinksPerDomain;
     private int numberOfLinks;
+
+    public MaximizeWebsitesLinkSelector() {
+        this(DEFAULT_MIN_RELEVANCE);
+    }
+
+    public MaximizeWebsitesLinkSelector(double minRelevance) {
+        this.minRelevance = minRelevance;
+    }
 
     @Override
     public void startSelection(int numberOfLinks) {
@@ -30,7 +41,7 @@ public class MaximizeWebsitesLinkSelector implements LinkSelector {
 
     @Override
     public void evaluateLink(LinkRelevance link) {
-        if (link.getRelevance() > 0) {
+        if (link.getRelevance() > minRelevance) {
             String domainName = link.getTopLevelDomainName();
             MinMaxPriorityQueue<LinkRelevance> domainQueue = topkLinksPerDomain.get(domainName);
             if (domainQueue == null) {
