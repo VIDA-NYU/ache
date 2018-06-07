@@ -8,6 +8,9 @@
 - Added DumpDataFromElasticsearch tool for dumping documents from Elasticsearch
   repositories
 - Added configuration for minimum relevance in link selectors
+- Added configuration for selecting whether should re-crawl sitemaps and
+  robots.txt links
+
 
 ## Version 0.11.0
 
