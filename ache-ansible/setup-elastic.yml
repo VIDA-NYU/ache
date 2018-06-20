@@ -1,0 +1,90 @@
+---
+# This playbook deploys a small Elasticsearch cluster
+
+- name: Config Python 2 on elastic search servers
+  hosts: es_node
+  user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  gather_facts: no
+  pre_tasks:
+    - name: 'Install Python2'
+      raw: apt-get -y install python-minimal
+
+- hosts: es_node
+  remote_user: ubuntu
+  tasks: []
+
+#
+# Configure /etc/hosts in all elasticsearch nodes
+#
+- hosts: es_node
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  tasks:
+    - name: Build /etc/hosts file
+      lineinfile:
+        dest: /etc/hosts
+        regexp: '.*{{ item }}$'
+        line: '{{ hostvars[item].private_ip }} {{item}}'
+        state: present
+      with_items: '{{ groups["es_node"] }}'
+    - debug:
+        msg: "Private IP: {{ hostvars[inventory_hostname].private_ip }}"
+    - debug:
+        msg: "Unicast Hosts: {{ groups['es_node'] | join(':9300,') }}:9300"
+
+#
+# Deploy Elasticsearch in all nodes from group es_node
+#
+- name: "Deploy Elasticsearch role"
+  hosts: es_node
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - {
+        role: elasticsearch,
+        es_version: "5.6.9",
+        es_major_version: "5.x",
+        es_instance_name: "node",
+        es_data_dirs: "/opt/elasticsearch",
+        es_restart_on_change: true,
+        es_config: {
+            discovery.zen.ping.unicast.hosts: "{{ groups['es_node'] | join(':9300,') }}:9300",
+            http.port: 9200,
+            transport.tcp.port: 9300,
+            #network.host: [
+            #  "{{ hostvars[inventory_hostname].private_ip }}",
+            #  "127.0.0.1"
+            #],
+            network.host: "0.0.0.0",
+            #network.host: - "{{ hostvars[inventory_hostname].private_ip }}",
+            node.data: true,
+            node.master: true,
+            bootstrap.memory_lock: true,
+            cluster.name: "{{ hostvars[inventory_hostname].es_cluster_name | default('ache-cluster') }}"
+        }
+      }
+  vars:
+    es_scripts: false
+    es_templates: false
+    es_version_lock: false
+    es_api_port: 9200
+    es_heap_size: "{{ hostvars[inventory_hostname].es_heap_size | default('2G')}}"
+
+- hosts: es_node
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  tasks:
+    - name: Debian - Ensure it's enabled on startup
+      lineinfile:
+        path: /etc/default/node_elasticsearch
+        regexp: '^START_DAEMON='
+        line: 'START_DAEMON=true'

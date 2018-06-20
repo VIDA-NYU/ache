@@ -17,39 +17,47 @@ public abstract class OnlineLearning implements Runnable {
     private volatile MonitorLock monitorLock = new MonitorLock();
     private volatile AtomicBoolean wasSignalled = new AtomicBoolean(false);
 
+    private final boolean async;
     private final int learnLimit;
     private AtomicInteger pageCounter = new AtomicInteger(0);
     private FrontierManager frontierManager;
 
-    public OnlineLearning(int learnLimit, FrontierManager frontierManager) {
+    public OnlineLearning(int learnLimit, boolean async, FrontierManager frontierManager) {
         this.frontierManager = frontierManager;
         this.learnLimit = learnLimit;
-        Thread learner = new Thread(this);
-        learner.setDaemon(true);
-        learner.setName("Online-Learner");
-        learner.start();
+        this.async = async;
+        if (async) {
+            Thread learner = new Thread(this);
+            learner.setDaemon(true);
+            learner.setName("Online-Learner");
+            learner.start();
+        }
     }
 
     @Override
     public void run() {
         while (!Thread.currentThread().isInterrupted()) {
             doWait();
-            try {
-                if (isRunning.compareAndSet(false, true)) {
-                    // isRunning was false, but now is true
-                    logger.info("Executing online learning...");
-                    this.execute();
-                    logger.info("Reloading Frontier...");
-                    frontierManager.forceReload();
-                }
-            } catch (Exception e) {
-                logger.error("Failed to execute OnlineLearning.", e);
-            } finally {
-                logger.info("Online learning execution finished.");
-                isRunning.set(false);
-            }
+            executeLearning();
         }
         logger.info("Online-Learner thread finalized.");
+    }
+
+    private void executeLearning() {
+        try {
+            if (isRunning.compareAndSet(false, true)) {
+                // isRunning was false, but now is true
+                logger.info("Executing online learning...");
+                this.execute();
+                logger.info("Reloading Frontier...");
+                frontierManager.forceReload();
+            }
+        } catch (Exception e) {
+            logger.error("Failed to execute OnlineLearning.", e);
+        } finally {
+            logger.info("Online learning execution finished.");
+            isRunning.set(false);
+        }
     }
 
     /**
@@ -83,7 +91,11 @@ public abstract class OnlineLearning implements Runnable {
         this.pageCrawledEvent(page);
         int numberOfPages = this.pageCounter.incrementAndGet();
         if (numberOfPages % learnLimit == 0) {
-            doNotify(); // triggers execution of online learning in background thread
+            if (this.async) {
+                doNotify(); // triggers execution of online learning in background thread
+            } else {
+                executeLearning();
+            }
         }
         numberOfPages++;
     }
@@ -94,16 +106,19 @@ public abstract class OnlineLearning implements Runnable {
      * {@link #execute()} is called, or they can update models in "real-time" if the learning method
      * supports online-learning.
      */
-    public void pageCrawledEvent(Page page) {}
-    
+    public void pageCrawledEvent(Page page) {
+    }
+
     /**
      * Concrete implementations should use this method train new models. This method is called
      * periodically in a independent thread once a fixed number of pages ({@link #learnLimit}) is
      * crawled .
      */
-    public void execute() throws Exception {}
+    public void execute() throws Exception {
+    }
 
     private static class MonitorLock {
+
     }
 
 }

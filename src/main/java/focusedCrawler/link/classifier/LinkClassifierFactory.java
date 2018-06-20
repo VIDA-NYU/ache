@@ -18,6 +18,8 @@ public class LinkClassifierFactory {
     public static LinkClassifier create(String modelPath, LinkStorageConfig config) {
         String typeOfClassifier = config.getTypeOfClassifier();
         switch (typeOfClassifier) {
+            case "LinkClassifierRandom":
+                return new LinkClassifierRandom();
             case "LinkClassifierBreadthSearch":
                 return new LinkClassifierBreadthSearch();
             case "LinkClassifierBaseline":

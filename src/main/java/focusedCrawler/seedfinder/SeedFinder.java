@@ -1,5 +1,6 @@
 package focusedCrawler.seedfinder;
 
+import java.io.FileOutputStream;
 import java.io.PrintStream;
 
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
@@ -18,7 +19,7 @@ public class SeedFinder extends CliTool {
     
     private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
     
-    enum SearchEngineType {
+    public enum SearchEngineType {
         GOOGLE, BING, BING_API, ALL
     }
     
@@ -64,7 +65,7 @@ public class SeedFinder extends CliTool {
         QueryProcessor queryProcessor = new QueryProcessor(maxPagesPerQuery, minPrecision, classifier, api);
 
         String seedFileName = (seedsPath.length() == 0) ? "seeds_" + query.asString() + ".txt" : seedsPath+"/seeds_" + query.asString() + ".txt";
-        PrintStream seedsFile = new PrintStream(seedFileName);
+        PrintStream seedsFile = new PrintStream(new FileOutputStream(seedFileName), true);
         PrintStream csvFile = null;
         
         if(csvPath != null && !csvPath.isEmpty()) {

@@ -4,7 +4,7 @@ import java.net.URLDecoder;
 import java.util.HashSet;
 import java.util.List;
 
-import crawlercommons.robots.BaseRobotRules;
+import crawlercommons.robots.SimpleRobotRules;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.PersistentHashtable.DB;
 import focusedCrawler.util.persistence.Tuple;
@@ -15,13 +15,13 @@ public class Frontier {
 
     protected PersistentHashtable<LinkRelevance> urlRelevance;
 
-    private final PersistentHashtable<BaseRobotRules> robotRulesMap;
+    private final PersistentHashtable<SimpleRobotRules> robotRulesMap;
 
     public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend) {
         this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize,
                 LinkRelevance.class, persistentHashtableBackend);
         this.robotRulesMap = new PersistentHashtable<>(directory + "_robots", maxCacheUrlsSize,
-                BaseRobotRules.class, persistentHashtableBackend);
+                SimpleRobotRules.class, persistentHashtableBackend);
     }
 
     public void commit() {
@@ -149,6 +149,10 @@ public class Frontier {
         LinkRelevance link = urlRelevance.get(linkRelev.getURL().toString());
         return link == null ? null : link.getRelevance();
     }
+    
+    public LinkRelevance get(String url) throws FrontierPersistentException {
+        return urlRelevance.get(url);
+    }
 
     /**
      * It deletes a URL from frontier (marks as visited).
@@ -184,7 +188,7 @@ public class Frontier {
      * @throws NullPointerException
      *             when either of the argument is null
      */
-    public void insertRobotRules(LinkRelevance link, BaseRobotRules robotRules) {
+    public void insertRobotRules(LinkRelevance link, SimpleRobotRules robotRules) {
         if (link == null || robotRules == null) {
             throw new NullPointerException("Link argument or robot rules argument cannot be null");
         }
@@ -194,7 +198,7 @@ public class Frontier {
 
     public boolean isDisallowedByRobots(LinkRelevance link) {
         String hostname = link.getURL().getHost();
-        BaseRobotRules rules = robotRulesMap.get(hostname);
+        SimpleRobotRules rules = robotRulesMap.get(hostname);
         return rules != null && !rules.isAllowed(link.getURL().toString());
     }
 

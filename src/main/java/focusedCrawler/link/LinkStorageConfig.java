@@ -57,6 +57,9 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.online_learning.enabled")
     private boolean useOnlineLearning = false;
 
+    @JsonProperty("link_storage.online_learning.async")
+    private boolean onlineLearningAsync = true;
+
     @JsonProperty("link_storage.online_learning.type")
     private String onlineMethod = "FORWARD_CLASSIFIER_BINARY";
 
@@ -65,6 +68,9 @@ public class LinkStorageConfig {
 
     @JsonProperty("link_storage.link_selector")
     private String linkSelector = "TopkLinkSelector";
+
+    @JsonProperty("link_storage.link_selector.min_relevance")
+    private double linkSelectorMinRelevance = 0.0d;
 
     // TODO Remove target storage folder dependency from link storage
     private String targetStorageDirectory = "data_target/";
@@ -89,6 +95,12 @@ public class LinkStorageConfig {
 
     @JsonProperty("link_storage.recrawl_selector.relevance.interval")
     private int recrawlMinRelevanceInterval = 60;
+
+    @JsonProperty("link_storage.recrawl_selector.relevance.recrawl_sitemaps")
+    private boolean recrawlRobots = true;
+
+    @JsonProperty("link_storage.recrawl_selector.relevance.recrawl_robots")
+    private boolean recrawlSitemaps =  true;
 
     @JsonProperty("link_storage.scheduler.host_min_access_interval")
     private int schedulerHostMinAccessInterval = 5000;
@@ -143,6 +155,10 @@ public class LinkStorageConfig {
         return useOnlineLearning;
     }
 
+    public boolean isOnlineLearningAsync() {
+        return onlineLearningAsync;
+    }
+
     public String getOnlineMethod() {
         return onlineMethod;
     }
@@ -163,6 +179,10 @@ public class LinkStorageConfig {
         return linkSelector;
     }
 
+    public double getLinkSelectorMinRelevance() {
+        return linkSelectorMinRelevance;
+    }
+
     public String getRecrawlSelector() {
         return recrawlSelector;
     }
@@ -177,6 +197,14 @@ public class LinkStorageConfig {
 
     public int getRecrawlMinRelevanceInterval() {
         return recrawlMinRelevanceInterval;
+    }
+
+    public boolean getMinRelevanceRecrawlRobots() {
+        return recrawlRobots;
+    }
+
+    public boolean getMinRelevanceRecrawlSitemaps() {
+        return recrawlSitemaps;
     }
 
     public boolean getDownloadSitemapXml() {

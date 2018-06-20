@@ -27,13 +27,69 @@ public class PaginaURLTest {
         String testString = testPage.toString();
         
         // when
-        PaginaURL pageParser = new PaginaURL(new URL("http://ex.com/index.html"),testString);
+        PaginaURL pageParser = new PaginaURL(null, testString);
         URL[] extractedLinks = pageParser.links();
         LinkNeighborhood[] neighborhood = pageParser.getLinkNeighboor();
 
         // then
+        assertThat(extractedLinks.length, is(1));
         assertThat(extractedLinks[0].toString(), is("http://ex.com/index.php?p1=asdf&p2=qwer"));
-        assertThat(neighborhood[0].getLink().toString(), is("http://ex.com/index.php?p1=asdf&p2=qwer"));
+        assertThat(neighborhood[0].getLink().toString(),
+                is("http://ex.com/index.php?p1=asdf&p2=qwer"));
+    }
+
+    /*
+     * Test for issue #141 (https://github.com/ViDA-NYU/ache/issues/141), in which the string "%2F"
+     * is appended in the end of the URL.
+     */
+    @Test
+    public void testIssue141() throws Exception {
+        // given
+        StringBuilder testPage = new StringBuilder();
+        testPage.append("<!DOCTYPE html>");
+        testPage.append("<html>");
+        testPage.append("<body>");
+        testPage.append("<a href = \"?widget=sidebar-shared\">Anchor text.</a>");
+        testPage.append("</body>");
+        testPage.append("</html>");
+        String testString = testPage.toString();
+
+        // when
+        PaginaURL pageParser = new PaginaURL(
+                new URL("http://www.example.com/most-shared/?widget=sidebar-primary-most_shared"),
+                testString);
+        URL[] extractedLinks = pageParser.links();
+        LinkNeighborhood[] neighborhood = pageParser.getLinkNeighboor();
+
+        // then
+        assertThat(extractedLinks.length, is(1));
+        assertThat(extractedLinks[0].toString(),
+                is("http://www.example.com/most-shared/?widget=sidebar-shared"));
+        assertThat(neighborhood[0].getLink().toString(),
+                is("http://www.example.com/most-shared/?widget=sidebar-shared"));
+    }
+
+    @Test
+    public void shouldIgnoreNonHttpLinks() throws Exception {
+        // given
+        StringBuilder testPage = new StringBuilder();
+        testPage.append("<!DOCTYPE html>");
+        testPage.append("<html>");
+        testPage.append("<body>");
+        testPage.append("<a href = \"mailto:someone@example.com\">Mail me!</a>");
+        testPage.append("<a href = \"ftp:example.com/file.txt\">Some File!</a>");
+        testPage.append("</body>");
+        testPage.append("</html>");
+        String testString = testPage.toString();
+
+        // when
+        PaginaURL pageParser = new PaginaURL(new URL("http://ex.com/index.html"), testString);
+        URL[] extractedLinks = pageParser.links();
+        LinkNeighborhood[] neighborhood = pageParser.getLinkNeighboor();
+
+        // then
+        assertThat(extractedLinks.length, is(0));
+        assertThat(neighborhood.length, is(0));
     }
 
     @Test

@@ -1,16 +1,26 @@
 package focusedCrawler.integration;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.Matchers.lessThan;
 import static org.hamcrest.Matchers.not;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
 
+import com.esotericsoftware.kryo.Kryo;
+import com.esotericsoftware.kryo.io.Input;
+import com.esotericsoftware.kryo.io.Output;
+import crawlercommons.robots.SimpleRobotRules;
+import crawlercommons.robots.SimpleRobotRulesParser;
+import focusedCrawler.util.persistence.PersistentHashtable;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -80,7 +90,8 @@ public class RobotsAndSitemapTest {
         }
 
         for (String url : shouldNOTBeDownloaded) {
-            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
+            LinkRelevance link = new LinkRelevance("http://127.0.0.1:1234/" + url, LinkRelevance.DEFAULT_RELEVANCE);
+            System.out.println(link);
             assertThat("URL="+url, frontier.exist(link), is(nullValue()));
         }
     }
@@ -161,6 +172,26 @@ public class RobotsAndSitemapTest {
 
         assertWasNotCrawled("http://127.0.0.1:1234/disallowed-link-1.html", frontier);
         assertWasNotCrawled("http://127.0.0.1:1234/disallowed-link-2.html", frontier);
+    }
+
+    @Test
+    public void testKryoSerializationAndDeserialization() throws IOException {
+        final String simpleRobotsTxt = "User-agent: *" + "\r\n" + "Disallow:";
+
+        SimpleRobotRulesParser robotParser = new SimpleRobotRulesParser();
+        SimpleRobotRules rules = (SimpleRobotRules) robotParser.parseContent("http://domain.com",
+                simpleRobotsTxt.getBytes(UTF_8), "text/plain", "Any-darn-crawler");
+
+        String outputPath = tempFolder.newFolder().toString();
+
+        PersistentHashtable<SimpleRobotRules> robotRulesMap = new PersistentHashtable<>(outputPath, 0,
+                SimpleRobotRules.class);
+        robotRulesMap.put("robots", rules);
+        robotRulesMap.commit();
+        rules = robotRulesMap.get("robots");
+
+        assertNotNull(rules);
+        assertTrue(rules.isAllowed("http://www.domain.com/anypage.html"));
     }
 
     private void assertWasCrawled(String url, Frontier frontier) throws Exception {

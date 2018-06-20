@@ -1,0 +1,53 @@
+---
+# This playbook deploys the whole ACHE application stack
+
+- name: Config Python 2 on all servers
+  hosts: all
+  user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  gather_facts: no
+  pre_tasks:
+    - name: 'Install Python2'
+      raw: apt-get -y install python-minimal
+
+- hosts: all
+  remote_user: ubuntu
+  tasks: []
+
+- name: Install Docker
+  hosts: all
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - docker
+
+- name: Deploy Elasticsearch docker container
+  hosts: es_node
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - elasticsearch
+
+- name: Deploy ACHE Crawler
+  hosts: ache
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - ache
+
+- name: Deploy DDT
+  hosts: ddt
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - ddt

@@ -9,7 +9,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import crawlercommons.robots.BaseRobotRules;
+import crawlercommons.robots.SimpleRobotRules;
 import focusedCrawler.crawler.async.RobotsTxtHandler;
 import focusedCrawler.crawler.async.SitemapXmlHandler;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
@@ -174,7 +174,8 @@ public class LinkStorage {
         
         LinkClassifierFactory.setDefaultStoplist(stoplist);
 
-        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, modelPath, seedFile, metricsManager);
+        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath,
+                dataPath, modelPath, seedFile, metricsManager);
 
         OnlineLearning onlineLearning = null;
         if (config.isUseOnlineLearning()) {
@@ -194,13 +195,16 @@ public class LinkStorage {
         logger.info("Online Learning method:" + onlineLearningType);
         switch (onlineLearningType) {
             case "FORWARD_CLASSIFIER_BINARY":
-                return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
+                return new ForwardOnlineLearning(config.getLearningLimit(),
+                        config.isOnlineLearningAsync(), frontierManager, cb,
                         ForwardOnlineLearning.Type.BINARY, dataPath);
             case "FORWARD_CLASSIFIER_LEVELS":
-                return new ForwardOnlineLearning(config.getLearningLimit(), frontierManager, cb,
+                return new ForwardOnlineLearning(config.getLearningLimit(),
+                        config.isOnlineLearningAsync(), frontierManager, cb,
                         ForwardOnlineLearning.Type.LEVELS, dataPath);
             case "LINK_CLASSIFIERS":
-                return new BipartiteOnlineLearning(config.getLearningLimit(), frontierManager, cb,
+                return new BipartiteOnlineLearning(config.getLearningLimit(),
+                        config.isOnlineLearningAsync(), frontierManager, cb,
                         dataPath);
             default:
                 throw new IllegalArgumentException(
@@ -216,7 +220,7 @@ public class LinkStorage {
      * @throws NullPointerException
      *             when either of the argument is null
      */
-    public void insertRobotRules(LinkRelevance link, BaseRobotRules robotRules) {
+    public void insertRobotRules(LinkRelevance link, SimpleRobotRules robotRules) {
         if (link == null || robotRules == null) {
             throw new NullPointerException("Link argument or robot rules argument cannot be null");
         }

@@ -31,6 +31,7 @@ import com.google.common.collect.ImmutableMap;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.util.CloseableIterator;
 
 public class ElasticSearchRestTargetRepository implements TargetRepository {
     
@@ -57,21 +58,20 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
 
         String indexEndpoint = "/" + indexName;
         boolean exists = false;
-        String esVersion = "5.x.x";
         try {
             Response existsResponse = client.performRequest("HEAD", indexEndpoint);
             exists = (existsResponse.getStatusLine().getStatusCode() == 200);
-            
-            Response rootResponse = client.performRequest("GET", "/");
-            String json = EntityUtils.toString(rootResponse.getEntity());
-            String versionNumber = mapper.readTree(json).path("version").path("number").asText();
-            if (versionNumber != null && !versionNumber.isEmpty()) {
-                esVersion = versionNumber;
-            }
-            logger.info("Elasticsearch version: {}", esVersion);
         } catch (IOException e) {
             throw new RuntimeException(
                     "Failed to check whether index already exists in Elasticsearch.", e);
+        }
+
+        int esMajorVersion;
+        try {
+            esMajorVersion = findEsMajorVersion();
+            logger.info("Elasticsearch version: {}", esMajorVersion);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to read Elasticsearch version.", e);
         }
 
         if (!exists) {
@@ -87,6 +87,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "    \"crawlerId\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
                 + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
@@ -103,11 +104,12 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"url\":              {\"type\": \"keyword\",\"index\": true},"
                 + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true},"
                 + "    \"isRelevant\":       {\"type\": \"keyword\",\"index\": true},"
+                + "    \"crawlerId\":        {\"type\": \"keyword\",\"index\": true},"
                 + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
             
-            String pageProperties = esVersion.startsWith("5.") ? pageMapping5x : targetMapping1x;
+            String pageProperties = esMajorVersion >= 5 ? pageMapping5x : targetMapping1x;
             
             String mapping =
                      "{"
@@ -127,6 +129,20 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 throw new RuntimeException("Failed to create index in Elasticsearch.", e);
             }
         }
+    }
+
+    private int findEsMajorVersion() throws IOException {
+        Response rootResponse = client.performRequest("GET", "/");
+        String json = EntityUtils.toString(rootResponse.getEntity());
+        String versionNumber = mapper.readTree(json).path("version").path("number").asText();
+        if (versionNumber != null && !versionNumber.isEmpty()) {
+            String[] split = versionNumber.split("\\.");
+            if (split.length == 3) {
+                int majorVersion = Integer.parseInt(split[0]);
+                return majorVersion;
+            }
+        }
+        throw new RuntimeException("Failed to read Elaticsearch version.");
     }
 
     private AbstractHttpEntity createJsonEntity(String mapping) {
@@ -211,6 +227,12 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         } catch (IOException e) {
             throw new RuntimeException("Failed to close Elasticsearch REST client", e);
         }
+    }
+
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
+        throw new UnsupportedOperationException(
+                "Iterator not supportted for ElasticSearchRestTargetRepository yet");
     }
 
 }

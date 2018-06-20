@@ -3,7 +3,6 @@ package focusedCrawler.target.repository;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -42,6 +41,7 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelJson;
+import focusedCrawler.util.CloseableIterator;
 
 public class WarcTargetRepository implements TargetRepository {
 
@@ -211,7 +211,7 @@ public class WarcTargetRepository implements TargetRepository {
         return sb.toString();
     }
 
-    public class RepositoryIterator implements Iterator<WARCRecord>, Closeable {
+    public class RepositoryIterator implements CloseableIterator<WARCRecord> {
 
         private WarcRecordsIterator warcRecordsIterator;
 
@@ -244,7 +244,7 @@ public class WarcTargetRepository implements TargetRepository {
 
     }
 
-    public class WarcRecordsIterator implements Iterator<WARCRecord>, Closeable {
+    public class WarcRecordsIterator implements CloseableIterator<WARCRecord> {
 
         private Iterator<Path> filesIt;
         private DirectoryStream<Path> filesStream;
@@ -339,12 +339,13 @@ public class WarcTargetRepository implements TargetRepository {
 
     }
 
-    public Iterator<Page> pagesIterator() {
+    @Override
+    public CloseableIterator<Page> pagesIterator() {
         WarcRecordsIterator it = new WarcRecordsIterator(directory);
         return new PagesIterator(it);
     }
 
-    static class PagesIterator implements Iterator<Page> {
+    public static class PagesIterator implements CloseableIterator<Page> {
 
         private WarcRecordsIterator it;
 
@@ -362,14 +363,19 @@ public class WarcTargetRepository implements TargetRepository {
             return new Page(it.next());
         }
 
+        @Override
+        public void close() throws Exception {
+            it.close();
+        }
+
     }
 
-    public Iterator<TargetModelJson> targetModelJsonIterator() {
+    public TargetModelJsonIterator targetModelJsonIterator() {
         WarcRecordsIterator it = new WarcRecordsIterator(directory);
         return new TargetModelJsonIterator(new PagesIterator(it));
     }
 
-    static class TargetModelJsonIterator implements Iterator<TargetModelJson> {
+    static class TargetModelJsonIterator implements CloseableIterator<TargetModelJson> {
 
         private PagesIterator it;
 
@@ -385,6 +391,11 @@ public class WarcTargetRepository implements TargetRepository {
         @Override
         public TargetModelJson next() {
             return new TargetModelJson(it.next());
+        }
+
+        @Override
+        public void close() throws Exception {
+            it.close();
         }
 
     }

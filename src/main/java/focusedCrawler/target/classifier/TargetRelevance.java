@@ -31,4 +31,9 @@ public class TargetRelevance {
         return isRelevant;
     }
 
+    @Override
+    public String toString() {
+        return "TargetRelevance [relevance=" + relevance + ", isRelevant=" + isRelevant + "]";
+    }
+
 }

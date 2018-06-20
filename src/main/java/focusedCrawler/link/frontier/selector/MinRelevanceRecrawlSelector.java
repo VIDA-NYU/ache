@@ -1,5 +1,6 @@
 package focusedCrawler.link.frontier.selector;
 
+import focusedCrawler.link.frontier.LinkRelevance.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -11,21 +12,24 @@ import focusedCrawler.link.frontier.LinkRelevance;
 
 public class MinRelevanceRecrawlSelector implements LinkSelector {
 
+    private boolean recrawlRobots = true;
+    private boolean recrawlSitemaps = true;
+
     private Cache<String, Boolean> accessTimeCache;
     private List<LinkRelevance> links;
     private int numberOfLinks;
     private double minRelevance;
 
-    public MinRelevanceRecrawlSelector() {
-        this(30, TimeUnit.SECONDS, 299d);
+    public MinRelevanceRecrawlSelector(int recrawlInterval, double minRelevance,
+            boolean recrawlRobots, boolean recrawlSitemaps) {
+        this(recrawlInterval, TimeUnit.MINUTES, minRelevance, recrawlRobots, recrawlSitemaps);
     }
 
-    public MinRelevanceRecrawlSelector(int recrawlInterval, double minRelevance) {
-        this(recrawlInterval, TimeUnit.MINUTES, minRelevance);
-    }
-
-    public MinRelevanceRecrawlSelector(long recrawlAfter, TimeUnit unit, double minRelevance) {
+    public MinRelevanceRecrawlSelector(long recrawlAfter, TimeUnit unit, double minRelevance,
+            boolean recrawlRobots, boolean recrawlSitemaps) {
         this.minRelevance = minRelevance;
+        this.recrawlRobots = recrawlRobots;
+        this.recrawlSitemaps = recrawlSitemaps;
         this.accessTimeCache = CacheBuilder.newBuilder()
                 .expireAfterWrite(recrawlAfter, unit)
                 .build();
@@ -39,9 +43,23 @@ public class MinRelevanceRecrawlSelector implements LinkSelector {
 
     @Override
     public void evaluateLink(LinkRelevance link) {
-        if (links.size() >= this.numberOfLinks || (-1 * link.getRelevance()) < minRelevance) {
+        // already reached max capacity
+        if (links.size() >= this.numberOfLinks) {
             return;
         }
+        // recrawl only links within min relevance
+        if (Math.abs(link.getRelevance()) < minRelevance) {
+            return;
+        }
+        // do not recrawl robots if configured not to
+        if (!recrawlRobots && link.getType() == Type.ROBOTS) {
+            return;
+        }
+        // do not recrawl sitemaps if configured not to
+        if (!recrawlSitemaps && link.getType() == Type.SITEMAP) {
+            return;
+        }
+
         String url = link.getURL().toString();
         Boolean isPresent = accessTimeCache.getIfPresent(url);
         if (isPresent == null) {

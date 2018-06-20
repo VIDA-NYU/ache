@@ -1,0 +1,88 @@
+---
+# This playbook deploys ACHE using docker
+
+- name: Config Python 2 on all servers
+  hosts: ache
+  user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  gather_facts: no
+  pre_tasks:
+    - name: 'Install Python2'
+      raw: apt-get -y install python-minimal
+
+- hosts: ache
+  remote_user: ubuntu
+  tasks: []
+
+- name: Install Docker
+  hosts: ache
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - docker
+
+- name: Deploy ACHE Crawler
+  hosts: ache
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - role: ache
+      ache_crawler_id: "fakenews-br"
+      ache_entrypoint: /ache/bin/ache startServer -c /config/ -d /data -e fakenews-br
+      ache_config:
+        # Store pages classified as irrelevant pages by the target page classifier
+        target_storage.store_negative_pages: true
+
+        # Allow crawling links from irrelevant pages
+        target_storage.hard_focus: false
+
+        # Configure ELASTICSEARCH and WARC data formats
+        target_storage.data_formats:
+          - WARC
+          - ELASTICSEARCH
+        target_storage.data_format.elasticsearch.rest.hosts:
+          - http://192.168.0.55:9200
+          - http://192.168.0.37:9200
+          - http://192.168.0.54:9200
+          - http://192.168.0.57:9200
+
+        # Enable "seed scope" to only crawl pages from the seed sites
+        link_storage.link_strategy.use_scope: true
+
+        # Set link classifier to crawl only links with 1-level from the seeds
+        link_storage.link_classifier.type: MaxDepthLinkClassifier
+        link_storage.link_classifier.max_depth: 299
+
+        # Don't crawl sitemaps
+        link_storage.download_sitemap_xml: false
+
+        # Always select top-k links with highest priority per site
+        link_storage.link_selector: MaximizeWebsitesLinkSelector
+        link_storage.link_selector.min_relevance: 295
+
+        # Recrawl links with relevance >=299 (i.e. seeds) using a fixed interval
+        link_storage.recrawl_selector: MinRelevanceRecrawlSelector
+        link_storage.recrawl_selector.relevance.min_relevance: 299
+        link_storage.recrawl_selector.relevance.interval: 60
+        link_storage.recrawl_selector.relevance.recrawl_sitemaps: false
+        link_storage.recrawl_selector.relevance.recrawl_robots: false
+
+        # Configure the minimum time interval (in milliseconds) to wait between requests
+        # to the same host to avoid overloading servers. If you are crawling your own
+        # web site, you can descrease this value to speed-up the crawl.
+        link_storage.scheduler.host_min_access_interval: 5000
+
+        # Configure the User-Agent of the crawler
+        crawler_manager.downloader.user_agent.name: ACHE
+        crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+
+        crawler_manager.downloader.use_okhttp3_fetcher: true
+
+        http.auth.basic.user: vidanyu
+        http.auth.basic.password: vidafakeus18

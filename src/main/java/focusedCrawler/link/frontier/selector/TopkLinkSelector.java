@@ -8,8 +8,18 @@ import com.google.common.collect.MinMaxPriorityQueue;
 import focusedCrawler.link.frontier.LinkRelevance;
 
 public class TopkLinkSelector implements LinkSelector {
-    
+
+    private final double minRelevance;
+
     private MinMaxPriorityQueue<LinkRelevance> topkLinks;
+
+    public TopkLinkSelector() {
+        this(0.0d);
+    }
+
+    public TopkLinkSelector(double minRelevance) {
+        this.minRelevance = minRelevance;
+    }
 
     @Override
     public void startSelection(int numberOfLinks) {
@@ -21,7 +31,7 @@ public class TopkLinkSelector implements LinkSelector {
 
     @Override
     public void evaluateLink(LinkRelevance link) {
-        if(link.getRelevance() > 0) {
+        if(link.getRelevance() > minRelevance) {
             topkLinks.add(link);
         }
     }

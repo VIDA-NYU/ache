@@ -23,24 +23,20 @@
  */
 package focusedCrawler.link.frontier;
 
-import java.io.IOException;
+import static focusedCrawler.util.Urls.isValid;
+import static focusedCrawler.util.Urls.normalize;
+
 import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Comparator;
-import java.util.regex.Pattern;
-
-import org.apache.commons.validator.routines.UrlValidator;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.google.common.net.InetAddresses;
 import com.google.common.net.InternetDomainName;
+
+import focusedCrawler.util.Urls.UrlDeserializer;
 
 @SuppressWarnings("serial")
 public class LinkRelevance implements Serializable {
@@ -49,11 +45,6 @@ public class LinkRelevance implements Serializable {
     public static double DEFAULT_HUB_RELEVANCE = 100;
     public static double DEFAULT_AUTH_RELEVANCE = 200;
     
-    private static final UrlValidator validator = new UrlValidator(new String[] {"http","https"});
-    // .onion links aren't accepted by the validator
-    // Regex ".[^.]+" --> any string of at least 1 char without dot
-    private static final Pattern onionPattern = Pattern.compile("https?://.[^.]+\\.onion.*");
-
     public enum Type {
         FORWARD, ROBOTS, SITEMAP
     }
@@ -72,7 +63,7 @@ public class LinkRelevance implements Serializable {
         }
     };
 
-    @JsonDeserialize(using = UrlDeseralizer.class)
+    @JsonDeserialize(using = UrlDeserializer.class)
     private URL url;
     private double relevance;
     private Type type;
@@ -145,55 +136,41 @@ public class LinkRelevance implements Serializable {
         }
     }
     
-    public static LinkRelevance create(String url) throws MalformedURLException {
-        return new LinkRelevance(new URL(url), LinkRelevance.DEFAULT_RELEVANCE);
-    }
-    
     @Override
     public String toString() {
         return "LinkRelevance[url=" + url + ", relevance=" + relevance + "]";
     }
 
-    public static class UrlDeseralizer extends JsonDeserializer<URL> {
-        @Override
-        public URL deserialize(JsonParser parser, DeserializationContext ctxt) throws IOException, JsonProcessingException {
-            JsonNode node = parser.getCodec().readTree(parser);
-            return new URL(node.asText());
-        }
+    public static LinkRelevance create(String url) {
+        return createForward(url, LinkRelevance.DEFAULT_RELEVANCE);
     }
 
     public static LinkRelevance createForward(String url, double relevance) {
-        try {
-            if (isValid(url)) {
-                return new LinkRelevance(url, relevance, Type.FORWARD);
-            }
-        } catch (MalformedURLException e) {
+        if (isValid(url)) {
+            return create(url, relevance, Type.FORWARD);
         }
         return null;
     }
 
     public static LinkRelevance createSitemap(String url, double relevance) {
-        try {
-            if (isValid(url)) {
-                return new LinkRelevance(url, relevance, Type.SITEMAP);
-            }
-        } catch (MalformedURLException e) {
+        if (isValid(url)) {
+            return create(url, relevance, Type.SITEMAP);
         }
         return null;
     }
 
     public static LinkRelevance createRobots(String url, double relevance) {
-        try {
-            if (isValid(url)) {
-                return new LinkRelevance(url, relevance, Type.ROBOTS);
-            }
-        } catch (MalformedURLException e) {
+        if (isValid(url)) {
+            return create(normalize(url), relevance, Type.ROBOTS);
         }
         return null;
     }
 
-    private static boolean isValid(String url) {
-        return validator.isValid(url) || onionPattern.matcher(url).matches();
+    private static LinkRelevance create(String url, double relevance, Type type) {
+        try {
+            return new LinkRelevance(normalize(url), relevance, type);
+        } catch (MalformedURLException e) {
+            return null;
+        }
     }
-
 }

@@ -109,8 +109,8 @@ public class CrawlManagerTest {
                 baseConfig.getTargetStorageConfig().getMaxFileSize());
 
         Set<String> crawledPages = new TreeSet<>();
-        repository.iterator().forEachRemaining((p -> {
-            crawledPages.add(p.getUrl());
+        repository.pagesIterator().forEachRemaining((p -> {
+            crawledPages.add(p.getFinalUrl());
         }));
 
         return crawledPages;

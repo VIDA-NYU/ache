@@ -32,6 +32,18 @@ public class Sampler<T> {
         this.reservoir = new ArrayList<T>(numSamples);
     }
 
+    public Sampler(List<T> initialSample) {
+        this(initialSample, new Random());
+    }
+
+    public Sampler(List<T> initialSample, Random random) {
+        Preconditions.checkNotNull(initialSample);
+        Preconditions.checkArgument(initialSample.size() > 0, "initial samle can't empty");
+        this.numSamples = initialSample.size();
+        this.random = random;
+        this.reservoir = new ArrayList<T>(initialSample);
+    }
+
     /**
      * Create a new sampler with a certain reservoir size using the default random number generator.
      *

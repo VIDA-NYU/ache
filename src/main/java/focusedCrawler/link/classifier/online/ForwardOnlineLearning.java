@@ -24,10 +24,10 @@ public class ForwardOnlineLearning extends OnlineLearning {
 
     private FrontierManager frontierManager;
 
-    public ForwardOnlineLearning(int learnLimit, FrontierManager frontierManager,
+    public ForwardOnlineLearning(int learnLimit, boolean async, FrontierManager frontierManager,
                                  LinkClassifierBuilder classifierBuilder,
                                  Type method, String dataPath) {
-        super(learnLimit, frontierManager);
+        super(learnLimit, async, frontierManager);
         this.frontierManager = frontierManager;
         this.classifierBuilder = classifierBuilder;
         this.levels = (method == Type.BINARY ? 0 : 3);
