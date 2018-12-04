@@ -6,6 +6,7 @@ import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Set;
 
@@ -44,9 +45,14 @@ public class DuplicatePageIndexerTest {
     @Before
     public void setUp() throws IOException {
         if (inMemory) {
-            deduper = new DuplicatePageIndexer(0.9);
+            deduper = new DuplicatePageIndexer.Builder()
+                    .setMinJaccardSimilarity(0.9)
+                    .build();
         } else {
-            deduper = new DuplicatePageIndexer(tempFolder.newFolder().toString(), 0.9);
+            deduper = new DuplicatePageIndexer.Builder()
+                    .setDataPath(tempFolder.newFolder().toString())
+                    .setMinJaccardSimilarity(0.9)
+                    .build();
         }
     }
 

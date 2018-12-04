@@ -21,7 +21,9 @@ public class DupDetectorFactory {
             DuplicationType duplicationType = targetStorageConfig.getDuplicateDetectorType();
             switch (duplicationType) {
                 case NEAR_DUP:
-                    dupDetector = new DuplicatePageIndexer(dataPath, similarity);
+                    dupDetector = new DuplicatePageIndexer.Builder()
+                            .setDataPath(dataPath)
+                            .setMinJaccardSimilarity(similarity).build();
                     break;
                 case PROBABILISTIC_EXACT_DUP:
                     dupDetector = new ProbabilisticExactDupDetector();
