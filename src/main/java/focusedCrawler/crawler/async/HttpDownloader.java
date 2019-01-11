@@ -71,6 +71,10 @@ public class HttpDownloader implements Closeable {
     private Counter counterHttpStatus401;
     private Counter counterHttpStatus403;
     private Counter counterHttpStatus404;
+    private Counter counterHttpStatus402;
+    private Counter counterHttpStatus301;
+    private Counter counterHttpStatus302;
+    private Counter counterHttpStatus3xx;
     private Counter counterHttpStatus5xx;
     private Counter counterErrors;
 
@@ -133,8 +137,12 @@ public class HttpDownloader implements Closeable {
         counterErrors = metrics.getCounter("downloader.fetches.errors");
         counterHttpStatus2xx = metrics.getCounter("downloader.http_response.status.2xx");
         counterHttpStatus401 = metrics.getCounter("downloader.http_response.status.401");
+        counterHttpStatus402 = metrics.getCounter("downloader.http_response.status.402");
         counterHttpStatus403 = metrics.getCounter("downloader.http_response.status.403");
         counterHttpStatus404 = metrics.getCounter("downloader.http_response.status.404");
+        counterHttpStatus301 = metrics.getCounter("downloader.http_response.status.301");
+        counterHttpStatus302 = metrics.getCounter("downloader.http_response.status.302");
+        counterHttpStatus3xx = metrics.getCounter("downloader.http_response.status.3xx");
         counterHttpStatus5xx = metrics.getCounter("downloader.http_response.status.5xx");
 
         Gauge<Integer> downloadQueueGauge = () -> downloadQueue.size();
@@ -291,6 +299,18 @@ public class HttpDownloader implements Closeable {
             } else {
                 if (result != null) {
                     switch (result.getStatusCode()) {
+                        case (301): {
+                            counterHttpStatus301.inc();
+                            break;
+                        }
+                        case (302): {
+                            counterHttpStatus302.inc();
+                            break;
+                        }
+                        case (300): case (303): case (304): case (305): case (306): case (307): case (308):{
+                            counterHttpStatus3xx.inc();
+                            break;
+                        }
                         case (401): {
                             counterHttpStatus401.inc();
                             break;
@@ -303,6 +323,9 @@ public class HttpDownloader implements Closeable {
                             counterHttpStatus404.inc();
                             break;
                         }
+                        case (402):
+                            counterHttpStatus402.inc();
+                            break;
                         default: {
                             if (result.getStatusCode() >= 500 && result.getStatusCode() < 600) {
                                 counterHttpStatus5xx.inc();

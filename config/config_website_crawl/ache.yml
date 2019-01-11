@@ -19,3 +19,10 @@ link_storage.download_sitemap_xml: true
 # Configure the User-Agent of the crawler
 crawler_manager.downloader.user_agent.name: ACHE
 crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+
+## Proxy Configuration
+crawler_manager.downloader.use_okhttp3_fetcher: true
+crawler_manager.downloader.okhttp3.proxy_host: null
+crawler_manager.downloader.okhttp3.proxy_username: null
+crawler_manager.downloader.okhttp3.proxy_password: null
+crawler_manager.downloader.okhttp3.proxy_port: 8080
