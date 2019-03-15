@@ -1,22 +1,16 @@
-# (Transport client ES)
-target_storage.data_format.type: ELASTICSEARCH
-target_storage.data_format.elasticsearch.host: localhost
-target_storage.data_format.elasticsearch.port: 9310
-#target_storage.data_format.elasticsearch.cluster_name: isabella
+#
+# Example of configuration for running a Focused Crawl
+#
 
 # Store pages classified as irrelevant pages by the target page classifier
 target_storage.store_negative_pages: true
-
-# Performs hard focus or soft focus. When hard focus is enabled,
-# the crawler only follows links from pages classified as relevant
-#target_storage.hard_focus: true
 
 # Limit the max number of pages crawled per domain, in order to avoid crawling
 # too many pages from same somain and favor discovery o new domains
 link_storage.max_pages_per_domain: 10000
 
 # Disable "seed scope" to allow crawl pages from any domain
-link_storage.link_strategy.use_scope: true
+link_storage.link_strategy.use_scope: false
 
 # Set initial link classifier a simple one
 link_storage.link_classifier.type: LinkClassifierBaseline
@@ -35,7 +29,7 @@ link_storage.link_selector: TopkLinkSelector
 # Configure the minimum time interval (in milliseconds) to wait between requests
 # to the same host to avoid overloading servers. If you are crawling your own
 # web site, you can descrease this value to speed-up the crawl.
-link_storage.scheduler.host_min_access_interval: 10000
+link_storage.scheduler.host_min_access_interval: 5000
 
 # Configure the User-Agent of the crawler
 crawler_manager.downloader.user_agent.name: ACHE
