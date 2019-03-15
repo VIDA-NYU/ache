@@ -3,6 +3,7 @@ package focusedCrawler.tools;
 import focusedCrawler.Main;
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.CrawlersManager;
+import focusedCrawler.link.LinkFilterConfig;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.util.CliTool;
 import io.airlift.airline.Command;
@@ -36,12 +37,16 @@ public class StartRestServer extends CliTool {
     @Override
     public void execute() throws Exception {
         Configuration baseConfig;
+        LinkFilterConfig linkFilterConfig;
         if (configPath != null && !configPath.isEmpty()) {
             baseConfig = new Configuration(configPath);
+            linkFilterConfig = new LinkFilterConfig(configPath);
+            linkFilterConfig.setFileLocation(configPath);
         } else {
             baseConfig = new Configuration();
+            linkFilterConfig = new LinkFilterConfig();
         }
-        CrawlersManager crawlManager = new CrawlersManager(dataPath, baseConfig);
+        CrawlersManager crawlManager = new CrawlersManager(dataPath, baseConfig, linkFilterConfig);
         RestServer server = RestServer.create(baseConfig.getRestConfig(), crawlManager);
         server.start();
     }

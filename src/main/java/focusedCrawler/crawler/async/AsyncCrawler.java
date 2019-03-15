@@ -104,14 +104,53 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         logger.info("Shutdown finished.");
     }
 
-    public static AsyncCrawler create(String crawlerId, String configPath, String dataPath, String seedPath,
-            String modelPath, String esIndexName, String esTypeName) throws Exception {
+    public static AsyncCrawler create(String crawlerId, String configPath, String dataPath,
+                                      String seedPath, String modelPath, String esIndexName, String esTypeName)
+            throws Exception {
 
         Configuration config = new Configuration(configPath);
 
         MetricsManager metricsManager = new MetricsManager(false, dataPath);
 
         LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath,
+                modelPath, config.getLinkStorageConfig(), metricsManager);
+
+        TargetStorage targetStorage = TargetStorage.create(configPath, modelPath, dataPath,
+                esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage,
+                metricsManager);
+
+        return new AsyncCrawler(crawlerId, targetStorage, linkStorage, config, dataPath, metricsManager);
+    }
+
+    public static AsyncCrawler create(String crawlerId, String configPath, String dataPath,
+                                      String seedPath, String modelPath,
+                                      List<String> whitelist, List<String> blacklist,
+                                      String esIndexName, String esTypeName)
+            throws Exception {
+
+        Configuration config = new Configuration(configPath);
+
+        MetricsManager metricsManager = new MetricsManager(false, dataPath);
+
+        LinkStorage linkStorage = LinkStorage.create(configPath, seedPath, dataPath,
+                modelPath, whitelist, blacklist, config.getLinkStorageConfig(), metricsManager);
+
+        TargetStorage targetStorage = TargetStorage.create(configPath, modelPath, dataPath,
+                esIndexName, esTypeName, config.getTargetStorageConfig(), linkStorage,
+                metricsManager);
+
+        return new AsyncCrawler(crawlerId, targetStorage, linkStorage, config, dataPath, metricsManager);
+    }
+
+    public static AsyncCrawler create(String crawlerId, String configPath, String overrideConfigPath, String dataPath,
+                                      String seedPath, String modelPath, String esIndexName, String esTypeName)
+            throws Exception {
+
+        Configuration config = new Configuration(configPath);
+
+        MetricsManager metricsManager = new MetricsManager(false, dataPath);
+
+        LinkStorage linkStorage = LinkStorage.create(overrideConfigPath, seedPath, dataPath,
                 modelPath, config.getLinkStorageConfig(), metricsManager);
 
         TargetStorage targetStorage = TargetStorage.create(configPath, modelPath, dataPath,

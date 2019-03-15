@@ -17,6 +17,11 @@ import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.ParameterFile;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.file.Paths;
+import java.util.List;
 
 public class FrontierManagerFactory {
 
@@ -27,14 +32,36 @@ public class FrontierManagerFactory {
 
         String directory = Paths.get(dataPath, config.getLinkDirectory()).toString();
 
-        Frontier frontier = new Frontier(directory, config.getMaxCacheUrlsSize(),
-                config.getPersistentHashtableBackend());
+        Frontier frontier = new Frontier(directory, config.getMaxCacheUrlsSize(), config.getPersistentHashtableBackend());
 
         LinkFilter linkFilter = new LinkFilter.Builder().withConfigPath(configPath).build();
 
         LinkSelector linkSelector = createLinkSelector(config);
         logger.info("LINK_SELECTOR: " + linkSelector.getClass().getName());
 
+        return createFrontierManager(config, dataPath, modelPath, seedFile,
+                metricsManager, frontier, linkFilter, linkSelector);
+    }
+
+    public static FrontierManager create(LinkStorageConfig config, String configPath,
+                                         String dataPath, String modelPath,
+                                         List<String> whitelist, List<String> blacklist,
+                                         String seedFile, MetricsManager metricsManager) {
+
+        String directory = Paths.get(dataPath, config.getLinkDirectory()).toString();
+
+        Frontier frontier = new Frontier(directory, config.getMaxCacheUrlsSize(), config.getPersistentHashtableBackend());
+
+        LinkFilter linkFilter = new LinkFilter.Builder().withConfigPath(configPath, whitelist, blacklist).build();
+
+        LinkSelector linkSelector = createLinkSelector(config);
+        logger.info("LINK_SELECTOR: " + linkSelector.getClass().getName());
+
+        return createFrontierManager(config, dataPath, modelPath, seedFile,
+                metricsManager, frontier, linkFilter, linkSelector);
+    }
+
+    private static FrontierManager createFrontierManager(LinkStorageConfig config, String dataPath, String modelPath, String seedFile, MetricsManager metricsManager, Frontier frontier, LinkFilter linkFilter, LinkSelector linkSelector) {
         LinkSelector recrawlSelector = createRecrawlSelector(config);
 
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,

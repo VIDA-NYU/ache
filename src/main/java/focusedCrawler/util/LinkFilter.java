@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,7 +52,7 @@ public class LinkFilter {
 
     public boolean accept(URL link) {
 
-        String url = link.toString();
+        String url = link.toString().toLowerCase();
         String domain = LinkRelevance.getTopLevelDomain(link.getHost());
 
         TextMatcher hostWhitelist = hostsWhitelists.get(domain);
@@ -120,11 +121,27 @@ public class LinkFilter {
             return this;
         }
 
+        public Builder withConfigPath(String configPath, List<String> whitelist, List<String> blacklist) {
+            Path path = Paths.get(configPath);
+            Path yamlConfig = path.resolve("link_filters.yml");
+            if (Files.exists(yamlConfig) && Files.isRegularFile(yamlConfig)) {
+                logger.info("Loading link patterns from link_filters.yml file at {}", configPath);
+                fromYamlFile(yamlConfig.toString(), whitelist, blacklist);
+            } else {
+                logger.info("Loading link patterns from link_whitelist.txt and"
+                        + " link_blacklist.txt at {}", configPath);
+                this.whitelist = RegexMatcher.fromWhitelistFile(path.resolve("link_whitelist.txt").toString());
+                this.blacklist = RegexMatcher.fromBlacklistFile(path.resolve("link_blacklist.txt").toString());
+            }
+            return this;
+        }
+
         public Builder fromYamlFile(String file) {
             ObjectMapper yaml = new ObjectMapper(new YAMLFactory());
             try {
                 TypeReference<HashMap<String, PatternParams>> typeRef =
-                        new TypeReference<HashMap<String, PatternParams>>() {};
+                        new TypeReference<HashMap<String, PatternParams>>() {
+                        };
                 Map<String, PatternParams> params = yaml.readValue(new File(file), typeRef);
 
                 params = normalizeDomain(params);
@@ -143,6 +160,70 @@ public class LinkFilter {
                                 if (pattern.whitelist != null)
                                     this.whitelist = WildcardMatcher.fromWhitelist(pattern.whitelist);
                                 if (pattern.blacklist != null)
+                                    pattern.blacklist.add("tech");
+                                this.blacklist = WildcardMatcher.fromBlacklist(pattern.blacklist);
+                                break;
+                            default:
+                                throw new IllegalArgumentException(
+                                        "Invalid value for global.type: " + pattern.type);
+                        }
+                    } else {
+                        switch (pattern.type.toLowerCase()) {
+                            case "regex":
+                                if (pattern.whitelist != null)
+                                    hostsWhitelists.put(entry.getKey(), RegexMatcher.fromWhitelist(pattern.whitelist));
+                                if (pattern.blacklist != null)
+                                    hostsBlacklists.put(entry.getKey(), RegexMatcher.fromBlacklist(pattern.blacklist));
+                                break;
+                            case "wildcard":
+                                if (pattern.whitelist != null)
+                                    hostsWhitelists.put(entry.getKey(), WildcardMatcher.fromWhitelist(pattern.whitelist));
+                                if (pattern.blacklist != null)
+                                    hostsBlacklists.put(entry.getKey(), WildcardMatcher.fromBlacklist(pattern.blacklist));
+                                break;
+                            default:
+                                throw new IllegalArgumentException(
+                                        "Invalid value for type: " + pattern.type);
+                        }
+
+                    }
+                }
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to read YAML file: " + file.toString(), e);
+            }
+            return this;
+        }
+
+        public Builder fromYamlFile(String file, List<String> whitelist, List<String> blacklist) {
+            ObjectMapper yaml = new ObjectMapper(new YAMLFactory());
+            try {
+                TypeReference<HashMap<String, PatternParams>> typeRef =
+                        new TypeReference<HashMap<String, PatternParams>>() {
+                        };
+                Map<String, PatternParams> params = yaml.readValue(new File(file), typeRef);
+
+                params = normalizeDomain(params);
+
+                for (Entry<String, PatternParams> entry : params.entrySet()) {
+                    PatternParams pattern = entry.getValue();
+                    if ("global".equals(entry.getKey())) {
+                        switch (pattern.type.toLowerCase()) {
+                            case "regex":
+                                if (pattern.whitelist != null)
+                                    this.whitelist = RegexMatcher.fromWhitelist(pattern.whitelist);
+                                if (pattern.blacklist != null)
+                                    this.blacklist = RegexMatcher.fromBlacklist(pattern.blacklist);
+                                break;
+                            case "wildcard":
+                                if (pattern.whitelist != null)
+                                    if (CollectionUtils.isNotEmpty(whitelist)) {
+                                        pattern.whitelist.addAll(whitelist);
+                                    }
+                                    this.whitelist = WildcardMatcher.fromWhitelist(pattern.whitelist);
+                                if (pattern.blacklist != null)
+                                    if (CollectionUtils.isNotEmpty(blacklist)) {
+                                        pattern.blacklist.addAll(blacklist);
+                                    }
                                     this.blacklist = WildcardMatcher.fromBlacklist(pattern.blacklist);
                                 break;
                             default:

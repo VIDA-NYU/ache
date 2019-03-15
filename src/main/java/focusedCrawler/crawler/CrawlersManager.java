@@ -19,7 +19,10 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+import focusedCrawler.link.LinkFilterConfig;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,9 +36,11 @@ import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 
 public class CrawlersManager {
 
+    private static final String LINK_FILTERS_FILE = "/link_filters.yml";
     private static Logger logger = LoggerFactory.getLogger(CrawlersManager.class);
 
     private Configuration baseConfig;
+    private LinkFilterConfig linkFilterConfig;
     private String baseDataPath;
 
     private Map<String, CrawlContext> crawlers = new HashMap<>();
@@ -47,6 +52,12 @@ public class CrawlersManager {
     public CrawlersManager(String baseDataPath, Configuration baseConfig) {
         this.baseConfig = baseConfig;
         this.baseDataPath = baseDataPath;
+    }
+
+    public CrawlersManager(String baseDataPath, Configuration baseConfig, LinkFilterConfig linkFilterConfig) {
+        this.baseConfig = baseConfig;
+        this.baseDataPath = baseDataPath;
+        this.linkFilterConfig = linkFilterConfig;
     }
 
     public CrawlContext startCrawl(String crawlerId) {
@@ -67,7 +78,8 @@ public class CrawlersManager {
     }
 
     public CrawlContext createCrawler(String crawlerId, StartCrawlParams params) throws Exception {
-        return createCrawler(crawlerId, params.crawlType, params.seeds, params.model,
+        return createCrawler(crawlerId, params.crawlType, params.seeds,
+                params.whitelist, params.blacklist, params.model,
                 params.esIndexName, params.esTypeName);
     }
 
@@ -82,12 +94,40 @@ public class CrawlersManager {
 
         Path configPath = Paths.get(baseDataPath, crawlerId, "config");
         createConfigForCrawlType(baseConfig, configPath, crawlType, esIndexName, esTypeName);
+        addLinkFiltersToCrawlConfig(linkFilterConfig.getFileLocation(), configPath);
 
         String modelPath = storeModelFile(model, configPath.resolve("model"));
         String seedPath = getSeedForCrawlType(crawlType, seeds, configPath, modelPath);
 
         return createCrawler(crawlerId, configPath.toString(), seedPath, modelPath, esIndexName,
                 esTypeName);
+    }
+
+    public CrawlContext createCrawler(String crawlerId, CrawlType crawlType, List<String> seeds,
+                                      List<String> whitelist, List<String> blacklist,
+                                      byte[] model, String esIndexName, String esTypeName)
+            throws Exception {
+
+        Path configPath = Paths.get(baseDataPath, crawlerId, "config");
+        createConfigForCrawlType(baseConfig, configPath, crawlType, esIndexName, esTypeName);
+        addLinkFiltersToCrawlConfig(linkFilterConfig.getFileLocation(), configPath);
+
+        String modelPath = storeModelFile(model, configPath.resolve("model"));
+        String seedPath = getSeedForCrawlType(crawlType, seeds, configPath, modelPath);
+
+        return createCrawler(crawlerId, configPath.toString(), seedPath, modelPath,
+                whitelist, blacklist, esIndexName, esTypeName);
+    }
+
+    private void addLinkFiltersToCrawlConfig(String configurationPath, Path configPath) throws IOException {
+        if (StringUtils.isNotEmpty(configurationPath)) {
+            File linkFilters = new File(configurationPath + LINK_FILTERS_FILE);
+            File linkFilterOutFile = new File(configPath + LINK_FILTERS_FILE);
+
+            FileUtils.copyFile(linkFilters, linkFilterOutFile);
+        } else {
+            logger.info("No Link Filters to load.");
+        }
     }
 
     public CrawlContext createCrawler(String crawlerId, String configPath, String seedPath,
@@ -103,6 +143,24 @@ public class CrawlersManager {
         context.modelPath = modelPath;
         context.crawler = AsyncCrawler.create(crawlerId, configPath, dataPath, seedPath, modelPath,
             esIndexName, esTypeName);
+
+        crawlers.put(crawlerId, context);
+        return context;
+    }
+
+    public CrawlContext createCrawler(String crawlerId, String configPath, String seedPath,
+                                      String modelPath, List<String> whitelist, List<String> blacklist,
+                                      String esIndexName, String esTypeName) throws Exception {
+
+        String dataPath = Paths.get(baseDataPath, crawlerId).toString();
+
+        CrawlContext context = new CrawlContext();
+        context.crawlerId = crawlerId;
+        context.dataPath = dataPath;
+        context.seedPath = seedPath;
+        context.modelPath = modelPath;
+        context.crawler = AsyncCrawler.create(crawlerId, configPath, dataPath, seedPath, modelPath,
+                whitelist, blacklist, esIndexName, esTypeName);
 
         crawlers.put(crawlerId, context);
         return context;

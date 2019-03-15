@@ -179,7 +179,8 @@ public class CrawlerResource {
 
         try {
             HashMap<String, List<Cookie>> params = json.readValue(request.body(),
-                    new TypeReference<HashMap<String, List<Cookie>>>() {});
+                    new TypeReference<HashMap<String, List<Cookie>>>() {
+                    });
 
             if (params == null || params.isEmpty()) {
                 response.status(HttpServletResponse.SC_BAD_REQUEST);
@@ -215,6 +216,8 @@ public class CrawlerResource {
     public static class StartCrawlParams {
         public CrawlType crawlType;
         public List<String> seeds;
+        public List<String> blacklist;
+        public List<String> whitelist;
         public byte[] model;
         public String esTypeName;
         public String esIndexName;
