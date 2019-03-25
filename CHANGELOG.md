@@ -10,7 +10,8 @@
 - Added configuration for minimum relevance in link selectors
 - Added configuration for selecting whether should re-crawl sitemaps and
   robots.txt links
-
+- Added documentaion about `relevance_threshold` parameters to the target page
+  classifiers documentation page
 
 ## Version 0.11.0
 
