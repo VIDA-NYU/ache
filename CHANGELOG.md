@@ -7,6 +7,8 @@
 - Removed Elasticsearch 1.4.4 binaries dependency
 - Added DumpDataFromElasticsearch tool for dumping documents from Elasticsearch
   repositories
+- Added documentaion about `relevance_threshold` parameters to the target page
+  classifiers documentation page
 
 ## Version 0.11.0
 

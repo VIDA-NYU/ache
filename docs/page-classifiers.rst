@@ -147,10 +147,22 @@ smile (a.k.a "weka" before version 0.11.0)
   than 0.11.0.
 
 Classifies pages using a machine-learning based text classifier (SVM, Random Forest)
-trained using ACHE's ``buildModel`` command.
-A `smile` classifier consists of a *features_file*, a *model_file*, and a
-*stopwords_file* file (which contains the stop-words used during the training
-process):
+trained using ACHE's ``buildModel`` command. 
+Smile page classifiers can be built automatically by training a model using the command
+``ache buildModel``, as detailed in the next sub-section. You can also run
+``ache help buildModel`` to see more options available.
+
+Alternatively, you can use the `Domain Discovery Tool (DDT) <https://github.com/ViDA-NYU/domain_discovery_tool>`_ to gather training data and build automatically these files.
+DDT is an interactive web-based application that helps the user with the process of training a page classifier for ACHE.
+
+A `smile` classifier supports the following parameters in the ``pageclassifier.yml``:
+
+* ``features_file``, ``model_file``: files containing the list of features used by the classifier and the serialized learned model respectively.
+* ``stopwords_file``: a file containing stop-words (words ignored) used during the training process;
+* ``relevance_threshold``: a number between 0.0 and 1.0 indicating the minimum relevance probability threshold for a page to be considered relevant.
+  Higher values indicate that only pages which the classifier is highly confident are considered relevant.
+
+Following is a sample ``pageclassifier.yml`` file for a smile classifier:
 
 .. code-block:: yaml
 
@@ -159,14 +171,8 @@ process):
     features_file: pageclassifier.features
     model_file: pageclassifier.model
     stopwords_file: stoplist.txt
+    relevance_threshold: 0.6
 
-All these files can be built automatically by training a model using the command
-``ache buildModel``, as detailed in the next sub-section. You can also run
-``ache help buildModel`` to see more options available.
-
-
-Alternatively, you can use the `Domain Discovery Tool (DDT) <https://github.com/ViDA-NYU/domain_discovery_tool>`_ to gather training data and build automatically these files.
-DDT is a interactive web-based application that helps the user with the process of training a page classifier for ACHE.
 
 Building a model for the smile page classifier
 **********************************************
