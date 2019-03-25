@@ -17,14 +17,12 @@
     id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
     state: present
   register: add_repository_key
-  ignore_errors: true
+  ignore_errors: "{{ docker_apt_ignore_key_error }}"
 
 - name: Add docker apt repository
-  #shell: add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-  #apt_repository: repo='deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable' state=present update_cache=yes
   apt_repository:
-    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
-    state: present
+    repo: "{{ docker_apt_repository }}"
+    state: "{{ docker_package_state }}"
     update_cache: yes
 
 - name: Install Docker CE package
