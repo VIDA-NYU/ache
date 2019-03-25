@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/ViDA-NYU/ache/master/ache-logo.png" align="right" height="90px"/>
 
-[![Build Status](https://travis-ci.org/ViDA-NYU/ache.svg?branch=master)](https://travis-ci.org/ViDA-NYU/ache)
+[![Build Status](https://travis-ci.org/VIDA-NYU/ache.svg?branch=master)](https://travis-ci.org/VIDA-NYU/ache)
 [![Documentation Status](https://readthedocs.org/projects/ache/badge/?version=latest)](http://ache.readthedocs.io/en/latest/?badge=latest)
 [![Gitter](https://badges.gitter.im/ViDA-NYU/ache.svg)](https://gitter.im/ViDA-NYU/ache?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
