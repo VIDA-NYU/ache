@@ -7,6 +7,9 @@
 - Removed Elasticsearch 1.4.4 binaries dependency
 - Added DumpDataFromElasticsearch tool for dumping documents from Elasticsearch
   repositories
+- Added configuration for minimum relevance in link selectors
+- Added configuration for selecting whether should re-crawl sitemaps and
+  robots.txt links
 - Added documentaion about `relevance_threshold` parameters to the target page
   classifiers documentation page
 
