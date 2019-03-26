@@ -14,6 +14,7 @@
   classifiers documentation page
 - Added support for crawling via HTTP proxy in okhttp3 fetcher (by @maqzi)
 - Added tracking of more HTTP error messages (301, 302, 3xx, 402) (by @maqzi)
+- Update crawler-commons to v1.0
 
 ## Version 0.11.0
 
