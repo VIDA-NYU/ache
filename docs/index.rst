@@ -1,5 +1,5 @@
 Welcome to ACHE's Documentation!
-========================================
+================================
 
 ACHE is a focused web crawler. It collects web pages that satisfy some specific criteria, e.g., pages that belong to a given domain or that contain a user-specified pattern.
 ACHE differs from generic crawlers in sense that it uses *page classifiers* to distinguish between relevant and irrelevant pages in a given domain. A page classifier can be defined as a simple regular expression (e.g., that matches every page that contains a specific word) or a machine-learning-based classification model.
@@ -31,6 +31,7 @@ ACHE supports many features, such as:
     data-formats
     link-filters
     rest-api
+    http-fetchers
     seed-finder
     faq
 

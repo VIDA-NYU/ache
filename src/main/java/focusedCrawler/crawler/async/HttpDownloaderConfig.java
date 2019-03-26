@@ -15,6 +15,18 @@ public class HttpDownloaderConfig {
         public String path = "/";
     }
 
+    @JsonProperty("crawler_manager.downloader.okhttp3.proxy_host")
+    private String okHttpFetcherProxyHost = null;
+
+    @JsonProperty("crawler_manager.downloader.okhttp3.proxy_username")
+    private String okHttpFetcherProxyUsername = null;
+
+    @JsonProperty("crawler_manager.downloader.okhttp3.proxy_password")
+    private String okHttpFetcherProxyPassword = null;
+
+    @JsonProperty("crawler_manager.downloader.okhttp3.proxy_port")
+    private int okHttpFetcherProxyPort = 8080;
+
     @JsonProperty("crawler_manager.downloader.use_okhttp3_fetcher")
     private String okHttpFetcher = null;
 
@@ -140,5 +152,21 @@ public class HttpDownloaderConfig {
 
     public int getConnectionRequestTimeout() {
         return connectionRequestTimeout;
+    }
+
+    public String getOkHttpFetcherProxyHost() {
+        return okHttpFetcherProxyHost;
+    }
+
+    public String getOkHttpFetcherProxyUsername() {
+        return okHttpFetcherProxyUsername;
+    }
+
+    public String getOkHttpFetcherProxyPassword() {
+        return okHttpFetcherProxyPassword;
+    }
+
+    public int getOkHttpFetcherProxyPort() {
+        return okHttpFetcherProxyPort;
     }
 }

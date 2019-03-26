@@ -12,6 +12,8 @@
   robots.txt links
 - Added documentaion about `relevance_threshold` parameters to the target page
   classifiers documentation page
+- Added support for crawling via HTTP proxy in okhttp3 fetcher (by @maqzi)
+- Added tracking of more HTTP error messages (301, 302, 3xx, 402) (by @maqzi)
 
 ## Version 0.11.0
 

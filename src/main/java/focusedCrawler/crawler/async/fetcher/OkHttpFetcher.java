@@ -2,7 +2,9 @@ package focusedCrawler.crawler.async.fetcher;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
+import java.net.Proxy;
 import java.net.Socket;
 import java.net.URL;
 import java.security.GeneralSecurityException;
@@ -46,11 +48,13 @@ import focusedCrawler.crawler.crawlercommons.fetcher.http.UserAgent;
 import okhttp3.CipherSuite;
 import okhttp3.ConnectionSpec;
 import okhttp3.Cookie;
+import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
 import okhttp3.OkHttpClient.Builder;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
+import okhttp3.Route;
 
 
 @SuppressWarnings("serial")
@@ -71,18 +75,27 @@ public class OkHttpFetcher extends BaseHttpFetcher {
     private OkHttpCookieJar cookieJar ;
     private int connectTimeoutTime;
     private int readTimeoutTime;
+    private int proxyPort;
+    private String proxyHost;
+    private String username;
+    private String password;
 
     public OkHttpFetcher(UserAgent userAgent) {
-        this(DEFAULT_MAX_THREADS, userAgent, null, 30000, 30000);
+        this(DEFAULT_MAX_THREADS, userAgent, null, 30000, 30000, null, 8080, null, null);
     }
 
     public OkHttpFetcher(int maxThreads, UserAgent userAgent, OkHttpCookieJar cookieJar,
-                         int connectTimeoutTime, int readTimeoutTime) {
+                         int connectTimeoutTime, int readTimeoutTime, String host, int port,
+                         String username, String password) {
         super(maxThreads, userAgent);
         this._httpClient = null;
         this.cookieJar = cookieJar;
         this.connectTimeoutTime = connectTimeoutTime;
         this.readTimeoutTime = readTimeoutTime;
+        this.proxyHost = host;
+        this.proxyPort = port;
+        this.username = username;
+        this.password = password;
     }
 
     public FetchedResult get(String url, Payload payload) throws BaseFetchException {
@@ -364,6 +377,22 @@ public class OkHttpFetcher extends BaseHttpFetcher {
                     .connectTimeout(connectTimeoutTime, TimeUnit.MILLISECONDS)
                     .readTimeout(readTimeoutTime, TimeUnit.MILLISECONDS);
 
+            if (proxyHost != null) {
+                okhttp3.Authenticator proxyAuthenticator = new okhttp3.Authenticator() {
+                    @Override
+                    public Request authenticate(Route route, Response response) throws IOException {
+                        String credential = Credentials.basic(username, password);
+                        return response.request().newBuilder()
+                                .header("Proxy-Authorization", credential)
+                                .build();
+                    }
+                };
+
+                Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(proxyHost, proxyPort));
+                clientBuilder
+                        .proxy(proxy)
+                        .proxyAuthenticator(proxyAuthenticator);
+            }
             if (cookieJar != null) {
                 clientBuilder.cookieJar(cookieJar);
             }
