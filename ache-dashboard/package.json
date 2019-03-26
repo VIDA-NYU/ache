@@ -4,16 +4,16 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react": "16.8.5",
+    "react-dom": "16.8.5",
     "react-router-dom": "^4.0.0",
-    "react-scripts": "1.1.4",
-    "react-vis": "^1.7.9",
-    "searchkit": "^2.3.0",
-    "whatwg-fetch": "^2.0.3"
+    "react-scripts": "2.1.8",
+    "react-vis": "^1.11.6",
+    "searchkit": "^2.3.2",
+    "whatwg-fetch": "^2.0.4"
   },
   "peerDependencies": {
-    "react": "^16.2.0"
+    "react": "^16.8.5"
   },
   "devDependencies": {},
   "scripts": {
@@ -23,5 +23,11 @@
     "eject": "react-scripts eject"
   },
   "homepage": "./",
-  "proxy": "http://localhost:8080"
+  "proxy": "http://localhost:8080",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
