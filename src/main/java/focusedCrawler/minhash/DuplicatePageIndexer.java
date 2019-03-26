@@ -152,7 +152,6 @@ public class DuplicatePageIndexer implements DupDetector {
     public DupData getDuplicationSample() {
         UnionFind unionFind = new UnionFind(1);
         List<KV<Integer, int[]>> samples = duplicates.getSamples();
-        System.out.println("Dup sample: " + samples.size());
         for (KV<Integer, int[]> dup : samples) {
             int id = dup.getKey();
             Iterator<Integer> duplicateIds = lsh.query(dup.getValue());
