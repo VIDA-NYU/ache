@@ -19,7 +19,7 @@ public class HttpDownloaderConfig {
     private String okHttpFetcherProxyHost = null;
 
     @JsonProperty("crawler_manager.downloader.okhttp3.proxy_username")
-    private String getOkHttpFetcherProxyUsername = null;
+    private String okHttpFetcherProxyUsername = null;
 
     @JsonProperty("crawler_manager.downloader.okhttp3.proxy_password")
     private String okHttpFetcherProxyPassword = null;
@@ -158,8 +158,8 @@ public class HttpDownloaderConfig {
         return okHttpFetcherProxyHost;
     }
 
-    public String getGetOkHttpFetcherProxyUsername() {
-        return getOkHttpFetcherProxyUsername;
+    public String getOkHttpFetcherProxyUsername() {
+        return okHttpFetcherProxyUsername;
     }
 
     public String getOkHttpFetcherProxyPassword() {

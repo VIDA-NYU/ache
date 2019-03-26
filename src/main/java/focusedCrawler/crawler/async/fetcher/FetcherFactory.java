@@ -119,9 +119,15 @@ public class FetcherFactory {
 
         OkHttpCookieJar cookieStore = createOkHttpCookieHandler(config);
 
-        OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent, cookieStore,
-                config.getConnectTimeout(), config.getReadTimeout(), config.getOkHttpFetcherProxyHost(),
-                config.getOkHttpFetcherProxyPort(),config.getGetOkHttpFetcherProxyUsername(),
+        OkHttpFetcher httpFetcher = new OkHttpFetcher(
+                connectionPoolSize,
+                userAgent,
+                cookieStore,
+                config.getConnectTimeout(),
+                config.getReadTimeout(),
+                config.getOkHttpFetcherProxyHost(),
+                config.getOkHttpFetcherProxyPort(),
+                config.getOkHttpFetcherProxyUsername(),
                 config.getOkHttpFetcherProxyPassword());
 
         httpFetcher.setMaxRedirects(config.getMaxRetryCount());

@@ -81,18 +81,19 @@ public class OkHttpFetcher extends BaseHttpFetcher {
     private String password;
 
     public OkHttpFetcher(UserAgent userAgent) {
-        this(DEFAULT_MAX_THREADS, userAgent, null, 30000, 30000, null,8080,null, null);
+        this(DEFAULT_MAX_THREADS, userAgent, null, 30000, 30000, null, 8080, null, null);
     }
 
     public OkHttpFetcher(int maxThreads, UserAgent userAgent, OkHttpCookieJar cookieJar,
-                         int connectTimeoutTime, int readTimeoutTime, String host, int port, String username, String password) {
+                         int connectTimeoutTime, int readTimeoutTime, String host, int port,
+                         String username, String password) {
         super(maxThreads, userAgent);
         this._httpClient = null;
         this.cookieJar = cookieJar;
         this.connectTimeoutTime = connectTimeoutTime;
         this.readTimeoutTime = readTimeoutTime;
         this.proxyHost = host;
-        this.proxyPort= port;
+        this.proxyPort = port;
         this.username = username;
         this.password = password;
     }
@@ -387,8 +388,9 @@ public class OkHttpFetcher extends BaseHttpFetcher {
                     }
                 };
 
+                Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(proxyHost, proxyPort));
                 clientBuilder
-                        .proxy(new Proxy(Proxy.Type.HTTP, new InetSocketAddress(proxyHost, proxyPort)))
+                        .proxy(proxy)
                         .proxyAuthenticator(proxyAuthenticator);
             }
             if (cookieJar != null) {
