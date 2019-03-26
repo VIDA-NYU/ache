@@ -15,7 +15,7 @@ import focusedCrawler.crawler.crawlercommons.fetcher.http.UserAgent;
 import okhttp3.Cookie;
 
 public class FetcherFactory {
-    
+
     public static BaseFetcher createFetcher(HttpDownloaderConfig config) {
         if(config.getTorProxy() != null) {
             return createTorProxyFetcher(config);
@@ -120,7 +120,9 @@ public class FetcherFactory {
         OkHttpCookieJar cookieStore = createOkHttpCookieHandler(config);
 
         OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent, cookieStore,
-                config.getConnectTimeout(), config.getReadTimeout());
+                config.getConnectTimeout(), config.getReadTimeout(), config.getOkHttpFetcherProxyHost(),
+                config.getOkHttpFetcherProxyPort(),config.getGetOkHttpFetcherProxyUsername(),
+                config.getOkHttpFetcherProxyPassword());
 
         httpFetcher.setMaxRedirects(config.getMaxRetryCount());
         httpFetcher.setMaxConnectionsPerHost(1);
