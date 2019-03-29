@@ -24,7 +24,7 @@ dependencies {
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
     compile group: 'org.apache.commons', name: 'commons-compress', version: '1.12'
     compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
-    compile group: 'commons-validator', name: 'commons-validator', version: '1.5.1'
+    compile group: 'commons-validator', name: 'commons-validator', version: '1.6'
     compile group: 'com.github.crawler-commons', name: 'crawler-commons', version: '1.0'
     // CLI
     compile group: 'io.airlift', name: 'airline', version: '0.7'
@@ -55,7 +55,7 @@ dependencies {
     compile group: 'org.jsoup', name: 'jsoup', version: '1.10.3'
     compile group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '7.3.1'
     // HTTP libraries
-    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.8.1'
+    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.14.0'
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
     // Others
     compile group: 'com.github.haifengl', name: 'smile-core', version: '1.5.0'
@@ -71,7 +71,7 @@ dependencies {
     testCompile group: 'org.mockito', name: 'mockito-core', version: '1.10.+'
     testCompile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.3.6.v20151106'
     // for tests of crawler commons library fork
-    testCompile group: 'com.squareup.okhttp3', name: 'mockwebserver', version: '3.8.1'
+    testCompile group: 'com.squareup.okhttp3', name: 'mockwebserver', version: '3.14.0'
 
 }
 
