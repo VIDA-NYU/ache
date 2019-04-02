@@ -17,7 +17,7 @@
 - Upgrade `crawler-commons` library to version 1.0
 - Upgrade `commons-validator` library to version 1.6
 - Upgrade `okhttp3` library to version 3.14.0
-- Fix issue #144: Links from recent TLDs are considered invalid
+- Fix issue #177: Links from recent TLDs are considered invalid
 
 ## Version 0.11.0
 
