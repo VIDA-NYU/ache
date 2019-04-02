@@ -191,6 +191,30 @@ public class PaginaURLTest {
         assertThat(links[2].toString(), is("http://example.com/"));
     }
 
+    @Test
+    public void shouldExtractLinksWithRecentAndOnion() throws MalformedURLException {
+        // given
+        URL url = new URL("http://example.com/test.html");
+        StringBuilder testPage = new StringBuilder();
+        testPage.append("<!DOCTYPE html>");
+        testPage.append("<html>");
+        testPage.append("<body>");
+        testPage.append("<h1>My First Heading</h1>");
+        testPage.append("<a href = \"http://registry.africa/\">Link with recent TLDs</a>");
+        testPage.append("<a href = \"http://3g2upl4pq6kufc4m.onion/\">Onion Link</a>");
+        testPage.append("</body>");
+        testPage.append("</html>");
+
+        // when
+        PaginaURL paginaURL = new PaginaURL(url, testPage.toString());
+        URL[] links = paginaURL.links();
+
+        // then
+        assertThat(links.length, is(2));
+        assertThat(links[0].toString(), is("http://registry.africa/"));
+        assertThat(links[1].toString(), is("http://3g2upl4pq6kufc4m.onion/"));
+    }
+
     private String createTestPage() {
         StringBuilder testPage = new StringBuilder();
         testPage.append("<!DOCTYPE html>");

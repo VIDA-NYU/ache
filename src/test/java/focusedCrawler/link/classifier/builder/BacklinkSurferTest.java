@@ -5,13 +5,13 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
+import focusedCrawler.util.Urls;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.validator.routines.UrlValidator;
 import org.junit.Test;
 
 import focusedCrawler.config.Configuration;
@@ -62,9 +62,8 @@ public class BacklinkSurferTest {
     }
 
     public boolean backLinkSetIsValid(BackLinkNeighborhood[] backlinks) {
-        UrlValidator validator = new UrlValidator();
         for (BackLinkNeighborhood backlink : backlinks) {
-            if (validator.isValid(backlink.getLink()))
+            if (Urls.isValid(backlink.getLink()))
                 return true;
         }
         return false;

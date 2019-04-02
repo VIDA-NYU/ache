@@ -1,12 +1,12 @@
 package focusedCrawler.seedfinder;
 
+import focusedCrawler.util.Urls;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.validator.routines.UrlValidator;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -23,7 +23,6 @@ public class BingSearch implements SearchEngineApi {
     private final SimpleHttpFetcher fetcher;
     
     private int docsPerPage = 10;
-    private UrlValidator urlValidator = new UrlValidator();
     private TimeDelay timer = new TimeDelay(5000);
 
 
@@ -52,7 +51,7 @@ public class BingSearch implements SearchEngineApi {
             List<BackLinkNeighborhood> links = new ArrayList<>();
             for (Element link : linksUrl) {
                 String linkStr = link.attr("href");
-                if(urlValidator.isValid(linkStr)) {
+                if(Urls.isValid(linkStr)) {
                     BackLinkNeighborhood bl = new BackLinkNeighborhood();
                     bl.setLink(linkStr);
                     bl.setTitle(link.text());

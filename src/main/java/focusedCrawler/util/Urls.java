@@ -3,11 +3,13 @@ package focusedCrawler.util;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.TreeSet;
-import java.util.regex.Pattern;
 
+import org.apache.commons.validator.routines.DomainValidator;
+import org.apache.commons.validator.routines.DomainValidator.ArrayType;
 import org.apache.commons.validator.routines.UrlValidator;
 
 import com.fasterxml.jackson.core.JsonParser;
@@ -21,13 +23,77 @@ import okhttp3.HttpUrl;
 
 public class Urls {
 
+    static {
+        // This static block updates the list of top-level domain names from the commons-validator
+        // library, which is used to verify if URLs are valid.
+        // To update this arrays, the tool GenerateTLDLists can be used to automatically find the
+        // new TLDs not included in default list.
+
+        // Recent Country Code TLDs absent in commons-validator
+        String[] recentCountryCodeTLDs = new String[]{
+                "an",
+                "bl",
+                "bq",
+                "eh",
+                "mf",
+                "ss",
+                "tp",
+                "um",
+                "xn--2scrj9c",
+                "xn--3hcrj9c",
+                "xn--45br5cyl",
+                "xn--90ae",
+                "xn--h2breg3eve",
+                "xn--h2brj9c8c",
+                "xn--mgbah1a3hjkrd",
+                "xn--mgbai9azgqp6j",
+                "xn--mgbbh1a",
+                "xn--mgbgu82a",
+                "xn--rvc1e0am3e"};
+
+        // Recent Generic TLDs absent in commons-validator
+        String[] recentGenericTLDs = new String[]{
+                "africa",
+                "arab",
+                "charity",
+                "doosan",
+                "etisalat",
+                "flsmidth",
+                "grocery",
+                "hotels",
+                "iinet",
+                "inc",
+                "llc",
+                "map",
+                "merckmsd",
+                "mutuelle",
+                "phd",
+                "rugby",
+                "search",
+                "sport",
+                "xn--mgbaakc7dvf",
+                "xn--ngbrx",
+                "xn--otu796d"};
+
+        // Recent Sponsored TLDs absent in commons-validator
+        String[] recentSponsoredTLDs = new String[]{};
+
+        //# END
+
+        // Create TLD arrays
+        List<String> newGenericDomains = new ArrayList<>();
+        newGenericDomains.addAll(Arrays.asList(recentGenericTLDs));
+        newGenericDomains.addAll(Arrays.asList(recentSponsoredTLDs));
+        newGenericDomains.add("onion"); // we also want accept links from to TOR network
+        String[] gericPlusArray = newGenericDomains.toArray(new String[newGenericDomains.size()]);
+        // Finally, update commons-validator
+        DomainValidator.updateTLDOverride(ArrayType.GENERIC_PLUS, gericPlusArray);
+        DomainValidator.updateTLDOverride(ArrayType.COUNTRY_CODE_PLUS, recentCountryCodeTLDs);
+    }
+
     private static final String[] ALLOWED_SCHEMES = {"http", "https"};
 
     private static final UrlValidator VALIDATOR = new UrlValidator(ALLOWED_SCHEMES);
-
-    // .onion links aren't accepted by the validator
-    // Regex ".[^.]+" --> any string of at least 1 char without dot
-    private static final Pattern ONION_PATTERN = Pattern.compile("https?://.[^.]+\\.onion.*");
 
     private static final List<String> INVALID_QUERY_PARAMETERS = Arrays.asList(
             "sid",
@@ -40,7 +106,7 @@ public class Urls {
 
 
     public static boolean isValid(String url) {
-        return VALIDATOR.isValid(url) || ONION_PATTERN.matcher(url).matches();
+        return VALIDATOR.isValid(url);
     }
 
     public static String normalize(String url) {
