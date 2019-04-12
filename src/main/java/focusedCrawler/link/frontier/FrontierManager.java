@@ -88,7 +88,7 @@ public class FrontierManager {
         this.downloadRobots = getDownloadRobots();
         this.linksToLoad = config.getSchedulerMaxLinks();
         this.maxPagesPerDomain = config.getMaxPagesPerDomain();
-        this.domainCounter = new HashMap<String, Integer>();
+        this.domainCounter = new HashMap<>();
         this.scheduler = new CrawlScheduler(linkSelector, recrawlSelector, frontier, metricsManager,
                                             config.getSchedulerHostMinAccessInterval(), linksToLoad);
         this.graphRepository = new BipartiteGraphRepository(dataPath, config.getPersistentHashtableBackend());
@@ -128,7 +128,7 @@ public class FrontierManager {
         scheduler.reload();
     }
 
-    public boolean isRelevant(LinkRelevance link) throws FrontierPersistentException {
+    public boolean isRelevant(LinkRelevance link) {
         if (link.getRelevance() <= 0) {
             return false;
         }
@@ -141,12 +141,11 @@ public class FrontierManager {
             return false;
         }
 
-        Double value = frontier.exist(link);
-        if (value != null) {
+        if (!linkFilter.accept(link)) {
             return false;
         }
 
-        if (!linkFilter.accept(link)) {
+        if (frontier.exists(link)) {
             return false;
         }
 
@@ -160,7 +159,7 @@ public class FrontierManager {
         }
     }
 
-    public boolean insert(LinkRelevance linkRelevance) throws FrontierPersistentException {
+    public boolean insert(LinkRelevance linkRelevance) {
         Context timerContext = insertTimer.time();
         try {
             if (linkRelevance == null) {
@@ -175,7 +174,7 @@ public class FrontierManager {
                         hostsManager.insert(hostName);
                         try {
                             URL robotsUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
-                            LinkRelevance sitemap = LinkRelevance.createRobots(robotsUrl.toString(), 299);
+                            LinkRelevance sitemap = LinkRelevance.createRobots(robotsUrl.toString(), 300);
                             frontier.insert(sitemap);
                         } catch (Exception e) {
                             logger.warn("Failed to insert robots.txt for host: " + hostName, e);
@@ -191,11 +190,16 @@ public class FrontierManager {
         }
     }
 
-    public LinkRelevance nextURL() throws FrontierPersistentException, DataNotFoundException {
+    public void notifyDownloadFinished(LinkRelevance link) {
+        scheduler.notifyDownloadFinished(link);
+        frontier.markAsDownloaded(link);
+    }
+
+    public LinkRelevance nextURL() throws DataNotFoundException {
         return nextURL(false);
     }
     
-    public LinkRelevance nextURL(boolean asyncLoad) throws FrontierPersistentException, DataNotFoundException {
+    public LinkRelevance nextURL(boolean asyncLoad) throws DataNotFoundException {
         Context timerContext = selectTimer.time();
         try {
             LinkRelevance link = scheduler.nextLink(asyncLoad);
@@ -206,7 +210,6 @@ public class FrontierManager {
                     throw new DataNotFoundException(true, "Frontier run out of links.");
                 }
             }
-            frontier.delete(link);
 
             schedulerLog.printf("%d\t%.5f\t%s\n", System.currentTimeMillis(),
                                 link.getRelevance(), link.getURL().toString());
@@ -248,7 +251,7 @@ public class FrontierManager {
                         logger.info("Added seed URL: {}", seed);
                         count++;
                     }
-                } catch (FrontierPersistentException e) {
+                } catch (Exception e) {
                     throw new RuntimeException("Failed to insert seed URL: " + seed, e);
                 }
             }
@@ -273,7 +276,7 @@ public class FrontierManager {
     }
 
     public void insertOutlinks(Page page)
-            throws IOException, FrontierPersistentException, LinkClassifierException {
+            throws FrontierPersistentException, LinkClassifierException {
 
         LinkRelevance[] linksRelevance = outlinkClassifier.classify(page);
 

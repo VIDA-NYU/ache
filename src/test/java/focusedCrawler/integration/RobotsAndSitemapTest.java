@@ -10,14 +10,10 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
 
-import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
 import crawlercommons.robots.SimpleRobotRules;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import focusedCrawler.util.persistence.PersistentHashtable;
@@ -91,13 +87,12 @@ public class RobotsAndSitemapTest {
 
         for (String url : shouldNOTBeDownloaded) {
             LinkRelevance link = new LinkRelevance("http://127.0.0.1:1234/" + url, LinkRelevance.DEFAULT_RELEVANCE);
-            System.out.println(link);
-            assertThat("URL="+url, frontier.exist(link), is(nullValue()));
+            assertThat("URL="+url, frontier.exists(link), is(false));
         }
     }
     
     @Test
-    public void test1ToNotToDownloadSitesDisallowedOnRobots() throws Exception {
+    public void shouldNotDownloadSitesDisallowedOnRobots() throws Exception {
 
         String outputPath = tempFolder.newFolder().toString();
 
@@ -135,7 +130,7 @@ public class RobotsAndSitemapTest {
     }
 
     @Test
-    public void test2ToNotToDownloadSitesDisallowedOnRobotsWithSitemapsFalse() throws Exception {
+    public void shouldNotToDownloadSitesDisallowedOnRobotsWithSitemapsFalse() throws Exception {
 
         String outputPath = tempFolder.newFolder().toString();
 
@@ -194,14 +189,13 @@ public class RobotsAndSitemapTest {
         assertTrue(rules.isAllowed("http://www.domain.com/anypage.html"));
     }
 
-    private void assertWasCrawled(String url, Frontier frontier) throws Exception {
-        LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-        assertThat("URL=" + url, frontier.exist(link), is(lessThan(0d)));
+    private void assertWasCrawled(String path, Frontier frontier) {
+        String link = "http://127.0.0.1:1234/" + path;
+        assertThat("URL=" + link, frontier.get(link).getRelevance(), is(lessThan(0d)));
     }
 
-    private void assertWasNotCrawled(String url, Frontier frontier) throws Exception {
-        LinkRelevance link = LinkRelevance.create(url);
-        assertThat("URL=" + url, frontier.exist(link), is(not(lessThan(0d))));
+    private void assertWasNotCrawled(String url, Frontier frontier) {
+        assertThat("URL=" + url, frontier.get(url), is(nullValue()));
     }
 
     private Frontier openFrontier(String outputPath, String configPath) {

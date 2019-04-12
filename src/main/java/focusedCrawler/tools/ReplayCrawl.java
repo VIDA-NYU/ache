@@ -1,7 +1,7 @@
 package focusedCrawler.tools;
 
+import focusedCrawler.crawler.async.FetchedResultHandler;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -11,11 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.Configuration;
-import focusedCrawler.crawler.async.FetchedResultHandler;
-import focusedCrawler.crawler.async.HttpDownloader;
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
-import focusedCrawler.crawler.async.RobotsTxtHandler;
-import focusedCrawler.crawler.async.SitemapXmlHandler;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.Frontier;
@@ -130,14 +126,9 @@ public class ReplayCrawl extends CliTool {
             LinkFilter inputLinkFilter)
             throws Exception {
 
-        Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
-
         HttpDownloaderConfig downloaderConfig = config.getCrawlerConfig().getDownloaderConfig();
-        handlers.put(LinkRelevance.Type.FORWARD,
-                new FetchedResultHandler(crawlerId, targetStorage));
-        handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
-        handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage,
-                downloaderConfig.getUserAgentName()));
+        FetchedResultHandler handler = new FetchedResultHandler(crawlerId, targetStorage,
+                linkStorage, downloaderConfig.getUserAgentName());
 
         int processedPages = 0;
         int ignoredPages = 0;
@@ -180,14 +171,8 @@ public class ReplayCrawl extends CliTool {
                     // negative value after the page is crawled)
                     lr = new LinkRelevance(lr.getURL(), Math.abs(lr.getRelevance()), lr.getType());
 
-                    String finalUrl = page.getFinalUrl();
-                    Metadata responseHeaders = createHeadersMetadata(page);
-                    FetchedResult result = new FetchedResult(requestedUrl,
-                            finalUrl, page.getFetchTime(), responseHeaders,
-                            page.getContent(), page.getContentType(), 0, null,
-                            page.getFinalUrl(), 0, "", 200, "OK");
-
-                    handlers.get(lr.getType()).completed(lr, result);
+                    FetchedResult result = createFetchedResult(page);
+                    handler.completed(lr, result);
 
                 } catch (Exception e) {
                     logger.error("An unexpected error happened.", e);
@@ -202,6 +187,15 @@ public class ReplayCrawl extends CliTool {
             System.out.printf("Processed %s pages.\n", processedPages);
             System.out.printf("done.\n");
         }
+    }
+
+    private FetchedResult createFetchedResult(Page page) {
+        String finalUrl = page.getFinalUrl();
+        Metadata responseHeaders = createHeadersMetadata(page);
+        return new FetchedResult(page.getRequestedUrl(),
+                finalUrl, page.getFetchTime(), responseHeaders,
+                page.getContent(), page.getContentType(), 0, null,
+                page.getFinalUrl(), 0, "", 200, "OK");
     }
 
     private Metadata createHeadersMetadata(Page page) {

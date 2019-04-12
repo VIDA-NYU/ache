@@ -81,8 +81,8 @@ public class CrawlScheduler {
     }
     
     /**
-     * This method loads links from the frontier (stored in disk) to the scheduler. The is scheduler
-     * is a in-memory data structure that prioritizes links base on score and also politeness
+     * This method loads links from the frontier (stored in disk) to the scheduler. The scheduler
+     * is a in-memory data structure that prioritizes links based on score and also politeness
      * constraints. Which links are selected to be inserted in the frontier is determined the policy
      * implemented by the LinkSelector configured.
      * 
@@ -119,7 +119,7 @@ public class CrawlScheduler {
 
                     uncrawledLinks++;
 
-                    // check whether link can be download now according to politeness constraints
+                    // check whether link can be downloaded now according to politeness constraints
                     if (scheduler.canInsertNow(link)) {
                         // consider link to be downloaded
                         linkSelector.evaluateLink(link);
@@ -127,6 +127,7 @@ public class CrawlScheduler {
                     } else {
                         rejectedLinks++;
                     }
+
                 } catch (Exception e) {
                     // just log the exception and continue the load even when some link fails
                     logger.error("Failed to load link in frontier.", e);
@@ -221,4 +222,7 @@ public class CrawlScheduler {
         loadQueue(linksToLoad);
     }
 
+    public void notifyDownloadFinished(LinkRelevance link) {
+        scheduler.notifyDownloadFinished(link);
+    }
 }
