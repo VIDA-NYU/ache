@@ -1,20 +1,27 @@
 package focusedCrawler.util.persistence.rocksdb;
 
 import com.google.common.base.Preconditions;
+import focusedCrawler.util.CloseableIterator;
+import focusedCrawler.util.KV;
 import java.io.Closeable;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import org.rocksdb.Options;
 import org.rocksdb.RocksDB;
 import org.rocksdb.RocksDBException;
 
 import com.google.common.io.BaseEncoding;
+import org.rocksdb.RocksIterator;
 
 public abstract class AbstractRocksDbHashtable implements Closeable {
 
     protected Options options;
     protected RocksDB db;
+    private List<RocksDBIterator> iterators = new ArrayList<>();
 
     static {
         RocksDB.loadLibrary();
@@ -60,6 +67,11 @@ public abstract class AbstractRocksDbHashtable implements Closeable {
     @Override
     public synchronized void close() {
         if (db != null) {
+            for (Iterator<RocksDBIterator> listIt = this.iterators.iterator(); listIt.hasNext(); ) {
+                RocksDBIterator dbIt = listIt.next();
+                listIt.remove();
+                dbIt.close();
+            }
             db.close();
             db = null;
             options.close();
@@ -102,6 +114,77 @@ public abstract class AbstractRocksDbHashtable implements Closeable {
         } catch (UnsupportedEncodingException e) {
             throw new IllegalStateException("UTF-8 encoding not supported", e);
         }
+    }
+
+    protected RocksDBIterator openIterator() {
+        RocksDBIterator it = new RocksDBIterator(this.db);
+        this.iterators.add(it);
+        return it;
+    }
+
+    public class RocksDBIterator implements CloseableIterator<KV<byte[], byte[]>> {
+
+        private final RocksIterator cursor;
+        private boolean hasNext;
+        private boolean isOpen;
+        private byte[] value;
+        private byte[] key;
+        private RocksDB db;
+
+        private RocksDBIterator(RocksDB db) {
+            this.db = db;
+            this.cursor = db.newIterator();
+            this.cursor.seekToFirst();
+            this.isOpen = true;
+            readNextKV(true);
+        }
+
+        private void readNextKV(boolean firstEntry) {
+            if (!firstEntry) {
+                cursor.next();
+            }
+            if (cursor.isValid()) {
+                this.hasNext = true;
+                this.key = cursor.key();
+                this.value = cursor.value();
+            } else {
+                this.close();
+            }
+        }
+
+        @Override
+        public void close() {
+            if (this.isOpen) {
+                iterators.remove(this);
+                cursor.close();
+                this.isOpen = false;
+                this.hasNext = false;
+            }
+        }
+
+        @Override
+        public boolean hasNext() {
+            return hasNext;
+        }
+
+        @Override
+        public KV<byte[], byte[]> next() {
+            if (!hasNext) {
+                return null;
+            }
+            KV<byte[], byte[]> kv = new KV<>(this.key, this.value);
+            readNextKV(false);
+            return kv;
+        }
+
+        public void remove() {
+            try {
+                db.delete(key);
+            } catch (RocksDBException e) {
+                throw new RuntimeException("Failed to remove entry from RocksDb");
+            }
+        }
+
     }
 
 }

@@ -23,7 +23,7 @@ public class BytesBytesHashtable
 
     @Override
     public CloseableIterator<KV<byte[], byte[]>> iterator() {
-        return new RocksDBIterator(this.db);
+        return super.openIterator();
     }
 
 }
