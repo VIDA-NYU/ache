@@ -18,6 +18,7 @@
 - Upgrade `commons-validator` library to version 1.6
 - Upgrade `okhttp3` library to version 3.14.0
 - Fix issue #177: Links from recent TLDs are considered invalid
+- Keep track of iterators and close them before closing the DB (fix #113)
 
 ## Version 0.11.0
 
