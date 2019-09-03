@@ -18,6 +18,8 @@
 - Upgrade `commons-validator` library to version 1.6
 - Upgrade `okhttp3` library to version 3.14.0
 - Fix issue #177: Links from recent TLDs are considered invalid
+- Upgrade RocksDB dependency (rocksdbjni) to version 6.2.2
+- Added error code details to RocksDB exception logs
 
 ## Version 0.11.0
 
