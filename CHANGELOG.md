@@ -22,6 +22,7 @@
 - Added error code details to RocksDB exception logs
 - Upgrade gradle-node-plugin to version 1.3.1
 - Upgrade npm version to 6.10.2
+- Upgrade ache-dashboard npm dependencies
 
 ## Version 0.11.0
 
