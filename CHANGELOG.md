@@ -20,6 +20,8 @@
 - Fix issue #177: Links from recent TLDs are considered invalid
 - Upgrade RocksDB dependency (rocksdbjni) to version 6.2.2
 - Added error code details to RocksDB exception logs
+- Upgrade gradle-node-plugin to version 1.3.1
+- Upgrade npm version to 6.10.2
 
 ## Version 0.11.0
 
