@@ -24,6 +24,7 @@
 - Upgrade npm version to 6.10.2
 - Upgrade ache-dashboard npm dependencies
 - Upgrade gradle wrapper to version 5.6.1
+- Update Dockerfile to use openjdk:11-jdk (Java 11)
 
 ## Version 0.11.0
 
