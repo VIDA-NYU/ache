@@ -23,6 +23,7 @@
 - Upgrade gradle-node-plugin to version 1.3.1
 - Upgrade npm version to 6.10.2
 - Upgrade ache-dashboard npm dependencies
+- Upgrade gradle wrapper to version 5.6.1
 
 ## Version 0.11.0
 
