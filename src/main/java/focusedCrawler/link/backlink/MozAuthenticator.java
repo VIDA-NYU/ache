@@ -3,11 +3,11 @@ package focusedCrawler.link.backlink;
 import java.net.URLEncoder;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
 import java.util.Date;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DatatypeConverter;
 
 public class MozAuthenticator {
 
@@ -28,10 +28,6 @@ public class MozAuthenticator {
      * expires Default 300s
      */
     private long expiresInterval = 300;
-
-    public MozAuthenticator() {
-
-    }
 
     /**
      * Constructor to set all the variables
@@ -83,7 +79,7 @@ public class MozAuthenticator {
 
         // base64-encode the hmac
         @SuppressWarnings("deprecation")
-        String urlSafeSignature = URLEncoder.encode(EncodeBase64(rawHmac));
+        String urlSafeSignature = URLEncoder.encode(encodeBase64(rawHmac));
 
         String authenticationStr = "AccessID=" + accessID + "&Expires=" + expires + "&Signature="
                 + urlSafeSignature;
@@ -97,8 +93,8 @@ public class MozAuthenticator {
      * @param rawData
      * @return
      */
-    public String EncodeBase64(byte[] rawData) {
-        return DatatypeConverter.printBase64Binary(rawData);
+    private String encodeBase64(byte[] rawData) {
+        return Base64.getEncoder().encodeToString(rawData);
     }
 
     /**

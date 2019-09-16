@@ -18,6 +18,13 @@
 - Upgrade `commons-validator` library to version 1.6
 - Upgrade `okhttp3` library to version 3.14.0
 - Fix issue #177: Links from recent TLDs are considered invalid
+- Upgrade RocksDB dependency (rocksdbjni) to version 6.2.2
+- Added error code details to RocksDB exception logs
+- Upgrade gradle-node-plugin to version 1.3.1
+- Upgrade npm version to 6.10.2
+- Upgrade ache-dashboard npm dependencies
+- Upgrade gradle wrapper to version 5.6.1
+- Update Dockerfile to use openjdk:11-jdk (Java 11)
 - Keep track of iterators and close them before closing the DB (fix #113)
 
 ## Version 0.11.0

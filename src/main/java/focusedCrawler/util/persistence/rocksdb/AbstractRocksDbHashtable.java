@@ -39,7 +39,10 @@ public abstract class AbstractRocksDbHashtable implements Closeable {
         try {
             this.db = RocksDB.open(options, path);
         } catch (RocksDBException e) {
-            throw new RuntimeException("Failed to open database at " + path, e);
+            String message = String.format(
+                    "Failed to open/create RocksDB database at %s. Error code: %s",
+                    path, e.getStatus().getCodeString());
+            throw new RuntimeException(message, e);
         }
     }
 
