@@ -30,7 +30,7 @@ public class StringObjectHashtable<T>
 
     @Override
     public CloseableIterator<KV<String, T>> iterator() {
-        return new StringObjectIterator(new RocksDBIterator(super.db));
+        return new StringObjectIterator(super.openIterator());
     }
 
     protected class StringObjectIterator

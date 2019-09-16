@@ -25,6 +25,7 @@
 - Upgrade ache-dashboard npm dependencies
 - Upgrade gradle wrapper to version 5.6.1
 - Update Dockerfile to use openjdk:11-jdk (Java 11)
+- Keep track of iterators and close them before closing the DB (fix #113)
 
 ## Version 0.11.0
 

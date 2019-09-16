@@ -31,7 +31,7 @@ public class BytesObjectHashtable<T>
 
     @Override
     public CloseableIterator<KV<byte[], T>> iterator() {
-        return new BytesObjectIterator(new RocksDBIterator(super.db));
+        return new BytesObjectIterator(super.openIterator());
     }
 
     private class BytesObjectIterator

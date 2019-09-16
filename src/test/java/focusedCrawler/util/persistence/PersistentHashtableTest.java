@@ -1,9 +1,11 @@
 package focusedCrawler.util.persistence;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.net.URL;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -157,6 +159,39 @@ public class PersistentHashtableTest {
             assertThat(it.hasNext(), is(false));
             assertThat(it.next(), is(nullValue()));
         }
+    }
+
+    @Test
+    public void shouldNotCrashWhenIterateOnClosedHashtable() throws Exception {
+        // given
+        PersistentHashtable<Integer> ht = new PersistentHashtable<>(
+                tempFolder.newFolder().toString(), 1000, Integer.class, database);
+
+        // when
+        ht.put("1", 1);
+        ht.put("2", 2);
+        ht.commit();
+
+        TupleIterator<Integer> it;
+
+        // when we open an iterator
+        it = ht.iterator();
+        // and close the hash table (not the iterator)
+        ht.close();
+
+        // (following calls used to crash the JVM before the bug-fix (issue #113)
+        boolean hasNext1 = it.hasNext();
+        Tuple<Integer> next1 = it.next();
+
+        boolean hasNext2 = it.hasNext();
+        Tuple<Integer> next2 = it.next();
+
+        // then
+        assertThat(hasNext1, is(false));
+        assertThat(next1, is(nullValue()));
+
+        assertThat(hasNext2, is(false));
+        assertThat(next2, is(nullValue()));
     }
 
 }
