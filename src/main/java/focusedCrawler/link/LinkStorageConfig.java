@@ -37,7 +37,7 @@ public class LinkStorageConfig {
     private int maxPagesPerDomain = Integer.MAX_VALUE;
 
     @JsonProperty("link_storage.link_classifier.type")
-    private String typeOfClassifier = "LinkClassifierBaseline";
+    private String typeOfClassifier = "LinkClassifierBreadthSearch";
 
     @JsonProperty("link_storage.link_strategy.outlinks")
     private boolean getOutlinks = true;

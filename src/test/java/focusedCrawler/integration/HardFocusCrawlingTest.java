@@ -87,6 +87,42 @@ public class HardFocusCrawlingTest {
             assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(nullValue()));
         }
     }
+
+
+
+    @Test
+    public void shouldDownloadLinksFromAllPagesWhenFocusIsFalse() throws Exception {
+
+        String outputPath = tempFolder.newFolder().toString();
+
+        String configPath = basePath + "/config/hard_focus_false";
+        String seedPath = basePath + "/seeds.txt";
+        String modelPath = basePath + "/model/";
+
+        String crawlerId = "crawler0";
+
+        // when
+        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath, "-cid", crawlerId };
+        Main.main(args);
+
+        // then
+        Frontier frontier = openFrontier(outputPath + "/" + crawlerId, configPath);
+
+        List<String> shouldBeDownloaded = asList(
+                "index.html",
+                "index_irrelevant.html",
+                "index_relevant.html",
+                "relevant_page1.html",
+                "irrelevant_page1.html",
+                "relevant_page2.html",
+                "irrelevant_page2.html"
+        );
+
+        for (String url : shouldBeDownloaded) {
+            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
+            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(lessThan(0d)));
+        }
+    }
     
     private Frontier openFrontier(String outputPath, String configPath) {
         Configuration config = new Configuration(configPath + "/ache.yml");
