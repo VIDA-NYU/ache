@@ -27,7 +27,7 @@ dependencies {
     compile group: 'commons-validator', name: 'commons-validator', version: '1.6'
     compile group: 'com.github.crawler-commons', name: 'crawler-commons', version: '1.0'
     // CLI
-    compile group: 'io.airlift', name: 'airline', version: '0.7'
+    compile group: 'io.airlift', name: 'airline', version: '0.8'
     // Data serialization
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.5'
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-cbor', version: '2.8.5'
