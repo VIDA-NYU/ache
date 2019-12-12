@@ -110,8 +110,8 @@ The file  ``pageclassifier.yml`` should be organized as follows:
           - pattern1-for-content
       content_type:
         boolean_operator: AND|OR
-          regexes:
-            - pattern1-for-content-type
+        regexes:
+          - pattern1-for-content-type
 
 For example, in order to be classified as relevant using the following
 configuration, a page would have to:
