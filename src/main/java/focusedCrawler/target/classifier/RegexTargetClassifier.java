@@ -21,6 +21,7 @@ public class RegexTargetClassifier implements TargetClassifier {
     private Pattern[] urlPatterns;
     private Pattern[] titlePatterns;
     private Pattern[] contentPatterns;
+    private Pattern[] contentTypePatterns;
     private boolean OR;
     private boolean AND;
 
@@ -29,6 +30,7 @@ public class RegexTargetClassifier implements TargetClassifier {
         this.urlPatterns = compilePatterns(params.url.regexes);
         this.titlePatterns = compilePatterns(params.title.regexes);
         this.contentPatterns = compilePatterns(params.content.regexes);
+        this.contentTypePatterns = compilePatterns(params.content_type.regexes);
         this.OR  = "OR".equals(params.boolean_operator);
         this.AND = "AND".equals(params.boolean_operator);
     }
@@ -69,6 +71,14 @@ public class RegexTargetClassifier implements TargetClassifier {
             if( matchesOne && OR)   return TargetRelevance.RELEVANT;
             if(!matchesAll && AND)  return TargetRelevance.IRRELEVANT;
         }
+        if(contentTypePatterns != null && contentTypePatterns.length > 0) {
+            boolean matches = regexMatchesField(page.getContentType(), params.content.boolean_operator, contentTypePatterns);
+            matchesAll = (matchesAll && matches);
+            matchesOne = (matchesOne || matches);
+            if( matchesOne && OR)   return TargetRelevance.RELEVANT;
+            if(!matchesAll && AND)  return TargetRelevance.IRRELEVANT;
+        }
+
         if(AND)
             return matchesAll ? TargetRelevance.RELEVANT : TargetRelevance.IRRELEVANT;
         else
@@ -109,6 +119,7 @@ public class RegexTargetClassifier implements TargetClassifier {
         public RegexList url = new RegexList();
         public RegexList title = new RegexList();
         public RegexList content = new RegexList();
+        public RegexList content_type = new RegexList();
     }
 
     public static class Builder {
@@ -117,7 +128,8 @@ public class RegexTargetClassifier implements TargetClassifier {
             RegexClassifierConfig params = yaml.treeToValue(parameters, RegexClassifierConfig.class);
             if (params.url.regexes.isEmpty() && 
                 params.title.regexes.isEmpty() && 
-                params.content.regexes.isEmpty()) {
+                params.content.regexes.isEmpty() &&
+                params.content_type.regexes.isEmpty()) {
                 throw new IllegalArgumentException(
                         "Failed to configure " + getClass().getSimpleName() +
                         ". At least one regular expression needs to be provided.");

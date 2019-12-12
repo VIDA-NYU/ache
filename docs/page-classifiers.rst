@@ -78,7 +78,7 @@ regex
 -----------
 
 Classifies a page as relevant by matching the lists of regular expressions
-provided against multiple fields: `url`, `title`, and `content`.
+provided against multiple fields: `url`, `title`, `content`, and `content_type`.
 You can provide a list of regular expressions for each of these fields,
 and also the type of boolean operation to combine the results:
 
@@ -108,6 +108,10 @@ The file  ``pageclassifier.yml`` should be organized as follows:
         boolean_operator: AND|OR
         regexes:
           - pattern1-for-content
+      content_type:
+        boolean_operator: AND|OR
+          regexes:
+            - pattern1-for-content-type
 
 For example, in order to be classified as relevant using the following
 configuration, a page would have to:

@@ -1,0 +1,6 @@
+type: regex
+parameters:
+    content_type:
+      boolean_operator: "OR"
+      regexes:
+      - ".*text/csv.*"

@@ -19,9 +19,10 @@ import focusedCrawler.util.parser.PaginaURL;
 public class RegexTargetClassifierTest {
 
     @Test
-    public void testRegexClassifierMatcheConfig1() throws TargetClassifierException, IOException {
+    public void testRegexClassifierMatchConfig1() throws TargetClassifierException, IOException {
         // given
         String path = ClassifierFactoryTest.class.getResource("regex_classifier_config/").getPath();
+        System.out.println(path);
         
         String url1 = "http://example.com/foo";
         String con1 = "<html><div><a href=\"http://j6im4v42ur6dpic3.onion/\">Page 1, foo</a></div></html>";
@@ -47,9 +48,28 @@ public class RegexTargetClassifierTest {
         assertThat(classifier.classify(page3).isRelevant(), is(true));
         assertThat(classifier.classify(page4).isRelevant(), is(false));
     }
+
+    @Test
+    public void testRegexClassifierMatchConfigContentTypeCSV() throws TargetClassifierException, IOException {
+        // given
+        String path = ClassifierFactoryTest.class.getResource("regex_classifier/config_content_type_csv/").getPath();
+
+        String url = "http://example.com/foo";
+        String content = "<html><div><a href=\"http://j6im4v42ur6dpic3.onion/\">Page 1, foo</a></div></html>";
+        Page  page1 = createPage(url, content);
+        page1.setContentType("text/html");
+        Page  page2 = createPage(url, content);
+        page2.setContentType("text/csv");
+
+        RegexTargetClassifier classifier = (RegexTargetClassifier) TargetClassifierFactory.create(path);
+
+        // then
+        assertThat(classifier.classify(page1).isRelevant(), is(false));
+        assertThat(classifier.classify(page2).isRelevant(), is(true));
+    }
     
     @Test
-    public void testRegexClassifierMatcheConfig2() throws TargetClassifierException, IOException {
+    public void testRegexClassifierMatchConfig2() throws TargetClassifierException, IOException {
         // given
         String config = ClassifierFactoryTest.class.getResource("regex_classifier/config_jobs/").getPath();
         String pageFile = "https%3A%2F%2Fmarkettrack.com%2Fcareers%2Fjob-openings";
