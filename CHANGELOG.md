@@ -25,6 +25,9 @@
 - Upgrade ache-dashboard npm dependencies
 - Upgrade gradle wrapper to version 5.6.1
 - Update Dockerfile to use openjdk:11-jdk (Java 11)
+- Added content_type field to RegexTargetClassifier
+- Change default link classifier to LinkClassifierBreadthSearch
+- Update io.airlift:airline dependency to version 0.8
 
 ## Version 0.11.0
 
