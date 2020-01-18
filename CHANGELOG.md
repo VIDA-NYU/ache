@@ -30,6 +30,7 @@
 - Update io.airlift:airline dependency to version 0.8
 - Update gradle build script to use new plugins DSL
 - Update coverals gradle plugin to version 2.9.0
+- Update searchkit to version ^2.4.0
 
 ## Version 0.11.0
 

@@ -9,7 +9,7 @@
     "react-router-dom": "^4.0.0",
     "react-scripts": "2.1.8",
     "react-vis": "^1.11.6",
-    "searchkit": "^2.3.2",
+    "searchkit": "^2.4.0",
     "whatwg-fetch": "^2.0.4"
   },
   "peerDependencies": {
