@@ -28,6 +28,8 @@
 - Added content_type field to RegexTargetClassifier
 - Change default link classifier to LinkClassifierBreadthSearch
 - Update io.airlift:airline dependency to version 0.8
+- Update gradle build script to use new plugins DSL
+- Update coverals gradle plugin to version 2.9.0
 
 ## Version 0.11.0
 

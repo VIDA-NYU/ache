@@ -1,8 +1,10 @@
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'application'
-apply plugin: "jacoco"
-apply plugin: 'com.github.kt3k.coveralls'
+plugins {
+    id 'java'
+    id 'idea'
+    id 'application'
+    id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.9.0'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -120,14 +122,6 @@ applicationDistribution.from(copyConfig) {
 //
 // Integration for test coverage service: coveralls
 //
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
-    }
-}
 jacocoTestReport {
     reports {
         xml.enabled = true // coveralls plugin depends on xml format report
