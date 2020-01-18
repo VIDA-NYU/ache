@@ -1,6 +1,6 @@
 # ACHE Crawer Change Log
 
-## Version 0.12.0-SNAPSHOT
+## Version 0.12.0-SNAPSHOT (2020-01-18)
 
 - Upgrade `crawler-commons` dependency to version 0.9
 - Removed Elasticsearch transport-client-based repository
@@ -32,7 +32,7 @@
 - Update coverals gradle plugin to version 2.9.0
 - Update searchkit to version ^2.4.0
 
-## Version 0.11.0
+## Version 0.11.0 (2018-06-01)
 
 - Removed dependency on Weka and reimplemented all machine-learning code using SMILE.
 - Added option to skip cross-validation on `ache buildModel` command
