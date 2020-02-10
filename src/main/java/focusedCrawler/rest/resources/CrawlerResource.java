@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletResponse;
+import com.fasterxml.jackson.core.JsonParseException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,8 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 
 import focusedCrawler.Main;
 import focusedCrawler.crawler.CrawlersManager;
@@ -23,6 +26,17 @@ import focusedCrawler.crawler.cookies.Cookie;
 import focusedCrawler.util.MetricsManager;
 import spark.Request;
 import spark.Route;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collection;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.annotation.concurrent.Immutable;
 
 public class CrawlerResource {
 
