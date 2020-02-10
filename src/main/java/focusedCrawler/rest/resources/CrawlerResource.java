@@ -68,6 +68,46 @@ public class CrawlerResource {
         return metricsManager != null ? metricsManager.getMetricsRegistry() : null;
     };
 
+    public Route addurl = (request, response) -> {
+          try {
+            String crawlerId = request.params(":crawler_id");
+            CrawlContext context = crawlersManager.getCrawl(crawlerId);          
+            System.out.print(request.body());
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode jsonNode = mapper.readTree(request.body());
+            String yaml = new YAMLMapper().writeValueAsString(jsonNode);
+            String path;
+            String directory;
+            if (context == null) {
+                response.status(HttpServletResponse.SC_NOT_FOUND);
+            return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
+            }
+               path = context.seedPath;
+               File f = new File(path);
+               directory = f.getParent();
+               String link_filters_path = directory + File.separator + "link_filters.yaml";
+               System.out.println(link_filters_path);
+               File link_filter_file = new File(link_filters_path);
+               link_filter_file.delete();
+           //create new file with content 
+               link_filter_file.createNewFile();
+            
+            FileWriter myWriter = new FileWriter(link_filter_file);
+            //FileWriter myWriter = new FileWriter(link_filters_path);
+            myWriter.write(yaml);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+               return ImmutableMap.of("output", yaml);
+            
+            } catch (Exception e) {
+                logger.error("failed.", e);
+                response.status(HttpServletResponse.SC_NOT_ACCEPTABLE);
+                System.out.println("hello");
+                return ImmutableMap.of("message", false);
+
+            }
+          };
+
     public Route startCrawl = (request, response) -> {
         try {
             String crawlerId = request.params(":crawler_id");
