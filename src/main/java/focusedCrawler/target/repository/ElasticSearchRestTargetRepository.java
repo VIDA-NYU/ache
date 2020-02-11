@@ -193,7 +193,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         for (String host : esHosts) {
             try {
                 URL url = new URL(host);
-                hosts.add(new HttpHost(url.getHost(), url.getPort()));
+                hosts.add(new HttpHost(url.getHost(), url.getPort(), url.getProtocol()));
             } catch (MalformedURLException e) {
                 throw new RuntimeException("Failed to initialize Elasticsearch REST client. "
                         + "Invalid host: " + host, e);
