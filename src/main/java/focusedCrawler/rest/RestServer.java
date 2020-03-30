@@ -162,7 +162,7 @@ public class RestServer {
             return "OK";
         });
 
-        server.before((request, returnesponse) -> {
+        server.before((request, response) -> {
             response.header("Access-Control-Allow-Origin", origin);
             response.header("Access-Control-Request-Method", methods);
         });
