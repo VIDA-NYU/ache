@@ -37,8 +37,11 @@ import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.annotation.concurrent.Immutable;
+import org.apache.commons.io.FileUtils;
+import java.util.concurrent.TimeUnit ;
 
 public class CrawlerResource {
+    private Map<String, CrawlContext> crawlers = new HashMap<>();
 
     public static final String VERSION = Main.class.getPackage().getImplementationVersion();
 
@@ -68,6 +71,10 @@ public class CrawlerResource {
         Map<String, CrawlContext> crawlers = crawlersManager.getCrawls();
         return ImmutableMap.of("crawlers", crawlers.values());
     };
+    public Route helloWorld = (request, response) -> {
+        System.out.println("helloWorld");
+        return ImmutableMap.of("crawlers", "hello this is working");
+    };
 
     public Route metricsResource = (request, response) -> {
         String crawlerId = request.params(":crawler_id");
@@ -85,7 +92,8 @@ public class CrawlerResource {
     public Route addurl = (request, response) -> {
           try {
             String crawlerId = request.params(":crawler_id");
-            CrawlContext context = crawlersManager.getCrawl(crawlerId);          
+            CrawlContext context = crawlersManager.getCrawl(crawlerId);  
+            System.out.println(context);        
             System.out.print(request.body());
             ObjectMapper mapper = new ObjectMapper();
             JsonNode jsonNode = mapper.readTree(request.body());
@@ -125,7 +133,6 @@ public class CrawlerResource {
     public Route startCrawl = (request, response) -> {
         try {
             String crawlerId = request.params(":crawler_id");
-
             StartCrawlParams params = json.readValue(request.body(), StartCrawlParams.class);
 
             crawlersManager.createCrawler(crawlerId, params);
@@ -141,6 +148,49 @@ public class CrawlerResource {
             return ImmutableMap.of(
                 "message", "Failed to start crawler.",
                 "crawlerStarted", false);
+        }
+    };
+    public Route restartCrawl = (request, response) -> {
+        try {
+            String crawlerId = request.params(":crawler_id");
+            StartCrawlParams params = json.readValue(request.body(), StartCrawlParams.class);
+            CrawlContext context = crawlersManager.getCrawl(crawlerId);          
+            System.out.println(context);
+            String path;
+            String directory;
+            if (context == null) {
+                response.status(HttpServletResponse.SC_NOT_FOUND);
+            return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
+            }
+
+            path = context.dataPath;
+            File f = new File(path);
+            directory = f.getParent();
+            String crawler_path = directory + File.separator + crawlerId;
+            File crawler_directory = new File(crawler_path);
+            
+            AsyncCrawler crawler = context.getCrawler();
+            crawler.stopAsync();
+                crawler.awaitTerminated();
+                if (crawler_directory.exists()) {
+                FileUtils.cleanDirectory(crawler_directory); 
+                FileUtils.forceDelete(crawler_directory);
+                System.out.println("folder deleted");
+            }
+                crawlersManager.createCrawler(crawlerId, params);
+                crawlersManager.startCrawl(crawlerId);
+                System.out.println("Crawler stopped successfully");
+             
+            return ImmutableMap.of(
+                "message", "Crawler restarted successfully.",
+                "crawlerreStarted", true);
+
+        } catch (Exception e) {
+            logger.error("Failed to restart crawler.", e);
+            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            return ImmutableMap.of(
+                "message", "Failed to restart crawler.",
+                "crawlerreStarted", false);
         }
     };
 
