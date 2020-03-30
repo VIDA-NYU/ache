@@ -71,11 +71,7 @@ public class CrawlerResource {
         Map<String, CrawlContext> crawlers = crawlersManager.getCrawls();
         return ImmutableMap.of("crawlers", crawlers.values());
     };
-    public Route helloWorld = (request, response) -> {
-        System.out.println("helloWorld");
-        return ImmutableMap.of("crawlers", "hello this is working");
-    };
-
+   
     public Route metricsResource = (request, response) -> {
         String crawlerId = request.params(":crawler_id");
 

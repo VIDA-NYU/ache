@@ -104,7 +104,6 @@ public class RestServer {
         server.post("/crawls/:crawler_id/_search",    elasticsearchProxyResource.searchApi);
         server.post("/crawls/:crawler_id/link_filter",   json(crawlerResource.addurl));
         server.post("/crawls/:crawler_id/restartCrawl",  json(crawlerResource.restartCrawl));
-        server.get("/crawl/helloWorld",              json(crawlerResource.helloWorld));
         /*
          * Thread management routes
          */
@@ -163,7 +162,7 @@ public class RestServer {
             return "OK";
         });
 
-        server.before((request, response) -> {
+        server.before((request, returnesponse) -> {
             response.header("Access-Control-Allow-Origin", origin);
             response.header("Access-Control-Request-Method", methods);
         });
