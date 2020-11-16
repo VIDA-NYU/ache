@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import focusedCrawler.config.Configuration;
@@ -21,8 +22,9 @@ import focusedCrawler.util.parser.BackLinkNeighborhood;
 
 public class BacklinkSurferTest {
 
+    @Ignore
     @Test
-    public void backlinksShouldBeDownloadedFromMozApi() throws MalformedURLException, IOException {
+    public void backlinksShouldBeDownloadedFromMozApi() throws IOException {
         // given
         Map<String, String> props = new HashMap<>();
         props.put("link_storage.backsurfer.moz.access_id", "mozscape-4a1d0827fc");
@@ -41,9 +43,10 @@ public class BacklinkSurferTest {
         assertThat(backlinks.length>0, is(true));
         assertTrue(backLinkSetIsValid(backlinks));
     }
-    
+
+    @Ignore
     @Test
-    public void backlinksShouldBeDownloadedFromGoogle() throws MalformedURLException, IOException {
+    public void backlinksShouldBeDownloadedFromGoogle() throws IOException {
         // given
         Map<String, String> props = new HashMap<>();
         BackSurferConfig config = new Configuration(props).getLinkStorageConfig().getBackSurferConfig();
