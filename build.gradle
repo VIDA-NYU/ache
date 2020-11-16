@@ -3,7 +3,7 @@ plugins {
     id 'idea'
     id 'application'
     id 'jacoco'
-    id 'com.github.kt3k.coveralls' version '2.9.0'
+    id 'com.github.kt3k.coveralls' version '2.10.2'
 }
 
 sourceCompatibility = 1.8
@@ -46,7 +46,7 @@ dependencies {
     implementation group: 'org.rocksdb', name: 'rocksdbjni', version: '6.2.2'
     implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '5.6.7'
     implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '0.11.0.1'
-    compile('org.netpreserve.commons:webarchive-commons:1.1.8') {
+    implementation('org.netpreserve.commons:webarchive-commons:1.1.8') {
         exclude group: 'org.apache.hadoop', module: 'hadoop-core'
         exclude group: 'junit', module: 'junit'
     }
@@ -128,7 +128,7 @@ jacocoTestReport {
         html.enabled = true
     }
     afterEvaluate {
-        classDirectories = files(classDirectories.files.collect {
+        classDirectories.from = files(classDirectories.files.collect {
             fileTree(
                 dir: it,
                 exclude: ['focusedCrawler/tools/**']
