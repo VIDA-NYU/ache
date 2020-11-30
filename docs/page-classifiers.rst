@@ -18,7 +18,7 @@ To configure a page classifier, you will need to create a new directory
 containing a file named  ``pageclassifier.yml`` specifying the type of
 classifier that should be used and its parameters.
 ACHE contains several `page classifier implementations
-<https://github.com/ViDA-NYU/ache/tree/master/src/main/java/focusedCrawler/target/classifier>`_
+<https://github.com/ViDA-NYU/ache/tree/master/ache/src/main/java/achecrawler/target/classifier>`_
 available. The following subsections describe how to configure them:
 
 * :ref:`title_regex <pageclassifier_title_regex>`

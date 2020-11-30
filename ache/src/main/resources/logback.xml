@@ -32,7 +32,7 @@
     <logger name="org.apache.http" level="WARN"/>
     <logger name="smile" level="WARN"/>
     <logger name="org.apache.http.client.protocol.ResponseProcessCookies" level="ERROR"/>
-    <logger name="focusedCrawler.crawler.crawlercommons" level="ERROR"/>
+    <logger name="achecrawler.crawler.crawlercommons" level="ERROR"/>
     <logger name="crawlercommons.fetcher" level="ERROR"/>
     <logger name="crawlercommons.sitemaps" level="ERROR"/>
 
@@ -47,7 +47,7 @@
 	</root>
  
 	<!-- 
-	<logger name="focusedCrawler" level="info">
+	<logger name="achecrawler" level="info">
 		<appender-ref ref="AcheCrawlerFileAppender" />
 	</logger>
     -->

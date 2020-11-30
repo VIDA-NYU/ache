@@ -10,7 +10,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 compileJava.options.encoding = "UTF-8"
 version = '0.13.0-SNAPSHOT'
-mainClassName = 'focusedCrawler.Main'
+mainClassName = 'achecrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError"]
 
 repositories {
@@ -131,7 +131,7 @@ jacocoTestReport {
         classDirectories.from = files(classDirectories.files.collect {
             fileTree(
                 dir: it,
-                exclude: ['focusedCrawler/tools/**']
+                exclude: ['achecrawler/tools/**']
             )
         })
     }
