@@ -15,5 +15,5 @@ task build(type: NpmTask, dependsOn: [npmInstall]) {
 
 task install(type: Copy, dependsOn: build) {
   from "${projectDir}/build/"
-  into "${rootProject.projectDir}/src/main/resources/public/"
+  into "${rootProject.projectDir}/ache/src/main/resources/public/"
 }

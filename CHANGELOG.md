@@ -5,6 +5,7 @@
 - Upgrade gradle-node-plugin to version 2.2.4 
 - Upgrade gradle wrapper to version 6.6.1
 - Upgrade `crawler-commons` to version 1.1
+- Reorganized gradle module directory structure
 
 
 ## Version 0.12.0 (2020-01-18)

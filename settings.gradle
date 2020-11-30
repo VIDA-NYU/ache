@@ -1,2 +1,3 @@
-rootProject.name = 'ache'
+rootProject.name = 'achecrawler'
 include 'ache-dashboard'
+include 'ache'

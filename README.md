@@ -51,7 +51,7 @@ which will generate an installation package under `ache/build/install/`.
 You can then make `ache` command available in the terminal by adding ACHE binaries to the `PATH` environment variable:
 
 ```bash
-export ACHE_HOME="{path-to-cloned-ache-repository}/build/install/ache"
+export ACHE_HOME="{path-to-cloned-ache-repository}/ache/build/install/ache"
 export PATH="$ACHE_HOME/bin:$PATH"
 ```
 

@@ -23,7 +23,7 @@ export TERM=${TERM:-dumb}
 ./gradlew clean installDist --stacktrace
 
 
-pushd build/install/ache
+pushd ache/build/install/ache
 cp -r bin/* ${PREFIX}/lib/ache/bin/
 cp -r lib/* ${PREFIX}/lib/ache/lib/
 # needed by DDT

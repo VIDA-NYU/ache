@@ -1,4 +1,5 @@
 /build/
+ache/build/
 /output
 /data/
 *.log
@@ -14,7 +15,7 @@ config/escort
 /bin/
 .DS_Store*
 docs/_build/
-src/main/resources/public/
+ache/src/main/resources/public/
 config/config_docker/data-*
 config/config_docker_tor/data-*
 .idea/
