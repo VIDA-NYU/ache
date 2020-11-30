@@ -6,6 +6,7 @@
 - Upgrade gradle wrapper to version 6.6.1
 - Upgrade `crawler-commons` to version 1.1
 - Reorganized gradle module directory structure
+- Rename root package to 'achecrawler'
 
 
 ## Version 0.12.0 (2020-01-18)
