@@ -180,6 +180,33 @@ public class LinkStorage {
         OnlineLearning onlineLearning = null;
         if (config.isUseOnlineLearning()) {
             onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager);
+
+        }
+
+        return new LinkStorage(config, frontierManager, onlineLearning);
+    }
+
+    public static LinkStorage create(String configPath, String seedFile, String dataPath,
+                                     String modelPath, List<String> whitelist, List<String> blacklist,
+                                     LinkStorageConfig config, MetricsManager metricsManager)
+            throws FrontierPersistentException, IOException {
+
+        Path stoplistPath = Paths.get(configPath, "/stoplist.txt");
+        StopList stoplist;
+        if (Files.exists(stoplistPath)) {
+            stoplist = new StopListFile(stoplistPath.toFile().getCanonicalPath());
+        } else {
+            stoplist = StopListFile.DEFAULT;
+        }
+
+        LinkClassifierFactory.setDefaultStoplist(stoplist);
+
+        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath,
+                dataPath, modelPath, whitelist, blacklist, seedFile, metricsManager);
+
+        OnlineLearning onlineLearning = null;
+        if (config.isUseOnlineLearning()) {
+            onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager);
             
         }
         
