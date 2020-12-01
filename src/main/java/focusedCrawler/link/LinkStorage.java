@@ -19,7 +19,6 @@ import focusedCrawler.link.classifier.online.ForwardOnlineLearning;
 import focusedCrawler.link.classifier.online.OnlineLearning;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
-import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.DataNotFoundException;
@@ -65,26 +64,6 @@ public class LinkStorage {
         logger.info("done.");
     }
 
-    /**
-     * This method inserts links from a given page into the frontier
-     * 
-     * @param obj
-     *            Object - page containing links
-     * @return Object
-     */
-    public Object insert(Object obj) throws StorageException {
-        if(obj instanceof Page) {
-            return insert((Page) obj);
-        } 
-        else if(obj instanceof RobotsTxtHandler.RobotsData) {
-            insert((RobotsTxtHandler.RobotsData) obj);
-        }
-        else if(obj instanceof SitemapXmlHandler.SitemapData) {
-            insert((SitemapXmlHandler.SitemapData) obj);
-        }
-        return null;
-    }
-
     public void insert(RobotsTxtHandler.RobotsData robotsData) {
         if (disallowSitesInRobotsTxt) {
             this.insertRobotRules(robotsData.link, robotsData.robotRules);
@@ -119,9 +98,11 @@ public class LinkStorage {
         }
         logger.info("Added {} child sitemaps.", sitemapData.sitemaps.size());
     }
-    
-    
-    public Object insert(Page page) throws StorageException {
+
+    /**
+     * Inserts links from the given page into the frontier
+     */
+    public void insert(Page page) throws StorageException {
         try {
             if (getBacklinks && page.isAuth()) {
                 frontierManager.insertBacklinks(page);
@@ -145,24 +126,19 @@ public class LinkStorage {
             logger.info("Failed to insert page into LinkStorage.", ex);
             throw new StorageException(ex.getMessage(), ex);
         }
-        return null;
     }
 
     /**
      * This method sends a link to crawler
      * @throws DataNotFoundException 
      */
-    public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
-        try {
-            return frontierManager.nextURL(true);
-        } catch (FrontierPersistentException e) {
-            throw new StorageException(e.getMessage(), e);
-        }
+    public synchronized LinkRelevance select() throws DataNotFoundException {
+        return frontierManager.nextURL(true);
     }
 
     public static LinkStorage create(String configPath, String seedFile, String dataPath,
             String modelPath, LinkStorageConfig config, MetricsManager metricsManager)
-            throws FrontierPersistentException, IOException {
+            throws IOException {
         
         Path stoplistPath = Paths.get(configPath, "/stoplist.txt");
         StopList stoplist;
@@ -231,4 +207,7 @@ public class LinkStorage {
         frontierManager.addSeeds(seeds);
     }
 
+    public void notifyDownloadFinished(LinkRelevance link) {
+        frontierManager.notifyDownloadFinished(link);
+    }
 }

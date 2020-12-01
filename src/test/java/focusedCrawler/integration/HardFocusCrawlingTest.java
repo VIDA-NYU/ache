@@ -77,14 +77,14 @@ public class HardFocusCrawlingTest {
                 "irrelevant_page2.html"
         );
 
-        for (String url : shouldBeDownloaded) {
-            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(lessThan(0d)));
+        for (String path : shouldBeDownloaded) {
+            String url = "http://127.0.0.1:1234/" + path;
+            assertThat("URL=" + url, frontier.get(url).getRelevance(), is(lessThan(0d)));
         }
 
-        for (String url : shouldNOTBeDownloaded) {
-            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(nullValue()));
+        for (String path : shouldNOTBeDownloaded) {
+            String url = "http://127.0.0.1:1234/" + path;
+            assertThat("URL=" + url, frontier.get(url), is(nullValue()));
         }
     }
 

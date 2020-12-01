@@ -88,6 +88,8 @@ public class FrontierManagerTest {
         frontierManager.insert(link2);
 
         LinkRelevance selectedLink1 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink1);
+
         DataNotFoundException notFoundException = null;
         try {
             frontierManager.nextURL();
@@ -138,6 +140,8 @@ public class FrontierManagerTest {
         frontierManager.insert(link2);
 
         LinkRelevance selectedLink1 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink1);
+
         DataNotFoundException notFoundException = null;
         try {
             frontierManager.nextURL();
@@ -184,6 +188,8 @@ public class FrontierManagerTest {
         frontierManager.insert(link2_1);
 
         LinkRelevance selectedLink1 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink1);
+
         DataNotFoundException notFoundException = null;
         try {
             frontierManager.nextURL();
@@ -193,9 +199,11 @@ public class FrontierManagerTest {
 
         frontierManager.addSeeds(asList(link2_1.getURL().toString()));
         LinkRelevance selectedLink2 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink2);
 
         frontierManager.insert(link2_2);
         LinkRelevance selectedLink2_2 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink2_2);
 
         // then
         assertThat(selectedLink1, is(notNullValue()));
@@ -264,6 +272,7 @@ public class FrontierManagerTest {
         
         // when
         LinkRelevance nextURL = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(nextURL);
         // then
         assertThat(nextURL, is(notNullValue()));
         assertThat(nextURL.getRelevance(), is(299d));
@@ -271,6 +280,7 @@ public class FrontierManagerTest {
         
         // when
         nextURL = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(nextURL);
         // then
         assertThat(nextURL, is(notNullValue()));
         assertThat(nextURL.getRelevance(), is(-299d));
@@ -359,12 +369,14 @@ public class FrontierManagerTest {
         LinkRelevance nextURL;
 
         nextURL = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(nextURL);
         assertThat(nextURL, is(notNullValue()));
         assertThat(nextURL.getURL(), is(notNullValue()));
         assertThat(nextURL.getURL().toString(), is("http://www.example1.com/robots.txt"));
         assertThat(nextURL.getType(), is(LinkRelevance.Type.ROBOTS));
 
         nextURL = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(nextURL);
         assertThat(nextURL, is(notNullValue()));
         assertThat(nextURL.getURL(), is(notNullValue()));
         assertThat(nextURL.getURL(), is(link1.getURL()));
@@ -393,15 +405,20 @@ public class FrontierManagerTest {
         frontierManager.insert(link3);
 
         LinkRelevance selectedLink1 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink1);
+
         LinkRelevance selectedLink2 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink2);
+
         LinkRelevance selectedLink3 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink3);
+
         DataNotFoundException notFoundException = null;
         try {
             frontierManager.nextURL();
         } catch (DataNotFoundException e) {
             notFoundException = e;
         }
-
         // then
 
         // should return only 3 inserted links, 4th should be null
@@ -436,7 +453,9 @@ public class FrontierManagerTest {
         frontierManager.insert(link1);
         frontierManager.insert(link2);
         LinkRelevance selectedLink1 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink1);
         LinkRelevance selectedLink2 = frontierManager.nextURL();
+        frontierManager.notifyDownloadFinished(selectedLink2);
         DataNotFoundException notFoundException1 = null;
         try {
             frontierManager.nextURL();
@@ -470,7 +489,7 @@ public class FrontierManagerTest {
     @Test
     public void shouldNotReturnLinkReturnedWithinMinimumTimeInterval() throws Exception {
         // given
-        int minimumAccessTimeInterval = 500;
+        int minimumAccessTimeInterval = 300;
         ImmutableMap<String, ? extends Object> props = ImmutableMap.of(
             "link_storage.scheduler.max_links", 2,
             "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
@@ -501,7 +520,18 @@ public class FrontierManagerTest {
             notFoundException1 = e;
             assertThat(e.ranOutOfLinks(), is(false));
         }
-        
+
+        Thread.sleep(minimumAccessTimeInterval+10);
+        try {
+            frontierManager.nextURL();
+            fail("Should still not return link, minimum delay starts after download is done.");
+        } catch(DataNotFoundException e) {
+            notFoundException1 = e;
+            assertThat(e.ranOutOfLinks(), is(false));
+        }
+
+        // minimum time interval should start counting just now
+        frontierManager.notifyDownloadFinished(selectedLink1);
         // should return after minimum time interval
         Thread.sleep(minimumAccessTimeInterval+10);
         LinkRelevance selectedLink2 = frontierManager.nextURL();        

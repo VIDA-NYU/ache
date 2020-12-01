@@ -118,19 +118,17 @@ public class Frontier {
     /**
      * This method inserts a new link into the frontier
      * 
-     * @param linkRelev
+     * @param link
      * @return
-     * @throws FrontierPersistentException
      */
-    public boolean insert(LinkRelevance linkRelev) throws FrontierPersistentException {
-        if (linkRelev == null) {
+    public boolean insert(LinkRelevance link) {
+        if (link == null) {
             return false;
         }
         boolean inserted = false;
-        String url = linkRelev.getURL().toString();
-        Double relevance = exist(linkRelev);
-        if (relevance == null) {
-            urlRelevance.put(url, linkRelev);
+        String url = link.getURL().toString();
+        if (!exists(link)) {
+            urlRelevance.put(url, link);
             inserted = true;
         }
 
@@ -138,19 +136,16 @@ public class Frontier {
     }
 
     /**
-     * It verifies whether a given URL was already visited or does not belong to
-     * the scope.
+     * It verifies whether a given URL was already inserted in the frontier.
      * 
-     * @param linkRelev
-     * @return
-     * @throws FrontierPersistentException
+     * @param link
+     * @return true if URL already exists in frontier, false otherwise
      */
-    public Double exist(LinkRelevance linkRelev) throws FrontierPersistentException {
-        LinkRelevance link = urlRelevance.get(linkRelev.getURL().toString());
-        return link == null ? null : link.getRelevance();
+    public boolean exists(LinkRelevance link) {
+        return urlRelevance.get(link.getURL().toString()) == null ? false : true;
     }
     
-    public LinkRelevance get(String url) throws FrontierPersistentException {
+    public LinkRelevance get(String url) {
         return urlRelevance.get(url);
     }
 
@@ -160,10 +155,10 @@ public class Frontier {
      * @param linkRelevance
      * @throws FrontierPersistentException
      */
-    public void delete(LinkRelevance linkRelevance) throws FrontierPersistentException {
+    public void markAsDownloaded(LinkRelevance linkRelevance) {
 
         String url = linkRelevance.getURL().toString();
-        if (exist(linkRelevance) != null) {
+        if (exists(linkRelevance)) {
             // we don't want to delete the URL file, it is useful to avoid visiting an old url
             double relevance = linkRelevance.getRelevance();
             double negativeRelevance = relevance > 0 ? -1*relevance : relevance;
@@ -202,4 +197,7 @@ public class Frontier {
         return rules != null && !rules.isAllowed(link.getURL().toString());
     }
 
+    public boolean isDownloaded(String url) {
+        return get(url).getRelevance() < 0;
+    }
 }

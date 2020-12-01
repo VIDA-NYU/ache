@@ -16,7 +16,6 @@ import crawlercommons.sitemaps.SiteMapIndex;
 import crawlercommons.sitemaps.SiteMapParser;
 import crawlercommons.sitemaps.SiteMapURL;
 import crawlercommons.sitemaps.UnknownFormatException;
-import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
@@ -43,8 +42,7 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
     public void completed(LinkRelevance link, FetchedResult response) {
         int statusCode = response.getStatusCode();
         if(statusCode >= 200 && statusCode < 300) {
-            logger.info("Successfully downloaded URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
-            processData(link, response);
+            processSitemap(link, response);
         } else {
             logger.info("Server returned bad code for URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
         }
@@ -52,22 +50,15 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
     
     @Override
     public void failed(LinkRelevance link, Exception e) {
-        if(e instanceof AbortedFetchException) {
-            AbortedFetchException afe = (AbortedFetchException) e;
-            logger.info("Download aborted: \n>URL: {}\n>Reason: {}",
-                        link.getURL().toString(), afe.getAbortReason());
-        } else {
-            logger.info("Failed to download URL: "+link.getURL().toString(), e.getMessage());
-        }
     }
-    
-    private void processData(LinkRelevance link, FetchedResult response) {
-        
+
+    private void processSitemap(LinkRelevance link, FetchedResult response) {
+
         AbstractSiteMap sm;
         try {
             sm = parser.parseSiteMap(response.getContent(), new URL(response.getFetchedUrl()));
         } catch (UnknownFormatException | IOException e) {
-            logger.warn("Failed to download sitemap: "+link.getURL().toString(), e);
+            logger.warn("Failed to parse sitemap: " + link.getURL().toString(), e);
             return;
         }
 
@@ -83,13 +74,13 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
                 sitemapData.links.add(smu.getUrl().toString());
             }
         }
-        
+
         try {
             linkStorage.insert(sitemapData);
         } catch (Exception e) {
             logger.error("Failed to insert sitemaps data into link storage.", e);
         }
-        
+
     }
     
 }

@@ -48,10 +48,16 @@ public class FrontierTest {
         
         // when
         frontier.insert(link1);
-        
+
         // then
-        assertThat(frontier.exist(link1), is(1d));
-        assertThat(frontier.exist(link2), is(nullValue()));
+        String url1 = link1.getURL().toString();
+        assertThat(frontier.exists(link1), is(true));
+        assertThat(frontier.get(url1), is(notNullValue()));
+        assertThat(frontier.get(url1).getRelevance(), is(1d));
+
+        String url2 = link2.getURL().toString();
+        assertThat(frontier.exists(link2), is(false));
+        assertThat(frontier.get(url2), is(nullValue()));
     }
     
     @Test
@@ -65,11 +71,8 @@ public class FrontierTest {
         frontier.insert(link2);
         
         // then
-        assertThat(frontier.exist(link1), is(notNullValue()));
-        assertThat(frontier.exist(link1), is(1d));
-        
-        assertThat(frontier.exist(link2), is(notNullValue()));
-        assertThat(frontier.exist(link2), is(2d));
+        assertThat(frontier.exists(link1), is(true));
+        assertThat(frontier.exists(link2), is(true));
     }
     
     
@@ -77,16 +80,19 @@ public class FrontierTest {
     public void shouldInsertAndDeleteUrl() throws Exception {
         // given
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
-        
+        String url1 = link1.getURL().toString();
+
         // when
         frontier.insert(link1);
         // then
-        assertThat(frontier.exist(link1), is(1d));
-        
+        assertThat(frontier.exists(link1), is(true));
+        assertThat(frontier.isDownloaded(url1), is(false));
+
         // when
-        frontier.delete(link1);
+        frontier.markAsDownloaded(link1);
         // then
-        assertThat(frontier.exist(link1), is(-1d));
+        assertThat(frontier.get(url1).getRelevance(), is(-1d));
+        assertThat(frontier.isDownloaded(url1), is(true));
     }
 
 }

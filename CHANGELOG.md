@@ -5,6 +5,12 @@
 - Upgrade gradle-node-plugin to version 2.2.4 
 - Upgrade gradle wrapper to version 6.6.1
 - Upgrade `crawler-commons` to version 1.1
+- Minimum delay between request now considers the time when the dowload is
+  actually finihsed, not the time when the URL was initially scheduled to be
+  downloaded (which disregards other processing times between scheduling and actual download)
+- Refactoring of FethcedResultHandler to simply notify the LinkStorage that
+  the download finished and to delegate data processing to other handlers
+  for the appropriate link type
 
 
 ## Version 0.12.0 (2020-01-18)

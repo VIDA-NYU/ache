@@ -2,7 +2,6 @@ package focusedCrawler.crawler.async;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import com.google.common.util.concurrent.AbstractExecutionThreadService;
 
 import focusedCrawler.config.Configuration;
-import focusedCrawler.crawler.async.HttpDownloader.Callback;
 import focusedCrawler.crawler.cookies.Cookie;
 import focusedCrawler.crawler.cookies.CookieUtils;
 import focusedCrawler.link.LinkStorage;
@@ -26,9 +24,9 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     private final TargetStorage targetStorage;
     private final LinkStorage linkStorage;
     private final HttpDownloader downloader;
-    private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
-    private MetricsManager metricsManager;
-    private Configuration config;
+    private final FetchedResultHandler fetchedResultHandler;
+    private final MetricsManager metricsManager;
+    private final Configuration config;
 
     public AsyncCrawler(String crawlerId, TargetStorage targetStorage, LinkStorage linkStorage,
                         Configuration config, String dataPath, MetricsManager metricsManager) {
@@ -41,10 +39,9 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         HttpDownloaderConfig downloaderConfig = config.getCrawlerConfig().getDownloaderConfig();
         this.downloader = new HttpDownloader(downloaderConfig, dataPath, metricsManager);
 
-        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(crawlerId, targetStorage));
-        this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
-        this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage,
-                downloaderConfig.getUserAgentName()));
+        String userAgentName = downloaderConfig.getUserAgentName();
+        this.fetchedResultHandler = new FetchedResultHandler(crawlerId, targetStorage, linkStorage,
+                userAgentName);
 
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
@@ -58,14 +55,9 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     protected void run() {
         while (isRunning()) {
             try {
-                LinkRelevance link = (LinkRelevance) linkStorage.select(null);
+                LinkRelevance link = linkStorage.select();
                 if (link != null) {
-                    Callback handler = handlers.get(link.getType());
-                    if (handler == null) {
-                        logger.error("No registered handler for link type: " + link.getType());
-                        continue;
-                    }
-                    downloader.dipatchDownload(link, handler);
+                    downloader.dipatchDownload(link, fetchedResultHandler);
                 }
             } catch (DataNotFoundException e) {
                 // There are no more links available in the frontier right now
