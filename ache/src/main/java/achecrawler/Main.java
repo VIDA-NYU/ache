@@ -104,18 +104,18 @@ public class Main {
         }
     }
 
-    @Command(name = "run", description = "Run any available utilitary tool")
+    @Command(name = "run", description = "Run any available utility tool")
     public static class RunCliTool implements Runnable {
-        
+
         @Arguments(description = "Tool to be executed followed by its parameters")
         public List<String> args;
-        
+
         public void run() {
             if(args == null || args.size() == 0) {
                 System.out.println("ERROR: Class name of command-line tool not specified.");
                 System.exit(1);
             }
-            
+
             String toolClass = args.get(0);
             Class<?> loadedClass = null;
             try {
@@ -141,7 +141,7 @@ public class Main {
                 System.exit(1);
             }
         }
-        
+
     }
 
     @Command(name = "buildModel", description = "Builds a model for a Smile target classifier")

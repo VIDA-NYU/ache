@@ -8,7 +8,7 @@
 //import com.fasterxml.jackson.core.JsonProcessingException;
 //import com.fasterxml.jackson.databind.ObjectMapper;
 //
-//import achecrawler.memex.cdr.TikaExtractor.ParsedData;
+//import TikaExtractor.ParsedData;
 //
 //public class CDRDocumentBuilder {
 //

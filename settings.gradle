@@ -1,3 +1,5 @@
 rootProject.name = 'achecrawler'
-include 'ache-dashboard'
 include 'ache'
+include 'ache-dashboard'
+include 'ache-tools'
+

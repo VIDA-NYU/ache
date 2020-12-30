@@ -1,5 +1,6 @@
 package achecrawler.memex.cdr;
 
+import achecrawler.memex.cdr.TikaExtractor.ParsedData;
 import java.io.Serializable;
 import java.util.Map;
 
@@ -12,8 +13,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import achecrawler.memex.cdr.TikaExtractor.ParsedData;
 
 /**
 {

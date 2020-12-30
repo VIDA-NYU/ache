@@ -3,6 +3,7 @@
 ## Version 0.14.0 (Unreleased)
 
 - Remove support for CDR 3.1 format in Kafka target repository
+- Move `tools` and `memex` packages to the `ache-tools` sub-project
 
 ## Version 0.13.0 (2021-01-07)
 
@@ -23,10 +24,10 @@
 - Removed Elasticsearch 1.4.4 binaries dependency
 - Added DumpDataFromElasticsearch tool for dumping documents from Elasticsearch
   repositories
-- Added configuration for minimum relevance in link selectors
-- Added configuration for selecting whether should re-crawl sitemaps and
+- Added a configuration for minimum relevance in link selectors
+- Added a configuration for selecting whether should re-crawl sitemaps and
   robots.txt links
-- Added documentaion about `relevance_threshold` parameters to the target page
+- Added documentation about `relevance_threshold` parameters to the target page
   classifiers documentation page
 - Added support for crawling via HTTP proxy in okhttp3 fetcher (by @maqzi)
 - Added tracking of more HTTP error messages (301, 302, 3xx, 402) (by @maqzi)
@@ -45,7 +46,7 @@
 - Change default link classifier to LinkClassifierBreadthSearch
 - Update io.airlift:airline dependency to version 0.8
 - Update gradle build script to use new plugins DSL
-- Update coverals gradle plugin to version 2.9.0
+- Update coveralls gradle plugin to version 2.9.0
 - Update searchkit to version ^2.4.0
 
 ## Version 0.11.0 (2018-06-01)
@@ -87,15 +88,15 @@ Following is a detailed log of the major changes since last version:
   - `react-vis` to version 1.7.9
   - `searchkit` to version 2.3.0
   - `npm` to version 5.6.0
-- Allow cookies be modified dynamically via REST API endpoint (issue #114)
+- Allow cookies to be modified dynamically via REST API endpoint (issue #114)
 - Added `crawlerId` field to JSON output of target repositories to track provenance of crawled pages
 
 
 ## Version 0.9.0 (2017-11-07)
 
-We are pleased to announce version 0.9.0 of ACHE Focused Crawler! We also recently reached the milestone of 100+ starts on GitHub, 55+ forks, and 1000+ commits in the current git repository.  We would like to thanks all users for the feedback we have received in the past year.
+We are pleased to announce version 0.9.0 of ACHE Focused Crawler! We also recently reached the milestone of 100+ starts on GitHub, 55+ forks, and 1000+ commits in the current git repository.  We would like to thank all users for the feedback we have received in the past year.
 
-This is a large release and it brings many improvements to the documentation and several new features. Following is a detailed log of major changes since last version:
+This is a large release, and it brings many improvements to the documentation and several new features. Following is a detailed log of major changes since last version:
 
 - Fixed multiple bugs and handling of exceptions
 - Several improvements made to ACHE documentation
