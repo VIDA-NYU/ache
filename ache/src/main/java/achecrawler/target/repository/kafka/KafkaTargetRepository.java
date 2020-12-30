@@ -2,7 +2,6 @@ package achecrawler.target.repository.kafka;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.Date;
 import java.util.Map.Entry;
 import java.util.Properties;
 
@@ -16,7 +15,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-import achecrawler.memex.cdr.CDR31Document;
 import achecrawler.target.model.Page;
 import achecrawler.target.model.TargetModelElasticSearch;
 import achecrawler.target.model.TargetModelJson;
@@ -75,26 +73,10 @@ public class KafkaTargetRepository implements TargetRepository {
     public boolean insert(Page page) {
         String value;
         switch (format) {
-            case CDR31:
-                if (page.getContentType().startsWith("text/html")) {
-                    CDR31Document obj = new CDR31Document.Builder()
-                            .setUrl(page.getFinalUrl())
-                            .setTimestampCrawl(new Date(page.getFetchTime()))
-                            .setTimestampIndex(new Date())
-                            .setContentType(page.getContentType())
-                            .setResponseHeaders(page.getResponseHeaders())
-                            .setRawContent(page.getContentAsString())
-                            .setCrawler(page.getCrawlerId())
-                            .build();
-                    value = serializeAsJson(obj);
-                } else {
-                    // TODO: Handle image "objects"
-                    return false;
-                }
-                break;
             case ELASTIC:
                 value = serializeAsJson(new TargetModelElasticSearch(page));
                 break;
+            case JSON:
             default:
                 value = serializeAsJson(new TargetModelJson(page));
         }

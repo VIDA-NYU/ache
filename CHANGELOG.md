@@ -1,6 +1,10 @@
 # ACHE Crawler Change Log
 
-## Version 0.13.0 (2020-01-07)
+## Version 0.14.0 (Unreleased)
+
+- Remove support for CDR 3.1 format in Kafka target repository
+
+## Version 0.13.0 (2021-01-07)
 
 - Upgrade gradle-node-plugin to version 2.2.4 
 - Upgrade gradle wrapper to version 6.6.1
