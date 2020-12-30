@@ -17,7 +17,6 @@ import achecrawler.link.frontier.FrontierManagerFactory;
 import achecrawler.rest.RestServer;
 import achecrawler.seedfinder.SeedFinder;
 import achecrawler.target.classifier.TargetClassifierBuilder;
-import achecrawler.tools.StartRestServer;
 import io.airlift.airline.Arguments;
 import io.airlift.airline.Cli;
 import io.airlift.airline.Cli.CliBuilder;

@@ -1,6 +1,5 @@
-package achecrawler.tools;
+package achecrawler;
 
-import achecrawler.Main;
 import achecrawler.config.Configuration;
 import achecrawler.crawler.CrawlersManager;
 import achecrawler.rest.RestServer;
