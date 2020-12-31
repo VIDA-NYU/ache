@@ -4,6 +4,7 @@
 
 - Remove support for CDR 3.1 format in Kafka target repository
 - Move `tools` and `memex` packages to the `ache-tools` sub-project
+- Moved forked crawler-commons classes to a separate sub-project
 
 ## Version 0.13.0 (2021-01-07)
 

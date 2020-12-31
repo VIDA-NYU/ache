@@ -2,9 +2,13 @@ package achecrawler.crawler.cookies;
 
 import static org.junit.Assert.*;
 
+import achecrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
+import java.util.ArrayList;
 import java.util.HashMap;
 
+import java.util.List;
 import org.apache.commons.lang.NullArgumentException;
+import org.apache.http.client.CookieStore;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +20,7 @@ public class TestCookieUtils {
     Cookie cookie;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         cookie = new Cookie("key1", "value1");
     }
 
@@ -99,5 +103,26 @@ public class TestCookieUtils {
     @Test
     public void testAddCookiesNullFetcher() {
         CookieUtils.addCookies(new HashMap<>(), null);
+    }
+
+    @Test
+    public void testCookieStore() {
+        Cookie cookie = new Cookie("key1", "value1");
+        cookie.setDomain(".slides.com");
+
+        HashMap<String, List<Cookie>> map = new HashMap<>();
+        List<Cookie> listOfCookies = new ArrayList<>();
+        listOfCookies.add(cookie);
+        map.put("www.slides.com", listOfCookies);
+
+        SimpleHttpFetcher baseFetcher =
+            FetcherFactory.createSimpleHttpFetcher(new HttpDownloaderConfig());
+        CookieUtils.addCookies(map, baseFetcher);
+
+        CookieStore globalCookieStore = baseFetcher.getCookieStore();
+        List<org.apache.http.cookie.Cookie> resultList = globalCookieStore.getCookies();
+        assertTrue(resultList.get(0).getName().equals("key1"));
+        assertTrue(resultList.get(0).getValue().equals("value1"));
+        assertTrue(resultList.get(0).getDomain().equals("slides.com"));
     }
 }

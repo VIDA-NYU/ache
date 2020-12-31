@@ -18,6 +18,8 @@ repositories {
 }
 
 dependencies {
+    // Sub-projects
+    implementation project(':crawler-commons')
     // Logging
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.+'

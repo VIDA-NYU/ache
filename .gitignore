@@ -1,6 +1,7 @@
 /build/
 ache/build/
 ache-tools/build/
+crawler-commons/build/
 /output
 /data/
 *.log
