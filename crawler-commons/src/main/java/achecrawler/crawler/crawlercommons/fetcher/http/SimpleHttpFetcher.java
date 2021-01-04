@@ -89,7 +89,6 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.protocol.HttpCoreContext;
 import org.apache.http.protocol.HttpRequestExecutor;
-import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -105,6 +104,7 @@ import achecrawler.crawler.crawlercommons.fetcher.Payload;
 import achecrawler.crawler.crawlercommons.fetcher.RedirectFetchException;
 import achecrawler.crawler.crawlercommons.fetcher.RedirectFetchException.RedirectExceptionReason;
 import achecrawler.crawler.crawlercommons.fetcher.UrlFetchException;
+import achecrawler.crawler.crawlercommons.util.Headers;
 
 @SuppressWarnings("serial")
 public class SimpleHttpFetcher extends BaseHttpFetcher {
@@ -578,7 +578,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 
         HttpResponse response;
         long readStartTime;
-        Metadata headerMap = new Metadata();
+        Headers headerMap = new Headers();
         String redirectedUrl = null;
         String newBaseUrl = null;
         int numRedirects = 0;

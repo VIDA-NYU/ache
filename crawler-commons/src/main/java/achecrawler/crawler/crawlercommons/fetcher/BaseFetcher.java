@@ -17,13 +17,13 @@
 
 package achecrawler.crawler.crawlercommons.fetcher;
 
+import achecrawler.crawler.crawlercommons.util.MediaType;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.tika.mime.MediaType;
 
 @SuppressWarnings("serial")
 public abstract class BaseFetcher implements Serializable {

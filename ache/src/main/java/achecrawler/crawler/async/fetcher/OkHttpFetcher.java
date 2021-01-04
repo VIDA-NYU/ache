@@ -29,7 +29,6 @@ import javax.net.ssl.X509TrustManager;
 
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpStatus;
-import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,6 +44,7 @@ import achecrawler.crawler.crawlercommons.fetcher.Payload;
 import achecrawler.crawler.crawlercommons.fetcher.UrlFetchException;
 import achecrawler.crawler.crawlercommons.fetcher.http.BaseHttpFetcher;
 import achecrawler.crawler.crawlercommons.fetcher.http.UserAgent;
+import achecrawler.crawler.crawlercommons.util.Headers;
 import okhttp3.CipherSuite;
 import okhttp3.ConnectionSpec;
 import okhttp3.Cookie;
@@ -165,7 +165,7 @@ public class OkHttpFetcher extends BaseHttpFetcher {
 
     private FetchedResult doRequest(Request request, String url, Payload payload) throws BaseFetchException {
         Response response = null;
-        Metadata headerMap = new Metadata();
+        Headers headerMap = new Headers();
         String redirectedUrl = null;
         String newBaseUrl = null;
         int numRedirects = 0;

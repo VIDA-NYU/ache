@@ -9,13 +9,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.apache.tika.metadata.Metadata;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
 import achecrawler.crawler.async.RobotsTxtHandler.RobotsData;
 import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import achecrawler.crawler.crawlercommons.util.Headers;
 import achecrawler.link.LinkStorage;
 import achecrawler.link.frontier.LinkRelevance;
 
@@ -34,7 +34,7 @@ public class RobotsTxtHandlerTest {
 
         byte[] robotsContent = Files.readAllBytes(robotsFilePath);
 
-        FetchedResult response = new FetchedResult(url, url, 1, new Metadata(), robotsContent,
+        FetchedResult response = new FetchedResult(url, url, 1, new Headers(), robotsContent,
                 "text/plain", 1, null, url, 0, "127.0.0.1", 200, "OK");
 
         LinkRelevance link = new LinkRelevance(new URL(url), 1, LinkRelevance.Type.ROBOTS);

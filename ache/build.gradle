@@ -53,7 +53,6 @@ dependencies {
         exclude group: 'junit', module: 'junit'
     }
     // Data parsing and extraction
-    implementation group: 'org.apache.tika', name: 'tika-parsers', version: '1.18'
     implementation group: 'com.syncthemall', name: 'boilerpipe', version: '1.2.2'
     implementation group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
     implementation group: 'org.jsoup', name: 'jsoup', version: '1.10.3'

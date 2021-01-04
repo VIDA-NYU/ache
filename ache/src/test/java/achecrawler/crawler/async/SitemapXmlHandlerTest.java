@@ -9,13 +9,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.apache.tika.metadata.Metadata;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
 import achecrawler.crawler.async.SitemapXmlHandler.SitemapData;
 import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import achecrawler.crawler.crawlercommons.util.Headers;
 import achecrawler.link.LinkStorage;
 import achecrawler.link.frontier.LinkRelevance;
 
@@ -32,7 +32,7 @@ public class SitemapXmlHandlerTest {
                 Paths.get(SitemapXmlHandler.class.getResource("sample-sitemap.xml").toURI());
         byte[] sitemapContent = Files.readAllBytes(sitemapFilePath);
 
-        FetchedResult response = new FetchedResult(url, url, 1, new Metadata(), sitemapContent,
+        FetchedResult response = new FetchedResult(url, url, 1, new Headers(), sitemapContent,
                 "text/xml", 1, null, url, 0, "127.0.0.1", 200, "OK");
 
         LinkRelevance link = new LinkRelevance(new URL(url), 1, LinkRelevance.Type.SITEMAP);
@@ -62,7 +62,7 @@ public class SitemapXmlHandlerTest {
                 Paths.get(SitemapXmlHandler.class.getResource("sitemap-index.xml").toURI());
         byte[] sitemapContent = Files.readAllBytes(sitemapFilePath);
 
-        FetchedResult response = new FetchedResult(url, url, 1, new Metadata(), sitemapContent,
+        FetchedResult response = new FetchedResult(url, url, 1, new Headers(), sitemapContent,
                 "text/xml", 1, null, url, 0, "127.0.0.1", 200, "OK");
 
         LinkRelevance link = new LinkRelevance(new URL(url), 1, LinkRelevance.Type.SITEMAP);

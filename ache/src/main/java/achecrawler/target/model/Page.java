@@ -6,18 +6,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.apache.tika.metadata.Metadata;
 import org.archive.io.warc.WARCRecord;
 
 import com.google.common.io.ByteStreams;
 
 import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import achecrawler.crawler.crawlercommons.util.Headers;
 import achecrawler.link.frontier.LinkRelevance;
 import achecrawler.target.classifier.TargetRelevance;
 
@@ -179,12 +178,12 @@ public class Page implements Serializable {
         return null;
     }
 
-    private void parseResponseHeaders(Metadata headerAsMetadata) {
+    private void parseResponseHeaders(Headers headers) {
         Map<String, List<String>> responseHeaders = new HashMap<>();
-        String[] names = headerAsMetadata.names();
-        if(names != null && names.length > 0) {
+        List<String> names = headers.names();
+        if(names != null && names.size() > 0) {
             for(String name : names) {
-                List<String> values = Arrays.asList(headerAsMetadata.getValues(name));
+                List<String> values = headers.getValues(name);
                 if(values.isEmpty()) {
                     continue;
                 }

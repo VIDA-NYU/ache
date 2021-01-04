@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +16,7 @@ import achecrawler.crawler.async.HttpDownloaderConfig;
 import achecrawler.crawler.async.RobotsTxtHandler;
 import achecrawler.crawler.async.SitemapXmlHandler;
 import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import achecrawler.crawler.crawlercommons.util.Headers;
 import achecrawler.link.LinkStorage;
 import achecrawler.link.frontier.Frontier;
 import achecrawler.link.frontier.LinkRelevance;
@@ -181,7 +181,7 @@ public class ReplayCrawl extends CliTool {
                     lr = new LinkRelevance(lr.getURL(), Math.abs(lr.getRelevance()), lr.getType());
 
                     String finalUrl = page.getFinalUrl();
-                    Metadata responseHeaders = createHeadersMetadata(page);
+                    Headers responseHeaders = createHeadersMetadata(page);
                     FetchedResult result = new FetchedResult(requestedUrl,
                             finalUrl, page.getFetchTime(), responseHeaders,
                             page.getContent(), page.getContentType(), 0, null,
@@ -204,9 +204,9 @@ public class ReplayCrawl extends CliTool {
         }
     }
 
-    private Metadata createHeadersMetadata(Page page) {
+    private Headers createHeadersMetadata(Page page) {
         Map<String, List<String>> headers = page.getResponseHeaders();
-        Metadata metadata = new Metadata();
+        Headers metadata = new Headers();
         for (Entry<String, List<String>> header : headers.entrySet()) {
             for (String value : header.getValue()) {
                 metadata.set(header.getKey(), value);

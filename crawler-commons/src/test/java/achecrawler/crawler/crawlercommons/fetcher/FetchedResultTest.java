@@ -16,9 +16,9 @@
  */
 package achecrawler.crawler.crawlercommons.fetcher;
 
+import achecrawler.crawler.crawlercommons.util.Headers;
 import java.io.UnsupportedEncodingException;
 
-import org.apache.tika.metadata.Metadata;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,18 +32,18 @@ public class FetchedResultTest {
     private static final Logger LOG = LoggerFactory.getLogger(FetchedResultTest.class);
 
     /**
-     * Test method for {@link crawlercommons.fetcher.FetchedResult#report()}.
+     * Test method for {@link achecrawler.crawler.crawlercommons.fetcher.FetchedResult#report()}.
      * This does not actually test anything but simply allows us to see what a
      * generated report would look like.
      * @throws UnsupportedEncodingException 
      */
     @Test
     public void testPrintReport() throws UnsupportedEncodingException {
-        Metadata headerMetadata = new Metadata();
-        headerMetadata.add(Metadata.CONTENT_DISPOSITION, "This is content disposition");
-        headerMetadata.add(Metadata.CONTENT_ENCODING, "This is the encoding");
-        headerMetadata.add(Metadata.CONTENT_LANGUAGE, "This is some language");
-        headerMetadata.add(Metadata.CONTENT_LENGTH, "This is the length");
+        Headers headerMetadata = new Headers();
+        headerMetadata.add(Headers.CONTENT_DISPOSITION, "This is content disposition");
+        headerMetadata.add(Headers.CONTENT_ENCODING, "This is the encoding");
+        headerMetadata.add(Headers.CONTENT_LANGUAGE, "This is some language");
+        headerMetadata.add(Headers.CONTENT_LENGTH, "This is the length");
 
         Payload load = new Payload();
         load.put("Item 1", 1234);
