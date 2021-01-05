@@ -11,9 +11,8 @@ repositories {
 dependencies {
     api group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
-    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.8'
     implementation group: 'commons-io', name: 'commons-io', version: '2.4'
-    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.0'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testImplementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.3.6.v20151106'

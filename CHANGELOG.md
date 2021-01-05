@@ -5,6 +5,8 @@
 - Remove support for CDR 3.1 format in Kafka target repository
 - Move `tools` and `memex` packages to the `ache-tools` sub-project
 - Moved forked crawler-commons classes to a separate sub-project
+- Remove tika dependency from `ache` and `crawler-commons` sub-project
+- Synchronize `crawler-commons/http-fetcher` with the upstream library
 
 ## Version 0.13.0 (2021-01-07)
 

@@ -14,21 +14,28 @@
  * limitations under the License.
  */
 
-package achecrawler.crawler.crawlercommons.fetcher;
+package achecrawler.crawler.crawlercommons.util;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
-/**
- */
-@SuppressWarnings({ "serial" })
-public class IOFetchException extends BaseFetchException {
+public class HttpFetcherVersion {
 
-    public IOFetchException() {
-        super();
+    public static String getVersion() {
+        String path = "/version.prop";
+        InputStream stream = HttpFetcherVersion.class.getResourceAsStream(path);
+        if (stream == null) {
+            return "Unknown Version";
+        }
+
+        Properties props = new Properties();
+        try {
+            props.load(stream);
+            stream.close();
+            return (String) props.get("version");
+        } catch (IOException e) {
+            return "Unknown Version";
+        }
     }
-
-    public IOFetchException(String url, IOException e) {
-        super(url, e);
-    }
-
 }

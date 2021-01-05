@@ -1,11 +1,10 @@
 /**
- * Licensed to the Apache Software Foundation (ASF) under one or more
- * contributor license agreements.  See the NOTICE file distributed with
- * this work for additional information regarding copyright ownership.
- * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
- *  
+ * Copyright 2016 Crawler-Commons
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
  * 
  * Unless required by applicable law or agreed to in writing, software
@@ -17,22 +16,24 @@
 
 package achecrawler.crawler.crawlercommons.fetcher;
 
-import achecrawler.crawler.crawlercommons.util.MediaType;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import achecrawler.crawler.crawlercommons.util.MediaType;
 
+/**
+ */
 @SuppressWarnings("serial")
 public abstract class BaseFetcher implements Serializable {
 
     public static final int DEFAULT_MAX_CONTENT_SIZE = 64 * 1024;
 
-    protected Map<String, Integer> _maxContentSizes = new HashMap<String, Integer>();
+    protected Map<String, Integer> _maxContentSizes = new HashMap<>();
     protected int _defaultMaxContentSize = DEFAULT_MAX_CONTENT_SIZE;
-    protected Set<String> _validMimeTypes = new HashSet<String>();
+    protected Set<String> _validMimeTypes = new HashSet<>();
 
     public BaseFetcher() {
     }
@@ -89,12 +90,12 @@ public abstract class BaseFetcher implements Serializable {
     }
 
     /**
-     * Get the content stored in the resource referenced by <url>
+     * Get the content stored in the resource referenced by the 'url' parameter.
      * 
-     * @param url
-     * @param payload
-     * @return
-     * @throws BaseFetchException
+     * @param url a string url for which to get content
+     * @param payload a populated {@link achecrawler.crawler.crawlercommons.fetcher.Payload}
+     * @return the {@link achecrawler.crawler.crawlercommons.fetcher.FetchedResult} associated with the URL
+     * @throws BaseFetchException if an error results from fetching the url.
      */
     public abstract FetchedResult get(String url, Payload payload) throws BaseFetchException;
 

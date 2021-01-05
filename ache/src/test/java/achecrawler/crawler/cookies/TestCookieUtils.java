@@ -119,7 +119,7 @@ public class TestCookieUtils {
             FetcherFactory.createSimpleHttpFetcher(new HttpDownloaderConfig());
         CookieUtils.addCookies(map, baseFetcher);
 
-        CookieStore globalCookieStore = baseFetcher.getCookieStore();
+        CookieStore globalCookieStore = baseFetcher.getCookieStoreProvider().get();
         List<org.apache.http.cookie.Cookie> resultList = globalCookieStore.getCookies();
         assertTrue(resultList.get(0).getName().equals("key1"));
         assertTrue(resultList.get(0).getValue().equals("value1"));

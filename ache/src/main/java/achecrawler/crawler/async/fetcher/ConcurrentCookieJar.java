@@ -1,4 +1,4 @@
-package achecrawler.crawler.crawlercommons.fetcher.http;
+package achecrawler.crawler.async.fetcher;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,18 +9,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import javax.annotation.concurrent.GuardedBy;
 import org.apache.http.client.CookieStore;
 import org.apache.http.cookie.Cookie;
 
-
-// TODO: Compare performance of this class to recent versions of
-//  httpcomponents' BasicCookieStore which uses a TreeMap and uses
-//  a lock to synchronize writes.
 @SuppressWarnings("serial")
 public class ConcurrentCookieJar implements CookieStore, Serializable {
 
-    @GuardedBy("this")
     private final ConcurrentHashMap<String, Cookie> cookies;
 
     public ConcurrentCookieJar() {
@@ -125,3 +119,4 @@ public class ConcurrentCookieJar implements CookieStore, Serializable {
     }
 
 }
+

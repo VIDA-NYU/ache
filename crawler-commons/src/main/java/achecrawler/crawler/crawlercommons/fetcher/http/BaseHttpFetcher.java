@@ -1,11 +1,10 @@
 /**
- * Licensed to the Apache Software Foundation (ASF) under one or more
- * contributor license agreements.  See the NOTICE file distributed with
- * this work for additional information regarding copyright ownership.
- * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
- *  
+ * Copyright 2016 Crawler-Commons
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
  * 
  * Unless required by applicable law or agreed to in writing, software
@@ -14,11 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package achecrawler.crawler.crawlercommons.fetcher.http;
+
+import org.apache.http.HttpHost;
 
 import achecrawler.crawler.crawlercommons.fetcher.BaseFetcher;
 
+/**
+ * 
+ */
 @SuppressWarnings("serial")
 public abstract class BaseHttpFetcher extends BaseFetcher {
 
@@ -32,6 +35,7 @@ public abstract class BaseHttpFetcher extends BaseFetcher {
     public static final int NO_MIN_RESPONSE_RATE = Integer.MIN_VALUE;
     public static final int NO_REDIRECTS = 0;
 
+    public static final int DEFAULT_FETCH_DURATION_TIMEOUT_IN_SECONDS = 100;
     public static final int DEFAULT_MIN_RESPONSE_RATE = NO_MIN_RESPONSE_RATE;
     public static final int DEFAULT_MAX_CONNECTIONS_PER_HOST = 2;
     public static final int DEFAULT_MAX_REDIRECTS = 20;
@@ -41,14 +45,17 @@ public abstract class BaseHttpFetcher extends BaseFetcher {
     protected int _maxThreads;
     protected UserAgent _userAgent;
     protected String _userAgentString;
+    protected int _fetchDurationTimeoutInSeconds = DEFAULT_FETCH_DURATION_TIMEOUT_IN_SECONDS;
     protected int _maxRedirects = DEFAULT_MAX_REDIRECTS;
     protected int _maxConnectionsPerHost = DEFAULT_MAX_CONNECTIONS_PER_HOST;
     protected int _minResponseRate = DEFAULT_MIN_RESPONSE_RATE;
     protected String _acceptLanguage = DEFAULT_ACCEPT_LANGUAGE;
     protected RedirectMode _redirectMode = DEFAULT_REDIRECT_MODE;
+    protected HttpHost _proxy = null;
 
     public BaseHttpFetcher(int maxThreads, UserAgent userAgent) {
         super();
+
         _maxThreads = maxThreads;
         _userAgent = userAgent;
         _userAgentString = userAgent.getUserAgentString();
@@ -60,6 +67,14 @@ public abstract class BaseHttpFetcher extends BaseFetcher {
 
     public UserAgent getUserAgent() {
         return _userAgent;
+    }
+
+    public void setFetchDurationTimeoutInSeconds(int fetchDurationTimeoutInSeconds) {
+        _fetchDurationTimeoutInSeconds = fetchDurationTimeoutInSeconds;
+    }
+
+    public int getFetchDurationTimeoutInSeconds() {
+        return _fetchDurationTimeoutInSeconds;
     }
 
     public void setMaxConnectionsPerHost(int maxConnectionsPerHost) {
@@ -107,6 +122,14 @@ public abstract class BaseHttpFetcher extends BaseFetcher {
 
     public RedirectMode getRedirectMode() {
         return _redirectMode;
+    }
+
+    public void setProxy(String scheme, String host, int port) {
+        _proxy = new HttpHost(host, port, scheme);
+    }
+
+    public HttpHost getProxy() {
+        return _proxy;
     }
 
 }

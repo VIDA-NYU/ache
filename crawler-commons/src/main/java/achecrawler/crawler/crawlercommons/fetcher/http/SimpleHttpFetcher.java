@@ -1,11 +1,10 @@
 /**
- * Licensed to the Apache Software Foundation (ASF) under one or more
- * contributor license agreements.  See the NOTICE file distributed with
- * this work for additional information regarding copyright ownership.
- * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
- *  
+ * Copyright 2016 Crawler-Commons
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
  * 
  * Unless required by applicable law or agreed to in writing, software
@@ -31,8 +30,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -40,7 +37,6 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.TrustManager;
-import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
 import org.apache.commons.io.IOUtils;
@@ -77,7 +73,6 @@ import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -96,16 +91,18 @@ import achecrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import achecrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import achecrawler.crawler.crawlercommons.fetcher.BadProtocolFetchException;
 import achecrawler.crawler.crawlercommons.fetcher.BaseFetchException;
-import achecrawler.crawler.crawlercommons.fetcher.EncodingUtils;
-import achecrawler.crawler.crawlercommons.fetcher.EncodingUtils.ExpandedResult;
 import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import achecrawler.crawler.crawlercommons.fetcher.IOFetchException;
 import achecrawler.crawler.crawlercommons.fetcher.Payload;
 import achecrawler.crawler.crawlercommons.fetcher.RedirectFetchException;
 import achecrawler.crawler.crawlercommons.fetcher.RedirectFetchException.RedirectExceptionReason;
 import achecrawler.crawler.crawlercommons.fetcher.UrlFetchException;
+import achecrawler.crawler.crawlercommons.util.EncodingUtils;
+import achecrawler.crawler.crawlercommons.util.EncodingUtils.ExpandedResult;
 import achecrawler.crawler.crawlercommons.util.Headers;
 
+/**
+ */
 @SuppressWarnings("serial")
 public class SimpleHttpFetcher extends BaseHttpFetcher {
     private static Logger LOGGER = LoggerFactory.getLogger(SimpleHttpFetcher.class);
@@ -119,7 +116,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     // get Connection from Pool.
     // From initial comment of the deprecated 'CONNECTION_POOL_TIMEOUT' static
     // element:
-    // "This normally doesen't ever hit this timeout, since we manage the number
+    // "This normally doesn't ever hit this timeout, since we manage the number
     // of
     // fetcher threads to be <= the maxThreads value used to configure a
     // HttpFetcher. However the limit of connections/host can cause a timeout,
@@ -151,10 +148,8 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private static final int DEFAULT_KEEP_ALIVE_DURATION = 5000;
 
     private IdleConnectionMonitorThread monitor;
-    
-    // Store cookies loaded from configuration file
-    private CookieStore globalCookieStore = null;
 
+    private CookieStoreProvider cookieStoreProvider = new ThreadLocalCookieStoreProvider();
 
     private static final String SSL_CONTEXT_NAMES[] = { "TLS", "Default", "SSL", };
 
@@ -165,13 +160,9 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private int _connectionTimeout;
     private int _connectionRequestTimeout;
     private int _maxRetryCount;
-    
-    private HttpHost proxy;
 
     transient private CloseableHttpClient _httpClient;
     transient private PoolingHttpClientConnectionManager _connectionManager;
-
-    
 
     private static class MyRequestRetryHandler implements HttpRequestRetryHandler {
         private int _maxRetryCount;
@@ -252,7 +243,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
             // port number to
             // -1 in that case.
             //
-            // Detailed scenrio:
+            // Detailed scenario:
             // http://www.test.com/MyPage ->
             // http://www.test.com:80/MyRedirectedPage ->
             // http://www.test.com/MyRedirectedPage
@@ -323,31 +314,20 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
      */
     static class MyHttpRequestExecutor extends HttpRequestExecutor {
         @Override
-        public HttpResponse execute(HttpRequest request, HttpClientConnection conn, HttpContext context)
-                throws IOException, HttpException {
+        public HttpResponse execute(HttpRequest request, HttpClientConnection conn, HttpContext context) throws IOException, HttpException {
             HttpInetConnection connection = (HttpInetConnection) conn;
             context.setAttribute(HOST_ADDRESS, connection.getRemoteAddress().getHostAddress());
             return super.execute(request, conn, context);
         }
-        
+
     }
 
     private static class DummyX509TrustManager implements X509TrustManager {
-        private X509TrustManager standardTrustManager = null;
 
         /**
          * Constructor for DummyX509TrustManager.
          */
         public DummyX509TrustManager(KeyStore keystore) throws NoSuchAlgorithmException, KeyStoreException {
-            super();
-            String algo = TrustManagerFactory.getDefaultAlgorithm();
-            TrustManagerFactory factory = TrustManagerFactory.getInstance(algo);
-            factory.init(keystore);
-            TrustManager[] trustmanagers = factory.getTrustManagers();
-            if (trustmanagers.length == 0) {
-                throw new NoSuchAlgorithmException(algo + " trust manager not supported");
-            }
-            this.standardTrustManager = (X509TrustManager) trustmanagers[0];
         }
 
         /**
@@ -372,17 +352,16 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
          * @see javax.net.ssl.X509TrustManager#getAcceptedIssuers()
          */
         public X509Certificate[] getAcceptedIssuers() {
-            return this.standardTrustManager.getAcceptedIssuers();
+            // Return null, which triggers the "accept all issuers" mode.
+            return null;
         }
 
         public void checkClientTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
             // do nothing
-
         }
 
         public void checkServerTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
             // do nothing
-
         }
     }
 
@@ -512,8 +491,12 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         _maxRetryCount = maxRetryCount;
     }
 
-    public void setCookieStore(CookieStore cookieStore) {
-        globalCookieStore = cookieStore;
+    public void setCookieStoreProvider(CookieStoreProvider cookieStoreProvider) {
+        this.cookieStoreProvider = cookieStoreProvider;
+    }
+
+    public CookieStoreProvider getCookieStoreProvider() {
+        return cookieStoreProvider;
     }
 
     @Override
@@ -536,13 +519,6 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 
         try {
             return doRequest(request, url, payload);
-//        } catch (HttpFetchException e) {
-//            // Don't bother generating a trace for a 404 (not found)
-//            if (LOGGER.isTraceEnabled() && (e.getHttpStatus() != HttpStatus.SC_NOT_FOUND)) {
-//                LOGGER.trace("Exception fetching {} {}", url, e.getMessage());
-//            }
-//
-//            throw e;
         } catch (AbortedFetchException e) {
             // Don't bother reporting that we bailed because the mime-type
             // wasn't one that we wanted.
@@ -593,7 +569,8 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         // Without this we get killed w/lots of threads, due to sync() on single
         // cookie store.
         HttpContext localContext = new BasicHttpContext();
-        localContext.setAttribute(HttpClientContext.COOKIE_STORE, globalCookieStore);
+        CookieStore cookieStore = cookieStoreProvider.get();
+        localContext.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
 
         StringBuilder fetchTrace = null;
         if (LOGGER.isTraceEnabled()) {
@@ -624,12 +601,6 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                     fetchTrace.append("; Location: " + headerMap.get(HttpHeaders.LOCATION));
                 }
             }
-
-//            if ((statusCode < 200) || (statusCode >= 300)) {
-//                // We can't just check against SC_OK, as some wackos return 201,
-//                // 202, etc
-//                throw new HttpFetchException(url, "Error fetching " + url + " due to \"" + reasonPhrase + "\"", statusCode, headerMap);
-//            }
 
             redirectedUrl = extractRedirectedUrl(url, localContext);
 
@@ -756,6 +727,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 
                 int readRequests = 0;
                 int minResponseRate = getMinResponseRate();
+                long fetchDurationTimeout = getFetchDurationTimeoutInSeconds() * 1000L;
                 // TODO KKr - we need to monitor the rate while reading a
                 // single block. Look at HttpClient
                 // metrics support for how to do this. Once we fix this, fix
@@ -769,6 +741,9 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                     // Assume read time is at least one millisecond, to avoid
                     // DBZ exception.
                     long totalReadTime = Math.max(1, System.currentTimeMillis() - readStartTime);
+                    if (totalReadTime > fetchDurationTimeout) {
+                        throw new AbortedFetchException(url, "Fetch duration of " + getFetchDurationTimeoutInSeconds() + " sec exceeded", AbortedFetchReason.FETCH_DURATION_EXCEEDED);
+                    }
                     readRate = (totalRead * 1000L) / totalReadTime;
 
                     // Don't bail on the first read cycle, as we can get a
@@ -914,12 +889,11 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 requestConfigBuilder.setSocketTimeout(_socketTimeout);
                 requestConfigBuilder.setConnectTimeout(_connectionTimeout);
                 requestConfigBuilder.setConnectionRequestTimeout(_connectionRequestTimeout);
-                
-                if(proxy != null){
-                    LOGGER.info("Configuring fetcher to use proxy: "+proxy.toURI());
-                    httpClientBuilder.setProxy(proxy);
-                }
 
+                if (_proxy != null){
+                    LOGGER.info("Configuring fetcher to use _proxy: " + _proxy.toURI());
+                    httpClientBuilder.setProxy(_proxy);
+                }
 
                 /*
                  * CoreConnectionPNames.TCP_NODELAY='http.tcp.nodelay':
@@ -933,14 +907,15 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                  * java.lang.Boolean. If this parameter is not set, TCP_NODELAY
                  * will be enabled (no delay).
                  */
-//                FIXME Could not find this parameter in http-client version 4.5
-//                HttpConnectionParams.setTcpNoDelay(params, true);
-//                HttpProtocolParams.setVersion(params, _httpVersion);
-                
-                httpClientBuilder.setUserAgent(_userAgentString);
-                
-//                HttpProtocolParams.setContentCharset(params, "UTF-8");
-//                HttpProtocolParams.setHttpElementCharset(params, "UTF-8");
+                // FIXME Could not find this parameter in http-client version
+                // 4.5
+                // HttpConnectionParams.setTcpNoDelay(params, true);
+                // HttpProtocolParams.setVersion(params, _httpVersion);
+
+                httpClientBuilder.setUserAgent(_userAgent.getUserAgentString());
+
+                // HttpProtocolParams.setContentCharset(params, "UTF-8");
+                // HttpProtocolParams.setHttpElementCharset(params, "UTF-8");
 
                 /*
                  * CoreProtocolPNames.USE_EXPECT_CONTINUE=
@@ -971,13 +946,17 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                  * will wait 3 seconds for a confirmation before resuming the
                  * transmission of the request body.
                  */
-//                FIXME Could not find this parameter in http-client version 4.5
-//                params.setIntParameter(CoreProtocolPNames.WAIT_FOR_CONTINUE, 5000);
+                // FIXME Could not find this parameter in http-client version
+                // 4.5
+                // params.setIntParameter(CoreProtocolPNames.WAIT_FOR_CONTINUE,
+                // 5000);
 
-//                FIXME Could not find this parameter in http-client version 4.5
-//                CookieSpecParamBean cookieParams = new CookieSpecParamBean(params);
-//                cookieParams.setSingleHeader(false);
-                
+                // FIXME Could not find this parameter in http-client version
+                // 4.5
+                // CookieSpecParamBean cookieParams = new
+                // CookieSpecParamBean(params);
+                // cookieParams.setSingleHeader(false);
+
                 // Create and initialize connection socket factory registry
                 RegistryBuilder<ConnectionSocketFactory> registry = RegistryBuilder.<ConnectionSocketFactory>create();
                 registry.register("http", PlainConnectionSocketFactory.getSocketFactory());
@@ -991,7 +970,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 _connectionManager = new PoolingHttpClientConnectionManager(registry.build());
                 _connectionManager.setMaxTotal(_maxThreads);
                 _connectionManager.setDefaultMaxPerRoute(getMaxConnectionsPerHost());
-                
+
                 /*
                  * CoreConnectionPNames.STALE_CONNECTION_CHECK=
                  * 'http.connection.stalecheck': determines whether stale
@@ -1013,18 +992,20 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 // between the check and the next request. So we still need to
                 // handle the case of a closed socket (from the server side),
                 // and disabling this check improves performance.
-                // Stale connections will be checked in a separate monitor thread
+                // Stale connections will be checked in a separate monitor
+                // thread
                 _connectionManager.setValidateAfterInactivity(-1);
-                
+
                 httpClientBuilder.setConnectionManager(_connectionManager);
                 httpClientBuilder.setRetryHandler(new MyRequestRetryHandler(_maxRetryCount));
                 httpClientBuilder.setRedirectStrategy(new MyRedirectStrategy(getRedirectMode()));
                 httpClientBuilder.setRequestExecutor(new MyHttpRequestExecutor());
 
                 // FUTURE KKr - support authentication
-//                FIXME Could not find this parameter in http-client version 4.5
-//                HttpClientParams.setAuthenticating(params, false);
-                
+                // FIXME Could not find this parameter in http-client version
+                // 4.5
+                // HttpClientParams.setAuthenticating(params, false);
+
                 requestConfigBuilder.setCookieSpec(CookieSpecs.DEFAULT);
 
                 if (getMaxRedirects() == 0) {
@@ -1043,12 +1024,12 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 defaultHeaders.add(new BasicHeader(HttpHeaders.ACCEPT, DEFAULT_ACCEPT));
 
                 httpClientBuilder.setDefaultHeaders(defaultHeaders);
-                
+
                 httpClientBuilder.setKeepAliveStrategy(new MyConnectionKeepAliveStrategy());
-                
+
                 monitor = new IdleConnectionMonitorThread(_connectionManager);
                 monitor.start();
-                
+
                 httpClientBuilder.setDefaultRequestConfig(requestConfigBuilder.build());
                 _httpClient = httpClientBuilder.build();
             }
@@ -1073,10 +1054,6 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         }
         return sf;
     }
-    
-    public void setProxy(String scheme, String host, int port) {
-        this.proxy = new HttpHost(host, port, scheme);
-    }
 
     @Override
     public void abort() {
@@ -1090,52 +1067,4 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         IOUtils.closeQuietly(_httpClient);
         _httpClient = null;
     }
-
-    public void setUserAgentString(String userAgentString) {
-        this._userAgentString = userAgentString;
-    }
-
-    /**
-     * Update cookie store with a map of cookies.
-     * key : domain name
-     * value : List of cookies associated with that domain name
-     * @param cookies
-     * @throws NullPointerException if the cookies argument is null
-     */
-	public void updateCookieStore(Map<String, List<Cookie>> cookies) {
-		if(cookies == null) {
-			throw new NullPointerException("Cookies argument can not be null");
-		}
-		if(globalCookieStore == null) {
-			globalCookieStore = new ConcurrentCookieJar();
-		}
-		for(List<Cookie> listOfCookies : cookies.values()) {
-			for(Cookie cookie: listOfCookies) {
-				globalCookieStore.addCookie(cookie);
-			}
-		}
-	}
-
-	/**
-	 * Updates the current cookie store with cookie
-	 * @param cookie
-	 * @throws NullPointerException if the cookie argument is null
-	 */
-	public void updateCookieStore(Cookie cookie) {
-		if(cookie == null) {
-			throw new NullPointerException("Argument cookie is null.");
-		}
-		if(globalCookieStore == null) {
-			globalCookieStore = new ConcurrentCookieJar();
-		}
-		globalCookieStore.addCookie(cookie);
-	}
-	
-	/**
-	 * Returns cookie store for testing.
-	 * @return
-	 */
-	public CookieStore getCookieStore() {
-		return globalCookieStore;
-	}
 }

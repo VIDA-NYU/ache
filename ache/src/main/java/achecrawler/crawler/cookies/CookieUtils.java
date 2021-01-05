@@ -1,12 +1,10 @@
 package achecrawler.crawler.cookies;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+import achecrawler.crawler.crawlercommons.fetcher.http.CookieStoreProvider;
 import org.apache.commons.lang.NullArgumentException;
+import org.apache.http.client.CookieStore;
 import org.apache.http.impl.cookie.BasicClientCookie;
 
 import achecrawler.crawler.async.fetcher.OkHttpFetcher;
@@ -87,9 +85,20 @@ public class CookieUtils {
 
         Map<String, List<Cookie>> validCookies = cleanCookies(cookies);
         if (baseFetcher instanceof SimpleHttpFetcher) {
-            ((SimpleHttpFetcher) baseFetcher).updateCookieStore(asApacheCookies(validCookies));
+            updateCookies((SimpleHttpFetcher) baseFetcher, validCookies);
         } else if (baseFetcher instanceof OkHttpFetcher) {
             ((OkHttpFetcher) baseFetcher).updateCookies(asOkhttp3Cookies(cookies));
+        }
+    }
+
+    private static void updateCookies(SimpleHttpFetcher baseFetcher, Map<String, List<Cookie>> validCookies) {
+        final CookieStoreProvider cookieStoreProvider = baseFetcher.getCookieStoreProvider();
+        final CookieStore cookieStore = cookieStoreProvider.get();
+        Map<String, List<org.apache.http.cookie.Cookie>> apacheCookies = asApacheCookies(validCookies);
+        for (List<org.apache.http.cookie.Cookie> listOfCookies : apacheCookies.values()) {
+            for (org.apache.http.cookie.Cookie cookie : listOfCookies) {
+                cookieStore.addCookie(cookie);
+            }
         }
     }
 

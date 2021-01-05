@@ -19,7 +19,7 @@ package achecrawler.crawler.crawlercommons.fetcher.http;
 
 import java.io.Serializable;
 
-import achecrawler.crawler.crawlercommons.CrawlerCommons;
+import achecrawler.crawler.crawlercommons.util.HttpFetcherVersion;
 
 /**
  * User Agent enables us to describe characteristics of any Crawler Commons
@@ -28,7 +28,7 @@ import achecrawler.crawler.crawlercommons.CrawlerCommons;
  * <li><tt>_agentName</tt>: Primary agent name.</li>
  * <li><tt>_emailAddress</tt>: The agent owners email address.</li>
  * <li><tt>_webAddress</tt>: A web site/address representing the agent owner.</li>
- * <li><tt>_browserVersion</tt>: Broswer version used for compatibility.</li>
+ * <li><tt>_browserVersion</tt>: Browser version used for compatibility.</li>
  * <li><tt>_crawlerVersion</tt>: Version of the user agents personal crawler. If
  * this is not set, it defaults to the crawler commons maven artifact version.</li>
  * </ol>
@@ -38,7 +38,7 @@ import achecrawler.crawler.crawlercommons.CrawlerCommons;
 public class UserAgent implements Serializable {
 
     public static final String DEFAULT_BROWSER_VERSION = "Mozilla/5.0";
-    public static final String DEFAULT_CRAWLER_VERSION = CrawlerCommons.getVersion();
+    public static final String DEFAULT_CRAWLER_VERSION = HttpFetcherVersion.getVersion();
 
     private final String _agentName;
     private final String _userAgentString;

@@ -126,6 +126,10 @@ public class HttpDownloaderConfig {
         return userAgentString;
     }
 
+    public void setUserAgentString(String userAgentString) {
+        this.userAgentString = userAgentString;
+    }
+
     public String getUserAgentEmail() {
         return userAgentEmail;
     }

@@ -9,7 +9,6 @@ import org.apache.http.impl.cookie.BasicClientCookie;
 import achecrawler.crawler.async.HttpDownloaderConfig;
 import achecrawler.crawler.cookies.OkHttpCookieJar;
 import achecrawler.crawler.crawlercommons.fetcher.BaseFetcher;
-import achecrawler.crawler.crawlercommons.fetcher.http.ConcurrentCookieJar;
 import achecrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import achecrawler.crawler.crawlercommons.fetcher.http.UserAgent;
 import okhttp3.Cookie;
@@ -59,7 +58,7 @@ public class FetcherFactory {
 
         ConcurrentCookieJar store = createApacheCookieStore(config);
         if (store != null) {
-            httpFetcher.setCookieStore(store);
+            httpFetcher.setCookieStoreProvider(new ConcurrentCookieStoreProvider(store));
         }
         return httpFetcher;
     }
