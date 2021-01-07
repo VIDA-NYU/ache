@@ -1,4 +1,4 @@
-# ACHE Crawer Change Log
+# ACHE Crawler Change Log
 
 ## Version 0.13.0 (2020-xx-xx)
 
@@ -9,6 +9,7 @@
 - Rename root package to 'achecrawler'
 - Use multi-stage build to reduce Docker image size
 - Refactor Elasticsearch repository and make it wait until the server ready
+- Upgrade npm dependencies
 
 
 ## Version 0.12.0 (2020-01-18)
