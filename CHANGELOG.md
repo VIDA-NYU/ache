@@ -8,6 +8,7 @@
 - Reorganized gradle module directory structure
 - Rename root package to 'achecrawler'
 - Use multi-stage build to reduce Docker image size
+- Refactor Elasticsearch repository and make it wait until the server ready
 
 
 ## Version 0.12.0 (2020-01-18)

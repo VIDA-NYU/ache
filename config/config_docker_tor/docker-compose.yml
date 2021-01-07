@@ -2,7 +2,7 @@ version: '2'
 services:
   ache:
     image: vidanyu/ache
-    entrypoint: sh -c 'sleep 10 && /ache/bin/ache startCrawl -c /config/ -s /config/tor.seeds -o /data -e tor'
+    command: startCrawl -c /config/ -s /config/tor.seeds -o /data -e tor
     ports:
       - "8080:8080"
     volumes:

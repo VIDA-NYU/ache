@@ -2,14 +2,14 @@ version: '2'
 services:
   ache:
     image: vidanyu/ache
-    entrypoint: sh -c 'sleep 10 && /ache/bin/ache startServer -c /config -d /data'
+    command: startServer -c /config -d /data
     ports:
-    - "8080:8080"
+      - "8080:8080"
     volumes:
-    - ./data-ache/:/data
-    - ./:/config
+      - ./data-ache/:/data
+      - ./:/config
     links:
-    - elasticsearch
+      - elasticsearch
   elasticsearch:
     image: elasticsearch:2.4.5
     environment:

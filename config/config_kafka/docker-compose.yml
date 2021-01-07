@@ -2,7 +2,7 @@ version: '2'
 services:
   ache:
     image: vidanyu/ache
-    entrypoint: sh -c '/ache/bin/ache startCrawl -c /config/ -s /config/seeds.txt -o /data'
+    command: startCrawl -c /config/ -s /config/seeds.txt -o /data
     ports:
       - "8080:8080"
     volumes:

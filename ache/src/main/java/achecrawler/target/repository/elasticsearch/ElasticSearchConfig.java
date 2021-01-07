@@ -21,6 +21,9 @@ public class ElasticSearchConfig {
     @JsonProperty("target_storage.data_format.elasticsearch.rest.max_retry_timeout_millis")
     private int restMaxRetryTimeoutMillis = 60000;
 
+    @JsonProperty("target_storage.data_format.elasticsearch.rest.initial_connection_timeout")
+    private int restClientInitialConnectionTimeout = 30000;
+
     //
     // Index and type parameters
     //
@@ -68,4 +71,11 @@ public class ElasticSearchConfig {
         this.typeName = typeName;
     }
 
+    public int getRestClientInitialConnectionTimeout() {
+        return restClientInitialConnectionTimeout;
+    }
+
+    public void setRestClientInitialConnectionTimeout(int restClientInitialConnectionTimeout) {
+        this.restClientInitialConnectionTimeout = restClientInitialConnectionTimeout;
+    }
 }
