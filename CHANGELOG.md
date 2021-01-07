@@ -1,6 +1,6 @@
 # ACHE Crawler Change Log
 
-## Version 0.13.0 (2020-xx-xx)
+## Version 0.13.0 (2020-01-07)
 
 - Upgrade gradle-node-plugin to version 2.2.4 
 - Upgrade gradle wrapper to version 6.6.1
