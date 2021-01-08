@@ -7,6 +7,8 @@
 - Moved forked crawler-commons classes to a separate sub-project
 - Remove tika dependency from `ache` and `crawler-commons` sub-project
 - Synchronize `crawler-commons/http-fetcher` with the upstream library
+- Build docker image with multi-arch support (amd64, arm64)
+
 
 ## Version 0.13.0 (2021-01-07)
 
