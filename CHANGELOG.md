@@ -8,6 +8,7 @@
 - Remove tika dependency from `ache` and `crawler-commons` sub-project
 - Synchronize `crawler-commons/http-fetcher` with the upstream library
 - Build docker image with multi-arch support (amd64, arm64)
+- Upgrade `rocksdbjni` to version 6.15.2
 
 
 ## Version 0.13.0 (2021-01-07)
