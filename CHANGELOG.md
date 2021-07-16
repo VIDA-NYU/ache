@@ -12,6 +12,7 @@
 - Upgrade `gradle-node-plugin` to version 3.0.1
 - Upgrade `kryo` to version 4.0.2
 - Upgrade SparkJava to version 2.9.3
+- Upgrade ache-dashboard npm dependencies
 
 
 ## Version 0.13.0 (2021-01-07)
