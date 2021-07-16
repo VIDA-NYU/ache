@@ -1,0 +1,87 @@
+##################### ACHE Configuration Example #####################
+
+#
+# Configurations for Target Storage
+#
+
+# Change to false if don't want to store pages classified as irrelevant
+target_storage.store_negative_pages: false
+
+# Enable this config to use ElasticSearch for target storage
+target_storage.data_format.type: ELASTICSEARCH
+target_storage.data_format.elasticsearch.rest.hosts:
+  - http://node01:9201
+
+# Performs hard focus or soft focus. When hard focus is enabled,
+# the crawler only follows links from pages classified as relevant
+target_storage.hard_focus: false
+
+# Run bipartite crawler
+target_storage.bipartite: true
+
+# Maximum number of pages to visit
+target_storage.visited_page_limit: 12345
+
+# Store only pages that contain english text using language detector
+target_storage.english_language_detection_enabled: false
+
+# Configurations for target storage's server
+target_storage.server.host: targetstorage.localhost
+target_storage.server.port : 19876
+
+#
+# Configurations for Link Storage
+#
+
+# Max number of pages to be crawled from each web domain
+link_storage.max_pages_per_domain: 222 # MAX_PAGES_PER_DOMAIN 100
+
+# Restricts the crawler to crawl the websites provided as seeds
+link_storage.link_strategy.use_scope: true # USE_SCOPE FALSE
+# Allows the crawler to follow forward links
+link_storage.link_strategy.outlinks: false # GRAB_LINKS TRUE
+# Gets backlinks of the pages from a search engine used by the bipartite crawling
+link_storage.link_strategy.backlinks: true # SAVE_BACKLINKS FALSE
+
+
+link_storage.link_classifier.type: LinkClassifierImpl
+link_storage.link_classifier.parameters.class_values: ["0", "1", "2"] #CLASS_VALUES 0 1 2
+
+# Retrain link classifiers on-the-fly
+link_storage.online_learning.enabled: false
+
+link_storage.online_learning.type: FORWARD_CLASSIFIER_BINARY
+
+# Learn iteration criterion (every n pages runs online learning)
+link_storage.online_learning.learning_limit: 555
+
+link_storage.link_selector: TopkLinkSelector
+
+link_storage.max_size_cache_urls: 222222 # MAX_CACHE_URLS_SIZE 200000
+
+# Directory to store link storage's frontier database
+link_storage.directory: "data_url/dir"
+
+# Backlink surfer parameters
+link_storage.backsurfer.pattern_ini: ",\"uu\":"
+link_storage.backsurfer.pattern_end: "\"}"
+link_storage.backsurfer.pattern_ini_title: ",\"ut\":\""
+link_storage.backsurfer.pattern_end_title: "\",\"uu\":"
+
+link_storage.scheduler.host_min_access_interval: 123
+link_storage.scheduler.max_links: 234
+
+
+#link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
+#link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+#
+# Configurations for Crawler Manager
+#
+crawler_manager.downloader.download_thread_pool_size: 333
+crawler_manager.downloader.max_retry_count: 444
+crawler_manager.downloader.user_agent.name: TestAgent
+crawler_manager.downloader.user_agent.url: http://www.test-agent-crawler-example.com/robot
+crawler_manager.downloader.valid_mime_types:
+ - test/mimetype
+ - text/html

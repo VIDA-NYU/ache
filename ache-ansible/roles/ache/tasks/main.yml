@@ -1,0 +1,46 @@
+- name: Creates directory /data/ache
+  become: true
+  become_method: sudo
+  become_user: root
+  file:
+    path: /data/ache
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+
+#- copy:
+#    src: "{{ item }}"
+#    dest: /data/ache/
+#  with_fileglob:
+#    - ache/*
+
+- name: Create ACHE docker-compose.yml file
+  template:
+    src: docker-compose.yml.j2
+    dest: /data/ache/docker-compose.yml
+
+- name: Create ACHE seeds.txt file
+  template:
+    src: seeds.txt.j2
+    dest: /data/ache/seeds.txt
+  when: ache_seeds is defined
+
+- name: Create ACHE ache.yml file
+  template:
+    src: ache.yml.j2
+    dest: /data/ache/ache.yml
+
+- name: Stop ACHE containers if running
+  shell: docker-compose stop -t 3600
+  args:
+    chdir: /data/ache/
+
+- name: Update docker images
+  shell: docker-compose pull
+  args:
+    chdir: /data/ache/
+
+- name: Start ACHE containers
+  shell: docker-compose up -d
+  args:
+    chdir: /data/ache/

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <!--
+	<appender name="AcheCrawlerFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		
+		<file>./logs/ache-crawler.log</file>
+		<append>true</append>
+		
+		<encoder>
+			<pattern>[%d{ISO8601}]%5p [%thread] \(%F:%L\) - %msg%n</pattern>
+		</encoder>
+
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>./log/ache-crawler.%i.log</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>7</maxIndex>
+		</rollingPolicy>
+
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>100MB</MaxFileSize>
+		</triggeringPolicy>
+		
+	</appender>
+    -->
+
+    <logger name="org.apache.http" level="WARN"/>
+    <logger name="smile" level="WARN"/>
+    <logger name="org.apache.http.client.protocol.ResponseProcessCookies" level="ERROR"/>
+    <logger name="achecrawler.crawler.crawlercommons" level="ERROR"/>
+    <logger name="crawlercommons.fetcher" level="ERROR"/>
+    <logger name="crawlercommons.sitemaps" level="ERROR"/>
+
+	<appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[%d{ISO8601}]%5p [%thread] \(%F:%L\) - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="info">
+		<appender-ref ref="ConsoleAppender" />
+	</root>
+ 
+	<!-- 
+	<logger name="achecrawler" level="info">
+		<appender-ref ref="AcheCrawlerFileAppender" />
+	</logger>
+    -->
+
+</configuration>

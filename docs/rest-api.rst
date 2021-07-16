@@ -14,6 +14,17 @@ The default HTTP settings can be changed using the following lines in the
   http.host: 127.0.0.1
   http.cors.enabled: true
 
+Security
+--------
+
+There is only *HTTP Basic* authentication available at this time. To configure it,
+add the following lines to ``ache.yml``:
+
+.. sourcecode:: yaml
+
+  http.auth.basic.user: myusername
+  http.auth.basic.password: mypasswd
+
 
 Server Mode
 -----------

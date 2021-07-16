@@ -1,0 +1,31 @@
+#
+# Setup docker packages
+#
+- name: Ensure docker depedencies are installed
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+    - curl
+
+- name: Add docker apt key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+    state: present
+  register: add_repository_key
+  ignore_errors: "{{ docker_apt_ignore_key_error }}"
+
+- name: Add docker apt repository
+  apt_repository:
+    repo: "{{ docker_apt_repository }}"
+    state: "{{ docker_package_state }}"
+    update_cache: yes
+
+- name: Install Docker CE package
+  apt:
+    name: docker-ce
+    state: present
