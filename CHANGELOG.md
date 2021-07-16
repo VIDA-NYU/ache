@@ -9,11 +9,14 @@
 - Synchronize `crawler-commons/http-fetcher` with the upstream library
 - Build docker image with multi-arch support (amd64, arm64)
 - Upgrade `rocksdbjni` to version 6.15.2
+- Upgrade `gradle-node-plugin` to version 3.0.1
+- Upgrade `kryo` to version 4.0.2
+- Upgrade SparkJava to version 2.9.3
 
 
 ## Version 0.13.0 (2021-01-07)
 
-- Upgrade gradle-node-plugin to version 2.2.4 
+- Upgrade `gradle-node-plugin` to version 2.2.4 
 - Upgrade gradle wrapper to version 6.6.1
 - Upgrade `crawler-commons` to version 1.1
 - Reorganized gradle module directory structure
