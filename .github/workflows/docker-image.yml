@@ -21,21 +21,22 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: vidanyu/ache
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+
       - name: Login to DockerHub
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Setup env variables with branch and tag names
-        id: branch_name
-        run: |
-          # SOURCE_NAME gets branch or the tag
-          echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
-          # SOURCE_BRANCH gets branch name or empty
-          echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
-          # SOURCE_TAG gets tag name or empty
-          echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
 
       - name: Build and push docker images with multi-arch support
         uses: docker/build-push-action@v2
@@ -43,8 +44,7 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
-          push: true
-          tags: vidanyu/ache:${{ env.SOURCE_NAME }}
-        env:
-          SOURCE_NAME: ${{ steps.branch_name.outputs.SOURCE_NAME }}
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
