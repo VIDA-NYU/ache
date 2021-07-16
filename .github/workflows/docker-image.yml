@@ -3,7 +3,7 @@ name: Docker Build & Push
 on:
   push:
     tags:
-      - '[1-9]+.[0-9]+.[0-9]+'
+      - '[0-9]+.[0-9]+.[0-9]+*'
     branches:
       - master
       - dev
@@ -26,10 +26,12 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: vidanyu/ache
+          # Create docker tags for matches branches, PRs, and version tags
+          # without the 'v' prefix (e.g., '0.1.2' or '0.1.2-rc.1')
           tags: |
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern={{version}}
+            type=match,pattern=[0-9]+\.[0-9]+\.[0-9]+.*
 
       - name: Login to DockerHub
         if: github.event_name != 'pull_request'
