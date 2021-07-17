@@ -100,6 +100,7 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
 
     @Override
     public void endElement(String uri, String tagName, String qName) {
+        // TODO: extract data from <meta> tags (e.g., description, keywords, noindex, nofollow)
         switch (tagName) {
             case "A":
                 if (currentHref != null && !currentHref.isEmpty()) {
@@ -112,7 +113,7 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
                 textState = TextType.TEXT;
                 break;
             case "TITLE":
-                textState = TextType.IGNORE;
+                textState = TextType.TEXT;
                 break;
             case "P":
             case "H1":
@@ -250,12 +251,16 @@ public class HtmlSaxParser extends SAXParser implements ContentHandler {
         return base != null ? base.url() : null;
     }
 
-    public List<String> getTokens() {
+    public List<String> tokens() {
         return this.tokens;
     }
 
     public String title() {
         return this.title.toString();
+    }
+
+    public String text() {
+        return this.text.toString();
     }
 
     private void print() {
