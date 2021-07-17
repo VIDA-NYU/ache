@@ -7,11 +7,24 @@ import static org.junit.Assert.assertThat;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 public class HtmlSaxParserTest {
+
+    @Test
+    public void shouldExtractTitle() throws Exception {
+        // given
+        String testString = new HtmlBuilder()
+                .withHeader("<title>ACHE Crawler \n \t</title>")
+                .withBody("<p>My text</p>")
+                .build();
+
+        // when
+        HtmlSaxParser pageParser = new HtmlSaxParser("http://ex.com/index.html", testString);
+
+        // then
+        assertThat(pageParser.title().trim(), is("ACHE Crawler"));
+    }
 
     @Test
     public void htmlEncodedLinksShouldBeEscaped() throws Exception {
@@ -23,7 +36,7 @@ public class HtmlSaxParserTest {
         // when
         HtmlSaxParser pageParser = new HtmlSaxParser("http://ex.com/index.html", testString);
         URL[] extractedLinks = pageParser.links();
-        LinkNeighborhood[] neighborhood = pageParser.getLinkNeighboor();
+        LinkNeighborhood[] neighborhood = pageParser.getLinkNeighborhood();
 
         // then
         assertThat(extractedLinks[0].toString(), is("http://ex.com/index.php?p1=asdf&p2=qwer"));
@@ -110,25 +123,31 @@ public class HtmlSaxParserTest {
         String url = "http://www.example.com";
         String testPage = HtmlBuilder.newBuilder()
                 .appendToBody("<p>My First Heading</p>")
-                .appendToBody("<a href=\"http://example.com/about.html\">My first paragraph.</a>")
+                .appendToBody("<a href=\"http://example.com/about.html\">My first anchor text.</a>")
+//                .appendToBody("<a href=\"http://example.com/about.html\">my second anchor text.</a>")
+                .appendToBody("<p>my paragraph.</p>")
+                .appendToBody("free text")
                 .build();
         // when
         HtmlSaxParser pageParser = new HtmlSaxParser(url, testPage);
-        LinkNeighborhood[] neighborhoods = pageParser.getLinkNeighboor();
+        LinkNeighborhood[] neighborhoods = pageParser.getLinkNeighborhood();
 //        PaginaURL pageParser = new PaginaURL(new URL(url), testPage);
 //        LinkNeighborhood[] neighborhoods = pageParser.getLinkNeighboor();
+//        System.out.println("tokens = " + pageParser.getTokens());
+
         // then
         assertThat(neighborhoods.length, is(1));
         
-        assertThat(neighborhoods[0].getAroundString().trim(), is("my first heading"));
+        assertThat(neighborhoods[0].getAroundString().trim(), is("my first heading my paragraph free text"));
         assertThat(neighborhoods[0].getAround()[0], is("my"));
         assertThat(neighborhoods[0].getAround()[1], is("first"));
         assertThat(neighborhoods[0].getAround()[2], is("heading"));
         
-        assertThat(neighborhoods[0].getAnchorString().trim(), is("my first paragraph"));
+        assertThat(neighborhoods[0].getAnchorString().trim(), is("my first anchor text"));
         assertThat(neighborhoods[0].getAnchor()[0], is("my"));
         assertThat(neighborhoods[0].getAnchor()[1], is("first"));
-        assertThat(neighborhoods[0].getAnchor()[2], is("paragraph"));
+        assertThat(neighborhoods[0].getAnchor()[2], is("anchor"));
+        assertThat(neighborhoods[0].getAnchor()[3], is("text"));
     }
     
     @Test
@@ -146,7 +165,7 @@ public class HtmlSaxParserTest {
         // when
         HtmlSaxParser pageParser = new HtmlSaxParser(url, testPage.toString());
         URL[] links = pageParser.links();
-        LinkNeighborhood[] lns  = pageParser.getLinkNeighboor();
+        LinkNeighborhood[] lns  = pageParser.getLinkNeighborhood();
         
         // then
         assertThat(links.length, is(1));
@@ -168,7 +187,7 @@ public class HtmlSaxParserTest {
             .build();
         // when
         HtmlSaxParser pageParser = new HtmlSaxParser(url, testPage);
-        LinkNeighborhood[] neighborhoods = pageParser.getLinkNeighboor();
+        LinkNeighborhood[] neighborhoods = pageParser.getLinkNeighborhood();
         URL[] links = pageParser.links();
 
         // then
