@@ -1,19 +1,65 @@
-# ACHE Crawer Change Log
+# ACHE Crawler Change Log
 
-## Version 0.12.0-SNAPSHOT
+## Version 0.14.0 (Unreleased)
+
+- Remove support for CDR 3.1 format in Kafka target repository
+- Move `tools` and `memex` packages to the `ache-tools` sub-project
+- Moved forked crawler-commons classes to a separate sub-project
+- Remove tika dependency from `ache` and `crawler-commons` sub-project
+- Synchronize `crawler-commons/http-fetcher` with the upstream library
+- Build docker image with multi-arch support (amd64, arm64)
+- Upgrade `rocksdbjni` to version 6.15.2
+- Upgrade `gradle-node-plugin` to version 3.0.1
+- Upgrade `kryo` to version 4.0.2
+- Upgrade SparkJava to version 2.9.3
+- Upgrade ache-dashboard npm dependencies
+
+
+## Version 0.13.0 (2021-01-07)
+
+- Upgrade `gradle-node-plugin` to version 2.2.4 
+- Upgrade gradle wrapper to version 6.6.1
+- Upgrade `crawler-commons` to version 1.1
+- Reorganized gradle module directory structure
+- Rename root package to 'achecrawler'
+- Use multi-stage build to reduce Docker image size
+- Refactor Elasticsearch repository and make it wait until the server ready
+- Upgrade npm dependencies
+
+
+## Version 0.12.0 (2020-01-18)
 
 - Upgrade `crawler-commons` dependency to version 0.9
 - Removed Elasticsearch transport-client-based repository
 - Removed Elasticsearch 1.4.4 binaries dependency
 - Added DumpDataFromElasticsearch tool for dumping documents from Elasticsearch
   repositories
-- Added configuration for minimum relevance in link selectors
-- Added configuration for selecting whether should re-crawl sitemaps and
+- Added a configuration for minimum relevance in link selectors
+- Added a configuration for selecting whether should re-crawl sitemaps and
   robots.txt links
-- Added documentaion about `relevance_threshold` parameters to the target page
+- Added documentation about `relevance_threshold` parameters to the target page
   classifiers documentation page
+- Added support for crawling via HTTP proxy in okhttp3 fetcher (by @maqzi)
+- Added tracking of more HTTP error messages (301, 302, 3xx, 402) (by @maqzi)
+- Upgrade `crawler-commons` library to version 1.0
+- Upgrade `commons-validator` library to version 1.6
+- Upgrade `okhttp3` library to version 3.14.0
+- Fix issue #177: Links from recent TLDs are considered invalid
+- Upgrade RocksDB dependency (rocksdbjni) to version 6.2.2
+- Added error code details to RocksDB exception logs
+- Upgrade gradle-node-plugin to version 1.3.1
+- Upgrade npm version to 6.10.2
+- Upgrade ache-dashboard npm dependencies
+- Upgrade gradle wrapper to version 5.6.1
+- Update Dockerfile to use openjdk:11-jdk (Java 11)
+- Added content_type field to RegexTargetClassifier
+- Change default link classifier to LinkClassifierBreadthSearch
+- Update io.airlift:airline dependency to version 0.8
+- Update gradle build script to use new plugins DSL
+- Update coveralls gradle plugin to version 2.9.0
+- Update searchkit to version ^2.4.0
 
-## Version 0.11.0
+## Version 0.11.0 (2018-06-01)
 
 - Removed dependency on Weka and reimplemented all machine-learning code using SMILE.
 - Added option to skip cross-validation on `ache buildModel` command
@@ -52,15 +98,15 @@ Following is a detailed log of the major changes since last version:
   - `react-vis` to version 1.7.9
   - `searchkit` to version 2.3.0
   - `npm` to version 5.6.0
-- Allow cookies be modified dynamically via REST API endpoint (issue #114)
+- Allow cookies to be modified dynamically via REST API endpoint (issue #114)
 - Added `crawlerId` field to JSON output of target repositories to track provenance of crawled pages
 
 
 ## Version 0.9.0 (2017-11-07)
 
-We are pleased to announce version 0.9.0 of ACHE Focused Crawler! We also recently reached the milestone of 100+ starts on GitHub, 55+ forks, and 1000+ commits in the current git repository.  We would like to thanks all users for the feedback we have received in the past year.
+We are pleased to announce version 0.9.0 of ACHE Focused Crawler! We also recently reached the milestone of 100+ starts on GitHub, 55+ forks, and 1000+ commits in the current git repository.  We would like to thank all users for the feedback we have received in the past year.
 
-This is a large release and it brings many improvements to the documentation and several new features. Following is a detailed log of major changes since last version:
+This is a large release, and it brings many improvements to the documentation and several new features. Following is a detailed log of major changes since last version:
 
 - Fixed multiple bugs and handling of exceptions
 - Several improvements made to ACHE documentation

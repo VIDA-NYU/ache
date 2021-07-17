@@ -5,7 +5,9 @@ bin/
 build/
 .DS_Store
 .gradle/
-
+.git/
+ache/build/
+ache-tools/build/
 ache-dashboard/node_modules
 ache-dashboard/coverage
 ache-dashboard/build
