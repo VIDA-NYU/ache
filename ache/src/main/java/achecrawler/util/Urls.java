@@ -6,8 +6,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.TreeSet;
 
+import crawlercommons.filters.basic.BasicURLNormalizer;
 import org.apache.commons.validator.routines.DomainValidator;
 import org.apache.commons.validator.routines.DomainValidator.ArrayType;
 import org.apache.commons.validator.routines.UrlValidator;
@@ -18,7 +18,6 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 
-import achecrawler.crawler.crawlercommons.filters.basic.BasicURLNormalizer;
 import okhttp3.HttpUrl;
 
 public class Urls {
@@ -101,8 +100,9 @@ public class Urls {
             "sessionid",
             "jsessionid");
 
-    private static final BasicURLNormalizer URL_NORMALIZER =
-            new BasicURLNormalizer(new TreeSet<>(INVALID_QUERY_PARAMETERS), false);
+    private static final BasicURLNormalizer URL_NORMALIZER = BasicURLNormalizer.newBuilder()
+            .queryParamsToRemove(INVALID_QUERY_PARAMETERS)
+            .build();
 
 
     public static boolean isValid(String url) {

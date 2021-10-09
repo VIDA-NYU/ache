@@ -13,7 +13,7 @@
 - Upgrade `kryo` to version 4.0.2
 - Upgrade SparkJava to version 2.9.3
 - Upgrade ache-dashboard npm dependencies
-
+- Upgrade `crawler-commons` to version 1.2
 
 ## Version 0.13.0 (2021-01-07)
 
