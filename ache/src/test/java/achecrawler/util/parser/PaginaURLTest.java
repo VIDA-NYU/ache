@@ -181,8 +181,8 @@ public class PaginaURLTest {
         assertThat(neighborhoods.length, is(3));
         assertThat(links.length, is(3));
         
-        assertThat(neighborhoods[0].getLink().toString(), is("http://example.com/post.php?"));
-        assertThat(links[0].toString(), is("http://example.com/post.php?"));
+        assertThat(neighborhoods[0].getLink().toString(), is("http://example.com/post.php"));
+        assertThat(links[0].toString(), is("http://example.com/post.php"));
         
         assertThat(neighborhoods[1].getLink().toString(), is("http://example.com/post.php?a=1&b=2"));
         assertThat(links[1].toString(), is("http://example.com/post.php?a=1&b=2"));
