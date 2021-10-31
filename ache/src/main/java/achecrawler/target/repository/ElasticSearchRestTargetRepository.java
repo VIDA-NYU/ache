@@ -135,7 +135,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 return majorVersion;
             }
         }
-        throw new RuntimeException("Failed to read Elaticsearch version.");
+        throw new RuntimeException("Failed to read Elasticsearch version.");
     }
 
     private AbstractHttpEntity createJsonEntity(String mapping) {
@@ -193,7 +193,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
     @Override
     public CloseableIterator<Page> pagesIterator() {
         throw new UnsupportedOperationException(
-                "Iterator not supportted for ElasticSearchRestTargetRepository yet");
+                "Iterator not supported for ElasticSearchRestTargetRepository yet");
     }
 
 }
