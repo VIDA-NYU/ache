@@ -83,17 +83,29 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 #html_theme = 'alabaster'
-html_theme = "sphinx_rtd_theme"
+# html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
+# html_theme_options = {
+#     'collapse_navigation': False,
+#     'navigation_depth': 3
+# }
+
+# Setup material template
+html_theme = 'sphinx_material'
 html_theme_options = {
-    'collapse_navigation': False,
-    'navigation_depth': 3
+    'globaltoc_depth': 3,
+    'globaltoc_collapse': True,
+    'color_primary': 'deep-purple',
 }
+html_sidebars = {
+    "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+}
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
