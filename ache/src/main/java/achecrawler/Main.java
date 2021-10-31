@@ -50,7 +50,8 @@ public class Main {
                 BuildModel.class,
                 AddSeeds.class,
                 SeedFinder.class,
-                RunCliTool.class
+                RunCliTool.class,
+                TargetClassifierTester.class
             );
 
         Cli<Runnable> acheParser = builder.build();
@@ -101,6 +102,7 @@ public class Main {
             System.out.println("    ache startLinkStorage -c config/sample_config -o data -s config/sample.seeds");
             System.out.println("    ache startTargetStorage -c config/sample_config -o data -m config/sample_model");
             System.out.println("    ache startCrawlManager -c config/sample_config");
+            System.out.println("    ache testTargetClassifier --input-file page.html --model config/sample_model");
         }
     }
 

@@ -29,7 +29,7 @@ public class LinkClassifierRandom implements LinkClassifier {
                 linkRelevances.add(linkRelevance);
             }
         }
-        return (LinkRelevance[]) linkRelevances.toArray(new LinkRelevance[linkRelevances.size()]);
+        return linkRelevances.toArray(new LinkRelevance[linkRelevances.size()]);
     }
 
     private LinkRelevance createRandomLinkRelevance(URL link) {

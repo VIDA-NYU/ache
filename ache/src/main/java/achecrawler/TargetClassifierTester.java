@@ -1,4 +1,4 @@
-package achecrawler.tools;
+package achecrawler;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -17,7 +17,7 @@ import achecrawler.util.parser.PaginaURL;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
-@Command(name="TargetClassifierTester", description="Classifies a pages using a given classifier")
+@Command(name="testTargetClassifier", description="Classifies a pages using a given classifier")
 public class TargetClassifierTester extends CliTool {
 
     @Option(name = "--input-file",

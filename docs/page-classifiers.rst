@@ -212,7 +212,7 @@ Testing Page Classifiers
 Once you have configured your classifier, you can verify whether it is working
 properly to classify a specific web page by running the following command::
 
-    ache run TargetClassifierTester --input-file {html-file} --model {model-config-directory}
+    ache testTargetClassifier --input-file {html-file} --model {model-config-directory}
 
 where,
 
