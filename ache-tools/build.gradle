@@ -18,7 +18,7 @@ dependencies {
     // Dependencies
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.+'
-    implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.12'
+    implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.21'
     implementation group: 'commons-validator', name: 'commons-validator', version: '1.6'
     implementation group: 'io.airlift', name: 'airline', version: '0.8'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.5'
