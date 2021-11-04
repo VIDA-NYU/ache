@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.InflaterInputStream;
 
-import org.apache.commons.compress.utils.IOUtils;
+import org.apache.commons.io.IOUtils;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
