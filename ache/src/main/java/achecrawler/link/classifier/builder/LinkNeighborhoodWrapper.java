@@ -31,16 +31,12 @@ public class LinkNeighborhoodWrapper {
 
     private StopList stoplist = null;
     private String[][] fieldWords;
-    private PorterStemmer stemmer = new PorterStemmer();
+    private final PorterStemmer stemmer = new PorterStemmer();
 
     public LinkNeighborhoodWrapper(StopList stoplist) {
         this.stoplist = stoplist;
     }
     
-    public LinkNeighborhoodWrapper(String[] features) {
-        this(features, null);
-    }
-
     public LinkNeighborhoodWrapper(String[] features, StopList stoplist) {
         this.stoplist = stoplist;
         this.setFeatures(features);
@@ -55,31 +51,31 @@ public class LinkNeighborhoodWrapper {
     private void setFeatures(String[] features) {
         String[][] fieldWords = new String[WordField.FIELD_NAMES.length][];
 
-        List<String> aroundTemp = new ArrayList<String>();
-        List<String> altTemp = new ArrayList<String>();
-        List<String> srcTemp = new ArrayList<String>();
-        List<String> urlTemp = new ArrayList<String>();
-        List<String> anchorTemp = new ArrayList<String>();
+        List<String> aroundTemp = new ArrayList<>();
+        List<String> altTemp = new ArrayList<>();
+        List<String> srcTemp = new ArrayList<>();
+        List<String> urlTemp = new ArrayList<>();
+        List<String> anchorTemp = new ArrayList<>();
 
-        for (int i = 0; i < features.length; i++) {
-            if (features[i].startsWith("around_")) {
-                String[] parts = features[i].split("_");
+        for (String feature : features) {
+            if (feature.startsWith("around_")) {
+                String[] parts = feature.split("_");
                 aroundTemp.add(parts[1]);
             }
-            if (features[i].startsWith("alt_")) {
-                String[] parts = features[i].split("_");
+            if (feature.startsWith("alt_")) {
+                String[] parts = feature.split("_");
                 altTemp.add(parts[1]);
             }
-            if (features[i].startsWith("src_")) {
-                String[] parts = features[i].split("_");
+            if (feature.startsWith("src_")) {
+                String[] parts = feature.split("_");
                 srcTemp.add(parts[1]);
             }
-            if (features[i].startsWith("url_")) {
-                String[] parts = features[i].split("_");
+            if (feature.startsWith("url_")) {
+                String[] parts = feature.split("_");
                 urlTemp.add(parts[1]);
             }
-            if (features[i].startsWith("anchor_")) {
-                String[] parts = features[i].split("_");
+            if (feature.startsWith("anchor_")) {
+                String[] parts = feature.split("_");
                 anchorTemp.add(parts[1]);
             }
         }
@@ -114,7 +110,6 @@ public class LinkNeighborhoodWrapper {
      * @param linkNeighboors The LinkNeighborhood instances to be converted to Instance
      * @param features String[] pre-defined words
      * @return HashMap mapping url -> instance
-     * @throws MalformedURLException
      */
     public Map<String, Instance> extractLinks(LinkNeighborhood[] linkNeighboors, String[] features)
             throws MalformedURLException {
@@ -124,7 +119,7 @@ public class LinkNeighborhoodWrapper {
 
     public Instance extractToInstance(LinkNeighborhood linkNeighboor, String[] features)
             throws MalformedURLException {
-        boolean useImageFeatures = false;
+        final boolean useImageFeatures = false;
         String url = linkNeighboor.getLink().toString();
         WordField[] linkFields = extract(linkNeighboor, url, useImageFeatures);
         return mapFeaturesToInstance(features, linkFields);
@@ -132,7 +127,7 @@ public class LinkNeighborhoodWrapper {
 
     public Instance extractToInstanceWithImageFeatures(LinkNeighborhood linkNeighboor,
             String[] features) throws MalformedURLException {
-        boolean useImageFeatures = true;
+        final boolean useImageFeatures = true;
         String url = linkNeighboor.getLink().toString();
         WordField[] linkFields = extract(linkNeighboor, url, useImageFeatures);
         return mapFeaturesToInstance(features, linkFields);
@@ -140,7 +135,7 @@ public class LinkNeighborhoodWrapper {
 
     private Map<String, Instance> mapFeatures(Map<String, WordField[]> linkFields,
             String[] features) {
-        Map<String, Instance> result = new HashMap<String, Instance>();
+        Map<String, Instance> result = new HashMap<>();
         for (Entry<String, WordField[]> kv : linkFields.entrySet()) {
             String url = kv.getKey();
             WordField[] words = kv.getValue();
@@ -152,21 +147,20 @@ public class LinkNeighborhoodWrapper {
 
     private Instance mapFeaturesToInstance(String[] features, WordField[] words) {
         Instance instance = new Instance(features);
-        for (int j = 0; j < words.length; j++) {
-            WordField wordField = words[j];
+        for (WordField wordField : words) {
             String field = (WordField.FIELD_NAMES[wordField.getField()]).toLowerCase();
             String word = wordField.getWord();
             if (wordField.getField() == WordField.URLFIELD || wordField.getField() == WordField.SRC) {
                 List<String> wordsTemp = searchSubstring(wordField.getWord(), wordField.getField());
-                for (int i = 0; i < wordsTemp.size(); i++) {
-                    word = wordsTemp.get(i);
+                for (String s : wordsTemp) {
+                    word = s;
                     word = field + "_" + word;
-                    instance.setValue(word, new Double(1));
+                    instance.setValue(word, 1.0);
                 }
             } else {
                 if (word != null) {
                     word = field + "_" + word;
-                    instance.setValue(word, new Double(1));
+                    instance.setValue(word, 1.0);
                 }
             }
         }
@@ -174,10 +168,10 @@ public class LinkNeighborhoodWrapper {
     }
 
     private String stemming(String word) {
-        String new_word = "";
+        String new_word;
         try {
             new_word = stemmer.stem(word);
-            if (new_word.indexOf("No term") != -1 || new_word.indexOf("Invalid term") != -1) {
+            if (new_word.contains("No term") || new_word.contains("Invalid term")) {
                 new_word = word;
             }
         } catch (Exception e) {
@@ -187,10 +181,10 @@ public class LinkNeighborhoodWrapper {
     }
 
     private List<String> searchSubstring(String word, int field) {
-        List<String> result = new ArrayList<String>();
+        List<String> result = new ArrayList<>();
         String[] words = fieldWords[field];
-        for (int i = 0; i < words.length; i++) {
-            String tempWord = words[i];
+        for (String s : words) {
+            String tempWord = s;
             int index = tempWord.indexOf("_");
             if (index != -1) {
                 tempWord = tempWord.substring(index + 1);
@@ -204,9 +198,9 @@ public class LinkNeighborhoodWrapper {
 
     private Map<String, WordField[]> extractLinks(LinkNeighborhood[] linkNeighboors)
             throws MalformedURLException {
-        Map<String, WordField[]> result = new HashMap<String, WordField[]>();
-        for (int i = 0; i < linkNeighboors.length; i++) {
-            extractToMap(result, linkNeighboors[i]);
+        Map<String, WordField[]> result = new HashMap<>();
+        for (LinkNeighborhood linkNeighboor : linkNeighboors) {
+            extractToMap(result, linkNeighboor);
         }
         return result;
     }
@@ -222,7 +216,7 @@ public class LinkNeighborhoodWrapper {
 
     private WordField[] extract(LinkNeighborhood ln, String urlStr, boolean useImageFeatures)
             throws MalformedURLException {
-        List<WordField> words = new ArrayList<WordField>();
+        List<WordField> words = new ArrayList<>();
         if (useImageFeatures) {
             if (ln.getImgSrc() != null) {
                 PaginaURL pageParser = new PaginaURL(new URL("http://"), ln.getImgSrc(), stoplist);
@@ -241,7 +235,6 @@ public class LinkNeighborhoodWrapper {
      *
      * @param urlStr String
      * @param wordsFields Vector list of word
-     * @throws MalformedURLException
      */
     private void addUrlWordsToWordField(String urlStr, List<WordField> wordsFields)
             throws MalformedURLException {
@@ -254,8 +247,8 @@ public class LinkNeighborhoodWrapper {
         }
         PaginaURL pageParser = new PaginaURL(url, url.getFile(), stoplist);
         String[] terms = pageParser.words();
-        for (int i = 0; i < terms.length; i++) {
-            wordsFields.add(new WordField(WordField.URLFIELD, stemming(terms[i])));
+        for (String term : terms) {
+            wordsFields.add(new WordField(WordField.URLFIELD, stemming(term)));
         }
     }
 
@@ -271,8 +264,8 @@ public class LinkNeighborhoodWrapper {
 
     private void addFeaturesToWordFieldList(List<WordField> words, String[] textTerms, int type) {
         if(textTerms == null) return;
-        for (int j = 0; j < textTerms.length; j++) {
-            WordField wf = new WordField(type, stemming(textTerms[j]));
+        for (String textTerm : textTerms) {
+            WordField wf = new WordField(type, stemming(textTerm));
             words.add(wf);
         }
     }

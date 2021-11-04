@@ -346,9 +346,9 @@ public class VSMVector {
 
           Integer ocur = (Integer)idfs.get(word);
           if( ocur == null){
-            idfs.put(word,new Integer(1));
+            idfs.put(word, 1);
           }else{
-            idfs.put(word,new Integer(ocur.intValue()+1));
+            idfs.put(word, ocur + 1);
           }
         }
       }
@@ -368,11 +368,11 @@ public class VSMVector {
         while(iter.hasNext()){
             VSMElement elem = iter.next();
             String word = elem.getWord();
-            Integer ocur = (Integer)idfs.get(word);
+            Integer ocur = idfs.get(word);
             if( ocur == null){
-                idfs.put(word,new Integer((int)elem.getWeight()));
+                idfs.put(word, (int) elem.getWeight());
             }else{
-                idfs.put(word,new Integer(ocur.intValue()+(int)elem.getWeight()));
+                idfs.put(word, ocur + (int) elem.getWeight());
             }
         }
       }

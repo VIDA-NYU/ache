@@ -177,7 +177,7 @@ public class TargetClassifierBuilder {
         HashSet<Integer> nums = new HashSet<>();
         int[] result = new int[elems];
         while (count < elems) {
-            Integer num = new Integer(next);
+            Integer num = next;
             if (!nums.contains(num)) {
                 result[count] = next;
                 nums.add(num);

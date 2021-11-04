@@ -1,18 +1,12 @@
 package achecrawler.link.classifier.builder;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import achecrawler.link.classifier.LNClassifier;
 import achecrawler.link.classifier.builder.LinkClassifierFeatureSelector.Features;
 import achecrawler.util.Sampler;
 import achecrawler.util.parser.LinkNeighborhood;
 import achecrawler.util.string.StopList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import smile.classification.SVM;
 import smile.classification.SVM.Multiclass;
 import smile.classification.SoftClassifier;
@@ -22,12 +16,16 @@ import smile.data.NominalAttribute;
 import smile.data.NumericAttribute;
 import smile.math.kernel.LinearKernel;
 
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class LinkClassifierTrainer {
     
     private static final Logger logger = LoggerFactory.getLogger(LinkClassifierTrainer.class);
     
-    private LinkClassifierFeatureSelector featureSelector;
-    private StopList stoplist;
+    private final LinkClassifierFeatureSelector featureSelector;
+    private final StopList stoplist;
     
     public LinkClassifierTrainer(StopList stoplist) {
         this.stoplist = stoplist;
@@ -48,7 +46,7 @@ public class LinkClassifierTrainer {
             List<String> classValues, Features bestFeatures) {
         AttributeDataset inputDataset = createSmileInput(instances, bestFeatures);
         SoftClassifier<double[]> classifier = trainClassifier(inputDataset, instances.size());
-        String[] classValuesArray = (String[]) classValues.toArray(new String[classValues.size()]);
+        String[] classValuesArray = classValues.toArray(new String[classValues.size()]);
         LinkNeighborhoodWrapper wrapper =
                 new LinkNeighborhoodWrapper(bestFeatures.features, stoplist);
         return new LNClassifier(classifier, wrapper, bestFeatures.features, classValuesArray);
@@ -58,9 +56,9 @@ public class LinkClassifierTrainer {
         final double c = 1.0;
         SVM<double[]> classifier;
         if(numberOfClasses > 2) {
-            classifier = new SVM<double[]>(new LinearKernel(), c, numberOfClasses, Multiclass.ONE_VS_ALL);
+            classifier = new SVM<>(new LinearKernel(), c, numberOfClasses, Multiclass.ONE_VS_ALL);
         } else {
-            classifier = new SVM<double[]>(new LinearKernel(), c);
+            classifier = new SVM<>(new LinearKernel(), c);
         }
         
         int[] y = data.labels();
@@ -87,27 +85,20 @@ public class LinkClassifierTrainer {
 
     private Features selectFeatures(List<Sampler<LinkNeighborhood>> instances, boolean backlink)
             throws MalformedURLException {
-        List<LinkNeighborhood> allInstances = new ArrayList<LinkNeighborhood>();
-        for (int i = 0; i < instances.size(); i++) {
-            Sampler<LinkNeighborhood> sampler = instances.get(i);
+        List<LinkNeighborhood> allInstances = new ArrayList<>();
+        for (Sampler<LinkNeighborhood> sampler : instances) {
             for (LinkNeighborhood ln : sampler.getSamples()) {
                 allInstances.add(ln);
             }
         }
 
-        Features bestFeatures = featureSelector.selectBestFeatures(allInstances, backlink);
-        return bestFeatures;
+        return featureSelector.selectBestFeatures(allInstances, backlink);
     }
 
     /**
      * Converts the input instances into an AttributeDataset object that can be used to train a
      * SMILE classifier.
-     * 
-     * @param attributes
-     * @param instances
-     * @param wrapper
-     * @param dataset
-     * @throws IOException
+     *
      */
     private AttributeDataset createDataset(List<Sampler<LinkNeighborhood>> instances,
             String[] features, List<String> classValues, LinkNeighborhoodWrapper wrapper) {
@@ -118,8 +109,8 @@ public class LinkClassifierTrainer {
             attributes.add(attribute);
         }
 
-        Attribute[] attributesArray = (Attribute[]) attributes.toArray(new Attribute[attributes.size()]);
-        String[] classValuesArray = (String[]) classValues.toArray(new String[classValues.size()]);
+        Attribute[] attributesArray = attributes.toArray(new Attribute[attributes.size()]);
+        String[] classValuesArray = classValues.toArray(new String[classValues.size()]);
         String description = "If link leads to relevant page or not.";
         Attribute response = new NominalAttribute("y", description, classValuesArray);
         AttributeDataset dataset = new AttributeDataset("link_classifier", attributesArray, response);
@@ -131,7 +122,7 @@ public class LinkClassifierTrainer {
                 try {
                     instance = wrapper.extractToInstance(ln, features);
                 } catch (MalformedURLException e) {
-                    logger.warn("Failed to process intance: "+ln.getLink().toString(), e);
+                    logger.warn("Failed to process instance: "+ln.getLink().toString(), e);
                     continue;
                 }
                 double[] values = instance.getValues(); // the instance's feature vector

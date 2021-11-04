@@ -103,10 +103,10 @@ public class TermStatistics {
             if (!isIrrelevant(term)) {
                 positionsMeta = new ArrayList<>();
                 wordPositionsMeta.put(term, positionsMeta);
-                positionsMeta.add(new Integer(pos));
+                positionsMeta.add(pos);
             }
         } else {
-            positionsMeta.add(new Integer(pos));
+            positionsMeta.add(pos);
         }
     }
 

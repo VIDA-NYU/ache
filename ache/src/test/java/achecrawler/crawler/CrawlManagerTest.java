@@ -47,7 +47,7 @@ public class CrawlManagerTest {
     }
 
     @AfterClass
-    public static void shutdownServer() throws IOException {
+    public static void shutdownServer() {
         httpServer.stop(0);
     }
 
@@ -109,9 +109,7 @@ public class CrawlManagerTest {
                 baseConfig.getTargetStorageConfig().getMaxFileSize());
 
         Set<String> crawledPages = new TreeSet<>();
-        repository.pagesIterator().forEachRemaining((p -> {
-            crawledPages.add(p.getFinalUrl());
-        }));
+        repository.pagesIterator().forEachRemaining((p -> crawledPages.add(p.getFinalUrl())));
 
         return crawledPages;
     }

@@ -19,29 +19,24 @@ public class Instance {
     private HashMap<String, Integer> featureHash;
     private String[] features;
     private double[] values;
-    private double valueClassification;
 
     public Instance(String[] features) {
         this.setFeatures(features);
     }
 
-    public void setClassification(String feat, double value) {
-        this.valueClassification = value;
-    }
-
     public void setFeatures(String[] features) {
         this.features = features;
         this.values = new double[features.length];
-        this.featureHash = new HashMap<String, Integer>(features.length);
+        this.featureHash = new HashMap<>(features.length);
         for (int i = 0; i < features.length; i++) {
-            this.featureHash.put(features[i], new Integer(i));
+            this.featureHash.put(features[i], i);
         }
     }
 
     public void setValue(String feat, Double val) {
-        Integer index = (Integer) featureHash.get(feat);
+        Integer index = featureHash.get(feat);
         if (index != null) {
-            values[index.intValue()] = val.doubleValue();
+            values[index] = val;
         }
     }
 
@@ -57,14 +52,6 @@ public class Instance {
         return featureHash;
     }
 
-    public boolean checkFeature(String feat) {
-        boolean exist = false;
-        if (featureHash.get(feat) != null) {
-            exist = true;
-        }
-        return exist;
-    }
-
     public String toString() {
         StringBuilder temp = new StringBuilder();
         for (int i = 0; i < features.length; i++) {
@@ -73,7 +60,6 @@ public class Instance {
             temp.append((int) values[i]);
             temp.append(",");
         }
-        temp.append((int) valueClassification);
         return temp.toString();
     }
 
