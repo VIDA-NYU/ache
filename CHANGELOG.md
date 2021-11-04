@@ -16,6 +16,8 @@
 - Upgrade `crawler-commons` to version 1.2
 - Upgrade `commons-compress` to version 1.21
 - Bump lucene-analyzers-common from 7.3.1 to 8.10.1
+- Bump `jackson-*` libraries from 2.8.5 to 2.13.0
+
 
 ## Version 0.13.0 (2021-01-07)
 
