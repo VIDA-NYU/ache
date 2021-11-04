@@ -29,6 +29,6 @@ dependencies {
     implementation group: 'org.jsoup', name: 'jsoup', version: '1.10.3'
     implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.11.213'
 
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
 }
