@@ -23,7 +23,7 @@ import java.util.Map.Entry;
 import java.util.TimeZone;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.commons.compress.utils.IOUtils;
+import org.apache.commons.io.IOUtils;
 import org.archive.format.warc.WARCConstants;
 import org.archive.format.warc.WARCConstants.WARCRecordType;
 import org.archive.io.ArchiveRecord;

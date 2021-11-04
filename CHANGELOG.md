@@ -14,6 +14,7 @@
 - Upgrade SparkJava to version 2.9.3
 - Upgrade ache-dashboard npm dependencies
 - Upgrade `crawler-commons` to version 1.2
+- Upgrade `commons-compress` to version 1.21
 
 ## Version 0.13.0 (2021-01-07)
 
