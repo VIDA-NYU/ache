@@ -48,7 +48,7 @@ dependencies {
     implementation group: 'org.rocksdb', name: 'rocksdbjni', version: '6.15.2'
     implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '5.6.7'
     implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '0.11.0.1'
-    implementation('org.netpreserve.commons:webarchive-commons:1.1.8') {
+    implementation('org.netpreserve.commons:webarchive-commons:1.1.9') {
         exclude group: 'org.apache.hadoop', module: 'hadoop-core'
         exclude group: 'junit', module: 'junit'
     }
@@ -59,7 +59,7 @@ dependencies {
     implementation group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '8.10.1'
     // HTTP libraries
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.14.0'
-    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
     // Others
     implementation group: 'com.github.haifengl', name: 'smile-core', version: '1.5.0'
     implementation group: 'org.roaringbitmap', name: 'RoaringBitmap', version: '0.7.8'
