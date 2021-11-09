@@ -96,11 +96,29 @@ todo_include_todos = False
 # }
 
 # Setup material template
+html_logo = '../ache-logo.png'
 html_theme = 'sphinx_material'
+html_short_title = 'Docs Home'
 html_theme_options = {
+    'repo_url': 'https://github.com/VIDA-NYU/ache/',
+    'repo_name': 'ACHE Crawler',
     'globaltoc_depth': 3,
     'globaltoc_collapse': True,
-    'color_primary': 'deep-purple',
+    'color_primary': 'indigo',
+    'nav_title': 'ACHE Crawler Documentation',
+    "nav_links": [
+        # {
+        #     "href": "index",
+        #     "internal": True,
+        #     "title": "ACHE Docs",
+        # },
+        {
+            "href": "https://github.com/VIDA-NYU/ache/",
+            "internal": False,
+            "title": "GitHub repository",
+        },
+    ],
+    "version_dropdown": True,
 }
 html_sidebars = {
     "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]

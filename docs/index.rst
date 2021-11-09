@@ -1,5 +1,5 @@
-Welcome to ACHE's Documentation!
-================================
+ACHE Crawler Documentation
+==========================
 
 ACHE is a focused web crawler. It collects web pages that satisfy some specific criteria, e.g., pages that belong to a given domain or that contain a user-specified pattern.
 ACHE differs from generic crawlers in sense that it uses *page classifiers* to distinguish between relevant and irrelevant pages in a given domain. A page classifier can be defined as a simple regular expression (e.g., that matches every page that contains a specific word) or a machine-learning-based classification model.
@@ -17,15 +17,23 @@ ACHE supports many features, such as:
   * REST API and web-based user interface for crawler monitoring
   * Crawling of hidden services using TOR proxies
 
+Table of Contents
+-----------------
+
 ..  toctree::
     :maxdepth: 2
-    :caption: Contents:
+    :caption: Getting Started:
 
     install
     tutorial-focused-crawl
     tutorial-in-depth-crawl
     tutorial-crawling-cookie
     tutorial-crawling-tor
+
+..  toctree::
+    :maxdepth: 2
+    :caption: Configuration:
+
     page-classifiers
     crawling-strategies
     data-formats

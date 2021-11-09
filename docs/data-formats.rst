@@ -221,5 +221,4 @@ add the following lines to the ``ache.yml`` configuration file:
 Currently, following message formats are supported:
 
  * ``JSON``: A JSON object using same schema defined in the :ref:`FILES <dataformat-files>` data format.
- * ``CDR31``: A JSON object formatted using the Memex CDR v3.1 format. Image objects are currently not supported.
  * ``ELASTIC``: A JSON object with the same fields described int the :ref:`ELATICSEARCH <dataformat-elasticsearch>` data format.

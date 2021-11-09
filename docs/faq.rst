@@ -1,5 +1,5 @@
-Frequently Asked Questions
-==========================
+Frequently Asked Questions (FAQ)
+================================
 
 What is inside the output directory?
 ------------------------------------
