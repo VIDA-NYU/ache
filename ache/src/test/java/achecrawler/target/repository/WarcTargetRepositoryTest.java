@@ -218,7 +218,7 @@ public class WarcTargetRepositoryTest {
         String url1 = "http://a.com";
 
         Map<String, List<String>> headers = new HashMap<>();
-        Character invalidChar = new Character((char) 0x80);
+        Character invalidChar = (char) 0x80;
         String headerValue = "inline; filename=\"Invalid_" + invalidChar + "\"";
         headers.put("Content-Disposition", asList(headerValue));
 
@@ -230,17 +230,17 @@ public class WarcTargetRepositoryTest {
         repository.insert(target1);
         repository.close();
 
-        RepositoryIterator respositoryIterator = repository.iterator();
+        RepositoryIterator repositoryIterator = repository.iterator();
 
         // then
-        assertTrue(respositoryIterator.hasNext());
-        WARCRecord record = respositoryIterator.next();
+        assertTrue(repositoryIterator.hasNext());
+        WARCRecord record = repositoryIterator.next();
         assertThat(record.getHeader().getUrl(), is(url1));
         String recordData = IOUtils.toString(record);
         assertThat(recordData, containsString(html));
         assertThat(recordData, containsString(headerValue));
 
-        assertFalse(respositoryIterator.hasNext());
+        assertFalse(repositoryIterator.hasNext());
     }
 
     @Test

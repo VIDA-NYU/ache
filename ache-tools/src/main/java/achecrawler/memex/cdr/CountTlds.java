@@ -69,7 +69,7 @@ public class CountTlds extends CliTool {
                     
                     Integer tldCount = tldCounts.get(tld);
                     if(tldCount == null) {
-                        tldCount = new Integer(0);
+                        tldCount = 0;
                     }
                     
                     tldCount++;

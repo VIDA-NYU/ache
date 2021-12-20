@@ -259,7 +259,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
             // Keep track of the number of redirects.
             Integer count = (Integer) context.getAttribute(REDIRECT_COUNT_CONTEXT_KEY);
             if (count == null) {
-                count = new Integer(0);
+                count = 0;
             }
 
             context.setAttribute(REDIRECT_COUNT_CONTEXT_KEY, count + 1);
