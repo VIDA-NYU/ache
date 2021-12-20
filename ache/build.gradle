@@ -41,9 +41,9 @@ dependencies {
     // REST server dependencies
     implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.3'
     // Metrics and monitoring
-    implementation group: 'io.dropwizard.metrics', name: 'metrics-core', version: '3.1.3'
-    implementation group: 'io.dropwizard.metrics', name: 'metrics-json', version: '3.1.3'
-    implementation group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '3.1.3'
+    implementation group: 'io.dropwizard.metrics', name: 'metrics-core', version: '4.2.7'
+    implementation group: 'io.dropwizard.metrics', name: 'metrics-json', version: '4.2.7'
+    implementation group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '4.2.7'
     // Data management and repositories
     implementation group: 'org.rocksdb', name: 'rocksdbjni', version: '6.25.3'
     implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '5.6.7'
@@ -61,7 +61,7 @@ dependencies {
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.14.0'
     implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
     // Others
-    implementation group: 'com.github.haifengl', name: 'smile-core', version: '1.5.0'
+    implementation group: 'com.github.haifengl', name: 'smile-core', version: '2.6.0'
     implementation group: 'org.roaringbitmap', name: 'RoaringBitmap', version: '0.7.8'
     implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.11.213'
     // TODO: fill these in from Maven Central instead of that local libs dir
@@ -125,8 +125,8 @@ applicationDistribution.from(copyConfig) {
 //
 jacocoTestReport {
     reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
-        html.enabled = true
+        xml.required = true // coveralls plugin depends on xml format report
+        html.required = true
     }
     afterEvaluate {
         classDirectories.from = files(classDirectories.files.collect {
