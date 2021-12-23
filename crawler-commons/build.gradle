@@ -15,5 +15,5 @@ dependencies {
     implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
 
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
-    testImplementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.3.6.v20151106'
+    testImplementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.44.v20210927'
 }
