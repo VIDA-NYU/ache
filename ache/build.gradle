@@ -37,7 +37,7 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-cbor', version: '2.13.1'
     implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.13.1'
     implementation group: 'com.esotericsoftware', name: 'kryo', version: '4.0.2'
-    implementation group: 'de.javakaffee', name: 'kryo-serializers', version: '0.42'
+    implementation group: 'de.javakaffee', name: 'kryo-serializers', version: '0.45'
     // REST server dependencies
     implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.3'
     // Metrics and monitoring
@@ -63,7 +63,7 @@ dependencies {
     // Others
     implementation group: 'com.github.haifengl', name: 'smile-core', version: '1.5.3'
     implementation group: 'org.roaringbitmap', name: 'RoaringBitmap', version: '0.9.23'
-    implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.12.129'
+    implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.12.131'
     // TODO: fill these in from Maven Central instead of that local libs dir
     implementation files('libs/langdetect-03-03-2014.jar') // TODO: upgrade to newer version from maven
     implementation files('libs/jsonic-1.2.0.jar') // required by by langdetect-03-03-2014.jar
