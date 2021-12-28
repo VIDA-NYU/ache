@@ -1,27 +1,23 @@
 package achecrawler.rest.resources;
 
+import achecrawler.crawler.CrawlersManager;
+import achecrawler.crawler.CrawlersManager.CrawlContext;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.ImmutableMap;
+import io.javalin.http.Context;
+import io.javalin.http.Handler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
-
-import javax.servlet.http.HttpServletResponse;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.ImmutableMap;
-
-import achecrawler.crawler.CrawlersManager;
-import achecrawler.crawler.CrawlersManager.CrawlContext;
-import spark.Route;
 
 public class LabelsResource {
 
@@ -30,34 +26,33 @@ public class LabelsResource {
     private static final ObjectMapper mapper = new ObjectMapper();
 
     private CrawlersManager crawlersManager;
-    private Map<String, Map<String, Boolean>> crawlersLabelsCache = new HashMap<>();
+    private final Map<String, Map<String, Boolean>> crawlersLabelsCache = new HashMap<>();
 
     public LabelsResource(CrawlersManager crawlersManager) {
         this.crawlersManager = crawlersManager;
     }
 
-    public final Route addLabels = (request, response) -> {
-        String crawlerId = request.params(":crawler_id");
+    public final Handler addLabels = (Context ctx) -> {
+        String crawlerId = ctx.pathParam(":crawler_id");
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            response.status(HttpServletResponse.SC_NOT_FOUND);
-            return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
+            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.json(ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId));
+            return;
         }
 
-        Map<String, Boolean> newLabels = deserializeMap(request.body(), mapper);
+        Map<String, Boolean> newLabels = deserializeMap(ctx.body());
         Map<String, Boolean> labelsCache = saveNewLabels(crawlerId, newLabels);
-        response.status(HttpServletResponse.SC_CREATED);
-        return labelsCache;
+        ctx.status(HttpServletResponse.SC_CREATED);
+        ctx.json(labelsCache);
     };
 
     private Map<String, Boolean> saveNewLabels(String crawlerId, Map<String, Boolean> newLabels)
             throws IOException {
 
         Map<String, Boolean> labelsCache = getLabelsCache(crawlerId);
-        for (Entry<String, Boolean> label : newLabels.entrySet()) {
-            labelsCache.put(label.getKey(), label.getValue());
-        }
+        labelsCache.putAll(newLabels);
 
         Path filePath = getLabelsFilename(crawlerId);
         mapper.writeValue(filePath.toFile(), labelsCache);
@@ -65,16 +60,17 @@ public class LabelsResource {
         return labelsCache;
     }
 
-    public final Route getLabels = (request, response) -> {
-        String crawlerId = request.params(":crawler_id");
+    public final Handler getLabels = (Context ctx) -> {
+        String crawlerId = ctx.pathParam("crawler_id");
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            response.status(HttpServletResponse.SC_NOT_FOUND);
-            return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
+            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.json(ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId));
+            return;
         }
 
-        return getLabelsCache(crawlerId);
+        ctx.json(getLabelsCache(crawlerId));
     };
 
     private Map<String, Boolean> getLabelsCache(String crawlerId) {
@@ -93,8 +89,8 @@ public class LabelsResource {
         Path filePath = getLabelsFilename(crawlerId);
         try {
             if (Files.exists(filePath)) {
-                String json = new String(Files.readAllBytes(filePath), "UTF-8");
-                return deserializeMap(json, mapper);
+                String json = new String(Files.readAllBytes(filePath), StandardCharsets.UTF_8);
+                return deserializeMap(json);
             }
         } catch (IOException e) {
             String filename = filePath != null ? filePath.toString() : null;
@@ -105,16 +101,14 @@ public class LabelsResource {
 
     private Path getLabelsFilename(String crawlerId) {
         CrawlContext crawlContext = crawlersManager.getCrawl(crawlerId);
-        Path filePath = Paths.get(crawlContext.dataPath, "labels.json");
-        return filePath;
+        return Paths.get(crawlContext.dataPath, "labels.json");
     }
 
-    private static Map<String, Boolean> deserializeMap(String body, ObjectMapper mapper)
-            throws IOException, JsonParseException, JsonMappingException {
+    private static Map<String, Boolean> deserializeMap(String body)
+            throws IOException {
         TypeReference<HashMap<String, Boolean>> typeRef =
                 new TypeReference<HashMap<String, Boolean>>() {};
-        Map<String, Boolean> labels = mapper.readValue(body, typeRef);
-        return labels;
+        return LabelsResource.mapper.readValue(body, typeRef);
     }
 
 }

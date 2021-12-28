@@ -1,15 +1,15 @@
 package achecrawler.rest;
 
-import static achecrawler.rest.Transformers.json;
-import static achecrawler.rest.Transformers.promethize;
-import static achecrawler.rest.Transformers.text;
-import static java.util.Arrays.asList;
-
 import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.ServerSocket;
-import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import com.codahale.metrics.json.MetricsModule;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
+import io.javalin.plugin.json.JavalinJackson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,18 +18,18 @@ import achecrawler.rest.resources.CrawlerResource;
 import achecrawler.rest.resources.ElasticsearchProxyResource;
 import achecrawler.rest.resources.LabelsResource;
 import achecrawler.rest.resources.ThreadsResource;
-import spark.Service;
+
 
 public class RestServer {
     
     private static final Logger logger = LoggerFactory.getLogger(RestServer.class);
     
-    private Service server;
-    private RestConfig restConfig;
-    private LabelsResource labelsResource;
-    private CrawlerResource crawlerResource;
-    private ThreadsResource threadsResource;
-    private ElasticsearchProxyResource elasticsearchProxyResource;
+    private Javalin server;
+    private final RestConfig restConfig;
+    private final LabelsResource labelsResource;
+    private final CrawlerResource crawlerResource;
+    private final ThreadsResource threadsResource;
+    private final ElasticsearchProxyResource elasticsearchProxyResource;
 
     private RestServer(RestConfig restConfig, CrawlersManager crawlManager) {
         this.restConfig = restConfig;
@@ -40,7 +40,6 @@ public class RestServer {
     }
 
     public void start() {
-
         String host = restConfig.getHost();
         int port = restConfig.getPort();
         while (!portIsAvailable(port) && port < restConfig.getPort() + 100) {
@@ -48,9 +47,41 @@ public class RestServer {
             port++;
         }
 
-        server = Service.ignite();
-        server.port(port);
-        server.ipAddress(host);
+        SinglePageAppHandler singlePageAppHandler = new SinglePageAppHandler(restConfig.getBasePath());
+
+        server = Javalin.create(config -> {
+            /*
+             * Enable HTTP CORS (Cross-Origin Resource Sharing)
+             */
+            if (restConfig.isEnableCors()) {
+                config.enableCorsForAllOrigins();
+            }
+
+            /*
+             * Configure single-page handler to serve the React App index.html file
+             * to paths that do not match any other handler.
+             */
+            config.addSinglePageHandler("/", singlePageAppHandler);
+
+            /*
+             * Configure handler for serving static files under /public.
+             */
+            config.addStaticFiles(staticFiles -> {
+                staticFiles.location = Location.CLASSPATH;
+                staticFiles.directory = "/public"; // path on JAR's project resources
+                staticFiles.hostedPath = "/"; // path served over HTTP
+            });
+
+            /*
+             * Configure a custom JSON mapper.
+             */
+            final TimeUnit rateUnit = TimeUnit.SECONDS;
+            final TimeUnit durationUnit = TimeUnit.MILLISECONDS;
+            final boolean showSamples = false;
+            ObjectMapper jsonMapper = new ObjectMapper()
+                    .registerModule(new MetricsModule(rateUnit, durationUnit, showSamples));
+            config.jsonMapper(new JavalinJackson(jsonMapper));
+        });
 
         /*
          * Configure Basic authorization
@@ -58,64 +89,51 @@ public class RestServer {
         String user = restConfig.getBasicUser();
         String passwd = restConfig.getBasicPassword();
         if (user != null && !user.isEmpty() && passwd != null && !passwd.isEmpty()) {
-            server.before("/*", new BasicAuthenticationFilter(server, user, passwd));
+            server.before("/*", new BasicAuthenticationFilter(user, passwd));
         }
 
-        /*
-         * Configure static files handler location and renders index.html file. New paths added to
-         * the React static web application, should also be added here, otherwise page refreshes in
-         * the browser will not work.
-         */
-        List<String> indexes = asList(
-            "/",
-            "/index.html",
-            "/search/*",
-            "/monitoring",
-            "/monitoring/*",
-            "/start",
-            "/start?*"
-        );
-        server.before("/*", new StaticFileHandlerFilter(indexes, restConfig.getBasePath()));
 
         /*
-         * Enable HTTP CORS (Cross-origin Resource Sharing)
+         * Single page app routers. These routes are required to override the default
+         * static index.html that would be server be the static file handler.
          */
-        if (restConfig.isEnableCors()) {
-            enableCORS("*", "GET");
-        }
+        server.get("/", singlePageAppHandler);
+        server.get("/index.html", singlePageAppHandler);
         
         /*
-         * Crawl routes
+         * Crawl API routes
          */
-        server.get( "/crawls",                        json(crawlerResource.listCrawlers));
-        server.get( "/crawls/:crawler_id",            json(crawlerResource.getStatus));
-        server.get( "/crawls/:crawler_id/status",     json(crawlerResource.getStatus));
-        server.post("/crawls/:crawler_id",            json(crawlerResource.startCrawl));
-        server.post("/crawls/:crawler_id/startCrawl", json(crawlerResource.startCrawl));
-        server.get( "/crawls/:crawler_id/metrics",    json(crawlerResource.metricsResource));
-        server.get( "/crawls/:crawler_id/prometheus", promethize(crawlerResource.metricsResource));
-        server.get( "/crawls/:crawler_id/stopCrawl",  json(crawlerResource.stopCrawl));
-        server.post("/crawls/:crawler_id/seeds",      json(crawlerResource.addSeeds));
-        server.post("/crawls/:crawler_id/cookies",    json(crawlerResource.addCookies));
-        server.get( "/crawls/:crawler_id/labels",     json(labelsResource.getLabels));
-        server.put( "/crawls/:crawler_id/labels",     json(labelsResource.addLabels));
-        server.post("/crawls/:crawler_id/labels",     json(labelsResource.addLabels));
-        server.get( "/crawls/:crawler_id/_search",    elasticsearchProxyResource.searchApi);
-        server.post("/crawls/:crawler_id/_search",    elasticsearchProxyResource.searchApi);
+        server.get( "/crawls",                         crawlerResource.listCrawlers);
+        server.get( "/crawls/{crawler_id}",            crawlerResource.getStatus);
+        server.get( "/crawls/{crawler_id}/status",     crawlerResource.getStatus);
+        server.post("/crawls/{crawler_id}",            crawlerResource.startCrawl);
+        server.post("/crawls/{crawler_id}/startCrawl", crawlerResource.startCrawl);
+        server.get( "/crawls/{crawler_id}/metrics",    crawlerResource.metricsResourceJson);
+        server.get( "/crawls/{crawler_id}/prometheus", crawlerResource.metricsResourcePrometheus);
+        server.get( "/crawls/{crawler_id}/stopCrawl",  crawlerResource.stopCrawl);
+        server.post("/crawls/{crawler_id}/seeds",      crawlerResource.addSeeds);
+        server.post("/crawls/{crawler_id}/cookies",    crawlerResource.addCookies);
+        server.get( "/crawls/{crawler_id}/labels",     labelsResource.getLabels);
+        server.put( "/crawls/{crawler_id}/labels",     labelsResource.addLabels);
+        server.post("/crawls/{crawler_id}/labels",     labelsResource.addLabels);
+        server.get( "/crawls/{crawler_id}/_search",    elasticsearchProxyResource.searchApi);
+        server.post("/crawls/{crawler_id}/_search",    elasticsearchProxyResource.searchApi);
 
         /*
          * Thread management routes
          */
-        server.get("/thread/dump", text(threadsResource.threadDump));
+        server.get("/thread/dump", threadsResource.threadDump);
+
+        server.exception(UnauthorizedException.class, BasicAuthenticationFilter.exceptionHandler);
         
-        server.awaitInitialization();
-        
+        server.start(host, port);
+
         logger.info("---------------------------------------------");
         logger.info("ACHE server available at http://{}:{}", host, port);
         logger.info("---------------------------------------------");
     }
 
-    private boolean portIsAvailable(int port) {
+    private static boolean portIsAvailable(int port) {
         ServerSocket ss = null;
         DatagramSocket ds = null;
         try {
@@ -132,6 +150,7 @@ public class RestServer {
                 try {
                     ss.close();
                 } catch (IOException e) {
+                    logger.error("Failed to close server socket while detecting available port.");
                 }
             }
         }
@@ -139,33 +158,7 @@ public class RestServer {
 
     public void shutdown() {
         server.stop();
-        if(elasticsearchProxyResource != null) {
-            elasticsearchProxyResource.close();
-        }
-    }
-    
-    private void enableCORS(final String origin, final String methods) {
-
-        server.options("/*", (request, response) -> {
-
-            String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
-            if (accessControlRequestHeaders != null) {
-                response.header("Access-Control-Allow-Headers", accessControlRequestHeaders);
-            }
-
-            String accessControlRequestMethod = request.headers("Access-Control-Request-Method");
-            if (accessControlRequestMethod != null) {
-                response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
-            }
-
-            return "OK";
-        });
-
-        server.before((request, response) -> {
-            response.header("Access-Control-Allow-Origin", origin);
-            response.header("Access-Control-Request-Method", methods);
-        });
-        
+        elasticsearchProxyResource.close();
     }
 
     public static RestServer create(RestConfig restConfig, CrawlersManager crawlManager) {

@@ -39,7 +39,7 @@ dependencies {
     implementation group: 'com.esotericsoftware', name: 'kryo', version: '4.0.2'
     implementation group: 'de.javakaffee', name: 'kryo-serializers', version: '0.42'
     // REST server dependencies
-    implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.3'
+    implementation group: 'io.javalin', name: 'javalin', version: '4.1.1'
     // Metrics and monitoring
     implementation group: 'io.dropwizard.metrics', name: 'metrics-core', version: '4.2.7'
     implementation group: 'io.dropwizard.metrics', name: 'metrics-json', version: '4.2.7'

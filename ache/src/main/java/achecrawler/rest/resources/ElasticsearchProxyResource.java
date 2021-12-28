@@ -1,9 +1,11 @@
 package achecrawler.rest.resources;
 
-import java.io.IOException;
-
-import javax.servlet.http.HttpServletResponse;
-
+import achecrawler.crawler.CrawlersManager;
+import achecrawler.crawler.CrawlersManager.CrawlContext;
+import achecrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import com.google.common.collect.ImmutableMap;
+import io.javalin.http.Context;
+import io.javalin.http.Handler;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -15,13 +17,9 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.ImmutableMap;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
-import achecrawler.crawler.CrawlersManager;
-import achecrawler.crawler.CrawlersManager.CrawlContext;
-import achecrawler.rest.Transformers;
-import achecrawler.target.repository.elasticsearch.ElasticSearchConfig;
-import spark.Route;
 
 public class ElasticsearchProxyResource {
 
@@ -30,61 +28,60 @@ public class ElasticsearchProxyResource {
     private CloseableHttpClient httpclient;
     private CrawlersManager crawlersManager;
 
-    public ElasticsearchProxyResource(CrawlersManager crawlerManager) {
-        this.crawlersManager = crawlerManager;
-        this.httpclient = HttpClients.createDefault();
-    }
+    public Handler searchApi = (Context ctx) -> {
 
-    public Route searchApi = (request, response) -> {
-
-        String crawlerId = request.params(":crawler_id");
+        String crawlerId = ctx.pathParam("crawler_id");
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            response.status(HttpServletResponse.SC_NOT_FOUND);
-            response.header("Content-Type", "application/json");
-            return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
+            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.header("Content-Type", "application/json");
+            ctx.json(ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId));
+            return;
         }
 
         if (!context.isSearchEnabled()) {
-            response.status(HttpServletResponse.SC_BAD_REQUEST);
-            response.header("Content-Type", "application/json");
-            return Transformers.json.render(ImmutableMap.of(
-                "message", "No Elasticsearch index configured"));
+            ctx.status(HttpServletResponse.SC_BAD_REQUEST);
+            ctx.json(ImmutableMap.of(
+                    "message", "No Elasticsearch index configured"));
+            return;
         }
 
         ElasticSearchConfig esConfig = context.getEsConfig();
         try {
-            String query = "";
-            for (String param : request.queryParams()) {
-                query += param + "=" + request.queryParams(param);
+            StringBuilder query = new StringBuilder();
+            for (String param : ctx.queryParamMap().keySet()) {
+                for (String paramValue : ctx.queryParams(param)) {
+                    query.append(param).append("=").append(paramValue);
+                }
             }
             String url = String.format("%s/%s/%s/_search", esConfig.getRestApiHosts().get(0),
-                esConfig.getIndexName(), esConfig.getTypeName());
-            if (!query.isEmpty()) {
+                    esConfig.getIndexName(), esConfig.getTypeName());
+            if (query.length() > 0) {
                 url += "?" + query;
             }
             HttpPost post = new HttpPost(url);
-            post.setEntity(new StringEntity(request.body(), "UTF-8"));
+            post.setEntity(new StringEntity(ctx.body(), "UTF-8"));
             post.addHeader("Content-Type", "application/json"); // mandatory since ES 6.x
-            CloseableHttpResponse apiResponse = httpclient.execute(post);
-            try {
+            try (CloseableHttpResponse apiResponse = httpclient.execute(post)) {
                 HttpEntity entity = apiResponse.getEntity();
                 Header[] headers = apiResponse.getAllHeaders();
                 for (Header header : headers) {
-                    response.header(header.getName(), header.getValue());
+                    ctx.header(header.getName(), header.getValue());
                 }
                 String body = EntityUtils.toString(entity);
-                response.body(body);
-                return body;
-            } finally {
-                apiResponse.close();
+                ctx.result(body);
             }
         } catch (Exception e) {
             logger.error("Failed to forward request to ElasticSearch.", e);
             throw e;
         }
     };
+
+    public ElasticsearchProxyResource(CrawlersManager crawlerManager) {
+        this.crawlersManager = crawlerManager;
+        this.httpclient = HttpClients.createDefault();
+    }
 
     public void close() {
         try {

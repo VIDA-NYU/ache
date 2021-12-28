@@ -1,61 +1,45 @@
 package achecrawler.rest;
 
+import io.javalin.core.security.BasicAuthCredentials;
+import io.javalin.http.Context;
+import io.javalin.http.ExceptionHandler;
+import io.javalin.http.Handler;
 
-import java.util.Base64;
 
-import spark.Filter;
-import spark.Request;
-import spark.Response;
-import spark.Service;
-
-public class BasicAuthenticationFilter implements Filter {
+public class BasicAuthenticationFilter implements Handler {
 
     private static final int UNAUTHORIZED_STATUS_CODE = 401;
 
-    private final Service server;
     private final String username;
     private final String password;
 
-    public BasicAuthenticationFilter(Service server, String user, String password) {
-        this.server = server;
+    public BasicAuthenticationFilter(String user, String password) {
         this.username = user;
         this.password = password;
     }
 
     @Override
-    public void handle(final Request request, final Response response) {
-        if (!isAuthenticated(request.headers("Authorization"))) {
-            response.header("WWW-Authenticate", "Basic");
-            server.halt(UNAUTHORIZED_STATUS_CODE);
+    public void handle(Context ctx) {
+        if (!ctx.basicAuthCredentialsExist()) {
+            throw new UnauthorizedException("No user credentials provided.");
+        }
+        BasicAuthCredentials credentials = ctx.basicAuthCredentials();
+        if (!isAuthorized(credentials)) {
+            throw new UnauthorizedException("Invalid user credentials provided.");
         }
     }
 
-    private boolean isAuthenticated(String authHeader) {
-        String credentials = decodeCredentials(authHeader);
-        if (credentials == null || credentials.isEmpty()) {
-            return false;
+    private boolean isAuthorized(BasicAuthCredentials credentials) {
+        if (username.equals(credentials.getUsername()) && password.equals(credentials.getPassword())) {
+            return true;
         }
-        String[] values = credentials.split(":");
-        if (values == null || values.length != 2) {
-            return false;
-        }
-        return username.equals(values[0]) && password.equals(values[1]);
+        return false;
     }
 
-    private String decodeCredentials(final String encodedAuthHeader) {
-        if (encodedAuthHeader == null || encodedAuthHeader.isEmpty()) {
-            return null;
-        }
-        String[] values = encodedAuthHeader.split(" ");
-        if (values.length == 2 && "Basic".equals(values[0])) {
-            try {
-                byte[] decoded = Base64.getDecoder().decode(values[1]);
-                return new String(decoded);
-            } catch (IllegalArgumentException e) {
-                // Invalid base64 string
-            }
-        }
-        return null;
-    }
+    public static ExceptionHandler<? super UnauthorizedException> exceptionHandler = (e, ctx) -> {
+        ctx.status(UNAUTHORIZED_STATUS_CODE);
+        ctx.header("WWW-Authenticate", "Basic");
+        ctx.result(e.getMessage());
+    };
 
 }

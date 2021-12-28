@@ -7,6 +7,9 @@ import java.util.Optional;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.codahale.metrics.*;
+import io.javalin.http.Context;
+import io.javalin.http.Handler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,8 +24,7 @@ import achecrawler.crawler.CrawlersManager.CrawlType;
 import achecrawler.crawler.async.AsyncCrawler;
 import achecrawler.crawler.cookies.Cookie;
 import achecrawler.util.MetricsManager;
-import spark.Request;
-import spark.Route;
+
 
 public class CrawlerResource {
 
@@ -37,175 +39,235 @@ public class CrawlerResource {
         crawlersManager = crawlManager;
     }
 
-    public Route getStatus = (request, response) -> {
+    public Handler getStatus = (Context ctx) -> {
 
-        String crawlerId = request.params(":crawler_id");
+        String crawlerId = ctx.pathParam("crawler_id");
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            response.status(HttpServletResponse.SC_NOT_FOUND);
-            return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
+            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.json(
+                ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId)
+            );
+        } else {
+            ctx.json(context);
+        }
+    };
+
+    public Handler listCrawlers = (Context ctx) -> {
+        Map<String, CrawlContext> crawlers = crawlersManager.getCrawls();
+        ctx.json(ImmutableMap.of("crawlers", crawlers.values()));
+    };
+
+    public Handler metricsResourceJson = (Context ctx) -> {
+        Object result = this.metricsResource(ctx);
+        ctx.json(result);
+    };
+
+    public Handler metricsResourcePrometheus = (Context ctx) -> {
+        Object result = this.metricsResource(ctx);
+        if (result instanceof MetricRegistry) {
+            ctx.contentType("text/plain");
+            ctx.result(toPrometheusMetricsFormat((MetricRegistry) result));
+        } else {
+            ctx.json(result);
+        }
+    };
+
+    public static String toPrometheusMetricsFormat(MetricRegistry registry) {
+        StringBuilder sb = new StringBuilder();
+
+        Map<String, Counter> counters = registry.getCounters();
+        for (Map.Entry<String, Counter> c: counters.entrySet()) {
+            sb.append(c.getKey().replace(".", "_"))
+                    .append(" ")
+                    .append(c.getValue().getCount())
+                    .append("\n");
         }
 
-        return context;
-    };
+        Map<String, Timer> timers = registry.getTimers();
+        for (Map.Entry<String, Timer> t: timers.entrySet()) {
+            sb.append(t.getKey().replace(".", "_"))
+                    .append(" ")
+                    .append(t.getValue().getCount())
+                    .append("\n");
+        }
 
-    public Route listCrawlers = (request, response) -> {
-        Map<String, CrawlContext> crawlers = crawlersManager.getCrawls();
-        return ImmutableMap.of("crawlers", crawlers.values());
-    };
+        Map<String, Gauge> gauges = registry.getGauges();
+        for (Map.Entry<String, Gauge> g: gauges.entrySet()) {
+            sb.append(g.getKey().replace(".", "_"))
+                    .append(" ")
+                    .append(g.getValue().getValue())
+                    .append("\n");
+        }
 
-    public Route metricsResource = (request, response) -> {
-        String crawlerId = request.params(":crawler_id");
+        Map<String, Histogram> histograms = registry.getHistograms();
+        for (Map.Entry<String, Histogram> h: histograms.entrySet()) {
+            sb.append(h.getKey().replace(".", "_"))
+                    .append(" ")
+                    .append(h.getValue().getCount())
+                    .append("\n");
+        }
+
+        return sb.toString();
+    }
+
+    public Object metricsResource(Context ctx) {
+        String crawlerId = ctx.pathParam("crawler_id");
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            response.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.status(HttpServletResponse.SC_NOT_FOUND);
             return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
         }
 
         MetricsManager metricsManager = context.getCrawler().getMetricsManager();
-        return metricsManager != null ? metricsManager.getMetricsRegistry() : null;
-    };
+        return (metricsManager != null) ? metricsManager.getMetricsRegistry() : null;
+    }
 
-    public Route startCrawl = (request, response) -> {
+    public Handler startCrawl = (Context ctx) -> {
         try {
-            String crawlerId = request.params(":crawler_id");
+            String crawlerId = ctx.pathParam("crawler_id");
 
-            StartCrawlParams params = json.readValue(request.body(), StartCrawlParams.class);
+            StartCrawlParams params = json.readValue(ctx.body(), StartCrawlParams.class);
 
             crawlersManager.createCrawler(crawlerId, params);
             crawlersManager.startCrawl(crawlerId);
 
-            return ImmutableMap.of(
+            ctx.json(ImmutableMap.of(
                 "message", "Crawler started successfully.",
-                "crawlerStarted", true);
+                "crawler_id", crawlerId,
+                "crawlerStarted", true));
 
         } catch (Exception e) {
             logger.error("Failed to start crawler.", e);
-            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            return ImmutableMap.of(
+            ctx.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.json(ImmutableMap.of(
                 "message", "Failed to start crawler.",
-                "crawlerStarted", false);
+                "crawlerStarted", false));
         }
     };
 
-    public Route stopCrawl = (request, response) -> {
+    public Handler stopCrawl = (Context ctx) -> {
         try {
-            String crawlerId = request.params(":crawler_id");
+            String crawlerId = ctx.pathParam("crawler_id");
 
             CrawlContext context = crawlersManager.getCrawl(crawlerId);
             if (context == null) {
-                response.status(HttpServletResponse.SC_NOT_FOUND);
-                return ImmutableMap.of(
+                ctx.status(HttpServletResponse.SC_NOT_FOUND);
+                ctx.json(ImmutableMap.of(
                         "message", "Crawler not found for crawler_id " + crawlerId,
                         "shutdownInitiated", false,
-                        "crawlerStopped", false);
+                        "crawlerStopped", false));
+                return;
             }
 
             AsyncCrawler crawler = context.getCrawler();
 
-            boolean awaitStopped = getParamAsBoolean("awaitStopped", request).orElse(false);
+            boolean awaitStopped = getParamAsBoolean("awaitStopped", ctx).orElse(false);
             crawler.stopAsync();
             if (awaitStopped) {
                 crawler.awaitTerminated();
-                return ImmutableMap.of(
+                ctx.json(ImmutableMap.of(
                         "message", "Crawler stopped successfully.",
                         "shutdownInitiated", true,
-                        "crawlerStopped", true);
+                        "crawlerStopped", true));
             } else {
-                return ImmutableMap.of(
+                ctx.json(ImmutableMap.of(
                         "message", "Crawler shutdown initiated.",
                         "shutdownInitiated", true,
-                        "crawlerStopped", false);
+                        "crawlerStopped", false));
             }
 
         } catch (Exception e) {
             logger.error("Failed to stop crawler.", e);
-            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            return ImmutableMap.of(
+            ctx.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.json(ImmutableMap.of(
                 "message", "Failed to stop crawler.",
                 "shutdownInitiated", false,
-                "crawlerStopped", false);
+                "crawlerStopped", false));
         }
     };
 
-    public Route addSeeds = (request, response) -> {
+    public Handler addSeeds = (Context ctx) -> {
         try {
-            String crawlerId = request.params(":crawler_id");
+            String crawlerId = ctx.pathParam("crawler_id");
 
             CrawlContext context = crawlersManager.getCrawl(crawlerId);
             if (context == null) {
-                response.status(HttpServletResponse.SC_NOT_FOUND);
-                return ImmutableMap.of(
+                ctx.status(HttpServletResponse.SC_NOT_FOUND);
+                ctx.json(ImmutableMap.of(
                     "message", "Crawler not found for crawler_id " + crawlerId,
-                    "addedSeeds", false);
+                    "addedSeeds", false));
+                return;
             }
 
-            AddSeedsParams params = json.readValue(request.body(), AddSeedsParams.class);
+            AddSeedsParams params = json.readValue(ctx.body(), AddSeedsParams.class);
             if (params.seeds == null || params.seeds.isEmpty()) {
-                response.status(HttpServletResponse.SC_BAD_REQUEST);
-                return ImmutableMap.of(
+                ctx.status(HttpServletResponse.SC_BAD_REQUEST);
+                ctx.json(ImmutableMap.of(
                     "message", "No seeds provided.",
-                    "addedSeeds", false);
+                    "addedSeeds", false));
+                return;
             }
 
             AsyncCrawler crawler = context.getCrawler();
             crawler.addSeeds(params.seeds);
 
-            return ImmutableMap.of(
+            ctx.json(ImmutableMap.of(
                 "message", "Seeds added successfully.",
-                "addedSeeds", true);
-
+                "addedSeeds", true));
         } catch (Exception e) {
             logger.error("Failed to add seeds.", e);
-            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            return ImmutableMap.of(
+            ctx.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.json(ImmutableMap.of(
                 "message", "Failed to add seeds.",
-                "addedSeeds", false);
+                "addedSeeds", false));
         }
     };
 
-    public Route addCookies = (request, response) -> {
-        String crawlerId = request.params(":crawler_id");
+    public Handler addCookies = (Context ctx) -> {
+        String crawlerId = ctx.pathParam("crawler_id");
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            response.status(HttpServletResponse.SC_NOT_FOUND);
-            return ImmutableMap.of(
+            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.json(ImmutableMap.of(
                     "message", "Crawler not found for crawler_id " + crawlerId,
-                    "addedCookies", false);
+                    "addedCookies", false));
+            return;
         }
 
         try {
-            HashMap<String, List<Cookie>> params = json.readValue(request.body(),
+            HashMap<String, List<Cookie>> params = json.readValue(ctx.body(),
                     new TypeReference<HashMap<String, List<Cookie>>>() {});
 
             if (params == null || params.isEmpty()) {
-                response.status(HttpServletResponse.SC_BAD_REQUEST);
-                return ImmutableMap.of(
+                ctx.status(HttpServletResponse.SC_BAD_REQUEST);
+                ctx.json(ImmutableMap.of(
                         "message", "No valid cookies provided.",
-                        "addedCookies", false);
+                        "addedCookies", false));
+                return;
             }
 
             context.getCrawler().addCookies(params);
 
-            return ImmutableMap.of(
-                    "message", "cookies added successfully.",
-                    "addedCookies", true);
+            ctx.json(ImmutableMap.of(
+                    "message", "Cookies added successfully.",
+                    "addedCookies", true));
 
         } catch (Exception e) {
             logger.error("Failed to add cookies.", e);
-            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            return ImmutableMap.of(
+            ctx.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.json(ImmutableMap.of(
                     "message", "Failed to add cookies to crawler " + crawlerId,
-                    "addedCookies", false);
+                    "addedCookies", false));
         }
     };
     
-    private Optional<Boolean> getParamAsBoolean(String paramName, Request request) {
+    private Optional<Boolean> getParamAsBoolean(String paramName, Context ctx) {
         try {
-            Boolean valueOf = Boolean.valueOf(request.queryParams(paramName));
+            Boolean valueOf = Boolean.valueOf(ctx.queryParam(paramName));
             return Optional.of(valueOf);
         } catch (Exception e) {
             return Optional.empty();
@@ -223,6 +285,5 @@ public class CrawlerResource {
     public static class AddSeedsParams {
         public List<String> seeds;
     }
-    
 
 }

@@ -1,20 +1,22 @@
 package achecrawler.rest.resources;
 
+import com.codahale.metrics.jvm.ThreadDump;
+import io.javalin.http.Context;
+import io.javalin.http.Handler;
+
 import java.io.ByteArrayOutputStream;
 import java.lang.management.ManagementFactory;
 
-import com.codahale.metrics.jvm.ThreadDump;
-
-import spark.Route;
 
 public class ThreadsResource {
 
-    private ThreadDump jvmThreadDump = new ThreadDump(ManagementFactory.getThreadMXBean());
+    private final ThreadDump jvmThreadDump = new ThreadDump(ManagementFactory.getThreadMXBean());
 
-    public Route threadDump = (request, response) -> {
+    public Handler threadDump = (Context ctx) -> {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         jvmThreadDump.dump(baos);
-        return baos.toString();
+        ctx.contentType("text/plain");
+        ctx.result(baos.toString());
     };
 
 }
