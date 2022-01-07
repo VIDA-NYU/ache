@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import com.codahale.metrics.json.MetricsModule;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;
+import io.javalin.core.util.JavalinLogger;
 import io.javalin.http.staticfiles.Location;
 import io.javalin.plugin.json.JavalinJackson;
 import org.slf4j.Logger;
@@ -49,7 +50,12 @@ public class RestServer {
 
         SinglePageAppHandler singlePageAppHandler = new SinglePageAppHandler(restConfig.getBasePath());
 
+        JavalinLogger.startupInfo = false; // suppress Javalin startup log messages
+
         server = Javalin.create(config -> {
+
+            config.showJavalinBanner = false;
+
             /*
              * Enable HTTP CORS (Cross-Origin Resource Sharing)
              */
