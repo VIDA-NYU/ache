@@ -7,18 +7,40 @@
 - Moved forked crawler-commons classes to a separate sub-project
 - Remove tika dependency from `ache` and `crawler-commons` sub-project
 - Synchronize `crawler-commons/http-fetcher` with the upstream library
+- Setup gradle build using GitHub Actions
 - Build docker image with multi-arch support (amd64, arm64)
-- Upgrade `rocksdbjni` to version 6.15.2
-- Upgrade `gradle-node-plugin` to version 3.0.1
-- Upgrade `kryo` to version 4.0.2
-- Upgrade SparkJava to version 2.9.3
+- Upgrade build to Gradle 7.2
+- Upgrade gradle-node-plugin to version 3.0.1
 - Upgrade ache-dashboard npm dependencies
-- Upgrade `crawler-commons` to version 1.2
-- Upgrade `commons-compress` to version 1.21
+- Pin slf4j-api version to 1.7.32
+- Bump airline from 0.8 to 0.9
+- Bump aws-java-sdk-s3 from 1.12.129 to 1.12.131
+- Bump crawler-commons from 1.1 to 1.2
+- Bump com.github.kt3k.coveralls from 2.10.2 to 2.12.0
+- Bump commons-codec from 1.10 to 1.15
+- Bump commons-compress from 1.12 to 1.21
+- Bump commons-lang3 from 3.4 to 3.12.0
+- Bump commons-validator from 1.6 to 1.7
+- Bump guava from 20.0 to 23.0
+- Bump jetty-server from 9.3.6.v20151106 to 9.4.44.v20210927
+- Bump kryo from 4.0.0 to 4.0.2
+- Bump kafka-clients from 0.11.0.1 to 3.0.0
+- Bump logback-classic from 1.1.+ to 1.2.9
+- Bump mockito-core from 1.10.+ to 4.2.0
+- Bump npm from 6.14.10 to 8.3.0
+- Bump rocksdbjni from 6.2.2 to 6.25.3
+- Bump RoaringBitmap from 0.7.8 to 0.9.23
+- Bump smile-core from 1.5.0 to 1.5.3
 - Bump lucene-analyzers-common from 7.3.1 to 8.10.1
-- Bump `jackson-*` libraries from 2.8.5 to 2.13.0
+- Bump webarchive-commons from 1.1.8 to 1.1.9
+- Bump jsoup from 1.10.3 to 1.14.3
+- Bump junit from 4.12 to 4.13.2
+- Bump jackson-* libraries from 2.8.5 to 2.13.1
+- Bump metrics-* libraries from 3.1.3 to 4.2.7
 - Replace SparkJava framework (unmaintained) by Javalin 4.2.0
 - Add timeout configurations for the TOR fetcher
+- Update and improve the documentation
+- Change documentation theme to sphinx_material
 
 
 ## Version 0.13.0 (2021-01-07)
