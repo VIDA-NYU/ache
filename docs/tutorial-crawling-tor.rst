@@ -88,9 +88,9 @@ An Elasticsearch node named ``elasticsearch`` that listens on the port 9200 (we 
  .. code:: yaml
 
    elasticsearch:
-     image: elasticsearch:2.4.5
+     image: docker.elastic.co/elasticsearch/elasticsearch:6.8.22
      environment:
-       - xpack.security.enabled=false
+       - discovery.type=single-node
        - cluster.name=docker-cluster
        - bootstrap.memory_lock=true
      ulimits:
@@ -149,4 +149,14 @@ and to download .onion addresses using the ``torproxy`` container:
     crawler_manager.downloader.torproxy: http://torproxy:8118
 
 All remaining configuration lines are regular ACHE configurations for
-running a in-depth website crawl of the seeds. Refer to the :ref:`in-depth website crawling turorial <tutorial-in-depth-crawl>` for more details.
+running a in-depth website crawl of the seeds. Refer to the :ref:`in-depth website crawling tutorial <tutorial-in-depth-crawl>` for more details.
+
+**Configuring fetcher timeouts**
+
+Establishing connections and downloading pages on the TOR network typically take much longer
+than when crawling websites on the open Web over regular HTTP connections.
+Therefore, it might be useful to configure longer connection timeouts.
+
+See the :ref:`HTTP fetcher configuration page <http-fetchers-connection-timeouts>` for more details on how to
+increase fetching timeouts for the TOR fetcher.
+

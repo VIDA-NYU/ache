@@ -4,7 +4,7 @@ Frequently Asked Questions (FAQ)
 What is inside the output directory?
 ------------------------------------
 
-Depending on the configuration settings, ACHE may creates different folders under the data output directory:
+Depending on the configuration settings, ACHE may create different folders under the data output directory:
 
   * **data_pages**: contains raw-data of crawled pages (including relevant, irrelevant and non-HTML content). The sub-directories and file formats depends on the configured *Data Format* being using. See :ref:`Data Formats <dataformat-filesystem>` for more information.
   * **data_monitor**: contains TSV-formatted log files with information about the status of the crawl, including relevant and irrelevant pages along with their scores, download requests and its metadata, etc.

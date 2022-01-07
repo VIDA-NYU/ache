@@ -1,8 +1,9 @@
 HTTP Fetchers
 #############
 
-ACHE currently has multiple HTTP fetcher implementations based on different
-libraries (crawler-commons, which uses Apache HttpComponents, and okhttp3).
+ACHE currently supports two HTTP fetcher implementations based on different
+libraries: `Apache HttpComponents HttpClient <https://hc.apache.org/>`_
+and `OkHttp3 <https://square.github.io/okhttp/>`_.
 
 The fetchers support downloading URLs using both HTTP(S) and TOR protocol.
 
@@ -11,7 +12,7 @@ Switching the HTTP fetcher implementation
 -----------------------------------------
 
 The default implementation uses Apache HttpComponents backend. To use the
-okhttp3 fetcher, you should enable it using:
+okhttp fetcher, you should enable it using:
 
 .. code-block:: yaml
 
@@ -49,3 +50,36 @@ domains that end with `.onion` TLD use this proxy):
 
 An example of crawling TOR network services is available at this
 :ref:`tutorial<tutorial-crawling-tor>`.
+
+
+Setting connection timeouts
+---------------------------
+.. _http-fetchers-connection-timeouts:
+
+The following configurations allow to configure connection timeouts.
+This might be useful when crawling from slow networks (e.g., TOR network).
+
+To configure timeouts for the TOR fetcher, use the following properties:
+
+.. code-block:: yaml
+
+        crawler_manager.downloader.tor.max_retry_count: 3
+        crawler_manager.downloader.tor.socket_timeout: 300000
+        crawler_manager.downloader.tor.connection_timeout: 300000
+        crawler_manager.downloader.tor.connection_request_timeout: 300000
+
+If you are using the `httpclient` fetcher (default), you can use:
+
+.. code-block:: yaml
+
+    crawler_manager.downloader.httpclient.socket_timeout: 30000
+    crawler_manager.downloader.httpclient.connection_timeout: 30000
+    crawler_manager.downloader.httpclient.connection_request_timeout: 60000
+
+If you are using the `okhttp` fetcher, you can use:
+
+.. code-block:: yaml
+
+    crawler_manager.downloader.okhttp.connect_timeout: 30000
+    crawler_manager.downloader.okhttp.read_timeout: 30000
+
