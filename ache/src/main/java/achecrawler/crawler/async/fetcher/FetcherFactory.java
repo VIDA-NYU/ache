@@ -18,7 +18,7 @@ public class FetcherFactory {
     public static BaseFetcher createFetcher(HttpDownloaderConfig config) {
         if(config.getTorProxy() != null) {
             return createTorProxyFetcher(config);
-        } else if(config.getOkHttpFetcher() != null){
+        } else if(config.getUseOkHttpFetcher()){
             return createOkHttpFetcher(config);
         } else {
             return createSimpleHttpFetcher(config);
@@ -27,21 +27,24 @@ public class FetcherFactory {
 
     public static SimpleHttpFetcher createSimpleHttpFetcher(HttpDownloaderConfig config){
 
+        HttpDownloaderConfig.UserAgentConfig userAgentConfig = config.getUserAgentConfig();
         UserAgent userAgent = new UserAgent.Builder()
-                .setAgentName(config.getUserAgentName())
-                .setEmailAddress(config.getUserAgentEmail())
-                .setWebAddress(config.getUserAgentUrl())
-                .setUserAgentString(config.getUserAgentString())
+                .setAgentName(userAgentConfig.name)
+                .setEmailAddress(userAgentConfig.email)
+                .setWebAddress(userAgentConfig.url)
+                .setUserAgentString(userAgentConfig.string)
                 .build();
+
+        HttpDownloaderConfig.HttpClientFetcherConfig httpclientConfig = config.getHttpClientFetcherConfig();
 
         int connectionPoolSize = config.getConnectionPoolSize();
         SimpleHttpFetcher httpFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
         // timeout for inactivity between two consecutive data packets
-        httpFetcher.setSocketTimeout(config.getSocketTimeout());
+        httpFetcher.setSocketTimeout(httpclientConfig.socketTimeout);
         // timeout for establishing a new connection
-        httpFetcher.setConnectionTimeout(config.getConnectionTimeout());
+        httpFetcher.setConnectionTimeout(httpclientConfig.connectionTimeout);
         // timeout for requesting a connection from httpclient's connection manager
-        httpFetcher.setConnectionRequestTimeout(config.getConnectionRequestTimeout());
+        httpFetcher.setConnectionRequestTimeout(httpclientConfig.connectionRequestTimeout);
         httpFetcher.setMaxConnectionsPerHost(1);
         httpFetcher.setMaxRetryCount(config.getMaxRetryCount());
 
@@ -76,12 +79,13 @@ public class FetcherFactory {
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException("Invalid URL provide for TOR proxy: "+config.getTorProxy());
         }
+        HttpDownloaderConfig.TorFetcherConfig torConfig = config.getTorFetcherConfig();
 
         torFetcher.setProxy(torProxy.getProtocol(), torProxy.getHost(), torProxy.getPort());
-        torFetcher.setMaxRetryCount(3);
-        torFetcher.setSocketTimeout(5*60*1000);
-        torFetcher.setConnectionTimeout(5*60*1000);
-        torFetcher.setConnectionRequestTimeout(5*60*1000);
+        torFetcher.setMaxRetryCount(torConfig.maxRetryCount);
+        torFetcher.setSocketTimeout(torConfig.socketTimeout);
+        torFetcher.setConnectionTimeout(torConfig.connectionTimeout);
+        torFetcher.setConnectionRequestTimeout(torConfig.connectionRequestTimeout);
 
         return new TorProxyFetcher(torFetcher, httpFetcher);
     }
@@ -94,8 +98,8 @@ public class FetcherFactory {
         ConcurrentCookieJar store = new ConcurrentCookieJar();
         for (HttpDownloaderConfig.Cookie cookie : cookies) {
             String[] values = cookie.cookie.split("; ");
-            for (int i = 0; i < values.length; i++) {
-                String[] kv = values[i].split("=", 2);
+            for (String value : values) {
+                String[] kv = value.split("=", 2);
                 BasicClientCookie cc = new BasicClientCookie(kv[0], kv[1]);
                 cc.setPath(cookie.path);
                 cc.setDomain(cookie.domain);
@@ -107,27 +111,29 @@ public class FetcherFactory {
 
     public static OkHttpFetcher createOkHttpFetcher(HttpDownloaderConfig config) {
 
+        HttpDownloaderConfig.UserAgentConfig userAgentConfig = config.getUserAgentConfig();
         UserAgent userAgent = new UserAgent.Builder()
-                .setAgentName(config.getUserAgentName())
-                .setEmailAddress(config.getUserAgentEmail())
-                .setWebAddress(config.getUserAgentUrl())
-                .setUserAgentString(config.getUserAgentString())
+                .setAgentName(userAgentConfig.name)
+                .setEmailAddress(userAgentConfig.email)
+                .setWebAddress(userAgentConfig.url)
+                .setUserAgentString(userAgentConfig.string)
                 .build();
 
         int connectionPoolSize = config.getConnectionPoolSize();
 
         OkHttpCookieJar cookieStore = createOkHttpCookieHandler(config);
 
+        HttpDownloaderConfig.OkHttpFetcherConfig okHttpConfig = config.getOkHttpFetcherConfig();
         OkHttpFetcher httpFetcher = new OkHttpFetcher(
                 connectionPoolSize,
                 userAgent,
                 cookieStore,
-                config.getConnectTimeout(),
-                config.getReadTimeout(),
-                config.getOkHttpFetcherProxyHost(),
-                config.getOkHttpFetcherProxyPort(),
-                config.getOkHttpFetcherProxyUsername(),
-                config.getOkHttpFetcherProxyPassword());
+                okHttpConfig.connectTimeout,
+                okHttpConfig.readTimeout,
+                okHttpConfig.proxyHost,
+                okHttpConfig.proxyPort,
+                okHttpConfig.proxyUsername,
+                okHttpConfig.proxyPassword);
 
         httpFetcher.setMaxRedirects(config.getMaxRetryCount());
         httpFetcher.setMaxConnectionsPerHost(1);
@@ -149,8 +155,8 @@ public class FetcherFactory {
         OkHttpCookieJar store = new OkHttpCookieJar();
         for (HttpDownloaderConfig.Cookie cookie : cookies) {
             String[] values = cookie.cookie.split("; ");
-            for (int i = 0; i < values.length; i++) {
-                String[] kv = values[i].split("=", 2);
+            for (String s : values) {
+                String[] kv = s.split("=", 2);
                 String name = kv[0];
                 String value = kv[1];
                 Cookie okhttp3Cookie = new Cookie.Builder()

@@ -18,6 +18,7 @@
 - Bump lucene-analyzers-common from 7.3.1 to 8.10.1
 - Bump `jackson-*` libraries from 2.8.5 to 2.13.0
 - Replace SparkJava framework (unmaintained) by Javalin 4.2.0
+- Add timeout configurations for the TOR fetcher
 
 
 ## Version 0.13.0 (2021-01-07)

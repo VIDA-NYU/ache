@@ -137,7 +137,7 @@ public class ReplayCrawl extends CliTool {
                 new FetchedResultHandler(crawlerId, targetStorage));
         handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
         handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage,
-                downloaderConfig.getUserAgentName()));
+                downloaderConfig.getUserAgentConfig().name));
 
         int processedPages = 0;
         int ignoredPages = 0;

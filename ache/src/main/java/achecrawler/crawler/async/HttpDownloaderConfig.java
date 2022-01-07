@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -15,20 +16,64 @@ public class HttpDownloaderConfig {
         public String path = "/";
     }
 
-    @JsonProperty("crawler_manager.downloader.okhttp3.proxy_host")
-    private String okHttpFetcherProxyHost = null;
+    public static class TorFetcherConfig {
+        @JsonProperty("crawler_manager.downloader.tor.max_retry_count")
+        public int maxRetryCount = 3;
 
-    @JsonProperty("crawler_manager.downloader.okhttp3.proxy_username")
-    private String okHttpFetcherProxyUsername = null;
+        @JsonProperty("crawler_manager.downloader.tor.socket_timeout")
+        public int socketTimeout = 5 * 60 * 1000;
 
-    @JsonProperty("crawler_manager.downloader.okhttp3.proxy_password")
-    private String okHttpFetcherProxyPassword = null;
+        @JsonProperty("crawler_manager.downloader.tor.connection_timeout")
+        public int connectionTimeout = 5 * 60 * 1000;
 
-    @JsonProperty("crawler_manager.downloader.okhttp3.proxy_port")
-    private int okHttpFetcherProxyPort = 8080;
+        @JsonProperty("crawler_manager.downloader.tor.connection_request_timeout")
+        public int connectionRequestTimeout = 5 * 60 * 1000;
+    }
 
-    @JsonProperty("crawler_manager.downloader.use_okhttp3_fetcher")
-    private String okHttpFetcher = null;
+    public static class OkHttpFetcherConfig {
+        @JsonProperty("crawler_manager.downloader.okhttp3.proxy_host")
+        public String proxyHost = null;
+
+        @JsonProperty("crawler_manager.downloader.okhttp3.proxy_username")
+        public String proxyUsername = null;
+
+        @JsonProperty("crawler_manager.downloader.okhttp3.proxy_password")
+        public String proxyPassword = null;
+
+        @JsonProperty("crawler_manager.downloader.okhttp3.proxy_port")
+        public int proxyPort = 8080;
+
+        @JsonProperty("crawler_manager.downloader.okhttp.connect_timeout")
+        public int connectTimeout = 30000;
+
+        @JsonProperty("crawler_manager.downloader.okhttp.read_timeout")
+        public int readTimeout = 30000;
+    }
+
+    public static class HttpClientFetcherConfig {
+        @JsonProperty("crawler_manager.downloader.httpclient.socket_timeout")
+        public int socketTimeout = 30000;
+
+        @JsonProperty("crawler_manager.downloader.httpclient.connection_timeout")
+        public int connectionTimeout = 30000;
+
+        @JsonProperty("crawler_manager.downloader.httpclient.connection_request_timeout")
+        public int connectionRequestTimeout = 60000;
+    }
+
+    public static class UserAgentConfig {
+        @JsonProperty("crawler_manager.downloader.user_agent.name")
+        public String name = "ACHE";
+
+        @JsonProperty("crawler_manager.downloader.user_agent.url")
+        public String url = "https://github.com/ViDA-NYU/ache";
+
+        @JsonProperty("crawler_manager.downloader.user_agent.email")
+        public String email = null;
+
+        @JsonProperty("crawler_manager.downloader.user_agent.string")
+        public String string = null;
+    }
 
     @JsonProperty("crawler_manager.downloader.download_thread_pool_size")
     private int downloadThreadPoolSize = 100;
@@ -42,47 +87,34 @@ public class HttpDownloaderConfig {
     @JsonProperty("crawler_manager.downloader.valid_mime_types")
     private String[] validMimeTypes = null;
 
-    @JsonProperty("crawler_manager.downloader.user_agent.name")
-    private String userAgentName = "ACHE";
-
-    @JsonProperty("crawler_manager.downloader.user_agent.url")
-    private String userAgentUrl = "https://github.com/ViDA-NYU/ache";
-
-    @JsonProperty("crawler_manager.downloader.user_agent.email")
-    private String userAgentEmail = null;
-
-    @JsonProperty("crawler_manager.downloader.user_agent.string")
-    private String userAgentString = null;
-
     @JsonProperty("crawler_manager.downloader.torproxy")
     private String torProxy = null;
 
     @JsonProperty("crawler_manager.downloader.cookies")
     private List<Cookie> cookies = null;
 
-    @JsonProperty("crawler_manager.downloader.okhttp.connect_timeout")
-    private int connectTimeout = 30000;
+    @JsonProperty("crawler_manager.downloader.use_okhttp3_fetcher")
+    private boolean useOkHttpFetcher = false;
 
-    @JsonProperty("crawler_manager.downloader.okhttp.read_timeout")
-    private int readTimeout = 30000;
+    @JsonUnwrapped
+    private OkHttpFetcherConfig okHttpFetcherConfig = new OkHttpFetcherConfig();
 
-    @JsonProperty("crawler_manager.downloader.httpclient.socket_timeout")
-    private int socketTimeout = 30000;
+    @JsonUnwrapped
+    private HttpClientFetcherConfig httpClientFetcherConfig = new HttpClientFetcherConfig();
 
-    @JsonProperty("crawler_manager.downloader.httpclient.connection_timeout")
-    private int connectionTimeout = 30000;
+    @JsonUnwrapped
+    private TorFetcherConfig torFetcherConfig = new TorFetcherConfig();
 
-    @JsonProperty("crawler_manager.downloader.httpclient.connection_request_timeout")
-    private int connectionRequestTimeout = 60000;
-
+    @JsonUnwrapped
+    private UserAgentConfig userAgentConfig = new UserAgentConfig();
 
     public HttpDownloaderConfig() {
         // Required for de-serialization
     }
 
-    public HttpDownloaderConfig(String okHttpFetcher){
-        if (okHttpFetcher.equals("okHttp")){
-            this.okHttpFetcher = "True";
+    public HttpDownloaderConfig(String useOkHttpFetcher){
+        if (useOkHttpFetcher.equals("okHttp")){
+            this.useOkHttpFetcher = true;
         }
     }
 
@@ -106,14 +138,6 @@ public class HttpDownloaderConfig {
         return this.maxRetryCount;
     }
 
-    public String getUserAgentName() {
-        return this.userAgentName;
-    }
-
-    public String getUserAgentUrl() {
-        return this.userAgentUrl;
-    }
-
     public String[] getValidMimeTypes() {
         return this.validMimeTypes;
     }
@@ -122,55 +146,23 @@ public class HttpDownloaderConfig {
         return this.torProxy;
     }
 
-    public String getUserAgentString() {
-        return userAgentString;
+    public boolean getUseOkHttpFetcher() {
+        return useOkHttpFetcher;
     }
 
-    public void setUserAgentString(String userAgentString) {
-        this.userAgentString = userAgentString;
+    public OkHttpFetcherConfig getOkHttpFetcherConfig() {
+        return okHttpFetcherConfig;
     }
 
-    public String getUserAgentEmail() {
-        return userAgentEmail;
+    public TorFetcherConfig getTorFetcherConfig() {
+        return torFetcherConfig;
     }
 
-    public String getOkHttpFetcher() {
-        return okHttpFetcher;
+    public HttpClientFetcherConfig getHttpClientFetcherConfig() {
+        return httpClientFetcherConfig;
     }
 
-    public int getReadTimeout() {
-        return readTimeout;
-    }
-
-    public int getConnectTimeout() {
-        return connectTimeout;
-    }
-
-    public int getSocketTimeout() {
-        return socketTimeout;
-    }
-
-    public int getConnectionTimeout() {
-        return connectionTimeout;
-    }
-
-    public int getConnectionRequestTimeout() {
-        return connectionRequestTimeout;
-    }
-
-    public String getOkHttpFetcherProxyHost() {
-        return okHttpFetcherProxyHost;
-    }
-
-    public String getOkHttpFetcherProxyUsername() {
-        return okHttpFetcherProxyUsername;
-    }
-
-    public String getOkHttpFetcherProxyPassword() {
-        return okHttpFetcherProxyPassword;
-    }
-
-    public int getOkHttpFetcherProxyPort() {
-        return okHttpFetcherProxyPort;
+    public UserAgentConfig getUserAgentConfig() {
+        return userAgentConfig;
     }
 }

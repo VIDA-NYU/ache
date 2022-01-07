@@ -94,8 +94,8 @@ public class ConfigurationTest {
 
         assertThat(config.getDownloaderConfig().getDownloadThreadPoolSize(), is(333));
         assertThat(config.getDownloaderConfig().getMaxRetryCount(), is(444));
-        assertThat(config.getDownloaderConfig().getUserAgentName(), is("TestAgent"));
-        assertThat(config.getDownloaderConfig().getUserAgentUrl(), is("http://www.test-agent-crawler-example.com/robot"));
+        assertThat(config.getDownloaderConfig().getUserAgentConfig().name, is("TestAgent"));
+        assertThat(config.getDownloaderConfig().getUserAgentConfig().url, is("http://www.test-agent-crawler-example.com/robot"));
         assertThat(config.getDownloaderConfig().getValidMimeTypes()[0], is("test/mimetype"));
     }
 
@@ -114,15 +114,15 @@ public class ConfigurationTest {
         HttpDownloaderConfig baseDownloaderConfig = baseConfig.getCrawlerConfig().getDownloaderConfig();
         assertThat(baseDownloaderConfig.getDownloadThreadPoolSize(), is(333));
         assertThat(baseDownloaderConfig.getMaxRetryCount(), is(444));
-        assertThat(baseDownloaderConfig.getUserAgentName(), is("TestAgent"));
-        assertThat(baseDownloaderConfig.getUserAgentUrl(), is("http://www.test-agent-crawler-example.com/robot"));
+        assertThat(baseDownloaderConfig.getUserAgentConfig().name, is("TestAgent"));
+        assertThat(baseDownloaderConfig.getUserAgentConfig().url, is("http://www.test-agent-crawler-example.com/robot"));
 
         assertThat(newConfig, is(notNullValue()));
         HttpDownloaderConfig newDownloaderConfig = newConfig.getCrawlerConfig().getDownloaderConfig();
         assertThat(newDownloaderConfig.getDownloadThreadPoolSize(), is(333));
         assertThat(newDownloaderConfig.getMaxRetryCount(), is(444));
-        assertThat(newDownloaderConfig.getUserAgentName(), is("NewAgent"));
-        assertThat(newDownloaderConfig.getUserAgentUrl(), is("http://www.test-agent-crawler-example.com/robot"));
+        assertThat(newDownloaderConfig.getUserAgentConfig().name, is("NewAgent"));
+        assertThat(newDownloaderConfig.getUserAgentConfig().url, is("http://www.test-agent-crawler-example.com/robot"));
 
         assertEquals(baseConfig.getTargetStorageConfig().getDataFormats(),
                      newConfig.getTargetStorageConfig().getDataFormats());

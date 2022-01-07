@@ -44,7 +44,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(crawlerId, targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
         this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage,
-                downloaderConfig.getUserAgentName()));
+                downloaderConfig.getUserAgentConfig().name));
 
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {

@@ -38,10 +38,10 @@ public class TorProxyFetcher extends BaseFetcher {
         try {
             realUrl = new URL(url);
         } catch (MalformedURLException e) {
-            throw new IllegalArgumentException("Invalide URL provided: "+url);
+            throw new IllegalArgumentException("Invalid URL provided: " + url);
         }
         String host = realUrl.getHost();
-        String domain = host.substring(host.lastIndexOf('.')+1);
+        String domain = host.substring(host.lastIndexOf('.') + 1);
         if(domain.equals("onion")) {
             return torFetcher.get(url);
         } else{

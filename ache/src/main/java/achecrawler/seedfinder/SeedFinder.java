@@ -116,7 +116,7 @@ public class SeedFinder extends CliTool {
 
     private SearchEngineApi createSearchEngineApi(SearchEngineType searchEngine) {
         final HttpDownloaderConfig config = new HttpDownloaderConfig();
-        config.setUserAgentString(userAgent);
+        config.getUserAgentConfig().string = userAgent;
         SimpleHttpFetcher fetcher = FetcherFactory.createSimpleHttpFetcher(config);
         switch (searchEngine) {
         case GOOGLE:
