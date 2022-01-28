@@ -24,6 +24,12 @@ public class ElasticSearchConfig {
     @JsonProperty("target_storage.data_format.elasticsearch.rest.initial_connection_timeout")
     private int restClientInitialConnectionTimeout = 30000;
 
+    @JsonProperty("target_storage.data_format.elasticsearch.rest.username")
+    private String username;
+
+    @JsonProperty("target_storage.data_format.elasticsearch.rest.password")
+    private String password;
+
     //
     // Index and type parameters
     //
@@ -77,5 +83,13 @@ public class ElasticSearchConfig {
 
     public void setRestClientInitialConnectionTimeout(int restClientInitialConnectionTimeout) {
         this.restClientInitialConnectionTimeout = restClientInitialConnectionTimeout;
+    }
+
+    public String getUsername() {
+        return this.username;
+    }
+
+    public String getPassword() {
+        return this.password;
     }
 }

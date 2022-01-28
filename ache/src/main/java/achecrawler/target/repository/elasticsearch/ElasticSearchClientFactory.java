@@ -9,6 +9,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpHost;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.elasticsearch.client.Response;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestClientBuilder;
@@ -29,6 +33,15 @@ public class ElasticSearchClientFactory {
                         .setSocketTimeout(config.getRestSocketTimeout())
                 )
                 .setMaxRetryTimeoutMillis(config.getRestMaxRetryTimeoutMillis());
+
+        if (config.getUsername() != null && config.getPassword() != null) {
+            final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
+            credentialsProvider.setCredentials(AuthScope.ANY,
+                    new UsernamePasswordCredentials(config.getUsername(), config.getPassword()));
+            builder.setHttpClientConfigCallback(httpClientBuilder -> httpClientBuilder
+                    .setDefaultCredentialsProvider(credentialsProvider));
+            logger.info("Configured Elasticsearch client to use HTTP BASIC auth credentials.");
+        }
 
         final int connectionTimeout = config.getRestClientInitialConnectionTimeout();
         final long start = System.currentTimeMillis();
@@ -90,7 +103,7 @@ public class ElasticSearchClientFactory {
             }
         }
 
-        return (HttpHost[]) hosts.toArray(new HttpHost[hosts.size()]);
+        return hosts.toArray(new HttpHost[0]);
     }
 
 }

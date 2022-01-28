@@ -41,6 +41,7 @@
 - Add timeout configurations for the TOR fetcher
 - Update and improve the documentation
 - Change documentation theme to sphinx_material
+- Add support to HTTP BASIC auth for Elasticsearch data format
 
 
 ## Version 0.13.0 (2021-01-07)
