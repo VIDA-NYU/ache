@@ -9,7 +9,7 @@
 - Synchronize `crawler-commons/http-fetcher` with the upstream library
 - Setup gradle build using GitHub Actions
 - Build docker image with multi-arch support (amd64, arm64)
-- Upgrade build to Gradle 7.2
+- Upgrade build to Gradle 7.3.3
 - Upgrade gradle-node-plugin to version 3.0.1
 - Upgrade ache-dashboard npm dependencies
 - Pin slf4j-api version to 1.7.32
