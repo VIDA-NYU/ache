@@ -157,7 +157,17 @@ for more information on these parameters.
   target_storage.data_format.elasticsearch.rest.socket_timeout: 30000
   target_storage.data_format.elasticsearch.rest.max_retry_timeout_millis: 90000
 
-**Transport Client (deprecated)**
+**HTTP Basic Authentication**
+
+You can configure the username and password by adding the following to ``ache.yml`` file:
+
+.. code:: yaml
+
+    target_storage.data_format.elasticsearch.rest.username: myusername
+    target_storage.data_format.elasticsearch.rest.password: mypasswd
+
+
+**Transport Client (removed since version >=0.11)**
 
 You can also configure ACHE to connect to Elasticsearch v1.x using the native
 transport client by adding the following lines::
