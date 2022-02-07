@@ -9,7 +9,7 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 compileJava.options.encoding = "UTF-8"
-version = '0.14.0-SNAPSHOT'
+version = '0.14.0'
 mainClassName = 'achecrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError"]
 
@@ -46,7 +46,7 @@ dependencies {
     implementation group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '4.2.7'
     // Data management and repositories
     implementation group: 'org.rocksdb', name: 'rocksdbjni', version: '6.25.3'
-    implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '5.6.7'
+    implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '7.17.0'
     implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.0.0'
     implementation('org.netpreserve.commons:webarchive-commons:1.1.9') {
         exclude group: 'org.apache.hadoop', module: 'hadoop-core'
