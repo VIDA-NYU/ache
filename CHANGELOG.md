@@ -1,6 +1,6 @@
 # ACHE Crawler Change Log
 
-## Version 0.14.0 (Unreleased)
+## Version 0.14.0 (2022-02-06)
 
 - Remove support for CDR 3.1 format in Kafka target repository
 - Move `tools` and `memex` packages to the `ache-tools` sub-project
