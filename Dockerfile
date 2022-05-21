@@ -3,11 +3,11 @@
 #
 # https://github.com/ViDA-NYU/ache
 #
-FROM openjdk:11-jdk-slim as ache-build
+FROM gradle:7.3-jdk11 as ache-build
 
 ADD . /ache-src
 WORKDIR /ache-src/ache
-RUN /ache-src/gradlew installDist
+RUN gradle installDist
 
 FROM openjdk:11-jre-slim-buster
 
