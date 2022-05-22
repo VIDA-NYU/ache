@@ -3,6 +3,7 @@
 ## Version 0.15.0-SNAPSHOT (Unreleased)
 
 - Bump okhttp from 3.14.0 to 4.9.3
+- Bump jackson-* libraries from 2.13.1 to 2.13.3
 
 ## Version 0.14.0 (2022-02-06)
 
