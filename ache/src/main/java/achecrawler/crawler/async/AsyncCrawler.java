@@ -27,8 +27,8 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     private final LinkStorage linkStorage;
     private final HttpDownloader downloader;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
-    private MetricsManager metricsManager;
-    private Configuration config;
+    private final MetricsManager metricsManager;
+    private final Configuration config;
 
     public AsyncCrawler(String crawlerId, TargetStorage targetStorage, LinkStorage linkStorage,
                         Configuration config, String dataPath, MetricsManager metricsManager) {
@@ -58,7 +58,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     protected void run() {
         while (isRunning()) {
             try {
-                LinkRelevance link = (LinkRelevance) linkStorage.select(null);
+                LinkRelevance link = linkStorage.select();
                 if (link != null) {
                     Callback handler = handlers.get(link.getType());
                     if (handler == null) {
@@ -135,7 +135,6 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     
     /**
      * Add cookies to the right fetcher.
-     * @param cookies
      */
     public void addCookies(HashMap<String, List<Cookie>> cookies) {
         if (cookies == null) {

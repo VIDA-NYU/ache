@@ -3,10 +3,7 @@ package achecrawler.link;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,23 +22,23 @@ public class BipartiteGraphRepository {
     private final int pagesToCommit = 100;
     private int uncommittedCount = 0;
 
-    private PersistentHashtable<String> url2id;
+    private final PersistentHashtable<String> url2id;
 
-    private PersistentHashtable<String> authID;
-    private PersistentHashtable<String> authGraph;
+    private final PersistentHashtable<String> authID;
+    private final PersistentHashtable<String> authGraph;
 
-    private PersistentHashtable<String> hubGraph;
-    private PersistentHashtable<String> hubID;
+    private final PersistentHashtable<String> hubGraph;
+    private final PersistentHashtable<String> hubID;
 
     private final String separator = "###";
 
-    private String urlIdDirectory = "data_backlinks/url";
+    private static final String urlIdDirectory = "data_backlinks/url";
 
-    private String authIdDirectory = "data_backlinks/auth_id";
-    private String authGraphDirectory = "data_backlinks/auth_graph";
+    private static final String authIdDirectory = "data_backlinks/auth_id";
+    private static final String authGraphDirectory = "data_backlinks/auth_graph";
 
-    private String hubIdDirectory = "data_backlinks/hub_id";
-    private String hubGraphDirectory = "data_backlinks/hub_graph";
+    private static final String hubIdDirectory = "data_backlinks/hub_id";
+    private static final String hubGraphDirectory = "data_backlinks/hub_graph";
 
     public BipartiteGraphRepository(String dataPath, DB persistentHashTableBackend) {
         int cacheSize = 10000;
@@ -59,11 +56,11 @@ public class BipartiteGraphRepository {
                 String.class, persistentHashTableBackend);
     }
 
-    public Tuple<String>[] getAuthGraph() throws Exception {
+    public Tuple<String>[] getAuthGraph() {
         return authGraph.getTableAsArray();
     }
 
-    public Tuple<String>[] getHubGraph() throws Exception {
+    public Tuple<String>[] getHubGraph() {
         return hubGraph.getTableAsArray();
     }
 
@@ -71,7 +68,7 @@ public class BipartiteGraphRepository {
         return url2id.get(url);
     }
 
-    public String getHubURL(String id) throws IOException {
+    public String getHubURL(String id) {
         String url = hubID.get(id);
         if (url != null) {
             String[] fields = url.split(":::");
@@ -110,8 +107,6 @@ public class BipartiteGraphRepository {
 
     /**
      * DEPRECATED: may cause OutOfMemoryError on large crawls.
-     * 
-     * @return
      */
     @Deprecated
     public LinkNeighborhood[] getLNs() throws Exception {
@@ -126,7 +121,7 @@ public class BipartiteGraphRepository {
         return lns;
     }
 
-    public void visitLNs(Visitor<LinkNeighborhood> visitor) throws Exception {
+    public void visitLNs(Visitor<LinkNeighborhood> visitor) {
         authID.visitTuples((Tuple<String> tuple) -> {
             String strln = tuple.getValue();
             try {
@@ -139,8 +134,6 @@ public class BipartiteGraphRepository {
 
     /**
      * DEPRECATED: may cause OutOfMemoryError on large crawls.
-     * 
-     * @return
      */
     @Deprecated
     public LinkNeighborhood[] getBacklinkLN() throws Exception {
@@ -155,7 +148,7 @@ public class BipartiteGraphRepository {
                     String title = fields[1];
                     if (title != null) {
                         StringTokenizer tokenizer = new StringTokenizer(title, " ");
-                        List<String> anchorTemp = new ArrayList<String>();
+                        List<String> anchorTemp = new ArrayList<>();
                         while (tokenizer.hasMoreTokens()) {
                             anchorTemp.add(tokenizer.nextToken());
                         }
@@ -182,7 +175,7 @@ public class BipartiteGraphRepository {
                     String title = fields[1];
                     if (title != null) {
                         StringTokenizer tokenizer = new StringTokenizer(title, " ");
-                        List<String> anchorTemp = new ArrayList<String>();
+                        List<String> anchorTemp = new ArrayList<>();
                         while (tokenizer.hasMoreTokens()) {
                             anchorTemp.add(tokenizer.nextToken());
                         }
@@ -235,11 +228,7 @@ public class BipartiteGraphRepository {
     }
 
     /**
-     * This method retrieves the the backlinks of a given url.
-     * 
-     * @param url
-     * @return
-     * @throws IOException
+     * This method retrieves the backlinks of a given url.
      */
 
     public BackLinkNeighborhood[] getBacklinks(URL url) throws IOException {
@@ -252,10 +241,10 @@ public class BipartiteGraphRepository {
         if (strLinks == null) {
             return null;
         } else {
-            List<BackLinkNeighborhood> tempBacklinks = new ArrayList<BackLinkNeighborhood>();
+            List<BackLinkNeighborhood> tempBacklinks = new ArrayList<>();
             String[] backlinkIds = strLinks.split("###");
-            for (int i = 0; i < backlinkIds.length; i++) {
-                String url_title = hubID.get(backlinkIds[i]);
+            for (String backlinkId : backlinkIds) {
+                String url_title = hubID.get(backlinkId);
                 if (url_title != null) {
                     BackLinkNeighborhood bln = new BackLinkNeighborhood();
                     String[] fields = url_title.split(":::");
@@ -282,10 +271,10 @@ public class BipartiteGraphRepository {
         if (strLinks == null) {
             return null;
         } else {
-            List<LinkNeighborhood> tempLNs = new ArrayList<LinkNeighborhood>();
+            List<LinkNeighborhood> tempLNs = new ArrayList<>();
             String[] linkIds = strLinks.split("###");
-            for (int i = 0; i < linkIds.length; i++) {
-                String lnStr = authID.get(linkIds[i]);
+            for (String linkId : linkIds) {
+                String lnStr = authID.get(linkId);
                 LinkNeighborhood ln = parseString(lnStr);
                 if (ln != null) {
                     tempLNs.add(ln);
@@ -299,8 +288,7 @@ public class BipartiteGraphRepository {
 
     /**
      * Insert outlinks from hubs
-     * 
-     * @param page
+     *
      */
     public synchronized void insertOutlinks(URL url, LinkNeighborhood[] lns) {
 
@@ -309,20 +297,20 @@ public class BipartiteGraphRepository {
         String strCurrentLinks = hubGraph.get(urlId);
         HashSet<String> currentLinks = parseRecordForwardLink(strCurrentLinks);
 
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
 
-        for (int i = 0; i < lns.length; i++) {
+        for (LinkNeighborhood linkNeighborhood : lns) {
 
-            if (lns[i] != null) {
+            if (linkNeighborhood != null) {
 
-                String lnURL = lns[i].getLink().toString();
+                String lnURL = linkNeighborhood.getLink().toString();
                 String id = getId(lnURL);
 
                 if (!currentLinks.contains(id)) {
                     String ln = authID.get(id);
                     if (ln == null) {
-                        authID.put(id, lnURL + ":::" + lns[i].getAnchorString() + ":::"
-                                + lns[i].getAroundString());
+                        authID.put(id, lnURL + ":::" + linkNeighborhood.getAnchorString() + ":::"
+                                + linkNeighborhood.getAroundString());
                     }
                     buffer.append(id);
                     buffer.append(separator);
@@ -349,7 +337,7 @@ public class BipartiteGraphRepository {
         if (strCurrentLinks == null) {
             strCurrentLinks = buffer.toString();
         } else {
-            strCurrentLinks = strCurrentLinks + buffer.toString();
+            strCurrentLinks = strCurrentLinks + buffer;
         }
         if (!strCurrentLinks.equals("")) {
             hubGraph.put(urlId, strCurrentLinks);
@@ -365,22 +353,19 @@ public class BipartiteGraphRepository {
 
     /**
      * Insert backlinks from authorities
-     * 
-     * @param page
-     * @throws IOException
+     *
      */
-    public synchronized void insertBacklinks(URL url, BackLinkNeighborhood[] links)
-            throws IOException {
+    public synchronized void insertBacklinks(URL url, BackLinkNeighborhood[] links) {
         String urlId = getId(url.toString());
         String strCurrentLinks = authGraph.get(urlId);
         HashSet<String> currentLinks = parseRecordBacklink(strCurrentLinks);
-        StringBuffer buffer = new StringBuffer();
-        for (int i = 0; i < links.length; i++) {
-            String id = getId(links[i].getLink());
+        StringBuilder buffer = new StringBuilder();
+        for (BackLinkNeighborhood link : links) {
+            String id = getId(link.getLink());
             if (!currentLinks.contains(id)) {
                 String url_string = hubID.get(id);
                 if (url_string == null) {
-                    hubID.put(id, links[i].getLink() + ":::" + links[i].getTitle());
+                    hubID.put(id, link.getLink() + ":::" + link.getTitle());
                 }
                 buffer.append(id);
                 buffer.append(separator);
@@ -401,7 +386,7 @@ public class BipartiteGraphRepository {
         if (strCurrentLinks == null) {
             strCurrentLinks = buffer.toString();
         } else {
-            strCurrentLinks = strCurrentLinks + buffer.toString();
+            strCurrentLinks = strCurrentLinks + buffer;
         }
         authGraph.put(urlId, strCurrentLinks);
 
@@ -445,24 +430,20 @@ public class BipartiteGraphRepository {
     }
 
     private HashSet<String> parseRecordBacklink(String strLinks) {
-        HashSet<String> currentLinks = new HashSet<String>();
+        HashSet<String> currentLinks = new HashSet<>();
         if (strLinks != null) {
             String[] links = strLinks.split("###");
-            for (int i = 0; i < links.length; i++) {
-                currentLinks.add(links[i]);
-            }
+            currentLinks.addAll(Arrays.asList(links));
         }
         return currentLinks;
     }
 
 
     private HashSet<String> parseRecordForwardLink(String strLinks) {
-        HashSet<String> currentLinks = new HashSet<String>();
+        HashSet<String> currentLinks = new HashSet<>();
         if (strLinks != null) {
             String[] linkIds = strLinks.split("###");
-            for (int i = 0; i < linkIds.length; i++) {
-                currentLinks.add(linkIds[i]);
-            }
+            currentLinks.addAll(Arrays.asList(linkIds));
         }
         return currentLinks;
     }

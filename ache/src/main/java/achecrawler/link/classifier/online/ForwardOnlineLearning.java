@@ -16,13 +16,13 @@ public class ForwardOnlineLearning extends OnlineLearning {
         BINARY, LEVELS
     }
     
-    private static Logger logger = LoggerFactory.getLogger(ForwardOnlineLearning.class);
+    private static final Logger logger = LoggerFactory.getLogger(ForwardOnlineLearning.class);
     
-    private LinkClassifierBuilder classifierBuilder;
-    private String dataPath;
-    private int levels;
+    private final LinkClassifierBuilder classifierBuilder;
+    private final String dataPath;
+    private final int levels;
 
-    private FrontierManager frontierManager;
+    private final FrontierManager frontierManager;
 
     public ForwardOnlineLearning(int learnLimit, boolean async, FrontierManager frontierManager,
                                  LinkClassifierBuilder classifierBuilder,
