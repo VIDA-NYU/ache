@@ -22,7 +22,7 @@ dependencies {
     implementation project(':crawler-commons')
     // Logging
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
-    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.9'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.11'
     // Commons
     implementation group: 'com.google.guava', name: 'guava', version: '23.0'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
