@@ -7,7 +7,7 @@
 - Bump logback-classic from 1.2.9 to 1.2.11
 - Bump slf4j-api from 1.7.32 to 1.7.36
 - Bump RoaringBitmap from 0.9.23 to 0.9.27
-
+- Bump metrics-* libraries from 4.2.7 to 4.2.9
 
 ## Version 0.14.0 (2022-02-06)
 
