@@ -4,6 +4,10 @@
 
 - Bump okhttp from 3.14.0 to 4.9.3
 - Bump jackson-* libraries from 2.13.1 to 2.13.3
+- Bump logback-classic from 1.2.9 to 1.2.11
+- Bump slf4j-api from 1.7.32 to 1.7.36
+- Bump RoaringBitmap from 0.9.23 to 0.9.27
+
 
 ## Version 0.14.0 (2022-02-06)
 
@@ -92,6 +96,7 @@
 - Update gradle build script to use new plugins DSL
 - Update coveralls gradle plugin to version 2.9.0
 - Update searchkit to version ^2.4.0
+
 
 ## Version 0.11.0 (2018-06-01)
 
