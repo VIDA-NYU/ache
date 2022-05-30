@@ -55,7 +55,7 @@ dependencies {
     // Data parsing and extraction
     implementation group: 'com.syncthemall', name: 'boilerpipe', version: '1.2.2'
     implementation group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
-    implementation group: 'org.jsoup', name: 'jsoup', version: '1.14.3'
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.15.1'
     implementation group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '8.11.1'
     // HTTP libraries
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.3'
