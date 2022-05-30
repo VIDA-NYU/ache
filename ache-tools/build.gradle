@@ -26,7 +26,7 @@ dependencies {
     implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '5.6.7'
     implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.2.0'
     implementation group: 'org.apache.tika', name: 'tika-parsers', version: '1.18'
-    implementation group: 'org.jsoup', name: 'jsoup', version: '1.10.3'
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.15.1'
     implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.12.225'
 
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
