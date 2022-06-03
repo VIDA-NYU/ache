@@ -59,7 +59,7 @@ public class FrontierManager {
     private BacklinkSurfer backlinkSurfer;
     private LinkClassifier backlinkClassifier;
     private LinkClassifier outlinkClassifier;
-    private HashMap<String, Integer> domainCounter;
+    private final HashMap<String, Integer> domainCounter;
 
     private final BipartiteGraphRepository graphRepository;
     private final CrawlScheduler scheduler;
@@ -88,11 +88,11 @@ public class FrontierManager {
         this.downloadRobots = getDownloadRobots();
         this.linksToLoad = config.getSchedulerMaxLinks();
         this.maxPagesPerDomain = config.getMaxPagesPerDomain();
-        this.domainCounter = new HashMap<String, Integer>();
+        this.domainCounter = new HashMap<>();
         this.scheduler = new CrawlScheduler(linkSelector, recrawlSelector, frontier, metricsManager,
                                             config.getSchedulerHostMinAccessInterval(), linksToLoad);
         this.graphRepository = new BipartiteGraphRepository(dataPath, config.getPersistentHashtableBackend());
-        this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"), config.getPersistentHashtableBackend());;
+        this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"), config.getPersistentHashtableBackend());
         this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
         this.outlinkClassifier = LinkClassifierFactory.create(modelPath, config);
         if (config.getBacklinks()) {
@@ -115,7 +115,7 @@ public class FrontierManager {
             }
             this.seedScopeFile = new PrintStream(path.toFile());
         } catch (IOException e) {
-            throw new RuntimeException("Failed to open file: " + path.toString());
+            throw new RuntimeException("Failed to open file: " + path);
         }
     }
 
@@ -154,8 +154,7 @@ public class FrontierManager {
     }
 
     public void insert(LinkRelevance[] linkRelevance) throws FrontierPersistentException {
-        for (int i = 0; i < linkRelevance.length; i++) {
-            LinkRelevance elem = linkRelevance[i];
+        for (LinkRelevance elem : linkRelevance) {
             this.insert(elem);
         }
     }
@@ -272,21 +271,20 @@ public class FrontierManager {
         }
     }
 
-    public void insertOutlinks(Page page)
-            throws IOException, FrontierPersistentException, LinkClassifierException {
+    public void insertOutlinks(Page page) throws FrontierPersistentException, LinkClassifierException {
 
         LinkRelevance[] linksRelevance = outlinkClassifier.classify(page);
 
-        ArrayList<LinkRelevance> temp = new ArrayList<LinkRelevance>();
-        HashSet<String> relevantURLs = new HashSet<String>();
+        ArrayList<LinkRelevance> temp = new ArrayList<>();
+        HashSet<String> relevantURLs = new HashSet<>();
 
-        for (int i = 0; i < linksRelevance.length; i++) {
-            if (this.isRelevant(linksRelevance[i])) {
+        for (LinkRelevance linkRelevance : linksRelevance) {
+            if (this.isRelevant(linkRelevance)) {
 
-                String url = linksRelevance[i].getURL().toString();
+                String url = linkRelevance.getURL().toString();
                 if (!relevantURLs.contains(url)) {
 
-                    String domain = linksRelevance[i].getTopLevelDomainName();
+                    String domain = linkRelevance.getTopLevelDomainName();
 
                     Integer domainCount;
                     synchronized (domainCounter) {
@@ -301,7 +299,7 @@ public class FrontierManager {
 
                     if (domainCount < maxPagesPerDomain) { // Stop Condition
                         relevantURLs.add(url);
-                        temp.add(linksRelevance[i]);
+                        temp.add(linkRelevance);
                     }
 
                 }
@@ -350,7 +348,7 @@ public class FrontierManager {
 
     private String[] tokenizeText(String text) {
         StringTokenizer tokenizer = new StringTokenizer(text, " ");
-        Vector<String> anchorTemp = new Vector<String>();
+        Vector<String> anchorTemp = new Vector<>();
         while (tokenizer.hasMoreTokens()) {
             anchorTemp.add(tokenizer.nextToken());
         }
@@ -367,7 +365,7 @@ public class FrontierManager {
         this.outlinkClassifier = classifier;
     }
     
-    public void updateOutlinkClassifier(LinkClassifier classifier) throws Exception {
+    public void updateOutlinkClassifier(LinkClassifier classifier) {
         this.outlinkClassifier = classifier;
         graphRepository.visitLNs((LinkNeighborhood ln) -> {
             try {
@@ -386,9 +384,7 @@ public class FrontierManager {
 
     /**
      * Returns true if either the property to include sitemaps is true or disallow sites in
-     * robots.txt is true
-     * 
-     * @return
+     * robots.txt is true.
      */
     private boolean getDownloadRobots() {
         return insertSitemaps || disallowSitesInRobotsFile;

@@ -41,16 +41,9 @@ public class LinkStorage {
     private final boolean insertSiteMaps;
     private final boolean disallowSitesInRobotsTxt;
 
-
-    public LinkStorage(LinkStorageConfig config,
-                       FrontierManager frontierManager) throws IOException {
-        this(config, frontierManager, null);
-    }
-
-
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager,
-                       OnlineLearning onlineLearning) throws IOException {
+                       OnlineLearning onlineLearning) {
         this.frontierManager = frontierManager;
         this.onlineLearning = onlineLearning;
         this.getBacklinks = config.getBacklinks();
@@ -149,10 +142,9 @@ public class LinkStorage {
     }
 
     /**
-     * This method sends a link to crawler
-     * @throws DataNotFoundException 
+     * This method sends a link to crawler.
      */
-    public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
+    public synchronized LinkRelevance select() throws StorageException, DataNotFoundException {
         try {
             return frontierManager.nextURL(true);
         } catch (FrontierPersistentException e) {
@@ -214,11 +206,8 @@ public class LinkStorage {
 
     /**
      * Inserts the robot rules object into the HashMap
-     * 
-     * @param link
-     * @param robotRules
-     * @throws NullPointerException
-     *             when either of the argument is null
+     *
+     * @throws NullPointerException when either of the argument is null
      */
     public void insertRobotRules(LinkRelevance link, SimpleRobotRules robotRules) {
         if (link == null || robotRules == null) {

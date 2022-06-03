@@ -57,12 +57,11 @@ import okhttp3.ResponseBody;
 import okhttp3.Route;
 
 
-@SuppressWarnings("serial")
 public class OkHttpFetcher extends BaseHttpFetcher {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(OkHttpFetcher.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(OkHttpFetcher.class);
 
-    private static final String TEXT_MIME_TYPES[] = {
+    private static final String[] TEXT_MIME_TYPES = {
         "text/html",
         "application/x-asp",
         "application/xhtml+xml",
@@ -72,13 +71,13 @@ public class OkHttpFetcher extends BaseHttpFetcher {
     private static final int DEFAULT_MAX_THREADS = 1;
 
     transient private OkHttpClient _httpClient;
-    private OkHttpCookieJar cookieJar ;
-    private int connectTimeoutTime;
-    private int readTimeoutTime;
-    private int proxyPort;
-    private String proxyHost;
-    private String username;
-    private String password;
+    private final OkHttpCookieJar cookieJar ;
+    private final int connectTimeoutTime;
+    private final int readTimeoutTime;
+    private final int proxyPort;
+    private final String proxyHost;
+    private final String username;
+    private final String password;
 
     public OkHttpFetcher(UserAgent userAgent) {
         this(DEFAULT_MAX_THREADS, userAgent, null, 30000, 30000, null, 8080, null, null);
@@ -154,7 +153,7 @@ public class OkHttpFetcher extends BaseHttpFetcher {
     }
 
     private int getRedirectCount(Response response) {
-        Integer count = 0;
+        int count = 0;
         Response previous = response.priorResponse();
         while (previous != null) {
             count++;
@@ -380,7 +379,7 @@ public class OkHttpFetcher extends BaseHttpFetcher {
             if (proxyHost != null) {
                 okhttp3.Authenticator proxyAuthenticator = new okhttp3.Authenticator() {
                     @Override
-                    public Request authenticate(Route route, Response response) throws IOException {
+                    public Request authenticate(Route route, Response response) {
                         String credential = Credentials.basic(username, password);
                         return response.request().newBuilder()
                                 .header("Proxy-Authorization", credential)
@@ -430,7 +429,7 @@ public class OkHttpFetcher extends BaseHttpFetcher {
             SSLSocketFactory customSslSocketFactory =
                     new DelegatingSSLSocketFactory(sslSocketFactory) {
                         @Override
-                        protected SSLSocket configureSocket(SSLSocket socket) throws IOException {
+                        protected SSLSocket configureSocket(SSLSocket socket) {
                             socket.setEnabledCipherSuites(javaNames(specModernTLS.cipherSuites()));
                             return socket;
                         }

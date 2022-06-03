@@ -1,29 +1,23 @@
 package achecrawler.link;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.PriorityQueue;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicInteger;
-
 import achecrawler.link.frontier.LinkRelevance;
+
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.concurrent.atomic.AtomicInteger;
 
 class DomainNode {
     
     public final String domainName;
     volatile public long lastAccessTime;
-    private PriorityQueue<LinkRelevance> links;
-    private Set<String> urls = new HashSet<>();
+    private final PriorityQueue<LinkRelevance> links;
+    private final Set<String> urls = new HashSet<>();
     
     public DomainNode(String domainName, long lastAccessTime) {
         this.domainName = domainName;
         this.lastAccessTime = lastAccessTime;
         int initialCapacity = 50;
-        this.links = new PriorityQueue<LinkRelevance>(initialCapacity, LinkRelevance.DESC_ABS_ORDER_COMPARATOR);
+        this.links = new PriorityQueue<>(initialCapacity, LinkRelevance.DESC_ABS_ORDER_COMPARATOR);
     }
     
     public boolean isEmpty() {
@@ -75,7 +69,7 @@ public class PolitenessScheduler {
     private final long minimumAccessTime;
     private final int maxLinksInScheduler;
     
-    private AtomicInteger numberOfLinks = new AtomicInteger(0);
+    private final AtomicInteger numberOfLinks = new AtomicInteger(0);
 
     public PolitenessScheduler(int minimumAccessTimeInterval, int maxLinksInScheduler) {
         this.minimumAccessTime = minimumAccessTimeInterval;
@@ -87,7 +81,7 @@ public class PolitenessScheduler {
 
     private PriorityQueue<DomainNode> createDomainPriorityQueue() {
         int initialCapacity = 10;
-        return new PriorityQueue<DomainNode>(initialCapacity, new Comparator<DomainNode>() {
+        return new PriorityQueue<>(initialCapacity, new Comparator<DomainNode>() {
             @Override
             public int compare(DomainNode o1, DomainNode o2) {
                 return Long.compare(o1.lastAccessTime, o2.lastAccessTime);
@@ -108,7 +102,7 @@ public class PolitenessScheduler {
         synchronized(this) {
             DomainNode domainNode = domains.get(domainName);
             if(domainNode == null) {
-                domainNode = new DomainNode(domainName, 0l);
+                domainNode = new DomainNode(domainName, 0L);
                 domains.put(domainName, domainNode);
             }
             
@@ -215,16 +209,12 @@ public class PolitenessScheduler {
     private boolean isAvailable(DomainNode domainNode) {
         long now = System.currentTimeMillis();
         long timeSinceLastAccess = now - domainNode.lastAccessTime;
-        if(timeSinceLastAccess < minimumAccessTime) {
-            return false;
-        }
-        return true;
+        return timeSinceLastAccess >= minimumAccessTime;
     }
 
     public synchronized void clear() {
-        Iterator<Entry<String, DomainNode>> it = domains.entrySet().iterator();
-        while(it.hasNext()) {
-            DomainNode node = it.next().getValue();
+        for (Entry<String, DomainNode> stringDomainNodeEntry : domains.entrySet()) {
+            DomainNode node = stringDomainNodeEntry.getValue();
             numberOfLinks.addAndGet(-node.size()); // adds negative value
             node.clear();
         }
