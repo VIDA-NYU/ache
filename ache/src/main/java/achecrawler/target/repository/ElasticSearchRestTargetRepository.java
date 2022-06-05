@@ -28,29 +28,37 @@ import achecrawler.util.CloseableIterator;
 
 public class ElasticSearchRestTargetRepository implements TargetRepository {
 
-    private static final Map<String, String> EMPTY_MAP = Collections.<String, String>emptyMap();
+    private static final Map<String, String> EMPTY_MAP = Collections.emptyMap();
     private static final Logger logger = LoggerFactory.getLogger(ElasticSearchRestTargetRepository.class);
     private static final ObjectMapper mapper = new ObjectMapper();
-    
+
     static {
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
 
-    private RestClient client;
-    private String typeName;
-    private String indexName;
-    
+    private final RestClient client;
+    private final String typeName;
+    private final String indexName;
+    private final int esMajorVersion;
+
     public ElasticSearchRestTargetRepository(ElasticSearchConfig config) {
         this.indexName = config.getIndexName();
         this.typeName = config.getTypeName();
         this.client = ElasticSearchClientFactory.createClient(config);
+
+        try {
+            esMajorVersion = findEsMajorVersion();
+            logger.info("Elasticsearch version: {}", esMajorVersion);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to read Elasticsearch version.", e);
+        }
+
         this.createIndexMapping(indexName);
     }
 
     private void createIndexMapping(String indexName) {
-
         String indexEndpoint = "/" + indexName;
-        boolean exists = false;
+        boolean exists;
         try {
             Response existsResponse = client.performRequest("HEAD", indexEndpoint);
             exists = (existsResponse.getStatusLine().getStatusCode() == 200);
@@ -59,64 +67,83 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                     "Failed to check whether index already exists in Elasticsearch.", e);
         }
 
-        int esMajorVersion;
-        try {
-            esMajorVersion = findEsMajorVersion();
-            logger.info("Elasticsearch version: {}", esMajorVersion);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to read Elasticsearch version.", e);
-        }
-
         if (!exists) {
-            final String targetMapping1x = ""
-                + "{"
-                + "  \"properties\": {"
-                + "    \"domain\":           {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"words\":            {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"wordsMeta\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
-                + "    \"text\":             {\"type\": \"string\"},"
-                + "    \"title\":            {\"type\": \"string\"},"
-                + "    \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"crawlerId\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"relevance\":        {\"type\": \"double\"}"
-                + "  }"
-                + "}";
-            
-            final String pageMapping5x =""
-                + "{"
-                + "  \"properties\": {"
-                + "    \"domain\":           {\"type\": \"keyword\",\"index\": true},"
-                + "    \"words\":            {\"type\": \"keyword\",\"index\": true},"
-                + "    \"wordsMeta\":        {\"type\": \"keyword\",\"index\": true},"
-                + "    \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
-                + "    \"text\":             {\"type\": \"text\"},"
-                + "    \"title\":            {\"type\": \"text\"},"
-                + "    \"url\":              {\"type\": \"keyword\",\"index\": true},"
-                + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true},"
-                + "    \"isRelevant\":       {\"type\": \"keyword\",\"index\": true},"
-                + "    \"crawlerId\":        {\"type\": \"keyword\",\"index\": true},"
-                + "    \"relevance\":        {\"type\": \"double\"}"
-                + "  }"
-                + "}";
-            
-            String pageProperties = esMajorVersion >= 5 ? pageMapping5x : targetMapping1x;
-            
-            String mapping =
-                     "{"
-                   + "  \"mappings\": {"
-                   + "    \"" + typeName + "\": " + pageProperties
-                   + "  }"
-                   + "}";
-            
+            String pageProperties;
+            if (esMajorVersion < 5) {
+                pageProperties = ""
+                        + "{"
+                        + "  \"properties\": {"
+                        + "    \"domain\":           {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                        + "    \"words\":            {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                        + "    \"wordsMeta\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                        + "    \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
+                        + "    \"text\":             {\"type\": \"string\"},"
+                        + "    \"title\":            {\"type\": \"string\"},"
+                        + "    \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                        + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                        + "    \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                        + "    \"crawlerId\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                        + "    \"relevance\":        {\"type\": \"double\"}"
+                        + "  }"
+                        + "}";
+            } else if (esMajorVersion < 8) {
+                pageProperties = ""
+                        + "{"
+                        + "  \"properties\": {"
+                        + "    \"domain\":           {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"words\":            {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"wordsMeta\":        {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
+                        + "    \"text\":             {\"type\": \"text\"},"
+                        + "    \"title\":            {\"type\": \"text\"},"
+                        + "    \"url\":              {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"isRelevant\":       {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"crawlerId\":        {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"relevance\":        {\"type\": \"double\"}"
+                        + "  }"
+                        + "}";
+            } else {
+                pageProperties = ""
+                        + "{"
+                        + "  \"properties\": {"
+                        + "    \"domain\":           {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"words\":            {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"wordsMeta\":        {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"retrieved\":        {\"type\": \"date\",\"format\": \"date_optional_time\"},"
+                        + "    \"text\":             {\"type\": \"text\"},"
+                        + "    \"title\":            {\"type\": \"text\"},"
+                        + "    \"url\":              {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"isRelevant\":       {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"crawlerId\":        {\"type\": \"keyword\",\"index\": true},"
+                        + "    \"relevance\":        {\"type\": \"double\"}"
+                        + "  }"
+                        + "}";
+            }
+
+            String mapping;
+            if (esMajorVersion < 7) {
+                mapping = ""
+                        + "{"
+                        + "  \"mappings\": {"
+                        + "    \"" + typeName + "\": " + pageProperties
+                        + "  }"
+                        + "}";
+            } else {
+                mapping = ""
+                        + "{"
+                        + "  \"mappings\":"
+                        + pageProperties
+                        + "}";
+            }
+
             try {
                 AbstractHttpEntity entity = createJsonEntity(mapping);
                 Response response = client.performRequest("PUT", indexEndpoint, EMPTY_MAP, entity);
                 if (response.getStatusLine().getStatusCode() != 200) {
                     throw new RuntimeException(
-                        "Failed to create index in Elasticsearch." + response.toString());
+                        "Failed to create index in Elasticsearch." + response);
                 }
             } catch (IOException e) {
                 throw new RuntimeException("Failed to create index in Elasticsearch.", e);
@@ -131,8 +158,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         if (versionNumber != null && !versionNumber.isEmpty()) {
             String[] split = versionNumber.split("\\.");
             if (split.length == 3) {
-                int majorVersion = Integer.parseInt(split[0]);
-                return majorVersion;
+                return Integer.parseInt(split[0]);
             }
         }
         throw new RuntimeException("Failed to read Elasticsearch version.");
@@ -146,8 +172,15 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
     public boolean insert(Page page) {
         TargetModelElasticSearch document = new TargetModelElasticSearch(page);
         String docId = encodeUrl(page.getURL().toString());
+
+        String endpoint;
+        if (esMajorVersion < 7) {
+            endpoint = String.format("/%s/%s/%s/_update", indexName, typeName, docId);
+        } else {
+            endpoint = String.format("/%s/_update/%s", indexName, docId);
+        }
+
         // We use upsert to avoid overriding existing fields in previously indexed documents
-        String endpoint = String.format("/%s/%s/%s/_update", indexName, typeName, docId);
         Map<String, ?> body = ImmutableMap.of(
             "doc", document,
             "doc_as_upsert", true
@@ -165,7 +198,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         try {
             return URLEncoder.encode(url, "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            throw new IllegalStateException("Failed to URL encode string: "+url, e);
+            throw new IllegalStateException("Failed to URL encode string: " + url, e);
         }
     }
 
