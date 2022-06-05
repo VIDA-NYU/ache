@@ -10,6 +10,8 @@
 - Bump metrics-* libraries from 4.2.7 to 4.2.9
 - Bump aws-java-sdk-s3 from 1.12.131 to 1.12.225
 - Remove aws-java-sdk-s3 dependency from main project
+- Add support for Elasticsearch 7.x and 8.x indexing (#282)
+
 
 ## Version 0.14.0 (2022-02-06)
 
