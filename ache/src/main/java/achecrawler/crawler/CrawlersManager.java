@@ -199,6 +199,9 @@ public class CrawlersManager {
                     continue;
                 }
                 File entryDestination = new File(outputDir.toFile(), entry.getName());
+              if (!entryDestination.toPath().normalize().startsWith(outputDir.toFile().toPath().normalize())) {
+                throw new IOException("Bad zip entry");
+              }
                 if (entry.isDirectory()) {
                     entryDestination.mkdirs();
                 } else {
