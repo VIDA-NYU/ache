@@ -335,7 +335,7 @@ class Search extends React.Component {
                   <Hits hitsPerPage={10} highlightFields={["title"]}
                     sourceFilter={["_id", "isRelevant", "title", "url", "retrieved", "text", "html"]}
                     itemComponent={hitItemElement} />
-                  <LabelAllButtons searchkit={this.searchkit} />
+                  <LabelAllButtons labelsManager={this.labelsManager} searchkit={this.searchkit} />
                   <Pagination showNumbers={true}/>
               </div>
             </div>

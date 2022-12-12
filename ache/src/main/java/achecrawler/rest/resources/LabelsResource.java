@@ -33,7 +33,7 @@ public class LabelsResource {
     }
 
     public final Handler addLabels = (Context ctx) -> {
-        String crawlerId = ctx.pathParam(":crawler_id");
+        String crawlerId = ctx.pathParam("crawler_id");
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
