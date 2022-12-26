@@ -43,7 +43,7 @@ dependencies {
     // Metrics and monitoring
     implementation group: 'io.dropwizard.metrics', name: 'metrics-core', version: '4.2.9'
     implementation group: 'io.dropwizard.metrics', name: 'metrics-json', version: '4.2.9'
-    implementation group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '4.2.9'
+    implementation group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '4.2.15'
     // Data management and repositories
     implementation group: 'org.rocksdb', name: 'rocksdbjni', version: '6.25.3'
     implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '5.6.7'
