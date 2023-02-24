@@ -19,7 +19,6 @@ import achecrawler.link.classifier.online.ForwardOnlineLearning;
 import achecrawler.link.classifier.online.OnlineLearning;
 import achecrawler.link.frontier.FrontierManager;
 import achecrawler.link.frontier.FrontierManagerFactory;
-import achecrawler.link.frontier.FrontierPersistentException;
 import achecrawler.link.frontier.LinkRelevance;
 import achecrawler.target.model.Page;
 import achecrawler.util.DataNotFoundException;
@@ -145,16 +144,12 @@ public class LinkStorage {
      * This method sends a link to crawler.
      */
     public synchronized LinkRelevance select() throws StorageException, DataNotFoundException {
-        try {
-            return frontierManager.nextURL(true);
-        } catch (FrontierPersistentException e) {
-            throw new StorageException(e.getMessage(), e);
-        }
+        return frontierManager.nextURL(true);
     }
 
     public static LinkStorage create(String configPath, String seedFile, String dataPath,
             String modelPath, LinkStorageConfig config, MetricsManager metricsManager)
-            throws FrontierPersistentException, IOException {
+            throws IOException {
         
         Path stoplistPath = Paths.get(configPath, "/stoplist.txt");
         StopList stoplist;

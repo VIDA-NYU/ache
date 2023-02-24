@@ -120,9 +120,8 @@ public class Frontier {
      * 
      * @param linkRelev
      * @return
-     * @throws FrontierPersistentException
      */
-    public boolean insert(LinkRelevance linkRelev) throws FrontierPersistentException {
+    public boolean insert(LinkRelevance linkRelev) {
         if (linkRelev == null) {
             return false;
         }
@@ -143,14 +142,13 @@ public class Frontier {
      * 
      * @param linkRelev
      * @return
-     * @throws FrontierPersistentException
      */
-    public Double exist(LinkRelevance linkRelev) throws FrontierPersistentException {
+    public Double exist(LinkRelevance linkRelev) {
         LinkRelevance link = urlRelevance.get(linkRelev.getURL().toString());
         return link == null ? null : link.getRelevance();
     }
     
-    public LinkRelevance get(String url) throws FrontierPersistentException {
+    public LinkRelevance get(String url) {
         return urlRelevance.get(url);
     }
 
@@ -158,9 +156,8 @@ public class Frontier {
      * It deletes a URL from frontier (marks as visited).
      * 
      * @param linkRelevance
-     * @throws FrontierPersistentException
      */
-    public void delete(LinkRelevance linkRelevance) throws FrontierPersistentException {
+    public void delete(LinkRelevance linkRelevance) {
 
         String url = linkRelevance.getURL().toString();
         if (exist(linkRelevance) != null) {

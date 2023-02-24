@@ -128,7 +128,7 @@ public class FrontierManager {
         scheduler.reload();
     }
 
-    public boolean isRelevant(LinkRelevance link) throws FrontierPersistentException {
+    public boolean isRelevant(LinkRelevance link) {
         if (link.getRelevance() <= 0) {
             return false;
         }
@@ -153,13 +153,13 @@ public class FrontierManager {
         return true;
     }
 
-    public void insert(LinkRelevance[] linkRelevance) throws FrontierPersistentException {
+    public void insert(LinkRelevance[] linkRelevance) {
         for (LinkRelevance elem : linkRelevance) {
             this.insert(elem);
         }
     }
 
-    public boolean insert(LinkRelevance linkRelevance) throws FrontierPersistentException {
+    public boolean insert(LinkRelevance linkRelevance) {
         Context timerContext = insertTimer.time();
         try {
             if (linkRelevance == null) {
@@ -190,11 +190,11 @@ public class FrontierManager {
         }
     }
 
-    public LinkRelevance nextURL() throws FrontierPersistentException, DataNotFoundException {
+    public LinkRelevance nextURL() throws DataNotFoundException {
         return nextURL(false);
     }
     
-    public LinkRelevance nextURL(boolean asyncLoad) throws FrontierPersistentException, DataNotFoundException {
+    public LinkRelevance nextURL(boolean asyncLoad) throws DataNotFoundException {
         Context timerContext = selectTimer.time();
         try {
             LinkRelevance link = scheduler.nextLink(asyncLoad);
@@ -234,21 +234,17 @@ public class FrontierManager {
             int errors = 0;
             logger.info("Adding {} seed URL(s)...", seeds.size());
             for (String seed : seeds) {
-                try {
-                    LinkRelevance link = LinkRelevance.createForward(seed, LinkRelevance.DEFAULT_RELEVANCE);
-                    if (link == null) {
-                        logger.warn("Invalid seed URL provided: " + seed);
-                        errors++;
-                        continue;
-                    }
-                    addSeedScope(link);
-                    boolean inserted = insert(link);
-                    if (inserted) {
-                        logger.info("Added seed URL: {}", seed);
-                        count++;
-                    }
-                } catch (FrontierPersistentException e) {
-                    throw new RuntimeException("Failed to insert seed URL: " + seed, e);
+                LinkRelevance link = LinkRelevance.createForward(seed, LinkRelevance.DEFAULT_RELEVANCE);
+                if (link == null) {
+                    logger.warn("Invalid seed URL provided: " + seed);
+                    errors++;
+                    continue;
+                }
+                addSeedScope(link);
+                boolean inserted = insert(link);
+                if (inserted) {
+                    logger.info("Added seed URL: {}", seed);
+                    count++;
                 }
             }
             frontier.commit();
@@ -271,7 +267,7 @@ public class FrontierManager {
         }
     }
 
-    public void insertOutlinks(Page page) throws FrontierPersistentException, LinkClassifierException {
+    public void insertOutlinks(Page page) throws LinkClassifierException {
 
         LinkRelevance[] linksRelevance = outlinkClassifier.classify(page);
 
@@ -320,8 +316,7 @@ public class FrontierManager {
         this.insert(filteredLinksRelevance);
     }
 
-    public void insertBacklinks(Page page)
-            throws IOException, FrontierPersistentException, LinkClassifierException {
+    public void insertBacklinks(Page page) throws IOException, LinkClassifierException {
         URL url = page.getURL();
         BackLinkNeighborhood[] links = graphRepository.getBacklinks(url);
         if (links == null || (links != null && links.length < 10)) {
