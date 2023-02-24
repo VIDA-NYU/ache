@@ -13,7 +13,7 @@
 - Add support for Elasticsearch 7.x and 8.x indexing (#282)
 - Bump jetty-server from 9.4.44.v20210927 to 9.4.48.v20220622
 - Bump kryo-serializers from 0.42 to 0.43
-- Bump RoaringBitmap from 0.9.27 to 0.9.30
+- Bump RoaringBitmap from 0.9.27 to 0.9.39
 - Bump tika-parsers from 1.18 to 1.28.4
 
 
