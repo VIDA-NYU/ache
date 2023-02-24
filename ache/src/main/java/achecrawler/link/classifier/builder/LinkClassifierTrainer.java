@@ -4,7 +4,7 @@ import achecrawler.link.classifier.LNClassifier;
 import achecrawler.link.classifier.builder.LinkClassifierFeatureSelector.Features;
 import achecrawler.util.Sampler;
 import achecrawler.util.parser.LinkNeighborhood;
-import achecrawler.util.string.StopList;
+import achecrawler.util.string.Stopwords;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import smile.classification.SVM;
@@ -25,11 +25,11 @@ public class LinkClassifierTrainer {
     private static final Logger logger = LoggerFactory.getLogger(LinkClassifierTrainer.class);
     
     private final LinkClassifierFeatureSelector featureSelector;
-    private final StopList stoplist;
+    private final Stopwords stopwords;
     
-    public LinkClassifierTrainer(StopList stoplist) {
-        this.stoplist = stoplist;
-        this.featureSelector = new LinkClassifierFeatureSelector(stoplist);
+    public LinkClassifierTrainer(Stopwords stopwords) {
+        this.stopwords = stopwords;
+        this.featureSelector = new LinkClassifierFeatureSelector(stopwords);
     }
     
     public LNClassifier trainLNClassifier(List<Sampler<LinkNeighborhood>> instances, List<String> classValues) throws Exception {
@@ -48,7 +48,7 @@ public class LinkClassifierTrainer {
         SoftClassifier<double[]> classifier = trainClassifier(inputDataset, instances.size());
         String[] classValuesArray = classValues.toArray(new String[classValues.size()]);
         LinkNeighborhoodWrapper wrapper =
-                new LinkNeighborhoodWrapper(bestFeatures.features, stoplist);
+                new LinkNeighborhoodWrapper(bestFeatures.features, stopwords);
         return new LNClassifier(classifier, wrapper, bestFeatures.features, classValuesArray);
     }
 
@@ -72,7 +72,7 @@ public class LinkClassifierTrainer {
     private AttributeDataset createSmileInput(List<Sampler<LinkNeighborhood>> instances,
             Features bestFeatures) {
 
-        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(this.stoplist);
+        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(this.stopwords);
         wrapper.setFeatures(bestFeatures.fieldWords);
 
         List<String> classValues = new ArrayList<>();

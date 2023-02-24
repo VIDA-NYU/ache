@@ -40,7 +40,7 @@ import achecrawler.target.model.Page;
 import achecrawler.util.Tokenizers;
 import achecrawler.util.Urls;
 import achecrawler.util.string.Acentos;
-import achecrawler.util.string.StopList;
+import achecrawler.util.string.Stopwords;
 import okhttp3.HttpUrl;
 
 public class PaginaURL {
@@ -80,14 +80,14 @@ public class PaginaURL {
         this(url, content, null);
     }
 
-    public PaginaURL(URL url, String content, StopList stoplist) {
-        this(url, content, false, false, stoplist);
+    public PaginaURL(URL url, String content, Stopwords stopwords) {
+        this(url, content, false, false, stopwords);
     }
 
-    public PaginaURL(URL url, String arquivo, boolean noindex, boolean nofollow,StopList stoplist) {
+    public PaginaURL(URL url, String arquivo, boolean noindex, boolean nofollow, Stopwords stopwords) {
         this.baseUrl = url;
         this.nofollow = nofollow;
-        this.termStats = new TermStatistics(stoplist, noindex);
+        this.termStats = new TermStatistics(stopwords, noindex);
         if (!arquivo.equals("")) {
             separadorTextoCodigo(arquivo);
         }

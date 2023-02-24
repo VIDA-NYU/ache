@@ -11,8 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import achecrawler.target.model.Page;
 import achecrawler.util.ParameterFile;
 import achecrawler.util.SmileUtil;
-import achecrawler.util.string.StopList;
-import achecrawler.util.string.StopListFile;
+import achecrawler.util.string.Stopwords;
 import achecrawler.util.vsm.VSMElement;
 import achecrawler.util.vsm.VSMVector;
 import smile.classification.SoftClassifier;
@@ -22,15 +21,15 @@ public class SmileTargetClassifier implements TargetClassifier {
 
     private final SoftClassifier<double[]> classifier;
     private final String[] attributes;
-    private final StopList stoplist;
+    private final Stopwords stopwords;
     private final Double relevanceThreshold;
 
     public SmileTargetClassifier(SoftClassifier<double[]> classifier, Double relevanceThreshold,
-            String[] attributes, StopList stoplist) {
+            String[] attributes, Stopwords stopwords) {
         this.classifier = classifier;
         this.relevanceThreshold = relevanceThreshold;
         this.attributes = attributes;
-        this.stoplist = stoplist;
+        this.stopwords = stopwords;
     }
 
     public TargetRelevance classify(Page page) throws TargetClassifierException {
@@ -63,7 +62,7 @@ public class SmileTargetClassifier implements TargetClassifier {
     }
 
     private double[] getValues(Page page) throws IOException, SAXException {
-        VSMVector vsm = new VSMVector(page.getContentAsString(), stoplist, true);
+        VSMVector vsm = new VSMVector(page.getContentAsString(), stopwords, true);
         double[] values = new double[attributes.length];
         for (int i = 0; i < attributes.length; i++) {
             VSMElement elem = vsm.getElement(attributes[i]);
@@ -78,7 +77,7 @@ public class SmileTargetClassifier implements TargetClassifier {
 
     public static TargetClassifier create(String modelPath,
             Double relevanceThreshold,
-            StopListFile stopwordsFile)
+            Stopwords stopwordsFile)
             throws IOException {
         return create(modelPath + "/pageclassifier.model",
                 modelPath + "/pageclassifier.features",
@@ -92,24 +91,24 @@ public class SmileTargetClassifier implements TargetClassifier {
             Double relevanceThreshold,
             String stopwordsFile)
             throws IOException {
-        StopListFile stoplist;
+        Stopwords stopwords;
         if (stopwordsFile != null && !stopwordsFile.isEmpty()) {
-            stoplist = new StopListFile(stopwordsFile);
+            stopwords = new Stopwords(stopwordsFile);
         } else {
-            stoplist = StopListFile.DEFAULT;
+            stopwords = Stopwords.DEFAULT;
         }
-        return create(modelFile, featureFile, relevanceThreshold, stoplist);
+        return create(modelFile, featureFile, relevanceThreshold, stopwords);
     }
 
     public static TargetClassifier create(String modelFile,
             String featureFile,
             Double relevanceThreshold,
-            StopList stoplist)
+            Stopwords stopwords)
             throws IOException {
         ParameterFile featureConfig = new ParameterFile(featureFile);
         SoftClassifier<double[]> classifier = SmileUtil.loadSmileClassifier(modelFile);
         String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
-        return new SmileTargetClassifier(classifier, relevanceThreshold, attributes, stoplist);
+        return new SmileTargetClassifier(classifier, relevanceThreshold, attributes, stopwords);
     }
 
 

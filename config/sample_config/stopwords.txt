@@ -1,9 +1,3 @@
-*** Excecoes
-*** Palavras Irrelevantes
-17
-
-2003
-
 a
 about
 above
@@ -28,11 +22,9 @@ both
 but
 by
 bytes
-
 came
 can
 com
-
 come
 could
 did
@@ -41,16 +33,12 @@ doing
 done
 each
 edu
-
 else
 for
 from
 fri
-
 gmt
-
 gov
-
 had
 has
 have
@@ -59,13 +47,9 @@ her
 hers
 him
 his
-
 href
-
 html
-
 http
-
 i
 if
 in
@@ -76,7 +60,6 @@ let
 many
 me
 mon
-
 mr
 much
 my
@@ -85,18 +68,14 @@ none
 nor
 not
 now
-
 oct
-
 of
 off
 ok
 on
 onto
 or
-
 org
-
 other
 our
 ours
@@ -105,17 +84,14 @@ over
 own
 part
 sat
-
 say
 sep
-
 since
 so
 soon
 still
 such
 text
-
 than
 that
 the
@@ -127,11 +103,9 @@ they
 this
 those
 thu
-
 to
 too
 tue
-
 under
 until
 up
@@ -140,7 +114,6 @@ very
 was
 we
 wed
-
 were
 what
 when
@@ -150,10 +123,7 @@ why
 with
 would
 www
-
 yet
 you
 your
 yours
-*** Terminacoes Ignoraveis
-*** Palavras Complementares

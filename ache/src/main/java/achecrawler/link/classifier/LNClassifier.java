@@ -12,7 +12,7 @@ import achecrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import achecrawler.util.ParameterFile;
 import achecrawler.util.SmileUtil;
 import achecrawler.util.parser.LinkNeighborhood;
-import achecrawler.util.string.StopList;
+import achecrawler.util.string.Stopwords;
 import smile.classification.SoftClassifier;
 
 public class LNClassifier {
@@ -44,16 +44,16 @@ public class LNClassifier {
 
     public static LNClassifier create(String featureFilePath,
             String modelFilePath,
-            StopList stoplist) {
+            Stopwords stopwords) {
         ParameterFile config = new ParameterFile(featureFilePath);
         String[] attributes = config.getParam("ATTRIBUTES", " ");
         String[] classValues = config.getParam("CLASS_VALUES", " ");
-        return create(attributes, classValues, modelFilePath, stoplist);
+        return create(attributes, classValues, modelFilePath, stopwords);
     }
 
     public static LNClassifier create(String[] attributes, String[] classValues,
-            String modelFilePath, StopList stoplist) {
-        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
+            String modelFilePath, Stopwords stopwords) {
+        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stopwords);
         SoftClassifier<double[]> classifier = SmileUtil.loadSmileClassifier(modelFilePath);
         return new LNClassifier(classifier, wrapper, attributes, classValues);
     }

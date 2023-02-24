@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import achecrawler.util.string.StopList;
+import achecrawler.util.string.Stopwords;
 
 public class TermStatistics {
 
     private boolean noindex = false;
     private boolean sortTerms = true;
-    private StopList stoplist;
+    private Stopwords stopwords;
 
     private Map<String, List<Integer>> wordPositions = new HashMap<>();
     private Map<String, List<Integer>> wordPositionsMeta = new HashMap<>();
@@ -30,8 +30,8 @@ public class TermStatistics {
         this(null, false);
     }
 
-    public TermStatistics(StopList stoplist, boolean noindex) {
-        this.stoplist = stoplist;
+    public TermStatistics(Stopwords stopwords, boolean noindex) {
+        this.stopwords = stopwords;
         this.noindex = noindex;
     }
 
@@ -111,8 +111,8 @@ public class TermStatistics {
     }
 
     public boolean isIrrelevant(String str) {
-        if (stoplist != null) {
-            return stoplist.isIrrelevant(str);
+        if (stopwords != null) {
+            return stopwords.isIrrelevant(str);
         } else {
             return false;
         }

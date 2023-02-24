@@ -13,15 +13,15 @@ import java.util.Set;
 import achecrawler.util.parser.LinkNeighborhood;
 import achecrawler.util.parser.PaginaURL;
 import achecrawler.util.string.PorterStemmer;
-import achecrawler.util.string.StopList;
+import achecrawler.util.string.Stopwords;
 
 public class LinkClassifierFeatureSelector {
 
-    private final StopList stoplist;
+    private final Stopwords stopwords;
     private final PorterStemmer stemmer;
 
-    public LinkClassifierFeatureSelector(StopList stoplist) {
-        this.stoplist = stoplist;
+    public LinkClassifierFeatureSelector(Stopwords stopwords) {
+        this.stopwords = stopwords;
         this.stemmer = new PorterStemmer();
     }
 
@@ -51,7 +51,7 @@ public class LinkClassifierFeatureSelector {
             String[] anchorTemp = element.getAnchor();
             for (int j = 0; j < anchorTemp.length; j++) {
                 String word = stemmer.stem(anchorTemp[j]);
-                if (word == null || stoplist.isIrrelevant(word)) {
+                if (word == null || stopwords.isIrrelevant(word)) {
                     continue;
                 }
                 WordFrequency wf = anchorWords.get(word);
@@ -65,7 +65,7 @@ public class LinkClassifierFeatureSelector {
             String[] aroundTemp = element.getAround();
             for (int j = 0; j < aroundTemp.length; j++) {
                 String word = stemmer.stem(aroundTemp[j]);
-                if (word == null || stoplist.isIrrelevant(word)) {
+                if (word == null || stopwords.isIrrelevant(word)) {
                     continue;
                 }
                 WordFrequency wf = aroundWords.get(word);
@@ -79,12 +79,13 @@ public class LinkClassifierFeatureSelector {
             // url
             if (!usedURLTemp.contains(element.getLink().toString())) {
                 usedURLTemp.add(element.getLink().toString());
-                PaginaURL pageParser = new PaginaURL(new URL("http://"), element.getLink().getFile().toString(), stoplist);
+                PaginaURL pageParser = new PaginaURL(new URL("http://"), element.getLink().getFile().toString(),
+                    stopwords);
                 String[] urlTemp = pageParser.words();
                 for (int j = 0; j < urlTemp.length; j++) {
                     // String word = stemmer.stem(urlTemp[j]);
                     String word = urlTemp[j];
-                    if (stoplist.isIrrelevant(word)) {
+                    if (stopwords.isIrrelevant(word)) {
                         continue;
                     }
                     WordFrequency wf = (WordFrequency) urlWords.get(word);

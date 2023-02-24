@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 import achecrawler.util.parser.LinkNeighborhood;
 import achecrawler.util.parser.PaginaURL;
 import achecrawler.util.string.PorterStemmer;
-import achecrawler.util.string.StopList;
+import achecrawler.util.string.Stopwords;
 
 /**
  * <p>
@@ -29,16 +29,16 @@ import achecrawler.util.string.StopList;
  */
 public class LinkNeighborhoodWrapper {
 
-    private StopList stoplist = null;
+    private Stopwords stopwords = null;
     private String[][] fieldWords;
     private final PorterStemmer stemmer = new PorterStemmer();
 
-    public LinkNeighborhoodWrapper(StopList stoplist) {
-        this.stoplist = stoplist;
+    public LinkNeighborhoodWrapper(Stopwords stopwords) {
+        this.stopwords = stopwords;
     }
     
-    public LinkNeighborhoodWrapper(String[] features, StopList stoplist) {
-        this.stoplist = stoplist;
+    public LinkNeighborhoodWrapper(String[] features, Stopwords stopwords) {
+        this.stopwords = stopwords;
         this.setFeatures(features);
     }
 
@@ -219,7 +219,7 @@ public class LinkNeighborhoodWrapper {
         List<WordField> words = new ArrayList<>();
         if (useImageFeatures) {
             if (ln.getImgSrc() != null) {
-                PaginaURL pageParser = new PaginaURL(new URL("http://"), ln.getImgSrc(), stoplist);
+                PaginaURL pageParser = new PaginaURL(new URL("http://"), ln.getImgSrc(), stopwords);
                 addFeaturesToWordFieldList(words, pageParser.words(), WordField.SRC);
             }
             addFeaturesToWordFieldList(words, ln.getImgAlt(), WordField.ALT);
@@ -245,7 +245,7 @@ public class LinkNeighborhoodWrapper {
             host = "host_" + host.substring(index + 1);
             wordsFields.add(new WordField(WordField.URLFIELD, host));
         }
-        PaginaURL pageParser = new PaginaURL(url, url.getFile(), stoplist);
+        PaginaURL pageParser = new PaginaURL(url, url.getFile(), stopwords);
         String[] terms = pageParser.words();
         for (String term : terms) {
             wordsFields.add(new WordField(WordField.URLFIELD, stemming(term)));

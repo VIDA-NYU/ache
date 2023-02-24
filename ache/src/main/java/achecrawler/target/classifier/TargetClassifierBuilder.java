@@ -19,8 +19,7 @@ import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import achecrawler.util.string.StopList;
-import achecrawler.util.string.StopListFile;
+import achecrawler.util.string.Stopwords;
 import achecrawler.util.vsm.VSMElement;
 import achecrawler.util.vsm.VSMVector;
 
@@ -31,23 +30,23 @@ public class TargetClassifierBuilder {
     private static int MAX_PAGE_SAMPLES = Integer.MAX_VALUE;
 
     private boolean stem = true; // if words should be stemmed before being used as features
-    private StopList stoplist;
+    private Stopwords stopwords;
     private boolean skipCrossValidation;
     private int maxFeatures;
 
     public TargetClassifierBuilder(String stopwordsFile, boolean stem,
             boolean skipCrossValidation, int maxFeatures) throws IOException {
         this.stem = stem;
-        this.stoplist = loadStopwords(stopwordsFile);
+        this.stopwords = loadStopwords(stopwordsFile);
         this.skipCrossValidation = skipCrossValidation;
         this.maxFeatures = maxFeatures;
     }
 
-    private StopList loadStopwords(String stopwordsFile) throws IOException {
+    private Stopwords loadStopwords(String stopwordsFile) throws IOException {
         if (stopwordsFile != null && !stopwordsFile.isEmpty()) {
-            return new StopListFile(stopwordsFile);
+            return new Stopwords(stopwordsFile);
         } else {
-            return StopListFile.DEFAULT;
+            return Stopwords.DEFAULT;
         }
     }
 
@@ -80,11 +79,11 @@ public class TargetClassifierBuilder {
 
         System.out.println("Featurizing positive samples... ");
         int[] posIndexes = selectRandomNum(1, positiveFiles.length, MAX_PAGE_SAMPLES);
-        List<VSMVector> positiveData = createPageVector(positiveFiles, stoplist, posIndexes);
+        List<VSMVector> positiveData = createPageVector(positiveFiles, stopwords, posIndexes);
 
         System.out.println("Featurizing negative samples... ");
         int[] negIndexes = selectRandomNum(1, negativeFiles.length, MAX_PAGE_SAMPLES);
-        List<VSMVector> negativeData = createPageVector(negativeFiles, stoplist, negIndexes);
+        List<VSMVector> negativeData = createPageVector(negativeFiles, stopwords, negIndexes);
 
         //
         // Selecting features based on doc frequency
@@ -156,7 +155,7 @@ public class TargetClassifierBuilder {
         }
     }
 
-    public List<VSMVector> parseInputFiles(Path dataPath, StopList stoplist, int numOfElems)
+    public List<VSMVector> parseInputFiles(Path dataPath, Stopwords stopwords, int numOfElems)
             throws Exception {
         File[] pageFiles = dataPath.toFile().listFiles();
         System.out.println("Loaded files: " + pageFiles.length);
@@ -164,7 +163,7 @@ public class TargetClassifierBuilder {
         int[] posIndexes = selectRandomNum(1, pageFiles.length, numOfElems);
 
         System.out.println("Featurizing positive samples... ");
-        return createPageVector(pageFiles, stoplist, posIndexes);
+        return createPageVector(pageFiles, stopwords, posIndexes);
     }
 
     private int[] selectRandomNum(long seed, int range, int elems) {
@@ -188,13 +187,13 @@ public class TargetClassifierBuilder {
         return result;
     }
 
-    private List<VSMVector> createPageVector(File[] files, StopList stoplist, int[] indexes) throws IOException {
+    private List<VSMVector> createPageVector(File[] files, Stopwords stopwords, int[] indexes) throws IOException {
         List<VSMVector> pageVectors = new ArrayList<VSMVector>();
         for (int i = 0; i < files.length && i < indexes.length; i++) {
             File file = files[indexes[i]];
             try {
                 String fileContent = readFileAsString(file);
-                pageVectors.add(new VSMVector(fileContent, stoplist, stem));
+                pageVectors.add(new VSMVector(fileContent, stopwords, stem));
             } catch (IOException e) {
                 logger.error("Failed to process file: "+ file.toString(), e);
             }

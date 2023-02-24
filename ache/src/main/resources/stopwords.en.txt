@@ -1,5 +1,3 @@
-*** Excecoes
-*** Palavras Irrelevantes
 a
 about
 above
@@ -129,5 +127,3 @@ yet
 you
 your
 yours
-*** Terminacoes Ignoraveis
-*** Palavras Complementares

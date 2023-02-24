@@ -174,7 +174,7 @@ Following is a sample ``pageclassifier.yml`` file for a smile classifier:
   parameters:
     features_file: pageclassifier.features
     model_file: pageclassifier.model
-    stopwords_file: stoplist.txt
+    stopwords_file: stopwords.txt
     relevance_threshold: 0.6
 
 
@@ -197,11 +197,11 @@ where,
 
 * ``<training data path>`` is the path to the directory containing positive and negative examples.
 * ``<output path>`` is the new directory that you want to save the generated model that consists of two files: ``pageclassifier.model`` and ``pageclassifier.features``.
-* ``<stopwords file path>`` is a file with list of words that the classifier should ignore. You can see an example at `config/sample_config/stoplist.txt <https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/stoplist.txt>`_.
+* ``<stopwords file path>`` is a file with list of words that the classifier should ignore. You can see an example at `config/sample_config/stopwords.txt <https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/stopwords.txt>`_.
 
 Example of building a page classifier using our test data::
 
-  ache buildModel -c config/sample_config/stoplist.txt -o model_output -t config/sample_training_data
+  ache buildModel -c config/sample_config/stopwords.txt -o model_output -t config/sample_training_data
 
 
 .. _testing_page_classifiers:

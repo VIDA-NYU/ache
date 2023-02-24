@@ -21,7 +21,7 @@ In what follows, we provide details on how to run a focused crawl using ACHE.
 
     As you collect the training data, make sure the HTML files are organized in a directory with relevant pages in a folder named ``positive`` and the irrelevant ones in a folder named ``negative``). See the directory `config/sample_training_data <https://github.com/ViDA-NYU/ache/tree/master/config/sample_training_data>`_  in ACHE's repository for an example.
 
-    Optionaly, you can provide a file containing *stopwords* to the model-builder as well. Stopwords are  words which contain little or no information about the context of the page. Some examples include: "the", "at", and "a". A sample file is included in the repository as well at `config/sample_config/stoplist.txt <https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/stoplist.txt>`_. If you don't provide a stopwords file, a default list of common english stopwords bundled into ACHE will be used.
+    Optionaly, you can provide a file containing *stopwords* to the model-builder as well. Stopwords are  words which contain little or no information about the context of the page. Some examples include: "the", "at", and "a". A sample file is included in the repository as well at `config/sample_config/stopwords.txt <https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/stopwords.txt>`_. If you don't provide a stopwords file, a default list of common english stopwords bundled into ACHE will be used.
 
     Finally, type in the terminal::
 

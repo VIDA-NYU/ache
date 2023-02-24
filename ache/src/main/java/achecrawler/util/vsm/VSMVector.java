@@ -10,7 +10,7 @@ import java.util.Vector;
 
 import achecrawler.util.parser.PaginaURL;
 import achecrawler.util.string.PorterStemmer;
-import achecrawler.util.string.StopList;
+import achecrawler.util.string.Stopwords;
 
 public class VSMVector {
 
@@ -18,24 +18,24 @@ public class VSMVector {
 
   private PorterStemmer stemmer = new PorterStemmer();
   
-  private StopList stoplist;
+  private Stopwords stopwords;
   
   private String id;
   
-  public VSMVector(StopList stoplist) {
+  public VSMVector(Stopwords stopwords) {
 	    this.elems = new HashMap<>();
-	    this.stoplist = stoplist;
+	    this.stopwords = stopwords;
   }
 
-  public VSMVector(String document, StopList stoplist, boolean stem) throws   MalformedURLException {
+  public VSMVector(String document, Stopwords stopwords, boolean stem) throws MalformedURLException {
 	  if(!document.contains("<html>")){
 		  document = "<html> " + document  + " </html>"; 
 	  }
-	  this.stoplist = stoplist;
+	  this.stopwords = stopwords;
 	  this.elems = new HashMap<>();
-	  PaginaURL page = new PaginaURL(new URL("http://www"),document, stoplist);
+	  PaginaURL page = new PaginaURL(new URL("http://www"),document, stopwords);
 	  
-      addTitle(page,stoplist);
+      addTitle(page, stopwords);
 	  if(stem){
 		  stemPage(page,false);  
 	  }else{
@@ -56,9 +56,9 @@ public class VSMVector {
 	  }
   }
   
-    private void addTitle(PaginaURL page, StopList stoplist) throws MalformedURLException {
-        this.stoplist = stoplist;
-        PaginaURL title = new PaginaURL(new URL("http://www"), page.title(), stoplist);
+    private void addTitle(PaginaURL page, Stopwords stopwords) throws MalformedURLException {
+        this.stopwords = stopwords;
+        PaginaURL title = new PaginaURL(new URL("http://www"), page.title(), stopwords);
         String[] titleWords = title.words();
         String[] metaTerms = page.wordsMeta();
         int[] metaOccurrencies = page.occurrencesMeta();
@@ -249,7 +249,7 @@ public class VSMVector {
 
 
     public VSMVector clone(){
-    	VSMVector res = new VSMVector(stoplist);
+    	VSMVector res = new VSMVector(stopwords);
         Iterator<VSMElement> iter = this.getElements();
         while(iter.hasNext()){
           VSMElement tempElem = iter.next();

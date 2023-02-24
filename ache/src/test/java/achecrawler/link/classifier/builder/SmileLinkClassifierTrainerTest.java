@@ -17,14 +17,14 @@ import achecrawler.link.classifier.LNClassifier;
 import achecrawler.util.Sampler;
 import achecrawler.util.Tokenizers;
 import achecrawler.util.parser.LinkNeighborhood;
-import achecrawler.util.string.StopListFile;
+import achecrawler.util.string.Stopwords;
 
 public class SmileLinkClassifierTrainerTest {
 
     @Test
     public void shouldTrainAndClassifyLinkNeighborhoods() throws Exception {
 
-        LinkClassifierTrainer classifierTrainer = new LinkClassifierTrainer(StopListFile.DEFAULT);
+        LinkClassifierTrainer classifierTrainer = new LinkClassifierTrainer(Stopwords.DEFAULT);
 
         LinkNeighborhood ln1 = createLinkNeighborhood("asdf");
         LinkNeighborhood ln2 = createLinkNeighborhood("asdf");
@@ -60,7 +60,7 @@ public class SmileLinkClassifierTrainerTest {
     @Test
     public void shouldWorkWithMultipleClasses() throws Exception {
 
-        LinkClassifierTrainer classifierTrainer = new LinkClassifierTrainer(StopListFile.DEFAULT);
+        LinkClassifierTrainer classifierTrainer = new LinkClassifierTrainer(Stopwords.DEFAULT);
 
         LinkNeighborhood ln1 = createLinkNeighborhood("asdf");
         LinkNeighborhood ln2 = createLinkNeighborhood("asdf");

@@ -97,7 +97,7 @@ public class Main {
         private static void printExamples() {
             System.out.println("EXAMPLES\n");
             System.out.println("    ache startCrawl -c config/sample_config -o data -s config/sample.seeds -m config/sample_model");
-            System.out.println("    ache buildModel -c config/sample_config/stoplist.txt -t training_data -o output_model");
+            System.out.println("    ache buildModel -c config/sample_config/stopwords.txt -t training_data -o output_model");
             System.out.println("    ache addSeeds -c config/sample_config -o data -s config/sample.seeds");
             System.out.println("    ache startLinkStorage -c config/sample_config -o data -s config/sample.seeds");
             System.out.println("    ache startTargetStorage -c config/sample_config -o data -m config/sample_model");

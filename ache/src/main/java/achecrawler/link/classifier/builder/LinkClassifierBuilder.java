@@ -29,7 +29,7 @@ import achecrawler.link.frontier.LinkRelevance;
 import achecrawler.util.Sampler;
 import achecrawler.util.parser.LinkNeighborhood;
 import achecrawler.util.persistence.Tuple;
-import achecrawler.util.string.StopList;
+import achecrawler.util.string.Stopwords;
 import achecrawler.util.vsm.VSMElement;
 
 public class LinkClassifierBuilder {
@@ -42,10 +42,10 @@ public class LinkClassifierBuilder {
 	private LinkClassifierTrainer classifierTrainer;
     private FrontierManager frontierManager;
 	
-    public LinkClassifierBuilder(String dataPath, StopList stoplist, FrontierManager frontierManager) {
+    public LinkClassifierBuilder(String dataPath, Stopwords stopwords, FrontierManager frontierManager) {
 		this.frontierManager = frontierManager;
 		this.graphRep = frontierManager.getGraphRepository();
-		this.classifierTrainer = new LinkClassifierTrainer(stoplist);
+		this.classifierTrainer = new LinkClassifierTrainer(stopwords);
 		this.linkClassifierFolder = Paths.get(dataPath, "/link_classifier/");
 
         if (!Files.exists(linkClassifierFolder)) {

@@ -24,8 +24,7 @@ import achecrawler.target.model.Page;
 import achecrawler.util.DataNotFoundException;
 import achecrawler.util.MetricsManager;
 import achecrawler.util.StorageException;
-import achecrawler.util.string.StopList;
-import achecrawler.util.string.StopListFile;
+import achecrawler.util.string.Stopwords;
 
 public class LinkStorage {
 
@@ -151,22 +150,22 @@ public class LinkStorage {
             String modelPath, LinkStorageConfig config, MetricsManager metricsManager)
             throws IOException {
         
-        Path stoplistPath = Paths.get(configPath, "/stoplist.txt");
-        StopList stoplist;
-        if(Files.exists(stoplistPath)) {
-            stoplist = new StopListFile(stoplistPath.toFile().getCanonicalPath());
+        Path stopwordsPath = Paths.get(configPath, "/stopwords.txt");
+        Stopwords stopwords;
+        if (Files.exists(stopwordsPath)) {
+            stopwords = new Stopwords(stopwordsPath.toFile().getCanonicalPath());
         } else {
-            stoplist = StopListFile.DEFAULT;
+            stopwords = Stopwords.DEFAULT;
         }
         
-        LinkClassifierFactory.setDefaultStoplist(stoplist);
+        LinkClassifierFactory.setDefaultStopwords(stopwords);
 
         FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath,
                 dataPath, modelPath, seedFile, metricsManager);
 
         OnlineLearning onlineLearning = null;
         if (config.isUseOnlineLearning()) {
-            onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager);
+            onlineLearning = createOnlineLearning(dataPath, config, stopwords, frontierManager);
             
         }
         
@@ -174,10 +173,10 @@ public class LinkStorage {
     }
 
     private static OnlineLearning createOnlineLearning(String dataPath, LinkStorageConfig config,
-                                                       StopList stoplist,
+                                                       Stopwords stopwords,
                                                        FrontierManager frontierManager) {
 
-        LinkClassifierBuilder cb = new LinkClassifierBuilder(dataPath, stoplist, frontierManager);
+        LinkClassifierBuilder cb = new LinkClassifierBuilder(dataPath, stopwords, frontierManager);
         String onlineLearningType = config.getOnlineMethod();
         logger.info("Online Learning method:" + onlineLearningType);
         switch (onlineLearningType) {

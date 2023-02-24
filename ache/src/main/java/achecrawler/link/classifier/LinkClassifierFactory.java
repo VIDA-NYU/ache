@@ -3,16 +3,15 @@ package achecrawler.link.classifier;
 import java.nio.file.Paths;
 
 import achecrawler.link.LinkStorageConfig;
-import achecrawler.util.string.StopList;
-import achecrawler.util.string.StopListFile;
+import achecrawler.util.string.Stopwords;
 
 
 public class LinkClassifierFactory {
 
-    private static StopList stoplist = StopListFile.DEFAULT;
+    private static Stopwords stopwords = Stopwords.DEFAULT;
 
-    public static void setDefaultStoplist(StopList stoplist) {
-        LinkClassifierFactory.stoplist = stoplist;
+    public static void setDefaultStopwords(Stopwords stopwords) {
+        LinkClassifierFactory.stopwords = stopwords;
     }
 
     public static LinkClassifier create(String modelPath, LinkStorageConfig config) {
@@ -35,7 +34,8 @@ public class LinkClassifierFactory {
                 }
                 String featureFilePath = Paths.get(modelPath, "linkclassifier.features").toString();
                 String modelFilePath = Paths.get(modelPath, "linkclassifier.model").toString();
-                LNClassifier lnClassifier = LNClassifier.create(featureFilePath, modelFilePath, stoplist);
+                LNClassifier lnClassifier = LNClassifier.create(featureFilePath, modelFilePath,
+                    stopwords);
                 return new LinkClassifierImpl(lnClassifier);
             case "MaxDepthLinkClassifier":
                 return new MaxDepthLinkClassifier(config.getMaxDepth());
