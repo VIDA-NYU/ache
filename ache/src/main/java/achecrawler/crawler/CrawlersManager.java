@@ -33,16 +33,12 @@ import achecrawler.target.repository.elasticsearch.ElasticSearchConfig;
 
 public class CrawlersManager {
 
-    private static Logger logger = LoggerFactory.getLogger(CrawlersManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(CrawlersManager.class);
 
-    private Configuration baseConfig;
-    private String baseDataPath;
+    private final Configuration baseConfig;
+    private final String baseDataPath;
 
-    private Map<String, CrawlContext> crawlers = new HashMap<>();
-
-    public CrawlersManager(String dataPath) {
-        this(dataPath, new Configuration());
-    }
+    private final Map<String, CrawlContext> crawlers = new HashMap<>();
 
     public CrawlersManager(String baseDataPath, Configuration baseConfig) {
         this.baseConfig = baseConfig;
@@ -112,22 +108,19 @@ public class CrawlersManager {
             CrawlType crawlType, String esIndexName, String esTypeName) throws IOException {
 
         URL configLocation = getConfigForCrawlType(crawlType);
-        InputStream configStream = configLocation.openStream();
-        try {
+        try (InputStream configStream = configLocation.openStream()) {
             Configuration crawlConfig = baseConfig.copyUpdating(configStream);
             if (esIndexName != null && !esIndexName.isEmpty()) {
                 crawlConfig.getTargetStorageConfig().getElasticSearchConfig()
-                        .setIndexName(esIndexName);
+                    .setIndexName(esIndexName);
             }
             if (esTypeName != null && !esTypeName.isEmpty()) {
                 crawlConfig.getTargetStorageConfig().getElasticSearchConfig()
-                        .setTypeName(esTypeName);
+                    .setTypeName(esTypeName);
             }
             Files.createDirectories(configPath);
             crawlConfig.writeToFile(configPath.resolve("ache.yml"));
             return crawlConfig;
-        } finally {
-            configStream.close();
         }
     }
 
@@ -141,13 +134,13 @@ public class CrawlersManager {
                 fileName = "config/config_focused_crawl/ache.yml";
                 break;
             default:
-                throw new UnsupportedOperationException("Unsuported crawl type: " + crawlType);
+                throw new UnsupportedOperationException("Unsupported crawl type: " + crawlType);
         }
         return getClass().getClassLoader().getResource(fileName);
     }
 
     private String getSeedForCrawlType(CrawlType crawlType, List<String> seeds, Path configPath,
-            String storedModelPath) throws FileNotFoundException, IOException {
+            String storedModelPath) throws IOException {
         String seedPath;
         switch (crawlType) {
             case DeepCrawl:
@@ -189,17 +182,17 @@ public class CrawlersManager {
     }
 
     private void unzipFile(Path file, Path outputDir) throws IOException {
-        ZipFile zipFile = new ZipFile(file.toFile());
-        try {
+        try (ZipFile zipFile = new ZipFile(file.toFile())) {
             Enumeration<? extends ZipEntry> entries = zipFile.entries();
             while (entries.hasMoreElements()) {
                 ZipEntry entry = entries.nextElement();
                 if (entry.getName().startsWith("training_data")) {
-                    logger.info("Skiping training_data folder/file.");
+                    logger.info("Skipping training_data folder/file.");
                     continue;
                 }
                 File entryDestination = new File(outputDir.toFile(), entry.getName());
-                if (!entryDestination.toPath().normalize().startsWith(outputDir.toFile().toPath().normalize())) {
+                if (!entryDestination.toPath().normalize()
+                    .startsWith(outputDir.toFile().toPath().normalize())) {
                     // Prevent from zip slip vulnerability.
                     // See:https://github.com/VIDA-NYU/ache/pull/307
                     throw new IOException("Bad zip entry");
@@ -215,8 +208,6 @@ public class CrawlersManager {
                     out.close();
                 }
             }
-        } finally {
-            zipFile.close();
         }
     }
 
@@ -232,7 +223,7 @@ public class CrawlersManager {
         return null;
     }
 
-    public class CrawlContext {
+    public static class CrawlContext {
 
         public String crawlerId;
 
@@ -259,7 +250,7 @@ public class CrawlersManager {
         }
 
         public boolean isCrawlerRunning() {
-            return crawler == null ? false : crawler.isRunning();
+            return crawler != null && crawler.isRunning();
         }
 
         public boolean isSearchEnabled() {
