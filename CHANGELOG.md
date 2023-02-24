@@ -15,6 +15,7 @@
 - Bump kryo-serializers from 0.42 to 0.43
 - Bump RoaringBitmap from 0.9.27 to 0.9.39
 - Bump tika-parsers from 1.18 to 1.28.4
+- Bump gradle-node-plugin to version 3.5.1 and node.js to 18.14.2
 
 
 ## Version 0.14.0 (2022-02-06)
