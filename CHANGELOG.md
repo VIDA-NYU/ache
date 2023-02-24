@@ -7,7 +7,7 @@
 - Bump logback-classic from 1.2.9 to 1.2.11
 - Bump slf4j-api from 1.7.32 to 1.7.36
 - Bump RoaringBitmap from 0.9.23 to 0.9.27
-- Bump metrics-* libraries from 4.2.7 to 4.2.9
+- Bump metrics-* libraries from 4.2.7 to 4.2.16
 - Bump aws-java-sdk-s3 from 1.12.131 to 1.12.225
 - Remove aws-java-sdk-s3 dependency from main project
 - Add support for Elasticsearch 7.x and 8.x indexing (#282)
