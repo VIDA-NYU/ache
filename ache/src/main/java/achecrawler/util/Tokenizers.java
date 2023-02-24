@@ -44,7 +44,7 @@ public class Tokenizers {
                 return tokens;
             } catch (IOException e) {
                 throw new RuntimeException(
-                        "Shigle tokenization failed for string: " + cleanText, e);
+                        "Shingle tokenization failed for string: " + cleanText, e);
             }
         }
 
