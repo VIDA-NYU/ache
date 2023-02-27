@@ -59,7 +59,7 @@ dependencies {
     implementation group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '8.11.1'
     // HTTP libraries
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.3'
-    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.14'
     // Others
     implementation group: 'com.github.haifengl', name: 'smile-core', version: '1.5.3'
     implementation group: 'org.roaringbitmap', name: 'RoaringBitmap', version: '0.9.39'
