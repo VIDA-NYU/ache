@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
 
+import achecrawler.link.frontier.SerializableRobotRules;
 import crawlercommons.robots.SimpleRobotRules;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import achecrawler.util.persistence.PersistentHashtable;
@@ -182,6 +183,34 @@ public class RobotsAndSitemapTest {
 
         assertThat(rules).isNotNull();
         assertThat(rules.isAllowed("http://www.domain.com/anypage.html")).isTrue();
+    }
+
+    @Test
+    void testKryoSerializationAndDeserializationWithMultipleRules() {
+        final String simpleRobotsTxt = //
+                "User-agent: *\r\n" +
+                        "Disallow: /admin/\r\n" +
+                        "Disallow: /disallowed-*\r\n";
+
+        SimpleRobotRulesParser robotParser = new SimpleRobotRulesParser();
+        SimpleRobotRules rules = robotParser.parseContent("http://domain.com",
+                simpleRobotsTxt.getBytes(UTF_8), "text/plain", "Any-darn-crawler");
+
+        String outputPath = tempFolder.toString();
+
+        PersistentHashtable<SerializableRobotRules> robotRulesMap;
+
+        robotRulesMap = new PersistentHashtable<>(outputPath, 0, SerializableRobotRules.class);
+        robotRulesMap.put("robots", new SerializableRobotRules(rules));
+        robotRulesMap.commit();
+        robotRulesMap.close();
+
+        robotRulesMap = new PersistentHashtable<>(outputPath, 0, SerializableRobotRules.class);
+        rules = robotRulesMap.get("robots");
+
+        assertThat(rules).isNotNull();
+        assertThat(rules.isAllowed("http://www.domain.com/anypage.html")).isTrue();
+        assertThat(rules.isAllowed("http://www.domain.com/disallowed-page.html")).isFalse();
     }
 
     private void assertWasCrawled(String url, Frontier frontier) {

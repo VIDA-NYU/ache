@@ -15,13 +15,13 @@ public class Frontier {
 
     protected PersistentHashtable<LinkRelevance> urlRelevance;
 
-    private final PersistentHashtable<SimpleRobotRules> robotRulesMap;
+    private final PersistentHashtable<SerializableRobotRules> robotRulesMap;
 
     public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend) {
         this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize,
                 LinkRelevance.class, persistentHashtableBackend);
         this.robotRulesMap = new PersistentHashtable<>(directory + "_robots", maxCacheUrlsSize,
-                SimpleRobotRules.class, persistentHashtableBackend);
+                SerializableRobotRules.class, persistentHashtableBackend);
     }
 
     public void commit() {
@@ -190,7 +190,7 @@ public class Frontier {
             throw new NullPointerException("Link argument or robot rules argument cannot be null");
         }
         String hostname = link.getURL().getHost();
-        robotRulesMap.put(hostname, robotRules);
+        robotRulesMap.put(hostname, new SerializableRobotRules(robotRules));
     }
 
     public boolean isDisallowedByRobots(LinkRelevance link) {

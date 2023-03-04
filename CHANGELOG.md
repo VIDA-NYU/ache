@@ -20,6 +20,7 @@
 - Migrate test assertions from Hamcrest to AssertJ
 - Bump org.apache.httpcomponents:httpclient from 4.5.13 to 4.5.14
 - Bump ch.qos.logback:logback-classic from 1.2.+ to 1.4.5
+- Fix robots.txt serialization bug
 
 
 ## Version 0.14.0 (2022-02-06)
