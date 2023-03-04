@@ -18,6 +18,7 @@
 - Bump gradle-node-plugin to version 3.5.1 and node.js to 18.14.2
 - Migrate tests from jUnit 4 to 5
 - Migrate test assertions from Hamcrest to AssertJ
+- Bump org.apache.httpcomponents:httpclient from 4.5.13 to 4.5.14
 
 
 ## Version 0.14.0 (2022-02-06)
