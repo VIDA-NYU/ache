@@ -1,17 +1,16 @@
 package achecrawler.seedfinder;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
-
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class RelevanceModelTest {
-    
+class RelevanceModelTest {
+
     @Test
-    public void shouldExecuteQuery() throws Exception {
+    void shouldExecuteQuery() throws Exception {
         // given
         RelevanceModel model = new RelevanceModel();
         

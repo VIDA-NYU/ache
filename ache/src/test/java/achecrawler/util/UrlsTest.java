@@ -1,21 +1,21 @@
 package achecrawler.util;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class UrlsTest {
+class UrlsTest {
 
     /**
      * See issue https://github.com/VIDA-NYU/ache/issues/177
      */
     @Test
-    public void RecentTLDsShouldBeValid() {
+    void RecentTLDsShouldBeValid() {
         assertTrue(Urls.isValid("http://registry.africa"));
     }
 
     @Test
-    public void OnionLinksShouldBeValid() {
+    void OnionLinksShouldBeValid() {
         assertTrue(Urls.isValid("http://3g2upl4pq6kufc4m.onion/"));
     }
 

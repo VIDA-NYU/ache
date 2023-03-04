@@ -82,7 +82,7 @@ public class MetricsManager {
         if (file.exists()) {
             file.delete();
         }
-        file.mkdir();
+        file.mkdirs();
         try {
             File outputFile = new File(directoryName + "metrics_counters.data");
             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
@@ -96,7 +96,7 @@ public class MetricsManager {
             writer.flush();
             writer.close();
         } catch (IOException e) {
-            logger.error("Unable to save metrics to a file." + e.getMessage());
+            logger.error("Unable to save metrics to a file: " + file, e);
         }
     }
 

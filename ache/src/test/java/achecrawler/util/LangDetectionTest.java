@@ -1,23 +1,23 @@
 package achecrawler.util;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-public class LangDetectionTest {
+class LangDetectionTest {
     
     static LangDetection langDetect;
-    
-    @BeforeClass
-    public static  void setUpClass() {
+
+    @BeforeAll
+    static  void setUpClass() {
         langDetect = new LangDetection();
 //        langDetect.init("libs/profiles/");
     }
 
     @Test
-    public void shouldDetectEnglishLanguage() {
+    void shouldDetectEnglishLanguage() {
         // given
         String textInEnglish = "This text is written in plain regular english language";
         
@@ -27,9 +27,9 @@ public class LangDetectionTest {
         // then
         assertThat(isEnglish, is(true));
     }
-    
+
     @Test
-    public void shouldDetectWhenTextIsNotEnglishLanguage() {
+    void shouldDetectWhenTextIsNotEnglishLanguage() {
         // given
         String textNotInEnglish = "Este texto está escrito em lingua portuguesa.";
         
@@ -39,9 +39,9 @@ public class LangDetectionTest {
         // then
         assertThat(isEnglish, is(false));
     }
-    
+
     @Test
-    public void shouldReturnFalseForNull() {
+    void shouldReturnFalseForNull() {
         // given
         String textNotInEnglish = null;
         
@@ -51,9 +51,9 @@ public class LangDetectionTest {
         // then
         assertThat(isEnglish, is(false));
     }
-    
+
     @Test
-    public void shouldReturnFalseForEmptyString() {
+    void shouldReturnFalseForEmptyString() {
         // given
         String textNotInEnglish = "";
         

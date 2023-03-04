@@ -5,7 +5,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.InputStream;
 import java.util.Arrays;
@@ -13,17 +13,17 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Test;
-
 import com.fasterxml.jackson.databind.JsonNode;
+
+import org.junit.jupiter.api.Test;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.io.ByteStreams;
 
-public class CDRDocumentBuilderTest {
+class CDRDocumentBuilderTest {
 
   @Test
-  public void testSerializeToJsonCDRv2() throws Exception {
+  void testSerializeToJsonCDRv2() throws Exception {
 
     String filename = "http%3A%2F%2Fwww.darpa.mil%2Fprogram%2Fmemex";
     InputStream fileStream = CDRDocumentBuilderTest.class.getResourceAsStream(filename);
@@ -64,7 +64,7 @@ public class CDRDocumentBuilderTest {
   }
 
   @Test
-  public void testSerializeToJsonCDRv3() throws Exception {
+  void testSerializeToJsonCDRv3() throws Exception {
 
     String filename = "http%3A%2F%2Fwww.darpa.mil%2Fprogram%2Fmemex";
     InputStream fileStream = CDRDocumentBuilderTest.class.getResourceAsStream(filename);
@@ -110,7 +110,7 @@ public class CDRDocumentBuilderTest {
   }
 
   @Test
-  public void testSerializeToJsonCDRv31() throws Exception {
+  void testSerializeToJsonCDRv31() throws Exception {
 
     String filename = "http%3A%2F%2Fwww.darpa.mil%2Fprogram%2Fmemex";
     InputStream fileStream = CDRDocumentBuilderTest.class.getResourceAsStream(filename);

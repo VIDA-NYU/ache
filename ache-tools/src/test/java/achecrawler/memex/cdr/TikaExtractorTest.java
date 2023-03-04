@@ -3,19 +3,20 @@ package achecrawler.memex.cdr;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.InputStream;
 
 import org.apache.tika.mime.MediaType;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import achecrawler.memex.cdr.TikaExtractor.ParsedData;
 
-public class TikaExtractorTest {
+class TikaExtractorTest {
 
 	@Test
-	public void testExtractMetadata() {
+	void testExtractMetadata() {
 		// given
 		String filename = "http%3A%2F%2Fwww.darpa.mil%2Fprogram%2Fmemex";
 		InputStream fileStream = CDRDocumentBuilderTest.class.getResourceAsStream(filename);
@@ -32,7 +33,7 @@ public class TikaExtractorTest {
 	}
 
 	@Test
-	public void testDetectMimeType() {
+	void testDetectMimeType() {
 		// given
 		String filename = "http%3A%2F%2Fwww.darpa.mil%2Fprogram%2Fmemex";
 		InputStream fileStream = CDRDocumentBuilderTest.class.getResourceAsStream(filename);

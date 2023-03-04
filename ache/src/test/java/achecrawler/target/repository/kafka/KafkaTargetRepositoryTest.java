@@ -2,7 +2,7 @@ package achecrawler.target.repository.kafka;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,10 +13,8 @@ import java.util.Map;
 import org.apache.kafka.clients.producer.MockProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -25,19 +23,16 @@ import achecrawler.target.model.Page;
 import achecrawler.target.model.TargetModelElasticSearch;
 import achecrawler.target.model.TargetModelJson;
 
-public class KafkaTargetRepositoryTest {
+class KafkaTargetRepositoryTest {
 
-    @Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
-
-    private ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper = new ObjectMapper();
 
     static String html;
     static String url;
     static Map<String, List<String>> responseHeaders;
 
-    @BeforeClass
-    static public void setUp() {
+    @BeforeAll
+    static void setUp() {
         url = "http://example.com";
         html = "<html><body>Hello World! Hello World! Hello World!</body></html>";
         responseHeaders = new HashMap<>();
@@ -45,7 +40,7 @@ public class KafkaTargetRepositoryTest {
     }
 
     @Test
-    public void shouldSendDataToKafka() throws IOException {
+    void shouldSendDataToKafka() throws IOException {
         // given
         Page target = new Page(new URL(url), html, responseHeaders);
         target.setCrawlerId("mycrawler");
@@ -76,7 +71,7 @@ public class KafkaTargetRepositoryTest {
     }
 
     @Test
-    public void shouldSendDataToKafkaUsingElasticsearchJsonFormat() throws IOException {
+    void shouldSendDataToKafkaUsingElasticsearchJsonFormat() throws IOException {
         // given
         Page target = new Page(new URL(url), html, responseHeaders);
         target.setCrawlerId("mycrawler");

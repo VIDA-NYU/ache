@@ -5,10 +5,10 @@ import static org.hamcrest.CoreMatchers.either;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.endsWith;
-import static org.junit.Assert.assertThat;
-
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -22,10 +22,9 @@ import java.util.Map;
 import java.util.zip.InflaterInputStream;
 
 import org.apache.commons.io.IOUtils;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
@@ -40,25 +39,26 @@ import achecrawler.util.CloseableIterator;
 
 public class FileSystemTargetRepositoryTest {
 
-	// a new temp folder is created for each test case
-	@Rule public TemporaryFolder tempFolder = new TemporaryFolder();
+    // a new temp folder is created for each test case
+    @TempDir
+    public File tempFolder;
 	
 	static String html;
 	static String url;
 	static Map<String, List<String>> responseHeaders;
-	
-	@BeforeClass
-	static public void setUp() {
+
+    @BeforeAll
+    static void setUp() {
 		url = "http://example.com";
 		html = "<html><body>Hello World! Hello World! Hello World!</body></html>";
 		responseHeaders = new HashMap<>();
 		responseHeaders.put("content-type", asList("text/html"));
 	}
-	
-	@Test
-	public void shouldStoreContentAsRawFile() throws IOException {
+
+    @Test
+    void shouldStoreContentAsRawFile() throws IOException {
 		// given
-	    String folder = tempFolder.newFolder().toString(); 
+	    String folder = tempFolder.toString();
 		Page target = new Page(new URL(url), html);
 		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.HTML, false);
 		
@@ -72,12 +72,12 @@ public class FileSystemTargetRepositoryTest {
 		String content = new String(Files.readAllBytes(path));
 		assertThat(content, is(html));
 	}
-	
-	@Test
-    public void shouldStoreContentCompressed() throws IOException {
+
+    @Test
+    void shouldStoreContentCompressed() throws IOException {
         // given
 	    boolean compressData = true;
-	    String folder = tempFolder.newFolder().toString();
+	    String folder = tempFolder.toString();
         Page target = new Page(new URL(url), html);
         FileSystemTargetRepository repository = new FileSystemTargetRepository(Paths.get(folder), DataFormat.HTML, false, compressData);
         
@@ -97,13 +97,13 @@ public class FileSystemTargetRepositoryTest {
         String content = new String(uncompressedBytes);
         assertThat(content, is(html));
     }
-	
-	
-	@Test
-    public void shouldStoreAndReadCompressedContent() throws IOException {
+
+
+    @Test
+    void shouldStoreAndReadCompressedContent() throws IOException {
         // given
         boolean compressData = true;
-        String folder = tempFolder.newFolder().toString();
+        String folder = tempFolder.toString();
         Page target = new Page(new URL(url), html);
         FileSystemTargetRepository repository = new FileSystemTargetRepository(Paths.get(folder), DataFormat.JSON, false, compressData);
         
@@ -116,11 +116,11 @@ public class FileSystemTargetRepositoryTest {
         assertThat(jsonModel.getUrl(), is(url));
         assertThat(jsonModel.getContentAsString(), is(html));
     }
-	
-	@Test
-	public void shouldStoreContentAsJSON() throws IOException {
+
+    @Test
+    void shouldStoreContentAsJSON() throws IOException {
 		// given
-		String folder = tempFolder.newFolder().toString();
+		String folder = tempFolder.toString();
 		Page target = new Page(new URL(url), html, responseHeaders);
 		target.setTargetRelevance(TargetRelevance.IRRELEVANT);
 		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, false);
@@ -141,11 +141,11 @@ public class FileSystemTargetRepositoryTest {
 		assertThat(value.getRelevance().isRelevant(), is(TargetRelevance.IRRELEVANT.isRelevant()));
 		assertThat(value.getRelevance().getRelevance(), is(TargetRelevance.IRRELEVANT.getRelevance()));
 	}
-	
-	@Test
-	public void shouldStoreContentAsCBOR() throws IOException {
+
+    @Test
+    void shouldStoreContentAsCBOR() throws IOException {
 		// given
-		String folder = tempFolder.newFolder().toString();
+		String folder = tempFolder.toString();
 		Page target = new Page(new URL(url), html, responseHeaders);
 		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.CBOR, false);
 		
@@ -163,12 +163,12 @@ public class FileSystemTargetRepositoryTest {
 		assertThat(value.url, is(url));
 		assertThat(value.response.get("body").toString(), is(html));
 	}
-	
-	@Test
-    public void shouldHashFilenameUsingSHA256Hash() throws IOException {
+
+    @Test
+    void shouldHashFilenameUsingSHA256Hash() throws IOException {
         // given
 	    boolean hashFilename = true;
-        String folder = tempFolder.newFolder().toString(); 
+        String folder = tempFolder.toString();
         Page target = new Page(new URL(url), html);
         FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.HTML, hashFilename);
         
@@ -182,12 +182,12 @@ public class FileSystemTargetRepositoryTest {
         String content = new String(Files.readAllBytes(path));
         assertThat(content, is(html));
     }
-	
-	@Test
-    public void sholdGetPageThatWasInserted() throws IOException {
+
+    @Test
+    void shouldGetPageThatWasInserted() throws IOException {
         // given
         boolean hashFilename = true;
-        String folder = tempFolder.newFolder().toString(); 
+        String folder = tempFolder.toString();
         
         String url1 = "http://example1.com";
         String url2 = "http://example2.com";
@@ -211,14 +211,14 @@ public class FileSystemTargetRepositoryTest {
         
         assertThat(page2, is(nullValue()));
     }
-	
-	@Test
-    public void sholdIterateOverInsertedPages() throws IOException {
+
+    @Test
+    void shouldIterateOverInsertedPages() throws IOException {
         // given
         boolean hashFilename = true;
         boolean compressData = true;
         
-        String folder = tempFolder.newFolder().toString(); 
+        String folder = tempFolder.toString();
         
         String url1 = "http://a.com";
         String url2 = "http://b.com";
@@ -255,12 +255,12 @@ public class FileSystemTargetRepositoryTest {
         assertThat(it.hasNext(), is(false));
         assertThat(it.next(), is(nullValue()));
     }
-	
-	@Test
-    public void sholdIterateOverEmptyFolder() throws IOException {
+
+    @Test
+    void shouldIterateOverEmptyFolder() {
         // given
         boolean hashFilename = true;
-        String folder = tempFolder.newFolder().toString(); 
+        String folder = tempFolder.toString();
         
         FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename);
         
@@ -271,12 +271,12 @@ public class FileSystemTargetRepositoryTest {
         assertThat(it.hasNext(), is(false));
         assertThat(it.next(), is(nullValue()));
     }
-    
+
     @Test
-    public void sholdIterateOverFilePaths() throws IOException {
+    void shouldIterateOverFilePaths() throws IOException {
      // given
         boolean hashFilename = false;
-        String folder = tempFolder.newFolder().toString(); 
+        String folder = tempFolder.toString();
         
         String url1 = "http://1.com";
         String url2 = "http://2.com";
@@ -313,12 +313,12 @@ public class FileSystemTargetRepositoryTest {
         assertThat(it.hasNext(), is(false));
         assertThat(it.next(), is(nullValue()));
     }
-	
-	@Test
-    public void existsSholdReturnTrueOnlyWhenPageWasInserted() throws IOException {
+
+    @Test
+    void existsShouldReturnTrueOnlyWhenPageWasInserted() throws IOException {
         // given
         boolean hashFilename = true;
-        String folder = tempFolder.newFolder().toString(); 
+        String folder = tempFolder.toString();
         
         String url1 = "http://example1.com";
         String url2 = "http://example2.com";
@@ -336,5 +336,4 @@ public class FileSystemTargetRepositoryTest {
         assertThat(url1exists, is(true));
         assertThat(url2exists, is(false));
     }
-
 }

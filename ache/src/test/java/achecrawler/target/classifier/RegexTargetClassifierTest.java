@@ -1,8 +1,7 @@
 package achecrawler.target.classifier;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -10,16 +9,17 @@ import java.net.URL;
 import java.net.URLDecoder;
 
 import org.apache.commons.io.IOUtils;
-import org.junit.Test;
 
 import achecrawler.target.model.Page;
 import achecrawler.target.model.ParsedData;
 import achecrawler.util.parser.PaginaURL;
 
-public class RegexTargetClassifierTest {
+import org.junit.jupiter.api.Test;
+
+class RegexTargetClassifierTest {
 
     @Test
-    public void testRegexClassifierMatchConfig1() throws TargetClassifierException, IOException {
+    void testRegexClassifierMatchConfig1() throws TargetClassifierException, IOException {
         // given
         String path = ClassifierFactoryTest.class.getResource("regex_classifier_config/").getPath();
         System.out.println(path);
@@ -50,7 +50,7 @@ public class RegexTargetClassifierTest {
     }
 
     @Test
-    public void testRegexClassifierMatchConfigContentTypeCSV() throws TargetClassifierException, IOException {
+    void testRegexClassifierMatchConfigContentTypeCSV() throws TargetClassifierException, IOException {
         // given
         String path = ClassifierFactoryTest.class.getResource("regex_classifier/config_content_type_csv/").getPath();
 
@@ -67,9 +67,9 @@ public class RegexTargetClassifierTest {
         assertThat(classifier.classify(page1).isRelevant(), is(false));
         assertThat(classifier.classify(page2).isRelevant(), is(true));
     }
-    
+
     @Test
-    public void testRegexClassifierMatchConfig2() throws TargetClassifierException, IOException {
+    void testRegexClassifierMatchConfig2() throws TargetClassifierException, IOException {
         // given
         String config = ClassifierFactoryTest.class.getResource("regex_classifier/config_jobs/").getPath();
         String pageFile = "https%3A%2F%2Fmarkettrack.com%2Fcareers%2Fjob-openings";

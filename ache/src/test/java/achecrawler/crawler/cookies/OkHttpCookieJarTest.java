@@ -1,23 +1,23 @@
 package achecrawler.crawler.cookies;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import okhttp3.Cookie;
 import okhttp3.HttpUrl;
 
 
-public class OkHttpCookieJarTest {
+class OkHttpCookieJarTest {
 
     private OkHttpCookieJar cookieJar;
     private HttpUrl url;
@@ -25,8 +25,8 @@ public class OkHttpCookieJarTest {
     private Cookie cookieExpired;
     private List<Cookie> cookies;
 
-    @Before
-    public void createCookieJar() {
+    @BeforeEach
+    void createCookieJar() {
         cookieJar = new OkHttpCookieJar();
         url = HttpUrl.parse("https://domain.com/");
         cookieRegular = TestCookieCreator.createPersistentCookie(false);
@@ -35,7 +35,7 @@ public class OkHttpCookieJarTest {
     }
 
     @Test
-    public void saveFromResponse() throws Exception {
+    void saveFromResponse() throws Exception {
         // when
         cookieJar.saveFromResponse(url, cookies);
         // then
@@ -44,7 +44,7 @@ public class OkHttpCookieJarTest {
     }
 
     @Test
-    public void loadOnlyNonExpiredCookiesForRequest() throws Exception {
+    void loadOnlyNonExpiredCookiesForRequest() throws Exception {
         // when
         cookieJar.saveFromResponse(url, asList(cookieRegular, cookieExpired));
         List<Cookie> loadedCookies = cookieJar.loadForRequest(url);
@@ -53,7 +53,7 @@ public class OkHttpCookieJarTest {
     }
 
     @Test
-    public void shouldLoadCookieForDifferentUrlFromSameDomain() throws Exception {
+    void shouldLoadCookieForDifferentUrlFromSameDomain() throws Exception {
         // given
         HttpUrl url1 = HttpUrl.parse("https://domain.com/");
         HttpUrl url2 = HttpUrl.parse("https://domain.com/about");
@@ -70,7 +70,7 @@ public class OkHttpCookieJarTest {
     }
 
     @Test
-    public void shouldLoadTopLevelCookieForSubdomains() throws Exception {
+    void shouldLoadTopLevelCookieForSubdomains() throws Exception {
         // given
         HttpUrl topDomainUrl = HttpUrl.parse("https://domain.com/");
         HttpUrl subDomainUrl = HttpUrl.parse("https://sub.domain.com/");
@@ -97,7 +97,7 @@ public class OkHttpCookieJarTest {
 
 
     @Test
-    public void shouldNotLoadSubDomainCookieForTopLevelDomain() throws Exception {
+    void shouldNotLoadSubDomainCookieForTopLevelDomain() throws Exception {
         // given
         HttpUrl topDomainUrl = HttpUrl.parse("https://domain.com/");
         HttpUrl subDomainUrl = HttpUrl.parse("https://sub.domain.com/");
@@ -123,7 +123,7 @@ public class OkHttpCookieJarTest {
     }
 
     @Test
-    public void shouldNotLoadSubdomainCookiesForHigherLevelDomain() throws Exception {
+    void shouldNotLoadSubdomainCookiesForHigherLevelDomain() throws Exception {
         // given
         HttpUrl url1 = HttpUrl.parse("https://login.domain.com/");
         Cookie subdomainCookie = new Cookie.Builder()
@@ -153,7 +153,7 @@ public class OkHttpCookieJarTest {
     }
 
     @Test
-    public void update() throws Exception {
+    void update() throws Exception {
         // given
         String domain = "https://domain.com/";
         HttpUrl newUrl = HttpUrl.parse(domain);

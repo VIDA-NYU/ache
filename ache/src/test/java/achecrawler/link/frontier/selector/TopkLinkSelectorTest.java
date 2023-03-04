@@ -3,18 +3,18 @@ package achecrawler.link.frontier.selector;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.List;
 
-import org.junit.Test;
-
 import achecrawler.link.frontier.LinkRelevance;
 
-public class TopkLinkSelectorTest {
+import org.junit.jupiter.api.Test;
+
+class TopkLinkSelectorTest {
 
     @Test
-    public void shouldSelectTopkLinksOfHigherRelevance() throws Exception {
+    void shouldSelectTopkLinksOfHigherRelevance() throws Exception {
         // given
         TopkLinkSelector selector = new TopkLinkSelector();
         List<LinkRelevance> frontier = asList(
@@ -37,9 +37,9 @@ public class TopkLinkSelectorTest {
         assertThat(links.get(0).getURL().toString(), is("http://localhost/299"));
         assertThat(links.get(1).getURL().toString(), is("http://localhost/199"));
     }
-    
+
     @Test
-    public void shouldNotSelectPagesWithNegativeRelevance() throws Exception {
+    void shouldNotSelectPagesWithNegativeRelevance() throws Exception {
         // given
         TopkLinkSelector selector = new TopkLinkSelector();
         List<LinkRelevance> frontier = asList(

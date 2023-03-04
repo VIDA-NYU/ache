@@ -1,14 +1,11 @@
 package achecrawler.seedfinder;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.Assert.assertThat;
-
 import java.io.IOException;
 import java.util.List;
-
-import org.junit.Test;
 
 import com.sun.net.httpserver.HttpServer;
 
@@ -18,7 +15,9 @@ import achecrawler.target.classifier.BodyRegexTargetClassifier;
 import achecrawler.target.classifier.TargetClassifier;
 import achecrawler.util.parser.BackLinkNeighborhood;
 
-public class QueryProcessorTest {
+import org.junit.jupiter.api.Test;
+
+class QueryProcessorTest {
     
     private SearchEngineApi searchEngineMock = new SearchEngineApi() {
         @Override
@@ -41,9 +40,9 @@ public class QueryProcessorTest {
             }
         }
     };
-    
+
     @Test
-    public void shouldExecuteQuery() throws Exception {
+    void shouldExecuteQuery() throws Exception {
         // given
         HttpServer httpServer = new TestWebServerBuilder("localhost", 1234)
                 .with200OK("/1-pos.html", "Example page 1!")

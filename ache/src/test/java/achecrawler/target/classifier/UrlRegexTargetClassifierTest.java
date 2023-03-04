@@ -1,7 +1,7 @@
 package achecrawler.target.classifier;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,15 +9,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Test;
-
 import achecrawler.target.model.Page;
 import achecrawler.util.LinkFilter;
 
-public class UrlRegexTargetClassifierTest {
+import org.junit.jupiter.api.Test;
+
+class UrlRegexTargetClassifierTest {
 
     @Test
-    public void shouldClassifyPagesBasedOnListOfUrlRegexes() throws Exception {
+    void shouldClassifyPagesBasedOnListOfUrlRegexes() throws Exception {
         // given
         List<String> urlPatterns = Arrays.asList(
             ".*/thread/.*",
@@ -61,9 +61,9 @@ public class UrlRegexTargetClassifierTest {
             assertThat(page.toString(), relevance.getRelevance(), is(0d));
         }
     }
-    
+
     @Test
-    public void shouldClassifyPagesBasedOnTheUrlWhiteListAndBlackLists() throws Exception {
+    void shouldClassifyPagesBasedOnTheUrlWhiteListAndBlackLists() throws Exception {
         // given
         
         List<String> whitelistRegexes = Arrays.asList(

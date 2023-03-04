@@ -2,16 +2,16 @@ package achecrawler.link;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.Assert.assertThat;
-
-import org.junit.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import achecrawler.link.frontier.LinkRelevance;
 
-public class PolitenessSchedulerTest {
+import org.junit.jupiter.api.Test;
+
+class PolitenessSchedulerTest {
 
     @Test
-    public void shouldSelectLinksBasedOnPoliteness() throws Exception {
+    void shouldSelectLinksBasedOnPoliteness() throws Exception {
         
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex2.com/2", 2);
@@ -93,9 +93,9 @@ public class PolitenessSchedulerTest {
         assertThat(scheduler.numberOfEmptyDomains(), is(1));
         assertThat(scheduler.nextLink(), is(nullValue()));
     }
-    
+
     @Test
-    public void addLinksShouldIgnoreLinkWhenMaxNumberOfLinksIsReached() throws Exception {
+    void addLinksShouldIgnoreLinkWhenMaxNumberOfLinksIsReached() throws Exception {
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex2.com/", 2);
                 
@@ -110,9 +110,9 @@ public class PolitenessSchedulerTest {
         scheduler.addLink(l2);
         assertThat(scheduler.numberOfLinks(), is(1));
     }
-    
+
     @Test
-    public void shouldReturnLinksFromSameTLDsUsingRelevanceOrder() throws Exception {
+    void shouldReturnLinksFromSameTLDsUsingRelevanceOrder() throws Exception {
         
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);
@@ -134,9 +134,9 @@ public class PolitenessSchedulerTest {
         assertThat(scheduler.nextLink().getRelevance(), is(2d));
         assertThat(scheduler.nextLink().getRelevance(), is(1d));
     }
-    
+
     @Test
-    public void shouldNotAddLinkMultipleTimes() throws Exception {
+    void shouldNotAddLinkMultipleTimes() throws Exception {
         
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex1.com/1", 1);
@@ -156,9 +156,9 @@ public class PolitenessSchedulerTest {
         assertThat(scheduler.nextLink().getRelevance(), is(1d));
         assertThat(scheduler.nextLink(), is(nullValue()));
     }
-    
+
     @Test
-    public void shouldCheckIfLinkCanBeDownloadedAtCurrentTime() throws Exception {
+    void shouldCheckIfLinkCanBeDownloadedAtCurrentTime() throws Exception {
         
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);
@@ -178,9 +178,9 @@ public class PolitenessSchedulerTest {
         assertThat(scheduler.canDownloadNow(l2), is(true));
         assertThat(scheduler.canDownloadNow(l3), is(true));
     }
-    
+
     @Test
-    public void shouldBeAbleToClearListOfLinks() throws Exception {
+    void shouldBeAbleToClearListOfLinks() throws Exception {
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex2.com/2", 2);
         LinkRelevance l3 = new LinkRelevance("http://ex3.com/3", 3);

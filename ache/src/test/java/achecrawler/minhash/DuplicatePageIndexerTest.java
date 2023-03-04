@@ -2,56 +2,37 @@ package achecrawler.minhash;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Set;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameter;
-import org.junit.runners.Parameterized.Parameters;
+import org.junit.jupiter.api.io.TempDir;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import com.google.common.io.ByteStreams;
 
-@RunWith(Parameterized.class)
 public class DuplicatePageIndexerTest {
-    
-    @Rule
-    // a new temp folder is created for each test case
-    public TemporaryFolder tempFolder = new TemporaryFolder();
-    
-    @Parameter
-    public boolean inMemory;
 
-    private DuplicatePageIndexer deduper;
+    @TempDir
+    public File tempFolder;
     
     /* 
      * This test runs multiple times for each of the following parameters,
      * to make sure that it works with all underlying storage implementations.
      */
-    @Parameters
     public static Iterable<? extends Object> data() {
         return Arrays.asList(true, false);
     }
 
-    @Before
-    public void setUp() throws IOException {
-        if (inMemory) {
-            deduper = new DuplicatePageIndexer();
-        } else {
-            deduper = new DuplicatePageIndexer(tempFolder.newFolder().toString());
-        }
-    }
-
-    @Test
-    public void shouldIndexPagesAndFindDuplicates() throws Exception {
+    @MethodSource("data")
+    @ParameterizedTest
+    void shouldIndexPagesAndFindDuplicates(boolean inMemory) throws Exception {
+        DuplicatePageIndexer deduper = initDuplicatePageIndexer(inMemory);
         // given
         String url1 = "http://example.com/index.html";
         String content1 = readFileAsString("ache-docs.html");
@@ -70,6 +51,14 @@ public class DuplicatePageIndexerTest {
         assertThat(dups.iterator().next(), is(url1));
 
         assertThat(deduper.isNearDuplicate(content3), is(false));
+    }
+
+    DuplicatePageIndexer initDuplicatePageIndexer(boolean inMemory) {
+        if (inMemory) {
+            return new DuplicatePageIndexer();
+        } else {
+            return new DuplicatePageIndexer(tempFolder.toString());
+        }
     }
 
     private String readFileAsString(String filename) throws IOException {

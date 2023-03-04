@@ -3,18 +3,18 @@ package achecrawler.integration;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.lessThan;
-import static org.junit.Assert.assertThat;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import com.sun.net.httpserver.HttpServer;
 
@@ -25,31 +25,31 @@ import achecrawler.link.frontier.Frontier;
 import achecrawler.link.frontier.LinkRelevance;
 
 public class HardFocusCrawlingTest {
-    
-    @Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
+
+    @TempDir
+    public File tempFolder;
     
     static String basePath = HardFocusCrawlingTest.class.getResource("hard_focus_test").getFile();
 
     private static HttpServer httpServer;
-    
-    @BeforeClass
-    public static void setupServer() throws IOException, InterruptedException {
+
+    @BeforeAll
+    static void setupServer() throws IOException {
         System.out.println("HardFocusCrawlingTest");
         httpServer = new TestWebServerBuilder("127.0.0.1", 1234)
             .withStaticFolder(Paths.get(basePath, "html"))
             .start();
     }
-    
-    @AfterClass
-    public static void shutdownServer() throws IOException {
+
+    @AfterAll
+    static void shutdownServer() {
         httpServer.stop(0);
     }
 
     @Test
-    public void shouldDownloadLinksOnlyFromRelevantPages() throws Exception {
+    void shouldDownloadLinksOnlyFromRelevantPages() {
 
-        String outputPath = tempFolder.newFolder().toString();
+        String outputPath = tempFolder.toString();
 
         String configPath = basePath + "/config/";
         String seedPath = basePath + "/seeds.txt";
@@ -89,11 +89,10 @@ public class HardFocusCrawlingTest {
     }
 
 
-
     @Test
-    public void shouldDownloadLinksFromAllPagesWhenFocusIsFalse() throws Exception {
+    void shouldDownloadLinksFromAllPagesWhenFocusIsFalse() {
 
-        String outputPath = tempFolder.newFolder().toString();
+        String outputPath = tempFolder.toString();
 
         String configPath = basePath + "/config/hard_focus_false";
         String seedPath = basePath + "/seeds.txt";
@@ -128,9 +127,7 @@ public class HardFocusCrawlingTest {
         Configuration config = new Configuration(configPath + "/ache.yml");
         String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
         String dir = Paths.get(outputPath, linkDirectory).toString();
-        Frontier frontier = new Frontier(dir, 1000,
+        return new Frontier(dir, 1000,
                 config.getLinkStorageConfig().getPersistentHashtableBackend());
-        return frontier;
     }
-
 }

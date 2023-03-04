@@ -3,35 +3,32 @@ package achecrawler.target.repository;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import achecrawler.target.classifier.TargetRelevance;
 import achecrawler.target.model.Page;
 import achecrawler.util.CloseableIterator;
+
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 public class RocksDBTargetRepositoryTest {
 
-    @Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
-
-    private ObjectMapper mapper = new ObjectMapper();
-
+    @TempDir
+    public File tempFolder;
     static String html;
     static String url;
     static Map<String, List<String>> responseHeaders;
 
-    @BeforeClass
-    static public void setUp() {
+    @BeforeAll
+    static void setUp() {
         url = "http://example.com";
         html = "<html><body>Hello World! Hello World! Hello World!</body></html>";
         responseHeaders = new HashMap<>();
@@ -39,9 +36,9 @@ public class RocksDBTargetRepositoryTest {
     }
 
     @Test
-    public void shouldInsetGetAndIterate() throws IOException {
+    void shouldInsetGetAndIterate() throws IOException {
         // given
-        String dataPath = tempFolder.newFolder().toString();
+        String dataPath = tempFolder.toString();
 
         Page target = new Page(new URL(url), html, responseHeaders);
         target.setCrawlerId("mycrawler");
@@ -74,6 +71,15 @@ public class RocksDBTargetRepositoryTest {
         assertThat(page.getTargetRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
         assertThat(page.getTargetRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
         assertThat(page.getCrawlerId(), is("mycrawler"));
+    }
+
+    private static File newFolder(File root, String... subDirs) throws IOException {
+        String subFolder = String.join("/", subDirs);
+        File result = new File(root, subFolder);
+        if (!result.mkdirs()) {
+            throw new IOException("Couldn't create folders " + root);
+        }
+        return result;
     }
 
 }

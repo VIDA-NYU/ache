@@ -1,16 +1,16 @@
 package achecrawler.crawler.async;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.Assert.assertThat;
-
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.junit.Test;
 import org.mockito.ArgumentCaptor;
+
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import achecrawler.crawler.async.RobotsTxtHandler.RobotsData;
@@ -19,10 +19,10 @@ import achecrawler.crawler.crawlercommons.util.Headers;
 import achecrawler.link.LinkStorage;
 import achecrawler.link.frontier.LinkRelevance;
 
-public class RobotsTxtHandlerTest {
+class RobotsTxtHandlerTest {
 
     @Test
-    public void shouldParseLinksFromSitemapXml() throws Exception {
+    void shouldParseLinksFromSitemapXml() throws Exception {
         // given
         LinkStorage linkStorageMock = Mockito.mock(LinkStorage.class);
         RobotsTxtHandler handler = new RobotsTxtHandler(linkStorageMock, "TestAgent");

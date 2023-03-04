@@ -3,18 +3,18 @@ package achecrawler.link.frontier.selector;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.List;
 
-import org.junit.Test;
-
 import achecrawler.link.frontier.LinkRelevance;
 
-public class RandomLinkSelectorTest {
+import org.junit.jupiter.api.Test;
+
+class RandomLinkSelectorTest {
 
     @Test
-    public void shouldSelectLinksRandomly() throws Exception {
+    void shouldSelectLinksRandomly() throws Exception {
         // given
         RandomLinkSelector selector = new RandomLinkSelector();
         List<LinkRelevance> frontier = asList(

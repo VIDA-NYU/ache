@@ -1,57 +1,56 @@
 package achecrawler.util;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
-import java.io.IOException;
+import java.nio.file.Paths;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import com.codahale.metrics.Counter;
 
 public class MetricsManagerTest {
 
-	MetricsManager metricsManager;
+    @TempDir
+    public File tempFolder;
 
-	@Rule
-	public TemporaryFolder tempFolder = new TemporaryFolder();
+    @Test
+    void testSavingOfMetrics() {
+		File metricsManagerPath = Paths.get(tempFolder.getAbsolutePath(), "metrics_manager_path").toFile();
+		MetricsManager metricsManager = new MetricsManager(metricsManagerPath.getAbsolutePath());
 
-	@Before
-	public void setUp() throws IOException {
-		// metricsManager = new MetricsManager("/tmp/testing");
-		metricsManager = new MetricsManager(tempFolder.newFolder().getAbsolutePath());
-	}
-
-	@Test
-	public void testSavingOfMetrics() throws IOException {
 		Counter counter = metricsManager.getCounter("sample_counter");
 		counter.inc();
 
-		String directoryPath = tempFolder.newFolder().getAbsolutePath(); // "/tmp/testing";
+		String directoryPath = Paths.get(tempFolder.getAbsolutePath(), "saved_path").toString();
 		metricsManager.saveMetrics(directoryPath);
 		assertTrue(new File(directoryPath + "/metrics/metrics_counters.data").exists());
 	}
 
-	@Test
-	public void testLoadingOfMetrics() throws IOException {
+    @Test
+    void testLoadingOfMetrics() {
+		File metricsManagerPath = Paths.get(tempFolder.getAbsolutePath(), "metrics_manager_path").toFile();
+		MetricsManager metricsManager = new MetricsManager(metricsManagerPath.getAbsolutePath());
+
 		Counter counter = metricsManager.getCounter("sample_counter");
 		counter.inc();
 		counter.inc();
 
-		String directoryPath = tempFolder.newFolder().getAbsolutePath(); // "/tmp/testing";
+		String directoryPath = Paths.get(tempFolder.getAbsolutePath(), "saved_path").toString();
 		metricsManager.saveMetrics(directoryPath);
 
 		MetricsManager metricsManager2 = new MetricsManager(directoryPath);
 		Counter testCounter = metricsManager2.getCounter("sample_counter");
-		assertTrue(testCounter.getCount() == 2);
-
+        assertEquals(2, testCounter.getCount());
 	}
 
-	@Test
-	public void testLoadingOfMetrics2Counters() throws IOException {
+    @Test
+    void testLoadingOfMetrics2Counters() {
+		File metricsManagerPath = Paths.get(tempFolder.getAbsolutePath(), "metrics_manager_path").toFile();
+		MetricsManager metricsManager = new MetricsManager(metricsManagerPath.getAbsolutePath());
+
 		Counter counter = metricsManager.getCounter("sample_test_counter");
 		counter.inc();
 		counter.inc();
@@ -61,14 +60,14 @@ public class MetricsManagerTest {
 			sampleCounter2.inc();
 		}
 
-		String directoryPath = tempFolder.newFolder().getAbsolutePath(); // "/tmp/testing";
+		String directoryPath = Paths.get(tempFolder.getAbsolutePath(), "saved_path").toString();
 		metricsManager.saveMetrics(directoryPath);
 
 		MetricsManager metricsManager2 = new MetricsManager(directoryPath);
 		Counter testCounter = metricsManager2.getCounter("sample_test_counter");
-		assertTrue(testCounter.getCount() == 2);
+        assertEquals(2, testCounter.getCount());
 		
 		Counter testCounter2 = metricsManager2.getCounter("sample_test_counter2");
-		assertTrue(testCounter2.getCount() == 10);
+        assertEquals(10, testCounter2.getCount());
 	}
 }

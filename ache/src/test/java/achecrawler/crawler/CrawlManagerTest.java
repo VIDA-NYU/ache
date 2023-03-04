@@ -1,11 +1,12 @@
 package achecrawler.crawler;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
@@ -13,11 +14,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import com.google.common.collect.ImmutableMap;
 import com.sun.net.httpserver.HttpServer;
@@ -32,31 +32,31 @@ import achecrawler.target.repository.FilesTargetRepository;
 public class CrawlManagerTest {
 
 
-    @Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
+    @TempDir
+    public File tempFolder;
 
     static String basePath = HardFocusCrawlingTest.class.getResource("hard_focus_test").getFile();
 
     private static HttpServer httpServer;
 
-    @BeforeClass
-    public static void setupServer() throws IOException, InterruptedException {
+    @BeforeAll
+    static void setupServer() throws IOException {
         httpServer = new TestWebServerBuilder("127.0.0.1", 1234)
                 .withStaticFolder(Paths.get(basePath, "html"))
                 .start();
     }
 
-    @AfterClass
-    public static void shutdownServer() {
+    @AfterAll
+    static void shutdownServer() {
         httpServer.stop(0);
     }
 
 
     @Test
-    public void createAndStartDeepCrawl() throws Exception {
+    void createAndStartDeepCrawl() throws Exception {
         // given
         // String baseDataPath = "/tmp/junit34rda3dd";
-        String baseDataPath = tempFolder.newFolder().toString();
+        String baseDataPath = tempFolder.toString();
         Map<?, ?> props = ImmutableMap.of(
                 "link_storage.scheduler.host_min_access_interval", 0);
         Configuration baseConfig = new Configuration(props);
@@ -98,7 +98,7 @@ public class CrawlManagerTest {
                 "http://127.0.0.1:1234/relevant_page2.html");
 
         for (String page : allPages) {
-            assertTrue(page, crawledPages.contains(page));
+            assertTrue(crawledPages.contains(page), page);
         }
 
     }

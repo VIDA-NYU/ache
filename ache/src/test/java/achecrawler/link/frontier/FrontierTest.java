@@ -3,45 +3,45 @@ package achecrawler.link.frontier;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import achecrawler.util.persistence.PersistentHashtable.DB;
 
 public class FrontierTest {
-    
-    @Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
+
+    @TempDir
+    public File tempFolder;
 
     public Path testPath;
     
     private Frontier frontier;
-    
-    @Before
-    public void setUp() throws IOException {
-        testPath = Paths.get(tempFolder.newFolder().toString());
+
+    @BeforeEach
+    void setUp() {
+        testPath = Paths.get(tempFolder.toString());
         frontier = new Frontier(testPath.toString(), 1000, DB.ROCKSDB);
     }
-    
-    @After
-    public void tearDown() throws IOException {
+
+    @AfterEach
+    void tearDown() throws IOException {
         frontier.close();
         FileUtils.deleteDirectory(testPath.toFile());
     }
 
     @Test
-    public void shouldInsertUrl() throws Exception {
+    void shouldInsertUrl() throws Exception {
         // given
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 1);
@@ -53,9 +53,9 @@ public class FrontierTest {
         assertThat(frontier.exist(link1), is(1d));
         assertThat(frontier.exist(link2), is(nullValue()));
     }
-    
+
     @Test
-    public void shouldInsertUrlsAndSelectGivenNumberOfUrls() throws Exception {
+    void shouldInsertUrlsAndSelectGivenNumberOfUrls() throws Exception {
         // given
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
@@ -71,10 +71,10 @@ public class FrontierTest {
         assertThat(frontier.exist(link2), is(notNullValue()));
         assertThat(frontier.exist(link2), is(2d));
     }
-    
-    
+
+
     @Test
-    public void shouldInsertAndDeleteUrl() throws Exception {
+    void shouldInsertAndDeleteUrl() throws Exception {
         // given
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         
@@ -88,5 +88,4 @@ public class FrontierTest {
         // then
         assertThat(frontier.exist(link1), is(-1d));
     }
-
 }

@@ -1,21 +1,20 @@
 package achecrawler.seedfinder;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.Assert.assertThat;
-
 import java.net.URL;
 
-import org.junit.Test;
-
 import achecrawler.seedfinder.QueryProcessor.QueryResult;
+
+import org.junit.jupiter.api.Test;
 import achecrawler.target.model.Page;
 
-public class QueryGeneratorTest {
-    
+class QueryGeneratorTest {
+
     @Test
-    public void shouldBuildNextQuery() throws Exception {
+    void shouldBuildNextQuery() throws Exception {
         // given
         double minimumPrecision = 0.25;
         QueryGenerator generator = new QueryGenerator(minimumPrecision);

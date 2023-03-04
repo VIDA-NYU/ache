@@ -2,8 +2,8 @@ package achecrawler.link.classifier.builder;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import achecrawler.util.Urls;
 import java.io.IOException;
@@ -11,8 +11,8 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import achecrawler.config.Configuration;
 import achecrawler.link.LinkStorageConfig.BackSurferConfig;
@@ -21,9 +21,9 @@ import achecrawler.util.parser.BackLinkNeighborhood;
 
 public class BacklinkSurferTest {
 
-    @Ignore
+    @Disabled
     @Test
-    public void backlinksShouldBeDownloadedFromMozApi() throws IOException {
+    void backlinksShouldBeDownloadedFromMozApi() throws IOException {
         // given
         Map<String, String> props = new HashMap<>();
         props.put("link_storage.backsurfer.moz.access_id", "mozscape-4a1d0827fc");
@@ -43,9 +43,9 @@ public class BacklinkSurferTest {
         assertTrue(backLinkSetIsValid(backlinks));
     }
 
-    @Ignore
+    @Disabled
     @Test
-    public void backlinksShouldBeDownloadedFromGoogle() throws IOException {
+    void backlinksShouldBeDownloadedFromGoogle() throws IOException {
         // given
         Map<String, String> props = new HashMap<>();
         BackSurferConfig config = new Configuration(props).getLinkStorageConfig().getBackSurferConfig();

@@ -3,18 +3,18 @@ package achecrawler.link.frontier;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.fail;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Map;
+import java.util.Random;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -31,26 +31,25 @@ import achecrawler.util.persistence.PersistentHashtable.DB;
 
 public class FrontierManagerTest {
 
-    @Rule
-    // a new temp folder is created for each test case
-    public TemporaryFolder tempFolder = new TemporaryFolder();
+    @TempDir
+    public File tempFolder;
     
-    private LinkFilter emptyLinkFilter = new LinkFilter.Builder().build();
-    private MetricsManager metricsManager = new MetricsManager();
+    private final LinkFilter emptyLinkFilter = new LinkFilter.Builder().build();
+    private final MetricsManager metricsManager = new MetricsManager();
     private LinkStorageConfig config = new LinkStorageConfig();
     private Frontier frontier;
     private String dataPath;
     private String modelPath;
 
-    private int minimumAccessTimeInterval = 0;
-    private int schedulerMaxLinks = 2;
-    private boolean downloadSitemapXml = false;
-    
-    @Before
-    public void setUp() throws Exception {
-        frontier = new Frontier(tempFolder.newFolder().toString(), 1000, DB.ROCKSDB);
-        dataPath = tempFolder.newFolder().toString();
-        modelPath = tempFolder.newFolder().toString();
+    private final int minimumAccessTimeInterval = 0;
+    private final int schedulerMaxLinks = 2;
+    private final boolean downloadSitemapXml = false;
+
+    @BeforeEach
+    void setUp() throws Exception {
+        frontier = new Frontier(newSubFolder(tempFolder).toString(), 1000, DB.ROCKSDB);
+        dataPath = newSubFolder(tempFolder).toString();
+        modelPath = newSubFolder(tempFolder).toString();
         Map<?, ?> props = ImmutableMap.of(
             "link_storage.scheduler.max_links", schedulerMaxLinks,
             "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
@@ -58,19 +57,15 @@ public class FrontierManagerTest {
         );
         config = new Configuration(props).getLinkStorageConfig();
     }
-    
-    @After
-    public void tearDown() throws IOException {
-    }
-    
+
     @Test
-    public void shouldNotInsertLinkOutOfScope() throws Exception {
+    void shouldNotInsertLinkOutOfScope() throws Exception {
         // given
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
 
         LinkSelector linkSelector = new RandomLinkSelector();
-        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, DB.ROCKSDB);
+        Frontier frontier = new Frontier(newSubFolder(tempFolder).toString(), 1000, DB.ROCKSDB);
 
         Map<?, ?> props = ImmutableMap.of(
             "link_storage.scheduler.max_links", schedulerMaxLinks,
@@ -106,13 +101,13 @@ public class FrontierManagerTest {
     }
 
     @Test
-    public void shouldRememberScopeOnRestart() throws Exception {
+    void shouldRememberScopeOnRestart() throws Exception {
         // given
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
 
         LinkSelector linkSelector = new RandomLinkSelector();
-        String folder = tempFolder.newFolder().toString();
+        String folder = newSubFolder(tempFolder).toString();
         Frontier frontier = new Frontier(folder, 1000, DB.ROCKSDB);
 
         Map<?, ?> props = ImmutableMap.of(
@@ -157,7 +152,7 @@ public class FrontierManagerTest {
 
 
     @Test
-    public void shouldModifyScopeAfterAddingNewSeeds() throws Exception {
+    void shouldModifyScopeAfterAddingNewSeeds() throws Exception {
         // given
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
 
@@ -165,7 +160,7 @@ public class FrontierManagerTest {
         LinkRelevance link2_2 = new LinkRelevance(new URL("http://www.example2.com/about.html"), 2);
 
         LinkSelector linkSelector = new RandomLinkSelector();
-        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, DB.ROCKSDB);
+        Frontier frontier = new Frontier(newSubFolder(tempFolder).toString(), 1000, DB.ROCKSDB);
 
         Map<?, ?> props = ImmutableMap.of(
             "link_storage.scheduler.max_links", schedulerMaxLinks,
@@ -217,7 +212,7 @@ public class FrontierManagerTest {
     }
 
     @Test
-    public void shouldInsertUrl() throws Exception {
+    void shouldInsertUrl() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
@@ -239,9 +234,9 @@ public class FrontierManagerTest {
         
         frontierManager.close();
     }
-    
+
     @Test
-    public void shouldNotInsertUrlTwice() throws Exception {
+    void shouldNotInsertUrlTwice() throws Exception {
         // given
         Map<?, ?> props = ImmutableMap.of(
                 "link_storage.scheduler.max_links", schedulerMaxLinks,
@@ -279,9 +274,9 @@ public class FrontierManagerTest {
         // finalize
         frontierManager.close();
     }
-    
+
     @Test
-    public void shouldSelectUrlsInsertedAfterFirstSelect() throws Exception {
+    void shouldSelectUrlsInsertedAfterFirstSelect() throws Exception {
         // given
         int minimumAccessTimeInterval = 500;
         int schedulerMaxLinks = 10;
@@ -330,9 +325,9 @@ public class FrontierManagerTest {
         
         frontierManager.close();
     }
-    
+
     @Test
-    public void shouldInsertRobotsLinkWhenAddDomainForTheFirstTime() throws Exception {
+    void shouldInsertRobotsLinkWhenAddDomainForTheFirstTime() throws Exception {
         // given
         Map<?, ?> props = ImmutableMap.of(
             "link_storage.scheduler.max_links", schedulerMaxLinks,
@@ -375,7 +370,7 @@ public class FrontierManagerTest {
     }
 
     @Test
-    public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
+    void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         LinkSelector recrawlSelector = null;
@@ -418,10 +413,10 @@ public class FrontierManagerTest {
 
         frontierManager.close();
     }
-    
-    
+
+
     @Test
-    public void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
+    void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         LinkSelector recrawlSelector = null;
@@ -466,12 +461,12 @@ public class FrontierManagerTest {
         frontierManager.close();
         
     }
-    
+
     @Test
-    public void shouldNotReturnLinkReturnedWithinMinimumTimeInterval() throws Exception {
+    void shouldNotReturnLinkReturnedWithinMinimumTimeInterval() throws Exception {
         // given
         int minimumAccessTimeInterval = 500;
-        ImmutableMap<String, ? extends Object> props = ImmutableMap.of(
+        ImmutableMap<String, ?> props = ImmutableMap.of(
             "link_storage.scheduler.max_links", 2,
             "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
             "link_storage.download_sitemap_xml", false
@@ -519,5 +514,16 @@ public class FrontierManagerTest {
         frontierManager.close();
         
     }
+    private static File newSubFolder(File root) throws IOException {
+        return newSubFolder(root, String.valueOf(new Random().nextLong()));
+    }
 
+    private static File newSubFolder(File root, String... subDirs) throws IOException {
+        String subFolder = String.join("/", subDirs);
+        File result = new File(root, subFolder);
+        if (!result.mkdirs()) {
+            throw new IOException("Couldn't create folders " + root);
+        }
+        return result;
+    }
 }

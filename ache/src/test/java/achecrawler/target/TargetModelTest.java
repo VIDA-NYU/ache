@@ -3,21 +3,21 @@ package achecrawler.target;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.net.URL;
 
-import org.junit.Test;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.junit.jupiter.api.Test;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
 import achecrawler.target.model.TargetModelCbor;
 
-public class TargetModelTest {
+class TargetModelTest {
 
     @Test
-    public void shouldSerializeAndUnserializeFieldsCorrectly() throws Exception {
+    void shouldSerializeAndUnserializeFieldsCorrectly() throws Exception {
         // given
         ObjectMapper mapper = new ObjectMapper(new CBORFactory());
 

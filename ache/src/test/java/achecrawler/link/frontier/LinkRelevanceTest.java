@@ -1,16 +1,15 @@
 package achecrawler.link.frontier;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
-
 import java.net.MalformedURLException;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class LinkRelevanceTest {
+class LinkRelevanceTest {
 
     @Test
-    public void shouldExtractCorrectTopLevelDomain() throws MalformedURLException {
+    void shouldExtractCorrectTopLevelDomain() throws MalformedURLException {
         // given
         LinkRelevance link = new LinkRelevance("http://www.test.asdf.com/index.html", 299.00);
         // when
@@ -18,9 +17,9 @@ public class LinkRelevanceTest {
         // then
         assertThat(tld,  is("asdf.com"));
     }
-    
+
     @Test
-    public void shouldExtractIPAsTLD2() throws MalformedURLException {
+    void shouldExtractIPAsTLD2() throws MalformedURLException {
         // given
         LinkRelevance link = new LinkRelevance("http://127.0.0.1/index.html", 299.00);
         // when

@@ -1,19 +1,17 @@
 package achecrawler.integration;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.lessThan;
-import static org.junit.Assert.assertThat;
-
 import java.io.File;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import achecrawler.Main;
 import achecrawler.target.classifier.TargetClassifier;
@@ -22,15 +20,15 @@ import achecrawler.target.classifier.TargetRelevance;
 import achecrawler.target.model.Page;
 
 public class BuildModelTest {
-    
-    @Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
+
+    @TempDir
+    public File tempFolder;
 
     @Test
-    public void smileFeaturesFileShouldBeGeneratedInTheProperFormat() throws Exception {
+    void smileFeaturesFileShouldBeGeneratedInTheProperFormat() throws Exception {
         
         String trainingPath = BuildModelTest.class.getResource("build_model_test").getFile();
-        String modelPath    = tempFolder.newFolder().toString();
+        String modelPath    = tempFolder.toString();
         
         // Train a page classifier model
         String[] args = {"buildModel", "-t", trainingPath, "-o", modelPath};

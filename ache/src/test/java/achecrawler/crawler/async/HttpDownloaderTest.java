@@ -2,7 +2,7 @@ package achecrawler.crawler.async;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -11,42 +11,29 @@ import java.util.List;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameter;
-import org.junit.runners.Parameterized.Parameters;
-
 import com.sun.net.httpserver.HttpServer;
 
 import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import achecrawler.link.frontier.LinkRelevance;
 import achecrawler.util.MetricsManager;
 
-@RunWith(Parameterized.class)
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
 public class HttpDownloaderTest {
-
-//    @Before
-//    public void setUp() {
-//        this.downloader = new HttpDownloader();
-//    }
-
-    @Parameter
-    public HttpDownloader downloader;
-
     /*
      * This test runs multiple times for each of the following parameters,
      * to make sure that it works with all underlying fetcher implementations.
      */
-    @Parameters
-    public static Iterable<? extends Object> data() {
+    public static Iterable<?> data() {
         HttpDownloader simple = new HttpDownloader();
         HttpDownloader okHttp = new HttpDownloader(new HttpDownloaderConfig("okHttp"), null, new MetricsManager(false));
         return Arrays.asList(simple, okHttp);
     }
 
-    @Test
-    public void shouldFollowRedirections() throws Exception {
+    @MethodSource("data")
+    @ParameterizedTest
+    void shouldFollowRedirections(HttpDownloader downloader) throws Exception {
         // given
         HttpServer httpServer = new TestWebServerBuilder()
             .withRedirect("/index.html", "/new/location.html")
@@ -71,9 +58,10 @@ public class HttpDownloaderTest {
         
         httpServer.stop(0);
     }
-    
-    @Test
-    public void shouldDownloadPageContentAndMetadata() throws Exception {
+
+    @MethodSource("data")
+    @ParameterizedTest
+    void shouldDownloadPageContentAndMetadata(HttpDownloader downloader) throws Exception {
         // given
         String responseContent = "Hello world!";
         String originalUrl = TestWebServerBuilder.address+"/index.html";
@@ -96,10 +84,11 @@ public class HttpDownloaderTest {
         
         httpServer.stop(0);
     }
-    
-    
-    @Test
-    public void shouldDownloadMultipleUrlsInParallel() throws Exception {
+
+
+    @MethodSource("data")
+    @ParameterizedTest
+    void shouldDownloadMultipleUrlsInParallel(HttpDownloader downloader) throws Exception {
         // given
         String originalUrl = TestWebServerBuilder.address+"/index.html";
         HttpServer httpServer = new TestWebServerBuilder()
@@ -120,9 +109,10 @@ public class HttpDownloaderTest {
         
         httpServer.stop(0);
     }
-    
-    @Test
-    public void shouldCallCompletedCallbackAfterDownloadFinishes() throws Exception {
+
+    @MethodSource("data")
+    @ParameterizedTest
+    void shouldCallCompletedCallbackAfterDownloadFinishes(HttpDownloader downloader) throws Exception {
         // given
         String originalUrl = TestWebServerBuilder.address+"/index.html";
         HttpServer httpServer = new TestWebServerBuilder()
@@ -154,5 +144,4 @@ public class HttpDownloaderTest {
         
         httpServer.stop(0);
     }
-
 }

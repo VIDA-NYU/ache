@@ -1,9 +1,8 @@
 package achecrawler.target.classifier;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -11,16 +10,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-import org.junit.Test;
-
 import achecrawler.target.model.Page;
 import achecrawler.target.model.ParsedData;
 import achecrawler.util.parser.PaginaURL;
 
-public class BodyRegexTargetClassifierTest {
+import org.junit.jupiter.api.Test;
+
+class BodyRegexTargetClassifierTest {
 
     @Test
-    public void test() throws MalformedURLException, TargetClassifierException {
+    void test() throws MalformedURLException, TargetClassifierException {
         // given
         URL url = new URL("http://example.com");
         String cont = "<html><div><a href=\"http://j6im4v42ur6dpic3.onion/\">TorProject Archive</a></div></html>";
@@ -43,9 +42,9 @@ public class BodyRegexTargetClassifierTest {
         assertThat(relevance1.isRelevant(), is(true));
         assertThat(relevance2.isRelevant(), is(false));
     }
-    
+
     @Test
-    public void shouldMatchHtmlFileWithMultipleLines() throws Exception {
+    void shouldMatchHtmlFileWithMultipleLines() throws Exception {
         // given
         Path file = Paths.get(getClass().getResource("body_regex_classifier/test-file.html").toURI());
         

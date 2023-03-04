@@ -1,10 +1,10 @@
 package achecrawler.config;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -12,9 +12,9 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
-import org.junit.Test;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.junit.jupiter.api.Test;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.google.common.collect.ImmutableMap;
 
@@ -23,12 +23,12 @@ import achecrawler.crawler.async.HttpDownloaderConfig;
 import achecrawler.link.LinkStorageConfig;
 import achecrawler.target.TargetStorageConfig;
 
-public class ConfigurationTest {
+class ConfigurationTest {
 
     String configFilePath = ConfigurationTest.class.getResource("ache.yml").getPath();
 
     @Test
-    public void shouldReadTargeStorageConfig() throws IOException {
+    void shouldReadTargeStorageConfig() throws IOException {
         // given
         Configuration configService = new Configuration(configFilePath);
 
@@ -50,7 +50,7 @@ public class ConfigurationTest {
     }
 
     @Test
-    public void shouldReadLinkStorageConfig() throws IOException {
+    void shouldReadLinkStorageConfig() throws IOException {
         // given
         Configuration configService = new Configuration(configFilePath);
 
@@ -82,7 +82,7 @@ public class ConfigurationTest {
     }
 
     @Test
-    public void shouldReadCrawlerConfig() throws IOException {
+    void shouldReadCrawlerConfig() throws IOException {
         // given
         Configuration configService = new Configuration(configFilePath);
 
@@ -100,7 +100,7 @@ public class ConfigurationTest {
     }
 
     @Test
-    public void shouldCopyAndUpdateConfig() throws IOException {
+    void shouldCopyAndUpdateConfig() throws IOException {
         // given
         Configuration baseConfig = new Configuration(configFilePath);
 
@@ -132,7 +132,7 @@ public class ConfigurationTest {
     }
 
     @Test
-    public void shouldNotChangeAfterSerialized() throws IOException {
+    void shouldNotChangeAfterSerialized() throws IOException {
         // given
         Map<?, ?> settings = ImmutableMap.of("target_storage.data_format.type", "ELASTICSEARCH");
         Configuration baseConfig = new Configuration(settings);

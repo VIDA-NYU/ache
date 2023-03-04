@@ -3,12 +3,12 @@ package achecrawler.target.repository;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.isIn;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,10 +27,9 @@ import org.archive.io.warc.WARCReader;
 import org.archive.io.warc.WARCReaderFactory;
 import org.archive.io.warc.WARCRecord;
 import org.archive.io.warc.WARCWriter;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import achecrawler.target.classifier.TargetRelevance;
 import achecrawler.target.model.Page;
@@ -38,15 +37,15 @@ import achecrawler.target.repository.WarcTargetRepository.RepositoryIterator;
 
 public class WarcTargetRepositoryTest {
 
-	@Rule
-	public TemporaryFolder tempFolder = new TemporaryFolder();
+    @TempDir
+    public File tempFolder;
 
 	static String html;
 	static String url;
 	static Map<String, List<String>> responseHeaders;
 
-    @BeforeClass
-    static public void setUp() {
+    @BeforeAll
+    static void setUp() {
         url = "http://example.com";
         html = "<html><body>Hello World! Hello World! Hello World!</body></html>";
         responseHeaders = new HashMap<>();
@@ -55,9 +54,9 @@ public class WarcTargetRepositoryTest {
     }
 
     @Test
-    public void shouldStoreAndIterageOverData() throws IOException {
+    void shouldStoreAndIterateOverData() throws IOException {
 
-        String folder = tempFolder.newFolder().toString();
+        String folder = tempFolder.toString();
 
         Page target = new Page(new URL(url), html, responseHeaders);
         target.setTargetRelevance(TargetRelevance.RELEVANT);
@@ -95,9 +94,9 @@ public class WarcTargetRepositoryTest {
     }
 
     @Test
-    public void shouldStoreAndIterateOverPages() throws IOException {
+    void shouldStoreAndIterateOverPages() throws IOException {
 
-        String folder = tempFolder.newFolder().toString();
+        String folder = tempFolder.toString();
 
         Page target = new Page(new URL(url), html.getBytes(), responseHeaders,
                 new URL("http://example.com/site/index.php"));
@@ -135,8 +134,8 @@ public class WarcTargetRepositoryTest {
     }
 
     @Test
-    public void testReadingMultipleWarcRecords() throws Exception {
-        String folder = tempFolder.newFolder().toString();
+    void testReadingMultipleWarcRecords() throws Exception {
+        String folder = tempFolder.toString();
 
         String url1 = "http://a.com";
         String url2 = "http://b.com";
@@ -180,9 +179,9 @@ public class WarcTargetRepositoryTest {
     }
 
     @Test
-    public void testReadingMultipleWarcRecordsUsingIterator() throws Exception {
+    void testReadingMultipleWarcRecordsUsingIterator() throws Exception {
         // given
-        String folder = tempFolder.newFolder().toString();
+        String folder = tempFolder.toString();
         String url1 = "http://a.com";
         String url2 = "http://b.com";
 
@@ -211,14 +210,14 @@ public class WarcTargetRepositoryTest {
     }
 
     @Test
-    public void testShouldNotFailWhenThereAreNonASCIICharactersOnHeaders() throws Exception {
+    void testShouldNotFailWhenThereAreNonASCIICharactersOnHeaders() throws Exception {
         // given
-        String folder = tempFolder.newFolder().toString();
+        String folder = tempFolder.toString();
 
         String url1 = "http://a.com";
 
         Map<String, List<String>> headers = new HashMap<>();
-        Character invalidChar = (char) 0x80;
+        char invalidChar = (char) 0x80;
         String headerValue = "inline; filename=\"Invalid_" + invalidChar + "\"";
         headers.put("Content-Disposition", asList(headerValue));
 
@@ -244,9 +243,9 @@ public class WarcTargetRepositoryTest {
     }
 
     @Test
-    public void shouldIterateOverEmptyFolder() throws IOException {
+    void shouldIterateOverEmptyFolder() throws IOException {
         // given
-        String folder = tempFolder.newFolder().toString();
+        String folder = tempFolder.toString();
 
         WarcTargetRepository repository = new WarcTargetRepository(folder);
 
@@ -257,11 +256,11 @@ public class WarcTargetRepositoryTest {
         assertThat(it.hasNext(), is(false));
         assertThat(it.next(), is(nullValue()));
     }
-	
+
     @Test
-    public void testWritingToAWarcFileWithMaxSize() throws Exception {
+    void testWritingToAWarcFileWithMaxSize() throws Exception {
         // given
-        String folder = tempFolder.newFolder().toString();
+        String folder = tempFolder.toString();
 
         String url1 = "http://a.com";
         String url2 = "http://b.com";
@@ -303,5 +302,4 @@ public class WarcTargetRepositoryTest {
 
         assertThat(allUrls, empty());
     }
-
 }

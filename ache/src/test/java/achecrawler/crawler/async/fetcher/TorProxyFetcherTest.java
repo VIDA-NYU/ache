@@ -2,14 +2,13 @@ package achecrawler.crawler.async.fetcher;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
-
 import java.io.IOException;
 
-import org.junit.Test;
-
 import com.sun.net.httpserver.HttpServer;
+
+import org.junit.jupiter.api.Test;
 
 import achecrawler.config.Configuration;
 import achecrawler.crawler.async.HttpDownloaderConfig;
@@ -17,12 +16,12 @@ import achecrawler.crawler.async.TestWebServerBuilder;
 import achecrawler.crawler.crawlercommons.fetcher.BaseFetchException;
 import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
 
-public class TorProxyFetcherTest {
+class TorProxyFetcherTest {
 
     String torProxyAcheYml = TorProxyFetcherTest.class.getResource("tor-proxy-ache.yml").getFile();
-    
+
     @Test
-    public void shouldCreateTorProxyFetcher() {
+    void shouldCreateTorProxyFetcher() {
         // given
         Configuration configService = new Configuration(torProxyAcheYml);
         
@@ -34,10 +33,10 @@ public class TorProxyFetcherTest {
         assertThat(config.getTorProxy(), is("http://localhost:1234"));
         assertThat(fetcher, is(notNullValue()));
     }
-    
-    
+
+
     @Test
-    public void torProxyShouldUseProxyForOnionLinks() throws BaseFetchException, IOException {
+    void torProxyShouldUseProxyForOnionLinks() throws BaseFetchException, IOException {
         // given
         Configuration configService = new Configuration(torProxyAcheYml);
         HttpDownloaderConfig config = configService.getCrawlerConfig().getDownloaderConfig();

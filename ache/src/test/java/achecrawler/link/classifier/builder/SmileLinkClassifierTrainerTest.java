@@ -2,16 +2,13 @@ package achecrawler.link.classifier.builder;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.lessThan;
-import static org.junit.Assert.assertThat;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
-
-import org.junit.Test;
 
 import achecrawler.link.classifier.LNClassifier;
 import achecrawler.util.Sampler;
@@ -19,10 +16,12 @@ import achecrawler.util.Tokenizers;
 import achecrawler.util.parser.LinkNeighborhood;
 import achecrawler.util.string.Stopwords;
 
-public class SmileLinkClassifierTrainerTest {
+import org.junit.jupiter.api.Test;
+
+class SmileLinkClassifierTrainerTest {
 
     @Test
-    public void shouldTrainAndClassifyLinkNeighborhoods() throws Exception {
+    void shouldTrainAndClassifyLinkNeighborhoods() throws Exception {
 
         LinkClassifierTrainer classifierTrainer = new LinkClassifierTrainer(Stopwords.DEFAULT);
 
@@ -58,7 +57,7 @@ public class SmileLinkClassifierTrainerTest {
     }
 
     @Test
-    public void shouldWorkWithMultipleClasses() throws Exception {
+    void shouldWorkWithMultipleClasses() throws Exception {
 
         LinkClassifierTrainer classifierTrainer = new LinkClassifierTrainer(Stopwords.DEFAULT);
 

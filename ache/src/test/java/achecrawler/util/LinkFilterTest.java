@@ -1,17 +1,17 @@
 package achecrawler.util;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class LinkFilterTest {
+class LinkFilterTest {
 
     @Test
-    public void regexMatcherTestCase1() {
+    void regexMatcherTestCase1() {
         // given
         List<String> urlRegexPatterns = Arrays.asList(
             ".*/thread/.*",
@@ -49,7 +49,7 @@ public class LinkFilterTest {
     }
 
     @Test
-    public void wildcardMatherTestCase1() {
+    void wildcardMatherTestCase1() {
         // given
         List<String> urlRegexPatterns = Arrays.asList(
             "*/thread/*",
@@ -86,7 +86,7 @@ public class LinkFilterTest {
     }
 
     @Test
-    public void wildcardMatherTestCase2() {
+    void wildcardMatherTestCase2() {
         // given
         List<String> urlRegexPatterns = Arrays.asList(
             "http://a.com/*c"
@@ -118,7 +118,7 @@ public class LinkFilterTest {
     }
 
     @Test
-    public void testComposedLinkFilter() {
+    void testComposedLinkFilter() {
         // given
         List<String> whitelistRegexes = Arrays.asList(
             "http[s]?://.*\\.?mydomain\\.com.*" // allow only links from mydomain.com
@@ -155,7 +155,7 @@ public class LinkFilterTest {
 
 
     @Test
-    public void shouldAcceptAllUrlsIfBlackListAndWhiteListAreEmpty() {
+    void shouldAcceptAllUrlsIfBlackListAndWhiteListAreEmpty() {
         // given
         List<String> whitelistRegexes = Arrays.asList();
         List<String> blacklistRegexes = Arrays.asList();
@@ -178,7 +178,7 @@ public class LinkFilterTest {
 
 
     @Test
-    public void shouldLoadFiltersFromYamlFile() {
+    void shouldLoadFiltersFromYamlFile() {
         // given
         String path = LinkFilterTest.class.getResource("link_filters.yml").getPath();
 
@@ -205,7 +205,7 @@ public class LinkFilterTest {
     }
 
     @Test
-    public void shouldLoadFiltersFromYamlFileBackpage() {
+    void shouldLoadFiltersFromYamlFileBackpage() {
         // given
         String path = LinkFilterTest.class.getResource("backpage_link_filters.yml").getPath();
         LinkFilter linkfilter = new LinkFilter.Builder()

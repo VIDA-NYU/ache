@@ -3,17 +3,18 @@ package achecrawler.link.frontier.selector;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import achecrawler.link.frontier.LinkRelevance;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import org.junit.Test;
 
-public class MinRelevanceRecrawlSelectorTest {
+import org.junit.jupiter.api.Test;
+
+class MinRelevanceRecrawlSelectorTest {
 
     @Test
-    public void shouldSelectNotSelectLinkWithRelevanceSmallerThanMinimum() throws Exception {
+    void shouldSelectNotSelectLinkWithRelevanceSmallerThanMinimum() throws Exception {
         // given
         long recrawlInterval = 100;
         MinRelevanceRecrawlSelector selector = new MinRelevanceRecrawlSelector(recrawlInterval,
@@ -40,7 +41,7 @@ public class MinRelevanceRecrawlSelectorTest {
     }
 
     @Test
-    public void shouldNotSelectSitemapsAndRobotsWhenConfiguredNotTo() throws Exception {
+    void shouldNotSelectSitemapsAndRobotsWhenConfiguredNotTo() throws Exception {
         // given
         long recrawlInterval = 100;
         MinRelevanceRecrawlSelector selector = new MinRelevanceRecrawlSelector(recrawlInterval,

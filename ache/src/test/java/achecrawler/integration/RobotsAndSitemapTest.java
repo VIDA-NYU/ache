@@ -4,12 +4,13 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.lessThan;
 import static org.hamcrest.Matchers.not;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
@@ -17,11 +18,10 @@ import java.util.List;
 import crawlercommons.robots.SimpleRobotRules;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import achecrawler.util.persistence.PersistentHashtable;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import com.sun.net.httpserver.HttpServer;
 
@@ -32,30 +32,30 @@ import achecrawler.link.frontier.Frontier;
 import achecrawler.link.frontier.LinkRelevance;
 
 public class RobotsAndSitemapTest {
-    
-    @Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
+
+    @TempDir
+    public File tempFolder;
     
     static String basePath = RobotsAndSitemapTest.class.getResource("robots_and_sitemap_test").getFile();
 
     private static HttpServer httpServer;
-    
-    @BeforeClass
-    public static void setupServer() throws IOException, InterruptedException {
+
+    @BeforeAll
+    static void setupServer() throws IOException {
         httpServer = new TestWebServerBuilder("127.0.0.1", 1234)
             .withStaticFolder(Paths.get(basePath, "static"))
             .start();
     }
-    
-    @AfterClass
-    public static void shutdownServer() throws IOException {
+
+    @AfterAll
+    static void shutdownServer() {
         httpServer.stop(0);
     }
 
     @Test
-    public void shouldDownloadLinksListedOnSitemapsXml() throws Exception {
+    void shouldDownloadLinksListedOnSitemapsXml() throws Exception {
 
-        String outputPath = tempFolder.newFolder().toString();
+        String outputPath = tempFolder.toString();
 
         String configPath = basePath + "/config/";
         String seedPath = basePath + "/seeds.txt";
@@ -91,11 +91,11 @@ public class RobotsAndSitemapTest {
             assertThat("URL="+url, frontier.exist(link), is(nullValue()));
         }
     }
-    
-    @Test
-    public void test1ToNotToDownloadSitesDisallowedOnRobots() throws Exception {
 
-        String outputPath = tempFolder.newFolder().toString();
+    @Test
+    void test1ToNotToDownloadSitesDisallowedOnRobots() {
+
+        String outputPath = tempFolder.toString();
 
         String configPath = basePath + "/config/";
         String seedPath = basePath + "/seeds.txt";
@@ -131,9 +131,9 @@ public class RobotsAndSitemapTest {
     }
 
     @Test
-    public void test2ToNotToDownloadSitesDisallowedOnRobotsWithSitemapsFalse() throws Exception {
+    void test2ToNotToDownloadSitesDisallowedOnRobotsWithSitemapsFalse() {
 
-        String outputPath = tempFolder.newFolder().toString();
+        String outputPath = tempFolder.toString();
 
         String configPath = basePath + "/config2/";
         String seedPath = basePath + "/seeds.txt";
@@ -171,14 +171,14 @@ public class RobotsAndSitemapTest {
     }
 
     @Test
-    public void testKryoSerializationAndDeserialization() throws IOException {
+    void testKryoSerializationAndDeserialization() {
         final String simpleRobotsTxt = "User-agent: *" + "\r\n" + "Disallow:";
 
         SimpleRobotRulesParser robotParser = new SimpleRobotRulesParser();
-        SimpleRobotRules rules = (SimpleRobotRules) robotParser.parseContent("http://domain.com",
+        SimpleRobotRules rules = robotParser.parseContent("http://domain.com",
                 simpleRobotsTxt.getBytes(UTF_8), "text/plain", "Any-darn-crawler");
 
-        String outputPath = tempFolder.newFolder().toString();
+        String outputPath = tempFolder.toString();
 
         PersistentHashtable<SimpleRobotRules> robotRulesMap = new PersistentHashtable<>(outputPath, 0,
                 SimpleRobotRules.class);
@@ -190,12 +190,12 @@ public class RobotsAndSitemapTest {
         assertTrue(rules.isAllowed("http://www.domain.com/anypage.html"));
     }
 
-    private void assertWasCrawled(String url, Frontier frontier) throws Exception {
+    private void assertWasCrawled(String url, Frontier frontier) {
         LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
         assertThat("URL=" + url, frontier.exist(link), is(lessThan(0d)));
     }
 
-    private void assertWasNotCrawled(String url, Frontier frontier) throws Exception {
+    private void assertWasNotCrawled(String url, Frontier frontier) {
         LinkRelevance link = LinkRelevance.create(url);
         assertThat("URL=" + url, frontier.exist(link), is(not(lessThan(0d))));
     }
@@ -204,9 +204,7 @@ public class RobotsAndSitemapTest {
         Configuration config = new Configuration(configPath + "/ache.yml");
         String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
         String dir = Paths.get(outputPath, linkDirectory).toString();
-        Frontier frontier = new Frontier(dir, 1000,
+        return new Frontier(dir, 1000,
                 config.getLinkStorageConfig().getPersistentHashtableBackend());
-        return frontier;
     }
-
 }

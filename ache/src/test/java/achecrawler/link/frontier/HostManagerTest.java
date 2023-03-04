@@ -1,31 +1,30 @@
 package achecrawler.link.frontier;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 
-import java.io.IOException;
+import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import achecrawler.util.persistence.PersistentHashtable.DB;
 
 public class HostManagerTest {
-    
-    @Rule
-    public TemporaryFolder tmp = new TemporaryFolder();
-    
-    @Before
-    public void setUp() throws Exception {}
+
+    @TempDir
+    public File tmp;
+
+    @BeforeEach
+    void setUp() {}
 
     @Test
-    public void shouldInsertAndPersistHostData() throws IOException {
+    void shouldInsertAndPersistHostData() {
         // given
-        Path path = Paths.get(tmp.newFolder().getAbsolutePath());
+        Path path = Paths.get(tmp.getAbsolutePath());
         HostManager hosts = new HostManager(path, DB.ROCKSDB);
         String host = "www.example.com";
         String anotherHost = "www.another-example.com";
@@ -38,5 +37,4 @@ public class HostManagerTest {
         assertThat(hosts.isKnown(host), is(true));
         assertThat(hosts.isKnown(anotherHost), is(false));
     }
-
 }

@@ -2,24 +2,19 @@ package achecrawler.link.frontier.selector;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.Test;
 
 import achecrawler.link.frontier.LinkRelevance;
 
-public class MaximizeWebsitesLinkSelectorTest {
+class MaximizeWebsitesLinkSelectorTest {
 
-    @Rule
-    public TemporaryFolder tempFolder = new TemporaryFolder();
-    
     @Test
-    public void shouldSelectLinksOfEachDomain() throws Exception {
+    void shouldSelectLinksOfEachDomain() throws Exception {
         // given
         MaximizeWebsitesLinkSelector selector = new MaximizeWebsitesLinkSelector();
         List<LinkRelevance> frontier = new ArrayList<>(asList(
@@ -57,9 +52,9 @@ public class MaximizeWebsitesLinkSelectorTest {
         assertThat(selectedLinks.size(), is(0));
 
     }
-    
+
     @Test
-    public void shouldSelectTopkLinksOfHigherRelevance() throws Exception {
+    void shouldSelectTopkLinksOfHigherRelevance() throws Exception {
         // given
         MaximizeWebsitesLinkSelector selector = new MaximizeWebsitesLinkSelector();
         List<LinkRelevance> frontier = asList(
@@ -94,7 +89,5 @@ public class MaximizeWebsitesLinkSelectorTest {
         assertThat(selectedLinks.get(6).getRelevance(), is(1d));
         assertThat(selectedLinks.get(7).getRelevance(), is(1d));
         assertThat(selectedLinks.get(8).getRelevance(), is(1d));
-
     }
-
 }

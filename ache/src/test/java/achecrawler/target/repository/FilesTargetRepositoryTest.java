@@ -4,9 +4,8 @@ import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.lessThan;
-import static org.junit.Assert.assertThat;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -14,10 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import achecrawler.target.classifier.TargetRelevance;
 import achecrawler.target.model.Page;
@@ -26,25 +24,25 @@ import achecrawler.util.CloseableIterator;
 
 public class FilesTargetRepositoryTest {
 
-	@Rule
-	public TemporaryFolder tempFolder = new TemporaryFolder();
+    @TempDir
+    public File tempFolder;
 	
 	static String html;
 	static String url;
 	static Map<String, List<String>> responseHeaders;
-	
-	@BeforeClass
-	static public void setUp() {
+
+    @BeforeAll
+    static void setUp() {
 		url = "http://example.com";
 		html = "<html><body>Hello World! Hello World! Hello World!</body></html>";
 		responseHeaders = new HashMap<>();
 		responseHeaders.put("content-type", asList("text/html"));
 	}
-	
-	@Test
-	public void shouldStoreAndIterageOverData() throws IOException {
+
+    @Test
+    void shouldStoreAndIterateOverData() throws IOException {
 		// given
-	    String folder = tempFolder.newFolder().toString(); 
+	    String folder = tempFolder.toString();
 		Page target = new Page(new URL(url), html, responseHeaders);
 		target.setTargetRelevance(TargetRelevance.RELEVANT);
 		
@@ -63,11 +61,11 @@ public class FilesTargetRepositoryTest {
         assertThat(page.getTargetRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
         assertThat(page.getTargetRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
 	}
-	
-	@Test
-    public void shoudNotCreateFilesLargerThanMaximumSize() throws IOException {
+
+    @Test
+    void shouldNotCreateFilesLargerThanMaximumSize() throws IOException {
         // given
-        String folder = tempFolder.newFolder().toString(); 
+        String folder = tempFolder.toString();
         
         String url1 = "http://a.com";
         String url2 = "http://b.com";
@@ -111,11 +109,11 @@ public class FilesTargetRepositoryTest {
         assertThat(files[0].length(), is(lessThan(maxFileSize)));
         assertThat(files[1].length(), is(lessThan(maxFileSize)));
     }
-	
-	@Test
-    public void sholdIterateOverEmptyFolder() throws IOException {
+
+    @Test
+    void shouldIterateOverEmptyFolder() {
         // given
-        String folder = tempFolder.newFolder().toString(); 
+        String folder = tempFolder.toString();
         
         FilesTargetRepository repository = new FilesTargetRepository(folder);
         
@@ -126,5 +124,4 @@ public class FilesTargetRepositoryTest {
         assertThat(it.hasNext(), is(false));
         assertThat(it.next(), is(nullValue()));
     }
-
 }

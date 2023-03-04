@@ -4,18 +4,18 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class PaginaURLTest {
+class PaginaURLTest {
 
     @Test
-    public void htmlEncodedLinksShouldBeEscaped() throws Exception {
+    void htmlEncodedLinksShouldBeEscaped() throws Exception {
         // given
         StringBuilder testPage = new StringBuilder();
         testPage.append("<!DOCTYPE html>");
@@ -43,7 +43,7 @@ public class PaginaURLTest {
      * is appended in the end of the URL.
      */
     @Test
-    public void testIssue141() throws Exception {
+    void testIssue141() throws Exception {
         // given
         StringBuilder testPage = new StringBuilder();
         testPage.append("<!DOCTYPE html>");
@@ -70,7 +70,7 @@ public class PaginaURLTest {
     }
 
     @Test
-    public void shouldIgnoreNonHttpLinks() throws Exception {
+    void shouldIgnoreNonHttpLinks() throws Exception {
         // given
         StringBuilder testPage = new StringBuilder();
         testPage.append("<!DOCTYPE html>");
@@ -93,7 +93,7 @@ public class PaginaURLTest {
     }
 
     @Test
-    public void linksShouldNotContainFragments() throws Exception {
+    void linksShouldNotContainFragments() throws Exception {
         // given
         String testString = createTestPage();
         URL url = new URL("http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document");
@@ -105,9 +105,9 @@ public class PaginaURLTest {
         	assertThat(extractedUrl.getFile().toString(), not(containsString("#")));
         }
     }
-    
+
     @Test
-    public void constructorsShouldWork() throws MalformedURLException {
+    void constructorsShouldWork() throws MalformedURLException {
         // given
         URL url = new URL("http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document");
         String testPage = createTestPage();
@@ -116,9 +116,9 @@ public class PaginaURLTest {
         // then
         assertThat(paginaURL.getURL(), is(notNullValue()));
     }
-    
+
     @Test
-    public void shouldNotExtractInvalidLinks() throws MalformedURLException {
+    void shouldNotExtractInvalidLinks() throws MalformedURLException {
         // given
         URL url = new URL("http://example.com/test.html");
         StringBuilder testPage = new StringBuilder();
@@ -144,9 +144,9 @@ public class PaginaURLTest {
         assertThat(lns.length, is(1));
         assertThat(lns[0].getLink().toString(), is("http://example.com/asdf.html"));
     }
-    
+
     @Test
-    public void shouldExtractAnchoTextAndTextAroundLink() throws MalformedURLException {
+    void shouldExtractAnchoTextAndTextAroundLink() throws MalformedURLException {
         // given
         URL url = new URL("http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document");
         String testPage = createTestPage();
@@ -166,9 +166,9 @@ public class PaginaURLTest {
         assertThat(neighborhoods[0].getAnchor()[1], is("first"));
         assertThat(neighborhoods[0].getAnchor()[2], is("paragraph"));
     }
-    
+
     @Test
-    public void shouldNormalizeLinks() throws MalformedURLException {
+    void shouldNormalizeLinks() throws MalformedURLException {
         // given
         URL url = new URL("http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document");
         String testPage = createTestPageUnormalizedLinks();
@@ -192,7 +192,7 @@ public class PaginaURLTest {
     }
 
     @Test
-    public void shouldExtractLinksWithRecentAndOnion() throws MalformedURLException {
+    void shouldExtractLinksWithRecentAndOnion() throws MalformedURLException {
         // given
         URL url = new URL("http://example.com/test.html");
         StringBuilder testPage = new StringBuilder();

@@ -1,112 +1,126 @@
 package achecrawler.crawler.cookies;
 
-import static org.junit.Assert.*;
-
 import achecrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
+
 import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.HashMap;
 
 import java.util.List;
 import org.apache.commons.lang.NullArgumentException;
 import org.apache.http.client.CookieStore;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import achecrawler.crawler.async.HttpDownloaderConfig;
 import achecrawler.crawler.async.fetcher.FetcherFactory;
 
-public class TestCookieUtils {
+class TestCookieUtils {
 
     Cookie cookie;
 
-    @Before
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         cookie = new Cookie("key1", "value1");
     }
 
-    @Test(expected = NullArgumentException.class)
-    public void testApacheCookieNullInput() {
-        CookieUtils.asApacheCookie(null);
+    @Test
+    void testApacheCookieNullInput() {
+        assertThrows(NullArgumentException.class, () -> {
+            CookieUtils.asApacheCookie(null);
+        });
     }
 
     @Test
-    public void testApacheCookielInput() {
+    void testApacheCookielInput() {
         cookie.setDomain(".slides.com");
         org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
-        assertTrue(resultCookie.getName().equals("key1"));
-        assertTrue(resultCookie.getValue().equals("value1"));
-        assertTrue(resultCookie.getDomain().equals(".slides.com"));
-    }
-
-    @Test(expected = NullArgumentException.class)
-    public void testOkHttpCookieNullInput() {
-        CookieUtils.asOkhttp3Cookie(null);
+        assertEquals("key1", resultCookie.getName());
+        assertEquals("value1", resultCookie.getValue());
+        assertEquals(".slides.com", resultCookie.getDomain());
     }
 
     @Test
-    public void testOkHttpCookielInput() {
+    void testOkHttpCookieNullInput() {
+        assertThrows(NullArgumentException.class, () -> {
+            CookieUtils.asOkhttp3Cookie(null);
+        });
+    }
+
+    @Test
+    void testOkHttpCookielInput() {
         cookie.setDomain(".slides.com");
         okhttp3.Cookie resultCookie = CookieUtils.asOkhttp3Cookie(cookie);
-        assertTrue(resultCookie.name().equals("key1"));
-        assertTrue(resultCookie.value().equals("value1"));
-        assertTrue(resultCookie.domain().equals("slides.com"));
+        assertEquals("key1", resultCookie.name());
+        assertEquals("value1", resultCookie.value());
+        assertEquals("slides.com", resultCookie.domain());
     }
 
     @Test
-    public void testApacheCookielInputNullDomain() {
+    void testApacheCookielInputNullDomain() {
         org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
-        assertTrue(resultCookie.getName().equals("key1"));
-        assertTrue(resultCookie.getValue().equals("value1"));
+        assertEquals("key1", resultCookie.getName());
+        assertEquals("value1", resultCookie.getValue());
         assertTrue(resultCookie.getDomain() == null);
     }
 
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testApacheCookielInputNullKey() {
-        cookie.setName(null);
-        org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
+    @Test
+    void testApacheCookielInputNullKey() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            cookie.setName(null);
+            org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
 
-        assertTrue(resultCookie.getName() == null);
-        assertTrue(resultCookie.getValue().equals("value1"));
+            assertTrue(resultCookie.getName() == null);
+            assertEquals("value1", resultCookie.getValue());
+        });
     }
 
     @Test
-    public void testApacheCookielInputNullValue() {
+    void testApacheCookielInputNullValue() {
         cookie.setValue(null);
         org.apache.http.cookie.Cookie resultCookie = CookieUtils.asApacheCookie(cookie);
 
-        assertTrue(resultCookie.getName().equals("key1"));
+        assertEquals("key1", resultCookie.getName());
         assertTrue(resultCookie.getValue() == null);
     }
 
-    @Test(expected = NullPointerException.class)
-    public void testOkHttpCookielInputNullKey() {
-        cookie.setName(null);
-        @SuppressWarnings("unused")
-        okhttp3.Cookie resultCookie = CookieUtils.asOkhttp3Cookie(cookie);
-    }
-
-    @Test(expected = NullPointerException.class)
-    public void testOkHttpInputNullValue() {
-        cookie.setValue(null);
-        cookie.setName(null);
-        @SuppressWarnings("unused")
-        okhttp3.Cookie resultCookie = CookieUtils.asOkhttp3Cookie(cookie);
-    }
-
-    @Test(expected = NullPointerException.class)
-    public void testAddCookiesNullCookies() {
-        CookieUtils.addCookies(null,
-                FetcherFactory.createFetcher(new HttpDownloaderConfig("okHttp")));
+    @Test
+    void testOkHttpCookielInputNullKey() {
+        assertThrows(NullPointerException.class, () -> {
+            cookie.setName(null);
+            @SuppressWarnings("unused")
+            okhttp3.Cookie resultCookie = CookieUtils.asOkhttp3Cookie(cookie);
+        });
     }
 
     @Test
-    public void testAddCookiesNullFetcher() {
+    void testOkHttpInputNullValue() {
+        assertThrows(NullPointerException.class, () -> {
+            cookie.setValue(null);
+            cookie.setName(null);
+            @SuppressWarnings("unused")
+            okhttp3.Cookie resultCookie = CookieUtils.asOkhttp3Cookie(cookie);
+        });
+    }
+
+    @Test
+    void testAddCookiesNullCookies() {
+        assertThrows(NullPointerException.class, () -> {
+            CookieUtils.addCookies(null,
+                    FetcherFactory.createFetcher(new HttpDownloaderConfig("okHttp")));
+        });
+    }
+
+    @Test
+    void testAddCookiesNullFetcher() {
         CookieUtils.addCookies(new HashMap<>(), null);
     }
 
     @Test
-    public void testCookieStore() {
+    void testCookieStore() {
         Cookie cookie = new Cookie("key1", "value1");
         cookie.setDomain(".slides.com");
 
@@ -121,8 +135,8 @@ public class TestCookieUtils {
 
         CookieStore globalCookieStore = baseFetcher.getCookieStoreProvider().get();
         List<org.apache.http.cookie.Cookie> resultList = globalCookieStore.getCookies();
-        assertTrue(resultList.get(0).getName().equals("key1"));
-        assertTrue(resultList.get(0).getValue().equals("value1"));
-        assertTrue(resultList.get(0).getDomain().equals("slides.com"));
+        assertEquals("key1", resultList.get(0).getName());
+        assertEquals("value1", resultList.get(0).getValue());
+        assertEquals("slides.com", resultList.get(0).getDomain());
     }
 }
