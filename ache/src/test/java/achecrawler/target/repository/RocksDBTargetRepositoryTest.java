@@ -1,9 +1,7 @@
 package achecrawler.target.repository;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import achecrawler.target.classifier.TargetRelevance;
 import achecrawler.target.model.Page;
@@ -57,20 +55,20 @@ public class RocksDBTargetRepositoryTest {
 
         // then: should iterate over inserted pages
         CloseableIterator<Page> it = repository.pagesIterator();
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         page = it.next();
-        assertThat(page, is(notNullValue()));
+        assertThat(page).isNotNull();
         assertThatPagePropertiesAreTheSame(page);
-        assertThat(it.hasNext(), is(false));
+        assertThat(it.hasNext()).isFalse();
     }
 
     private void assertThatPagePropertiesAreTheSame(Page page) {
-        assertThat(page.getContentAsString(), is(html));
-        assertThat(page.getRequestedUrl(), is(url));
-        assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
-        assertThat(page.getTargetRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
-        assertThat(page.getTargetRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
-        assertThat(page.getCrawlerId(), is("mycrawler"));
+        assertThat(page.getContentAsString()).isEqualTo(html);
+        assertThat(page.getRequestedUrl()).isEqualTo(url);
+        assertThat(page.getResponseHeaders().get("content-type").get(0)).isEqualTo("text/html");
+        assertThat(page.getTargetRelevance().isRelevant()).isEqualTo(TargetRelevance.RELEVANT.isRelevant());
+        assertThat(page.getTargetRelevance().getRelevance()).isEqualTo(TargetRelevance.RELEVANT.getRelevance());
+        assertThat(page.getCrawlerId()).isEqualTo("mycrawler");
     }
 
     private static File newFolder(File root, String... subDirs) throws IOException {

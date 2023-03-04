@@ -1,11 +1,5 @@
 package achecrawler.config;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.contains;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,6 +17,8 @@ import achecrawler.crawler.async.HttpDownloaderConfig;
 import achecrawler.link.LinkStorageConfig;
 import achecrawler.target.TargetStorageConfig;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class ConfigurationTest {
 
     String configFilePath = ConfigurationTest.class.getResource("ache.yml").getPath();
@@ -36,17 +32,17 @@ class ConfigurationTest {
         TargetStorageConfig config = configService.getTargetStorageConfig();
 
         // then
-        assertThat(config, is(notNullValue()));
+        assertThat(config).isNotNull();
 
-        assertThat(config.isSaveNegativePages(), is(false));
-        assertThat(config.getVisitedPageLimit(), is(12345));
-        assertThat(config.isEnglishLanguageDetectionEnabled(), is(false));
-        assertThat(config.isHardFocus(), is(false));
-        assertThat(config.isBipartite(), is(true));
+        assertThat(config.isSaveNegativePages()).isFalse();
+        assertThat(config.getVisitedPageLimit()).isEqualTo(12345);
+        assertThat(config.isEnglishLanguageDetectionEnabled()).isFalse();
+        assertThat(config.isHardFocus()).isFalse();
+        assertThat(config.isBipartite()).isTrue();
 
-        assertThat(config.getDataFormats(), contains("ELASTICSEARCH"));
-        assertThat(config.getElasticSearchConfig(), is(notNullValue()));
-        assertThat(config.getElasticSearchConfig().getRestApiHosts().get(0), is("http://node01:9201"));
+        assertThat(config.getDataFormats()).containsExactly("ELASTICSEARCH");
+        assertThat(config.getElasticSearchConfig()).isNotNull();
+        assertThat(config.getElasticSearchConfig().getRestApiHosts().get(0)).isEqualTo("http://node01:9201");
     }
 
     @Test
@@ -58,27 +54,27 @@ class ConfigurationTest {
         LinkStorageConfig config = configService.getLinkStorageConfig();
 
         // then
-        assertThat(config, is(notNullValue()));
+        assertThat(config).isNotNull();
 
-        assertThat(config.getMaxPagesPerDomain(), is(222));
+        assertThat(config.getMaxPagesPerDomain()).isEqualTo(222);
 
-        assertThat(config.getOutlinks(), is(false));
-        assertThat(config.getBacklinks(), is(true));
-        assertThat(config.isUseScope(), is(true));
+        assertThat(config.getOutlinks()).isFalse();
+        assertThat(config.getBacklinks()).isTrue();
+        assertThat(config.isUseScope()).isTrue();
 
-        assertThat(config.getTypeOfClassifier(), is("LinkClassifierImpl"));
+        assertThat(config.getTypeOfClassifier()).isEqualTo("LinkClassifierImpl");
         // TODO: add parameters for link classifier
 
-        assertThat(config.isUseOnlineLearning(), is(false));
-        assertThat(config.getOnlineMethod(), is("FORWARD_CLASSIFIER_BINARY"));
-        assertThat(config.getLearningLimit(), is(555));
+        assertThat(config.isUseOnlineLearning()).isFalse();
+        assertThat(config.getOnlineMethod()).isEqualTo("FORWARD_CLASSIFIER_BINARY");
+        assertThat(config.getLearningLimit()).isEqualTo(555);
 
-        assertThat(config.getLinkSelector(), is("TopkLinkSelector"));
+        assertThat(config.getLinkSelector()).isEqualTo("TopkLinkSelector");
 
-        assertThat(config.getMaxCacheUrlsSize(), is(222222));
+        assertThat(config.getMaxCacheUrlsSize()).isEqualTo(222222);
 
-        assertThat(config.getSchedulerHostMinAccessInterval(), is(123));
-        assertThat(config.getSchedulerMaxLinks(), is(234));
+        assertThat(config.getSchedulerHostMinAccessInterval()).isEqualTo(123);
+        assertThat(config.getSchedulerMaxLinks()).isEqualTo(234);
     }
 
     @Test
@@ -90,13 +86,13 @@ class ConfigurationTest {
         AsyncCrawlerConfig config = configService.getCrawlerConfig();
 
         // then
-        assertThat(config, is(notNullValue()));
+        assertThat(config).isNotNull();
 
-        assertThat(config.getDownloaderConfig().getDownloadThreadPoolSize(), is(333));
-        assertThat(config.getDownloaderConfig().getMaxRetryCount(), is(444));
-        assertThat(config.getDownloaderConfig().getUserAgentConfig().name, is("TestAgent"));
-        assertThat(config.getDownloaderConfig().getUserAgentConfig().url, is("http://www.test-agent-crawler-example.com/robot"));
-        assertThat(config.getDownloaderConfig().getValidMimeTypes()[0], is("test/mimetype"));
+        assertThat(config.getDownloaderConfig().getDownloadThreadPoolSize()).isEqualTo(333);
+        assertThat(config.getDownloaderConfig().getMaxRetryCount()).isEqualTo(444);
+        assertThat(config.getDownloaderConfig().getUserAgentConfig().name).isEqualTo("TestAgent");
+        assertThat(config.getDownloaderConfig().getUserAgentConfig().url).isEqualTo("http://www.test-agent-crawler-example.com/robot");
+        assertThat(config.getDownloaderConfig().getValidMimeTypes()[0]).isEqualTo("test/mimetype");
     }
 
     @Test
@@ -112,23 +108,21 @@ class ConfigurationTest {
 
         // then
         HttpDownloaderConfig baseDownloaderConfig = baseConfig.getCrawlerConfig().getDownloaderConfig();
-        assertThat(baseDownloaderConfig.getDownloadThreadPoolSize(), is(333));
-        assertThat(baseDownloaderConfig.getMaxRetryCount(), is(444));
-        assertThat(baseDownloaderConfig.getUserAgentConfig().name, is("TestAgent"));
-        assertThat(baseDownloaderConfig.getUserAgentConfig().url, is("http://www.test-agent-crawler-example.com/robot"));
+        assertThat(baseDownloaderConfig.getDownloadThreadPoolSize()).isEqualTo(333);
+        assertThat(baseDownloaderConfig.getMaxRetryCount()).isEqualTo(444);
+        assertThat(baseDownloaderConfig.getUserAgentConfig().name).isEqualTo("TestAgent");
+        assertThat(baseDownloaderConfig.getUserAgentConfig().url).isEqualTo("http://www.test-agent-crawler-example.com/robot");
 
-        assertThat(newConfig, is(notNullValue()));
+        assertThat(newConfig).isNotNull();
         HttpDownloaderConfig newDownloaderConfig = newConfig.getCrawlerConfig().getDownloaderConfig();
-        assertThat(newDownloaderConfig.getDownloadThreadPoolSize(), is(333));
-        assertThat(newDownloaderConfig.getMaxRetryCount(), is(444));
-        assertThat(newDownloaderConfig.getUserAgentConfig().name, is("NewAgent"));
-        assertThat(newDownloaderConfig.getUserAgentConfig().url, is("http://www.test-agent-crawler-example.com/robot"));
+        assertThat(newDownloaderConfig.getDownloadThreadPoolSize()).isEqualTo(333);
+        assertThat(newDownloaderConfig.getMaxRetryCount()).isEqualTo(444);
+        assertThat(newDownloaderConfig.getUserAgentConfig().name).isEqualTo("NewAgent");
+        assertThat(newDownloaderConfig.getUserAgentConfig().url).isEqualTo("http://www.test-agent-crawler-example.com/robot");
 
-        assertEquals(baseConfig.getTargetStorageConfig().getDataFormats(),
-                     newConfig.getTargetStorageConfig().getDataFormats());
+        assertThat(newConfig.getTargetStorageConfig().getDataFormats()).isEqualTo(baseConfig.getTargetStorageConfig().getDataFormats());
 
-        assertEquals(baseConfig.getLinkStorageConfig().getDownloadSitemapXml(),
-                     newConfig.getLinkStorageConfig().getDownloadSitemapXml());
+        assertThat(newConfig.getLinkStorageConfig().getDownloadSitemapXml()).isEqualTo(baseConfig.getLinkStorageConfig().getDownloadSitemapXml());
     }
 
     @Test
@@ -141,9 +135,8 @@ class ConfigurationTest {
         // when
         Configuration newConfig = baseConfig.copy();
         // then
-        assertEquals(baseConfig.getTargetStorageConfig().getDataFormats(),
-                     newConfig.getTargetStorageConfig().getDataFormats());
-        assertEquals(mapper.writeValueAsString(baseConfig), mapper.writeValueAsString(newConfig));
+        assertThat(newConfig.getTargetStorageConfig().getDataFormats()).isEqualTo(baseConfig.getTargetStorageConfig().getDataFormats());
+        assertThat(mapper.writeValueAsString(newConfig)).isEqualTo(mapper.writeValueAsString(baseConfig));
     }
 
 }

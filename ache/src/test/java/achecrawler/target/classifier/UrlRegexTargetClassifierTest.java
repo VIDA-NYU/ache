@@ -1,8 +1,5 @@
 package achecrawler.target.classifier;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -13,6 +10,8 @@ import achecrawler.target.model.Page;
 import achecrawler.util.LinkFilter;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class UrlRegexTargetClassifierTest {
 
@@ -49,16 +48,16 @@ class UrlRegexTargetClassifierTest {
             // when
             TargetRelevance relevance = classifier.classify(page);
             // then
-            assertThat(page.toString(), relevance.isRelevant(), is(true));
-            assertThat(page.toString(), relevance.getRelevance(), is(1d));
+            assertThat(relevance.isRelevant()).as(page.toString()).isTrue();
+            assertThat(relevance.getRelevance()).as(page.toString()).isEqualTo(1d);
         }
         
         for (Page page : pagesThatDoesntMatch) {
             // when
             TargetRelevance relevance = classifier.classify(page);
             // then
-            assertThat(page.toString(), relevance.isRelevant(), is(false));
-            assertThat(page.toString(), relevance.getRelevance(), is(0d));
+            assertThat(relevance.isRelevant()).as(page.toString()).isFalse();
+            assertThat(relevance.getRelevance()).as(page.toString()).isEqualTo(0d);
         }
     }
 
@@ -105,16 +104,16 @@ class UrlRegexTargetClassifierTest {
             // when
             TargetRelevance relevance = classifier.classify(page);
             // then
-            assertThat(page.toString(), relevance.isRelevant(), is(true));
-            assertThat(page.toString(), relevance.getRelevance(), is(1d));
+            assertThat(relevance.isRelevant()).as(page.toString()).isTrue();
+            assertThat(relevance.getRelevance()).as(page.toString()).isEqualTo(1d);
         }
         
         for (Page page : pagesThatDoesntMatch) {
             // when
             TargetRelevance relevance = classifier.classify(page);
             // then
-            assertThat(page.toString(), relevance.isRelevant(), is(false));
-            assertThat(page.toString(), relevance.getRelevance(), is(0d));
+            assertThat(relevance.isRelevant()).as(page.toString()).isFalse();
+            assertThat(relevance.getRelevance()).as(page.toString()).isEqualTo(0d);
         }
     }
 

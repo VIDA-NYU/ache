@@ -1,8 +1,5 @@
 package achecrawler.crawler.async;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.notNullValue;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,6 +15,8 @@ import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import achecrawler.crawler.crawlercommons.util.Headers;
 import achecrawler.link.LinkStorage;
 import achecrawler.link.frontier.LinkRelevance;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class RobotsTxtHandlerTest {
 
@@ -49,12 +48,10 @@ class RobotsTxtHandlerTest {
 
 
         // then
-        assertThat(robotsData, is(notNullValue()));
-        assertThat(robotsData.robotRules.getSitemaps().size(), is(2));
-        assertThat(robotsData.robotRules.getSitemaps().get(0),
-                is("http://www.example.com/example-sitemap/sitemap.xml"));
-        assertThat(robotsData.robotRules.getSitemaps().get(1),
-                is("http://www.example.com/example-sitemap/sitemap-news.xml"));
+        assertThat(robotsData).isNotNull();
+        assertThat(robotsData.robotRules.getSitemaps().size()).isEqualTo(2);
+        assertThat(robotsData.robotRules.getSitemaps().get(0)).isEqualTo("http://www.example.com/example-sitemap/sitemap.xml");
+        assertThat(robotsData.robotRules.getSitemaps().get(1)).isEqualTo("http://www.example.com/example-sitemap/sitemap-news.xml");
     }
 
 }

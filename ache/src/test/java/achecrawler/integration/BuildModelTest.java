@@ -1,9 +1,5 @@
 package achecrawler.integration;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThan;
-import static org.hamcrest.Matchers.lessThan;
 import java.io.File;
 import java.net.URL;
 import java.net.URLDecoder;
@@ -18,6 +14,8 @@ import achecrawler.target.classifier.TargetClassifier;
 import achecrawler.target.classifier.TargetClassifierFactory;
 import achecrawler.target.classifier.TargetRelevance;
 import achecrawler.target.model.Page;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BuildModelTest {
 
@@ -42,17 +40,17 @@ public class BuildModelTest {
         Page sampleNegativePage = readOnePageFromFolder(trainingPath + "/negative");
 
         TargetRelevance positive = tc.classify(samplePositivePage);
-        assertThat(positive.isRelevant(), is(true));
-        assertThat(positive.getRelevance(), greaterThan(0.5));
+        assertThat(positive.isRelevant()).isTrue();
+        assertThat(positive.getRelevance()).isGreaterThan(0.5);
 
         TargetRelevance negative = tc.classify(sampleNegativePage);
-        assertThat(negative.isRelevant(), is(false));
-        assertThat(negative.getRelevance(), lessThan(0.5));
+        assertThat(negative.isRelevant()).isFalse();
+        assertThat(negative.getRelevance()).isLessThan(0.5);
     }
 
     private Page readOnePageFromFolder(String positiveFolder) throws Exception {
         File[] allPositivePages = (new File(positiveFolder)).listFiles();
-        assertThat(allPositivePages.length, is(6));
+        assertThat(allPositivePages.length).isEqualTo(6);
         String positiveFileName = allPositivePages[0].getName();
         String fileContent = new String(Files.readAllBytes(Paths.get(allPositivePages[0].getAbsolutePath())));
         Page samplePositivePage = new Page(new URL(URLDecoder.decode(positiveFileName, "UTF-8")), fileContent);

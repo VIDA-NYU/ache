@@ -1,15 +1,13 @@
 package achecrawler.seedfinder;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThan;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
 import java.net.URL;
 
 import achecrawler.seedfinder.QueryProcessor.QueryResult;
 
 import org.junit.jupiter.api.Test;
 import achecrawler.target.model.Page;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class QueryGeneratorTest {
 
@@ -32,8 +30,8 @@ class QueryGeneratorTest {
         Query nextQuery = generator.buildNextQuery(initialQuery, queryResult);
         
         // then
-        assertThat(nextQuery, is(notNullValue()));
-        assertThat(nextQuery.getTerms().size(), is(greaterThan(0)));
+        assertThat(nextQuery).isNotNull();
+        assertThat(nextQuery.getTerms().size()).isGreaterThan(0);
     }
 
 }

@@ -1,10 +1,5 @@
 package achecrawler.link.frontier;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -18,6 +13,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 import achecrawler.util.persistence.PersistentHashtable.DB;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class FrontierTest {
 
@@ -50,8 +47,8 @@ public class FrontierTest {
         frontier.insert(link1);
         
         // then
-        assertThat(frontier.exist(link1), is(1d));
-        assertThat(frontier.exist(link2), is(nullValue()));
+        assertThat(frontier.exist(link1)).isEqualTo(1d);
+        assertThat(frontier.exist(link2)).isNull();
     }
 
     @Test
@@ -65,11 +62,11 @@ public class FrontierTest {
         frontier.insert(link2);
         
         // then
-        assertThat(frontier.exist(link1), is(notNullValue()));
-        assertThat(frontier.exist(link1), is(1d));
+        assertThat(frontier.exist(link1)).isNotNull();
+        assertThat(frontier.exist(link1)).isEqualTo(1d);
         
-        assertThat(frontier.exist(link2), is(notNullValue()));
-        assertThat(frontier.exist(link2), is(2d));
+        assertThat(frontier.exist(link2)).isNotNull();
+        assertThat(frontier.exist(link2)).isEqualTo(2d);
     }
 
 
@@ -81,11 +78,11 @@ public class FrontierTest {
         // when
         frontier.insert(link1);
         // then
-        assertThat(frontier.exist(link1), is(1d));
+        assertThat(frontier.exist(link1)).isEqualTo(1d);
         
         // when
         frontier.delete(link1);
         // then
-        assertThat(frontier.exist(link1), is(-1d));
+        assertThat(frontier.exist(link1)).isEqualTo(-1d);
     }
 }

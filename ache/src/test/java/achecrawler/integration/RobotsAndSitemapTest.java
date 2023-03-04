@@ -2,13 +2,7 @@ package achecrawler.integration;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.lessThan;
-import static org.hamcrest.Matchers.not;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.File;
 import java.io.IOException;
@@ -88,7 +82,7 @@ public class RobotsAndSitemapTest {
         for (String url : shouldNOTBeDownloaded) {
             LinkRelevance link = new LinkRelevance("http://127.0.0.1:1234/" + url, LinkRelevance.DEFAULT_RELEVANCE);
             System.out.println(link);
-            assertThat("URL="+url, frontier.exist(link), is(nullValue()));
+            assertThat(frontier.exist(link)).as("URL=" + url).isNull();
         }
     }
 
@@ -186,18 +180,22 @@ public class RobotsAndSitemapTest {
         robotRulesMap.commit();
         rules = robotRulesMap.get("robots");
 
-        assertNotNull(rules);
-        assertTrue(rules.isAllowed("http://www.domain.com/anypage.html"));
+        assertThat(rules).isNotNull();
+        assertThat(rules.isAllowed("http://www.domain.com/anypage.html")).isTrue();
     }
 
     private void assertWasCrawled(String url, Frontier frontier) {
         LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-        assertThat("URL=" + url, frontier.exist(link), is(lessThan(0d)));
+        assertThat(frontier.exist(link)).as("URL=" + url).isLessThan(0d);
     }
 
     private void assertWasNotCrawled(String url, Frontier frontier) {
         LinkRelevance link = LinkRelevance.create(url);
-        assertThat("URL=" + url, frontier.exist(link), is(not(lessThan(0d))));
+        assertThat(frontier.exist(link)).as("URL=" + url)
+            .satisfiesAnyOf(
+                score -> assertThat(score).isNull(),
+                score -> assertThat(score).isGreaterThanOrEqualTo(0d)
+            );
     }
 
     private Frontier openFrontier(String outputPath, String configPath) {

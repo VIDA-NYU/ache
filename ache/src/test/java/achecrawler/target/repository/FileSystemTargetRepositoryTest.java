@@ -1,12 +1,8 @@
 package achecrawler.target.repository;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.either;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.endsWith;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -67,10 +63,10 @@ public class FileSystemTargetRepositoryTest {
 		
 		// then
 		Path path = Paths.get(folder, "example.com", "http%3A%2F%2Fexample.com");
-		assertThat(path.toFile().exists(), is(true));
+		assertThat(path.toFile().exists()).isTrue();
 		
 		String content = new String(Files.readAllBytes(path));
-		assertThat(content, is(html));
+		assertThat(content).isEqualTo(html);
 	}
 
     @Test
@@ -86,16 +82,16 @@ public class FileSystemTargetRepositoryTest {
         
         // then
         Path path = Paths.get(folder, "example.com", "http%3A%2F%2Fexample.com");
-        assertThat(path.toFile().exists(), is(true));
+        assertThat(path.toFile().exists()).isTrue();
         
         byte[] fileBytes = Files.readAllBytes(path);
-        assertThat(fileBytes, is(notNullValue()));
-        assertThat(fileBytes.length < html.getBytes().length, is(true));
+        assertThat(fileBytes).isNotNull();
+        assertThat(fileBytes.length < html.getBytes().length).isTrue();
         
         InputStream gzip = new InflaterInputStream(new ByteArrayInputStream(fileBytes));
         byte[] uncompressedBytes = IOUtils.toByteArray(gzip);
         String content = new String(uncompressedBytes);
-        assertThat(content, is(html));
+        assertThat(content).isEqualTo(html);
     }
 
 
@@ -112,9 +108,9 @@ public class FileSystemTargetRepositoryTest {
         TargetModelJson jsonModel = repository.get(url);
         
         // then
-        assertThat(jsonModel, is(notNullValue()));
-        assertThat(jsonModel.getUrl(), is(url));
-        assertThat(jsonModel.getContentAsString(), is(html));
+        assertThat(jsonModel).isNotNull();
+        assertThat(jsonModel.getUrl()).isEqualTo(url);
+        assertThat(jsonModel.getContentAsString()).isEqualTo(html);
     }
 
     @Test
@@ -131,15 +127,15 @@ public class FileSystemTargetRepositoryTest {
 		// then
 		Path path = Paths.get(folder, "example.com", "http%3A%2F%2Fexample.com");
 		
-		assertThat(path.toFile().exists(), is(true));
+		assertThat(path.toFile().exists()).isTrue();
 		
 		ObjectMapper mapper = new ObjectMapper();
 		TargetModelJson value = mapper.readValue(path.toFile(), TargetModelJson.class);
 		
-		assertThat(value.getUrl(), is(url));
-		assertThat(value.getContentAsString(), is(html));
-		assertThat(value.getRelevance().isRelevant(), is(TargetRelevance.IRRELEVANT.isRelevant()));
-		assertThat(value.getRelevance().getRelevance(), is(TargetRelevance.IRRELEVANT.getRelevance()));
+		assertThat(value.getUrl()).isEqualTo(url);
+		assertThat(value.getContentAsString()).isEqualTo(html);
+		assertThat(value.getRelevance().isRelevant()).isEqualTo(TargetRelevance.IRRELEVANT.isRelevant());
+		assertThat(value.getRelevance().getRelevance()).isEqualTo(TargetRelevance.IRRELEVANT.getRelevance());
 	}
 
     @Test
@@ -155,13 +151,13 @@ public class FileSystemTargetRepositoryTest {
 		// then
 		Path path = Paths.get(folder, "example.com", "http%3A%2F%2Fexample.com");
 		
-		assertThat(path.toFile().exists(), is(true));
+		assertThat(path.toFile().exists()).isTrue();
 		
 		ObjectMapper mapper = new ObjectMapper(new CBORFactory());
 		TargetModelCbor value = mapper.readValue(path.toFile(), TargetModelCbor.class);
 		
-		assertThat(value.url, is(url));
-		assertThat(value.response.get("body").toString(), is(html));
+		assertThat(value.url).isEqualTo(url);
+		assertThat(value.response.get("body").toString()).isEqualTo(html);
 	}
 
     @Test
@@ -177,10 +173,10 @@ public class FileSystemTargetRepositoryTest {
         
         // then
         Path path = Paths.get(folder, "example.com", "f0e6a6a97042a4f1f1c87f5f7d44315b2d852c2df5c7991cc66241bf7072d1c4");
-        assertThat(path.toFile().exists(), is(hashFilename));
+        assertThat(path.toFile().exists()).isEqualTo(hashFilename);
         
         String content = new String(Files.readAllBytes(path));
-        assertThat(content, is(html));
+        assertThat(content).isEqualTo(html);
     }
 
     @Test
@@ -203,13 +199,13 @@ public class FileSystemTargetRepositoryTest {
         TargetModelJson page2 = repository.get(url2);
         
         // then
-        assertThat(page1, is(notNullValue()));
-        assertThat(page1.getUrl(), is(url1));
-        assertThat(page1.getContentAsString(), is(html));
-        assertThat(page1.getRelevance().isRelevant(), is(TargetRelevance.IRRELEVANT.isRelevant()));
-        assertThat(page1.getRelevance().getRelevance(), is(TargetRelevance.IRRELEVANT.getRelevance()));
+        assertThat(page1).isNotNull();
+        assertThat(page1.getUrl()).isEqualTo(url1);
+        assertThat(page1.getContentAsString()).isEqualTo(html);
+        assertThat(page1.getRelevance().isRelevant()).isEqualTo(TargetRelevance.IRRELEVANT.isRelevant());
+        assertThat(page1.getRelevance().getRelevance()).isEqualTo(TargetRelevance.IRRELEVANT.getRelevance());
         
-        assertThat(page2, is(nullValue()));
+        assertThat(page2).isNull();
     }
 
     @Test
@@ -237,23 +233,23 @@ public class FileSystemTargetRepositoryTest {
         // then
         Page page;
         
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         page = it.next();
         
-        assertThat(page, is(notNullValue()));
-        assertThat(page.getContentAsString(), is(html));
+        assertThat(page).isNotNull();
+        assertThat(page.getContentAsString()).isEqualTo(html);
         
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         page = it.next();
         
-        assertThat(page, is(notNullValue()));
-        assertThat(page.getContentAsString(), is(html));
+        assertThat(page).isNotNull();
+        assertThat(page.getContentAsString()).isEqualTo(html);
         
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
         
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
     }
 
     @Test
@@ -268,8 +264,8 @@ public class FileSystemTargetRepositoryTest {
         CloseableIterator<Page> it = repository.pagesIterator();
         
         // then
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
     }
 
     @Test
@@ -295,23 +291,29 @@ public class FileSystemTargetRepositoryTest {
         // then
         Path pagePath;
         
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         pagePath = it.next();
         
-        assertThat(pagePath, is(notNullValue()));
-        assertThat(pagePath.toString(), either(endsWith("1.com")).or(endsWith("2.com")));
+        assertThat(pagePath).isNotNull();
+        assertThat(pagePath.toString()).satisfiesAnyOf(
+            path -> path.endsWith("1.com"),
+            path -> path.endsWith("2.com")
+        );
         
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         pagePath = it.next();
         
-        assertThat(pagePath, is(notNullValue()));
-        assertThat(pagePath.toString(), either(endsWith("1.com")).or(endsWith("2.com")));
+        assertThat(pagePath).isNotNull();
+        assertThat(pagePath.toString()).satisfiesAnyOf(
+            path -> path.endsWith("1.com"),
+            path -> path.endsWith("2.com")
+        );
         
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
         
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
     }
 
     @Test
@@ -333,7 +335,7 @@ public class FileSystemTargetRepositoryTest {
         boolean url2exists = repository.exists(url2);
         
         // then
-        assertThat(url1exists, is(true));
-        assertThat(url2exists, is(false));
+        assertThat(url1exists).isTrue();
+        assertThat(url2exists).isFalse();
     }
 }

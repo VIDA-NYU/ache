@@ -1,7 +1,5 @@
 package achecrawler.target.classifier;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -15,6 +13,8 @@ import achecrawler.target.model.ParsedData;
 import achecrawler.util.parser.PaginaURL;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class RegexTargetClassifierTest {
 
@@ -43,10 +43,10 @@ class RegexTargetClassifierTest {
         RegexTargetClassifier classifier = (RegexTargetClassifier) TargetClassifierFactory.create(path);
         
         // then
-        assertThat(classifier.classify(page1).isRelevant(), is(false));
-        assertThat(classifier.classify(page2).isRelevant(), is(true));
-        assertThat(classifier.classify(page3).isRelevant(), is(true));
-        assertThat(classifier.classify(page4).isRelevant(), is(false));
+        assertThat(classifier.classify(page1).isRelevant()).isFalse();
+        assertThat(classifier.classify(page2).isRelevant()).isTrue();
+        assertThat(classifier.classify(page3).isRelevant()).isTrue();
+        assertThat(classifier.classify(page4).isRelevant()).isFalse();
     }
 
     @Test
@@ -64,8 +64,8 @@ class RegexTargetClassifierTest {
         RegexTargetClassifier classifier = (RegexTargetClassifier) TargetClassifierFactory.create(path);
 
         // then
-        assertThat(classifier.classify(page1).isRelevant(), is(false));
-        assertThat(classifier.classify(page2).isRelevant(), is(true));
+        assertThat(classifier.classify(page1).isRelevant()).isFalse();
+        assertThat(classifier.classify(page2).isRelevant()).isTrue();
     }
 
     @Test
@@ -82,7 +82,7 @@ class RegexTargetClassifierTest {
         RegexTargetClassifier classifier = (RegexTargetClassifier) TargetClassifierFactory.create(config);
         
         // then
-        assertThat(classifier.classify(page).isRelevant(), is(true));
+        assertThat(classifier.classify(page).isRelevant()).isTrue();
     }
     
     private Page createPage(String urlStr, String cont) throws MalformedURLException {

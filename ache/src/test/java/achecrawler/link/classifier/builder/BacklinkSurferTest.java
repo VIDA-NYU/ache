@@ -1,10 +1,5 @@
 package achecrawler.link.classifier.builder;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import achecrawler.util.Urls;
 import java.io.IOException;
 import java.net.URL;
@@ -18,6 +13,8 @@ import achecrawler.config.Configuration;
 import achecrawler.link.LinkStorageConfig.BackSurferConfig;
 import achecrawler.link.backlink.BacklinkSurfer;
 import achecrawler.util.parser.BackLinkNeighborhood;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BacklinkSurferTest {
 
@@ -38,9 +35,9 @@ public class BacklinkSurferTest {
         BackLinkNeighborhood[] backlinks = surfer.getLNBacklinks(url);
         
         // then
-        assertThat(backlinks, is(notNullValue()));
-        assertThat(backlinks.length>0, is(true));
-        assertTrue(backLinkSetIsValid(backlinks));
+        assertThat(backlinks).isNotNull();
+        assertThat(backlinks.length > 0).isTrue();
+        assertThat(backLinkSetIsValid(backlinks)).isTrue();
     }
 
     @Disabled
@@ -57,9 +54,9 @@ public class BacklinkSurferTest {
         BackLinkNeighborhood[] backlinks = surfer.getLNBacklinks(url);
         
         // then
-        assertThat(backlinks, is(notNullValue()));
-        assertThat(backlinks.length>0, is(true));
-        assertTrue(backLinkSetIsValid(backlinks));
+        assertThat(backlinks).isNotNull();
+        assertThat(backlinks.length > 0).isTrue();
+        assertThat(backLinkSetIsValid(backlinks)).isTrue();
 
     }
 

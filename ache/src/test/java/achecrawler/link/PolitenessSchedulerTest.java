@@ -1,12 +1,10 @@
 package achecrawler.link;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import achecrawler.link.frontier.LinkRelevance;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class PolitenessSchedulerTest {
 
@@ -28,14 +26,14 @@ class PolitenessSchedulerTest {
         // when add link l1
         scheduler.addLink(l1);
         // then should return it (+some other state checks)
-        assertThat(scheduler.hasLinksAvailable(), is(true));
-        assertThat(scheduler.numberOfLinks(), is(1));
-        assertThat(scheduler.nextLink(), is(l1));
-        assertThat(scheduler.numberOfLinks(), is(0));
-        assertThat(scheduler.nextLink(), is(nullValue()));
+        assertThat(scheduler.hasLinksAvailable()).isTrue();
+        assertThat(scheduler.numberOfLinks()).isEqualTo(1);
+        assertThat(scheduler.nextLink()).isEqualTo(l1);
+        assertThat(scheduler.numberOfLinks()).isEqualTo(0);
+        assertThat(scheduler.nextLink()).isNull();
         // and should remember domains from links recently chosen 
-        assertThat(scheduler.numberOfNonExpiredDomains(), is(1));
-        assertThat(scheduler.numberOfEmptyDomains(), is(1));
+        assertThat(scheduler.numberOfNonExpiredDomains()).isEqualTo(1);
+        assertThat(scheduler.numberOfEmptyDomains()).isEqualTo(1);
         
         // wait 1ms just to make sure that domains will have
         // different access times (in case that test run too
@@ -44,14 +42,14 @@ class PolitenessSchedulerTest {
         
         // same thing when add link l2...
         scheduler.addLink(l2);
-        assertThat(scheduler.hasLinksAvailable(), is(true));
-        assertThat(scheduler.numberOfLinks(), is(1));
-        assertThat(scheduler.nextLink(), is(l2));
-        assertThat(scheduler.numberOfLinks(), is(0));
-        assertThat(scheduler.nextLink(), is(nullValue()));
+        assertThat(scheduler.hasLinksAvailable()).isTrue();
+        assertThat(scheduler.numberOfLinks()).isEqualTo(1);
+        assertThat(scheduler.nextLink()).isEqualTo(l2);
+        assertThat(scheduler.numberOfLinks()).isEqualTo(0);
+        assertThat(scheduler.nextLink()).isNull();
         // should remember domains from links recently chosen 
-        assertThat(scheduler.numberOfNonExpiredDomains(), is(2));
-        assertThat(scheduler.numberOfEmptyDomains(), is(2));
+        assertThat(scheduler.numberOfNonExpiredDomains()).isEqualTo(2);
+        assertThat(scheduler.numberOfEmptyDomains()).isEqualTo(2);
         
         Thread.sleep(1);
         
@@ -60,38 +58,38 @@ class PolitenessSchedulerTest {
         scheduler.addLink(l4);
         scheduler.addLink(l5);
         
-        assertThat(scheduler.numberOfNonExpiredDomains(), is(3));
-        assertThat(scheduler.numberOfEmptyDomains(), is(0));
+        assertThat(scheduler.numberOfNonExpiredDomains()).isEqualTo(3);
+        assertThat(scheduler.numberOfEmptyDomains()).isEqualTo(0);
         
         // We assume that this test take less than 500ms to run.
         // Links l3 and l4 have higher priority, but they should be skipped
         // since other links from their domain has been chosen recently
-        assertThat(scheduler.hasLinksAvailable(), is(true));
-        assertThat(scheduler.nextLink(), is(l5));
+        assertThat(scheduler.hasLinksAvailable()).isTrue();
+        assertThat(scheduler.nextLink()).isEqualTo(l5);
         
         // at this moment, there should have no links available
-        assertThat(scheduler.hasLinksAvailable(), is(false));
-        assertThat(scheduler.nextLink(), is(nullValue()));
+        assertThat(scheduler.hasLinksAvailable()).isFalse();
+        assertThat(scheduler.nextLink()).isNull();
         
         // after waiting the minimumAccessTime interval, they links can be returned
         Thread.sleep(minimumAccessTime+100);
         
-        assertThat(scheduler.nextLink(), is(l3));
-        assertThat(scheduler.nextLink(), is(l4));
+        assertThat(scheduler.nextLink()).isEqualTo(l3);
+        assertThat(scheduler.nextLink()).isEqualTo(l4);
         
         // scheduler should also forget domains that don't have links chosen 
         // for longer then the minimumAccessTime
         Thread.sleep(minimumAccessTime+10);
-        assertThat(scheduler.numberOfNonExpiredDomains(), is(0));
+        assertThat(scheduler.numberOfNonExpiredDomains()).isEqualTo(0);
         
         // adding link again just to test that after removing old domain 
         // everything is still working fine
         scheduler.addLink(l1);
         
-        assertThat(scheduler.nextLink(), is(l1));
-        assertThat(scheduler.numberOfNonExpiredDomains(), is(1));
-        assertThat(scheduler.numberOfEmptyDomains(), is(1));
-        assertThat(scheduler.nextLink(), is(nullValue()));
+        assertThat(scheduler.nextLink()).isEqualTo(l1);
+        assertThat(scheduler.numberOfNonExpiredDomains()).isEqualTo(1);
+        assertThat(scheduler.numberOfEmptyDomains()).isEqualTo(1);
+        assertThat(scheduler.nextLink()).isNull();
     }
 
     @Test
@@ -105,10 +103,10 @@ class PolitenessSchedulerTest {
         PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
         scheduler.addLink(l1);
-        assertThat(scheduler.numberOfLinks(), is(1));
+        assertThat(scheduler.numberOfLinks()).isEqualTo(1);
         
         scheduler.addLink(l2);
-        assertThat(scheduler.numberOfLinks(), is(1));
+        assertThat(scheduler.numberOfLinks()).isEqualTo(1);
     }
 
     @Test
@@ -129,10 +127,10 @@ class PolitenessSchedulerTest {
         scheduler.addLink(l3);
         scheduler.addLink(l4);
         
-        assertThat(scheduler.nextLink().getRelevance(), is(4d));
-        assertThat(scheduler.nextLink().getRelevance(), is(3d));
-        assertThat(scheduler.nextLink().getRelevance(), is(2d));
-        assertThat(scheduler.nextLink().getRelevance(), is(1d));
+        assertThat(scheduler.nextLink().getRelevance()).isEqualTo(4d);
+        assertThat(scheduler.nextLink().getRelevance()).isEqualTo(3d);
+        assertThat(scheduler.nextLink().getRelevance()).isEqualTo(2d);
+        assertThat(scheduler.nextLink().getRelevance()).isEqualTo(1d);
     }
 
     @Test
@@ -152,9 +150,9 @@ class PolitenessSchedulerTest {
         scheduler.addLink(l2);
         scheduler.addLink(l3);
         
-        assertThat(scheduler.numberOfLinks(), is(1));
-        assertThat(scheduler.nextLink().getRelevance(), is(1d));
-        assertThat(scheduler.nextLink(), is(nullValue()));
+        assertThat(scheduler.numberOfLinks()).isEqualTo(1);
+        assertThat(scheduler.nextLink().getRelevance()).isEqualTo(1d);
+        assertThat(scheduler.nextLink()).isNull();
     }
 
     @Test
@@ -169,14 +167,14 @@ class PolitenessSchedulerTest {
         
         PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         scheduler.addLink(l1);
-        assertThat(scheduler.nextLink().getRelevance(), is(1d));
+        assertThat(scheduler.nextLink().getRelevance()).isEqualTo(1d);
         
-        assertThat(scheduler.canDownloadNow(l3), is(true));
-        assertThat(scheduler.canDownloadNow(l2), is(false));
+        assertThat(scheduler.canDownloadNow(l3)).isTrue();
+        assertThat(scheduler.canDownloadNow(l2)).isFalse();
         Thread.sleep(minimumAccessTime+10);
         
-        assertThat(scheduler.canDownloadNow(l2), is(true));
-        assertThat(scheduler.canDownloadNow(l3), is(true));
+        assertThat(scheduler.canDownloadNow(l2)).isTrue();
+        assertThat(scheduler.canDownloadNow(l3)).isTrue();
     }
 
     @Test
@@ -195,8 +193,8 @@ class PolitenessSchedulerTest {
         scheduler.addLink(l4);
         scheduler.addLink(l3);
         
-        assertThat(scheduler.numberOfLinks(), is(4));
-        assertThat(scheduler.hasLinksAvailable(), is(true));
+        assertThat(scheduler.numberOfLinks()).isEqualTo(4);
+        assertThat(scheduler.hasLinksAvailable()).isTrue();
         
         // when
         scheduler.nextLink();
@@ -204,10 +202,10 @@ class PolitenessSchedulerTest {
         scheduler.clear();
         
         // then
-        assertThat(scheduler.hasLinksAvailable(), is(false));
-        assertThat(scheduler.numberOfLinks(), is(0));
-        assertThat(scheduler.numberOfEmptyDomains(), is(4));
-        assertThat(scheduler.numberOfNonExpiredDomains(), is(2));
+        assertThat(scheduler.hasLinksAvailable()).isFalse();
+        assertThat(scheduler.numberOfLinks()).isEqualTo(0);
+        assertThat(scheduler.numberOfEmptyDomains()).isEqualTo(4);
+        assertThat(scheduler.numberOfNonExpiredDomains()).isEqualTo(2);
         
         
         // make sure it remembers domains that were previously selected
@@ -215,7 +213,7 @@ class PolitenessSchedulerTest {
         scheduler.addLink(l2);
         scheduler.addLink(l4);
         scheduler.addLink(l3);
-        assertThat(scheduler.numberOfAvailableDomains(), is(2));
+        assertThat(scheduler.numberOfAvailableDomains()).isEqualTo(2);
     }
     
 }

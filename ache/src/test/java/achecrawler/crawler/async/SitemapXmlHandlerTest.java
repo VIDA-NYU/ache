@@ -1,8 +1,5 @@
 package achecrawler.crawler.async;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.notNullValue;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,6 +15,8 @@ import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import achecrawler.crawler.crawlercommons.util.Headers;
 import achecrawler.link.LinkStorage;
 import achecrawler.link.frontier.LinkRelevance;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class SitemapXmlHandlerTest {
 
@@ -45,9 +44,9 @@ class SitemapXmlHandlerTest {
         Mockito.verify(linkStorageMock).insert(argument.capture());
         SitemapData sitemapData = argument.getValue();
 
-        assertThat(sitemapData, is(notNullValue()));
-        assertThat(sitemapData.sitemaps.size(), is(0));
-        assertThat(sitemapData.links.size(), is(4));
+        assertThat(sitemapData).isNotNull();
+        assertThat(sitemapData.sitemaps.size()).isEqualTo(0);
+        assertThat(sitemapData.links.size()).isEqualTo(4);
     }
 
     @Test
@@ -75,9 +74,9 @@ class SitemapXmlHandlerTest {
         Mockito.verify(linkStorageMock).insert(argument.capture());
         SitemapData sitemapData = argument.getValue();
 
-        assertThat(sitemapData, is(notNullValue()));
-        assertThat(sitemapData.sitemaps.size(), is(3));
-        assertThat(sitemapData.links.size(), is(0));
+        assertThat(sitemapData).isNotNull();
+        assertThat(sitemapData.sitemaps.size()).isEqualTo(3);
+        assertThat(sitemapData.links.size()).isEqualTo(0);
     }
 
 }

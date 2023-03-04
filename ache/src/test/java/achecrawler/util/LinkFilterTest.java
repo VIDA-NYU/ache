@@ -1,12 +1,11 @@
 package achecrawler.util;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class LinkFilterTest {
 
@@ -38,13 +37,13 @@ class LinkFilterTest {
 
         // then
         for (String url : urlsThatMatch) {
-            assertThat(url, matcher.matches(url), is(true));
-            assertThat(url, reverseMatcher.matches(url), is(false));
+            assertThat(matcher.matches(url)).as(url).isTrue();
+            assertThat(reverseMatcher.matches(url)).as(url).isFalse();
         }
 
         for (String url : urlsThatDontMatch) {
-            assertThat(url, matcher.matches(url), is(false));
-            assertThat(url, reverseMatcher.matches(url), is(true));
+            assertThat(matcher.matches(url)).as(url).isFalse();
+            assertThat(reverseMatcher.matches(url)).as(url).isTrue();
         }
     }
 
@@ -75,13 +74,13 @@ class LinkFilterTest {
         );
 
         for (String url : urlsThatMatch) {
-            assertThat(url, matcher.matches(url), is(true));
-            assertThat(url, reverseMatcher.matches(url), is(false));
+            assertThat(matcher.matches(url)).as(url).isTrue();
+            assertThat(reverseMatcher.matches(url)).as(url).isFalse();
         }
 
         for (String url : urlsThatDontMatch) {
-            assertThat(url, matcher.matches(url), is(false));
-            assertThat(url, reverseMatcher.matches(url), is(true));
+            assertThat(matcher.matches(url)).as(url).isFalse();
+            assertThat(reverseMatcher.matches(url)).as(url).isTrue();
         }
     }
 
@@ -107,13 +106,13 @@ class LinkFilterTest {
         );
 
         for (String url : urlsThatMatch) {
-            assertThat(url, matcher.matches(url), is(true));
-            assertThat(url, reverseMatcher.matches(url), is(false));
+            assertThat(matcher.matches(url)).as(url).isTrue();
+            assertThat(reverseMatcher.matches(url)).as(url).isFalse();
         }
 
         for (String url : urlsThatDontMatch) {
-            assertThat(url, matcher.matches(url), is(false));
-            assertThat(url, reverseMatcher.matches(url), is(true));
+            assertThat(matcher.matches(url)).as(url).isFalse();
+            assertThat(reverseMatcher.matches(url)).as(url).isTrue();
         }
     }
 
@@ -234,7 +233,7 @@ class LinkFilterTest {
             // when
             boolean matched = linkfilter.accept(url);
             // then
-            assertThat(url, matched, is(false));
+            assertThat(matched).as(url).isFalse();
         }
     }
 
@@ -243,7 +242,7 @@ class LinkFilterTest {
             // when
             boolean matched = linkfilter.accept(url);
             // then
-            assertThat(url, matched, is(true));
+            assertThat(matched).as(url).isTrue();
         }
     }
 

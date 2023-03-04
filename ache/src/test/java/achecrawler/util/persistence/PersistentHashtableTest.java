@@ -1,9 +1,5 @@
 package achecrawler.util.persistence;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.io.File;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -14,6 +10,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import achecrawler.link.frontier.LinkRelevance;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PersistentHashtableTest {
 
@@ -39,7 +37,7 @@ public class PersistentHashtableTest {
         ht.put("my_key", "123");
         
         // then
-        assertThat(ht.get("my_key"), is("123"));
+        assertThat(ht.get("my_key")).isEqualTo("123");
     }
 
     @MethodSource("data")
@@ -52,8 +50,8 @@ public class PersistentHashtableTest {
         ht.put("my_existent_key", "123");
 
         // then
-        assertThat(ht.get("my_existent_key"), is("123"));
-        assertThat(ht.get("unexistent"), is(nullValue()));
+        assertThat(ht.get("my_existent_key")).isEqualTo("123");
+        assertThat(ht.get("unexistent")).isNull();
     }
 
     @MethodSource("data")
@@ -73,9 +71,9 @@ public class PersistentHashtableTest {
         ht = new PersistentHashtable<>(folder, cacheSize, String.class, database);
 
         // then
-        assertThat(ht.get("my_key1"), is("111"));
-        assertThat(ht.get("my_key2"), is("222"));
-        assertThat(ht.get("http://foo.com/index.php&a=1"), is("333"));
+        assertThat(ht.get("my_key1")).isEqualTo("111");
+        assertThat(ht.get("my_key2")).isEqualTo("222");
+        assertThat(ht.get("http://foo.com/index.php&a=1")).isEqualTo("333");
     }
 
     @MethodSource("data")
@@ -97,10 +95,10 @@ public class PersistentHashtableTest {
         List<Tuple<LinkRelevance>> keys = ht.orderedSet(linkRelevanceComparator);
 
         // then
-        assertThat(keys.size(), is(3));
-        assertThat(keys.get(0).getValue().getRelevance(), is(3d));
-        assertThat(keys.get(1).getValue().getRelevance(), is(2d));
-        assertThat(keys.get(2).getValue().getRelevance(), is(1d));
+        assertThat(keys.size()).isEqualTo(3);
+        assertThat(keys.get(0).getValue().getRelevance()).isEqualTo(3d);
+        assertThat(keys.get(1).getValue().getRelevance()).isEqualTo(2d);
+        assertThat(keys.get(2).getValue().getRelevance()).isEqualTo(1d);
     }
 
     @MethodSource("data")
@@ -117,25 +115,25 @@ public class PersistentHashtableTest {
         try(TupleIterator<Integer> it = ht.iterator()) {
             // then
             Tuple<Integer> tuple;
-            assertThat(it.hasNext(), is(true));
+            assertThat(it.hasNext()).isTrue();
             tuple = it.next();
-            assertThat(tuple.getKey(), is("1"));
-            assertThat(tuple.getValue(), is(1));
+            assertThat(tuple.getKey()).isEqualTo("1");
+            assertThat(tuple.getValue()).isEqualTo(1);
 
-            assertThat(it.hasNext(), is(true));
+            assertThat(it.hasNext()).isTrue();
             tuple = it.next();
             
-            assertThat(tuple.getKey(), is("2"));
-            assertThat(tuple.getValue(), is(2));
+            assertThat(tuple.getKey()).isEqualTo("2");
+            assertThat(tuple.getValue()).isEqualTo(2);
             
-            assertThat(it.hasNext(), is(true));
+            assertThat(it.hasNext()).isTrue();
             tuple = it.next();
             
-            assertThat(tuple.getKey(), is("3"));
-            assertThat(tuple.getValue(), is(3));
+            assertThat(tuple.getKey()).isEqualTo("3");
+            assertThat(tuple.getValue()).isEqualTo(3);
             
-            assertThat(it.hasNext(), is(false));
-            assertThat(it.next(), is(nullValue()));
+            assertThat(it.hasNext()).isFalse();
+            assertThat(it.next()).isNull();
         }
     }
 
@@ -148,8 +146,8 @@ public class PersistentHashtableTest {
         // when
         try(TupleIterator<Integer> it = ht.iterator()) {
             // then
-            assertThat(it.hasNext(), is(false));
-            assertThat(it.next(), is(nullValue()));
+            assertThat(it.hasNext()).isFalse();
+            assertThat(it.next()).isNull();
         }
     }
 

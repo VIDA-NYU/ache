@@ -1,10 +1,5 @@
 package achecrawler.memex.cdr;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.io.InputStream;
 
 import org.apache.tika.mime.MediaType;
@@ -12,6 +7,8 @@ import org.apache.tika.mime.MediaType;
 import org.junit.jupiter.api.Test;
 
 import achecrawler.memex.cdr.TikaExtractor.ParsedData;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class TikaExtractorTest {
 
@@ -25,11 +22,11 @@ class TikaExtractorTest {
 		// when
 		ParsedData parsedData = parser.parse(fileStream);
 		// then
-		assertThat(parsedData.getMetadata().get("title"), is("Memex (Domain-Specific Search)"));
-		assertThat(parsedData.getMetadata().get("Content-Type"), containsString(("text/html")));
+		assertThat(parsedData.getMetadata().get("title")).isEqualTo("Memex (Domain-Specific Search)");
+		assertThat(parsedData.getMetadata().get("Content-Type")).contains(("text/html"));
 
-		assertThat(parsedData.getPlainText(), is(notNullValue()));
-		assertThat(parsedData.getPlainText(), containsString(("Memex")));
+		assertThat(parsedData.getPlainText()).isNotNull();
+		assertThat(parsedData.getPlainText()).contains(("Memex"));
 	}
 
 	@Test
@@ -44,8 +41,8 @@ class TikaExtractorTest {
 		MediaType type = parser.detect(fileStream, filename, null);
 
 		// then
-		assertThat(type.getBaseType(), is(MediaType.TEXT_HTML));
-		assertThat(type.getBaseType().toString(), is("text/html"));
+		assertThat(type.getBaseType()).isEqualTo(MediaType.TEXT_HTML);
+		assertThat(type.getBaseType().toString()).isEqualTo("text/html");
 	}
 
 }

@@ -1,10 +1,7 @@
 package achecrawler.crawler;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.File;
 import java.io.IOException;
@@ -72,10 +69,10 @@ public class CrawlManagerTest {
         Map<String, CrawlContext> crawsList = manager.getCrawls();
 
         // then
-        assertThat(crawlContext, notNullValue());
-        assertThat(crawlContext.getCrawler(), notNullValue());
-        assertThat(crawsList, notNullValue());
-        assertThat(crawsList.size(), is(1));
+        assertThat(crawlContext).isNotNull();
+        assertThat(crawlContext.getCrawler()).isNotNull();
+        assertThat(crawsList).isNotNull();
+        assertThat(crawsList.size()).isEqualTo(1);
 
         // when
         manager.startCrawl(crawlerId);
@@ -98,7 +95,7 @@ public class CrawlManagerTest {
                 "http://127.0.0.1:1234/relevant_page2.html");
 
         for (String page : allPages) {
-            assertTrue(crawledPages.contains(page), page);
+            assertThat(crawledPages.contains(page)).as(page).isTrue();
         }
 
     }

@@ -1,9 +1,7 @@
 package achecrawler.link.frontier.selector;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
@@ -32,10 +30,10 @@ class TopkLinkSelectorTest {
         List<LinkRelevance> links = selector.getSelectedLinks();
         
         // then
-        assertThat(links, is(notNullValue()));
-        assertThat(links.size(), is(2));
-        assertThat(links.get(0).getURL().toString(), is("http://localhost/299"));
-        assertThat(links.get(1).getURL().toString(), is("http://localhost/199"));
+        assertThat(links).isNotNull();
+        assertThat(links.size()).isEqualTo(2);
+        assertThat(links.get(0).getURL().toString()).isEqualTo("http://localhost/299");
+        assertThat(links.get(1).getURL().toString()).isEqualTo("http://localhost/199");
     }
 
     @Test
@@ -57,9 +55,9 @@ class TopkLinkSelectorTest {
         List<LinkRelevance> links = selector.getSelectedLinks();
         
         // then
-        assertThat(links, is(notNullValue()));
-        assertThat(links.size(), is(1));
-        assertThat(links.get(0).getURL().toString(), is("http://localhost/099"));
+        assertThat(links).isNotNull();
+        assertThat(links.size()).isEqualTo(1);
+        assertThat(links.get(0).getURL().toString()).isEqualTo("http://localhost/099");
     }
 
 }

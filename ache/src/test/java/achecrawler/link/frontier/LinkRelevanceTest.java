@@ -1,10 +1,10 @@
 package achecrawler.link.frontier;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 import java.net.MalformedURLException;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class LinkRelevanceTest {
 
@@ -15,7 +15,7 @@ class LinkRelevanceTest {
         // when
         String tld = link.getTopLevelDomainName();
         // then
-        assertThat(tld,  is("asdf.com"));
+        assertThat(tld).isEqualTo("asdf.com");
     }
 
     @Test
@@ -25,7 +25,7 @@ class LinkRelevanceTest {
         // when
         String tld = link.getTopLevelDomainName();
         // then
-        assertThat(tld,  is("127.0.0.1"));
+        assertThat(tld).isEqualTo("127.0.0.1");
     }
 
 }

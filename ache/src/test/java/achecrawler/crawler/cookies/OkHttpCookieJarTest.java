@@ -1,10 +1,7 @@
 package achecrawler.crawler.cookies;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.empty;
-import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.HashMap;
 import java.util.List;
@@ -39,7 +36,7 @@ class OkHttpCookieJarTest {
         // when
         cookieJar.saveFromResponse(url, cookies);
         // then
-        assertEquals(cookieJar.getCookieJar().get(url.host()), cookies);
+        assertThat(cookies).isEqualTo(cookieJar.getCookieJar().get(url.host()));
         cookieJar.clear();
     }
 
@@ -49,7 +46,7 @@ class OkHttpCookieJarTest {
         cookieJar.saveFromResponse(url, asList(cookieRegular, cookieExpired));
         List<Cookie> loadedCookies = cookieJar.loadForRequest(url);
         // then
-        assertThat(loadedCookies, is(asList(cookieRegular)));
+        assertThat(loadedCookies).isEqualTo(asList(cookieRegular));
     }
 
     @Test
@@ -65,8 +62,8 @@ class OkHttpCookieJarTest {
         List<Cookie> cookiesFor3 = cookieJar.loadForRequest(url3);
 
         // then
-        assertThat(cookiesFor2, is(asList(cookieRegular)));
-        assertThat(cookiesFor3, is(empty()));
+        assertThat(cookiesFor2).isEqualTo(asList(cookieRegular));
+        assertThat(cookiesFor3).isEmpty();
     }
 
     @Test
@@ -91,8 +88,8 @@ class OkHttpCookieJarTest {
         List<Cookie> cookiesForSub = cookieJar.loadForRequest(subDomainUrl);
 
         // then
-        assertThat(cookiesForSub, is(asList(topLevelCookie)));
-        assertThat(cookiesForTop, is(asList(topLevelCookie)));
+        assertThat(cookiesForSub).isEqualTo(asList(topLevelCookie));
+        assertThat(cookiesForTop).isEqualTo(asList(topLevelCookie));
     }
 
 
@@ -118,8 +115,8 @@ class OkHttpCookieJarTest {
         List<Cookie> cookiesForSub = cookieJar.loadForRequest(subDomainUrl);
 
         // then
-        assertThat(cookiesForTop, is(empty()));
-        assertThat(cookiesForSub, is(asList(topLevelCookie)));
+        assertThat(cookiesForTop).isEmpty();
+        assertThat(cookiesForSub).isEqualTo(asList(topLevelCookie));
     }
 
     @Test
@@ -144,12 +141,12 @@ class OkHttpCookieJarTest {
         // when
         List<Cookie> cookiesFor2 = cookieJar.loadForRequest(url2);
         // then
-        assertThat(cookiesFor2, is(empty()));
+        assertThat(cookiesFor2).isEmpty();
 
         // when
         List<Cookie> cookiesFor3 = cookieJar.loadForRequest(url3);
         // then
-        assertThat(cookiesFor3, is(empty()));
+        assertThat(cookiesFor3).isEmpty();
     }
 
     @Test
@@ -165,7 +162,7 @@ class OkHttpCookieJarTest {
         cookieJar.update(cookieHashMap);
 
         // then
-        assertEquals(asList(newCookie), cookieJar.getCookieJar().get(newUrl.host()));
+        assertThat(cookieJar.getCookieJar().get(newUrl.host())).isEqualTo(asList(newCookie));
     }
 
 }

@@ -1,11 +1,7 @@
 package achecrawler.memex.cdr;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.InputStream;
 import java.util.Arrays;
@@ -41,26 +37,26 @@ class CDRDocumentBuilderTest {
 
     JsonNode node = new ObjectMapper().readTree(json);
 
-    assertThat(node.get("url"), is(notNullValue()));
-    assertThat(node.get("url").asText(), is("http://www.darpa.mil/program/memex"));
+    assertThat(node.get("url")).isNotNull();
+    assertThat(node.get("url").asText()).isEqualTo("http://www.darpa.mil/program/memex");
 
-    assertThat(node.get("raw_content"), is(notNullValue()));
-    assertThat(node.get("raw_content").asText(), is(content));
+    assertThat(node.get("raw_content")).isNotNull();
+    assertThat(node.get("raw_content").asText()).isEqualTo(content);
 
-    assertThat(node.get("content_type"), is(notNullValue()));
-    assertThat(node.get("content_type").asText(), containsString("text/html"));
+    assertThat(node.get("content_type")).isNotNull();
+    assertThat(node.get("content_type").asText()).contains("text/html");
 
-    assertThat(node.get("crawler"), is(notNullValue()));
-    assertThat(node.get("crawler").asText(), is("memex-crawler"));
+    assertThat(node.get("crawler")).isNotNull();
+    assertThat(node.get("crawler").asText()).isEqualTo("memex-crawler");
 
-    assertThat(node.get("team"), is(notNullValue()));
-    assertThat(node.get("team").asText(), is("DARPA"));
+    assertThat(node.get("team")).isNotNull();
+    assertThat(node.get("team").asText()).isEqualTo("DARPA");
 
-    assertThat(node.get("timestamp").asLong(), is(not(0L)));
+    assertThat(node.get("timestamp").asLong()).isNotEqualTo(0L);
 
-    assertThat(node.get("extracted_text"), is(notNullValue()));
+    assertThat(node.get("extracted_text")).isNotNull();
 
-    assertThat(node.get("extracted_metadata"), is(notNullValue()));
+    assertThat(node.get("extracted_metadata")).isNotNull();
   }
 
   @Test
@@ -83,28 +79,28 @@ class CDRDocumentBuilderTest {
 
     JsonNode node = new ObjectMapper().readTree(json);
 
-    assertThat(node.get("url"), is(notNullValue()));
-    assertThat(node.get("url").asText(), is("http://www.darpa.mil/program/memex"));
+    assertThat(node.get("url")).isNotNull();
+    assertThat(node.get("url").asText()).isEqualTo("http://www.darpa.mil/program/memex");
 
-    assertThat(node.get("raw_content"), is(notNullValue()));
-    assertThat(node.get("raw_content").asText(), is(content));
+    assertThat(node.get("raw_content")).isNotNull();
+    assertThat(node.get("raw_content").asText()).isEqualTo(content);
 
-    assertThat(node.get("content_type"), is(notNullValue()));
-    assertThat(node.get("content_type").asText(), containsString("text/html"));
+    assertThat(node.get("content_type")).isNotNull();
+    assertThat(node.get("content_type").asText()).contains("text/html");
 
-    assertThat(node.get("crawler"), is(notNullValue()));
-    assertThat(node.get("crawler").asText(), is("memex-crawler"));
+    assertThat(node.get("crawler")).isNotNull();
+    assertThat(node.get("crawler").asText()).isEqualTo("memex-crawler");
 
-    assertThat(node.get("team"), is(notNullValue()));
-    assertThat(node.get("team").asText(), is("DARPA"));
+    assertThat(node.get("team")).isNotNull();
+    assertThat(node.get("team").asText()).isEqualTo("DARPA");
 
-    assertThat(node.get("timestamp_index").asText(), is(notNullValue()));
-    assertThat(node.get("timestamp_crawl").asText(), is(notNullValue()));
+    assertThat(node.get("timestamp_index").asText()).isNotNull();
+    assertThat(node.get("timestamp_crawl").asText()).isNotNull();
 
-    assertThat(node.get("objects"), is(notNullValue()));
-    assertThat(node.get("objects").isArray(), is(true));
+    assertThat(node.get("objects")).isNotNull();
+    assertThat(node.get("objects").isArray()).isTrue();
 
-    assertThat(node.get("version").asDouble(), is(3.0d));
+    assertThat(node.get("version").asDouble()).isEqualTo(3.0d);
 
 
   }
@@ -143,43 +139,43 @@ class CDRDocumentBuilderTest {
 
     JsonNode node = new ObjectMapper().readTree(json);
 
-    assertThat(node.get("url"), is(notNullValue()));
-    assertThat(node.get("url").asText(), is("http://www.darpa.mil/program/memex"));
+    assertThat(node.get("url")).isNotNull();
+    assertThat(node.get("url").asText()).isEqualTo("http://www.darpa.mil/program/memex");
 
-    assertThat(node.get("raw_content"), is(notNullValue()));
-    assertThat(node.get("raw_content").asText(), is(content));
+    assertThat(node.get("raw_content")).isNotNull();
+    assertThat(node.get("raw_content").asText()).isEqualTo(content);
 
-    assertThat(node.get("response_headers"), is(notNullValue()));
-    assertThat(node.get("response_headers").get("name1").asText(), is("value1,value2"));
-    assertThat(node.get("response_headers").get("name2").asText(), is("value3"));
+    assertThat(node.get("response_headers")).isNotNull();
+    assertThat(node.get("response_headers").get("name1").asText()).isEqualTo("value1,value2");
+    assertThat(node.get("response_headers").get("name2").asText()).isEqualTo("value3");
 
-    assertThat(node.get("content_type"), is(notNullValue()));
-    assertThat(node.get("content_type").asText(), containsString("text/html"));
+    assertThat(node.get("content_type")).isNotNull();
+    assertThat(node.get("content_type").asText()).contains("text/html");
 
-    assertThat(node.get("crawler"), is(notNullValue()));
-    assertThat(node.get("crawler").asText(), is("memex-crawler"));
+    assertThat(node.get("crawler")).isNotNull();
+    assertThat(node.get("crawler").asText()).isEqualTo("memex-crawler");
 
-    assertThat(node.get("team"), is(notNullValue()));
-    assertThat(node.get("team").asText(), is("DARPA"));
+    assertThat(node.get("team")).isNotNull();
+    assertThat(node.get("team").asText()).isEqualTo("DARPA");
 
-    assertThat(node.get("timestamp_index").asText(), is("2017-06-18T05:22:20Z"));
-    assertThat(node.get("timestamp_crawl").asText(), is("2017-06-18T05:22:20Z"));
+    assertThat(node.get("timestamp_index").asText()).isEqualTo("2017-06-18T05:22:20Z");
+    assertThat(node.get("timestamp_crawl").asText()).isEqualTo("2017-06-18T05:22:20Z");
 
-    assertThat(node.get("objects"), is(notNullValue()));
-    assertThat(node.get("objects").isArray(), is(true));
+    assertThat(node.get("objects")).isNotNull();
+    assertThat(node.get("objects").isArray()).isTrue();
 
-    assertThat(node.get("version").asDouble(), is(3.1d));
+    assertThat(node.get("version").asDouble()).isEqualTo(3.1d);
 
     JsonNode obj0 = node.get("objects").elements().next();
 
-    assertThat(obj0.get("obj_original_url").asText(), is("http://example.com/image.png"));
+    assertThat(obj0.get("obj_original_url").asText()).isEqualTo("http://example.com/image.png");
 
-    assertThat(obj0.get("response_headers"), is(notNullValue()));
-    assertThat(obj0.get("response_headers").get("name1").asText(), is("value1,value2"));
-    assertThat(obj0.get("response_headers").get("name2").asText(), is("value3"));
+    assertThat(obj0.get("response_headers")).isNotNull();
+    assertThat(obj0.get("response_headers").get("name1").asText()).isEqualTo("value1,value2");
+    assertThat(obj0.get("response_headers").get("name2").asText()).isEqualTo("value3");
 
-    assertThat(node.get("crawler_id"), is(notNullValue()));
-    assertThat(node.get("crawler_id").asText(), is("mycrawler"));
+    assertThat(node.get("crawler_id")).isNotNull();
+    assertThat(node.get("crawler_id").asText()).isEqualTo("mycrawler");
   }
 
 }

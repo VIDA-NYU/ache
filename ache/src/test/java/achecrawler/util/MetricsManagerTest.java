@@ -1,8 +1,5 @@
 package achecrawler.util;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.io.File;
 import java.nio.file.Paths;
 
@@ -10,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 import com.codahale.metrics.Counter;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MetricsManagerTest {
 
@@ -26,7 +25,7 @@ public class MetricsManagerTest {
 
 		String directoryPath = Paths.get(tempFolder.getAbsolutePath(), "saved_path").toString();
 		metricsManager.saveMetrics(directoryPath);
-		assertTrue(new File(directoryPath + "/metrics/metrics_counters.data").exists());
+		assertThat(new File(directoryPath + "/metrics/metrics_counters.data").exists()).isTrue();
 	}
 
     @Test
@@ -43,7 +42,7 @@ public class MetricsManagerTest {
 
 		MetricsManager metricsManager2 = new MetricsManager(directoryPath);
 		Counter testCounter = metricsManager2.getCounter("sample_counter");
-        assertEquals(2, testCounter.getCount());
+        assertThat(testCounter.getCount()).isEqualTo(2);
 	}
 
     @Test
@@ -65,9 +64,9 @@ public class MetricsManagerTest {
 
 		MetricsManager metricsManager2 = new MetricsManager(directoryPath);
 		Counter testCounter = metricsManager2.getCounter("sample_test_counter");
-        assertEquals(2, testCounter.getCount());
+        assertThat(testCounter.getCount()).isEqualTo(2);
 		
 		Counter testCounter2 = metricsManager2.getCounter("sample_test_counter2");
-        assertEquals(10, testCounter2.getCount());
+        assertThat(testCounter2.getCount()).isEqualTo(10);
 	}
 }

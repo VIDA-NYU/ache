@@ -1,8 +1,8 @@
 package achecrawler.target.classifier;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -39,8 +39,8 @@ class BodyRegexTargetClassifierTest {
         TargetRelevance relevance2 = classifier.classify(page2);
         
         // then
-        assertThat(relevance1.isRelevant(), is(true));
-        assertThat(relevance2.isRelevant(), is(false));
+        assertThat(relevance1.isRelevant()).isTrue();
+        assertThat(relevance2.isRelevant()).isFalse();
     }
 
     @Test
@@ -61,7 +61,7 @@ class BodyRegexTargetClassifierTest {
         TargetRelevance relevance1 = classifier.classify(page1);
         
         // then
-        assertThat(relevance1.isRelevant(), is(true));
+        assertThat(relevance1.isRelevant()).isTrue();
     }
     
 }

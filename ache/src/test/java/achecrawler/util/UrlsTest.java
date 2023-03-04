@@ -1,8 +1,8 @@
 package achecrawler.util;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class UrlsTest {
 
@@ -11,12 +11,12 @@ class UrlsTest {
      */
     @Test
     void RecentTLDsShouldBeValid() {
-        assertTrue(Urls.isValid("http://registry.africa"));
+        assertThat(Urls.isValid("http://registry.africa")).isTrue();
     }
 
     @Test
     void OnionLinksShouldBeValid() {
-        assertTrue(Urls.isValid("http://3g2upl4pq6kufc4m.onion/"));
+        assertThat(Urls.isValid("http://3g2upl4pq6kufc4m.onion/")).isTrue();
     }
 
 }

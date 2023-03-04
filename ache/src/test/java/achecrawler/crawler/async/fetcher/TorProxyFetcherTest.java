@@ -1,9 +1,5 @@
 package achecrawler.crawler.async.fetcher;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 import java.io.IOException;
 
 import com.sun.net.httpserver.HttpServer;
@@ -15,6 +11,8 @@ import achecrawler.crawler.async.HttpDownloaderConfig;
 import achecrawler.crawler.async.TestWebServerBuilder;
 import achecrawler.crawler.crawlercommons.fetcher.BaseFetchException;
 import achecrawler.crawler.crawlercommons.fetcher.FetchedResult;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class TorProxyFetcherTest {
 
@@ -30,8 +28,8 @@ class TorProxyFetcherTest {
         TorProxyFetcher fetcher = (TorProxyFetcher) FetcherFactory.createFetcher(config);
         
         // then
-        assertThat(config.getTorProxy(), is("http://localhost:1234"));
-        assertThat(fetcher, is(notNullValue()));
+        assertThat(config.getTorProxy()).isEqualTo("http://localhost:1234");
+        assertThat(fetcher).isNotNull();
     }
 
 
@@ -58,8 +56,8 @@ class TorProxyFetcherTest {
         FetchedResult regular = fetcher.get(regularLink);
         
         // then
-        assertThat(new String(onion.getContent()), containsString("tor-proxy"));
-        assertThat(new String(regular.getContent()), containsString("regular"));
+        assertThat(new String(onion.getContent())).contains("tor-proxy");
+        assertThat(new String(regular.getContent())).contains("regular");
         
         // finally
         torProxy.stop(0);

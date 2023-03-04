@@ -1,9 +1,7 @@
 package achecrawler.link.frontier.selector;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import achecrawler.link.frontier.LinkRelevance;
 import java.util.List;
@@ -34,10 +32,10 @@ class MinRelevanceRecrawlSelectorTest {
         List<LinkRelevance> links = selector.getSelectedLinks();
 
         // then
-        assertThat(links, is(notNullValue()));
-        assertThat(links.size(), is(2));
-        assertThat(Math.abs(links.get(0).getRelevance()) > 100d, is(true));
-        assertThat(Math.abs(links.get(1).getRelevance()) > 100d, is(true));
+        assertThat(links).isNotNull();
+        assertThat(links.size()).isEqualTo(2);
+        assertThat(Math.abs(links.get(0).getRelevance()) > 100d).isTrue();
+        assertThat(Math.abs(links.get(1).getRelevance()) > 100d).isTrue();
     }
 
     @Test
@@ -61,9 +59,9 @@ class MinRelevanceRecrawlSelectorTest {
         List<LinkRelevance> links = selector.getSelectedLinks();
 
         // then
-        assertThat(links, is(notNullValue()));
-        assertThat(links.size(), is(1));
-        assertThat(Math.abs(links.get(0).getRelevance()), is(199d));
+        assertThat(links).isNotNull();
+        assertThat(links.size()).isEqualTo(1);
+        assertThat(Math.abs(links.get(0).getRelevance())).isEqualTo(199d);
     }
 
 }

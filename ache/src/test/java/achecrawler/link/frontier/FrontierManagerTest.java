@@ -1,10 +1,8 @@
 package achecrawler.link.frontier;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.fail;
 
 import java.io.File;
 import java.io.IOException;
@@ -91,12 +89,12 @@ public class FrontierManagerTest {
         }
 
         // then
-        assertThat(selectedLink1, is(notNullValue()));
-        assertThat(selectedLink1.getURL(), is(notNullValue()));
-        assertThat(selectedLink1.getURL(), is(link1.getURL()));
+        assertThat(selectedLink1).isNotNull();
+        assertThat(selectedLink1.getURL()).isNotNull();
+        assertThat(selectedLink1.getURL()).isEqualTo(link1.getURL());
 
-        assertThat(notFoundException, is(notNullValue()));
-        assertThat(notFoundException.ranOutOfLinks(), is(true));
+        assertThat(notFoundException).isNotNull();
+        assertThat(notFoundException.ranOutOfLinks()).isTrue();
         frontierManager.close();
     }
 
@@ -141,12 +139,12 @@ public class FrontierManagerTest {
         }
 
         // then
-        assertThat(selectedLink1, is(notNullValue()));
-        assertThat(selectedLink1.getURL(), is(notNullValue()));
-        assertThat(selectedLink1.getURL(), is(link1.getURL()));
+        assertThat(selectedLink1).isNotNull();
+        assertThat(selectedLink1.getURL()).isNotNull();
+        assertThat(selectedLink1.getURL()).isEqualTo(link1.getURL());
 
-        assertThat(notFoundException, is(notNullValue()));
-        assertThat(notFoundException.ranOutOfLinks(), is(true));
+        assertThat(notFoundException).isNotNull();
+        assertThat(notFoundException.ranOutOfLinks()).isTrue();
         frontierManager.close();
     }
 
@@ -193,20 +191,20 @@ public class FrontierManagerTest {
         LinkRelevance selectedLink2_2 = frontierManager.nextURL();
 
         // then
-        assertThat(selectedLink1, is(notNullValue()));
-        assertThat(selectedLink1.getURL(), is(notNullValue()));
-        assertThat(selectedLink1.getURL(), is(link1.getURL()));
+        assertThat(selectedLink1).isNotNull();
+        assertThat(selectedLink1.getURL()).isNotNull();
+        assertThat(selectedLink1.getURL()).isEqualTo(link1.getURL());
 
-        assertThat(notFoundException, is(notNullValue()));
-        assertThat(notFoundException.ranOutOfLinks(), is(true));
+        assertThat(notFoundException).isNotNull();
+        assertThat(notFoundException.ranOutOfLinks()).isTrue();
 
-        assertThat(selectedLink2, is(notNullValue()));
-        assertThat(selectedLink2.getURL(), is(notNullValue()));
-        assertThat(selectedLink2.getURL(), is(link2_1.getURL()));
+        assertThat(selectedLink2).isNotNull();
+        assertThat(selectedLink2.getURL()).isNotNull();
+        assertThat(selectedLink2.getURL()).isEqualTo(link2_1.getURL());
 
-        assertThat(selectedLink2_2, is(notNullValue()));
-        assertThat(selectedLink2_2.getURL(), is(notNullValue()));
-        assertThat(selectedLink2_2.getURL(), is(link2_2.getURL()));
+        assertThat(selectedLink2_2).isNotNull();
+        assertThat(selectedLink2_2.getURL()).isNotNull();
+        assertThat(selectedLink2_2.getURL()).isEqualTo(link2_2.getURL());
 
         frontierManager.close();
     }
@@ -226,11 +224,11 @@ public class FrontierManagerTest {
         LinkRelevance nextURL = frontierManager.nextURL();
         
         // then
-        assertThat(nextURL, is(notNullValue()));
-        assertThat(nextURL.getURL(), is(notNullValue()));
-        assertThat(nextURL.getURL(), is(link1.getURL()));
-        assertThat(nextURL.getRelevance(), is(link1.getRelevance()));
-        assertThat(nextURL.getType(), is(link1.getType()));
+        assertThat(nextURL).isNotNull();
+        assertThat(nextURL.getURL()).isNotNull();
+        assertThat(nextURL.getURL()).isEqualTo(link1.getURL());
+        assertThat(nextURL.getRelevance()).isEqualTo(link1.getRelevance());
+        assertThat(nextURL.getType()).isEqualTo(link1.getType());
         
         frontierManager.close();
     }
@@ -250,26 +248,26 @@ public class FrontierManagerTest {
                 linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 299, LinkRelevance.Type.SITEMAP);
-        assertThat(frontierManager.isRelevant(link1), is(true));
+        assertThat(frontierManager.isRelevant(link1)).isTrue();
         
         // when
         frontierManager.insert(link1);
         // then
-        assertThat(frontierManager.isRelevant(link1), is(false));
+        assertThat(frontierManager.isRelevant(link1)).isFalse();
         
         // when
         LinkRelevance nextURL = frontierManager.nextURL();
         // then
-        assertThat(nextURL, is(notNullValue()));
-        assertThat(nextURL.getRelevance(), is(299d));
-        assertThat(frontierManager.isRelevant(link1), is(false));
+        assertThat(nextURL).isNotNull();
+        assertThat(nextURL.getRelevance()).isEqualTo(299d);
+        assertThat(frontierManager.isRelevant(link1)).isFalse();
         
         // when
         nextURL = frontierManager.nextURL();
         // then
-        assertThat(nextURL, is(notNullValue()));
-        assertThat(nextURL.getRelevance(), is(-299d));
-        assertThat(frontierManager.isRelevant(link1), is(false));
+        assertThat(nextURL).isNotNull();
+        assertThat(nextURL.getRelevance()).isEqualTo(-299d);
+        assertThat(frontierManager.isRelevant(link1)).isFalse();
         
         // finalize
         frontierManager.close();
@@ -311,17 +309,17 @@ public class FrontierManagerTest {
             
         
         // then
-        assertThat(nextUrl1, is(notNullValue()));
-        assertThat(nextUrl1.getURL(), is(notNullValue()));
-        assertThat(nextUrl1.getURL(), is(link1.getURL()));
-        assertThat(nextUrl1.getRelevance(), is(link1.getRelevance()));
-        assertThat(nextUrl1.getType(), is(link1.getType()));
+        assertThat(nextUrl1).isNotNull();
+        assertThat(nextUrl1.getURL()).isNotNull();
+        assertThat(nextUrl1.getURL()).isEqualTo(link1.getURL());
+        assertThat(nextUrl1.getRelevance()).isEqualTo(link1.getRelevance());
+        assertThat(nextUrl1.getType()).isEqualTo(link1.getType());
         
-        assertThat(nextUrl3, is(notNullValue()));
-        assertThat(nextUrl3.getURL(), is(notNullValue()));
-        assertThat(nextUrl3.getURL(), is(link3.getURL()));
-        assertThat(nextUrl3.getRelevance(), is(link3.getRelevance()));
-        assertThat(nextUrl3.getType(), is(link3.getType()));
+        assertThat(nextUrl3).isNotNull();
+        assertThat(nextUrl3.getURL()).isNotNull();
+        assertThat(nextUrl3.getURL()).isEqualTo(link3.getURL());
+        assertThat(nextUrl3.getRelevance()).isEqualTo(link3.getRelevance());
+        assertThat(nextUrl3.getType()).isEqualTo(link3.getType());
         
         frontierManager.close();
     }
@@ -335,7 +333,7 @@ public class FrontierManagerTest {
             "link_storage.download_sitemap_xml", true
         );
         LinkStorageConfig config = new Configuration(props).getLinkStorageConfig();
-        assertThat(config.getDownloadSitemapXml(), is(true));
+        assertThat(config.getDownloadSitemapXml()).isTrue();
 
         LinkSelector linkSelector = new TopkLinkSelector();
         LinkSelector recrawlSelector = null;
@@ -354,17 +352,17 @@ public class FrontierManagerTest {
         LinkRelevance nextURL;
 
         nextURL = frontierManager.nextURL();
-        assertThat(nextURL, is(notNullValue()));
-        assertThat(nextURL.getURL(), is(notNullValue()));
-        assertThat(nextURL.getURL().toString(), is("http://www.example1.com/robots.txt"));
-        assertThat(nextURL.getType(), is(LinkRelevance.Type.ROBOTS));
+        assertThat(nextURL).isNotNull();
+        assertThat(nextURL.getURL()).isNotNull();
+        assertThat(nextURL.getURL().toString()).isEqualTo("http://www.example1.com/robots.txt");
+        assertThat(nextURL.getType()).isEqualTo(LinkRelevance.Type.ROBOTS);
 
         nextURL = frontierManager.nextURL();
-        assertThat(nextURL, is(notNullValue()));
-        assertThat(nextURL.getURL(), is(notNullValue()));
-        assertThat(nextURL.getURL(), is(link1.getURL()));
-        assertThat(nextURL.getRelevance(), is(link1.getRelevance()));
-        assertThat(nextURL.getType(), is(link1.getType()));
+        assertThat(nextURL).isNotNull();
+        assertThat(nextURL.getURL()).isNotNull();
+        assertThat(nextURL.getURL()).isEqualTo(link1.getURL());
+        assertThat(nextURL.getRelevance()).isEqualTo(link1.getRelevance());
+        assertThat(nextURL.getType()).isEqualTo(link1.getType());
 
         frontierManager.close();
     }
@@ -400,16 +398,16 @@ public class FrontierManagerTest {
         // then
 
         // should return only 3 inserted links, 4th should be null
-        assertThat(selectedLink1, is(notNullValue()));
-        assertThat(selectedLink2, is(notNullValue()));
-        assertThat(selectedLink3, is(notNullValue()));
-        assertThat(notFoundException, is(notNullValue()));
-        assertThat(notFoundException.ranOutOfLinks(), is(true));
+        assertThat(selectedLink1).isNotNull();
+        assertThat(selectedLink2).isNotNull();
+        assertThat(selectedLink3).isNotNull();
+        assertThat(notFoundException).isNotNull();
+        assertThat(notFoundException.ranOutOfLinks()).isTrue();
 
         // should return bigger relevance values first
-        assertThat(selectedLink1.getURL(), is(link3.getURL()));
-        assertThat(selectedLink2.getURL(), is(link2.getURL()));
-        assertThat(selectedLink3.getURL(), is(link1.getURL()));
+        assertThat(selectedLink1.getURL()).isEqualTo(link3.getURL());
+        assertThat(selectedLink2.getURL()).isEqualTo(link2.getURL());
+        assertThat(selectedLink3.getURL()).isEqualTo(link1.getURL());
 
         frontierManager.close();
     }
@@ -449,14 +447,14 @@ public class FrontierManagerTest {
         }
         
         // then
-        assertThat(selectedLink1, is(notNullValue()));
-        assertThat(selectedLink2, is(notNullValue()));
+        assertThat(selectedLink1).isNotNull();
+        assertThat(selectedLink2).isNotNull();
 
-        assertThat(notFoundException1, is(notNullValue()));
-        assertThat(notFoundException1.ranOutOfLinks(), is(true));
+        assertThat(notFoundException1).isNotNull();
+        assertThat(notFoundException1.ranOutOfLinks()).isTrue();
 
-        assertThat(notFoundException2, is(notNullValue()));
-        assertThat(notFoundException2.ranOutOfLinks(), is(true));
+        assertThat(notFoundException2).isNotNull();
+        assertThat(notFoundException2.ranOutOfLinks()).isTrue();
 
         frontierManager.close();
         
@@ -472,7 +470,7 @@ public class FrontierManagerTest {
             "link_storage.download_sitemap_xml", false
         );
         LinkStorageConfig config = new Configuration(props).getLinkStorageConfig();
-        assertThat(config.getSchedulerHostMinAccessInterval(), is(minimumAccessTimeInterval));
+        assertThat(config.getSchedulerHostMinAccessInterval()).isEqualTo(minimumAccessTimeInterval);
         
         LinkSelector linkSelector = new TopkLinkSelector();
         LinkSelector recrawlSelector = null;
@@ -494,7 +492,7 @@ public class FrontierManagerTest {
             fail("Should not return link right now.");
         } catch(DataNotFoundException e) {
             notFoundException1 = e;
-            assertThat(e.ranOutOfLinks(), is(false));
+            assertThat(e.ranOutOfLinks()).isFalse();
         }
         
         // should return after minimum time interval
@@ -502,14 +500,14 @@ public class FrontierManagerTest {
         LinkRelevance selectedLink2 = frontierManager.nextURL();        
         
         // then
-        assertThat(selectedLink1, is(notNullValue()));
-        assertThat(selectedLink1.getURL().toString(), is(link2.getURL().toString()));
+        assertThat(selectedLink1).isNotNull();
+        assertThat(selectedLink1.getURL().toString()).isEqualTo(link2.getURL().toString());
         
-        assertThat(notFoundException1, is(notNullValue()));
-        assertThat(notFoundException1.ranOutOfLinks(), is(false));
+        assertThat(notFoundException1).isNotNull();
+        assertThat(notFoundException1.ranOutOfLinks()).isFalse();
         
-        assertThat(selectedLink2, is(notNullValue()));
-        assertThat(selectedLink2, is(notNullValue()));
+        assertThat(selectedLink2).isNotNull();
+        assertThat(selectedLink2).isNotNull();
         
         frontierManager.close();
         

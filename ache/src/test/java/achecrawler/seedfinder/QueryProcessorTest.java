@@ -1,9 +1,8 @@
 package achecrawler.seedfinder;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -61,13 +60,13 @@ class QueryProcessorTest {
         QueryResult result = qp.processQuery(query);
         
         // then
-        assertThat(result, is(notNullValue()));
-        assertThat(result.positivePages.size(), is(2));
-        assertThat(result.positivePages.get(0).getURL().toString(), is("http://localhost:1234/1-pos.html"));
-        assertThat(result.positivePages.get(1).getURL().toString(), is("http://localhost:1234/2-pos.html"));
+        assertThat(result).isNotNull();
+        assertThat(result.positivePages.size()).isEqualTo(2);
+        assertThat(result.positivePages.get(0).getURL().toString()).isEqualTo("http://localhost:1234/1-pos.html");
+        assertThat(result.positivePages.get(1).getURL().toString()).isEqualTo("http://localhost:1234/2-pos.html");
         
-        assertThat(result.negativePages.size(), is(1));
-        assertThat(result.negativePages.get(0).getURL().toString(), is("http://localhost:1234/1-neg.html"));
+        assertThat(result.negativePages.size()).isEqualTo(1);
+        assertThat(result.negativePages.get(0).getURL().toString()).isEqualTo("http://localhost:1234/1-neg.html");
         
         // finally
         httpServer.stop(0);

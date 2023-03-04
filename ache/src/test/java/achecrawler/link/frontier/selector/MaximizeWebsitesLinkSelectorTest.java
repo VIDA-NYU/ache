@@ -1,8 +1,7 @@
 package achecrawler.link.frontier.selector;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +27,9 @@ class MaximizeWebsitesLinkSelectorTest {
         for(LinkRelevance link : frontier) selector.evaluateLink(link);
         List<LinkRelevance> selectedLinks = selector.getSelectedLinks();
         // then
-        assertThat(selectedLinks.size(), is(2));
-        assertThat(selectedLinks.get(0).getRelevance(), is(4d));
-        assertThat(selectedLinks.get(1).getRelevance(), is(2d));
+        assertThat(selectedLinks.size()).isEqualTo(2);
+        assertThat(selectedLinks.get(0).getRelevance()).isEqualTo(4d);
+        assertThat(selectedLinks.get(1).getRelevance()).isEqualTo(2d);
         
         // given
         frontier.removeAll(selectedLinks);
@@ -39,9 +38,9 @@ class MaximizeWebsitesLinkSelectorTest {
         for(LinkRelevance link : frontier) selector.evaluateLink(link);
         selectedLinks = selector.getSelectedLinks();
         // then
-        assertThat(selectedLinks.size(), is(2));
-        assertThat(selectedLinks.get(0).getRelevance(), is(3d));
-        assertThat(selectedLinks.get(1).getRelevance(), is(1d));
+        assertThat(selectedLinks.size()).isEqualTo(2);
+        assertThat(selectedLinks.get(0).getRelevance()).isEqualTo(3d);
+        assertThat(selectedLinks.get(1).getRelevance()).isEqualTo(1d);
         
         // given
         frontier.removeAll(selectedLinks);
@@ -49,7 +48,7 @@ class MaximizeWebsitesLinkSelectorTest {
         selector.startSelection(2);
         selectedLinks = selector.getSelectedLinks();
         // then
-        assertThat(selectedLinks.size(), is(0));
+        assertThat(selectedLinks.size()).isEqualTo(0);
 
     }
 
@@ -77,17 +76,17 @@ class MaximizeWebsitesLinkSelectorTest {
         List<LinkRelevance> selectedLinks = selector.getSelectedLinks();
         
         // then
-        assertThat(selectedLinks.size(), is(9));
-        assertThat(selectedLinks.get(0).getRelevance(), is(3d));
-        assertThat(selectedLinks.get(1).getRelevance(), is(3d));
-        assertThat(selectedLinks.get(2).getRelevance(), is(3d));
+        assertThat(selectedLinks.size()).isEqualTo(9);
+        assertThat(selectedLinks.get(0).getRelevance()).isEqualTo(3d);
+        assertThat(selectedLinks.get(1).getRelevance()).isEqualTo(3d);
+        assertThat(selectedLinks.get(2).getRelevance()).isEqualTo(3d);
         
-        assertThat(selectedLinks.get(3).getRelevance(), is(2d));
-        assertThat(selectedLinks.get(4).getRelevance(), is(2d));
-        assertThat(selectedLinks.get(5).getRelevance(), is(2d));
+        assertThat(selectedLinks.get(3).getRelevance()).isEqualTo(2d);
+        assertThat(selectedLinks.get(4).getRelevance()).isEqualTo(2d);
+        assertThat(selectedLinks.get(5).getRelevance()).isEqualTo(2d);
         
-        assertThat(selectedLinks.get(6).getRelevance(), is(1d));
-        assertThat(selectedLinks.get(7).getRelevance(), is(1d));
-        assertThat(selectedLinks.get(8).getRelevance(), is(1d));
+        assertThat(selectedLinks.get(6).getRelevance()).isEqualTo(1d);
+        assertThat(selectedLinks.get(7).getRelevance()).isEqualTo(1d);
+        assertThat(selectedLinks.get(8).getRelevance()).isEqualTo(1d);
     }
 }

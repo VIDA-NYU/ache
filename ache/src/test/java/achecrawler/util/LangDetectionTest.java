@@ -1,10 +1,9 @@
 package achecrawler.util;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class LangDetectionTest {
     
@@ -25,7 +24,7 @@ class LangDetectionTest {
         Boolean isEnglish = langDetect.isEnglish(textInEnglish);
         
         // then
-        assertThat(isEnglish, is(true));
+        assertThat(isEnglish).isTrue();
     }
 
     @Test
@@ -37,7 +36,7 @@ class LangDetectionTest {
         Boolean isEnglish = langDetect.isEnglish(textNotInEnglish);
         
         // then
-        assertThat(isEnglish, is(false));
+        assertThat(isEnglish).isFalse();
     }
 
     @Test
@@ -49,7 +48,7 @@ class LangDetectionTest {
         Boolean isEnglish = langDetect.isEnglish(textNotInEnglish);
         
         // then
-        assertThat(isEnglish, is(false));
+        assertThat(isEnglish).isFalse();
     }
 
     @Test
@@ -61,7 +60,7 @@ class LangDetectionTest {
         Boolean isEnglish = langDetect.isEnglish(textNotInEnglish);
         
         // then
-        assertThat(isEnglish, is(false));
+        assertThat(isEnglish).isFalse();
     }
 
 

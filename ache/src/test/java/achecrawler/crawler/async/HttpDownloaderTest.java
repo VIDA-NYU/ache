@@ -1,9 +1,5 @@
 package achecrawler.crawler.async;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +15,8 @@ import achecrawler.util.MetricsManager;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class HttpDownloaderTest {
     /*
@@ -47,14 +45,14 @@ public class HttpDownloaderTest {
         FetchedResult result = downloader.dipatchDownload(originalUrl).get();
         
         // then
-        assertThat(result.getNumRedirects(), is(1));
-        assertThat(result.getBaseUrl(), is(originalUrl));
-        assertThat(result.getFetchedUrl(), is(expectedRedirectedUrl));
-        assertThat(result.getNewBaseUrl(), is(expectedRedirectedUrl));
-        assertThat(result.getStatusCode(), is(200));
-        assertThat(result.getReasonPhrase(), is("OK"));
-        assertThat(result.getContentType(), is("text/html; charset=utf-8"));
-        assertThat(result.getContent(), is("Hello world!".getBytes()));
+        assertThat(result.getNumRedirects()).isEqualTo(1);
+        assertThat(result.getBaseUrl()).isEqualTo(originalUrl);
+        assertThat(result.getFetchedUrl()).isEqualTo(expectedRedirectedUrl);
+        assertThat(result.getNewBaseUrl()).isEqualTo(expectedRedirectedUrl);
+        assertThat(result.getStatusCode()).isEqualTo(200);
+        assertThat(result.getReasonPhrase()).isEqualTo("OK");
+        assertThat(result.getContentType()).isEqualTo("text/html; charset=utf-8");
+        assertThat(result.getContent()).isEqualTo("Hello world!".getBytes());
         
         httpServer.stop(0);
     }
@@ -73,14 +71,14 @@ public class HttpDownloaderTest {
         FetchedResult result = downloader.dipatchDownload(originalUrl).get();
         
         // then
-        assertThat(result.getNumRedirects(), is(0));
-        assertThat(result.getBaseUrl(), is(originalUrl));
-        assertThat(result.getFetchedUrl(), is(originalUrl));
-        assertThat(result.getNewBaseUrl(), is(nullValue()));
-        assertThat(result.getStatusCode(), is(200));
-        assertThat(result.getReasonPhrase(), is("OK"));
-        assertThat(result.getContentType(), is("text/html; charset=utf-8"));
-        assertThat(result.getContent(), is(responseContent.getBytes()));
+        assertThat(result.getNumRedirects()).isEqualTo(0);
+        assertThat(result.getBaseUrl()).isEqualTo(originalUrl);
+        assertThat(result.getFetchedUrl()).isEqualTo(originalUrl);
+        assertThat(result.getNewBaseUrl()).isNull();
+        assertThat(result.getStatusCode()).isEqualTo(200);
+        assertThat(result.getReasonPhrase()).isEqualTo("OK");
+        assertThat(result.getContentType()).isEqualTo("text/html; charset=utf-8");
+        assertThat(result.getContent()).isEqualTo(responseContent.getBytes());
         
         httpServer.stop(0);
     }
@@ -104,7 +102,7 @@ public class HttpDownloaderTest {
         
         // then
         for (Future<FetchedResult> future : results) {
-            assertThat(future.get().getStatusCode(), is(200));
+            assertThat(future.get().getStatusCode()).isEqualTo(200);
         }
         
         httpServer.stop(0);
@@ -140,7 +138,7 @@ public class HttpDownloaderTest {
         }
         
         // then
-        assertThat(requestsFinished.get(), is(numberOfRequests));
+        assertThat(requestsFinished.get()).isEqualTo(numberOfRequests);
         
         httpServer.stop(0);
     }

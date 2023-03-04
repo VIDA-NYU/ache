@@ -1,14 +1,7 @@
 package achecrawler.target.repository;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.empty;
-import static org.hamcrest.Matchers.isIn;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.File;
 import java.io.IOException;
@@ -71,26 +64,23 @@ public class WarcTargetRepositoryTest {
 
         if (testFolder.isDirectory()) {
             File[] allFiles = testFolder.listFiles();
-            assertTrue(allFiles[0].getName().startsWith("crawl_data"));
+            assertThat(allFiles[0].getName().startsWith("crawl_data")).isTrue();
         }
 
         Iterator<WARCRecord> it = repository.iterator();
 
         // then
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         WARCRecord page = it.next();
-        assertThat(it.hasNext(), is(false));
+        assertThat(it.hasNext()).isFalse();
 
-        assertThat(page.getHeader().getUrl(), is(url));
+        assertThat(page.getHeader().getUrl()).isEqualTo(url);
 
-        assertThat(page.getHeader().getHeaderValue("Content-Type"),
-                is(WARCConstants.HTTP_RESPONSE_MIMETYPE));
+        assertThat(page.getHeader().getHeaderValue("Content-Type")).isEqualTo(WARCConstants.HTTP_RESPONSE_MIMETYPE);
 
-        assertThat(page.getHeader().getHeaderValue("ACHE-IsRelevant"),
-                is(target.getTargetRelevance().isRelevant() + ""));
+        assertThat(page.getHeader().getHeaderValue("ACHE-IsRelevant")).isEqualTo(target.getTargetRelevance().isRelevant() + "");
 
-        assertThat(Double.valueOf(page.getHeader().getHeaderValue("ACHE-Relevance").toString()),
-                is(Double.valueOf(target.getTargetRelevance().getRelevance())));
+        assertThat(Double.valueOf(page.getHeader().getHeaderValue("ACHE-Relevance").toString())).isEqualTo(Double.valueOf(target.getTargetRelevance().getRelevance()));
     }
 
     @Test
@@ -110,27 +100,23 @@ public class WarcTargetRepositoryTest {
 
         if (testFolder.isDirectory()) {
             File[] allFiles = testFolder.listFiles();
-            assertTrue(allFiles[0].getName().startsWith("crawl_data"));
+            assertThat(allFiles[0].getName().startsWith("crawl_data")).isTrue();
         }
 
         Iterator<Page> it = repository.pagesIterator();
 
         // then
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         Page page = it.next();
-        assertThat(it.hasNext(), is(false));
-        assertThat(page.getRedirectedURL().toString(), is(target.getRedirectedURL().toString()));
-        assertThat(page.getFinalUrl(), is(target.getFinalUrl()));
-        assertThat(page.getFetchTime(), is(target.getFetchTime()));
-        assertThat(page.getTargetRelevance().isRelevant(),
-                is(target.getTargetRelevance().isRelevant()));
-        assertThat(page.getTargetRelevance().getRelevance(),
-                is(target.getTargetRelevance().getRelevance()));
-        assertThat(page.getResponseHeaders().size(), is(target.getResponseHeaders().size()));
-        assertThat(page.getResponseHeaders().get("Content-Type").get(0),
-                is(target.getResponseHeaders().get("Content-Type").get(0)));
-        assertThat(page.getContentAsString(),
-                is(target.getContentAsString()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(page.getRedirectedURL().toString()).isEqualTo(target.getRedirectedURL().toString());
+        assertThat(page.getFinalUrl()).isEqualTo(target.getFinalUrl());
+        assertThat(page.getFetchTime()).isEqualTo(target.getFetchTime());
+        assertThat(page.getTargetRelevance().isRelevant()).isEqualTo(target.getTargetRelevance().isRelevant());
+        assertThat(page.getTargetRelevance().getRelevance()).isEqualTo(target.getTargetRelevance().getRelevance());
+        assertThat(page.getResponseHeaders().size()).isEqualTo(target.getResponseHeaders().size());
+        assertThat(page.getResponseHeaders().get("Content-Type").get(0)).isEqualTo(target.getResponseHeaders().get("Content-Type").get(0));
+        assertThat(page.getContentAsString()).isEqualTo(target.getContentAsString());
     }
 
     @Test
@@ -167,11 +153,11 @@ public class WarcTargetRepositoryTest {
                 readWarcInfoRecord = true;
             } else if (!readFirst) {
                 readFirst = true;
-                assertThat(ar.getHeader().getUrl(), is(url1));
+                assertThat(ar.getHeader().getUrl()).isEqualTo(url1);
                 continue;
             } else if (!readSecond) {
                 url = ar.getHeader().getUrl();
-                assertThat(ar.getHeader().getUrl(), is(url2));
+                assertThat(ar.getHeader().getUrl()).isEqualTo(url2);
                 readSecond = true;
             }
         }
@@ -198,15 +184,15 @@ public class WarcTargetRepositoryTest {
         RepositoryIterator respositoryIterator = repository.iterator();
 
         // then
-        assertTrue(respositoryIterator.hasNext());
+        assertThat(respositoryIterator.hasNext()).isTrue();
         WARCRecord record = respositoryIterator.next();
-        assertThat(record.getHeader().getUrl(), is(url1));
+        assertThat(record.getHeader().getUrl()).isEqualTo(url1);
 
-        assertTrue(respositoryIterator.hasNext());
+        assertThat(respositoryIterator.hasNext()).isTrue();
         record = respositoryIterator.next();
-        assertThat(record.getHeader().getUrl(), is(url2));
+        assertThat(record.getHeader().getUrl()).isEqualTo(url2);
 
-        assertFalse(respositoryIterator.hasNext());
+        assertThat(respositoryIterator.hasNext()).isFalse();
     }
 
     @Test
@@ -232,14 +218,14 @@ public class WarcTargetRepositoryTest {
         RepositoryIterator repositoryIterator = repository.iterator();
 
         // then
-        assertTrue(repositoryIterator.hasNext());
+        assertThat(repositoryIterator.hasNext()).isTrue();
         WARCRecord record = repositoryIterator.next();
-        assertThat(record.getHeader().getUrl(), is(url1));
+        assertThat(record.getHeader().getUrl()).isEqualTo(url1);
         String recordData = IOUtils.toString(record);
-        assertThat(recordData, containsString(html));
-        assertThat(recordData, containsString(headerValue));
+        assertThat(recordData).contains(html);
+        assertThat(recordData).contains(headerValue);
 
-        assertFalse(repositoryIterator.hasNext());
+        assertThat(repositoryIterator.hasNext()).isFalse();
     }
 
     @Test
@@ -253,8 +239,8 @@ public class WarcTargetRepositoryTest {
         Iterator<WARCRecord> it = repository.iterator();
 
         // then
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
     }
 
     @Test
@@ -280,26 +266,26 @@ public class WarcTargetRepositoryTest {
 
         // then
         File[] allFiles = new File(folder).listFiles();
-        assertTrue(allFiles[0].getName().startsWith("crawl_data"));
-        assertThat(allFiles.length, is(2));
-        assertTrue(allFiles[1].getName().startsWith("crawl_data"));
+        assertThat(allFiles[0].getName().startsWith("crawl_data")).isTrue();
+        assertThat(allFiles.length).isEqualTo(2);
+        assertThat(allFiles[1].getName().startsWith("crawl_data")).isTrue();
 
         List<String> allUrls = new ArrayList<>(asList(url1, url2));
 
         RepositoryIterator respositoryIterator = repository.iterator();
 
-        assertTrue(respositoryIterator.hasNext());
+        assertThat(respositoryIterator.hasNext()).isTrue();
         WARCRecord record = respositoryIterator.next();
-        assertThat(record.getHeader().getUrl(), isIn(allUrls));
+        assertThat(record.getHeader().getUrl()).isIn(allUrls);
 
         allUrls.remove(record.getHeader().getUrl());
 
-        assertTrue(respositoryIterator.hasNext());
+        assertThat(respositoryIterator.hasNext()).isTrue();
         record = respositoryIterator.next();
-        assertThat(record.getHeader().getUrl(), isIn(allUrls));
+        assertThat(record.getHeader().getUrl()).isIn(allUrls);
 
         allUrls.remove(record.getHeader().getUrl());
 
-        assertThat(allUrls, empty());
+        assertThat(allUrls).isEmpty();
     }
 }

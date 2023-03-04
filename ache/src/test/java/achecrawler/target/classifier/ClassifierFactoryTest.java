@@ -1,12 +1,9 @@
 package achecrawler.target.classifier;
 
-import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 class ClassifierFactoryTest {
 
@@ -16,8 +13,8 @@ class ClassifierFactoryTest {
         String path = ClassifierFactoryTest.class.getResource("url_regex_classifier_config/").getPath();
 
         TargetClassifier classifier = TargetClassifierFactory.create(path);
-        assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(UrlRegexTargetClassifier.class)));
+        assertThat(classifier).isNotNull();
+        assertThat(classifier).isInstanceOf(UrlRegexTargetClassifier.class);
     }
 
     @Test
@@ -26,8 +23,8 @@ class ClassifierFactoryTest {
         String path = ClassifierFactoryTest.class.getResource("title_regex_classifier_config/").getPath();
 
         TargetClassifier classifier = TargetClassifierFactory.create(path);
-        assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(TitleRegexTargetClassifier.class)));
+        assertThat(classifier).isNotNull();
+        assertThat(classifier).isInstanceOf(TitleRegexTargetClassifier.class);
     }
 
     @Test
@@ -36,8 +33,8 @@ class ClassifierFactoryTest {
         String path = ClassifierFactoryTest.class.getResource("body_regex_classifier_config/").getPath();
 
         TargetClassifier classifier = TargetClassifierFactory.create(path);
-        assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(BodyRegexTargetClassifier.class)));
+        assertThat(classifier).isNotNull();
+        assertThat(classifier).isInstanceOf(BodyRegexTargetClassifier.class);
     }
 
     @Test
@@ -46,13 +43,13 @@ class ClassifierFactoryTest {
         String path = ClassifierFactoryTest.class.getResource("smile_classifier_config/").getPath();
         System.out.println(path);
         TargetClassifier classifier = TargetClassifierFactory.create(path);
-        assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(SmileTargetClassifier.class)));
+        assertThat(classifier).isNotNull();
+        assertThat(classifier).isInstanceOf(SmileTargetClassifier.class);
     }
 
     @Test
     void shouldNotSupportClassifierConfigWithoutYmlFile() throws Exception {
-        assertThrows(IllegalArgumentException.class, () -> {
+        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
             // given
             String path = ClassifierFactoryTest.class.getResource("old_classifier_config/").getPath();
             TargetClassifier classifier = TargetClassifierFactory.create(path);

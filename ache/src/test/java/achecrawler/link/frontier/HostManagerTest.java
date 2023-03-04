@@ -1,8 +1,5 @@
 package achecrawler.link.frontier;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 import achecrawler.util.persistence.PersistentHashtable.DB;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class HostManagerTest {
 
@@ -34,7 +33,7 @@ public class HostManagerTest {
         hosts.close();
         hosts = new HostManager(path, DB.ROCKSDB);
         
-        assertThat(hosts.isKnown(host), is(true));
-        assertThat(hosts.isKnown(anotherHost), is(false));
+        assertThat(hosts.isKnown(host)).isTrue();
+        assertThat(hosts.isKnown(anotherHost)).isFalse();
     }
 }

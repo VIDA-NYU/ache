@@ -1,11 +1,11 @@
 package achecrawler.seedfinder;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class RelevanceModelTest {
 
@@ -31,9 +31,9 @@ class RelevanceModelTest {
         model.addPage(false, docTerm3);
         
         // then
-        assertThat(model.getTermsWithBestScore().term, is("asdf"));
-        assertThat(model.getTermWithBestScoreExcept(asdf).term, is("qwer"));
-        assertThat(model.getTermWithBestScoreExcept(asdfqwer).term, is("zxcv"));
+        assertThat(model.getTermsWithBestScore().term).isEqualTo("asdf");
+        assertThat(model.getTermWithBestScoreExcept(asdf).term).isEqualTo("qwer");
+        assertThat(model.getTermWithBestScoreExcept(asdfqwer).term).isEqualTo("zxcv");
     }
 
 }

@@ -1,9 +1,5 @@
 package achecrawler.minhash;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +11,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import com.google.common.io.ByteStreams;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class DuplicatePageIndexerTest {
 
@@ -43,14 +41,14 @@ public class DuplicatePageIndexerTest {
         deduper.insert(url1, content1);
 
         // then
-        assertThat(deduper.isNearDuplicate(content2), is(true));
+        assertThat(deduper.isNearDuplicate(content2)).isTrue();
 
         Set<String> dups = deduper.findNearDuplicates(content2);
-        assertThat(dups, is(notNullValue()));
-        assertThat(dups.size(), is(1));
-        assertThat(dups.iterator().next(), is(url1));
+        assertThat(dups).isNotNull();
+        assertThat(dups.size()).isEqualTo(1);
+        assertThat(dups.iterator().next()).isEqualTo(url1);
 
-        assertThat(deduper.isNearDuplicate(content3), is(false));
+        assertThat(deduper.isNearDuplicate(content3)).isFalse();
     }
 
     DuplicatePageIndexer initDuplicatePageIndexer(boolean inMemory) {

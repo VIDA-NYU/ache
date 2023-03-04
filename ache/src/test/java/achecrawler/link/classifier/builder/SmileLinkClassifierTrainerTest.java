@@ -1,11 +1,8 @@
 package achecrawler.link.classifier.builder;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThan;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.lessThan;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -40,18 +37,18 @@ class SmileLinkClassifierTrainerTest {
 
         LNClassifier classifier = classifierTrainer.trainLNClassifier(instances, classValues);
 
-        assertThat(classifier, notNullValue());
+        assertThat(classifier).isNotNull();
 
         for (LinkNeighborhood ln : relevantSample.getSamples()) {
             double[] probs = classifier.classify(ln);
-            assertThat(ln.getLink().toString(), probs[0], is(greaterThan(0.5d)));
-            assertThat(ln.getLink().toString(), probs[1], is(lessThan(0.5d)));
+            assertThat(probs[0]).as(ln.getLink().toString()).isGreaterThan(0.5d);
+            assertThat(probs[1]).as(ln.getLink().toString()).isLessThan(0.5d);
         }
 
         for (LinkNeighborhood ln : irrelevantSample.getSamples()) {
             double[] probs = classifier.classify(ln);
-            assertThat(ln.getLink().toString(), probs[0], is(lessThan(0.5d)));
-            assertThat(ln.getLink().toString(), probs[1], is(greaterThan(0.5d)));
+            assertThat(probs[0]).as(ln.getLink().toString()).isLessThan(0.5d);
+            assertThat(probs[1]).as(ln.getLink().toString()).isGreaterThan(0.5d);
         }
 
     }
@@ -77,27 +74,27 @@ class SmileLinkClassifierTrainerTest {
 
         LNClassifier classifier = classifierTrainer.trainLNClassifier(instances, classValues);
 
-        assertThat(classifier, notNullValue());
+        assertThat(classifier).isNotNull();
 
         for (LinkNeighborhood ln : sample1.getSamples()) {
             double[] probs = classifier.classify(ln);
-            assertThat(ln.getLink().toString(), probs[0], is(greaterThan(0.5d)));
-            assertThat(ln.getLink().toString(), probs[1], is(lessThan(0.5d)));
-            assertThat(ln.getLink().toString(), probs[2], is(lessThan(0.5d)));
+            assertThat(probs[0]).as(ln.getLink().toString()).isGreaterThan(0.5d);
+            assertThat(probs[1]).as(ln.getLink().toString()).isLessThan(0.5d);
+            assertThat(probs[2]).as(ln.getLink().toString()).isLessThan(0.5d);
         }
 
         for (LinkNeighborhood ln : sample2.getSamples()) {
             double[] probs = classifier.classify(ln);
-            assertThat(ln.getLink().toString(), probs[0], is(lessThan(0.5d)));
-            assertThat(ln.getLink().toString(), probs[1], is(greaterThan(0.5d)));
-            assertThat(ln.getLink().toString(), probs[2], is(lessThan(0.5d)));
+            assertThat(probs[0]).as(ln.getLink().toString()).isLessThan(0.5d);
+            assertThat(probs[1]).as(ln.getLink().toString()).isGreaterThan(0.5d);
+            assertThat(probs[2]).as(ln.getLink().toString()).isLessThan(0.5d);
         }
 
         for (LinkNeighborhood ln : sample3.getSamples()) {
             double[] probs = classifier.classify(ln);
-            assertThat(ln.getLink().toString(), probs[0], is(lessThan(0.5d)));
-            assertThat(ln.getLink().toString(), probs[1], is(lessThan(0.5d)));
-            assertThat(ln.getLink().toString(), probs[2], is(greaterThan(0.5d)));
+            assertThat(probs[0]).as(ln.getLink().toString()).isLessThan(0.5d);
+            assertThat(probs[1]).as(ln.getLink().toString()).isLessThan(0.5d);
+            assertThat(probs[2]).as(ln.getLink().toString()).isGreaterThan(0.5d);
         }
 
     }

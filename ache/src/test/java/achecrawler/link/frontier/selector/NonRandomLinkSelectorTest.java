@@ -1,9 +1,7 @@
 package achecrawler.link.frontier.selector;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
@@ -34,10 +32,10 @@ class NonRandomLinkSelectorTest {
         List<LinkRelevance> links = selector.getSelectedLinks();
         
         // then
-        assertThat(links, is(notNullValue()));
-        assertThat(links.size(), is(2));
-        assertThat(links.get(0).getRelevance(), is(299d));
-        assertThat(links.get(0).getRelevance(), is(299d));
+        assertThat(links).isNotNull();
+        assertThat(links.size()).isEqualTo(2);
+        assertThat(links.get(0).getRelevance()).isEqualTo(299d);
+        assertThat(links.get(0).getRelevance()).isEqualTo(299d);
     }
     
 }

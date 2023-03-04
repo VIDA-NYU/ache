@@ -1,10 +1,7 @@
 package achecrawler.integration;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.lessThan;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.File;
 import java.io.IOException;
@@ -79,12 +76,12 @@ public class HardFocusCrawlingTest {
 
         for (String url : shouldBeDownloaded) {
             LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(lessThan(0d)));
+            assertThat(frontier.exist(link)).as("URL=" + link.getURL().toString()).isLessThan(0d);
         }
 
         for (String url : shouldNOTBeDownloaded) {
             LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(nullValue()));
+            assertThat(frontier.exist(link)).as("URL=" + link.getURL().toString()).isNull();
         }
     }
 
@@ -119,7 +116,7 @@ public class HardFocusCrawlingTest {
 
         for (String url : shouldBeDownloaded) {
             LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(lessThan(0d)));
+            assertThat(frontier.exist(link)).as("URL=" + link.getURL().toString()).isLessThan(0d);
         }
     }
     

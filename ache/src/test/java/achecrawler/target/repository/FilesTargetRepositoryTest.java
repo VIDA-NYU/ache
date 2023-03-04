@@ -1,11 +1,8 @@
 package achecrawler.target.repository;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.lessThan;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -53,13 +50,13 @@ public class FilesTargetRepositoryTest {
 		repository.close();
 		// then
 		CloseableIterator<Page> it = repository.pagesIterator();
-		assertThat(it.hasNext(), is(true));
+		assertThat(it.hasNext()).isTrue();
 		Page page = it.next();
-        assertThat(page.getContentAsString(), is(html));
-        assertThat(page.getFinalUrl(), is(url));
-        assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
-        assertThat(page.getTargetRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
-        assertThat(page.getTargetRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
+        assertThat(page.getContentAsString()).isEqualTo(html);
+        assertThat(page.getFinalUrl()).isEqualTo(url);
+        assertThat(page.getResponseHeaders().get("content-type").get(0)).isEqualTo("text/html");
+        assertThat(page.getTargetRelevance().isRelevant()).isEqualTo(TargetRelevance.RELEVANT.isRelevant());
+        assertThat(page.getTargetRelevance().getRelevance()).isEqualTo(TargetRelevance.RELEVANT.getRelevance());
 	}
 
     @Test
@@ -86,28 +83,28 @@ public class FilesTargetRepositoryTest {
         // then
         Page page;
         
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         page = it.next();
         
-        assertThat(page, is(notNullValue()));
-        assertThat(page.getContentAsString(), is(html));
+        assertThat(page).isNotNull();
+        assertThat(page.getContentAsString()).isEqualTo(html);
         
-        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext()).isTrue();
         page = it.next();
         
-        assertThat(page, is(notNullValue()));
-        assertThat(page.getContentAsString(), is(html));
+        assertThat(page).isNotNull();
+        assertThat(page.getContentAsString()).isEqualTo(html);
         
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
         
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
         
         File[] files = new File(folder).listFiles();
-        assertThat(files.length, is(2));
-        assertThat(files[0].length(), is(lessThan(maxFileSize)));
-        assertThat(files[1].length(), is(lessThan(maxFileSize)));
+        assertThat(files.length).isEqualTo(2);
+        assertThat(files[0].length()).isLessThan(maxFileSize);
+        assertThat(files[1].length()).isLessThan(maxFileSize);
     }
 
     @Test
@@ -121,7 +118,7 @@ public class FilesTargetRepositoryTest {
         CloseableIterator<Page> it = repository.pagesIterator();
         
         // then
-        assertThat(it.hasNext(), is(false));
-        assertThat(it.next(), is(nullValue()));
+        assertThat(it.hasNext()).isFalse();
+        assertThat(it.next()).isNull();
     }
 }

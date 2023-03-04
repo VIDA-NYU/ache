@@ -1,8 +1,7 @@
 package achecrawler.target.repository.kafka;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.IOException;
 import java.net.URL;
@@ -62,12 +61,12 @@ class KafkaTargetRepositoryTest {
         List<ProducerRecord<String, String>> history = producer.history();
 
         TargetModelJson page = mapper.readValue(history.get(0).value(), TargetModelJson.class);
-        assertThat(page.getContentAsString(), is(html));
-        assertThat(page.getUrl(), is(url));
-        assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
-        assertThat(page.getRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
-        assertThat(page.getRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
-        assertThat(page.getCrawlerId(), is("mycrawler"));
+        assertThat(page.getContentAsString()).isEqualTo(html);
+        assertThat(page.getUrl()).isEqualTo(url);
+        assertThat(page.getResponseHeaders().get("content-type").get(0)).isEqualTo("text/html");
+        assertThat(page.getRelevance().isRelevant()).isEqualTo(TargetRelevance.RELEVANT.isRelevant());
+        assertThat(page.getRelevance().getRelevance()).isEqualTo(TargetRelevance.RELEVANT.getRelevance());
+        assertThat(page.getCrawlerId()).isEqualTo("mycrawler");
     }
 
     @Test
@@ -94,10 +93,10 @@ class KafkaTargetRepositoryTest {
 
         TargetModelElasticSearch page =
                 mapper.readValue(history.get(0).value(), TargetModelElasticSearch.class);
-        assertThat(page.getHtml(), is(html));
-        assertThat(page.getUrl(), is(url));
-        assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
-        assertThat(page.getCrawlerId(), is("mycrawler"));
+        assertThat(page.getHtml()).isEqualTo(html);
+        assertThat(page.getUrl()).isEqualTo(url);
+        assertThat(page.getResponseHeaders().get("content-type").get(0)).isEqualTo("text/html");
+        assertThat(page.getCrawlerId()).isEqualTo("mycrawler");
     }
 
 }

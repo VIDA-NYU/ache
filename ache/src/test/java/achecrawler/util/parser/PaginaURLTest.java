@@ -1,16 +1,12 @@
 package achecrawler.util.parser;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class PaginaURLTest {
 
@@ -32,10 +28,9 @@ class PaginaURLTest {
         LinkNeighborhood[] neighborhood = pageParser.getLinkNeighboor();
 
         // then
-        assertThat(extractedLinks.length, is(1));
-        assertThat(extractedLinks[0].toString(), is("http://ex.com/index.php?p1=asdf&p2=qwer"));
-        assertThat(neighborhood[0].getLink().toString(),
-                is("http://ex.com/index.php?p1=asdf&p2=qwer"));
+        assertThat(extractedLinks.length).isEqualTo(1);
+        assertThat(extractedLinks[0].toString()).isEqualTo("http://ex.com/index.php?p1=asdf&p2=qwer");
+        assertThat(neighborhood[0].getLink().toString()).isEqualTo("http://ex.com/index.php?p1=asdf&p2=qwer");
     }
 
     /*
@@ -62,11 +57,9 @@ class PaginaURLTest {
         LinkNeighborhood[] neighborhood = pageParser.getLinkNeighboor();
 
         // then
-        assertThat(extractedLinks.length, is(1));
-        assertThat(extractedLinks[0].toString(),
-                is("http://www.example.com/most-shared/?widget=sidebar-shared"));
-        assertThat(neighborhood[0].getLink().toString(),
-                is("http://www.example.com/most-shared/?widget=sidebar-shared"));
+        assertThat(extractedLinks.length).isEqualTo(1);
+        assertThat(extractedLinks[0].toString()).isEqualTo("http://www.example.com/most-shared/?widget=sidebar-shared");
+        assertThat(neighborhood[0].getLink().toString()).isEqualTo("http://www.example.com/most-shared/?widget=sidebar-shared");
     }
 
     @Test
@@ -88,8 +81,8 @@ class PaginaURLTest {
         LinkNeighborhood[] neighborhood = pageParser.getLinkNeighboor();
 
         // then
-        assertThat(extractedLinks.length, is(0));
-        assertThat(neighborhood.length, is(0));
+        assertThat(extractedLinks.length).isEqualTo(0);
+        assertThat(neighborhood.length).isEqualTo(0);
     }
 
     @Test
@@ -102,7 +95,7 @@ class PaginaURLTest {
         URL[] extractedLinks = pageParser.links();
         // then
         for(URL extractedUrl : Arrays.asList(extractedLinks)) {
-        	assertThat(extractedUrl.getFile().toString(), not(containsString("#")));
+        	assertThat(extractedUrl.getFile()).doesNotContain("#");
         }
     }
 
@@ -114,7 +107,7 @@ class PaginaURLTest {
         // when
         PaginaURL paginaURL = new PaginaURL(url, testPage);
         // then
-        assertThat(paginaURL.getURL(), is(notNullValue()));
+        assertThat(paginaURL.getURL()).isNotNull();
     }
 
     @Test
@@ -138,11 +131,11 @@ class PaginaURLTest {
         LinkNeighborhood[] lns  = paginaURL.getLinkNeighboor();
         
         // then
-        assertThat(links.length, is(1));
-        assertThat(links[0].toString(), is("http://example.com/asdf.html"));
+        assertThat(links.length).isEqualTo(1);
+        assertThat(links[0].toString()).isEqualTo("http://example.com/asdf.html");
 
-        assertThat(lns.length, is(1));
-        assertThat(lns[0].getLink().toString(), is("http://example.com/asdf.html"));
+        assertThat(lns.length).isEqualTo(1);
+        assertThat(lns[0].getLink().toString()).isEqualTo("http://example.com/asdf.html");
     }
 
     @Test
@@ -154,17 +147,17 @@ class PaginaURLTest {
         PaginaURL paginaURL = new PaginaURL(url, testPage);
         LinkNeighborhood[] neighborhoods = paginaURL.getLinkNeighboor();
         // then
-        assertThat(neighborhoods.length, is(1));
+        assertThat(neighborhoods.length).isEqualTo(1);
         
-        assertThat(neighborhoods[0].getAroundString().trim(), is("my first heading"));
-        assertThat(neighborhoods[0].getAround()[0], is("my"));
-        assertThat(neighborhoods[0].getAround()[1], is("first"));
-        assertThat(neighborhoods[0].getAround()[2], is("heading"));
+        assertThat(neighborhoods[0].getAroundString().trim()).isEqualTo("my first heading");
+        assertThat(neighborhoods[0].getAround()[0]).isEqualTo("my");
+        assertThat(neighborhoods[0].getAround()[1]).isEqualTo("first");
+        assertThat(neighborhoods[0].getAround()[2]).isEqualTo("heading");
         
-        assertThat(neighborhoods[0].getAnchorString().trim(), is("my first paragraph"));
-        assertThat(neighborhoods[0].getAnchor()[0], is("my"));
-        assertThat(neighborhoods[0].getAnchor()[1], is("first"));
-        assertThat(neighborhoods[0].getAnchor()[2], is("paragraph"));
+        assertThat(neighborhoods[0].getAnchorString().trim()).isEqualTo("my first paragraph");
+        assertThat(neighborhoods[0].getAnchor()[0]).isEqualTo("my");
+        assertThat(neighborhoods[0].getAnchor()[1]).isEqualTo("first");
+        assertThat(neighborhoods[0].getAnchor()[2]).isEqualTo("paragraph");
     }
 
     @Test
@@ -178,17 +171,17 @@ class PaginaURLTest {
         URL[] links = paginaURL.links();
 
         // then
-        assertThat(neighborhoods.length, is(3));
-        assertThat(links.length, is(3));
+        assertThat(neighborhoods.length).isEqualTo(3);
+        assertThat(links.length).isEqualTo(3);
         
-        assertThat(neighborhoods[0].getLink().toString(), is("http://example.com/post.php"));
-        assertThat(links[0].toString(), is("http://example.com/post.php"));
+        assertThat(neighborhoods[0].getLink().toString()).isEqualTo("http://example.com/post.php");
+        assertThat(links[0].toString()).isEqualTo("http://example.com/post.php");
         
-        assertThat(neighborhoods[1].getLink().toString(), is("http://example.com/post.php?a=1&b=2"));
-        assertThat(links[1].toString(), is("http://example.com/post.php?a=1&b=2"));
+        assertThat(neighborhoods[1].getLink().toString()).isEqualTo("http://example.com/post.php?a=1&b=2");
+        assertThat(links[1].toString()).isEqualTo("http://example.com/post.php?a=1&b=2");
 
-        assertThat(neighborhoods[2].getLink().toString(), is("http://example.com/"));
-        assertThat(links[2].toString(), is("http://example.com/"));
+        assertThat(neighborhoods[2].getLink().toString()).isEqualTo("http://example.com/");
+        assertThat(links[2].toString()).isEqualTo("http://example.com/");
     }
 
     @Test
@@ -210,9 +203,9 @@ class PaginaURLTest {
         URL[] links = paginaURL.links();
 
         // then
-        assertThat(links.length, is(2));
-        assertThat(links[0].toString(), is("http://registry.africa/"));
-        assertThat(links[1].toString(), is("http://3g2upl4pq6kufc4m.onion/"));
+        assertThat(links.length).isEqualTo(2);
+        assertThat(links[0].toString()).isEqualTo("http://registry.africa/");
+        assertThat(links[1].toString()).isEqualTo("http://3g2upl4pq6kufc4m.onion/");
     }
 
     private String createTestPage() {
