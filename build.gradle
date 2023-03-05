@@ -2,7 +2,29 @@ plugins {
     id 'java'
 }
 
-repositories {
-    mavenCentral()
-}
+subprojects {
 
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    repositories {
+        mavenCentral()
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+    // Dependencies used by multiple sub-projects
+    ext.libraries = [
+        // testing
+        junit_jupiter_api: [group: "org.junit.jupiter", name: "junit-jupiter-api", version: "5.9.2"],
+        junit_jupiter_params: [group: "org.junit.jupiter", name: "junit-jupiter-params", version: "5.9.2"],
+        junit_jupiter_engine: [group: "org.junit.jupiter", name: "junit-jupiter-engine", version: "5.9.2"],
+        assertj_core: [group: "org.assertj", name: "assertj-core", version: "3.20.2"],
+        mockito: [group: "org.mockito", name: "mockito-core", version: "5.1.1"],
+        // logging
+        slf4j_api: [group: 'org.slf4j', name: 'slf4j-api', version: '2.0.6'],
+        logback: [group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.5'],
+    ]
+}

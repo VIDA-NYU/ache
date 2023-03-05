@@ -6,23 +6,22 @@ plugins {
     id 'com.github.kt3k.coveralls' version '2.12.0'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 compileJava.options.encoding = "UTF-8"
 version = '0.15.0-SNAPSHOT'
 mainClassName = 'achecrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError"]
 
-repositories {
-    mavenCentral()
-}
+ext.versions = [
+    com_fasterxml_jackson: '2.14.2',
+    io_dropwizard_metrics: '4.2.17',
+]
 
 dependencies {
     // Sub-projects
     implementation project(':crawler-commons')
     // Logging
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
-    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.5'
+    implementation libraries.slf4j_api
+    implementation libraries.logback
     // Commons
     implementation group: 'com.google.guava', name: 'guava', version: '23.0'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
@@ -33,17 +32,17 @@ dependencies {
     // CLI
     implementation group: 'io.airlift', name: 'airline', version: '0.9'
     // Data serialization
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.2'
-    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-cbor', version: '2.14.2'
-    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.14.2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: versions.com_fasterxml_jackson
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-cbor', version: versions.com_fasterxml_jackson
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: versions.com_fasterxml_jackson
     implementation group: 'com.esotericsoftware', name: 'kryo', version: '4.0.2'
     implementation group: 'de.javakaffee', name: 'kryo-serializers', version: '0.43'
     // REST server dependencies
     implementation group: 'io.javalin', name: 'javalin', version: '4.2.0'
     // Metrics and monitoring
-    implementation group: 'io.dropwizard.metrics', name: 'metrics-core', version: '4.2.17'
-    implementation group: 'io.dropwizard.metrics', name: 'metrics-json', version: '4.2.17'
-    implementation group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '4.2.17'
+    implementation group: 'io.dropwizard.metrics', name: 'metrics-core', version: versions.io_dropwizard_metrics
+    implementation group: 'io.dropwizard.metrics', name: 'metrics-json', version: versions.io_dropwizard_metrics
+    implementation group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: versions.io_dropwizard_metrics
     // Data management and repositories
     implementation group: 'org.rocksdb', name: 'rocksdbjni', version: '6.25.3'
     implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '5.6.7'
@@ -68,15 +67,11 @@ dependencies {
     implementation files('libs/jsonic-1.2.0.jar') // required by by langdetect-03-03-2014.jar
 
     // Test framework dependencies
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
-    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
-    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.1.1'
-}
-
-test {
-    useJUnitPlatform()
+    testImplementation libraries.junit_jupiter_api
+    testImplementation libraries.junit_jupiter_params
+    testRuntimeOnly libraries.junit_jupiter_engine
+    testImplementation libraries.mockito
+    testImplementation libraries.assertj_core
 }
 
 //
