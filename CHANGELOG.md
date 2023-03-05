@@ -21,6 +21,7 @@
 - Bump org.apache.httpcomponents:httpclient from 4.5.13 to 4.5.14
 - Bump ch.qos.logback:logback-classic from 1.2.+ to 1.4.5
 - Fix robots.txt serialization bug
+- Bump jackson-* libraries from 2.13.3 to 2.14.2
 
 
 ## Version 0.14.0 (2022-02-06)
