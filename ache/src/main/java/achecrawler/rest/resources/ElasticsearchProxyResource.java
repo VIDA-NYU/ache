@@ -55,8 +55,8 @@ public class ElasticsearchProxyResource {
                     query.append(param).append("=").append(paramValue);
                 }
             }
-            String url = String.format("%s/%s/%s/_search", esConfig.getRestApiHosts().get(0),
-                    esConfig.getIndexName(), esConfig.getTypeName());
+            String url = String.format("%s/%s/_msearch", esConfig.getRestApiHosts().get(0),
+                    esConfig.getIndexName());
             if (query.length() > 0) {
                 url += "?" + query;
             }

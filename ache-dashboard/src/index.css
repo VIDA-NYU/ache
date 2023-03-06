@@ -281,7 +281,7 @@ ul.list-inline li button {
 
 .sk-search-box__icon:before {
     content: "";
-    background: url('../node_modules/searchkit/theming/images/search.svg') no-repeat 0 0;
+    /* background: url('../node_modules/searchkit/theming/images/search.svg') no-repeat 0 0; */
     background-size: contain;
     height: 20px;
     width: 20px;

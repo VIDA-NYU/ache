@@ -124,6 +124,8 @@ public class RestServer {
         server.post("/crawls/{crawler_id}/labels",     labelsResource.addLabels);
         server.get( "/crawls/{crawler_id}/_search",    elasticsearchProxyResource.searchApi);
         server.post("/crawls/{crawler_id}/_search",    elasticsearchProxyResource.searchApi);
+        server.get( "/crawls/{crawler_id}/_msearch",    elasticsearchProxyResource.searchApi);
+        server.post("/crawls/{crawler_id}/_msearch",    elasticsearchProxyResource.searchApi);
 
         /*
          * Thread management routes
