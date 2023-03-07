@@ -360,11 +360,10 @@ class Search extends React.Component {
           </div>
           :
           <InstantSearch indexName="ache-data" searchClient={this.searchkit}  stalledSearchDelay={1000}>
-            <div className="row">
-              <SearchBox searchAsYouType={true} />
+              <div className="row">
               <div className="col-sm-3">
                 <RefinementList attribute="isRelevant" limit={2} operator="or"
-                  // translations={checkboxLabels} 
+                  // translations={checkboxLabels}
                   transformItems={items =>
                     items.map(item => ({
                       ...item,
@@ -372,11 +371,12 @@ class Search extends React.Component {
                     }))
                   }
                 />
-                
+
                 <RefinementList attribute="domain" limit={15} operator="or" />
               </div>
 
               <div className="col-sm-9">
+                <SearchBox searchAsYouType={true} />
                   {/*
                   <SearchBox searchOnChange={true} searchThrottleTime={1000} />
                   <ActionBar>
@@ -390,10 +390,10 @@ class Search extends React.Component {
                     </ActionBarRow>
                   </ActionBar>
                   */}
-                  <HitsPerPage defaultRefinement={10} items={[
+                  {/* <HitsPerPage defaultRefinement={10} items={[
                     { value: 10, label: 'Show 10 pages' },
                     { value: 25, label: 'Show 25 pages' }
-                  ]} />
+                  ]} /> */}
                   <Stats translations={{
                     stats: (nbHits) => {
                       return nbHits + ' results found.'
@@ -404,6 +404,7 @@ class Search extends React.Component {
                   <Pagination showFirst={true}/>
               </div>
             </div>
+
           </InstantSearch>
         }
       </div>
