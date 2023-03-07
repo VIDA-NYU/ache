@@ -24,6 +24,7 @@
 - Bump jackson-* libraries from 2.13.3 to 2.14.2
 - Bump org.apache.commons:commons-lang3 from 3.4 to 3.12.0
 - Bump org.apache.commons:commons-compress from 1.21 to 1.22
+- Bump org.apache.kafka:kafka-clients from 3.2.0 to 3.4.0
 
 
 ## Version 0.14.0 (2022-02-06)
