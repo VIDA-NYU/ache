@@ -89,14 +89,15 @@ class HitItem extends React.Component {
 
   constructor(props) {
     super(props);
-    // this.labelsManager = props.labelsManager;
+    this.hitItemElement = <HitItem labelsManager={this.labelsManager} />;
+    this.labelsManager = props.labelsManager;
     // forces re-render every time a label changes
-    // this.stopListeningLabelChanges = this.labelsManager.addListener(()=> this.setState({}));
+    this.stopListeningLabelChanges = this.labelsManager.addListener(()=> this.setState({}));
   }
 
-  // componentWillUnmount() {
-  //   this.stopListeningLabelChanges();
-  // }
+  componentWillUnmount() {
+    this.stopListeningLabelChanges();
+  }
 
   formatDate(timestamp) {
     var dateObject = new Date(timestamp);
@@ -165,29 +166,33 @@ class HitItem extends React.Component {
     }
   }
 
-  // labelAs(url, feedback) {
-  //   var domainLabels = {};
-  //   domainLabels[url] = feedback;
-  //   this.labelsManager.sendLabels(domainLabels);
-  // }
+  labelAs(url, feedback) {
+    var domainLabels = {};
+    domainLabels[url] = feedback;
+    this.labelsManager.sendLabels(domainLabels);
+  }
 
-  // labelAsRelevant(result) {
-  //   this.labelAs(result._source.url, true);
-  // }
+  labelAsRelevant(result) {
+    this.labelAs(result._source.url, true);
+  }
 
-  // labelAsIrrelevant(result) {
-  //   this.labelAs(result._source.url, false);
-  // }
+  labelAsIrrelevant(result) {
+    this.labelAs(result._source.url, false);
+  }
 
   render() {
     const props = this.props;
     const source = props.result;
+    const hitItemElement = this.hitItemElement;
     // const source = props.result._source;
     const pageDesc = this.extractDescription(source);
     const pageTitle = source.title !== null ? source.title : '[No Title Available]';
-    // const labeldAsRelevant = this.labelsManager.isRelevant(source.url);
-    // const labeldAsIrrelevant = this.labelsManager.isIrrelevant(source.url);
-
+    const labeldAsRelevant = this.labelsManager.isRelevant(source.url);
+    const labeldAsIrrelevant = this.labelsManager.isIrrelevant(source.url);
+    let checkboxLabels = {
+      "relevant":"Relevant",
+      "irrelevant": "Irrelevant"
+    }
 
 
     return (
@@ -208,7 +213,7 @@ class HitItem extends React.Component {
               <ul className="list-inline hit-properties">
                 <li><b>Crawl time:</b> <span className="label label-default">{this.formatDate(source.retrieved)}</span></li>
                 <li><b>Classified as:</b> <span className="label label-default">{source.isRelevant}</span></li>
-                {/* <li>
+                <li>
                   <b>Actual label:</b>
                   <button onClick={()=>this.labelAsRelevant(props.result)}>
                     <span className={"glyphicon glyphicon-thumbs-up"  + (labeldAsRelevant ? ' relevant' : '')}></span>
@@ -216,7 +221,7 @@ class HitItem extends React.Component {
                   <button onClick={()=>this.labelAsIrrelevant(props.result)}>
                     <span className={"glyphicon glyphicon-thumbs-down"  + (labeldAsIrrelevant ? ' irrelevant' : '')}></span>
                   </button>
-                </li> */}
+                </li>
               </ul>
             </div>
           </div>
@@ -277,7 +282,6 @@ class Search extends React.Component {
     super(props);
     this.crawlerId = this.props.match.params.crawler_id;
     const elasticsearchAddress = ACHE_API_ADDRESS + 'crawls/' + this.crawlerId;
-    // const elasticsearchAddress = "http://localhost:9200";
     this.searchkitClient = new Searchkit({
       connection: {
         host: elasticsearchAddress,
@@ -292,11 +296,6 @@ class Search extends React.Component {
             attribute: "isRelevant",
             field: "isRelevant",
             type: "bool"
-          },
-          {
-            attribute: "wordsMeta",
-            field: "wordsMeta",
-            type: "string"
           },
           {
             attribute: 'domain',
@@ -344,6 +343,7 @@ class Search extends React.Component {
     const hitView = ({ hit }) => {
       return (
         <HitItem result={hit} labelsManager={this.labelsManager}/>
+
       )
     }
 
@@ -359,11 +359,13 @@ class Search extends React.Component {
             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {message}
           </div>
           :
+
           <InstantSearch indexName="ache-data" searchClient={this.searchkit}  stalledSearchDelay={1000}>
               <div className="row">
               <div className="col-sm-3">
+              <ul className="list-inline hit-properties">
+              <li><b>Relevance</b> </li>
                 <RefinementList attribute="isRelevant" limit={2} operator="or"
-                  // translations={checkboxLabels}
                   transformItems={items =>
                     items.map(item => ({
                       ...item,
@@ -371,17 +373,16 @@ class Search extends React.Component {
                     }))
                   }
                 />
-
+                <li><b>Domain</b> </li>
                 <RefinementList attribute="domain" limit={15} operator="or" />
+                </ul>
               </div>
 
               <div className="col-sm-9">
                 <SearchBox searchAsYouType={true} />
                   {/*
-                  <SearchBox searchOnChange={true} searchThrottleTime={1000} />
                   <ActionBar>
                     <ActionBarRow>
-              				<HitsStats translations={{"hitstats.results_found":"{hitCount} results found."}}/>
                       <ViewSwitcherToggle/>
                     </ActionBarRow>
                     <ActionBarRow>
@@ -390,17 +391,13 @@ class Search extends React.Component {
                     </ActionBarRow>
                   </ActionBar>
                   */}
-                  {/* <HitsPerPage defaultRefinement={10} items={[
-                    { value: 10, label: 'Show 10 pages' },
-                    { value: 25, label: 'Show 25 pages' }
-                  ]} /> */}
                   <Stats translations={{
                     stats: (nbHits) => {
                       return nbHits + ' results found.'
                     }}}
                   />
                   <Hits hitComponent={hitView}/>
-                  {/* <LabelAllButtons labelsManager={this.labelsManager} searchkit={this.searchkitClient} /> */}
+                  <LabelAllButtons labelsManager={this.labelsManager} searchkit={this.searchkitClient} />
                   <Pagination showFirst={true}/>
               </div>
             </div>
