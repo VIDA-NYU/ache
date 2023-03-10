@@ -4,7 +4,6 @@ import {
   SearchBox,
   Hits,
   RefinementList,
-  HitsPerPage,
   Pagination,
   Stats
 } from 'react-instantsearch-dom';
@@ -43,6 +42,7 @@ class LabelsManager {
    *   stopListening(); // calling this will remove fn fuction from listeners
    *
    */
+
   addListener(fn) {
     this.listeners.push(fn);
     return () => {
@@ -89,7 +89,6 @@ class HitItem extends React.Component {
 
   constructor(props) {
     super(props);
-    this.hitItemElement = <HitItem labelsManager={this.labelsManager} />;
     this.labelsManager = props.labelsManager;
     // forces re-render every time a label changes
     this.stopListeningLabelChanges = this.labelsManager.addListener(()=> this.setState({}));
@@ -173,26 +172,20 @@ class HitItem extends React.Component {
   }
 
   labelAsRelevant(result) {
-    this.labelAs(result._source.url, true);
+    this.labelAs(result.url, true);
   }
 
   labelAsIrrelevant(result) {
-    this.labelAs(result._source.url, false);
+    this.labelAs(result.url, false);
   }
 
   render() {
     const props = this.props;
     const source = props.result;
-    const hitItemElement = this.hitItemElement;
-    // const source = props.result._source;
     const pageDesc = this.extractDescription(source);
     const pageTitle = source.title !== null ? source.title : '[No Title Available]';
     const labeldAsRelevant = this.labelsManager.isRelevant(source.url);
     const labeldAsIrrelevant = this.labelsManager.isIrrelevant(source.url);
-    let checkboxLabels = {
-      "relevant":"Relevant",
-      "irrelevant": "Irrelevant"
-    }
 
 
     return (
@@ -231,48 +224,48 @@ class HitItem extends React.Component {
   }
 }
 
-class LabelAllButtons extends React.Component {
+// class LabelAllButtons extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.labelsManager = props.labelsManager;
-    // this.stopListeningResults = this.props.searchkit.addResultsListener(this.updateResults.bind(this));
-  }
+//   constructor(props) {
+//     super(props);
+//     this.labelsManager = props.labelsManager;
+//     // this.stopListeningResults = this.props.searchkit.addResultsListener(this.updateResults.bind(this));
+//   }
 
-  // componentWillUnmount() {
-  //   this.stopListeningResults();
-  // }
+//   // componentWillUnmount() {
+//   //   this.stopListeningResults();
+//   // }
 
-  updateResults(results) {
-    if(results !== null && results.hits !== null) {
-      this.hits = results.hits.hits;
-    }
-  }
+//   updateResults(results) {
+//     if(results !== null && results.hits !== null) {
+//       this.hits = results.hits.hits;
+//     }
+//   }
 
-  labelAllAsRelevant() {
-    this.labelAll(true);
-  }
+//   labelAllAsRelevant() {
+//     this.labelAll(true);
+//   }
 
-  labelAllAsIrrelevant() {
-    this.labelAll(false);
-  }
+//   labelAllAsIrrelevant() {
+//     this.labelAll(false);
+//   }
 
-  labelAll(feedback) {
-    let labels = {};
-    this.hits.forEach(hit => labels[hit._source.url] = feedback);
-    this.labelsManager.sendLabels(labels);
-  }
+//   labelAll(feedback) {
+//     let labels = {};
+//     this.hits.forEach(hit => labels[hit.url] = feedback);
+//     this.labelsManager.sendLabels(labels);
+//   }
 
-  render() {
-    return (
-      <div className="label-all">
-        <button className="btn btn-default" onClick={()=>this.labelAllAsRelevant()}><span className="glyphicon glyphicon-thumbs-up"></span>&nbsp;Mark all as Relevant</button>
-        <button className="btn btn-default" onClick={()=>this.labelAllAsIrrelevant()}><span className="glyphicon glyphicon-thumbs-down"></span>&nbsp;Mark all as irrelevant</button>
-      </div>
-    )
-  }
+//   render() {
+//     return (
+//       <div className="label-all">
+//         <button className="btn btn-default" onClick={()=>this.labelAllAsRelevant()}><span className="glyphicon glyphicon-thumbs-up"></span>&nbsp;Mark all as Relevant</button>
+//         <button className="btn btn-default" onClick={()=>this.labelAllAsIrrelevant()}><span className="glyphicon glyphicon-thumbs-down"></span>&nbsp;Mark all as irrelevant</button>
+//       </div>
+//     )
+//   }
 
-}
+// }
 
 class Search extends React.Component {
 
@@ -299,7 +292,7 @@ class Search extends React.Component {
           },
           {
             attribute: 'domain',
-            field: 'domain',  // field must be a keyword type field
+            field: 'domain',
             type: 'string'
           }
         ],
@@ -309,7 +302,6 @@ class Search extends React.Component {
     this.searchkit = Client(this.searchkitClient);
 
     this.labelsManager = new LabelsManager(this.crawlerId);
-    this.hitItemElement = <HitItem labelsManager={this.labelsManager} />;
     this.state = {message:"Loading...", searchEnabled: false};
     api.get('/crawls/' + this.crawlerId + '/status')
        .then(this.setupSearch.bind(this));
@@ -337,7 +329,6 @@ class Search extends React.Component {
   }
 
   render() {
-    const hitItemElement = this.hitItemElement;
     const enabled = this.state.searchEnabled;
     const message = this.state.message;
     const hitView = ({ hit }) => {
@@ -380,24 +371,13 @@ class Search extends React.Component {
 
               <div className="col-sm-9">
                 <SearchBox searchAsYouType={true} />
-                  {/*
-                  <ActionBar>
-                    <ActionBarRow>
-                      <ViewSwitcherToggle/>
-                    </ActionBarRow>
-                    <ActionBarRow>
-                      <SelectedFilters/>
-                      <ResetFilters/>
-                    </ActionBarRow>
-                  </ActionBar>
-                  */}
                   <Stats translations={{
                     stats: (nbHits) => {
                       return nbHits + ' results found.'
                     }}}
                   />
                   <Hits hitComponent={hitView}/>
-                  <LabelAllButtons labelsManager={this.labelsManager} searchkit={this.searchkitClient} />
+                  {/* <LabelAllButtons labelsManager={this.labelsManager} searchkit={this.searchkitClient} /> */}
                   <Pagination showFirst={true}/>
               </div>
             </div>
