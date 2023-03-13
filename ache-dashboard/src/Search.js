@@ -224,52 +224,7 @@ class HitItem extends React.Component {
   }
 }
 
-// class LabelAllButtons extends React.Component {
-
-//   constructor(props) {
-//     super(props);
-//     this.labelsManager = props.labelsManager;
-//     // this.stopListeningResults = this.props.searchkit.addResultsListener(this.updateResults.bind(this));
-//   }
-
-//   // componentWillUnmount() {
-//   //   this.stopListeningResults();
-//   // }
-
-//   updateResults(results) {
-//     if(results !== null && results.hits !== null) {
-//       this.hits = results.hits.hits;
-//     }
-//   }
-
-//   labelAllAsRelevant() {
-//     this.labelAll(true);
-//   }
-
-//   labelAllAsIrrelevant() {
-//     this.labelAll(false);
-//   }
-
-//   labelAll(feedback) {
-//     let labels = {};
-//     this.hits.forEach(hit => labels[hit.url] = feedback);
-//     this.labelsManager.sendLabels(labels);
-//   }
-
-//   render() {
-//     return (
-//       <div className="label-all">
-//         <button className="btn btn-default" onClick={()=>this.labelAllAsRelevant()}><span className="glyphicon glyphicon-thumbs-up"></span>&nbsp;Mark all as Relevant</button>
-//         <button className="btn btn-default" onClick={()=>this.labelAllAsIrrelevant()}><span className="glyphicon glyphicon-thumbs-down"></span>&nbsp;Mark all as irrelevant</button>
-//       </div>
-//     )
-//   }
-
-// }
-
 class Search extends React.Component {
-
-
 
   constructor(props) {
     super(props);
@@ -318,7 +273,8 @@ class Search extends React.Component {
     if(!status.searchEnabled) {
       this.setState({
         message: "Search is not available for this crawl (it's only available when using ELASTICSEARCH data format).",
-        searchEnabled: status.searchEnabled
+        searchEnabled: status.searchEnabled,
+        esIndexName: status.EsIndexName
       });
     } else {
       this.setState({
@@ -330,6 +286,7 @@ class Search extends React.Component {
 
   render() {
     const enabled = this.state.searchEnabled;
+    const index = this.state.esIndexName;
     const message = this.state.message;
     const hitView = ({ hit }) => {
       return (
@@ -351,7 +308,7 @@ class Search extends React.Component {
           </div>
           :
 
-          <InstantSearch indexName="ache-data" searchClient={this.searchkit}  stalledSearchDelay={1000}>
+          <InstantSearch indexName={index} searchClient={this.searchkit}  stalledSearchDelay={1000}>
               <div className="row">
               <div className="col-sm-3">
               <ul className="list-inline hit-properties">
