@@ -60,7 +60,7 @@ dependencies {
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.10.0'
     implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.14'
     // Others
-    implementation group: 'com.github.haifengl', name: 'smile-core', version: '1.5.3'
+    implementation group: 'com.github.haifengl', name: 'smile-core', version: '3.0.1'
     implementation group: 'org.roaringbitmap', name: 'RoaringBitmap', version: '0.9.39'
     // TODO: fill these in from Maven Central instead of that local libs dir
     implementation files('libs/langdetect-03-03-2014.jar') // TODO: upgrade to newer version from maven
