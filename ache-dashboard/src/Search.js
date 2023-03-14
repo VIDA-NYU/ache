@@ -274,12 +274,12 @@ class Search extends React.Component {
       this.setState({
         message: "Search is not available for this crawl (it's only available when using ELASTICSEARCH data format).",
         searchEnabled: status.searchEnabled,
-        esIndexName: status.EsIndexName
       });
     } else {
       this.setState({
         message: "Done.",
-        searchEnabled: status.searchEnabled
+        searchEnabled: status.searchEnabled,
+        esIndexName: status.esIndexName
       });
     }
   }
@@ -291,7 +291,6 @@ class Search extends React.Component {
     const hitView = ({ hit }) => {
       return (
         <HitItem result={hit} labelsManager={this.labelsManager}/>
-
       )
     }
 
@@ -334,7 +333,6 @@ class Search extends React.Component {
                     }}}
                   />
                   <Hits hitComponent={hitView}/>
-                  {/* <LabelAllButtons labelsManager={this.labelsManager} searchkit={this.searchkitClient} /> */}
                   <Pagination showFirst={true}/>
               </div>
             </div>
