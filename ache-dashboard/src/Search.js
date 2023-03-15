@@ -5,7 +5,8 @@ import {
   Hits,
   RefinementList,
   Pagination,
-  Stats
+  Stats,
+  connectHits
 } from 'react-instantsearch-dom';
 import Client from "@searchkit/instantsearch-client";
 import Searchkit from "searchkit";
@@ -29,6 +30,7 @@ class LabelsManager {
     this.crawlerId = crawlerId;
     this.listeners = [];
     this.labelsCache = {};
+    this.hits = [];
     api.get('/crawls/' + this.crawlerId + '/labels')
        .then(this.updateLabelsCache.bind(this));
   }
@@ -42,6 +44,10 @@ class LabelsManager {
    *   stopListening(); // calling this will remove fn fuction from listeners
    *
    */
+
+  updateHits(hits) {
+    this.hits = hits
+  }
 
   addListener(fn) {
     this.listeners.push(fn);
@@ -81,6 +87,34 @@ class LabelsManager {
 
   isIrrelevant(url) {
     return this.labelsCache[url] === false;
+  }
+
+  labelAllAsRelevant() {
+    this.labelAll(true);
+  }
+
+  labelAllAsIrrelevant() {
+    this.labelAll(false);
+  }
+
+  labelAll(feedback) {
+    let labels = {};
+    this.hits.forEach(hit => labels[hit.url] = feedback);
+    this.sendLabels(labels);
+  }
+
+  labelAs(url, feedback) {
+    var domainLabels = {};
+    domainLabels[url] = feedback;
+    this.sendLabels(domainLabels);
+  }
+
+  labelAsRelevant(result) {
+    this.labelAs(result.url, true);
+  }
+
+  labelAsIrrelevant(result) {
+    this.labelAs(result.url, false);
   }
 
 }
@@ -165,20 +199,6 @@ class HitItem extends React.Component {
     }
   }
 
-  labelAs(url, feedback) {
-    var domainLabels = {};
-    domainLabels[url] = feedback;
-    this.labelsManager.sendLabels(domainLabels);
-  }
-
-  labelAsRelevant(result) {
-    this.labelAs(result.url, true);
-  }
-
-  labelAsIrrelevant(result) {
-    this.labelAs(result.url, false);
-  }
-
   render() {
     const props = this.props;
     const source = props.result;
@@ -208,10 +228,10 @@ class HitItem extends React.Component {
                 <li><b>Classified as:</b> <span className="label label-default">{source.isRelevant}</span></li>
                 <li>
                   <b>Actual label:</b>
-                  <button onClick={()=>this.labelAsRelevant(props.result)}>
+                  <button onClick={()=>this.labelsManager.labelAsRelevant(props.result)}>
                     <span className={"glyphicon glyphicon-thumbs-up"  + (labeldAsRelevant ? ' relevant' : '')}></span>
                   </button>
-                  <button onClick={()=>this.labelAsIrrelevant(props.result)}>
+                  <button onClick={()=>this.labelsManager.labelAsIrrelevant(props.result)}>
                     <span className={"glyphicon glyphicon-thumbs-down"  + (labeldAsIrrelevant ? ' irrelevant' : '')}></span>
                   </button>
                 </li>
@@ -219,6 +239,22 @@ class HitItem extends React.Component {
             </div>
           </div>
         </div>
+      </div>
+    )
+  }
+}
+
+class LabelAllButtons extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="label-all">
+        <button className="btn btn-default" onClick={()=>this.props.labelsManager.labelAllAsRelevant()}><span className="glyphicon glyphicon-thumbs-up"></span>&nbsp;Mark all as Relevant</button>
+        <button className="btn btn-default" onClick={()=>this.props.labelsManager.labelAllAsIrrelevant()}><span className="glyphicon glyphicon-thumbs-down"></span>&nbsp;Mark all as irrelevant</button>
       </div>
     )
   }
@@ -299,6 +335,15 @@ class Search extends React.Component {
       "irrelevant": "Irrelevant"
     }
 
+    const MyCustomHits = ({hits}) => {
+      this.labelsManager.updateHits(hits);
+      return (
+          <Hits hitComponent={hitView}/>
+      )
+    };
+
+    const PageHits = connectHits(MyCustomHits);
+
     return (
       <div>
         { !enabled ?
@@ -332,7 +377,8 @@ class Search extends React.Component {
                       return nbHits + ' results found.'
                     }}}
                   />
-                  <Hits hitComponent={hitView}/>
+                  <PageHits />
+                  <LabelAllButtons labelsManager={this.labelsManager}/>
                   <Pagination showFirst={true}/>
               </div>
             </div>
