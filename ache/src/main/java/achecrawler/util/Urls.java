@@ -121,7 +121,7 @@ public class Urls {
         return url;
     }
 
-    public static String resolveHttpLink(HttpUrl base, String link) {
+    public static HttpUrl resolveHttpLink(HttpUrl base, String link) {
         HttpUrl resolvedUrl;
         try {
             if (base == null) {
@@ -133,6 +133,11 @@ public class Urls {
             // The link is invalid or malformed
             resolvedUrl = null;
         }
+        return resolvedUrl;
+    }
+
+    public static String resolveHttpLinkAsString(HttpUrl base, String link) {
+        HttpUrl resolvedUrl = resolveHttpLink(base, link);
         if (resolvedUrl == null) {
             return null;
         } else {
