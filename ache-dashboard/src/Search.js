@@ -1,9 +1,16 @@
 import React from 'react';
 import {
-  SearchkitManager, SearchkitProvider, SearchBox, Hits, RefinementListFilter,
-  ActionBar, ActionBarRow, HitsStats, ViewSwitcherToggle, SelectedFilters,
-  ResetFilters, Pagination
-} from "searchkit";
+  InstantSearch,
+  SearchBox,
+  Hits,
+  RefinementList,
+  Pagination,
+  Stats,
+  connectHits
+} from 'react-instantsearch-dom';
+import Client from "@searchkit/instantsearch-client";
+import Searchkit from "searchkit";
+
 import {without} from "lodash";
 import URLUtils from './URLUtils';
 
@@ -23,6 +30,7 @@ class LabelsManager {
     this.crawlerId = crawlerId;
     this.listeners = [];
     this.labelsCache = {};
+    this.hits = [];
     api.get('/crawls/' + this.crawlerId + '/labels')
        .then(this.updateLabelsCache.bind(this));
   }
@@ -36,6 +44,11 @@ class LabelsManager {
    *   stopListening(); // calling this will remove fn fuction from listeners
    *
    */
+
+  updateHits(hits) {
+    this.hits = hits
+  }
+
   addListener(fn) {
     this.listeners.push(fn);
     return () => {
@@ -74,6 +87,34 @@ class LabelsManager {
 
   isIrrelevant(url) {
     return this.labelsCache[url] === false;
+  }
+
+  labelAllAsRelevant() {
+    this.labelAll(true);
+  }
+
+  labelAllAsIrrelevant() {
+    this.labelAll(false);
+  }
+
+  labelAll(feedback) {
+    let labels = {};
+    this.hits.forEach(hit => labels[hit.url] = feedback);
+    this.sendLabels(labels);
+  }
+
+  labelAs(url, feedback) {
+    var domainLabels = {};
+    domainLabels[url] = feedback;
+    this.sendLabels(domainLabels);
+  }
+
+  labelAsRelevant(result) {
+    this.labelAs(result.url, true);
+  }
+
+  labelAsIrrelevant(result) {
+    this.labelAs(result.url, false);
   }
 
 }
@@ -158,27 +199,14 @@ class HitItem extends React.Component {
     }
   }
 
-  labelAs(url, feedback) {
-    var domainLabels = {};
-    domainLabels[url] = feedback;
-    this.labelsManager.sendLabels(domainLabels);
-  }
-
-  labelAsRelevant(result) {
-    this.labelAs(result._source.url, true);
-  }
-
-  labelAsIrrelevant(result) {
-    this.labelAs(result._source.url, false);
-  }
-
   render() {
     const props = this.props;
-    const source = props.result._source;
+    const source = props.result;
     const pageDesc = this.extractDescription(source);
     const pageTitle = source.title !== null ? source.title : '[No Title Available]';
     const labeldAsRelevant = this.labelsManager.isRelevant(source.url);
     const labeldAsIrrelevant = this.labelsManager.isIrrelevant(source.url);
+
 
     return (
       <div className="row hit-item">
@@ -200,10 +228,10 @@ class HitItem extends React.Component {
                 <li><b>Classified as:</b> <span className="label label-default">{source.isRelevant}</span></li>
                 <li>
                   <b>Actual label:</b>
-                  <button onClick={()=>this.labelAsRelevant(props.result)}>
+                  <button onClick={()=>this.labelsManager.labelAsRelevant(props.result)}>
                     <span className={"glyphicon glyphicon-thumbs-up"  + (labeldAsRelevant ? ' relevant' : '')}></span>
                   </button>
-                  <button onClick={()=>this.labelAsIrrelevant(props.result)}>
+                  <button onClick={()=>this.labelsManager.labelAsIrrelevant(props.result)}>
                     <span className={"glyphicon glyphicon-thumbs-down"  + (labeldAsIrrelevant ? ' irrelevant' : '')}></span>
                   </button>
                 </li>
@@ -220,43 +248,16 @@ class LabelAllButtons extends React.Component {
 
   constructor(props) {
     super(props);
-    this.labelsManager = props.labelsManager;
-    this.stopListeningResults = this.props.searchkit.addResultsListener(this.updateResults.bind(this));
-  }
-
-  componentWillUnmount() {
-    this.stopListeningResults();
-  }
-
-  updateResults(results) {
-    if(results !== null && results.hits !== null) {
-      this.hits = results.hits.hits;
-    }
-  }
-
-  labelAllAsRelevant() {
-    this.labelAll(true);
-  }
-
-  labelAllAsIrrelevant() {
-    this.labelAll(false);
-  }
-
-  labelAll(feedback) {
-    let labels = {};
-    this.hits.forEach(hit => labels[hit._source.url] = feedback);
-    this.labelsManager.sendLabels(labels);
   }
 
   render() {
     return (
       <div className="label-all">
-        <button className="btn btn-default" onClick={()=>this.labelAllAsRelevant()}><span className="glyphicon glyphicon-thumbs-up"></span>&nbsp;Mark all as Relevant</button>
-        <button className="btn btn-default" onClick={()=>this.labelAllAsIrrelevant()}><span className="glyphicon glyphicon-thumbs-down"></span>&nbsp;Mark all as irrelevant</button>
+        <button className="btn btn-default" onClick={()=>this.props.labelsManager.labelAllAsRelevant()}><span className="glyphicon glyphicon-thumbs-up"></span>&nbsp;Mark all as Relevant</button>
+        <button className="btn btn-default" onClick={()=>this.props.labelsManager.labelAllAsIrrelevant()}><span className="glyphicon glyphicon-thumbs-down"></span>&nbsp;Mark all as irrelevant</button>
       </div>
     )
   }
-
 }
 
 class Search extends React.Component {
@@ -265,9 +266,33 @@ class Search extends React.Component {
     super(props);
     this.crawlerId = this.props.match.params.crawler_id;
     const elasticsearchAddress = ACHE_API_ADDRESS + 'crawls/' + this.crawlerId;
-    this.searchkit = new SearchkitManager(elasticsearchAddress, searchkitProps);
+    this.searchkitClient = new Searchkit({
+      connection: {
+        host: elasticsearchAddress,
+        searchkitProps
+      },
+      search_settings: {
+        highlight_attributes: ["title"],
+        search_attributes: ["title", "url", "text"],
+        result_attributes: ["_id", "isRelevant", "title", "url", "retrieved", "text", "html"],
+        filter_attributes: [
+          {
+            attribute: "isRelevant",
+            field: "isRelevant",
+            type: "bool"
+          },
+          {
+            attribute: 'domain',
+            field: 'domain',
+            type: 'string'
+          }
+        ],
+      },
+    })
+
+    this.searchkit = Client(this.searchkitClient);
+
     this.labelsManager = new LabelsManager(this.crawlerId);
-    this.hitItemElement = <HitItem labelsManager={this.labelsManager} />;
     this.state = {message:"Loading...", searchEnabled: false};
     api.get('/crawls/' + this.crawlerId + '/status')
        .then(this.setupSearch.bind(this));
@@ -284,24 +309,41 @@ class Search extends React.Component {
     if(!status.searchEnabled) {
       this.setState({
         message: "Search is not available for this crawl (it's only available when using ELASTICSEARCH data format).",
-        searchEnabled: status.searchEnabled
+        searchEnabled: status.searchEnabled,
       });
     } else {
       this.setState({
         message: "Done.",
-        searchEnabled: status.searchEnabled
+        searchEnabled: status.searchEnabled,
+        esIndexName: status.esIndexName
       });
     }
   }
 
   render() {
-    const hitItemElement = this.hitItemElement;
     const enabled = this.state.searchEnabled;
+    const index = this.state.esIndexName;
     const message = this.state.message;
+    const hitView = ({ hit }) => {
+      return (
+        <HitItem result={hit} labelsManager={this.labelsManager}/>
+      )
+    }
+
     let checkboxLabels = {
-      "relevant":"Relevant",
+      "relevant": "Relevant",
       "irrelevant": "Irrelevant"
     }
+
+    const MyCustomHits = ({hits}) => {
+      this.labelsManager.updateHits(hits);
+      return (
+          <Hits hitComponent={hitView}/>
+      )
+    };
+
+    const PageHits = connectHits(MyCustomHits);
+
     return (
       <div>
         { !enabled ?
@@ -309,37 +351,39 @@ class Search extends React.Component {
             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {message}
           </div>
           :
-          <SearchkitProvider searchkit={this.searchkit} >
-            <div className="row">
 
+          <InstantSearch indexName={index} searchClient={this.searchkit}  stalledSearchDelay={1000}>
+              <div className="row">
               <div className="col-sm-3">
-                <RefinementListFilter id="filter_relevance" title="Relevance"
-                  field="isRelevant" size={2} operator="OR"
-                  translations={checkboxLabels} />
-                <RefinementListFilter id="filter_domain" title="Domain"
-                  field="domain" size={15} operator="OR" />
+              <ul className="list-inline hit-properties">
+              <li><b>Relevance</b> </li>
+                <RefinementList attribute="isRelevant" limit={2} operator="or"
+                  transformItems={items =>
+                    items.map(item => ({
+                      ...item,
+                      label: checkboxLabels[item.label],
+                    }))
+                  }
+                />
+                <li><b>Domain</b> </li>
+                <RefinementList attribute="domain" limit={15} operator="or" />
+                </ul>
               </div>
 
               <div className="col-sm-9">
-                  <SearchBox searchOnChange={true} searchThrottleTime={1000} />
-                  <ActionBar>
-                    <ActionBarRow>
-              				<HitsStats translations={{"hitstats.results_found":"{hitCount} results found."}}/>
-                      <ViewSwitcherToggle/>
-                    </ActionBarRow>
-                    <ActionBarRow>
-                      <SelectedFilters/>
-                      <ResetFilters/>
-                    </ActionBarRow>
-                  </ActionBar>
-                  <Hits hitsPerPage={10} highlightFields={["title"]}
-                    sourceFilter={["_id", "isRelevant", "title", "url", "retrieved", "text", "html"]}
-                    itemComponent={hitItemElement} />
-                  <LabelAllButtons labelsManager={this.labelsManager} searchkit={this.searchkit} />
-                  <Pagination showNumbers={true}/>
+                <SearchBox searchAsYouType={true} />
+                  <Stats translations={{
+                    stats: (nbHits) => {
+                      return nbHits + ' results found.'
+                    }}}
+                  />
+                  <PageHits />
+                  <LabelAllButtons labelsManager={this.labelsManager}/>
+                  <Pagination showFirst={true}/>
               </div>
             </div>
-          </SearchkitProvider>
+
+          </InstantSearch>
         }
       </div>
     );
