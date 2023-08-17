@@ -1,18 +1,21 @@
 plugins {
-    id 'java'
+    id("java")
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
+tasks.named('test', Test) {
+    useJUnitPlatform()
 }
 
 subprojects {
 
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-
     repositories {
         mavenCentral()
-    }
-
-    test {
-        useJUnitPlatform()
     }
 
     // Dependencies used by multiple sub-projects
@@ -28,3 +31,9 @@ subprojects {
         logback: [group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.5'],
     ]
 }
+
+
+
+
+
+
