@@ -2,7 +2,9 @@
 
 ## Version 0.16.0-SNAPSHOT (Unreleased)
 
-- 
+- Add support for the search UI when using Elasticsearch 7.x and 8.x. (PR #341)
+- Drop search UI support for older versions of Elasticsearch <7.x.x. (PR #341)
+
 
 ## Version 0.15.0
 
