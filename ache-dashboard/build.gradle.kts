@@ -19,6 +19,7 @@ val dashboardBuildTask = tasks.register<NpmTask>("build") {
 }
 
 val dashboardInstallTask = tasks.register<Copy>("install") {
+  dependsOn(dashboardBuildTask)
   from("${projectDir}/build/")
   into("${rootProject.projectDir}/ache/src/main/resources/public/")
 }

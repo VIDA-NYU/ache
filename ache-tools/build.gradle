@@ -3,8 +3,11 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'achecrawler.RunCliTool'
-applicationDefaultJvmArgs = ["-Dname=ache-tools -XX:+HeapDumpOnOutOfMemoryError"]
+
+application {
+    mainClass = 'achecrawler.RunCliTool'
+    applicationDefaultJvmArgs = ["-Dname=ache-tools -XX:+HeapDumpOnOutOfMemoryError"]
+}
 
 dependencies {
     // Sub-projects
@@ -12,8 +15,8 @@ dependencies {
     implementation project(':crawler-commons')
 
     // Dependencies
-    implementation libraries.slf4j_api
-    implementation libraries.logback
+    implementation libs.slf4j.api
+    implementation libs.logback.classic
     implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.22'
     implementation group: 'commons-validator', name: 'commons-validator', version: '1.6'
     implementation group: 'io.airlift', name: 'airline', version: '0.9'
@@ -26,8 +29,8 @@ dependencies {
     implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.12.+'
 
     // Test framework dependencies
-    testImplementation libraries.junit_jupiter_api
-    testImplementation libraries.junit_jupiter_params
-    testRuntimeOnly libraries.junit_jupiter_engine
-    testImplementation libraries.assertj_core
+    testImplementation libs.junit.api
+    testImplementation libs.junit.params
+    testRuntimeOnly libs.junit.engine
+    testImplementation libs.assertj.core
 }

@@ -1,6 +1,0 @@
-rootProject.name = 'achecrawler'
-include 'ache'
-include 'ache-dashboard'
-include 'ache-tools'
-include 'crawler-commons'
-
