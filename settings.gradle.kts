@@ -47,11 +47,13 @@ dependencyResolutionManagement {
             library("elasticsearch.rest.client", "org.elasticsearch.client:elasticsearch-rest-client:5.6.7")
             library("kafka.clients", "org.apache.kafka:kafka-clients:3.4.0")
             library("webarchive.commons", "org.netpreserve.commons:webarchive-commons:1.1.9")
+            library("aws-java-sdk-s3", "com.amazonaws:aws-java-sdk-s3:1.12.+")
             // Data parsing and extraction
             library("boilerpipe", "com.syncthemall:boilerpipe:1.2.2")
             library("nekohtml", "net.sourceforge.nekohtml:nekohtml:1.9.22")
             library("jsoup", "org.jsoup:jsoup:1.15.1")
             library("lucene.analyzers.common", "org.apache.lucene:lucene-analyzers-common:8.11.1")
+            library("tika.parsers", "org.apache.tika:tika-parsers:1.28.4")
             // HTTP libraries
             library("okhttp", "com.squareup.okhttp3:okhttp:4.10.0")
             library("httpclient", "org.apache.httpcomponents:httpclient:4.5.14")
