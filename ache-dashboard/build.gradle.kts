@@ -1,16 +1,16 @@
 import com.github.gradle.node.npm.task.NpmTask
 
 plugins {
-  id("com.github.node-gradle.node") version "3.5.1"
+  id("com.github.node-gradle.node") version "7.1.0"
 }
 
 node {
   // Enable automatic download and install local copy of Node/NPM
   download.set(true)
   // Version of Node.js to use.
-  version.set("18.14.2")
+  version.set("22.18.0")
   // Version of npm to use.
-  npmVersion.set("9.5.0")
+  npmVersion.set("11.5.2")
 }
 
 val dashboardBuildTask = tasks.register<NpmTask>("build") {
