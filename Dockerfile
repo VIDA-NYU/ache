@@ -3,7 +3,7 @@
 #
 # https://github.com/ViDA-NYU/ache
 #
-FROM gradle:7.3-jdk11 as ache-build
+FROM gradle:8.14-jdk11 as ache-build
 
 ADD . /ache-src
 WORKDIR /ache-src/ache
