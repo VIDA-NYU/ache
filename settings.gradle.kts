@@ -9,12 +9,12 @@ dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
             // Testing
-            version("junit", "5.9.2")
+            version("junit", "5.13.4")
             library("junit.api", "org.junit.jupiter", "junit-jupiter-api").versionRef("junit")
             library("junit.params", "org.junit.jupiter", "junit-jupiter-params").versionRef("junit")
             library("junit.engine", "org.junit.jupiter", "junit-jupiter-engine").versionRef("junit")
-            library("assertj.core", "org.assertj:assertj-core:3.20.2")
-            library("mockito.core", "org.mockito:mockito-core:5.1.1")
+            library("assertj.core", "org.assertj:assertj-core:3.27.4")
+            library("mockito.core", "org.mockito:mockito-core:5.19.0")
             // Logging
             version("slf4j", "2.0.6")
             library("slf4j.api", "org.slf4j", "slf4j-api").versionRef("slf4j")
