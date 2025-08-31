@@ -20,7 +20,7 @@ dependencyResolutionManagement {
             library("slf4j.api", "org.slf4j", "slf4j-api").versionRef("slf4j")
             library("logback.classic", "ch.qos.logback:logback-classic:1.4.5")
             // Commons
-            library("guava", "com.google.guava:guava:23.0")
+            library("guava", "com.google.guava:guava:33.4.8-jre")
             library("commons.lang3", "org.apache.commons:commons-lang3:3.12.0")
             library("commons.compress", "org.apache.commons:commons-compress:1.22")
             library("commons.codec", "commons-codec:commons-codec:1.15")
