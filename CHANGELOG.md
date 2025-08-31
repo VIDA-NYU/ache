@@ -2,6 +2,26 @@
 
 ## Version 0.16.0-SNAPSHOT (Unreleased)
 
+- Include '--add-opens' to default JVM args (requires JVM 17+)
+- Upgrade Javalin from 4.2.0 to 6.7.0
+- Upgrade Elasticsearch REST Client from 6.8.23 to 7.17.29
+- Bump Elasticsearch REST Client from 5.6.7 to 6.8.23
+- Bump Guava from 23 to 33.4.8-jre
+- Bump Kafka Clients from 3.4.0 to 4.0.0
+- Build custom JRE 17 image using jlink
+- Build ACHE using Java 17
+- Run CI tests on JDKs 11, 17 and 21
+- Bump ache-dashboard npm dependencies
+- Bump node plugin, node.js, and npm to the latest versions
+- Update Dockerfile to use gradle:8.14-jdk11
+- Upgrade Gradle wrapper from 8.3 to 8.14.3
+- Update *.gradle.kts files in set_version script
+- Convert ache-tools and crawler-commons projects to Kotlin DSL
+- Migrate ache/build.gradle to Kotlin DSL
+- Upgrade to Gradle 8.3 and convert more scripts to Kotlin
+- Use Gradle's Kotlin DSL
+- Update ES version in docker-compose files
+- Update searchkit (#341)
 - Add support for the search UI when using Elasticsearch 7.x and 8.x. (PR #341)
 - Drop search UI support for older versions of Elasticsearch <7.x.x. (PR #341)
 
