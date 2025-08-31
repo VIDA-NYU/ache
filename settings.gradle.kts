@@ -25,7 +25,7 @@ dependencyResolutionManagement {
             library("commons.compress", "org.apache.commons:commons-compress:1.28.0")
             library("commons.codec", "commons-codec:commons-codec:1.19.0")
             library("commons.validator", "commons-validator:commons-validator:1.10.0")
-            library("crawler.commons", "com.github.crawler-commons:crawler-commons:1.2")
+            library("crawler.commons", "com.github.crawler-commons:crawler-commons:1.5")
             // CLI
             library("airline", "io.airlift:airline:0.9")
             // Data serialization
