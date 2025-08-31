@@ -36,7 +36,7 @@ dependencyResolutionManagement {
             library("kryo.lib", "com.esotericsoftware:kryo:4.0.2")
             library("kryo.serializers", "de.javakaffee:kryo-serializers:0.43")
             // REST server dependencies
-            library("javalin", "io.javalin:javalin:4.2.0")
+            library("javalin", "io.javalin:javalin:6.7.0")
             // Metrics and monitoring
             version("dropwizard.metrics", "4.2.17")
             library("dropwizard.metrics.core", "io.dropwizard.metrics", "metrics-core").versionRef("dropwizard.metrics")

@@ -10,7 +10,7 @@ import io.javalin.http.Handler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletResponse;
+import io.javalin.http.HttpStatus;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -37,14 +37,14 @@ public class LabelsResource {
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.status(HttpStatus.NOT_FOUND);
             ctx.json(ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId));
             return;
         }
 
         Map<String, Boolean> newLabels = deserializeMap(ctx.body());
         Map<String, Boolean> labelsCache = saveNewLabels(crawlerId, newLabels);
-        ctx.status(HttpServletResponse.SC_CREATED);
+        ctx.status(HttpStatus.CREATED);
         ctx.json(labelsCache);
     };
 
@@ -65,7 +65,7 @@ public class LabelsResource {
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.status(HttpStatus.NOT_FOUND);
             ctx.json(ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId));
             return;
         }

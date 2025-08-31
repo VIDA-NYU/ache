@@ -8,9 +8,11 @@ import java.util.concurrent.TimeUnit;
 import com.codahale.metrics.json.MetricsModule;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;
-import io.javalin.core.util.JavalinLogger;
+import io.javalin.plugin.bundled.CorsPluginConfig;
+
 import io.javalin.http.staticfiles.Location;
-import io.javalin.plugin.json.JavalinJackson;
+import io.javalin.json.JavalinJackson;
+import io.javalin.util.JavalinLogger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,22 +62,22 @@ public class RestServer {
              * Enable HTTP CORS (Cross-Origin Resource Sharing)
              */
             if (restConfig.isEnableCors()) {
-                config.enableCorsForAllOrigins();
+                config.bundledPlugins.enableCors(cors -> cors.addRule(CorsPluginConfig.CorsRule::anyHost));
             }
 
             /*
              * Configure single-page handler to serve the React App index.html file
              * to paths that do not match any other handler.
              */
-            config.addSinglePageHandler("/", singlePageAppHandler);
+            config.spaRoot.addHandler("/", singlePageAppHandler);
 
             /*
              * Configure handler for serving static files under /public.
              */
-            config.addStaticFiles(staticFiles -> {
+            config.staticFiles.add(staticFiles -> {
                 staticFiles.location = Location.CLASSPATH;
-                staticFiles.directory = "/public"; // path on JAR's project resources
-                staticFiles.hostedPath = "/"; // path served over HTTP
+                staticFiles.directory = "/public";
+                staticFiles.hostedPath = "/";
             });
 
             /*
@@ -86,7 +88,7 @@ public class RestServer {
             final boolean showSamples = false;
             ObjectMapper jsonMapper = new ObjectMapper()
                     .registerModule(new MetricsModule(rateUnit, durationUnit, showSamples));
-            config.jsonMapper(new JavalinJackson(jsonMapper));
+            config.jsonMapper(new JavalinJackson(jsonMapper, false));
         });
 
         /*
@@ -101,7 +103,7 @@ public class RestServer {
 
         /*
          * Single page app routers. These routes are required to override the default
-         * static index.html that would be server be the static file handler.
+         * static index.html that would be served by the static file handler.
          */
         server.get("/", singlePageAppHandler);
         server.get("/index.html", singlePageAppHandler);

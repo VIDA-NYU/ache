@@ -17,7 +17,7 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletResponse;
+import io.javalin.http.HttpStatus;
 import java.io.IOException;
 
 
@@ -34,14 +34,14 @@ public class ElasticsearchProxyResource {
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.status(HttpStatus.NOT_FOUND);
             ctx.header("Content-Type", "application/json");
             ctx.json(ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId));
             return;
         }
 
         if (!context.isSearchEnabled()) {
-            ctx.status(HttpServletResponse.SC_BAD_REQUEST);
+            ctx.status(HttpStatus.BAD_REQUEST);
             ctx.json(ImmutableMap.of(
                     "message", "No Elasticsearch index configured"));
             return;

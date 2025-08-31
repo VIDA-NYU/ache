@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import javax.servlet.http.HttpServletResponse;
+import io.javalin.http.HttpStatus;
 
 import com.codahale.metrics.*;
 import io.javalin.http.Context;
@@ -45,7 +45,7 @@ public class CrawlerResource {
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.status(HttpStatus.NOT_FOUND);
             ctx.json(
                 ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId)
             );
@@ -117,7 +117,7 @@ public class CrawlerResource {
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.status(HttpStatus.NOT_FOUND);
             return ImmutableMap.of("message", "Crawler not found for crawler_id " + crawlerId);
         }
 
@@ -141,7 +141,7 @@ public class CrawlerResource {
 
         } catch (Exception e) {
             logger.error("Failed to start crawler.", e);
-            ctx.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.status(HttpStatus.INTERNAL_SERVER_ERROR);
             ctx.json(ImmutableMap.of(
                 "message", "Failed to start crawler.",
                 "crawlerStarted", false));
@@ -154,7 +154,7 @@ public class CrawlerResource {
 
             CrawlContext context = crawlersManager.getCrawl(crawlerId);
             if (context == null) {
-                ctx.status(HttpServletResponse.SC_NOT_FOUND);
+                ctx.status(HttpStatus.NOT_FOUND);
                 ctx.json(ImmutableMap.of(
                         "message", "Crawler not found for crawler_id " + crawlerId,
                         "shutdownInitiated", false,
@@ -181,7 +181,7 @@ public class CrawlerResource {
 
         } catch (Exception e) {
             logger.error("Failed to stop crawler.", e);
-            ctx.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.status(HttpStatus.INTERNAL_SERVER_ERROR);
             ctx.json(ImmutableMap.of(
                 "message", "Failed to stop crawler.",
                 "shutdownInitiated", false,
@@ -195,7 +195,7 @@ public class CrawlerResource {
 
             CrawlContext context = crawlersManager.getCrawl(crawlerId);
             if (context == null) {
-                ctx.status(HttpServletResponse.SC_NOT_FOUND);
+                ctx.status(HttpStatus.NOT_FOUND);
                 ctx.json(ImmutableMap.of(
                     "message", "Crawler not found for crawler_id " + crawlerId,
                     "addedSeeds", false));
@@ -204,7 +204,7 @@ public class CrawlerResource {
 
             AddSeedsParams params = json.readValue(ctx.body(), AddSeedsParams.class);
             if (params.seeds == null || params.seeds.isEmpty()) {
-                ctx.status(HttpServletResponse.SC_BAD_REQUEST);
+                ctx.status(HttpStatus.BAD_REQUEST);
                 ctx.json(ImmutableMap.of(
                     "message", "No seeds provided.",
                     "addedSeeds", false));
@@ -219,7 +219,7 @@ public class CrawlerResource {
                 "addedSeeds", true));
         } catch (Exception e) {
             logger.error("Failed to add seeds.", e);
-            ctx.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.status(HttpStatus.INTERNAL_SERVER_ERROR);
             ctx.json(ImmutableMap.of(
                 "message", "Failed to add seeds.",
                 "addedSeeds", false));
@@ -231,7 +231,7 @@ public class CrawlerResource {
 
         CrawlContext context = crawlersManager.getCrawl(crawlerId);
         if (context == null) {
-            ctx.status(HttpServletResponse.SC_NOT_FOUND);
+            ctx.status(HttpStatus.NOT_FOUND);
             ctx.json(ImmutableMap.of(
                     "message", "Crawler not found for crawler_id " + crawlerId,
                     "addedCookies", false));
@@ -243,7 +243,7 @@ public class CrawlerResource {
                     new TypeReference<HashMap<String, List<Cookie>>>() {});
 
             if (params == null || params.isEmpty()) {
-                ctx.status(HttpServletResponse.SC_BAD_REQUEST);
+                ctx.status(HttpStatus.BAD_REQUEST);
                 ctx.json(ImmutableMap.of(
                         "message", "No valid cookies provided.",
                         "addedCookies", false));
@@ -258,7 +258,7 @@ public class CrawlerResource {
 
         } catch (Exception e) {
             logger.error("Failed to add cookies.", e);
-            ctx.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            ctx.status(HttpStatus.INTERNAL_SERVER_ERROR);
             ctx.json(ImmutableMap.of(
                     "message", "Failed to add cookies to crawler " + crawlerId,
                     "addedCookies", false));
