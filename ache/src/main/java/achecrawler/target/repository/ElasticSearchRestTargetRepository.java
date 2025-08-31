@@ -11,6 +11,7 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.nio.entity.NStringEntity;
 import org.apache.http.util.EntityUtils;
 import org.elasticsearch.client.Response;
+import org.elasticsearch.client.Request;
 import org.elasticsearch.client.RestClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,7 +61,8 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         String indexEndpoint = "/" + indexName;
         boolean exists;
         try {
-            Response existsResponse = client.performRequest("HEAD", indexEndpoint);
+            Request request = new Request("HEAD", indexEndpoint);
+            Response existsResponse = client.performRequest(request);
             exists = (existsResponse.getStatusLine().getStatusCode() == 200);
         } catch (IOException e) {
             throw new RuntimeException(
@@ -140,7 +142,9 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
 
             try {
                 AbstractHttpEntity entity = createJsonEntity(mapping);
-                Response response = client.performRequest("PUT", indexEndpoint, EMPTY_MAP, entity);
+                Request request = new Request("PUT", indexEndpoint);
+                request.setEntity(entity);
+                Response response = client.performRequest(request);
                 if (response.getStatusLine().getStatusCode() != 200) {
                     throw new RuntimeException(
                         "Failed to create index in Elasticsearch." + response);
@@ -152,7 +156,8 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
     }
 
     private int findEsMajorVersion() throws IOException {
-        Response rootResponse = client.performRequest("GET", "/");
+        Request request = new Request("GET", "/");
+        Response rootResponse = client.performRequest(request);
         String json = EntityUtils.toString(rootResponse.getEntity());
         String versionNumber = mapper.readTree(json).path("version").path("number").asText();
         if (versionNumber != null && !versionNumber.isEmpty()) {
@@ -187,7 +192,9 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         );
         AbstractHttpEntity entity = createJsonEntity(serializeAsJson(body));
         try {
-            Response response = client.performRequest("POST", endpoint, EMPTY_MAP, entity);
+            Request request = new Request("POST", endpoint);
+            request.setEntity(entity);
+            Response response = client.performRequest(request);
             return response.getStatusLine().getStatusCode() == 201;
         } catch (IOException e) {
             throw new RuntimeException("Failed to index page.", e);

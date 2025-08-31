@@ -23,6 +23,7 @@ import org.apache.http.entity.AbstractHttpEntity;
 import org.apache.http.entity.ContentType;
 import org.apache.http.nio.entity.NStringEntity;
 import org.elasticsearch.client.Response;
+import org.elasticsearch.client.Request;
 import org.elasticsearch.client.RestClient;
 
 @Command(name = "DumpDataFromElasticsearch")
@@ -92,7 +93,9 @@ public class DumpDataFromElasticsearch extends CliTool {
 
         String searchEndpoint = String
                 .format("/%s/%s/_search?scroll=%dm", indexName, typeName, esTimeout);
-        Response scrollResponse = client.performRequest("POST", searchEndpoint, EMPTY_MAP, entity);
+        Request request = new Request("POST", searchEndpoint);
+        request.setEntity(entity);
+        Response scrollResponse = client.performRequest(request);
 
         JsonNode jsonResponse = mapper.readTree(scrollResponse.getEntity().getContent());
         List<String> hits = getHits(jsonResponse);
@@ -114,7 +117,9 @@ public class DumpDataFromElasticsearch extends CliTool {
             entity = createJsonEntity(serializeAsJson(scrollBody));
 
             String scrollEndpoint = "/_search/scroll";
-            scrollResponse = client.performRequest("POST", scrollEndpoint, EMPTY_MAP, entity);
+            Request scrollRequest = new Request("POST", scrollEndpoint);
+            scrollRequest.setEntity(entity);
+            scrollResponse = client.performRequest(scrollRequest);
 
             jsonResponse = mapper.readTree(scrollResponse.getEntity().getContent());
             hits = getHits(jsonResponse);

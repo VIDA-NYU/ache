@@ -44,7 +44,7 @@ dependencyResolutionManagement {
             library("dropwizard.metrics.jvm", "io.dropwizard.metrics", "metrics-jvm").versionRef("dropwizard.metrics")
             // Data management and repositories
             library("rocksdbjni", "org.rocksdb:rocksdbjni:6.25.3")
-            library("elasticsearch.rest.client", "org.elasticsearch.client:elasticsearch-rest-client:6.8.23")
+            library("elasticsearch.rest.client", "org.elasticsearch.client:elasticsearch-rest-client:7.17.29")
             library("kafka.clients", "org.apache.kafka:kafka-clients:4.0.0")
             library("webarchive.commons", "org.netpreserve.commons:webarchive-commons:1.1.9")
             library("aws-java-sdk-s3", "com.amazonaws:aws-java-sdk-s3:1.12.+")

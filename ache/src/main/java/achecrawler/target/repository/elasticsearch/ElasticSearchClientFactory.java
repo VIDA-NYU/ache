@@ -15,6 +15,7 @@ import org.apache.http.client.CredentialsProvider;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.elasticsearch.client.Response;
 import org.elasticsearch.client.RestClient;
+import org.elasticsearch.client.Request;
 import org.elasticsearch.client.RestClientBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +33,7 @@ public class ElasticSearchClientFactory {
                         .setConnectTimeout(config.getRestConnectTimeout())
                         .setSocketTimeout(config.getRestSocketTimeout())
                 )
-                .setMaxRetryTimeoutMillis(config.getRestMaxRetryTimeoutMillis());
+                ;
 
         if (config.getUsername() != null && config.getPassword() != null) {
             final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
@@ -79,7 +80,8 @@ public class ElasticSearchClientFactory {
     private static void checkRestApi(RestClient client) {
         String rootEndpoint = "/";
         try {
-            Response response = client.performRequest("GET", rootEndpoint);
+            org.elasticsearch.client.Request request = new org.elasticsearch.client.Request("GET", rootEndpoint);
+            Response response = client.performRequest(request);
             final int statusCode = response.getStatusLine().getStatusCode();
             logger.info(response.getEntity().toString());
             if(statusCode != 200) {
