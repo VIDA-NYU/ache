@@ -2,6 +2,16 @@
 
 ## Version 0.16.0-SNAPSHOT (Unreleased)
 
+- Upgrade Crawler Commons from 1.2 to 1.5
+- Upgrade SLF4J API from 2.0.6 to 2.0.17
+- Upgrade Logback Classic from 1.4.5 to 1.5.18
+- Upgrade Commons Lang3 from 3.12.0 to 3.18.0
+- Upgrade Commons Compress from 1.22 to 1.28.0
+- Upgrade Commons Codec from 1.15 to 1.19.0
+- Upgrade Commons Validator from 1.7 to 1.10.0
+- Upgrade JUnit from 5.9.2 to 5.13.4
+- Upgrade AssertJ Core from 3.20.2 to 3.27.4
+- Upgrade Mockito Core from 5.1.1 to 5.19.0
 - Include '--add-opens' to default JVM args (requires JVM 17+)
 - Upgrade Javalin from 4.2.0 to 6.7.0
 - Upgrade Elasticsearch REST Client from 6.8.23 to 7.17.29
