@@ -1,7 +1,7 @@
 package achecrawler.target.repository.kafka;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Map.Entry;
 import java.util.Properties;
 
@@ -31,9 +31,9 @@ public class KafkaTargetRepository implements TargetRepository {
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
 
-    private Producer<String, String> producer;
-    private String topicName;
-    private KafkaConfig.Format format = KafkaConfig.Format.JSON;
+    private final Producer<String, String> producer;
+    private final String topicName;
+    private final KafkaConfig.Format format;
 
     public KafkaTargetRepository(KafkaConfig config) {
         this(createKafkaClient(config), config.getTopicName(), config.getFormat());
@@ -92,11 +92,7 @@ public class KafkaTargetRepository implements TargetRepository {
     }
 
     private String encodeUrl(String url) {
-        try {
-            return URLEncoder.encode(url, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            throw new IllegalStateException("Failed to URL encode string: " + url, e);
-        }
+        return URLEncoder.encode(url, StandardCharsets.UTF_8);
     }
 
     private String serializeAsJson(Object model) {
@@ -123,7 +119,7 @@ public class KafkaTargetRepository implements TargetRepository {
     @Override
     public CloseableIterator<Page> pagesIterator() {
         throw new UnsupportedOperationException(
-                "Iterator not supportted for KafkaTargetRepository yet");
+                "Iterator not supported for KafkaTargetRepository yet");
     }
 
 }

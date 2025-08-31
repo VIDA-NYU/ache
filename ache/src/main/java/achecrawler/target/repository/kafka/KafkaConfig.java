@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class KafkaConfig {
 
-    enum Format {
+    public enum Format {
         CDR31, JSON, ELASTIC
     }
 

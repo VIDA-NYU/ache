@@ -45,7 +45,7 @@ dependencyResolutionManagement {
             // Data management and repositories
             library("rocksdbjni", "org.rocksdb:rocksdbjni:6.25.3")
             library("elasticsearch.rest.client", "org.elasticsearch.client:elasticsearch-rest-client:5.6.7")
-            library("kafka.clients", "org.apache.kafka:kafka-clients:3.4.0")
+            library("kafka.clients", "org.apache.kafka:kafka-clients:4.0.0")
             library("webarchive.commons", "org.netpreserve.commons:webarchive-commons:1.1.9")
             library("aws-java-sdk-s3", "com.amazonaws:aws-java-sdk-s3:1.12.+")
             // Data parsing and extraction

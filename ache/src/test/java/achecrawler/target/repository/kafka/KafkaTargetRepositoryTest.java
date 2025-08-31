@@ -47,7 +47,7 @@ class KafkaTargetRepositoryTest {
         String topicName = "ache-data-topic";
 
         StringSerializer ss = new StringSerializer();
-        MockProducer<String, String> producer = new MockProducer<>(true, ss, ss);
+        MockProducer<String, String> producer = new MockProducer<>(true, null, ss, ss);
 
         KafkaConfig.Format format = KafkaConfig.Format.JSON;
 
@@ -78,7 +78,7 @@ class KafkaTargetRepositoryTest {
         String topicName = "ache-data-topic";
 
         StringSerializer ss = new StringSerializer();
-        MockProducer<String, String> producer = new MockProducer<>(true, ss, ss);
+        MockProducer<String, String> producer = new MockProducer<String, String>(true, null, ss, ss);
 
         KafkaConfig.Format format = KafkaConfig.Format.ELASTIC;
 
