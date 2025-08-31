@@ -16,15 +16,15 @@ dependencyResolutionManagement {
             library("assertj.core", "org.assertj:assertj-core:3.27.4")
             library("mockito.core", "org.mockito:mockito-core:5.19.0")
             // Logging
-            version("slf4j", "2.0.6")
+            version("slf4j", "2.0.17")
             library("slf4j.api", "org.slf4j", "slf4j-api").versionRef("slf4j")
-            library("logback.classic", "ch.qos.logback:logback-classic:1.4.5")
+            library("logback.classic", "ch.qos.logback:logback-classic:1.5.18")
             // Commons
             library("guava", "com.google.guava:guava:33.4.8-jre")
-            library("commons.lang3", "org.apache.commons:commons-lang3:3.12.0")
-            library("commons.compress", "org.apache.commons:commons-compress:1.22")
-            library("commons.codec", "commons-codec:commons-codec:1.15")
-            library("commons.validator", "commons-validator:commons-validator:1.7")
+            library("commons.lang3", "org.apache.commons:commons-lang3:3.18.0")
+            library("commons.compress", "org.apache.commons:commons-compress:1.28.0")
+            library("commons.codec", "commons-codec:commons-codec:1.19.0")
+            library("commons.validator", "commons-validator:commons-validator:1.10.0")
             library("crawler.commons", "com.github.crawler-commons:crawler-commons:1.2")
             // CLI
             library("airline", "io.airlift:airline:0.9")
