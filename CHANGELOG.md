@@ -2,6 +2,8 @@
 
 ## Version 0.16.0-SNAPSHOT (Unreleased)
 
+- Upgrade Jackson Libraries from 2.14.2 to 2.20.0
+- Upgrade Dropwizard Metrics Libraries from 4.2.17 to 4.2.34
 - Upgrade Crawler Commons from 1.2 to 1.5
 - Upgrade SLF4J API from 2.0.6 to 2.0.17
 - Upgrade Logback Classic from 1.4.5 to 1.5.18

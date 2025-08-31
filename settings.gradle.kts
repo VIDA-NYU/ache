@@ -29,7 +29,7 @@ dependencyResolutionManagement {
             // CLI
             library("airline", "io.airlift:airline:0.9")
             // Data serialization
-            version("jackson", "2.14.2")
+            version("jackson", "2.20.0")
             library("jackson.core.databind", "com.fasterxml.jackson.core", "jackson-databind").versionRef("jackson")
             library("jackson.dataformat.cbor", "com.fasterxml.jackson.dataformat", "jackson-dataformat-cbor").versionRef("jackson")
             library("jackson.dataformat.yaml", "com.fasterxml.jackson.dataformat", "jackson-dataformat-yaml").versionRef("jackson")
@@ -38,7 +38,7 @@ dependencyResolutionManagement {
             // REST server dependencies
             library("javalin", "io.javalin:javalin:6.7.0")
             // Metrics and monitoring
-            version("dropwizard.metrics", "4.2.17")
+            version("dropwizard.metrics", "4.2.34")
             library("dropwizard.metrics.core", "io.dropwizard.metrics", "metrics-core").versionRef("dropwizard.metrics")
             library("dropwizard.metrics.json", "io.dropwizard.metrics", "metrics-json").versionRef("dropwizard.metrics")
             library("dropwizard.metrics.jvm", "io.dropwizard.metrics", "metrics-jvm").versionRef("dropwizard.metrics")
