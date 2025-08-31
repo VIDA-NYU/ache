@@ -14,7 +14,10 @@ tasks.withType<JavaCompile>() {
 
 application {
     mainClass = "achecrawler.Main"
-    applicationDefaultJvmArgs = listOf("-Dname=ache -XX:+HeapDumpOnOutOfMemoryError")
+    applicationDefaultJvmArgs = listOf(
+        "-Dname=ache",
+        "--add-opens", "java.base/java.util=ALL-UNNAMED",
+    )
 }
 
 dependencies {
